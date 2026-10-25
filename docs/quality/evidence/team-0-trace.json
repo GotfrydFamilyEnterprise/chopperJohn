@@ -1,0 +1,80 @@
+[
+  {
+    "x": 1120,
+    "team": 0,
+    "main": false,
+    "slots": {
+      "rifle": [
+        9,
+        null
+      ],
+      "rocket": [
+        null
+      ]
+    },
+    "reservations": {
+      "rifle": [
+        9,
+        null
+      ],
+      "rocket": [
+        null
+      ]
+    },
+    "state": "ASSEMBLING",
+    "everOccupied": false,
+    "flagProgress": 0
+  },
+  {
+    "x": 1120,
+    "team": 0,
+    "main": false,
+    "slots": {
+      "rifle": [
+        9,
+        null
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "reservations": {
+      "rifle": [
+        9,
+        null
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "state": "ASSEMBLING",
+    "everOccupied": false,
+    "flagProgress": 0
+  },
+  {
+    "x": 1120,
+    "team": 0,
+    "main": false,
+    "slots": {
+      "rifle": [
+        9,
+        11
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "reservations": {
+      "rifle": [
+        9,
+        11
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "state": "OCCUPIED",
+    "everOccupied": true,
+    "flagProgress": 0
+  }
+]

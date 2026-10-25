@@ -33,15 +33,28 @@ export function releaseDeadDefenders(b,aliveIds){
 }
 export function drawForwardBase(ctx,b){
  drawFoundation(ctx,b);
- const front="#b7a07a",shadow="#77664d";
  // Four posts holding a camouflaged fabric roof.
  ctx.strokeStyle="#6b6a50";ctx.lineWidth=6;
  for(const x of [-58,-21,21,58]){ctx.beginPath();ctx.moveTo(x,-12);ctx.lineTo(x,-91);ctx.stroke();}
- ctx.fillStyle="#667a55";ctx.beginPath();ctx.moveTo(-78,-92);ctx.lineTo(-66,-114);ctx.lineTo(55,-112);ctx.lineTo(78,-91);ctx.closePath();ctx.fill();
- ctx.strokeStyle="#263c31";ctx.lineWidth=3;
- for(let j=0;j<10;j++){const x=-67+j*15;ctx.beginPath();ctx.moveTo(x,-105+(j%3)*4);ctx.lineTo(x+17,-96+(j%2)*5);ctx.stroke();}
- ctx.strokeStyle="#a7b28b";ctx.lineWidth=1.2;
- for(let j=0;j<8;j++){const x=-64+j*17;ctx.beginPath();ctx.moveTo(x,-111);ctx.lineTo(x+17,-91);ctx.stroke();}
+ // FOB-01: a porous, sagging camouflage net rather than an opaque hut roof.
+ ctx.save();
+ ctx.beginPath();ctx.moveTo(-78,-98);ctx.lineTo(-65,-116);
+ ctx.quadraticCurveTo(0,-102,57,-114);ctx.lineTo(80,-96);
+ ctx.quadraticCurveTo(0,-86,-78,-98);ctx.closePath();
+ ctx.fillStyle="#74845b55";ctx.fill();ctx.clip();
+ ctx.strokeStyle="#c0bd8e";ctx.lineWidth=.9;
+ for(let x=-100;x<100;x+=9){
+  ctx.beginPath();ctx.moveTo(x,-120);ctx.lineTo(x+35,-85);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(x,-85);ctx.lineTo(x+35,-120);ctx.stroke();
+ }
+ // Uneven tied-on foliage patches leave the mesh visibly open.
+ for(let i=0;i<20;i++){
+  const x=-75+(i*29)%150,y=-113+(i*13)%22;
+  ctx.fillStyle=["#536b42","#8d9160","#3b5140"][i%3];
+  ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+9,y-3);
+  ctx.lineTo(x+15,y+2);ctx.lineTo(x+7,y+6);ctx.closePath();ctx.fill();
+ }
+ ctx.restore();
  ctx.fillStyle=baseTextColor(b.team);ctx.font="bold 13px system-ui";ctx.textAlign="center";
  ctx.fillText(b.state+" · "+b.slots.rifle.filter(x=>x!==null).length+"/2 R · "+b.slots.rocket.filter(x=>x!==null).length+"/1 AT",0,-124);
  // Flag physically rises only after the occupation requirement is satisfied.
