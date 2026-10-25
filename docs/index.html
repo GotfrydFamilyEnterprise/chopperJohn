@@ -19,16 +19,17 @@ canvas{display:block;width:100vw;height:100dvh;touch-action:none}
 #stick{left:18px;width:134px;height:134px;border:2px solid #ffffff65;border-radius:50%;background:#1935509c}
 #knob{position:absolute;left:45px;top:45px;width:40px;height:40px;border-radius:50%;background:#b9e5ffb8;border:2px solid white;box-shadow:0 0 16px #62b6fc55}
 #fire{right:22px;bottom:calc(env(safe-area-inset-bottom) + 34px);width:96px;height:96px;border-radius:50%;background:#ca4d4da6;border:2px solid #ffb3b3;color:white;font-weight:800;font-size:17px}
+#turn{right:132px;bottom:calc(env(safe-area-inset-bottom) + 52px);width:78px;height:78px;border-radius:50%;background:#316d9ebd;border:2px solid #afdfff;color:white;font-size:13px;font-weight:800}
 #reset{position:fixed;top:calc(env(safe-area-inset-top) + 98px);right:12px;border:1px solid #ffffff77;border-radius:9px;padding:7px 11px;background:#112843db;color:white;pointer-events:auto}
 #tip{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom) + 12px);font-size:11px;color:#b8cfe3;white-space:nowrap;pointer-events:none}
-@media (max-height:430px){#stick{width:112px;height:112px}#knob{left:36px;top:36px;width:36px;height:36px}#fire{width:80px;height:80px;right:20px}#reset{top:calc(env(safe-area-inset-top) + 70px)}#bar{font-size:11px}#lesson strong{font-size:13px}#tip{display:none}}
+@media (max-height:430px){#stick{width:112px;height:112px}#knob{left:36px;top:36px;width:36px;height:36px}#fire{width:80px;height:80px;right:20px}#turn{width:67px;height:67px;right:111px;bottom:calc(env(safe-area-inset-bottom) + 40px);font-size:11px}#reset{top:calc(env(safe-area-inset-top) + 70px)}#bar{font-size:11px}#lesson strong{font-size:13px}#tip{display:none}}
 </style>
 </head>
 <body>
 <canvas id="game" aria-label="Helicopter flying tutorial"></canvas>
 <div id="hud"><div id="bar"><div id="lesson"><strong id="title">Flight school</strong><span id="instruction">Move the left stick to fly.</span></div><div id="stats">00:00<br>0 targets</div></div></div>
-<div id="controls"><div class="pad" id="stick" aria-label="Flight joystick"><div id="knob"></div></div><button class="pad" id="fire" aria-label="Fire machine gun">FIRE</button><button id="reset">Restart</button></div>
-<div id="tip">Joystick: pitch + lift · Double-tap joystick: turn · FIRE · Desktop: arrows + T + Space</div>
+<div id="controls"><div class="pad" id="stick" aria-label="Flight joystick"><div id="knob"></div></div><button class="pad" id="turn" aria-label="Turn helicopter around">↻ TURN</button><button class="pad" id="fire" aria-label="Fire machine gun">FIRE</button><button id="reset">Restart</button></div>
+<div id="tip">Joystick: pitch + lift · TURN: face opposite way · FIRE · Desktop: arrows + T + Space</div>
 <script>
 (()=>{
 "use strict";
@@ -39,7 +40,6 @@ const WORLD={w:1800,h:680,ground:605},DT=1/60;
 let w=innerWidth,h=innerHeight,dpr=1,scale=1,camera=0,elapsed=0,acc=0,last=0;
 const keys=new Set(),axis={x:0,y:0};let fireHeld=false,stickId=null,fireId=null;
 let heli,shots,targets,lesson,steps,crashed,done;
-let lastTapAt=-1000,lastTapPos=null;
 const clampAngle = a => Math.atan2(Math.sin(a),Math.cos(a));
 function reset(){
  heli={x:160,y:300,vx:0,vy:0,facing:1,angle:0,turnTime:0,turnFrom:1,health:100,fireCooldown:0};
@@ -102,7 +102,7 @@ function updateHUD(){
  const text=[
  ["Lesson 1 / 5 · Flight controls","Use the joystick to fly. Move for two seconds."],
  ["Lesson 2 / 5 · Climb","Push the joystick up to climb above the dashed line."],
- ["Lesson 3 / 5 · Navigation","Pitch nose down (right on stick) to accelerate right. Double tap to turn around."],
+ ["Lesson 3 / 5 · Navigation","Pitch nose down (right on stick) to accelerate right. Use TURN to face the other direction."],
  ["Lesson 4 / 5 · Combat","Face the targets and use FIRE. Destroy all three."],
  ["Lesson 5 / 5 · Return to base","Fly left and land gently on the blue helipad."],
  ["Mission complete!","You passed flight school. Tap Restart to fly again."]
@@ -146,17 +146,7 @@ function render(){
 function loop(now){const dt=Math.min((now-last)/1000||0,.05);last=now;acc=Math.min(acc+dt,.2);while(acc>=DT){step(DT);acc-=DT;}render();requestAnimationFrame(loop);}
 function joystick(x,y){const b=stick.getBoundingClientRect(),cx=b.left+b.width/2,cy=b.top+b.height/2,r=(b.width-42)/2;const dx=x-cx,dy=y-cy,length=Math.hypot(dx,dy),fraction=length?Math.min(1,r/length):0;axis.x=dx*fraction/r;axis.y=dy*fraction/r;knob.style.transform="translate("+(axis.x*r)+"px,"+(axis.y*r)+"px)";}
 function stopStick(){stickId=null;axis.x=0;axis.y=0;knob.style.transform="translate(0,0)";}
-stick.addEventListener("pointerdown",e=>{
- e.preventDefault();
- const now=performance.now();
- const pos={x:e.clientX,y:e.clientY};
- if(now-lastTapAt<290&&lastTapPos&&Math.hypot(pos.x-lastTapPos.x,pos.y-lastTapPos.y)<46){
-  requestTurn();lastTapAt=-1000;lastTapPos=null;
-  return;
- }
- lastTapAt=now;lastTapPos=pos;
- stickId=e.pointerId;stick.setPointerCapture(e.pointerId);joystick(e.clientX,e.clientY);
-});
+stick.addEventListener("pointerdown",e=>{e.preventDefault();stickId=e.pointerId;stick.setPointerCapture(e.pointerId);joystick(e.clientX,e.clientY);});
 stick.addEventListener("pointermove",e=>{if(e.pointerId===stickId)joystick(e.clientX,e.clientY);});
 for(const name of ["pointerup","pointercancel","lostpointercapture"])stick.addEventListener(name,e=>{if(e.pointerId===stickId)stopStick();});
 fire.addEventListener("pointerdown",e=>{e.preventDefault();fireId=e.pointerId;fire.setPointerCapture(e.pointerId);fireHeld=true;});
@@ -164,6 +154,7 @@ for(const name of ["pointerup","pointercancel","lostpointercapture"])fire.addEve
 addEventListener("keydown",e=>{if(["ArrowRight","ArrowLeft","ArrowUp","ArrowDown","Space"].includes(e.code))e.preventDefault();keys.add(e.code);});
 addEventListener("keyup",e=>keys.delete(e.code));
 addEventListener("blur",()=>{keys.clear();stopStick();fireHeld=false;});
+document.getElementById("turn").addEventListener("pointerdown",e=>{e.preventDefault();requestTurn();});
 document.getElementById("reset").addEventListener("click",reset);
  // Desktop testing shortcut.
  addEventListener("keydown",e=>{if(e.code==="KeyT"&&!e.repeat)requestTurn();});
