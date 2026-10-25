@@ -32,3 +32,25 @@ test('review RC-03/04 mirrored endpoint extremes land analytically on intended g
   assert.ok(Math.abs(end.x-rocket.impactX)<1e-8);assert.ok(Math.abs(end.y-u.y)<1e-8);assert.ok(rocket.vy<0);
  }
 });
+
+test('review RC-09 leading stays ballistic and mirror-symmetric throughout actual firing band',async()=>{
+ const {planRocketShot}=await import('../docs/js/battlefield/combat/weapons.js');
+ for(const distance of [225,350,500,550,600])for(const velocity of [-47,-19.74,0,19.74,47])for(const scatter of [-5,0,5]){
+  const left={x:1800,y:460,team:0},right={...left,team:1};
+  const a=planRocketShot(left,{x:1800+distance,observedVelocity:velocity},scatter);
+  const b=planRocketShot(right,{x:1800-distance,observedVelocity:-velocity},-scatter);
+  const end=rocketPosition(a,a.flightTime);
+  assert.ok(Math.abs(end.x-(1800+distance+velocity*a.flightTime+scatter))<1e-5);
+  assert.ok(Math.abs(end.y-460)<1e-8);assert.ok(Math.abs(a.flightTime-b.flightTime)<1e-9);
+  assert.ok(Math.abs(a.impactX+b.impactX-3600)<1e-8);
+ }
+});
+test('review RC-09 locked targets behind, friendly, dead and inside minimum are reacquired',async()=>{
+ const {chooseRocketTarget}=await import('../docs/js/battlefield/combat/weapons.js');
+ for(const team of [0,1])for(const bad of ['behind','friendly','dead','close','far']){
+  const dir=team?-1:1,u=soldier(1,team,'rocket',1800),locked=soldier(2,1-team,'rifle',1800+dir*300),fallback=soldier(3,1-team,'rocket',1800+dir*600);
+  u.rocketTargetId=locked.id;
+  if(bad==='behind')locked.x=1800-dir;if(bad==='friendly')locked.team=team;if(bad==='dead')locked.hp=0;if(bad==='close')locked.x=1800+dir*224.999;if(bad==='far')locked.x=1800+dir*600.001;
+  assert.equal(chooseRocketTarget(u,[locked,fallback]),fallback);
+ }
+});

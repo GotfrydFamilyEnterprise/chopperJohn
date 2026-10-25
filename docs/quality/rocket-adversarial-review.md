@@ -1,5 +1,7 @@
 # Independent rocket and bunker protection adversarial review
 
+Historical v0.6 review. The user subsequently requested extended range and predictive leading; see [v0.6.1 natural-play addendum](rocket-natural-play-adversarial-review.md) for current-source results. Its natural initial-wave evidence supersedes synthetic-only firing conclusions here.
+
 Review date: 2026-10-25. Scope: branch `feature/rocket-combat-and-bunker-cover`, approved RC-01..08 and BC-01..05, actual working-tree changes including new combat modules. Reviewer read AGENTS.md, every file in docs/specs/, adversarial-review.md, changed source, and tests; production source was not edited by this reviewer.
 
 ## Evidence and causal limits

@@ -38,7 +38,7 @@ for(const team of [0,1])test(`RC-01/02/03/05/06 mirrored rocket flight faction $
 for(const team of [0,1])test(`RC-01 browser range boundaries faction ${team}`,async({page})=>{
  await empty(page);
  const outcomes=await page.evaluate(team=>{
-  return [224.99,225,250,500,500.01,-250].map(distance=>{
+  return [224.99,225,250,600,600.01,-250].map(distance=>{
    battlefieldTest.reset(4);battlefieldTest.clear();const x=1800,dir=team?-1:1;
    const id=battlefieldTest.spawn(team,'rocket',x),target=battlefieldTest.spawn(1-team,'rocket',x+dir*distance);
    battlefieldTest.patchUnit(id,{velocity:0});battlefieldTest.patchUnit(target,{velocity:0,rocketCooldown:999});
@@ -123,7 +123,7 @@ test('RC-08 mobile navigation, pan, spawn and reset retain separate scenes',asyn
  await page.locator('#blueRocket').click();await page.locator('#redRifle').click();
  expect((await page.evaluate(()=>battlefieldTest.snapshot())).units).toHaveLength(2);
  await page.locator('#jumpRed').click();await page.locator('#reset').click();
- expect((await page.evaluate(()=>battlefieldTest.snapshot())).units).toHaveLength(8);
+ expect((await page.evaluate(()=>battlefieldTest.snapshot())).units).toHaveLength(10);
  await page.getByRole('link',{name:'Flight School'}).click();await expect(page).toHaveURL(/index.html$/);
  expect(errors).toEqual([]);
 });

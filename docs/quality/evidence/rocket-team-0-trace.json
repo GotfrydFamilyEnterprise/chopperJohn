@@ -3,15 +3,16 @@
     "time": 0.6833333333333338,
     "units": [
       {
-        "id": 9,
+        "id": 11,
         "team": 0,
         "type": "rocket",
         "x": 1500,
         "y": 460,
-        "phase": 0.79,
+        "phase": 0.41000000000000014,
         "velocity": 33,
         "state": "fireStop",
         "timer": 0.6833333333333338,
+        "observedVelocity": 0,
         "hp": 4,
         "fireCooldown": 0,
         "guardBase": null,
@@ -19,18 +20,30 @@
         "hitFlash": 0,
         "rocketCooldown": 0,
         "rocketAimTime": 0.6833333333333338,
-        "rocketTargetId": 10
+        "rocketTargetId": 12,
+        "rocketGoal": {
+          "targetId": 12,
+          "originX": 1521.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 152.4367426659159,
+          "vy": -181.66703571546435,
+          "flightTime": 1.8246599632494611,
+          "aimedX": 1800,
+          "impactX": 1800,
+          "targetVelocity": 0
+        }
       },
       {
-        "id": 10,
+        "id": 12,
         "team": 1,
         "type": "rocket",
         "x": 1800,
         "y": 460,
-        "phase": 0.10000000000000009,
+        "phase": 0.7199999999999998,
         "velocity": 0,
         "state": "fireStop",
         "timer": 0.6833333333333338,
+        "observedVelocity": 0,
         "hp": 100,
         "fireCooldown": 0,
         "guardBase": null,
@@ -38,7 +51,18 @@
         "hitFlash": 0,
         "rocketCooldown": 998.3166666666673,
         "rocketAimTime": 0,
-        "rocketTargetId": 9
+        "rocketTargetId": 11,
+        "rocketGoal": {
+          "targetId": 11,
+          "originX": 1778.1452212706577,
+          "originY": 391.95448893395474,
+          "vx": -152.4367426659159,
+          "vy": -181.66703571546435,
+          "flightTime": 1.8246599632494611,
+          "aimedX": 1500,
+          "impactX": 1500,
+          "targetVelocity": 0
+        }
       }
     ],
     "bases": [
@@ -154,21 +178,26 @@
     "explosions": [],
     "combatEvents": [],
     "seed": 123,
+    "shotsFired": 0,
+    "camera": 0,
+    "scale": 1.35,
+    "followRockets": false,
     "randomState": 123
   },
   "launch": {
     "time": 0.7000000000000005,
     "units": [
       {
-        "id": 9,
+        "id": 11,
         "team": 0,
         "type": "rocket",
         "x": 1500,
         "y": 460,
-        "phase": 0.79,
+        "phase": 0.41000000000000014,
         "velocity": 33,
         "state": "fireStop",
         "timer": 0.7000000000000005,
+        "observedVelocity": 0,
         "hp": 4,
         "fireCooldown": 0,
         "guardBase": null,
@@ -176,18 +205,30 @@
         "hitFlash": 0,
         "rocketCooldown": 3,
         "rocketAimTime": 0,
-        "rocketTargetId": 10
+        "rocketTargetId": 12,
+        "rocketGoal": {
+          "targetId": 12,
+          "originX": 1521.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 152.4367426659159,
+          "vy": -181.66703571546435,
+          "flightTime": 1.8246599632494611,
+          "aimedX": 1800,
+          "impactX": 1800,
+          "targetVelocity": 0
+        }
       },
       {
-        "id": 10,
+        "id": 12,
         "team": 1,
         "type": "rocket",
         "x": 1800,
         "y": 460,
-        "phase": 0.10000000000000009,
+        "phase": 0.7199999999999998,
         "velocity": 0,
         "state": "fireStop",
         "timer": 0.7000000000000005,
+        "observedVelocity": 0,
         "hp": 100,
         "fireCooldown": 0,
         "guardBase": null,
@@ -195,7 +236,18 @@
         "hitFlash": 0,
         "rocketCooldown": 998.3000000000006,
         "rocketAimTime": 0,
-        "rocketTargetId": 9
+        "rocketTargetId": 11,
+        "rocketGoal": {
+          "targetId": 11,
+          "originX": 1778.1452212706577,
+          "originY": 391.95448893395474,
+          "vx": -152.4367426659159,
+          "vy": -181.66703571546435,
+          "flightTime": 1.8246599632494611,
+          "aimedX": 1500,
+          "impactX": 1500,
+          "targetVelocity": 0
+        }
       }
     ],
     "bases": [
@@ -310,19 +362,23 @@
     "rockets": [
       {
         "team": 0,
-        "shooterId": 9,
+        "shooterId": 11,
         "originX": 1521.8547787293423,
         "originY": 391.95448893395474,
-        "x": 1524.4380523140687,
-        "y": 388.9091966920367,
         "vx": 154.996415083585,
         "vy": -184.7175345150858,
-        "ground": 460,
-        "aimedX": 1800,
-        "spread": 14,
-        "impactX": 1808.0430454537272,
-        "age": 0.016666666666666666,
         "flightTime": 1.8464186192309804,
+        "aimedX": 1800,
+        "impactX": 1808.0430454537272,
+        "targetVelocity": 0,
+        "x": 1524.4380523140687,
+        "y": 388.9091966920367,
+        "ground": 460,
+        "targetId": 12,
+        "targetX": 1800,
+        "spread": 14,
+        "error": 8.043045453727245,
+        "age": 0.016666666666666666,
         "id": 1
       }
     ],
@@ -333,28 +389,36 @@
         "type": "launch",
         "id": 1,
         "team": 0,
-        "shooterId": 9,
+        "shooterId": 11,
         "aimedX": 1800,
         "impactX": 1808.0430454537272,
+        "targetX": 1800,
+        "targetVelocity": 0,
+        "flightTime": 1.8464186192309804,
         "spread": 14
       }
     ],
     "seed": 123,
+    "shotsFired": 1,
+    "camera": 0,
+    "scale": 1.35,
+    "followRockets": false,
     "randomState": 1831565936
   },
   "airborne": {
     "time": 1.100000000000001,
     "units": [
       {
-        "id": 9,
+        "id": 11,
         "team": 0,
         "type": "rocket",
         "x": 1500,
         "y": 460,
-        "phase": 0.79,
+        "phase": 0.41000000000000014,
         "velocity": 33,
         "state": "fireStop",
         "timer": 1.100000000000001,
+        "observedVelocity": 0,
         "hp": 4,
         "fireCooldown": 0,
         "guardBase": null,
@@ -362,18 +426,30 @@
         "hitFlash": 0,
         "rocketCooldown": 2.6000000000000014,
         "rocketAimTime": 0,
-        "rocketTargetId": 10
+        "rocketTargetId": 12,
+        "rocketGoal": {
+          "targetId": 12,
+          "originX": 1521.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 152.4367426659159,
+          "vy": -181.66703571546435,
+          "flightTime": 1.8246599632494611,
+          "aimedX": 1800,
+          "impactX": 1800,
+          "targetVelocity": 0
+        }
       },
       {
-        "id": 10,
+        "id": 12,
         "team": 1,
         "type": "rocket",
         "x": 1800,
         "y": 460,
-        "phase": 0.10000000000000009,
+        "phase": 0.7199999999999998,
         "velocity": 0,
         "state": "fireStop",
         "timer": 1.100000000000001,
+        "observedVelocity": 0,
         "hp": 100,
         "fireCooldown": 0,
         "guardBase": null,
@@ -381,7 +457,18 @@
         "hitFlash": 0,
         "rocketCooldown": 997.900000000001,
         "rocketAimTime": 0,
-        "rocketTargetId": 9
+        "rocketTargetId": 11,
+        "rocketGoal": {
+          "targetId": 11,
+          "originX": 1778.1452212706577,
+          "originY": 391.95448893395474,
+          "vx": -152.4367426659159,
+          "vy": -181.66703571546435,
+          "flightTime": 1.8246599632494611,
+          "aimedX": 1500,
+          "impactX": 1500,
+          "targetVelocity": 0
+        }
       }
     ],
     "bases": [
@@ -496,19 +583,23 @@
     "rockets": [
       {
         "team": 0,
-        "shooterId": 9,
+        "shooterId": 11,
         "originX": 1521.8547787293423,
         "originY": 391.95448893395474,
-        "x": 1586.4366183475026,
-        "y": 335.8221828860023,
         "vx": 154.996415083585,
         "vy": -184.7175345150858,
-        "ground": 460,
-        "aimedX": 1800,
-        "spread": 14,
-        "impactX": 1808.0430454537272,
-        "age": 0.41666666666666663,
         "flightTime": 1.8464186192309804,
+        "aimedX": 1800,
+        "impactX": 1808.0430454537272,
+        "targetVelocity": 0,
+        "x": 1586.4366183475026,
+        "y": 335.8221828860023,
+        "ground": 460,
+        "targetId": 12,
+        "targetX": 1800,
+        "spread": 14,
+        "error": 8.043045453727245,
+        "age": 0.41666666666666663,
         "id": 1
       }
     ],
@@ -519,28 +610,36 @@
         "type": "launch",
         "id": 1,
         "team": 0,
-        "shooterId": 9,
+        "shooterId": 11,
         "aimedX": 1800,
         "impactX": 1808.0430454537272,
+        "targetX": 1800,
+        "targetVelocity": 0,
+        "flightTime": 1.8464186192309804,
         "spread": 14
       }
     ],
     "seed": 123,
+    "shotsFired": 1,
+    "camera": 1447.410334284898,
+    "scale": 1.35,
+    "followRockets": false,
     "randomState": 1831565936
   },
   "impact": {
     "time": 2.533333333333329,
     "units": [
       {
-        "id": 9,
+        "id": 11,
         "team": 0,
         "type": "rocket",
         "x": 1500,
         "y": 460,
-        "phase": 0.79,
+        "phase": 0.41000000000000014,
         "velocity": 33,
         "state": "fireStop",
         "timer": 2.533333333333329,
+        "observedVelocity": 0,
         "hp": 4,
         "fireCooldown": 0,
         "guardBase": null,
@@ -548,18 +647,30 @@
         "hitFlash": 0,
         "rocketCooldown": 1.1666666666666732,
         "rocketAimTime": 0,
-        "rocketTargetId": 10
+        "rocketTargetId": 12,
+        "rocketGoal": {
+          "targetId": 12,
+          "originX": 1521.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 152.4367426659159,
+          "vy": -181.66703571546435,
+          "flightTime": 1.8246599632494611,
+          "aimedX": 1800,
+          "impactX": 1800,
+          "targetVelocity": 0
+        }
       },
       {
-        "id": 10,
+        "id": 12,
         "team": 1,
         "type": "rocket",
         "x": 1800,
         "y": 460,
-        "phase": 0.10000000000000009,
+        "phase": 0.7199999999999998,
         "velocity": 0,
         "state": "fireStop",
         "timer": 2.533333333333329,
+        "observedVelocity": 0,
         "hp": 98.64344363629817,
         "fireCooldown": 0,
         "guardBase": null,
@@ -567,7 +678,18 @@
         "hitFlash": 0.15,
         "rocketCooldown": 996.466666666669,
         "rocketAimTime": 0,
-        "rocketTargetId": 9
+        "rocketTargetId": 11,
+        "rocketGoal": {
+          "targetId": 11,
+          "originX": 1778.1452212706577,
+          "originY": 391.95448893395474,
+          "vx": -152.4367426659159,
+          "vy": -181.66703571546435,
+          "flightTime": 1.8246599632494611,
+          "aimedX": 1500,
+          "impactX": 1500,
+          "targetVelocity": 0
+        }
       }
     ],
     "bases": [
@@ -693,9 +815,12 @@
         "type": "launch",
         "id": 1,
         "team": 0,
-        "shooterId": 9,
+        "shooterId": 11,
         "aimedX": 1800,
         "impactX": 1808.0430454537272,
+        "targetX": 1800,
+        "targetVelocity": 0,
+        "flightTime": 1.8464186192309804,
         "spread": 14
       },
       {
@@ -707,7 +832,7 @@
         "hits": [
           {
             "covered": false,
-            "id": 10,
+            "id": 12,
             "amount": 1.3565563637018272,
             "hp": 98.64344363629817
           }
@@ -715,6 +840,10 @@
       }
     ],
     "seed": 123,
+    "shotsFired": 1,
+    "camera": 1167,
+    "scale": 0.6666666666666666,
+    "followRockets": false,
     "randomState": 1831565936
   }
 }

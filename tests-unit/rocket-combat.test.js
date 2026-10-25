@@ -8,15 +8,15 @@ const unit=(id,team=0,type='rifle',x=1000)=>createSoldier(id,team,type,x,460);
 function bunker(team=1){const b=createBase(1500,team,false),units=['rifle','rifle','rocket'].map((t,i)=>unit(i+1,team,t,b.x));for(const u of units){assert.equal(assignDefender(b,u),true);for(let i=0;i<200;i++)advanceDefender(b,u,1/60);}return {b,units};}
 for(const team of [0,1])test(`RC-01 inclusive targeting and overlap faction ${team}`,()=>{
  const u=unit(1,team,'rocket'),dir=team?-1:1;
- for(const [distance,valid] of [[224.999,false],[225,true],[250,true],[500,true],[500.001,false],[-250,false]]){
+ for(const [distance,valid] of [[224.999,false],[225,true],[250,true],[500,true],[600,true],[600.001,false],[-250,false]]){
   const target=unit(2,1-team,'rifle',u.x+dir*distance);
-  assert.equal(!!selectTarget(u,[target],225,500),valid);
+  assert.equal(!!selectTarget(u,[target],225,C.rocketMaxRange),valid);
  }
  const tooClose=unit(2,1-team,'rifle',u.x+dir*200),far=unit(3,1-team,'rocket',u.x+dir*300);
- assert.equal(selectTarget(u,[tooClose,far],225,500),far);
- assert.equal(selectTarget(u,[unit(4,team,'rifle',u.x+dir*250)],225,500),null);
- far.hp=0;assert.equal(selectTarget(u,[far],225,500),null);
- assert.equal(C.rifleRange-C.rocketMinRange,25);assert.equal(C.rocketMaxRange,2*C.rifleRange);
+ assert.equal(selectTarget(u,[tooClose,far],225,C.rocketMaxRange),far);
+ assert.equal(selectTarget(u,[unit(4,team,'rifle',u.x+dir*250)],225,C.rocketMaxRange),null);
+ far.hp=0;assert.equal(selectTarget(u,[far],225,C.rocketMaxRange),null);
+ assert.equal(C.rifleRange-C.rocketMinRange,25);assert.equal(C.rocketMaxRange,600);
 });
 test('RC-03/04 ballistic landing, upward launch, scatter bounds and variance',()=>{
  for(const team of [0,1])for(const distance of [225,350,500]){

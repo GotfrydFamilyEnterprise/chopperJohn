@@ -31,7 +31,7 @@
     "main": false,
     "slots": {
       "rifle": [
-        9,
+        11,
         null
       ],
       "rocket": [
@@ -40,7 +40,7 @@
     },
     "reservations": {
       "rifle": [
-        9,
+        11,
         null
       ],
       "rocket": [
@@ -58,20 +58,20 @@
     "main": false,
     "slots": {
       "rifle": [
-        9,
+        11,
         null
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "reservations": {
       "rifle": [
-        9,
+        11,
         null
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "state": "ASSEMBLING",
@@ -85,20 +85,20 @@
     "main": false,
     "slots": {
       "rifle": [
-        9,
-        11
+        11,
+        13
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "reservations": {
       "rifle": [
-        9,
-        11
+        11,
+        13
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "state": "OCCUPIED",
@@ -113,19 +113,19 @@
     "slots": {
       "rifle": [
         null,
-        11
+        13
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "reservations": {
       "rifle": [
         null,
-        11
+        13
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "state": "UNDERSTAFFED",
@@ -139,20 +139,20 @@
     "main": false,
     "slots": {
       "rifle": [
-        14,
-        11
+        16,
+        13
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "reservations": {
       "rifle": [
-        14,
-        11
+        16,
+        13
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "state": "OCCUPIED",

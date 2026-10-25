@@ -1,25 +1,29 @@
-import {clamp} from "./units/soldierCommon.js?v=0.6.0";
-import {createRifleman,updateRifleman,drawRifleman} from "./units/rifleman.js?v=0.6.0";
-import {createRocketeer,updateRocketeer,drawRocketeer} from "./units/rocketeer.js?v=0.6.0";
-import {createBase} from "./bases/baseCommon.js?v=0.6.0";
-import {drawHeadquarters} from "./bases/headquarters.js?v=0.6.0";
-import {drawForwardBase,occupied,assignDefender,releaseDeadDefenders,advanceDefender,refreshOccupation,drawForwardFront} from "./bases/forwardBase.js?v=0.6.0";
-import {WEAPONS,createRandom,selectTarget,updateRocketWeapon,rocketPosition,resolveRifleHit,resolveRocketBlast} from "./combat/weapons.js?v=0.6.0";
-import {drawCombatEffects} from "./combat/effects.js?v=0.6.0";
+import {clamp} from "./units/soldierCommon.js?v=0.6.1";
+import {createRifleman,updateRifleman,drawRifleman} from "./units/rifleman.js?v=0.6.1";
+import {createRocketeer,updateRocketeer,drawRocketeer} from "./units/rocketeer.js?v=0.6.1";
+import {createBase} from "./bases/baseCommon.js?v=0.6.1";
+import {drawHeadquarters} from "./bases/headquarters.js?v=0.6.1";
+import {drawForwardBase,occupied,assignDefender,releaseDeadDefenders,advanceDefender,refreshOccupation,drawForwardFront} from "./bases/forwardBase.js?v=0.6.1";
+import {WEAPONS,createRandom,selectTarget,chooseRocketTarget,updateRocketWeapon,rocketPosition,resolveRifleHit,resolveRocketBlast} from "./combat/weapons.js?v=0.6.1";
+import {drawCombatEffects} from "./combat/effects.js?v=0.6.1";
 const cv=document.getElementById("field"),ctx=cv.getContext("2d");
 const W=3600,GROUND=460,DT=1/60;
 const testing=new URLSearchParams(location.search).has("test");
+let followFocus=null;
+let followRockets=new URLSearchParams(location.search).get("view")==="rockets",shotsFired=0;
 let combatEnabled=true,random=createRandom(),seed=0xc0ffee;
 let rockets=[],explosions=[],impacts=[],combatEvents=[],nextRoundId=1;
-function recordCombat(event){combatEvents.push({time,...event});if(combatEvents.length>128)combatEvents.shift();}
+function recordCombat(event){if(event.type==="launch")shotsFired++;combatEvents.push({time,...event});if(combatEvents.length>128)combatEvents.shift();}
 function explodeRocket(x,team,id){const hits=resolveRocketBlast(x,team,units,bases,random);explosions.push({x,y:GROUND,age:0});recordCombat({type:"explosion",id,x,team,hits});}
 let viewW=innerWidth,viewH=innerHeight,ratio=1,scale=1,camera=0,dragId=null,lastPointerX=0,dragDistance=0,acc=0,last=0,time=0,paused=false,units=[],bases=[],bullets=[],nextId=1;
 function resize(){viewW=innerWidth;viewH=innerHeight;ratio=Math.min(devicePixelRatio||1,2);cv.width=Math.round(viewW*ratio);cv.height=Math.round(viewH*ratio);scale=Math.max(.58,Math.min(viewH/585,1.35));camera=clamp(camera,0,Math.max(0,W-viewW/scale));}
 function spawn(team,type,x){units.push(type==="rifle"?createRifleman(nextId++,team,x,GROUND):createRocketeer(nextId++,team,x,GROUND));}
-function reset(resetSeed=0xc0ffee){seed=resetSeed>>>0;random=createRandom(seed);units=[];bullets=[];rockets=[];explosions=[];impacts=[];combatEvents=[];nextRoundId=1;nextId=1;time=0;camera=0;paused=false;document.getElementById("pause").textContent="Pause";
+function reset(resetSeed=0xc0ffee){seed=resetSeed>>>0;random=createRandom(seed);units=[];bullets=[];rockets=[];explosions=[];impacts=[];combatEvents=[];nextRoundId=1;nextId=1;shotsFired=0;followFocus=null;time=0;camera=0;paused=false;document.getElementById("pause").textContent="Pause";
  bases=[createBase(110,0,true),createBase(W-110,1,true),createBase(1120,0,false),createBase(W-1120,1,false)];
  for(let i=0;i<3;i++){spawn(0,"rifle",220+i*36);spawn(1,"rifle",W-220-i*36);}
  spawn(0,"rocket",170);spawn(1,"rocket",W-170);
+ // RC-10: an assault rocketeer per side advances after the other fills the FOB.
+ spawn(0,"rocket",200);spawn(1,"rocket",W-200);
 }
 function command(team,type){spawn(team,type,team===0?200:W-200);}
 function update(dt){if(paused)return;time+=dt;
@@ -27,6 +31,7 @@ function update(dt){if(paused)return;time+=dt;
   b.coverFlash=Math.max(0,(b.coverFlash||0)-dt);
   b.flagProgress=clamp(b.flagProgress+(occupied(b)?1:-1)*dt*.8,0,1);
  }
+ const previousPositions=new Map(units.map(unit=>[unit.id,unit.x]));
  for(const u of units){
   if(u.hp<=0)continue;
   u.hitFlash=Math.max(0,u.hitFlash-dt);
@@ -34,7 +39,7 @@ function update(dt){if(paused)return;time+=dt;
   if(u.guardBase===null)for(const b of bases)if(!b.main&&b.team===u.team){
    if((b.x-u.x)*(u.team===0?1:-1)<=100&&(b.x-u.x)*(u.team===0?1:-1)>=-80&&assignDefender(b,u))break;
   }
-  const target=combatEnabled?selectTarget(u,units,u.type==="rifle"?0:WEAPONS.rocketMinRange,u.type==="rifle"?WEAPONS.rifleRange:WEAPONS.rocketMaxRange):null;
+  const target=combatEnabled?(u.type==="rifle"?selectTarget(u,units,0,WEAPONS.rifleRange):chooseRocketTarget(u,units)):null;
   if(u.guardBase!==null){advanceDefender(bases.find(b=>!b.main&&b.x===u.guardBase),u,dt,!!target);}
   if(u.type==="rifle"){
    if(u.guardBase===null)updateRifleman(u,dt,!!target);
@@ -47,10 +52,11 @@ function update(dt){if(paused)return;time+=dt;
   }else{
    if(u.guardBase===null)updateRocketeer(u,dt,!!target);
    const rocket=updateRocketWeapon(u,target,dt,random);
-   if(rocket){rocket.id=nextRoundId++;rockets.push(rocket);recordCombat({type:"launch",id:rocket.id,team:u.team,shooterId:u.id,aimedX:rocket.aimedX,impactX:rocket.impactX,spread:rocket.spread});}
+   if(rocket){rocket.id=nextRoundId++;rockets.push(rocket);recordCombat({type:"launch",id:rocket.id,team:u.team,shooterId:u.id,aimedX:rocket.aimedX,impactX:rocket.impactX,targetX:rocket.targetX,targetVelocity:rocket.targetVelocity,flightTime:rocket.flightTime,spread:rocket.spread});}
   }
   u.x=clamp(u.x,170,W-170);
  }
+ for(const u of units)u.observedVelocity=(u.x-previousPositions.get(u.id))/dt;
  for(const p of bullets){
   // CB-01: include the initial muzzle segment for enemies at close range.
   const previous=p.originX??p.x;delete p.originX;p.x+=p.vx*dt;p.ttl-=dt;
@@ -71,6 +77,18 @@ function update(dt){if(paused)return;time+=dt;
  for(const b of bases)if(!b.main){releaseDeadDefenders(b,aliveIds);refreshOccupation(b);}
 }
 function draw(){
+ if(followRockets){
+  if(followFocus&&time>followFocus.until)followFocus=null;
+  if(!followFocus&&rockets.length){const shot=rockets[0];followFocus={start:shot.originX,end:shot.impactX,until:time+shot.flightTime-shot.age+.45};}
+  const shot=followFocus;
+  const active=units.filter(unit=>unit.type==="rocket"&&unit.rocketGoal).sort((a,b)=>(a.rocketCooldown||0)-(b.rocketCooldown||0))[0];
+  const leader=active||units.filter(unit=>unit.type==="rocket"&&unit.guardBase===null).sort((a,b)=>Math.abs(a.x-W/2)-Math.abs(b.x-W/2))[0];
+  if(shot||leader){
+   const start=shot?shot.start:leader.x,end=shot?shot.end:(leader.rocketGoal?.impactX??leader.x+(leader.team===0?1:-1)*240);
+   scale=Math.min(Math.max(.58,Math.min(viewH/585,1.35)),viewW/(Math.abs(end-start)+160));
+   camera=clamp((start+end)/2-viewW/(2*scale),0,Math.max(0,W-viewW/scale));
+  }
+ }
  ctx.setTransform(ratio,0,0,ratio,0,0);ctx.clearRect(0,0,viewW,viewH);
  ctx.fillStyle="#152a43";ctx.fillRect(0,0,viewW,viewH);ctx.save();
  const offsetY=Math.max(0,(viewH-(GROUND+85)*scale)/2);
@@ -85,24 +103,31 @@ function draw(){
  // Fractional damage remains visible without changing the accepted soldier gait.
  for(const u of units){const maxHp=u.type==="rifle"?3:4;if(u.hp<maxHp){ctx.fillStyle="#14212a";ctx.fillRect(u.x-13,u.y-66,26,4);ctx.fillStyle="#a4d77c";ctx.fillRect(u.x-13,u.y-66,26*u.hp/maxHp,4);}}
  drawCombatEffects(ctx,rockets,explosions,impacts);
+ if(followRockets)for(const u of units)if(u.type==="rocket"&&u.hp>0){
+  const label=u.rocketCooldown>0?"Reloading":u.rocketAimTime>0?"Aiming":u.arrived?"Guarding":"Advancing";
+  ctx.font="bold 11px system-ui";ctx.textAlign="center";ctx.fillStyle="#f2d9a2";ctx.fillText(label,u.x,u.y-74);
+  if(u.rocketGoal){const x=u.rocketGoal.aimedX;ctx.strokeStyle=u.team===0?"#a5dfff":"#ffc0b5";ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(x-6,GROUND-7);ctx.lineTo(x+6,GROUND-7);ctx.moveTo(x,GROUND-13);ctx.lineTo(x,GROUND-1);ctx.stroke();}
+ }
  ctx.strokeStyle="#fff0a1";ctx.lineWidth=2.4;
  for(const p of bullets){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x-Math.sign(p.vx)*11,p.y);ctx.stroke();}
- ctx.restore();document.getElementById("count").textContent=" · "+units.length+" soldiers · "+bullets.length+" rounds · "+rockets.length+" rockets";
+ ctx.restore();document.getElementById("count").textContent=" · "+units.length+" soldiers · "+bullets.length+" rounds · "+rockets.length+" flying · "+shotsFired+" launched";
 }
 function frame(ts){const dt=Math.min((ts-last)/1000||0,.06);last=ts;acc=Math.min(acc+dt,.2);while(acc>=DT){update(DT);acc-=DT;}draw();requestAnimationFrame(frame);}
-cv.addEventListener("pointerdown",e=>{dragId=e.pointerId;lastPointerX=e.clientX;dragDistance=0;cv.setPointerCapture(e.pointerId);});
+function leaveFollow(){followRockets=false;followFocus=null;document.getElementById("followRockets").classList.remove("active");resize();}
+cv.addEventListener("pointerdown",e=>{leaveFollow();dragId=e.pointerId;lastPointerX=e.clientX;dragDistance=0;cv.setPointerCapture(e.pointerId);});
 cv.addEventListener("pointermove",e=>{if(e.pointerId!==dragId)return;const dx=e.clientX-lastPointerX;dragDistance+=Math.abs(dx);camera=clamp(camera-dx/scale,0,Math.max(0,W-viewW/scale));lastPointerX=e.clientX;});
 cv.addEventListener("pointerup",()=>{dragId=null;});
 cv.addEventListener("pointercancel",()=>dragId=null);
 for(const [id,team,type] of [["blueRifle",0,"rifle"],["blueRocket",0,"rocket"],["redRifle",1,"rifle"],["redRocket",1,"rocket"]])
  document.getElementById(id).addEventListener("click",()=>command(team,type));
-document.getElementById("jumpBlue").addEventListener("click",()=>{camera=clamp(1120-viewW/(2*scale),0,W-viewW/scale);});
-document.getElementById("jumpRed").addEventListener("click",()=>{camera=clamp(W-1120-viewW/(2*scale),0,W-viewW/scale);});
+document.getElementById("jumpBlue").addEventListener("click",()=>{leaveFollow();camera=clamp(1120-viewW/(2*scale),0,W-viewW/scale);});
+document.getElementById("jumpRed").addEventListener("click",()=>{leaveFollow();camera=clamp(W-1120-viewW/(2*scale),0,W-viewW/scale);});
+document.getElementById("followRockets").addEventListener("click",e=>{followRockets=!followRockets;e.target.classList.toggle("active",followRockets);if(!followRockets)resize();draw();});
 document.getElementById("pause").addEventListener("click",e=>{paused=!paused;e.target.textContent=paused?"Resume":"Pause";});
 document.getElementById("reset").addEventListener("click",e=>{e.preventDefault();reset();});
 addEventListener("resize",()=>{resize();draw();});
-addEventListener("keydown",e=>{if(e.key==="ArrowRight")camera=clamp(camera+130,0,W-viewW/scale);if(e.key==="ArrowLeft")camera=clamp(camera-130,0,W-viewW/scale);});
-resize();reset();
+addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft")leaveFollow();if(e.key==="ArrowRight")camera=clamp(camera+130,0,W-viewW/scale);if(e.key==="ArrowLeft")camera=clamp(camera-130,0,W-viewW/scale);});
+resize();reset();document.getElementById("followRockets").classList.toggle("active",followRockets);
 if(testing)window.battlefieldTest={
  reset:(value=0xc0ffee)=>{reset(value);combatEnabled=false;draw();},
  step:(n=1)=>{for(let i=0;i<n;i++)update(DT);draw();},
@@ -110,7 +135,7 @@ if(testing)window.battlefieldTest={
  kill:id=>{const u=units.find(u=>u.id===id);if(u)u.hp=0;},
  combat:value=>combatEnabled=value,
  clear:()=>{units=[];bullets=[];rockets=[];explosions=[];impacts=[];combatEvents=[];for(const b of bases)if(!b.main){releaseDeadDefenders(b,new Set());refreshOccupation(b);}},
- snapshot:()=>structuredClone({time,units,bases,bullets,rockets,explosions,combatEvents,seed,randomState:random.state()}),
+ snapshot:()=>structuredClone({time,units,bases,bullets,rockets,explosions,combatEvents,seed,shotsFired,camera,scale,followRockets,randomState:random.state()}),
  patchUnit:(id,changes)=>Object.assign(units.find(unit=>unit.id===id),changes),
  impactRocket:(x,team)=>{explodeRocket(x,team,nextRoundId++);draw();},
  camera:x=>{camera=clamp(x-viewW/(2*scale),0,W-viewW/scale);draw();}

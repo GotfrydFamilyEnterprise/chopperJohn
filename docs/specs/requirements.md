@@ -44,7 +44,7 @@ This is the source of truth for intent, **not** an assertion that the implementa
 ## Rocket soldier
 - [RO-01] On march, launcher is carried **on the back**.
 - [RO-02] At engagement range the rocket soldier **stops** and places launcher on shoulder in preparation to fire.
-- [RO-03] Rocket engagement is **225–500 world units ahead**, inclusive; rifle range remains 250, giving 25 units of overlap.
+- [RO-03] Rocket engagement is **225–600 world units ahead**, inclusive; rifle range remains 250, giving 25 units of overlap. The user subsequently selected a 600-unit maximum.
 - [RO-04] Ground-directed arcing rocket fire and area damage are now authorized by the approved RC requirements below.
 - [RO-05] 4 HP prototype baseline; rocket soldier assigned to FOB guards designated position.
 
@@ -70,10 +70,10 @@ This is the source of truth for intent, **not** an assertion that the implementa
 ## Approved rocket combat (user accepted design, 2026-10-25)
 These requirements supersede the earlier aim-only rocket milestone. They specify intent, not passing implementation status.
 
-- [RC-01] Rifle aim range is 0–250; rocket aim range is 225–500 world units forward, inclusive. Reject behind, dead and friendly targets. A nearer enemy inside rocket minimum does not prevent selection of another eligible enemy.
+- [RC-01] Rifle aim range is 0–250; rocket aim range is 225–600 world units forward, inclusive. Reject behind, dead and friendly targets. A nearer enemy inside rocket minimum does not prevent selection of another eligible enemy.
 - [RC-02] Rocketeer stops, shoulders an upward-angled launcher and aims continuously at the same eligible target for 0.7 seconds before launch. After firing, reload 3 seconds before beginning the next aim. Losing/changing target restarts aim. Stationed rocketeers stay at their posts.
-- [RC-03] Aim at the target's current ground position when firing, without homing or predictive lead. Randomize the landing point once and calculate a real ballistic trajectory to it. Infantry do not intercept airborne rockets; detonate only on ground impact.
-- [RC-04] Landing error is uniformly sampled within ±5 units at 225 range, ±20 at 350, ±50 at 500, interpolating continuously between anchors. Minimum/maximum firing ranges constrain target selection, not the scattered impact position. Longer shots must visibly miss more often.
+- [RC-03] Predict the target's ground intercept from its observed actual horizontal movement and ballistic flight time, as subsequently requested by the user. Once launched, never home or retarget. Randomize the landing point once and calculate a real ballistic trajectory to it. Infantry do not intercept airborne rockets; detonate only on ground impact.
+- [RC-04] Landing error is uniformly sampled within ±5 units at 225 range, ±20 at 350, ±50 at 500 and ±66 at 600, interpolating continuously between anchors. Minimum/maximum firing ranges constrain target selection, not the scattered impact position. Longer shots must visibly miss more often.
 - [RC-05] Ground explosions have a 25-unit radius and deal 2 HP at center to exposed opposing infantry, decreasing linearly to zero at the edge. No friendly fire. Both infantry kinds are vulnerable. In-flight rockets persist if their shooter or target dies.
 - [RC-06] Show the upward launch, curved flight with trail, explosion flash, dust and brief ground impact effect. Launcher and projectile muzzle agree. Pause freezes combat; reset clears projectiles, effects, aim, reload and damage events.
 - [RC-07] All scatter, cover chances and defender selection use a seeded, resettable simulation RNG, observable through test state. Identical seed/timestep/commands reproduce the full combat sequence.
@@ -85,3 +85,7 @@ These requirements supersede the earlier aim-only rocket milestone. They specify
 - [BC-03] Each rifle bullet that physically hits a stationed defender has a **1-in-20 independent chance** to deal **0.5 HP**; otherwise it is absorbed. The contacted defender receives that damage; a bullet never pierces to another unit. This is probability, not a guaranteed every-twentieth counter.
 - [BC-04] Exposed infantry keep ordinary rifle damage (1 HP) and ordinary rocket area damage. Infantry outside a hit bunker may take ordinary blast damage in the same event; no friendly fire or reduced damage for unstationed units.
 - [BC-05] Fractional HP must cause eventual death without floating-point phantom survivors. Casualties free posts/reservations and update the flag as before; replacements receive protection only after arriving. Show damage/absorbed-hit feedback.
+
+### Firing visibility and autonomous leading (user follow-up)
+- [RC-09] Rocketeers autonomously select a live opposing target within their forward firing band. Keep an eligible target while aiming; choose a new one if it dies/leaves range. Predict ahead along actual observed ground velocity, including slower rifle fire-walk; stationary guards get no lead. Solve ballistic flight time and moving-target interception together. Scatter remains random; the rocket does not home after launch.
+- [RC-10] A normal initial wave must produce observable rocket fire without requiring undocumented extra deployments. Start one bunker-bound and one advancing rocket soldier per team, both from HQ, keeping FOBs initially empty and first-arrival staffing intact. Show cumulative launches, aiming/reload/guard/advance status in an opt-in Follow rockets view. Fit the launch/impact span and retain impact briefly; manual panning or FOB jump exits follow. `?view=rockets` starts this view without exposing a test controller.

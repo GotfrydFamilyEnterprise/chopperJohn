@@ -1,6 +1,6 @@
 // RC-01..08, BC-01..05: approved rocket and bunker-cover rules.
 export const WEAPONS = Object.freeze({
-  rifleRange: 250, rocketMinRange: 225, rocketMaxRange: 500,
+  rifleRange: 250, rocketMinRange: 225, rocketMaxRange: 600,
   rocketAimSeconds: 0.7, rocketReloadSeconds: 3,
   rocketAngle: 50 * Math.PI / 180, gravity: 240,
   blastRadius: 25, blastDamage: 2,
@@ -36,25 +36,47 @@ export function selectTarget(unit, units, minRange, maxRange) {
 }
 
 export function rocketSpread(distance) {
-  distance = Math.max(225, Math.min(500, distance));
-  return distance <= 350 ? 5 + (distance - 225) * 15 / 125 : 20 + (distance - 350) * 30 / 150;
+  distance = Math.max(225, Math.min(WEAPONS.rocketMaxRange, distance));
+  if(distance <= 350) return 5 + (distance - 225) * 15 / 125;
+  if(distance <= 500) return 20 + (distance - 350) * 30 / 150;
+  return 50 + (distance - 500) * 0.16;
+}
+
+// RC-09: keep a chosen eligible target while aiming; choose another autonomously
+// when it dies, leaves the firing band or passes behind the soldier.
+export function chooseRocketTarget(unit, units) {
+  const locked = units.find(enemy => enemy.id === unit.rocketTargetId);
+  return selectTarget(unit, locked ? [locked] : [], WEAPONS.rocketMinRange, WEAPONS.rocketMaxRange) ||
+    selectTarget(unit, units, WEAPONS.rocketMinRange, WEAPONS.rocketMaxRange);
+}
+
+// Solve the moving ground intercept and ballistic time together. Observed ground
+// velocity is measured from actual movement; guards and stopped rocketeers lead 0.
+export function planRocketShot(unit, target, error = 0) {
+  const direction = unit.team === 0 ? 1 : -1, angle = WEAPONS.rocketAngle;
+  const originX = unit.x + direction * 34 * Math.cos(angle);
+  const originY = unit.y - 42 - 34 * Math.sin(angle), drop = unit.y - originY;
+  const targetVelocity = target.observedVelocity || 0;
+  let flightTime = 0, aimedX = target.x, impactX, vx, vy;
+  for (let iteration = 0; iteration < 12; iteration++) {
+    aimedX = target.x + targetVelocity * flightTime;
+    // Keep the fixed-facing launch forward even for unusual externally set speed.
+    impactX = originX + direction * Math.max(1, (aimedX + error - originX) * direction);
+    const distance = Math.abs(impactX - originX);
+    const speed = Math.sqrt(WEAPONS.gravity * distance * distance /
+      (2 * Math.cos(angle) ** 2 * (drop + distance * Math.tan(angle))));
+    vx = direction * speed * Math.cos(angle); vy = -speed * Math.sin(angle);
+    flightTime = distance / Math.abs(vx);
+  }
+  return {originX, originY, vx, vy, flightTime, aimedX, impactX, targetVelocity};
 }
 
 export function launchRocket(unit, target, random) {
-  const direction = unit.team === 0 ? 1 : -1;
-  const angle = WEAPONS.rocketAngle;
-  const originX = unit.x + direction * 34 * Math.cos(angle);
-  const originY = unit.y - 42 - 34 * Math.sin(angle);
-  const aimedX = target.x; // RC-03: take the live position at launch; never home or lead.
-  const spread = rocketSpread(Math.abs(aimedX - unit.x));
-  const impactX = aimedX + (random() * 2 - 1) * spread;
-  const distance = Math.abs(impactX - originX);
-  const drop = unit.y - originY;
-  const speed = Math.sqrt(WEAPONS.gravity * distance * distance /
-    (2 * Math.cos(angle) ** 2 * (drop + distance * Math.tan(angle))));
-  const vx = direction * speed * Math.cos(angle), vy = -speed * Math.sin(angle);
-  return {team: unit.team, shooterId: unit.id, originX, originY, x: originX, y: originY,
-    vx, vy, ground: unit.y, aimedX, spread, impactX, age: 0, flightTime: distance / Math.abs(vx)};
+  const spread = rocketSpread(Math.abs(target.x - unit.x));
+  const error = (random() * 2 - 1) * spread;
+  const plan = planRocketShot(unit, target, error);
+  return {team: unit.team, shooterId: unit.id, ...plan, x: plan.originX, y: plan.originY,
+    ground: unit.y, targetId: target.id, targetX: target.x, spread, error, age: 0};
 }
 
 export function rocketPosition(rocket, age) {
@@ -72,6 +94,7 @@ export function updateRocketWeapon(unit, target, dt, random) {
     unit.rocketAimTime = 0;
     unit.rocketTargetId = target?.id ?? null;
   }
+  unit.rocketGoal = target ? {targetId: target.id, ...planRocketShot(unit, target)} : null;
   if (!target || unit.rocketCooldown > 1e-9) return null;
   unit.rocketAimTime = (unit.rocketAimTime || 0) + aimStep;
   if (unit.rocketAimTime + 1e-9 < WEAPONS.rocketAimSeconds) return null;
