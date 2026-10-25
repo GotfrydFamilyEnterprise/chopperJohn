@@ -1,9 +1,9 @@
-import {clamp} from "./units/soldierCommon.js";
-import {createRifleman,updateRifleman,drawRifleman} from "./units/rifleman.js";
-import {createRocketeer,updateRocketeer,drawRocketeer} from "./units/rocketeer.js";
-import {createBase} from "./bases/baseCommon.js";
-import {drawHeadquarters} from "./bases/headquarters.js";
-import {drawForwardBase,occupied,assignDefender,releaseDeadDefenders} from "./bases/forwardBase.js";
+import {clamp} from "./units/soldierCommon.js?v=0.4.1";
+import {createRifleman,updateRifleman,drawRifleman} from "./units/rifleman.js?v=0.4.1";
+import {createRocketeer,updateRocketeer,drawRocketeer} from "./units/rocketeer.js?v=0.4.1";
+import {createBase} from "./bases/baseCommon.js?v=0.4.1";
+import {drawHeadquarters} from "./bases/headquarters.js?v=0.4.1";
+import {drawForwardBase,occupied,assignDefender,releaseDeadDefenders} from "./bases/forwardBase.js?v=0.4.1";
 const cv=document.getElementById("field"),ctx=cv.getContext("2d");
 const W=3600,GROUND=460,DT=1/60,RIFLE_RANGE=250,ROCKET_RANGE=420;
 let viewW=innerWidth,viewH=innerHeight,ratio=1,scale=1,camera=0,dragId=null,lastPointerX=0,dragDistance=0,acc=0,last=0,time=0,paused=false,units=[],bases=[],bullets=[],nextId=1;
@@ -79,6 +79,8 @@ cv.addEventListener("pointerup",()=>{dragId=null;});
 cv.addEventListener("pointercancel",()=>dragId=null);
 for(const [id,team,type] of [["blueRifle",0,"rifle"],["blueRocket",0,"rocket"],["redRifle",1,"rifle"],["redRocket",1,"rocket"]])
  document.getElementById(id).addEventListener("click",()=>command(team,type));
+document.getElementById("jumpBlue").addEventListener("click",()=>{camera=clamp(1120-viewW/(2*scale),0,W-viewW/scale);});
+document.getElementById("jumpRed").addEventListener("click",()=>{camera=clamp(W-1120-viewW/(2*scale),0,W-viewW/scale);});
 document.getElementById("pause").addEventListener("click",e=>{paused=!paused;e.target.textContent=paused?"Resume":"Pause";});
 document.getElementById("reset").addEventListener("click",e=>{e.preventDefault();reset();});
 addEventListener("resize",resize);
