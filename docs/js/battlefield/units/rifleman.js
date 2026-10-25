@@ -2,11 +2,12 @@ import {createSoldier,drawBody,endBody,updateWalking} from "./soldierCommon.js";
 export function createRifleman(id,team,x,ground){return createSoldier(id,team,"rifle",x,ground);}
 export function updateRifleman(u,dt,enemyNearby){
  // Aiming is animated without creating projectiles yet.
- u.state=enemyNearby?"fireWalk":"march";
- updateWalking(u,dt,enemyNearby?.42:1);
+ u.state=u.guardBase!==null?"guard":enemyNearby?"fireWalk":"march";
+ if(u.state==="guard")u.timer+=dt;
+ else updateWalking(u,dt,enemyNearby?.42:1);
 }
 export function drawRifleman(ctx,u){
- const firing=u.state==="fireWalk";
+ const firing=u.state==="fireWalk"||u.state==="guard";
  const p=drawBody(ctx,u,1),b=p.bob;
  ctx.strokeStyle=p.colors.body;ctx.lineWidth=3;
  if(firing){
@@ -22,5 +23,6 @@ export function drawRifleman(ctx,u){
    ctx.fillStyle="#373d43";ctx.fillRect(7,-27-b,29,4);ctx.fillRect(15,-23-b,4,8);
    ctx.fillStyle="#e0bf82";ctx.fillRect(31,-27-b,5,2);
  }
+ if(u.hitFlash>0){ctx.globalAlpha=.45;ctx.fillStyle="#fff";ctx.beginPath();ctx.arc(0,-31-b,18,0,Math.PI*2);ctx.fill();}
  endBody(ctx);
 }
