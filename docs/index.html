@@ -31,7 +31,7 @@ canvas{display:block;width:100vw;height:100dvh;touch-action:none}
 <body>
 <canvas id="game" aria-label="Helicopter flying tutorial"></canvas>
 <div id="hud"><div id="bar"><div id="lesson"><strong id="title">Flight school</strong><span id="instruction">Move the left stick to fly.</span></div><div id="stats">00:00<br>0 targets</div></div></div>
-<div id="controls"><div class="pad" id="stick" aria-label="Flight joystick"><div id="knob"></div></div><button class="pad" id="turn" aria-label="Turn helicopter around">↻ TURN</button><button class="pad" id="fire" aria-label="Fire machine gun">FIRE</button><button id="reset">Restart</button><button id="telemetryToggle" aria-pressed="false">Telemetry: off</button></div><div id="telemetry" hidden></div>
+<div id="controls"><div class="pad" id="stick" aria-label="Flight joystick"><div id="knob"></div></div><button class="pad" id="turn" aria-label="Turn helicopter around">↻ TURN</button><button class="pad" id="fire" aria-label="Fire machine gun">FIRE</button><button id="reset">Restart</button><a id="battleLink" href="./battlefield.html" style="position:fixed;left:12px;top:calc(env(safe-area-inset-top) + 12px);z-index:10;background:#205875;color:#fff;border:1px solid #9bd6f1;border-radius:8px;padding:7px 10px;text-decoration:none;font-size:12px;pointer-events:auto">Battlefield →</a><button id="telemetryToggle" aria-pressed="false">Telemetry: off</button></div><div id="telemetry" hidden></div>
 <div id="tip">Joystick: pitch + lift · TURN: face opposite way · FIRE · Desktop: arrows + T + Space</div>
 <script>
 (()=>{
