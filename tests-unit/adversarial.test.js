@@ -1,0 +1,31 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createBase} from '../docs/js/battlefield/bases/baseCommon.js';
+import {assignDefender,advanceDefender,releaseDeadDefenders,refreshOccupation} from '../docs/js/battlefield/bases/forwardBase.js';
+import {createSoldier,gait} from '../docs/js/battlefield/units/soldierCommon.js';
+for(const team of [0,1])test(`FOB-03..08,10 pure logic adversarial faction ${team}`,()=>{
+ const b=createBase(team?2480:1120,team,false),dir=team?-1:1;
+ const make=(id,type,faction=team)=>createSoldier(id,faction,type,b.x-dir*90,460);
+ assert.equal(assignDefender(b,make(99,'rifle',1-team)),false);
+ const units=[make(1,'rifle'),make(2,'rifle'),make(3,'rifle'),make(4,'rocket')];
+ assert.equal(assignDefender(b,units[0]),true);assert.equal(assignDefender(b,units[1]),true);
+ assert.equal(assignDefender(b,units[2]),false);
+ assert.equal(b.state,'UNCLAIMED');assert.deepEqual(b.slots.rifle,[null,null]);
+ for(let i=0;i<300;i++)for(const u of units.slice(0,2))advanceDefender(b,u,1/60);
+ assert.equal(b.state,'ASSEMBLING');assert.equal(b.flagProgress,0);
+ assert.equal(assignDefender(b,units[3]),true);assert.equal(b.state,'ASSEMBLING');
+ for(let i=0;i<400;i++)advanceDefender(b,units[3],1/60);
+ assert.equal(b.state,'OCCUPIED');assert.equal(new Set([units[0].x,units[1].x,units[3].x]).size,3);
+ assert.equal(assignDefender(b,make(5,'rocket')),false);
+ releaseDeadDefenders(b,new Set([2,4]));refreshOccupation(b);
+ assert.equal(b.state,'UNDERSTAFFED');assert.equal(b.slots.rifle[0],null);assert.equal(b.reservations.rifle[0],null);
+ const replacement=make(6,'rifle');assert.equal(assignDefender(b,replacement),true);
+ for(let i=0;i<300;i++)advanceDefender(b,replacement,1/60);
+ assert.equal(b.state,'OCCUPIED');assert.equal(b.slots.rifle[0],6);
+});
+test('AN-02 stance world coordinate invariant; transition continuity',()=>{
+ const phase=.1,delta=.001;
+ assert.ok(Math.abs(gait(phase).legs[0].foot[0]-(gait(phase+delta).legs[0].foot[0]+44*delta))<1e-9);
+ const jump=Math.abs(gait(.6-1e-8).legs[0].foot[0]-gait(.600001).legs[0].foot[0]);
+ assert.ok(jump<.001);
+});

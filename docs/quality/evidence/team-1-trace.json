@@ -1,0 +1,158 @@
+[
+  {
+    "x": 2480,
+    "team": 1,
+    "main": false,
+    "slots": {
+      "rifle": [
+        null,
+        null
+      ],
+      "rocket": [
+        null
+      ]
+    },
+    "reservations": {
+      "rifle": [
+        null,
+        null
+      ],
+      "rocket": [
+        null
+      ]
+    },
+    "state": "UNCLAIMED",
+    "everOccupied": false,
+    "flagProgress": 0
+  },
+  {
+    "x": 2480,
+    "team": 1,
+    "main": false,
+    "slots": {
+      "rifle": [
+        9,
+        null
+      ],
+      "rocket": [
+        null
+      ]
+    },
+    "reservations": {
+      "rifle": [
+        9,
+        null
+      ],
+      "rocket": [
+        null
+      ]
+    },
+    "state": "ASSEMBLING",
+    "everOccupied": false,
+    "flagProgress": 0
+  },
+  {
+    "x": 2480,
+    "team": 1,
+    "main": false,
+    "slots": {
+      "rifle": [
+        9,
+        null
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "reservations": {
+      "rifle": [
+        9,
+        null
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "state": "ASSEMBLING",
+    "everOccupied": false,
+    "flagProgress": 0
+  },
+  {
+    "x": 2480,
+    "team": 1,
+    "main": false,
+    "slots": {
+      "rifle": [
+        9,
+        11
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "reservations": {
+      "rifle": [
+        9,
+        11
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "state": "OCCUPIED",
+    "everOccupied": true,
+    "flagProgress": 0
+  },
+  {
+    "x": 2480,
+    "team": 1,
+    "main": false,
+    "slots": {
+      "rifle": [
+        null,
+        11
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "reservations": {
+      "rifle": [
+        null,
+        11
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "state": "UNDERSTAFFED",
+    "everOccupied": true,
+    "flagProgress": 0
+  },
+  {
+    "x": 2480,
+    "team": 1,
+    "main": false,
+    "slots": {
+      "rifle": [
+        14,
+        11
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "reservations": {
+      "rifle": [
+        14,
+        11
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "state": "OCCUPIED",
+    "everOccupied": true,
+    "flagProgress": 1
+  }
+]

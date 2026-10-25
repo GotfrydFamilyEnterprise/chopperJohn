@@ -3,9 +3,11 @@ import {createRifleman,updateRifleman,drawRifleman} from "./units/rifleman.js?v=
 import {createRocketeer,updateRocketeer,drawRocketeer} from "./units/rocketeer.js?v=0.4.1";
 import {createBase} from "./bases/baseCommon.js?v=0.4.1";
 import {drawHeadquarters} from "./bases/headquarters.js?v=0.4.1";
-import {drawForwardBase,occupied,assignDefender,releaseDeadDefenders} from "./bases/forwardBase.js?v=0.4.1";
+import {drawForwardBase,occupied,assignDefender,releaseDeadDefenders,advanceDefender,refreshOccupation,drawForwardFront} from "./bases/forwardBase.js?v=0.4.1";
 const cv=document.getElementById("field"),ctx=cv.getContext("2d");
 const W=3600,GROUND=460,DT=1/60,RIFLE_RANGE=250,ROCKET_RANGE=420;
+const testing=new URLSearchParams(location.search).has("test");
+let combatEnabled=true;
 let viewW=innerWidth,viewH=innerHeight,ratio=1,scale=1,camera=0,dragId=null,lastPointerX=0,dragDistance=0,acc=0,last=0,time=0,paused=false,units=[],bases=[],bullets=[],nextId=1;
 function resize(){viewW=innerWidth;viewH=innerHeight;ratio=Math.min(devicePixelRatio||1,2);cv.width=Math.round(viewW*ratio);cv.height=Math.round(viewH*ratio);scale=Math.max(.58,Math.min(viewH/585,1.35));camera=clamp(camera,0,Math.max(0,W-viewW/scale));}
 function spawn(team,type,x){units.push(type==="rifle"?createRifleman(nextId++,team,x,GROUND):createRocketeer(nextId++,team,x,GROUND));}
@@ -33,29 +35,31 @@ function update(dt){if(paused)return;time+=dt;
   u.hitFlash=Math.max(0,u.hitFlash-dt);
   // Reserve the first matching arrivals; further infantry bypass a full FOB.
   if(u.guardBase===null)for(const b of bases)if(!b.main&&b.team===u.team){
-   if(Math.abs(u.x-b.x)<Math.max(8,Math.abs(u.velocity)*dt+3)&&assignDefender(b,u))break;
+   if((b.x-u.x)*(u.team===0?1:-1)<=100&&(b.x-u.x)*(u.team===0?1:-1)>=-80&&assignDefender(b,u))break;
   }
-  const target=nearestEnemy(u,u.type==="rifle"?RIFLE_RANGE:ROCKET_RANGE);
+  const target=combatEnabled&&nearestEnemy(u,u.type==="rifle"?RIFLE_RANGE:ROCKET_RANGE);
+  if(u.guardBase!==null){advanceDefender(bases.find(b=>!b.main&&b.x===u.guardBase),u,dt,!!target);}
   if(u.type==="rifle"){
-   updateRifleman(u,dt,!!target);
+   if(u.guardBase===null)updateRifleman(u,dt,!!target);
    u.fireCooldown-=dt;
    if(target&&u.fireCooldown<=0){
     const direction=u.team===0?1:-1;
-    bullets.push({x:u.x+direction*33,y:GROUND-37,vx:direction*630,team:u.team,ttl:1.0,damage:1});
+    bullets.push({originX:u.x,x:u.x+direction*33,y:GROUND-37,vx:direction*630,team:u.team,ttl:1.0,damage:1});
     u.fireCooldown=.32;
    }
-  }else updateRocketeer(u,dt,!!target);
+  }else if(u.guardBase===null)updateRocketeer(u,dt,!!target);
   u.x=clamp(u.x,170,W-170);
  }
  for(const p of bullets){
-  const previous=p.x;p.x+=p.vx*dt;p.ttl-=dt;
-  const victim=units.find(u=>u.hp>0&&u.team!==p.team&&Math.abs(u.x-p.x)<10&&((u.x-previous)*(u.x-p.x)<=0||Math.abs(u.x-p.x)<9));
+  // CB-01: include the initial muzzle segment for enemies at close range.
+  const previous=p.originX??p.x;delete p.originX;p.x+=p.vx*dt;p.ttl-=dt;
+  const victim=units.find(u=>u.hp>0&&u.team!==p.team&&u.x>=Math.min(previous,p.x)-9&&u.x<=Math.max(previous,p.x)+9);
   if(victim){victim.hp=Math.max(0,victim.hp-p.damage);victim.hitFlash=.15;p.ttl=0;}
  }
  bullets=bullets.filter(p=>p.ttl>0);
  units=units.filter(u=>u.hp>0);
  const aliveIds=new Set(units.map(u=>u.id));
- for(const b of bases)if(!b.main)releaseDeadDefenders(b,aliveIds);
+ for(const b of bases)if(!b.main){releaseDeadDefenders(b,aliveIds);refreshOccupation(b);}
 }
 function draw(){
  ctx.setTransform(ratio,0,0,ratio,0,0);ctx.clearRect(0,0,viewW,viewH);
@@ -68,6 +72,7 @@ function draw(){
  ctx.fillStyle="#d8e0c8";for(let x=Math.floor(camera/100)*100;x<camera+visible+100;x+=100)ctx.fillRect(x,GROUND+16,35,3);
  for(const b of bases)b.main?drawHeadquarters(ctx,b):drawForwardBase(ctx,b);
  for(const u of units)u.type==="rifle"?drawRifleman(ctx,u):drawRocketeer(ctx,u);
+ for(const b of bases)if(!b.main)drawForwardFront(ctx,b);
  ctx.strokeStyle="#fff0a1";ctx.lineWidth=2.4;
  for(const p of bullets){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x-Math.sign(p.vx)*11,p.y);ctx.stroke();}
  ctx.restore();document.getElementById("count").textContent=" · "+units.length+" soldiers · "+bullets.length+" rounds";
@@ -85,4 +90,15 @@ document.getElementById("pause").addEventListener("click",e=>{paused=!paused;e.t
 document.getElementById("reset").addEventListener("click",e=>{e.preventDefault();reset();});
 addEventListener("resize",resize);
 addEventListener("keydown",e=>{if(e.key==="ArrowRight")camera=clamp(camera+130,0,W-viewW/scale);if(e.key==="ArrowLeft")camera=clamp(camera-130,0,W-viewW/scale);});
-resize();reset();requestAnimationFrame(frame);
+resize();reset();
+if(testing)window.battlefieldTest={
+ reset:()=>{reset();combatEnabled=false;draw();},
+ step:(n=1)=>{for(let i=0;i<n;i++)update(DT);draw();},
+ spawn:(team,type,x)=>{spawn(team,type,x??(team===0?200:W-200));return nextId-1;},
+ kill:id=>{const u=units.find(u=>u.id===id);if(u)u.hp=0;},
+ combat:value=>combatEnabled=value,
+ clear:()=>{units=[];bullets=[];for(const b of bases)if(!b.main){releaseDeadDefenders(b,new Set());refreshOccupation(b);}},
+ snapshot:()=>structuredClone({time,units,bases,bullets}),
+ camera:x=>{camera=clamp(x-viewW/(2*scale),0,W-viewW/scale);draw();}
+};
+if(!testing)requestAnimationFrame(frame);else draw();

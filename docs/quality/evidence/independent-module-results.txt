@@ -1,0 +1,15 @@
+
+> test:unit
+> node tests-unit/adversarial.test.js
+
+✔ FOB-03..08,10 pure logic adversarial faction 0 (6.994638ms)
+✔ FOB-03..08,10 pure logic adversarial faction 1 (1.552094ms)
+✔ AN-02 stance world coordinate invariant; transition continuity (0.690657ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 18.493996
