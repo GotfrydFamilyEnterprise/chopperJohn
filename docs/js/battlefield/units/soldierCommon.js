@@ -1,12 +1,23 @@
 export const TEAM_COLORS=[{body:"#a9e8fb",trim:"#2984b4"},{body:"#ffc0b4",trim:"#c25852"}];
 export const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
-export function createSoldier(id,team,type,x,ground){return {id,team,type,x,y:ground,phase:(id*2.399963)% (Math.PI*2),velocity:(type==="rifle"?47:33)*(team===0?1:-1),state:"march",timer:0};}
+export function createSoldier(id,team,type,x,ground){return {id,team,type,x,y:ground,phase:(id*0.31)%1,velocity:(type==="rifle"?47:33)*(team===0?1:-1),state:"march",timer:0};}
+const CYCLE_DISTANCE=44,STANCE_PART=.60;
 export function gait(phase,activity=1){
- const swing=Math.sin(phase),other=-swing;
- // Each leg has hip, articulated knee and foot. Swing foot lifts during the
- // forward-moving portion; stance foot remains on the terrain.
- function leg(v){const stride=v*10*activity,footX=stride+2,footY=-Math.max(0,v)*5*activity;const kneeX=stride*.47+2.6+Math.max(0,v)*3.5*activity;const kneeY=-13+Math.max(0,v)*4*activity;return {knee:[kneeX,kneeY],foot:[footX,footY]};}
- return {legs:[leg(swing),leg(other)],bob:Math.abs(Math.sin(phase*2))*1.4*activity};
+ // One cycle represents two steps. During stance, a planted foot moves
+ // backward relative to the advancing body at precisely its travel speed.
+ // In swing, it lifts and advances to the next contact.
+ const stanceTravel=CYCLE_DISTANCE*STANCE_PART;
+ function leg(offset){
+  const t=((phase+offset)%1+1)%1;
+  let x,y,swing=0;
+  if(t<STANCE_PART){const p=t/STANCE_PART;x=stanceTravel*(.5-p);y=0;}
+  else{const p=(t-STANCE_PART)/(1-STANCE_PART),smooth=p*p*(3-2*p);
+    x=stanceTravel*(-.5+smooth);swing=Math.sin(Math.PI*p);y=-6*swing*activity;}
+  const kneeX=x*.46+3+3*swing;
+  const kneeY=-11+3*swing;
+  return {knee:[kneeX,kneeY],foot:[x,y]};
+ }
+ return {legs:[leg(0),leg(.5)],bob:.65*(1-Math.cos(phase*4*Math.PI))*.5*activity};
 }
 function line(ctx,a,b){ctx.beginPath();ctx.moveTo(...a);ctx.lineTo(...b);ctx.stroke();}
 export function drawBody(ctx,unit,activity=1){
@@ -22,6 +33,8 @@ export function drawBody(ctx,unit,activity=1){
 }
 export function endBody(ctx){ctx.restore();}
 export function updateWalking(unit,dt,speedScale=1){
- unit.timer+=dt;unit.phase+=dt*(unit.type==="rifle"?10.5:8)*speedScale;
+ unit.timer+=dt;
+ const distance=Math.abs(unit.velocity*speedScale*dt);
+ unit.phase=(unit.phase+distance/CYCLE_DISTANCE)%1;
  unit.x+=unit.velocity*speedScale*dt;
 }
