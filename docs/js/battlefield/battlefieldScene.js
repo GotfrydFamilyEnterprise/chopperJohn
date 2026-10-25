@@ -6,6 +6,7 @@ import {drawHeadquarters} from "./bases/headquarters.js";
 import {drawForwardBase,tryDeploy} from "./bases/forwardBase.js";
 const cv=document.getElementById("field"),ctx=cv.getContext("2d");
 const W=3600,GROUND=460,DT=1/60;
+const ENGAGEMENT_DISTANCE={rifle:250,rocket:420};
 let viewW=innerWidth,viewH=innerHeight,ratio=1,scale=1,camera=0,dragId=null,lastPointerX=0,dragDistance=0,acc=0,last=0,time=0,paused=false,units=[],bases=[],nextId=1;
 function resize(){viewW=innerWidth;viewH=innerHeight;ratio=Math.min(devicePixelRatio||1,2);cv.width=Math.round(viewW*ratio);cv.height=Math.round(viewH*ratio);scale=Math.max(.58,Math.min(viewH/585,1.35));camera=clamp(camera,0,Math.max(0,W-viewW/scale));}
 function spawn(team,type,x){units.push(type==="rifle"?createRifleman(nextId++,team,x,GROUND):createRocketeer(nextId++,team,x,GROUND));}
@@ -17,7 +18,8 @@ function reset(){units=[];nextId=1;time=0;camera=0;paused=false;document.getElem
 function command(team,type){spawn(team,type,team===0?200:W-200);}
 function update(dt){if(paused)return;time+=dt;
  for(const u of units){
-  const enemy=units.find(e=>e.team!==u.team&&Math.abs(e.x-u.x)<115);
+  const direction=u.team===0?1:-1;
+  const enemy=units.find(e=>e.team!==u.team&&(e.x-u.x)*direction>=0&&(e.x-u.x)*direction<=ENGAGEMENT_DISTANCE[u.type]);
   if(u.type==="rifle")updateRifleman(u,dt,!!enemy);
   else updateRocketeer(u,dt,!!enemy);
   u.x=clamp(u.x,170,W-170);
