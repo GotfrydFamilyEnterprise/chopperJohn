@@ -64,7 +64,7 @@ function step(dt){
  // Joystick X changes nose pitch relative to the direction the aircraft faces.
  // Facing right: left = nose up, right = nose down.
  // Facing left: right = nose up, left = nose down.
- // In screen coordinates, nose-up produces negative pitch when facing right.
+ // Angle is nose-down positive, independent of facing; sprite X is mirrored.
  const requestedPitch=clamp(steer*heli.facing,-1,1)*.55;
  heli.angle+=(requestedPitch-heli.angle)*(1-Math.exp(-7*dt));
  // Up requests greater collective, down less. Neutral returns to hover trim.
@@ -72,7 +72,7 @@ function step(dt){
  const thrust=390;
  const collective=clamp(1-lift*.80,.20,1.80);
  const drag=Math.exp(-.85*dt);
- heli.vx=(heli.vx+Math.sin(heli.angle)*thrust*collective*dt)*drag;
+ heli.vx=(heli.vx+heli.facing*Math.sin(heli.angle)*thrust*collective*dt)*drag;
  heli.vy=(heli.vy+(1-collective*Math.cos(heli.angle))*330*dt)*Math.exp(-1.65*dt);
  if(heli.turnTime>0)heli.turnTime=Math.max(0,heli.turnTime-dt);
  heli.vx=clamp(heli.vx,-235,235);heli.vy=clamp(heli.vy,-235,235);
@@ -81,12 +81,25 @@ function step(dt){
  // Facing direction changes only after the explicit turnaround gesture.
  if(heli.y>=WORLD.ground-23 && Math.abs(heli.vy)>95){heli.health=Math.max(0,heli.health-35);heli.vy=0;if(heli.health===0)crashed=true;}
  if(heli.y<=45||heli.y>=WORLD.ground-23)heli.vy=0;
- heli.fireCooldown-=dt;
+ heli.fireCooldown=Math.max(heli.fireCooldown-dt,0);
  if((fireHeld||keys.has("Space"))&&heli.fireCooldown<=0){
-  shots.push({x:heli.x+heli.facing*36,y:heli.y+4,vx:heli.facing*680,ttl:1.2});
-  heli.fireCooldown=.15;steps.fire++;
+  // Match the exact rendered body direction (including pitch and turnaround).
+  const turnProgress=heli.turnTime>0?1-heli.turnTime/.42:1;
+  const visibleFacing=heli.turnTime>0?heli.turnFrom*Math.cos(Math.PI*turnProgress):heli.facing;
+  const ca=Math.cos(heli.angle),sa=Math.sin(heli.angle);
+  const forwardX=visibleFacing*ca,forwardY=sa;
+  const length=Math.hypot(forwardX,forwardY);
+  if(length>0.001){
+   const ux=forwardX/length,uy=forwardY/length;
+   // Gun muzzle local position (36,4), transformed like the fuselage.
+   const muzzleX=heli.x+visibleFacing*(36*ca-4*sa);
+   const muzzleY=heli.y+36*sa+4*ca;
+   shots.push({x:muzzleX,y:muzzleY,vx:ux*680+heli.vx,vy:uy*680+heli.vy,ttl:1.2});
+   steps.fire++;
+  }
+  heli.fireCooldown+=.125; // 8 rounds per second for a held FIRE button.
  }
- shots.forEach(s=>{s.x+=s.vx*dt;s.ttl-=dt;for(const t of targets){if(t.hp>0&&Math.abs(s.x-t.x)<21&&Math.abs(s.y-t.y)<30){t.hp--;s.ttl=0;break;}}});
+ shots.forEach(s=>{s.x+=s.vx*dt;s.y+=s.vy*dt;s.ttl-=dt;for(const t of targets){if(t.hp>0&&Math.abs(s.x-t.x)<21&&Math.abs(s.y-t.y)<30){t.hp--;s.ttl=0;break;}}});
  shots=shots.filter(s=>s.ttl>0);
  if(Math.abs(steer)>.2||Math.abs(lift)>.2)steps.move+=dt;
  if(heli.y<190)steps.climb+=dt;
@@ -132,7 +145,7 @@ function render(){
  const progress=heli.turnTime>0?1-heli.turnTime/.42:1;
  const apparentFacing=heli.turnTime>0?heli.turnFrom*Math.cos(Math.PI*progress):heli.facing;
  ctx.scale(apparentFacing,1);
- ctx.rotate(heli.angle*heli.facing);
+ ctx.rotate(heli.angle);
  ctx.fillStyle="#dde8ea";ctx.fillRect(-32,-24,70,3);ctx.fillRect(-1,-32,3,12);
  ctx.fillStyle="#57b7cf";ctx.beginPath();ctx.moveTo(-28,-7);ctx.lineTo(19,-7);ctx.quadraticCurveTo(39,-5,34,9);ctx.lineTo(-18,12);ctx.closePath();ctx.fill();
  ctx.fillStyle="#143e5b";ctx.beginPath();ctx.ellipse(17,0,13,8,0,0,Math.PI*2);ctx.fill();
