@@ -49,7 +49,7 @@ function update(dt){if(paused)return;time+=dt;
  }
  for(const p of bullets){
   const previous=p.x;p.x+=p.vx*dt;p.ttl-=dt;
-  const victim=units.find(u=>u.hp>0&&u.team!==p.team&&u.type==="rifle"&&Math.abs(u.x-p.x)<10&&((u.x-previous)*(u.x-p.x)<=0||Math.abs(u.x-p.x)<9));
+  const victim=units.find(u=>u.hp>0&&u.team!==p.team&&Math.abs(u.x-p.x)<10&&((u.x-previous)*(u.x-p.x)<=0||Math.abs(u.x-p.x)<9));
   if(victim){victim.hp=Math.max(0,victim.hp-p.damage);victim.hitFlash=.15;p.ttl=0;}
  }
  bullets=bullets.filter(p=>p.ttl>0);
