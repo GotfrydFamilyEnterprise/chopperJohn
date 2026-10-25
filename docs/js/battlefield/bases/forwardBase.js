@@ -1,0 +1,3 @@
+import {baseColor,baseTextColor,drawFoundation,finishBase} from "./baseCommon.js";
+export function drawForwardBase(ctx,b){drawFoundation(ctx,b);ctx.fillStyle="#7c8a7a";ctx.fillRect(-50,-70,100,70);ctx.fillStyle=baseColor(b.team);ctx.fillRect(-56,-80,112,14);ctx.fillStyle="#1c2a36";ctx.fillRect(-14,-42,28,42);ctx.fillStyle=baseTextColor(b.team);ctx.font="bold 14px system-ui";ctx.textAlign="center";ctx.fillText("FOB · "+b.garrison,0,-93);ctx.fillStyle="#d7dfcc";ctx.font="11px system-ui";ctx.fillText("TAP TO DEPLOY",0,-110);finishBase(ctx);}
+export function tryDeploy(b,spawn){if(b.main||b.garrison<=0)return false;spawn(b.team,b.garrison%2===0?"rocket":"rifle",b.x+(b.team===0?50:-50));b.garrison--;return true;}
