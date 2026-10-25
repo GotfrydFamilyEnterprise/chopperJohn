@@ -28,7 +28,7 @@ canvas{display:block;width:100vw;height:100dvh;touch-action:none}
 <canvas id="game" aria-label="Helicopter flying tutorial"></canvas>
 <div id="hud"><div id="bar"><div id="lesson"><strong id="title">Flight school</strong><span id="instruction">Move the left stick to fly.</span></div><div id="stats">00:00<br>0 targets</div></div></div>
 <div id="controls"><div class="pad" id="stick" aria-label="Flight joystick"><div id="knob"></div></div><button class="pad" id="fire" aria-label="Fire machine gun">FIRE</button><button id="reset">Restart</button></div>
-<div id="tip">Left thumb: fly · Right thumb: shoot · Desktop: WASD / arrows + Space</div>
+<div id="tip">Joystick: pitch + lift · Double-tap joystick: turn · FIRE · Desktop: arrows + T + Space</div>
 <script>
 (()=>{
 "use strict";
@@ -39,26 +39,46 @@ const WORLD={w:1800,h:680,ground:605},DT=1/60;
 let w=innerWidth,h=innerHeight,dpr=1,scale=1,camera=0,elapsed=0,acc=0,last=0;
 const keys=new Set(),axis={x:0,y:0};let fireHeld=false,stickId=null,fireId=null;
 let heli,shots,targets,lesson,steps,crashed,done;
+let lastTapAt=-1000,lastTapPos=null;
+const clampAngle = a => Math.atan2(Math.sin(a),Math.cos(a));
 function reset(){
- heli={x:160,y:300,vx:0,vy:0,facing:1,health:100,fireCooldown:0};
+ heli={x:160,y:300,vx:0,vy:0,facing:1,angle:0,turnTime:0,turnFrom:1,health:100,fireCooldown:0};
  shots=[]; targets=[{x:970,y:WORLD.ground-24,hp:3},{x:1250,y:WORLD.ground-24,hp:3},{x:1520,y:WORLD.ground-24,hp:3}];
  lesson=0;steps={move:0,climb:0,travel:false,fire:0,land:0};crashed=false;done=false;elapsed=0;acc=0;updateHUD();
 }
 function resize(){w=innerWidth;h=innerHeight;dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);canvas.style.width=w+"px";canvas.style.height=h+"px";scale=Math.min(w/820,h/440);scale=Math.max(.48,scale);}
 function clamp(n,a,b){return Math.max(a,Math.min(b,n));}
+function requestTurn(){
+ if(crashed||done||heli.turnTime>0)return;
+ heli.turnFrom=heli.facing;
+ heli.facing=-heli.facing;
+ heli.turnTime=.42;
+ // A turnaround affects the aircraft's orientation, not its world-space velocity.
+}
 function step(dt){
  if(crashed||done)return;
  elapsed+=dt;
  const ax=clamp(axis.x+(keys.has("ArrowRight")||keys.has("KeyD")?1:0)-(keys.has("ArrowLeft")||keys.has("KeyA")?1:0),-1,1);
  const ay=clamp(axis.y+(keys.has("ArrowDown")||keys.has("KeyS")?1:0)-(keys.has("ArrowUp")||keys.has("KeyW")?1:0),-1,1);
  const steer=clamp(ax,-1,1),lift=clamp(ay,-1,1);
- const acceleration=500, drag=Math.exp(-2.7*dt);
- heli.vx=(heli.vx+steer*acceleration*dt)*drag;
- heli.vy=(heli.vy+lift*acceleration*dt)*drag;
+ // Joystick X changes nose pitch relative to the direction the aircraft faces.
+ // Facing right: left = nose up, right = nose down.
+ // Facing left: right = nose up, left = nose down.
+ // In screen coordinates, nose-up produces negative pitch when facing right.
+ const requestedPitch=clamp(steer*heli.facing,-1,1)*.55;
+ heli.angle+=(requestedPitch-heli.angle)*(1-Math.exp(-7*dt));
+ // Up requests greater collective, down less. Neutral returns to hover trim.
+ // Horizontal acceleration follows the nose orientation and keeps inertia.
+ const thrust=390;
+ const collective=clamp(1-lift*.80,.20,1.80);
+ const drag=Math.exp(-.85*dt);
+ heli.vx=(heli.vx+Math.sin(heli.angle)*thrust*collective*dt)*drag;
+ heli.vy=(heli.vy+(1-collective*Math.cos(heli.angle))*330*dt)*Math.exp(-1.65*dt);
+ if(heli.turnTime>0)heli.turnTime=Math.max(0,heli.turnTime-dt);
  heli.vx=clamp(heli.vx,-235,235);heli.vy=clamp(heli.vy,-235,235);
  heli.x=clamp(heli.x+heli.vx*dt,25,WORLD.w-25);
  heli.y=clamp(heli.y+heli.vy*dt,45,WORLD.ground-23);
- if(Math.abs(steer)>.2)heli.facing=Math.sign(steer);
+ // Facing direction changes only after the explicit turnaround gesture.
  if(heli.y>=WORLD.ground-23 && Math.abs(heli.vy)>95){heli.health=Math.max(0,heli.health-35);heli.vy=0;if(heli.health===0)crashed=true;}
  if(heli.y<=45||heli.y>=WORLD.ground-23)heli.vy=0;
  heli.fireCooldown-=dt;
@@ -81,8 +101,8 @@ function step(dt){
 function updateHUD(){
  const text=[
  ["Lesson 1 / 5 · Flight controls","Use the joystick to fly. Move for two seconds."],
- ["Lesson 2 / 5 · Climb","Climb above the dashed altitude line."],
- ["Lesson 3 / 5 · Navigation","Fly right toward the orange targets."],
+ ["Lesson 2 / 5 · Climb","Push the joystick up to climb above the dashed line."],
+ ["Lesson 3 / 5 · Navigation","Pitch nose down (right on stick) to accelerate right. Double tap to turn around."],
  ["Lesson 4 / 5 · Combat","Face the targets and use FIRE. Destroy all three."],
  ["Lesson 5 / 5 · Return to base","Fly left and land gently on the blue helipad."],
  ["Mission complete!","You passed flight school. Tap Restart to fly again."]
@@ -106,7 +126,13 @@ function render(){
  for(const t of targets){if(t.hp<=0){ctx.fillStyle="#4e4e4e";ctx.fillRect(t.x-16,WORLD.ground-12,32,12);continue;}
  ctx.fillStyle="#d08b44";ctx.fillRect(t.x-19,t.y-10,38,24);ctx.fillStyle="#e8ae64";ctx.fillRect(t.x-8,t.y-19,16,10);ctx.fillStyle="#331b16";ctx.fillRect(t.x-6,t.y-24,28,5);
  ctx.fillStyle="#f2d9a0";ctx.font="14px system-ui";ctx.fillText("HP "+t.hp,t.x-18,t.y-31);}
- ctx.save();ctx.translate(heli.x,heli.y);ctx.scale(heli.facing,1);
+ ctx.save();ctx.translate(heli.x,heli.y);
+ // During the 420ms turn, the visible fuselage narrows as if yawing in 3D,
+ // briefly showing its nose or tail before growing into the opposite side view.
+ const progress=heli.turnTime>0?1-heli.turnTime/.42:1;
+ const apparentFacing=heli.turnTime>0?heli.turnFrom*Math.cos(Math.PI*progress):heli.facing;
+ ctx.scale(apparentFacing,1);
+ ctx.rotate(heli.angle*heli.facing);
  ctx.fillStyle="#dde8ea";ctx.fillRect(-32,-24,70,3);ctx.fillRect(-1,-32,3,12);
  ctx.fillStyle="#57b7cf";ctx.beginPath();ctx.moveTo(-28,-7);ctx.lineTo(19,-7);ctx.quadraticCurveTo(39,-5,34,9);ctx.lineTo(-18,12);ctx.closePath();ctx.fill();
  ctx.fillStyle="#143e5b";ctx.beginPath();ctx.ellipse(17,0,13,8,0,0,Math.PI*2);ctx.fill();
@@ -120,7 +146,17 @@ function render(){
 function loop(now){const dt=Math.min((now-last)/1000||0,.05);last=now;acc=Math.min(acc+dt,.2);while(acc>=DT){step(DT);acc-=DT;}render();requestAnimationFrame(loop);}
 function joystick(x,y){const b=stick.getBoundingClientRect(),cx=b.left+b.width/2,cy=b.top+b.height/2,r=(b.width-42)/2;const dx=x-cx,dy=y-cy,length=Math.hypot(dx,dy),fraction=length?Math.min(1,r/length):0;axis.x=dx*fraction/r;axis.y=dy*fraction/r;knob.style.transform="translate("+(axis.x*r)+"px,"+(axis.y*r)+"px)";}
 function stopStick(){stickId=null;axis.x=0;axis.y=0;knob.style.transform="translate(0,0)";}
-stick.addEventListener("pointerdown",e=>{e.preventDefault();stickId=e.pointerId;stick.setPointerCapture(e.pointerId);joystick(e.clientX,e.clientY);});
+stick.addEventListener("pointerdown",e=>{
+ e.preventDefault();
+ const now=performance.now();
+ const pos={x:e.clientX,y:e.clientY};
+ if(now-lastTapAt<290&&lastTapPos&&Math.hypot(pos.x-lastTapPos.x,pos.y-lastTapPos.y)<46){
+  requestTurn();lastTapAt=-1000;lastTapPos=null;
+  return;
+ }
+ lastTapAt=now;lastTapPos=pos;
+ stickId=e.pointerId;stick.setPointerCapture(e.pointerId);joystick(e.clientX,e.clientY);
+});
 stick.addEventListener("pointermove",e=>{if(e.pointerId===stickId)joystick(e.clientX,e.clientY);});
 for(const name of ["pointerup","pointercancel","lostpointercapture"])stick.addEventListener(name,e=>{if(e.pointerId===stickId)stopStick();});
 fire.addEventListener("pointerdown",e=>{e.preventDefault();fireId=e.pointerId;fire.setPointerCapture(e.pointerId);fireHeld=true;});
@@ -129,6 +165,8 @@ addEventListener("keydown",e=>{if(["ArrowRight","ArrowLeft","ArrowUp","ArrowDown
 addEventListener("keyup",e=>keys.delete(e.code));
 addEventListener("blur",()=>{keys.clear();stopStick();fireHeld=false;});
 document.getElementById("reset").addEventListener("click",reset);
+ // Desktop testing shortcut.
+ addEventListener("keydown",e=>{if(e.code==="KeyT"&&!e.repeat)requestTurn();});
 addEventListener("resize",resize);
 resize();reset();requestAnimationFrame(loop);
 })();
