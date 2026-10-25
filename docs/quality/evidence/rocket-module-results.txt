@@ -1,0 +1,50 @@
+
+> test:unit
+> node tests-unit/adversarial.test.js && node tests-unit/rocket-combat.test.js && node tests-unit/rocket-review.test.js
+
+✔ FOB-03..08,10 pure logic adversarial faction 0 (7.730076ms)
+✔ FOB-03..08,10 pure logic adversarial faction 1 (2.785832ms)
+✔ AN-02 stance world coordinate invariant; transition continuity (0.410051ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20.258474
+✔ RC-01 inclusive targeting and overlap faction 0 (2.973045ms)
+✔ RC-01 inclusive targeting and overlap faction 1 (0.188135ms)
+✔ RC-03/04 ballistic landing, upward launch, scatter bounds and variance (25.644837ms)
+✔ RC-02 aim interruption and full reload (0.422238ms)
+✔ BC-01/03 only arrived registered soldiers get a probabilistic half hit (8.919466ms)
+✔ BC-02 shared single random defender, no double AoE, ordinary bystanders (6.177508ms)
+✔ RC-05 exposed falloff, boundary and no friendly fire (4.027844ms)
+✔ BC-03 seeded penetrations approximate 1/20; exposed hits stay 1 HP (19.977484ms)
+✔ BC-05 repeated thirds kill cleanly, release slot, replacement starts exposed (1.334843ms)
+✔ RC-07 identical seeded rockets and damage, different seed changes scatter (2.974311ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 88.627436
+✔ review RC-02 full reload must precede a new full aim (2.249785ms)
+✔ review BC-02 footprint inclusive edges, partial bunker, no flag dependency (5.609863ms)
+✔ review BC-01 reservations and passers never gain cover; BC-03 independent endpoints (0.979566ms)
+✔ review RC-03/04 mirrored endpoint extremes land analytically on intended ground (0.780869ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 21.670754
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

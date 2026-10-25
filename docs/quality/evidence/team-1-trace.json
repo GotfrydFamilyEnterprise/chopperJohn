@@ -31,7 +31,7 @@
     "main": false,
     "slots": {
       "rifle": [
-        9,
+        11,
         null
       ],
       "rocket": [
@@ -40,7 +40,7 @@
     },
     "reservations": {
       "rifle": [
-        9,
+        11,
         null
       ],
       "rocket": [
@@ -49,7 +49,8 @@
     },
     "state": "ASSEMBLING",
     "everOccupied": false,
-    "flagProgress": 0
+    "flagProgress": 0,
+    "coverFlash": 0
   },
   {
     "x": 2480,
@@ -57,25 +58,26 @@
     "main": false,
     "slots": {
       "rifle": [
-        9,
+        11,
         null
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "reservations": {
       "rifle": [
-        9,
+        11,
         null
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "state": "ASSEMBLING",
     "everOccupied": false,
-    "flagProgress": 0
+    "flagProgress": 0,
+    "coverFlash": 0
   },
   {
     "x": 2480,
@@ -83,25 +85,26 @@
     "main": false,
     "slots": {
       "rifle": [
-        9,
-        11
+        11,
+        13
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "reservations": {
       "rifle": [
-        9,
-        11
+        11,
+        13
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "state": "OCCUPIED",
     "everOccupied": true,
-    "flagProgress": 0
+    "flagProgress": 0,
+    "coverFlash": 0
   },
   {
     "x": 2480,
@@ -110,24 +113,25 @@
     "slots": {
       "rifle": [
         null,
-        11
+        13
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "reservations": {
       "rifle": [
         null,
-        11
+        13
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "state": "UNDERSTAFFED",
     "everOccupied": true,
-    "flagProgress": 0
+    "flagProgress": 0,
+    "coverFlash": 0
   },
   {
     "x": 2480,
@@ -135,24 +139,25 @@
     "main": false,
     "slots": {
       "rifle": [
-        14,
-        11
+        16,
+        13
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "reservations": {
       "rifle": [
-        14,
-        11
+        16,
+        13
       ],
       "rocket": [
-        10
+        12
       ]
     },
     "state": "OCCUPIED",
     "everOccupied": true,
-    "flagProgress": 1
+    "flagProgress": 1,
+    "coverFlash": 0
   }
 ]

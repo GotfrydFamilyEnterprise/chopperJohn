@@ -8,9 +8,10 @@ button{border:1px solid #91aec7;border-radius:10px;background:#1b4668e8;color:wh
 button.rocket{background:#73532cdd}button.red{background:#793b46e8}button.active{outline:3px solid #f1d16d}
 #help{position:fixed;bottom:calc(env(safe-area-inset-bottom) + 65px);left:50%;transform:translateX(-50%);padding:5px 10px;border-radius:8px;background:#0b1727c8;font-size:11px;white-space:nowrap;pointer-events:none}
 @media(max-width:580px){button{font-size:11px;padding:9px 7px}#help{font-size:10px;bottom:calc(env(safe-area-inset-bottom) + 90px)}#top{font-size:11px}}
+@media(max-height:500px){#help{top:48px;bottom:auto}#tools{gap:4px}#tools button{font-size:11px;padding:8px 7px}}
 </style></head><body>
 <canvas id="field"></canvas>
-<div id="top"><span><b>ChopperJohn · Battlefield v0.4</b> <span id="count"></span></span><span><a href="./index.html">Flight School</a> · <a href="#" id="reset">Reset</a></span></div>
-<div id="help">Drag to pan · First 2 riflemen + 1 rocketeer occupy each FOB · Riflemen shoot</div>
-<div id="tools"><button id="blueRifle">+ Blue rifle</button><button class="rocket" id="blueRocket">+ Blue rocket</button><button class="red" id="redRifle">+ Red rifle</button><button class="red rocket" id="redRocket">+ Red rocket</button><button id="jumpBlue">Blue FOB</button><button id="jumpRed">Red FOB</button><button id="pause">Pause</button></div>
-<script type="module" src="./js/battlefield/battlefieldScene.js?v=0.4.1"></script></body></html>
+<div id="top"><span><b>ChopperJohn · Battlefield v0.6.1</b> <span id="count"></span></span><span><a href="./index.html">Flight School</a> · <a href="#" id="reset">Reset</a></span></div>
+<div id="help">Drag to pan · Rockets 225–600 · Follow rockets to watch</div>
+<div id="tools"><button id="blueRifle">+ Blue rifle</button><button class="rocket" id="blueRocket">+ Blue rocket</button><button class="red" id="redRifle">+ Red rifle</button><button class="red rocket" id="redRocket">+ Red rocket</button><button id="jumpBlue">Blue FOB</button><button id="jumpRed">Red FOB</button><button id="followRockets">Follow rockets</button><button id="pause">Pause</button></div>
+<script type="module" src="./js/battlefield/battlefieldScene.js?v=0.6.1"></script></body></html>

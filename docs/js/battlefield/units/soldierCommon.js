@@ -1,6 +1,6 @@
 export const TEAM_COLORS=[{body:"#a9e8fb",trim:"#2984b4"},{body:"#ffc0b4",trim:"#c25852"}];
 export const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
-export function createSoldier(id,team,type,x,ground){return {id,team,type,x,y:ground,phase:(id*0.31)%1,velocity:(type==="rifle"?47:33)*(team===0?1:-1),state:"march",timer:0,hp:type==="rifle"?3:4,fireCooldown:0,guardBase:null,guardSlot:null,hitFlash:0};}
+export function createSoldier(id,team,type,x,ground){return {id,team,type,x,y:ground,phase:(id*0.31)%1,velocity:(type==="rifle"?47:33)*(team===0?1:-1),state:"march",timer:0,observedVelocity:0,hp:type==="rifle"?3:4,fireCooldown:0,guardBase:null,guardSlot:null,hitFlash:0};}
 const CYCLE_DISTANCE=44,STANCE_PART=.60;
 export function gait(phase,activity=1){
  // One cycle represents two steps. During stance, a planted foot moves

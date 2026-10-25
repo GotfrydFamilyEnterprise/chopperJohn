@@ -73,5 +73,6 @@ export function drawForwardFront(ctx,b){
   ctx.fillStyle=(i+row)%2?front:shadow;ctx.beginPath();ctx.ellipse(x,y,13,5,0,0,Math.PI*2);ctx.fill();
   ctx.strokeStyle="#493d2f";ctx.lineWidth=.8;ctx.stroke();
  }
+ if(b.coverFlash>0){ctx.globalAlpha=Math.min(1,b.coverFlash*4);ctx.strokeStyle="#f6d68e";ctx.lineWidth=2;ctx.strokeRect(-77,-27,154,25);ctx.globalAlpha=1;}
  finishBase(ctx);
 }

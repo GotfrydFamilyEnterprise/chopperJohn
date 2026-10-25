@@ -8,7 +8,7 @@ npx playwright install --with-deps chromium
 npm test
 ```
 
-Playwright serves `docs/` at localhost:8000 and uses a 390×844 phone viewport. `?test` disables requestAnimationFrame and exposes `window.battlefieldTest`. Each step advances exactly 1/60 second; reset disables combat, and tests opt back into combat explicitly. No random numbers enter the battlefield simulation. Normal URLs keep real-time gameplay and expose no test controller.
+Playwright serves `docs/` at localhost:8000 and uses a 390×844 phone viewport. `?test` disables requestAnimationFrame and exposes `window.battlefieldTest`. Each step advances exactly 1/60 second; reset disables combat, and tests opt back into combat explicitly. Combat randomness uses a resettable seeded stream. Normal URLs keep real-time gameplay and expose no test controller.
 
 `reset()` restores initial HQ marching troops and both empty FOBs; `clear()` removes infantry for controlled scenarios; `spawn(team,type,x)` defaults to HQ spawn; `snapshot()` returns a detached state; `kill(id)`, `combat(boolean)`, `step(ticks)`, and `camera(worldX)` support lifecycle and combat probes. Reservations and physically arrived slot IDs are separate fields in snapshots.
 

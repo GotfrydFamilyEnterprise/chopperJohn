@@ -14,3 +14,11 @@ Last updated 2026-10-25. This file records *why* the current agreed specificatio
 
 ## Prioritization
 Correct FOB lifecycle and visual acceptance before adding tanks, rocket damage, helicopter battlefield integration, territorial capture, additional troop classes or more decorative UI.
+
+## Rocket and bunker combat design approved after PR #2
+
+User visually accepted the FOB gameplay and authorized merge of PR #2. The subsequent approved design authorizes actual rockets: target range 225–500 (rifles 250), 0.7-second aiming, 3-second reload, ground-directed ballistic flight, error ±5/20/50 at range 225/350/500, 25-unit blast radius and linear 2-HP exposed damage. Bunker rockets share one 1/3-HP hit among living stationed defenders; rifle bullets penetrate with 1/20 probability for 0.5 HP. Replacements gain protection on physical arrival. These requirements supersede the historical aim-only range-420 restriction; other weapons, vehicles and capture remain out of scope.
+
+### User follow-up: no visible firing, farther range, autonomous targets and leading
+
+The original v0.6 default wave never fired a rocket in a 180-second replay: all rocketeers became out-of-range bunker guards. Adding rockets manually fired after ~43 seconds, off the starting camera. Address with a normal assault rocket per faction, a Follow rockets view and observable launch counts. User explicitly superseded no-leading design: predict moving targets from observed movement, then commit the unguided ballistic trajectory. User selected a 600-unit maximum; the original 225 minimum and 25-unit overlap remain. Preserve the original 500±50 precision anchor and extend to 600±66.

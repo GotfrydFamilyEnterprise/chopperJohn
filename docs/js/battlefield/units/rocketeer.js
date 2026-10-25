@@ -1,7 +1,8 @@
 import {createSoldier,drawBody,endBody,updateWalking} from "./soldierCommon.js";
+import {WEAPONS} from "../combat/weapons.js";
 export function createRocketeer(id,team,x,ground){return createSoldier(id,team,"rocket",x,ground);}
 export function updateRocketeer(u,dt,enemyNearby){
- // Stop to shoulder the launcher; no projectiles or damage in this animation pass.
+ // RC-02: scene weapon logic owns aiming/reload; this preserves the accepted gait.
  u.state=u.guardBase!==null?"fireStop":enemyNearby?"fireStop":"march";
  if(enemyNearby)u.timer+=dt;
  else updateWalking(u,dt,1);
@@ -11,10 +12,11 @@ export function drawRocketeer(ctx,u){
  ctx.strokeStyle=p.colors.body;ctx.lineWidth=3;
  if(aiming){
    // Launcher is horizontal and supported at the shoulder.
-   ctx.fillStyle="#626b5d";ctx.fillRect(-5,-46-b,39,9);
-   ctx.fillStyle="#c0ad7f";ctx.fillRect(27,-49-b,8,4);
-   p.line([0,-34-b],[8,-41-b]);p.line([8,-41-b],[20,-40-b]);
-   p.line([0,-34-b],[-6,-31-b]);p.line([-6,-31-b],[8,-41-b]);
+   ctx.save();ctx.translate(0,-42-b);ctx.rotate(-WEAPONS.rocketAngle);
+   ctx.fillStyle="#626b5d";ctx.fillRect(-5,-4,39,9);
+   ctx.fillStyle="#c0ad7f";ctx.fillRect(27,-6,8,4);ctx.restore();
+   p.line([0,-34-b],[6,-43-b]);p.line([6,-43-b],[14,-56-b]);
+   p.line([0,-34-b],[-6,-31-b]);p.line([-6,-31-b],[5,-46-b]);
  }else{
    // Tube secured diagonally on the back while marching.
    ctx.save();ctx.translate(-13,-34-b);ctx.rotate(-.73);
