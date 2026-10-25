@@ -2,7 +2,7 @@ import {createSoldier,drawBody,endBody,updateWalking} from "./soldierCommon.js";
 export function createRocketeer(id,team,x,ground){return createSoldier(id,team,"rocket",x,ground);}
 export function updateRocketeer(u,dt,enemyNearby){
  // Stop to shoulder the launcher; no projectiles or damage in this animation pass.
- u.state=enemyNearby?"fireStop":"march";
+ u.state=u.guardBase!==null?"fireStop":enemyNearby?"fireStop":"march";
  if(enemyNearby)u.timer+=dt;
  else updateWalking(u,dt,1);
 }
