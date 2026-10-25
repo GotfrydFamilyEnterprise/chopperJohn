@@ -5,6 +5,32 @@
     "main": false,
     "slots": {
       "rifle": [
+        null,
+        null
+      ],
+      "rocket": [
+        null
+      ]
+    },
+    "reservations": {
+      "rifle": [
+        null,
+        null
+      ],
+      "rocket": [
+        null
+      ]
+    },
+    "state": "UNCLAIMED",
+    "everOccupied": false,
+    "flagProgress": 0
+  },
+  {
+    "x": 1120,
+    "team": 0,
+    "main": false,
+    "slots": {
+      "rifle": [
         9,
         null
       ],
@@ -76,5 +102,57 @@
     "state": "OCCUPIED",
     "everOccupied": true,
     "flagProgress": 0
+  },
+  {
+    "x": 1120,
+    "team": 0,
+    "main": false,
+    "slots": {
+      "rifle": [
+        null,
+        11
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "reservations": {
+      "rifle": [
+        null,
+        11
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "state": "UNDERSTAFFED",
+    "everOccupied": true,
+    "flagProgress": 0
+  },
+  {
+    "x": 1120,
+    "team": 0,
+    "main": false,
+    "slots": {
+      "rifle": [
+        14,
+        11
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "reservations": {
+      "rifle": [
+        14,
+        11
+      ],
+      "rocket": [
+        10
+      ]
+    },
+    "state": "OCCUPIED",
+    "everOccupied": true,
+    "flagProgress": 1
   }
 ]

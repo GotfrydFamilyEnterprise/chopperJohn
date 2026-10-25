@@ -9,7 +9,7 @@ for(const team of [0,1])test(`FOB-01..10 faction ${team}`,async({page})=>{
  await page.evaluate(x=>battlefieldTest.camera(x),x);
  await page.screenshot({path:`docs/quality/evidence/team-${team}-empty.png`});
  let state=await run(()=>battlefieldTest.snapshot());expect(state.bases.filter(b=>!b.main).every(b=>b.state==='UNCLAIMED'&&b.flagProgress===0)).toBeTruthy();
- const trace=[];
+ const trace=[state.bases.find(b=>!b.main&&b.team===team)];
  for(const [i,type] of ['rifle','rocket','rifle'].entries()){
   const id=await page.evaluate(({team,type,x,dir})=>battlefieldTest.spawn(team,type,x-dir*130),{team,type,x,dir});
   let previous=(await run(()=>battlefieldTest.snapshot())).units.find(u=>u.id===id).x;
@@ -32,7 +32,13 @@ for(const team of [0,1])test(`FOB-01..10 faction ${team}`,async({page})=>{
  for(const type of ['rifle','rocket'])await page.evaluate(({team,type,x,dir})=>battlefieldTest.spawn(team,type,x-dir*130),{team,type,x,dir});
  await run(()=>battlefieldTest.step(600));state=await run(()=>battlefieldTest.snapshot());expect(state.units.slice(3).every(u=>(u.x-x)*dir>100&&u.guardBase===null)).toBeTruthy();
  await page.evaluate(id=>battlefieldTest.kill(id),guards[0].id);await run(()=>battlefieldTest.step(90));state=await run(()=>battlefieldTest.snapshot());expect(state.bases.find(b=>b.team===team&&!b.main).state).toBe('UNDERSTAFFED');
+ expect(state.bases.find(b=>b.team===team&&!b.main).flagProgress).toBe(0);
+ trace.push(state.bases.find(b=>!b.main&&b.team===team));
+ await page.screenshot({path:`docs/quality/evidence/team-${team}-vacancy.png`});
  await page.evaluate(({team,x,dir})=>battlefieldTest.spawn(team,'rifle',x-dir*130),{team,x,dir});await run(()=>battlefieldTest.step(400));state=await run(()=>battlefieldTest.snapshot());expect(state.bases.find(b=>b.team===team&&!b.main).state).toBe('OCCUPIED');
+ expect(state.bases.find(b=>b.team===team&&!b.main).flagProgress).toBe(1);
+ trace.push(state.bases.find(b=>!b.main&&b.team===team));
+ await page.screenshot({path:`docs/quality/evidence/team-${team}-replacement.png`});
  expect(errors).toEqual([]);
  writeFileSync(`docs/quality/evidence/team-${team}-trace.json`,JSON.stringify(trace,null,2));
  await test.info().attach('lifecycle',{body:JSON.stringify(trace,null,2),contentType:'application/json'});
