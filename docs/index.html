@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1728">
+<title>ChopperJohn | Flight School</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}html,body{padding:0;margin:0;width:100%;height:100%;overflow:hidden;background:#0b1728;touch-action:none;user-select:none;-webkit-user-select:none}
+canvas{display:block;width:100vw;height:100dvh;touch-action:none}
+#hud{pointer-events:none;position:fixed;inset:0;color:#eff7ff}
+#bar{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:calc(env(safe-area-inset-top) + 10px) 14px 0;font-size:13px;text-shadow:0 1px 3px #000}
+#lesson{padding:8px 11px;border:1px solid #ffffff44;background:#0b1728c9;border-radius:12px;max-width:min(68vw,480px)}
+#lesson strong{display:block;font-size:15px;margin-bottom:4px}
+#stats{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+#controls{position:fixed;inset:0;pointer-events:none}
+.pad{position:absolute;bottom:calc(env(safe-area-inset-bottom) + 18px);pointer-events:auto;touch-action:none}
+#stick{left:18px;width:134px;height:134px;border:2px solid #ffffff65;border-radius:50%;background:#1935509c}
+#knob{position:absolute;left:45px;top:45px;width:40px;height:40px;border-radius:50%;background:#b9e5ffb8;border:2px solid white;box-shadow:0 0 16px #62b6fc55}
+#fire{right:22px;bottom:calc(env(safe-area-inset-bottom) + 34px);width:96px;height:96px;border-radius:50%;background:#ca4d4da6;border:2px solid #ffb3b3;color:white;font-weight:800;font-size:17px}
+#reset{position:fixed;top:calc(env(safe-area-inset-top) + 98px);right:12px;border:1px solid #ffffff77;border-radius:9px;padding:7px 11px;background:#112843db;color:white;pointer-events:auto}
+#tip{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom) + 12px);font-size:11px;color:#b8cfe3;white-space:nowrap;pointer-events:none}
+@media (max-height:430px){#stick{width:112px;height:112px}#knob{left:36px;top:36px;width:36px;height:36px}#fire{width:80px;height:80px;right:20px}#reset{top:calc(env(safe-area-inset-top) + 70px)}#bar{font-size:11px}#lesson strong{font-size:13px}#tip{display:none}}
+</style>
+</head>
+<body>
+<canvas id="game" aria-label="Helicopter flying tutorial"></canvas>
+<div id="hud"><div id="bar"><div id="lesson"><strong id="title">Flight school</strong><span id="instruction">Move the left stick to fly.</span></div><div id="stats">00:00<br>0 targets</div></div></div>
+<div id="controls"><div class="pad" id="stick" aria-label="Flight joystick"><div id="knob"></div></div><button class="pad" id="fire" aria-label="Fire machine gun">FIRE</button><button id="reset">Restart</button></div>
+<div id="tip">Left thumb: fly · Right thumb: shoot · Desktop: WASD / arrows + Space</div>
+<script>
+(()=>{
+"use strict";
+const canvas=document.getElementById("game"),ctx=canvas.getContext("2d");
+const title=document.getElementById("title"),instruction=document.getElementById("instruction"),stats=document.getElementById("stats");
+const stick=document.getElementById("stick"),knob=document.getElementById("knob"),fire=document.getElementById("fire");
+const WORLD={w:1800,h:680,ground:605},DT=1/60;
+let w=innerWidth,h=innerHeight,dpr=1,scale=1,camera=0,elapsed=0,acc=0,last=0;
+const keys=new Set(),axis={x:0,y:0};let fireHeld=false,stickId=null,fireId=null;
+let heli,shots,targets,lesson,steps,crashed,done;
+function reset(){
+ heli={x:160,y:300,vx:0,vy:0,facing:1,health:100,fireCooldown:0};
+ shots=[]; targets=[{x:970,y:WORLD.ground-24,hp:3},{x:1250,y:WORLD.ground-24,hp:3},{x:1520,y:WORLD.ground-24,hp:3}];
+ lesson=0;steps={move:0,climb:0,travel:false,fire:0,land:0};crashed=false;done=false;elapsed=0;acc=0;updateHUD();
+}
+function resize(){w=innerWidth;h=innerHeight;dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);canvas.style.width=w+"px";canvas.style.height=h+"px";scale=Math.min(w/820,h/440);scale=Math.max(.48,scale);}
+function clamp(n,a,b){return Math.max(a,Math.min(b,n));}
+function step(dt){
+ if(crashed||done)return;
+ elapsed+=dt;
+ const ax=clamp(axis.x+(keys.has("ArrowRight")||keys.has("KeyD")?1:0)-(keys.has("ArrowLeft")||keys.has("KeyA")?1:0),-1,1);
+ const ay=clamp(axis.y+(keys.has("ArrowDown")||keys.has("KeyS")?1:0)-(keys.has("ArrowUp")||keys.has("KeyW")?1:0),-1,1);
+ const steer=clamp(ax,-1,1),lift=clamp(ay,-1,1);
+ const acceleration=500, drag=Math.exp(-2.7*dt);
+ heli.vx=(heli.vx+steer*acceleration*dt)*drag;
+ heli.vy=(heli.vy+lift*acceleration*dt)*drag;
+ heli.vx=clamp(heli.vx,-235,235);heli.vy=clamp(heli.vy,-235,235);
+ heli.x=clamp(heli.x+heli.vx*dt,25,WORLD.w-25);
+ heli.y=clamp(heli.y+heli.vy*dt,45,WORLD.ground-23);
+ if(Math.abs(steer)>.2)heli.facing=Math.sign(steer);
+ if(heli.y>=WORLD.ground-23 && Math.abs(heli.vy)>95){heli.health=Math.max(0,heli.health-35);heli.vy=0;if(heli.health===0)crashed=true;}
+ if(heli.y<=45||heli.y>=WORLD.ground-23)heli.vy=0;
+ heli.fireCooldown-=dt;
+ if((fireHeld||keys.has("Space"))&&heli.fireCooldown<=0){
+  shots.push({x:heli.x+heli.facing*36,y:heli.y+4,vx:heli.facing*680,ttl:1.2});
+  heli.fireCooldown=.15;steps.fire++;
+ }
+ shots.forEach(s=>{s.x+=s.vx*dt;s.ttl-=dt;for(const t of targets){if(t.hp>0&&Math.abs(s.x-t.x)<21&&Math.abs(s.y-t.y)<30){t.hp--;s.ttl=0;break;}}});
+ shots=shots.filter(s=>s.ttl>0);
+ if(Math.abs(steer)>.2||Math.abs(lift)>.2)steps.move+=dt;
+ if(heli.y<190)steps.climb+=dt;
+ if(heli.x>720)steps.travel=true;
+ if(lesson===0&&steps.move>2)lesson=1;
+ if(lesson===1&&steps.climb>1)lesson=2;
+ if(lesson===2&&steps.travel)lesson=3;
+ if(lesson===3&&targets.every(t=>t.hp<=0))lesson=4;
+ if(lesson===4&&heli.x<280&&heli.y>WORLD.ground-82&&Math.abs(heli.vx)<45&&Math.abs(heli.vy)<45){steps.land+=dt;if(steps.land>1.3){lesson=5;done=true;}}else steps.land=0;
+ updateHUD();
+}
+function updateHUD(){
+ const text=[
+ ["Lesson 1 / 5 · Flight controls","Use the joystick to fly. Move for two seconds."],
+ ["Lesson 2 / 5 · Climb","Climb above the dashed altitude line."],
+ ["Lesson 3 / 5 · Navigation","Fly right toward the orange targets."],
+ ["Lesson 4 / 5 · Combat","Face the targets and use FIRE. Destroy all three."],
+ ["Lesson 5 / 5 · Return to base","Fly left and land gently on the blue helipad."],
+ ["Mission complete!","You passed flight school. Tap Restart to fly again."]
+ ];
+ title.textContent=text[lesson][0];instruction.textContent=text[lesson][1];
+ stats.textContent=Math.floor(elapsed/60).toString().padStart(2,"0")+":"+Math.floor(elapsed%60).toString().padStart(2,"0")+"  ·  Hull "+heli.health+"%  ·  Targets "+targets.filter(t=>t.hp>0).length+(crashed?"  ·  CRASHED":"");
+ if(crashed){title.textContent="Helicopter lost";instruction.textContent="Tap Restart to try again.";}
+}
+function render(){
+ ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);
+ const sy=Math.max(0,(h-WORLD.h*scale)*.5),sx=scale;camera=clamp(heli.x-w/(2*sx),0,Math.max(0,WORLD.w-w/sx));
+ ctx.fillStyle="#122a46";ctx.fillRect(0,0,w,h);
+ ctx.save();ctx.translate(0,sy);ctx.scale(sx,sx);ctx.translate(-camera,0);
+ const visible=w/sx;
+ ctx.fillStyle="#1d4262";for(let i=0;i<20;i++){const px=i*125;ctx.beginPath();ctx.ellipse(px,470+(i%3)*16,95,76,0,0,Math.PI*2);ctx.fill();}
+ ctx.strokeStyle="#7dacc455";ctx.setLineDash([14,14]);ctx.beginPath();ctx.moveTo(camera,190);ctx.lineTo(camera+visible,190);ctx.stroke();ctx.setLineDash([]);
+ ctx.fillStyle="#42644a";ctx.fillRect(camera,WORLD.ground,visible,100);
+ ctx.fillStyle="#63866a";ctx.fillRect(camera,WORLD.ground,visible,10);
+ ctx.fillStyle="#356ea7";ctx.fillRect(50,WORLD.ground-7,230,7);
+ ctx.fillStyle="#b8e8ff";ctx.font="16px system-ui";ctx.fillText("BASE / LAND HERE",57,WORLD.ground-15);
+ for(const t of targets){if(t.hp<=0){ctx.fillStyle="#4e4e4e";ctx.fillRect(t.x-16,WORLD.ground-12,32,12);continue;}
+ ctx.fillStyle="#d08b44";ctx.fillRect(t.x-19,t.y-10,38,24);ctx.fillStyle="#e8ae64";ctx.fillRect(t.x-8,t.y-19,16,10);ctx.fillStyle="#331b16";ctx.fillRect(t.x-6,t.y-24,28,5);
+ ctx.fillStyle="#f2d9a0";ctx.font="14px system-ui";ctx.fillText("HP "+t.hp,t.x-18,t.y-31);}
+ ctx.save();ctx.translate(heli.x,heli.y);ctx.scale(heli.facing,1);
+ ctx.fillStyle="#dde8ea";ctx.fillRect(-32,-24,70,3);ctx.fillRect(-1,-32,3,12);
+ ctx.fillStyle="#57b7cf";ctx.beginPath();ctx.moveTo(-28,-7);ctx.lineTo(19,-7);ctx.quadraticCurveTo(39,-5,34,9);ctx.lineTo(-18,12);ctx.closePath();ctx.fill();
+ ctx.fillStyle="#143e5b";ctx.beginPath();ctx.ellipse(17,0,13,8,0,0,Math.PI*2);ctx.fill();
+ ctx.fillStyle="#57b7cf";ctx.fillRect(-47,0,20,4);ctx.fillRect(-46,-8,3,16);
+ ctx.strokeStyle="#d6eeff";ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(-15,17);ctx.lineTo(23,17);ctx.moveTo(-10,11);ctx.lineTo(-10,17);ctx.moveTo(16,11);ctx.lineTo(16,17);ctx.stroke();
+ ctx.restore();
+ ctx.fillStyle="#fff1a0";shots.forEach(s=>ctx.fillRect(s.x-4,s.y-2,8,4));
+ ctx.restore();
+ if(done||crashed){ctx.fillStyle="#071526af";ctx.fillRect(0,0,w,h);ctx.fillStyle="white";ctx.textAlign="center";ctx.font="bold 25px system-ui";ctx.fillText(done?"FLIGHT SCHOOL COMPLETE":"HELICOPTER LOST",w/2,h*.43);ctx.font="16px system-ui";ctx.fillText("Tap Restart to try again",w/2,h*.52);ctx.textAlign="start";}
+}
+function loop(now){const dt=Math.min((now-last)/1000||0,.05);last=now;acc=Math.min(acc+dt,.2);while(acc>=DT){step(DT);acc-=DT;}render();requestAnimationFrame(loop);}
+function joystick(x,y){const b=stick.getBoundingClientRect(),cx=b.left+b.width/2,cy=b.top+b.height/2,r=(b.width-42)/2;const dx=x-cx,dy=y-cy,length=Math.hypot(dx,dy),fraction=length?Math.min(1,r/length):0;axis.x=dx*fraction/r;axis.y=dy*fraction/r;knob.style.transform="translate("+(axis.x*r)+"px,"+(axis.y*r)+"px)";}
+function stopStick(){stickId=null;axis.x=0;axis.y=0;knob.style.transform="translate(0,0)";}
+stick.addEventListener("pointerdown",e=>{e.preventDefault();stickId=e.pointerId;stick.setPointerCapture(e.pointerId);joystick(e.clientX,e.clientY);});
+stick.addEventListener("pointermove",e=>{if(e.pointerId===stickId)joystick(e.clientX,e.clientY);});
+for(const name of ["pointerup","pointercancel","lostpointercapture"])stick.addEventListener(name,e=>{if(e.pointerId===stickId)stopStick();});
+fire.addEventListener("pointerdown",e=>{e.preventDefault();fireId=e.pointerId;fire.setPointerCapture(e.pointerId);fireHeld=true;});
+for(const name of ["pointerup","pointercancel","lostpointercapture"])fire.addEventListener(name,e=>{if(e.pointerId===fireId){fireId=null;fireHeld=false;}});
+addEventListener("keydown",e=>{if(["ArrowRight","ArrowLeft","ArrowUp","ArrowDown","Space"].includes(e.code))e.preventDefault();keys.add(e.code);});
+addEventListener("keyup",e=>keys.delete(e.code));
+addEventListener("blur",()=>{keys.clear();stopStick();fireHeld=false;});
+document.getElementById("reset").addEventListener("click",reset);
+addEventListener("resize",resize);
+resize();reset();requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
