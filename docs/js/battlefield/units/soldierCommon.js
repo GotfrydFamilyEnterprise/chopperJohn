@@ -17,7 +17,7 @@ export function gait(phase,activity=1){
   const kneeY=-11+3*swing;
   return {knee:[kneeX,kneeY],foot:[x,y]};
  }
- return {legs:[leg(0),leg(.5)],bob:.65*(1-Math.cos(phase*4*Math.PI))*.5*activity};
+ return {legs:[leg(0),leg(.5)],bob:.65*(1-Math.cos(phase*2*Math.PI))*.5*activity};
 }
 function line(ctx,a,b){ctx.beginPath();ctx.moveTo(...a);ctx.lineTo(...b);ctx.stroke();}
 export function drawBody(ctx,unit,activity=1){
