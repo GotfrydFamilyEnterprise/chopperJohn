@@ -1,1 +1,11 @@
-{"private":true,"type":"module","scripts":{"test":"playwright test"},"devDependencies":{"@playwright/test":"1.56.1"}}
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:unit": "node tests-unit/adversarial.test.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}
