@@ -21,14 +21,17 @@ canvas{display:block;width:100vw;height:100dvh;touch-action:none}
 #fire{right:22px;bottom:calc(env(safe-area-inset-bottom) + 34px);width:96px;height:96px;border-radius:50%;background:#ca4d4da6;border:2px solid #ffb3b3;color:white;font-weight:800;font-size:17px}
 #turn{right:132px;bottom:calc(env(safe-area-inset-bottom) + 52px);width:78px;height:78px;border-radius:50%;background:#316d9ebd;border:2px solid #afdfff;color:white;font-size:13px;font-weight:800}
 #reset{position:fixed;top:calc(env(safe-area-inset-top) + 98px);right:12px;border:1px solid #ffffff77;border-radius:9px;padding:7px 11px;background:#112843db;color:white;pointer-events:auto}
+#telemetryToggle{position:fixed;top:calc(env(safe-area-inset-top) + 137px);right:12px;border:1px solid #ffffff77;border-radius:9px;padding:7px 11px;background:#112843db;color:white;pointer-events:auto}
+#telemetry{position:fixed;top:calc(env(safe-area-inset-top) + 14px);left:50%;transform:translateX(-50%);white-space:pre;background:#071c31da;border:1px solid #9fcaff77;border-radius:9px;padding:8px 11px;font:12px ui-monospace,monospace;color:#d6f0ff;pointer-events:none}
+#telemetry[hidden]{display:none}
 #tip{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom) + 12px);font-size:11px;color:#b8cfe3;white-space:nowrap;pointer-events:none}
-@media (max-height:430px){#stick{width:112px;height:112px}#knob{left:36px;top:36px;width:36px;height:36px}#fire{width:80px;height:80px;right:20px}#turn{width:67px;height:67px;right:111px;bottom:calc(env(safe-area-inset-bottom) + 40px);font-size:11px}#reset{top:calc(env(safe-area-inset-top) + 70px)}#bar{font-size:11px}#lesson strong{font-size:13px}#tip{display:none}}
+@media (max-height:430px){#stick{width:112px;height:112px}#knob{left:36px;top:36px;width:36px;height:36px}#fire{width:80px;height:80px;right:20px}#turn{width:67px;height:67px;right:111px;bottom:calc(env(safe-area-inset-bottom) + 40px);font-size:11px}#reset{top:calc(env(safe-area-inset-top) + 70px)}#telemetryToggle{top:calc(env(safe-area-inset-top) + 108px)}#telemetry{top:calc(env(safe-area-inset-top) + 2px);font-size:10px;padding:5px 7px}#bar{font-size:11px}#lesson strong{font-size:13px}#tip{display:none}}
 </style>
 </head>
 <body>
 <canvas id="game" aria-label="Helicopter flying tutorial"></canvas>
 <div id="hud"><div id="bar"><div id="lesson"><strong id="title">Flight school</strong><span id="instruction">Move the left stick to fly.</span></div><div id="stats">00:00<br>0 targets</div></div></div>
-<div id="controls"><div class="pad" id="stick" aria-label="Flight joystick"><div id="knob"></div></div><button class="pad" id="turn" aria-label="Turn helicopter around">↻ TURN</button><button class="pad" id="fire" aria-label="Fire machine gun">FIRE</button><button id="reset">Restart</button></div>
+<div id="controls"><div class="pad" id="stick" aria-label="Flight joystick"><div id="knob"></div></div><button class="pad" id="turn" aria-label="Turn helicopter around">↻ TURN</button><button class="pad" id="fire" aria-label="Fire machine gun">FIRE</button><button id="reset">Restart</button><button id="telemetryToggle" aria-pressed="false">Telemetry: off</button></div><div id="telemetry" hidden></div>
 <div id="tip">Joystick: pitch + lift · TURN: face opposite way · FIRE · Desktop: arrows + T + Space</div>
 <script>
 (()=>{
@@ -37,12 +40,14 @@ const canvas=document.getElementById("game"),ctx=canvas.getContext("2d");
 const title=document.getElementById("title"),instruction=document.getElementById("instruction"),stats=document.getElementById("stats");
 const stick=document.getElementById("stick"),knob=document.getElementById("knob"),fire=document.getElementById("fire");
 const WORLD={w:1800,h:680,ground:605},DT=1/60;
-let w=innerWidth,h=innerHeight,dpr=1,scale=1,camera=0,elapsed=0,acc=0,last=0;
+let w=innerWidth,h=innerHeight,dpr=1,scale=1,camera=0,elapsed=0,acc=0,last=0,visualTime=0,telemetryOn=false;
 const keys=new Set(),axis={x:0,y:0};let fireHeld=false,stickId=null,fireId=null;
 let heli,shots,targets,lesson,steps,crashed,done;
-const clampAngle = a => Math.atan2(Math.sin(a),Math.cos(a));
+const FLIGHT={maxPitch:.61,rotorRate:12,bodyRate:3.7,thrust:395,gravity:330,horizontalDamping:.45,verticalDamping:.9,maxHorizontal:270,maxVertical:200};
+const telem=document.getElementById("telemetry"),telemToggle=document.getElementById("telemetryToggle");
+function apparentFacing(){const progress=heli.turnTime>0?1-heli.turnTime/.42:1;return heli.turnTime>0?heli.turnFrom*Math.cos(Math.PI*progress):heli.facing;}
 function reset(){
- heli={x:160,y:300,vx:0,vy:0,facing:1,angle:0,turnTime:0,turnFrom:1,health:100,fireCooldown:0};
+ heli={x:160,y:300,vx:0,vy:0,facing:1,angle:0,rotorAngle:0,turnTime:0,turnFrom:1,health:100,fireCooldown:0};
  shots=[]; targets=[{x:970,y:WORLD.ground-24,hp:3},{x:1250,y:WORLD.ground-24,hp:3},{x:1520,y:WORLD.ground-24,hp:3}];
  lesson=0;steps={move:0,climb:0,travel:false,fire:0,land:0};crashed=false;done=false;elapsed=0;acc=0;updateHUD();
 }
@@ -65,17 +70,21 @@ function step(dt){
  // Facing right: left = nose up, right = nose down.
  // Facing left: right = nose up, left = nose down.
  // Angle is nose-down positive, independent of facing; sprite X is mirrored.
- const requestedPitch=clamp(steer*heli.facing,-1,1)*.55;
- heli.angle+=(requestedPitch-heli.angle)*(1-Math.exp(-7*dt));
+ const requestedPitch=clamp(steer*heli.facing,-1,1)*FLIGHT.maxPitch;
+ // Cyclic disc responds first; the heavier fuselage slowly follows its thrust direction.
+ heli.rotorAngle+=(requestedPitch-heli.rotorAngle)*(1-Math.exp(-FLIGHT.rotorRate*dt));
+ heli.angle+=(heli.rotorAngle-heli.angle)*(1-Math.exp(-FLIGHT.bodyRate*dt));
  // Up requests greater collective, down less. Neutral returns to hover trim.
  // Horizontal acceleration follows the nose orientation and keeps inertia.
- const thrust=390;
  const collective=clamp(1-lift*.80,.20,1.80);
- const drag=Math.exp(-.85*dt);
- heli.vx=(heli.vx+heli.facing*Math.sin(heli.angle)*thrust*collective*dt)*drag;
- heli.vy=(heli.vy+(1-collective*Math.cos(heli.angle))*330*dt)*Math.exp(-1.65*dt);
+ // Rotor thrust resolves into horizontal and vertical forces. Neutral collective
+ // hovers when level, but loses altitude as rotor-disc tilt increases.
+ const horizontalAcceleration=heli.facing*Math.sin(heli.rotorAngle)*FLIGHT.thrust*collective;
+ const verticalAcceleration=FLIGHT.gravity*(1-collective*Math.cos(heli.rotorAngle));
+ heli.vx=(heli.vx+horizontalAcceleration*dt)*Math.exp(-FLIGHT.horizontalDamping*dt);
+ heli.vy=(heli.vy+verticalAcceleration*dt)*Math.exp(-FLIGHT.verticalDamping*dt);
  if(heli.turnTime>0)heli.turnTime=Math.max(0,heli.turnTime-dt);
- heli.vx=clamp(heli.vx,-235,235);heli.vy=clamp(heli.vy,-235,235);
+ heli.vx=clamp(heli.vx,-FLIGHT.maxHorizontal,FLIGHT.maxHorizontal);heli.vy=clamp(heli.vy,-FLIGHT.maxVertical,FLIGHT.maxVertical);
  heli.x=clamp(heli.x+heli.vx*dt,25,WORLD.w-25);
  heli.y=clamp(heli.y+heli.vy*dt,45,WORLD.ground-23);
  // Facing direction changes only after the explicit turnaround gesture.
@@ -84,8 +93,7 @@ function step(dt){
  heli.fireCooldown=Math.max(heli.fireCooldown-dt,0);
  if((fireHeld||keys.has("Space"))&&heli.fireCooldown<=0){
   // Match the exact rendered body direction (including pitch and turnaround).
-  const turnProgress=heli.turnTime>0?1-heli.turnTime/.42:1;
-  const visibleFacing=heli.turnTime>0?heli.turnFrom*Math.cos(Math.PI*turnProgress):heli.facing;
+  const visibleFacing=apparentFacing();
   const ca=Math.cos(heli.angle),sa=Math.sin(heli.angle);
   const forwardX=visibleFacing*ca,forwardY=sa;
   const length=Math.hypot(forwardX,forwardY);
@@ -142,21 +150,49 @@ function render(){
  ctx.save();ctx.translate(heli.x,heli.y);
  // During the 420ms turn, the visible fuselage narrows as if yawing in 3D,
  // briefly showing its nose or tail before growing into the opposite side view.
- const progress=heli.turnTime>0?1-heli.turnTime/.42:1;
- const apparentFacing=heli.turnTime>0?heli.turnFrom*Math.cos(Math.PI*progress):heli.facing;
- ctx.scale(apparentFacing,1);
+ const facingScale=apparentFacing();
+ ctx.scale(facingScale,1);
  ctx.rotate(heli.angle);
- ctx.fillStyle="#dde8ea";ctx.fillRect(-32,-24,70,3);ctx.fillRect(-1,-32,3,12);
+ // The mast and the rotor disc have their own animation independent of body pitch.
+ ctx.fillStyle="#bcd3de";ctx.fillRect(-2,-31,4,10);
  ctx.fillStyle="#57b7cf";ctx.beginPath();ctx.moveTo(-28,-7);ctx.lineTo(19,-7);ctx.quadraticCurveTo(39,-5,34,9);ctx.lineTo(-18,12);ctx.closePath();ctx.fill();
  ctx.fillStyle="#143e5b";ctx.beginPath();ctx.ellipse(17,0,13,8,0,0,Math.PI*2);ctx.fill();
  ctx.fillStyle="#57b7cf";ctx.fillRect(-47,0,20,4);ctx.fillRect(-46,-8,3,16);
  ctx.strokeStyle="#d6eeff";ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(-15,17);ctx.lineTo(23,17);ctx.moveTo(-10,11);ctx.lineTo(-10,17);ctx.moveTo(16,11);ctx.lineTo(16,17);ctx.stroke();
+ // Draw a spinning, foreshortened main rotor above the fuselage.
+ // Disc deflection is the *difference* between rotor cyclic angle and fuselage pitch.
+ ctx.save();ctx.translate(0,-34);ctx.rotate(heli.rotorAngle-heli.angle);
+ ctx.fillStyle="#c5eafa3d";ctx.beginPath();ctx.ellipse(0,0,70,7,0,0,Math.PI*2);ctx.fill();
+ const phase=visualTime*31,blade=Math.cos(phase),depth=Math.sin(phase);
+ ctx.strokeStyle="#e4f7ffbb";ctx.lineWidth=2.8;ctx.beginPath();
+ ctx.moveTo(-67*blade,-5*depth);ctx.lineTo(67*blade,5*depth);ctx.stroke();
+ ctx.strokeStyle="#c6e9ff66";ctx.lineWidth=1.8;ctx.beginPath();
+ ctx.moveTo(-64*Math.cos(phase+1.1),-5*Math.sin(phase+1.1));
+ ctx.lineTo(64*Math.cos(phase+1.1),5*Math.sin(phase+1.1));ctx.stroke();
+ ctx.fillStyle="#f1faff";ctx.beginPath();ctx.arc(0,0,4,0,Math.PI*2);ctx.fill();
+ ctx.restore();
+ // Tail rotor: rotating spokes, seen from the side.
+ ctx.save();ctx.translate(-47,0);ctx.rotate(visualTime*40);
+ ctx.strokeStyle="#d5f2ffcc";ctx.lineWidth=2;
+ ctx.beginPath();ctx.moveTo(-9,0);ctx.lineTo(9,0);ctx.moveTo(0,-9);ctx.lineTo(0,9);ctx.stroke();
+ ctx.restore();
  ctx.restore();
  ctx.fillStyle="#fff1a0";shots.forEach(s=>ctx.fillRect(s.x-4,s.y-2,8,4));
  ctx.restore();
  if(done||crashed){ctx.fillStyle="#071526af";ctx.fillRect(0,0,w,h);ctx.fillStyle="white";ctx.textAlign="center";ctx.font="bold 25px system-ui";ctx.fillText(done?"FLIGHT SCHOOL COMPLETE":"HELICOPTER LOST",w/2,h*.43);ctx.font="16px system-ui";ctx.fillText("Tap Restart to try again",w/2,h*.52);ctx.textAlign="start";}
 }
-function loop(now){const dt=Math.min((now-last)/1000||0,.05);last=now;acc=Math.min(acc+dt,.2);while(acc>=DT){step(DT);acc-=DT;}render();requestAnimationFrame(loop);}
+function loop(now){
+ const dt=Math.min((now-last)/1000||0,.05);last=now;visualTime+=dt;
+ acc=Math.min(acc+dt,.2);while(acc>=DT){step(DT);acc-=DT;}
+ render();
+ if(telemetryOn){
+  const deg=180/Math.PI;
+  telem.textContent="PITCH "+(heli.angle*deg).toFixed(1)+"°  ROTOR "+(heli.rotorAngle*deg).toFixed(1)+"°\n"+
+   "VX "+heli.vx.toFixed(1)+"   VY "+heli.vy.toFixed(1)+" units/s\n"+
+   "ALT "+(WORLD.ground-heli.y).toFixed(0)+"   LIFT "+clamp(1-axis.y*.8,.2,1.8).toFixed(2)+"x";
+ }
+ requestAnimationFrame(loop);
+}
 function joystick(x,y){const b=stick.getBoundingClientRect(),cx=b.left+b.width/2,cy=b.top+b.height/2,r=(b.width-42)/2;const dx=x-cx,dy=y-cy,length=Math.hypot(dx,dy),fraction=length?Math.min(1,r/length):0;axis.x=dx*fraction/r;axis.y=dy*fraction/r;knob.style.transform="translate("+(axis.x*r)+"px,"+(axis.y*r)+"px)";}
 function stopStick(){stickId=null;axis.x=0;axis.y=0;knob.style.transform="translate(0,0)";}
 stick.addEventListener("pointerdown",e=>{e.preventDefault();stickId=e.pointerId;stick.setPointerCapture(e.pointerId);joystick(e.clientX,e.clientY);});
@@ -169,6 +205,7 @@ addEventListener("keyup",e=>keys.delete(e.code));
 addEventListener("blur",()=>{keys.clear();stopStick();fireHeld=false;});
 document.getElementById("turn").addEventListener("pointerdown",e=>{e.preventDefault();requestTurn();});
 document.getElementById("reset").addEventListener("click",reset);
+telemToggle.addEventListener("click",()=>{telemetryOn=!telemetryOn;telem.hidden=!telemetryOn;telemToggle.textContent="Telemetry: "+(telemetryOn?"on":"off");telemToggle.setAttribute("aria-pressed",String(telemetryOn));});
  // Desktop testing shortcut.
  addEventListener("keydown",e=>{if(e.code==="KeyT"&&!e.repeat)requestTurn();});
 addEventListener("resize",resize);
