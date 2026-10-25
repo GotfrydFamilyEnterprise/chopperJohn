@@ -1,0 +1,300 @@
+
+> test
+> playwright test
+
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:44] "GET / HTTP/1.1" 200 -
+
+Running 20 tests using 1 worker
+
+(node:7467) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7467) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:45] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:45] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+  ✓   1 tests/determinism.spec.js:2:1 › QA-01 repeated HQ arrivals have identical fixed-step state traces (423ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+  ✓   2 tests/engagement.spec.js:2:28 › RI-02 RO-02 entry retains combat posture faction 0 (137ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+  ✓   3 tests/engagement.spec.js:2:28 › RI-02 RO-02 entry retains combat posture faction 1 (124ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+  ✓   4 tests/engagement.spec.js:29:1 › CB-01 muzzle segment damages enemy at close range (137ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:46] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+  ✓   5 tests/fob.spec.js:3:28 › FOB-01..10 faction 0 (6.2s)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:50:53] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+  ✓   6 tests/fob.spec.js:3:28 › FOB-01..10 faction 1 (6.9s)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+  ✓   7 tests/fob.spec.js:109:1 › CB-01 visible shots damage opposing rocket infantry (207ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+  ✓   8 tests/rocket-combat.spec.js:15:28 › RC-01/02/03/05/06 mirrored rocket flight faction 0 (518ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:00] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+  ✓   9 tests/rocket-combat.spec.js:15:28 › RC-01/02/03/05/06 mirrored rocket flight faction 1 (507ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+  ✓  10 tests/rocket-combat.spec.js:93:28 › RC-01 browser range boundaries faction 0 (170ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+  ✓  11 tests/rocket-combat.spec.js:93:28 › RC-01 browser range boundaries faction 1 (193ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:01] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+  ✓  12 tests/rocket-combat.spec.js:119:1 › RC-03/06 rockets do not home; shooter death, pause and reset (434ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+  ✓  13 tests/rocket-combat.spec.js:162:28 › BC-01/02/04/05 bunker shared hits and casualty faction 0 (305ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+  ✓  14 tests/rocket-combat.spec.js:162:28 › BC-01/02/04/05 bunker shared hits and casualty faction 1 (259ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:02] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+  ✓  15 tests/rocket-combat.spec.js:211:1 › BC-03 real rifle rounds mostly absorbed, occasional half damage (200ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+  ✓  16 tests/rocket-combat.spec.js:234:1 › RC-07 identical browser combat after reset, seeded variation (303ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /index.html HTTP/1.1" 200 -
+  ✓  17 tests/rocket-combat.spec.js:260:1 › RC-08 mobile navigation, pan, spawn and reset retain separate scenes (455ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+  ✓  18 tests/rocket-review.spec.js:3:28 › review RC-03/05 airborne rocket survives both deaths and infantry crossing faction 0 (176ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:03] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+  ✓  19 tests/rocket-review.spec.js:3:28 › review RC-03/05 airborne rocket survives both deaths and infantry crossing faction 1 (167ms)
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /battlefield.html?test HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/battlefieldScene.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/units/soldierCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/units/rifleman.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/bases/forwardBase.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/combat/weapons.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/units/rocketeer.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/bases/headquarters.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/combat/effects.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/bases/baseCommon.js?v=0.6.0 HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[WebServer] 127.0.0.1 - - [25/Oct/2026 22:51:04] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+  ✓  20 tests/rocket-review.spec.js:43:1 › review RC-02 actual browser launch intervals include full reload then full aim (156ms)
+
+  20 passed (20.4s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

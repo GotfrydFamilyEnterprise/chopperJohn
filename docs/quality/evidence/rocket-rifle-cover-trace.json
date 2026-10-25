@@ -1,0 +1,1081 @@
+{
+  "time": 17.500000000000288,
+  "units": [
+    {
+      "id": 9,
+      "team": 0,
+      "type": "rifle",
+      "x": 1077,
+      "y": 460,
+      "phase": 0.8581818181818602,
+      "velocity": 47,
+      "state": "guard",
+      "timer": 0,
+      "hp": 3,
+      "fireCooldown": 0.17000000000000004,
+      "guardBase": 1120,
+      "guardSlot": 0,
+      "hitFlash": 0,
+      "arrived": true
+    },
+    {
+      "id": 10,
+      "team": 0,
+      "type": "rifle",
+      "x": 1163,
+      "y": 460,
+      "phase": 0.122727272727391,
+      "velocity": 47,
+      "state": "guard",
+      "timer": 0,
+      "hp": 2.5,
+      "fireCooldown": 0.17000000000000004,
+      "guardBase": 1120,
+      "guardSlot": 1,
+      "hitFlash": 0,
+      "arrived": true
+    },
+    {
+      "id": 11,
+      "team": 0,
+      "type": "rocket",
+      "x": 1120,
+      "y": 460,
+      "phase": 0.4554545454547113,
+      "velocity": 33,
+      "state": "fireStop",
+      "timer": 0,
+      "hp": 4,
+      "fireCooldown": 0,
+      "guardBase": 1120,
+      "guardSlot": 0,
+      "hitFlash": 0,
+      "arrived": true,
+      "rocketCooldown": 0,
+      "rocketAimTime": 0,
+      "rocketTargetId": null
+    },
+    {
+      "id": 12,
+      "team": 1,
+      "type": "rifle",
+      "x": 1300,
+      "y": 460,
+      "phase": 0.7199999999999998,
+      "velocity": 0,
+      "state": "fireWalk",
+      "timer": 10.833333333333451,
+      "hp": 9935,
+      "fireCooldown": 0.17000000000000004,
+      "guardBase": null,
+      "guardSlot": null,
+      "hitFlash": 0.15
+    }
+  ],
+  "bases": [
+    {
+      "x": 110,
+      "team": 0,
+      "main": true,
+      "slots": {
+        "rifle": [
+          null,
+          null
+        ],
+        "rocket": [
+          null
+        ]
+      },
+      "reservations": {
+        "rifle": [
+          null,
+          null
+        ],
+        "rocket": [
+          null
+        ]
+      },
+      "state": "UNCLAIMED",
+      "everOccupied": false,
+      "flagProgress": 0
+    },
+    {
+      "x": 3490,
+      "team": 1,
+      "main": true,
+      "slots": {
+        "rifle": [
+          null,
+          null
+        ],
+        "rocket": [
+          null
+        ]
+      },
+      "reservations": {
+        "rifle": [
+          null,
+          null
+        ],
+        "rocket": [
+          null
+        ]
+      },
+      "state": "UNCLAIMED",
+      "everOccupied": false,
+      "flagProgress": 0
+    },
+    {
+      "x": 1120,
+      "team": 0,
+      "main": false,
+      "slots": {
+        "rifle": [
+          9,
+          10
+        ],
+        "rocket": [
+          11
+        ]
+      },
+      "reservations": {
+        "rifle": [
+          9,
+          10
+        ],
+        "rocket": [
+          11
+        ]
+      },
+      "state": "OCCUPIED",
+      "everOccupied": true,
+      "flagProgress": 1,
+      "coverFlash": 0.12
+    },
+    {
+      "x": 2480,
+      "team": 1,
+      "main": false,
+      "slots": {
+        "rifle": [
+          null,
+          null
+        ],
+        "rocket": [
+          null
+        ]
+      },
+      "reservations": {
+        "rifle": [
+          null,
+          null
+        ],
+        "rocket": [
+          null
+        ]
+      },
+      "state": "UNCLAIMED",
+      "everOccupied": false,
+      "flagProgress": 0,
+      "coverFlash": 0
+    }
+  ],
+  "bullets": [
+    {
+      "x": 1215,
+      "y": 423,
+      "vx": 630,
+      "team": 0,
+      "ttl": 0.8333333333333328,
+      "damage": 1
+    }
+  ],
+  "rockets": [],
+  "explosions": [],
+  "combatEvents": [
+    {
+      "time": 6.833333333333314,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9999
+    },
+    {
+      "time": 6.833333333333314,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 6.966666666666647,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9998
+    },
+    {
+      "time": 7.1666666666666465,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9997
+    },
+    {
+      "time": 7.1666666666666465,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 7.299999999999979,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9996
+    },
+    {
+      "time": 7.499999999999979,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9995
+    },
+    {
+      "time": 7.499999999999979,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 7.6333333333333115,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9994
+    },
+    {
+      "time": 7.833333333333311,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9993
+    },
+    {
+      "time": 7.833333333333311,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 7.966666666666644,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9992
+    },
+    {
+      "time": 8.166666666666652,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9991
+    },
+    {
+      "time": 8.166666666666652,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 8.299999999999992,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9990
+    },
+    {
+      "time": 8.500000000000002,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9989
+    },
+    {
+      "time": 8.500000000000002,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 8.633333333333342,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9988
+    },
+    {
+      "time": 8.833333333333352,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9987
+    },
+    {
+      "time": 8.833333333333352,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 8.966666666666692,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9986
+    },
+    {
+      "time": 9.166666666666702,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9985
+    },
+    {
+      "time": 9.166666666666702,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 9.300000000000042,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9984
+    },
+    {
+      "time": 9.500000000000052,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9983
+    },
+    {
+      "time": 9.500000000000052,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 9.633333333333391,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9982
+    },
+    {
+      "time": 9.833333333333401,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9981
+    },
+    {
+      "time": 9.833333333333401,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 9.966666666666741,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9980
+    },
+    {
+      "time": 10.166666666666751,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9979
+    },
+    {
+      "time": 10.166666666666751,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 10.300000000000091,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9978
+    },
+    {
+      "time": 10.500000000000101,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9977
+    },
+    {
+      "time": 10.500000000000101,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 10.633333333333441,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9976
+    },
+    {
+      "time": 10.833333333333451,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9975
+    },
+    {
+      "time": 10.833333333333451,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 10.966666666666791,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9974
+    },
+    {
+      "time": 11.166666666666801,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9973
+    },
+    {
+      "time": 11.166666666666801,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 11.300000000000141,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9972
+    },
+    {
+      "time": 11.500000000000151,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9971
+    },
+    {
+      "time": 11.500000000000151,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 11.633333333333491,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9970
+    },
+    {
+      "time": 11.833333333333501,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9969
+    },
+    {
+      "time": 11.833333333333501,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 11.96666666666684,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9968
+    },
+    {
+      "time": 12.16666666666685,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9967
+    },
+    {
+      "time": 12.16666666666685,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 12.30000000000019,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9966
+    },
+    {
+      "time": 12.5000000000002,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9965
+    },
+    {
+      "time": 12.5000000000002,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 12.63333333333354,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9964
+    },
+    {
+      "time": 12.83333333333355,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9963
+    },
+    {
+      "time": 12.83333333333355,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 12.96666666666689,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9962
+    },
+    {
+      "time": 13.1666666666669,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9961
+    },
+    {
+      "time": 13.1666666666669,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 13.30000000000024,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9960
+    },
+    {
+      "time": 13.50000000000025,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9959
+    },
+    {
+      "time": 13.50000000000025,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 13.63333333333359,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9958
+    },
+    {
+      "time": 13.8333333333336,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9957
+    },
+    {
+      "time": 13.8333333333336,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 13.96666666666694,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9956
+    },
+    {
+      "time": 14.16666666666695,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9955
+    },
+    {
+      "time": 14.16666666666695,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 14.30000000000029,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9954
+    },
+    {
+      "time": 14.5000000000003,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9953
+    },
+    {
+      "time": 14.5000000000003,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 14.63333333333364,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9952
+    },
+    {
+      "time": 14.83333333333365,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9951
+    },
+    {
+      "time": 14.83333333333365,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 14.96666666666699,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9950
+    },
+    {
+      "time": 15.166666666667,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9949
+    },
+    {
+      "time": 15.166666666667,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 15.30000000000034,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9948
+    },
+    {
+      "time": 15.50000000000035,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9947
+    },
+    {
+      "time": 15.50000000000035,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 15.63333333333369,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9946
+    },
+    {
+      "time": 15.8333333333337,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9945
+    },
+    {
+      "time": 15.8333333333337,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 15.96666666666704,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9944
+    },
+    {
+      "time": 16.16666666666703,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9943
+    },
+    {
+      "time": 16.16666666666703,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 16.300000000000356,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9942
+    },
+    {
+      "time": 16.500000000000345,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9941
+    },
+    {
+      "time": 16.500000000000345,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 16.63333333333367,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9940
+    },
+    {
+      "time": 16.83333333333366,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9939
+    },
+    {
+      "time": 16.83333333333366,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 3
+    },
+    {
+      "time": 16.966666666666985,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9938
+    },
+    {
+      "time": 17.166666666666973,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9937
+    },
+    {
+      "time": 17.166666666666973,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0.5,
+      "hp": 2.5
+    },
+    {
+      "time": 17.3000000000003,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9936
+    },
+    {
+      "time": 17.500000000000288,
+      "type": "bulletHit",
+      "team": 0,
+      "covered": false,
+      "id": 12,
+      "amount": 1,
+      "hp": 9935
+    },
+    {
+      "time": 17.500000000000288,
+      "type": "bulletHit",
+      "team": 1,
+      "covered": true,
+      "id": 10,
+      "amount": 0,
+      "hp": 2.5
+    }
+  ],
+  "seed": 17,
+  "randomState": 312129702
+}

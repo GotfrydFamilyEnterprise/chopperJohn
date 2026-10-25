@@ -1,0 +1,720 @@
+{
+  "before": {
+    "time": 0.6833333333333338,
+    "units": [
+      {
+        "id": 9,
+        "team": 0,
+        "type": "rocket",
+        "x": 1500,
+        "y": 460,
+        "phase": 0.79,
+        "velocity": 33,
+        "state": "fireStop",
+        "timer": 0.6833333333333338,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "rocketCooldown": 0,
+        "rocketAimTime": 0.6833333333333338,
+        "rocketTargetId": 10
+      },
+      {
+        "id": 10,
+        "team": 1,
+        "type": "rocket",
+        "x": 1800,
+        "y": 460,
+        "phase": 0.10000000000000009,
+        "velocity": 0,
+        "state": "fireStop",
+        "timer": 0.6833333333333338,
+        "hp": 100,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "rocketCooldown": 998.3166666666673,
+        "rocketAimTime": 0,
+        "rocketTargetId": 9
+      }
+    ],
+    "bases": [
+      {
+        "x": 110,
+        "team": 0,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 3490,
+        "team": 1,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 1120,
+        "team": 0,
+        "main": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "coverFlash": 0
+      },
+      {
+        "x": 2480,
+        "team": 1,
+        "main": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "coverFlash": 0
+      }
+    ],
+    "bullets": [],
+    "rockets": [],
+    "explosions": [],
+    "combatEvents": [],
+    "seed": 123,
+    "randomState": 123
+  },
+  "launch": {
+    "time": 0.7000000000000005,
+    "units": [
+      {
+        "id": 9,
+        "team": 0,
+        "type": "rocket",
+        "x": 1500,
+        "y": 460,
+        "phase": 0.79,
+        "velocity": 33,
+        "state": "fireStop",
+        "timer": 0.7000000000000005,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "rocketCooldown": 3,
+        "rocketAimTime": 0,
+        "rocketTargetId": 10
+      },
+      {
+        "id": 10,
+        "team": 1,
+        "type": "rocket",
+        "x": 1800,
+        "y": 460,
+        "phase": 0.10000000000000009,
+        "velocity": 0,
+        "state": "fireStop",
+        "timer": 0.7000000000000005,
+        "hp": 100,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "rocketCooldown": 998.3000000000006,
+        "rocketAimTime": 0,
+        "rocketTargetId": 9
+      }
+    ],
+    "bases": [
+      {
+        "x": 110,
+        "team": 0,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 3490,
+        "team": 1,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 1120,
+        "team": 0,
+        "main": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "coverFlash": 0
+      },
+      {
+        "x": 2480,
+        "team": 1,
+        "main": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "coverFlash": 0
+      }
+    ],
+    "bullets": [],
+    "rockets": [
+      {
+        "team": 0,
+        "shooterId": 9,
+        "originX": 1521.8547787293423,
+        "originY": 391.95448893395474,
+        "x": 1524.4380523140687,
+        "y": 388.9091966920367,
+        "vx": 154.996415083585,
+        "vy": -184.7175345150858,
+        "ground": 460,
+        "aimedX": 1800,
+        "spread": 14,
+        "impactX": 1808.0430454537272,
+        "age": 0.016666666666666666,
+        "flightTime": 1.8464186192309804,
+        "id": 1
+      }
+    ],
+    "explosions": [],
+    "combatEvents": [
+      {
+        "time": 0.7000000000000005,
+        "type": "launch",
+        "id": 1,
+        "team": 0,
+        "shooterId": 9,
+        "aimedX": 1800,
+        "impactX": 1808.0430454537272,
+        "spread": 14
+      }
+    ],
+    "seed": 123,
+    "randomState": 1831565936
+  },
+  "airborne": {
+    "time": 1.100000000000001,
+    "units": [
+      {
+        "id": 9,
+        "team": 0,
+        "type": "rocket",
+        "x": 1500,
+        "y": 460,
+        "phase": 0.79,
+        "velocity": 33,
+        "state": "fireStop",
+        "timer": 1.100000000000001,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "rocketCooldown": 2.6000000000000014,
+        "rocketAimTime": 0,
+        "rocketTargetId": 10
+      },
+      {
+        "id": 10,
+        "team": 1,
+        "type": "rocket",
+        "x": 1800,
+        "y": 460,
+        "phase": 0.10000000000000009,
+        "velocity": 0,
+        "state": "fireStop",
+        "timer": 1.100000000000001,
+        "hp": 100,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "rocketCooldown": 997.900000000001,
+        "rocketAimTime": 0,
+        "rocketTargetId": 9
+      }
+    ],
+    "bases": [
+      {
+        "x": 110,
+        "team": 0,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 3490,
+        "team": 1,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 1120,
+        "team": 0,
+        "main": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "coverFlash": 0
+      },
+      {
+        "x": 2480,
+        "team": 1,
+        "main": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "coverFlash": 0
+      }
+    ],
+    "bullets": [],
+    "rockets": [
+      {
+        "team": 0,
+        "shooterId": 9,
+        "originX": 1521.8547787293423,
+        "originY": 391.95448893395474,
+        "x": 1586.4366183475026,
+        "y": 335.8221828860023,
+        "vx": 154.996415083585,
+        "vy": -184.7175345150858,
+        "ground": 460,
+        "aimedX": 1800,
+        "spread": 14,
+        "impactX": 1808.0430454537272,
+        "age": 0.41666666666666663,
+        "flightTime": 1.8464186192309804,
+        "id": 1
+      }
+    ],
+    "explosions": [],
+    "combatEvents": [
+      {
+        "time": 0.7000000000000005,
+        "type": "launch",
+        "id": 1,
+        "team": 0,
+        "shooterId": 9,
+        "aimedX": 1800,
+        "impactX": 1808.0430454537272,
+        "spread": 14
+      }
+    ],
+    "seed": 123,
+    "randomState": 1831565936
+  },
+  "impact": {
+    "time": 2.533333333333329,
+    "units": [
+      {
+        "id": 9,
+        "team": 0,
+        "type": "rocket",
+        "x": 1500,
+        "y": 460,
+        "phase": 0.79,
+        "velocity": 33,
+        "state": "fireStop",
+        "timer": 2.533333333333329,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "rocketCooldown": 1.1666666666666732,
+        "rocketAimTime": 0,
+        "rocketTargetId": 10
+      },
+      {
+        "id": 10,
+        "team": 1,
+        "type": "rocket",
+        "x": 1800,
+        "y": 460,
+        "phase": 0.10000000000000009,
+        "velocity": 0,
+        "state": "fireStop",
+        "timer": 2.533333333333329,
+        "hp": 98.64344363629817,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0.15,
+        "rocketCooldown": 996.466666666669,
+        "rocketAimTime": 0,
+        "rocketTargetId": 9
+      }
+    ],
+    "bases": [
+      {
+        "x": 110,
+        "team": 0,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 3490,
+        "team": 1,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 1120,
+        "team": 0,
+        "main": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "coverFlash": 0
+      },
+      {
+        "x": 2480,
+        "team": 1,
+        "main": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "coverFlash": 0
+      }
+    ],
+    "bullets": [],
+    "rockets": [],
+    "explosions": [
+      {
+        "x": 1808.0430454537272,
+        "y": 460,
+        "age": 0
+      }
+    ],
+    "combatEvents": [
+      {
+        "time": 0.7000000000000005,
+        "type": "launch",
+        "id": 1,
+        "team": 0,
+        "shooterId": 9,
+        "aimedX": 1800,
+        "impactX": 1808.0430454537272,
+        "spread": 14
+      },
+      {
+        "time": 2.533333333333329,
+        "type": "explosion",
+        "id": 1,
+        "x": 1808.0430454537272,
+        "team": 0,
+        "hits": [
+          {
+            "covered": false,
+            "id": 10,
+            "amount": 1.3565563637018272,
+            "hp": 98.64344363629817
+          }
+        ]
+      }
+    ],
+    "seed": 123,
+    "randomState": 1831565936
+  }
+}

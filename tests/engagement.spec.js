@@ -6,7 +6,7 @@ for(const team of [0,1])test(`RI-02 RO-02 entry retains combat posture faction $
   const states=[];
   for(const type of ['rifle','rocket']){
    battlefieldTest.reset();battlefieldTest.clear();battlefieldTest.combat(true);
-   battlefieldTest.spawn(team,type,x);battlefieldTest.spawn(1-team,'rocket',x+dir*200);
+   battlefieldTest.spawn(team,type,x);battlefieldTest.spawn(1-team,'rocket',x+dir*240);
    battlefieldTest.step();states.push(battlefieldTest.snapshot().units[0]);
   }
   return {states,x};

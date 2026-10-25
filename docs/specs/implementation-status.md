@@ -48,3 +48,15 @@ The fresh-context adversarial review report supplies the per-requirement accepta
 ### Independent adversarial outcome
 
 See `docs/quality/issue-1-adversarial-review.md`: three independently authored module tests passed; seven screenshots inspected. FOB-01 appearance and FOB-09 static clarity PASS. Independent browser execution stalled at the tool layer, so browser wiring, full Flight School regressions, and physical iPhone acceptance remain UNVERIFIED. Recommendation: **INSUFFICIENT EVIDENCE — do not merge**. The initial gait concern was retracted after a numerical continuity test.
+
+
+## Approved rocket combat and bunker protection (v0.6)
+
+PR #2 gameplay was accepted by the user and merged. The new rocket/cover feature is on a separate branch, not merged. RC-01..08 and BC-01..05 supersede the earlier aim-only rocket restriction.
+
+- Implemented 225–500 target range, upward muzzle alignment, 0.7-second uninterrupted aim, 3-second reload, analytic ground-directed arcs, seeded ±5/20/50 scatter, 25-unit radius and linear 2-HP exposed damage.
+- Physically stationed defenders receive one shared 1/3-HP rocket hit per bunker blast, or 5% chance of a 0.5-HP rifle penetration. Entering/bypassing infantry remain exposed. No friendly fire.
+- Validation: **20 Playwright checks passed** in Chromium at phone/landscape viewports; **17 module checks passed**, including 14 independently executed new combat/review tests and 3 existing module checks. Logs/screenshots/traces are under `docs/quality/evidence/rocket-*`.
+- Independent reviewer authored three browser probes, executed unchanged in the browser runner, and independently inspected raw logs and ascent/impact/dust/casualty images. Initial one-tick reload defect and landscape overlay/screenshot resize issues were repaired.
+- Review: `docs/quality/rocket-adversarial-review.md`. RC-04 visible near/far miss comparison, BC-05 active absorbed-hit visual evidence and full RC-08 Flight School/physical iPhone regression remain UNVERIFIED. No unresolved production combat defect established; overall recommendation INSUFFICIENT EVIDENCE. Do not describe the whole acceptance gate as passed.
+- Private Sites preview published successfully: https://chopperjohn-fob-preview.earthyluck64.chatgpt.site/battlefield.html?v=0.6 . Publication confirms hosting, not physical iPhone acceptance.
