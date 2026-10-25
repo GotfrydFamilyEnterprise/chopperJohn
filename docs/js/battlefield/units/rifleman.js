@@ -7,7 +7,7 @@ export function updateRifleman(u,dt,enemyNearby){
 }
 export function drawRifleman(ctx,u){
  const firing=u.state==="fireWalk";
- const p=drawBody(ctx,u,firing?.6:1),b=p.bob;
+ const p=drawBody(ctx,u,1),b=p.bob;
  ctx.strokeStyle=p.colors.body;ctx.lineWidth=3;
  if(firing){
    // Rear hand stabilizes stock against shoulder; forward hand grips fore-end.
