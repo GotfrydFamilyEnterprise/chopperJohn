@@ -38,20 +38,21 @@ function update(dt){if(paused)return;time+=dt;
    if((b.x-u.x)*(u.team===0?1:-1)<=100&&(b.x-u.x)*(u.team===0?1:-1)>=-80&&assignDefender(b,u))break;
   }
   const target=combatEnabled&&nearestEnemy(u,u.type==="rifle"?RIFLE_RANGE:ROCKET_RANGE);
-  if(u.guardBase!==null){advanceDefender(bases.find(b=>!b.main&&b.x===u.guardBase),u,dt);}
+  if(u.guardBase!==null){advanceDefender(bases.find(b=>!b.main&&b.x===u.guardBase),u,dt,!!target);}
   if(u.type==="rifle"){
    if(u.guardBase===null)updateRifleman(u,dt,!!target);
    u.fireCooldown-=dt;
    if(target&&u.fireCooldown<=0){
     const direction=u.team===0?1:-1;
-    bullets.push({x:u.x+direction*33,y:GROUND-37,vx:direction*630,team:u.team,ttl:1.0,damage:1});
+    bullets.push({originX:u.x,x:u.x+direction*33,y:GROUND-37,vx:direction*630,team:u.team,ttl:1.0,damage:1});
     u.fireCooldown=.32;
    }
   }else if(u.guardBase===null)updateRocketeer(u,dt,!!target);
   u.x=clamp(u.x,170,W-170);
  }
  for(const p of bullets){
-  const previous=p.x;p.x+=p.vx*dt;p.ttl-=dt;
+  // CB-01: include the initial muzzle segment for enemies at close range.
+  const previous=p.originX??p.x;delete p.originX;p.x+=p.vx*dt;p.ttl-=dt;
   const victim=units.find(u=>u.hp>0&&u.team!==p.team&&u.x>=Math.min(previous,p.x)-9&&u.x<=Math.max(previous,p.x)+9);
   if(victim){victim.hp=Math.max(0,victim.hp-p.damage);victim.hitFlash=.15;p.ttl=0;}
  }

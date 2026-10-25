@@ -11,11 +11,12 @@ export function assignDefender(b,u){
  return true;
 }
 // FOB-03/04: reservations never count as physical occupation.
-export function advanceDefender(b,u,dt){
+export function advanceDefender(b,u,dt,engaging=false){
  const target=b.x+(u.type==="rocket"?0:(u.guardSlot===0?-43:43));
- const distance=target-u.x,step=Math.min(Math.abs(distance),Math.abs(u.velocity)*dt);
+ const speedScale=engaging?(u.type==="rifle"?.42:0):1;
+ const distance=target-u.x,step=Math.min(Math.abs(distance),Math.abs(u.velocity)*dt*speedScale);
  u.x+=Math.sign(distance)*step;u.phase=(u.phase+step/44)%1;
- u.state="enter";
+ u.state=engaging?(u.type==="rifle"?"fireWalk":"fireStop"):"enter";
  if(Math.abs(target-u.x)<.001){
   u.arrived=true;u.state=u.type==="rifle"?"guard":"fireStop";
   b.slots[u.type][u.guardSlot]=u.id;
