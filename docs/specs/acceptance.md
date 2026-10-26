@@ -67,3 +67,9 @@ Every PR must provide a requirements traceability table: ID, implementation path
 | EC-06 | Start both factions; advance with combat off; purchase manually; population cap | Five free soldiers per side (3 rifles,2 rockets), empty FOBs, equal independent120 accounts; identical later purchase limits, no free button deployment or economic cross-debit |
 | EC-07 | Mirror garrison/assault/emergency/loss scenarios | Same decisions, costs, timings and bounded mirrored movement; both automatic commanders active |
 | EC-08 | Pause/reset, repeat seed/commands, phone/landscape screenshots; natural rockets | Both budgets frozen/restored, legible separate HUDs, paid buttons/cooldown, deterministic replay; natural rocket fire for both sides within60 seconds |
+
+| ID | Scenario | Required observation |
+|---|---|---|
+| FS-01 | Enter actual Chromium fullscreen by button; exit by button and browser API | Root is fullscreen, all controls retained; label/pressed state synchronized; state preserved |
+| FS-02 | Remove fullscreen API; reject promise; simulate standalone | Honest dismissible help, Home Screen steps; no unhandled rejection; standalone does not request fullscreen |
+| FS-03 | Phone portrait/landscape screenshots, pause/reset/deployment after toggle | Usable control layout, canvas matches viewport, same simulation state; existing gameplay suite passes |

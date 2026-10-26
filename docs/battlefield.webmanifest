@@ -1,0 +1,11 @@
+{
+  "id": "./battlefield.html",
+  "name": "ChopperJohn Battlefield",
+  "short_name": "ChopperJohn",
+  "start_url": "./battlefield.html?view=rockets",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101b2c",
+  "theme_color": "#101b2c",
+  "icons": [{"src": "./battlefield-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any"}]
+}

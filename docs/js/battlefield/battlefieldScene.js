@@ -1,3 +1,4 @@
+import {installFullscreen} from "./ui/fullscreen.js?v=0.8.1.1";
 import {clamp} from "./units/soldierCommon.js?v=0.8.0";
 import {createRifleman,updateRifleman,drawRifleman} from "./units/rifleman.js?v=0.8.0";
 import {createRocketeer,updateRocketeer,drawRocketeer} from "./units/rocketeer.js?v=0.8.0";
@@ -178,3 +179,5 @@ if(testing)window.battlefieldTest={
  camera:x=>{camera=clamp(x-viewW/(2*scale),0,W-viewW/scale);draw();}
 };
 if(!testing)requestAnimationFrame(frame);else draw();
+
+installFullscreen({button:document.getElementById("fullscreen"),dialog:document.getElementById("fullscreenHelp"),message:document.getElementById("fullscreenMessage")});
