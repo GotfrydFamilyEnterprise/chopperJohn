@@ -1,21 +1,48 @@
 {
   "x": 2480,
   "ids": [
-    11,
-    12,
-    13
+    6,
+    7,
+    8
   ],
-  "bystander": 14,
+  "bystander": 9,
   "before": {
+    "redAIEnabled": false,
+    "redCommander": {
+      "supply": {
+        "balance": 120,
+        "time": 0,
+        "cooldown": 0,
+        "earned": 0,
+        "overflow": 0,
+        "spent": 0,
+        "purchases": 0,
+        "ledger": []
+      },
+      "squads": [],
+      "nextSquadId": 1,
+      "strategy": {
+        "mode": "GARRISON",
+        "label": "Reinforcing FOB"
+      },
+      "nextDecisionAt": 0,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [],
+      "blockReason": "ready",
+      "observations": null
+    },
     "time": 6.666666666666648,
     "units": [
       {
-        "id": 11,
+        "id": 6,
         "team": 1,
         "type": "rifle",
         "x": 2437,
         "y": 460,
-        "phase": 0.4327272727273911,
+        "phase": 0.8827272727273908,
         "velocity": -47,
         "state": "guard",
         "timer": 0,
@@ -28,12 +55,12 @@
         "arrived": true
       },
       {
-        "id": 12,
+        "id": 7,
         "team": 1,
         "type": "rifle",
         "x": 2523,
         "y": 460,
-        "phase": 0.78818181818186,
+        "phase": 0.23818181818186,
         "velocity": -47,
         "state": "guard",
         "timer": 0,
@@ -46,12 +73,12 @@
         "arrived": true
       },
       {
-        "id": 13,
+        "id": 8,
         "team": 1,
         "type": "rocket",
         "x": 2480,
         "y": 460,
-        "phase": 0.07545454545386905,
+        "phase": 0.5254545454538689,
         "velocity": -33,
         "state": "fireStop",
         "timer": 0,
@@ -154,20 +181,20 @@
         "main": false,
         "slots": {
           "rifle": [
-            11,
-            12
+            6,
+            7
           ],
           "rocket": [
-            13
+            8
           ]
         },
         "reservations": {
           "rifle": [
-            11,
-            12
+            6,
+            7
           ],
           "rocket": [
-            13
+            8
           ]
         },
         "state": "OCCUPIED",
@@ -188,15 +215,42 @@
     "randomState": 8
   },
   "after": {
+    "redAIEnabled": false,
+    "redCommander": {
+      "supply": {
+        "balance": 120,
+        "time": 0,
+        "cooldown": 0,
+        "earned": 0,
+        "overflow": 0,
+        "spent": 0,
+        "purchases": 0,
+        "ledger": []
+      },
+      "squads": [],
+      "nextSquadId": 1,
+      "strategy": {
+        "mode": "GARRISON",
+        "label": "Reinforcing FOB"
+      },
+      "nextDecisionAt": 0,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [],
+      "blockReason": "ready",
+      "observations": null
+    },
     "time": 6.666666666666648,
     "units": [
       {
-        "id": 11,
+        "id": 6,
         "team": 1,
         "type": "rifle",
         "x": 2437,
         "y": 460,
-        "phase": 0.4327272727273911,
+        "phase": 0.8827272727273908,
         "velocity": -47,
         "state": "guard",
         "timer": 0,
@@ -209,12 +263,12 @@
         "arrived": true
       },
       {
-        "id": 12,
+        "id": 7,
         "team": 1,
         "type": "rifle",
         "x": 2523,
         "y": 460,
-        "phase": 0.78818181818186,
+        "phase": 0.23818181818186,
         "velocity": -47,
         "state": "guard",
         "timer": 0,
@@ -227,12 +281,12 @@
         "arrived": true
       },
       {
-        "id": 13,
+        "id": 8,
         "team": 1,
         "type": "rocket",
         "x": 2480,
         "y": 460,
-        "phase": 0.07545454545386905,
+        "phase": 0.5254545454538689,
         "velocity": -33,
         "state": "fireStop",
         "timer": 0,
@@ -335,20 +389,20 @@
         "main": false,
         "slots": {
           "rifle": [
-            11,
-            12
+            6,
+            7
           ],
           "rocket": [
-            13
+            8
           ]
         },
         "reservations": {
           "rifle": [
-            11,
-            12
+            6,
+            7
           ],
           "rocket": [
-            13
+            8
           ]
         },
         "state": "OCCUPIED",
@@ -377,7 +431,7 @@
           {
             "covered": true,
             "baseX": 2480,
-            "id": 11,
+            "id": 6,
             "amount": 0.3333333333333335,
             "hp": 2.6666666666666665
           }
@@ -392,15 +446,42 @@
     "randomState": 1831565821
   },
   "exposed": {
+    "redAIEnabled": false,
+    "redCommander": {
+      "supply": {
+        "balance": 120,
+        "time": 0,
+        "cooldown": 0,
+        "earned": 0,
+        "overflow": 0,
+        "spent": 0,
+        "purchases": 0,
+        "ledger": []
+      },
+      "squads": [],
+      "nextSquadId": 1,
+      "strategy": {
+        "mode": "GARRISON",
+        "label": "Reinforcing FOB"
+      },
+      "nextDecisionAt": 0,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [],
+      "blockReason": "ready",
+      "observations": null
+    },
     "time": 6.666666666666648,
     "units": [
       {
-        "id": 11,
+        "id": 6,
         "team": 1,
         "type": "rifle",
         "x": 2437,
         "y": 460,
-        "phase": 0.4327272727273911,
+        "phase": 0.8827272727273908,
         "velocity": -47,
         "state": "guard",
         "timer": 0,
@@ -413,12 +494,12 @@
         "arrived": true
       },
       {
-        "id": 12,
+        "id": 7,
         "team": 1,
         "type": "rifle",
         "x": 2523,
         "y": 460,
-        "phase": 0.78818181818186,
+        "phase": 0.23818181818186,
         "velocity": -47,
         "state": "guard",
         "timer": 0,
@@ -431,12 +512,12 @@
         "arrived": true
       },
       {
-        "id": 13,
+        "id": 8,
         "team": 1,
         "type": "rocket",
         "x": 2480,
         "y": 460,
-        "phase": 0.07545454545386905,
+        "phase": 0.5254545454538689,
         "velocity": -33,
         "state": "fireStop",
         "timer": 0,
@@ -453,12 +534,12 @@
         "rocketGoal": null
       },
       {
-        "id": 14,
+        "id": 9,
         "team": 1,
         "type": "rocket",
         "x": 2480,
         "y": 460,
-        "phase": 0.33999999999999986,
+        "phase": 0.79,
         "velocity": -33,
         "state": "march",
         "timer": 0,
@@ -556,20 +637,20 @@
         "main": false,
         "slots": {
           "rifle": [
-            11,
-            12
+            6,
+            7
           ],
           "rocket": [
-            13
+            8
           ]
         },
         "reservations": {
           "rifle": [
-            11,
-            12
+            6,
+            7
           ],
           "rocket": [
-            13
+            8
           ]
         },
         "state": "OCCUPIED",
@@ -603,7 +684,7 @@
           {
             "covered": true,
             "baseX": 2480,
-            "id": 11,
+            "id": 6,
             "amount": 0.3333333333333335,
             "hp": 2.6666666666666665
           }
@@ -619,13 +700,13 @@
           {
             "covered": true,
             "baseX": 2480,
-            "id": 12,
+            "id": 7,
             "amount": 0.3333333333333335,
             "hp": 2.6666666666666665
           },
           {
             "covered": false,
-            "id": 14,
+            "id": 9,
             "amount": 2,
             "hp": 2
           }
@@ -640,15 +721,42 @@
     "randomState": 3663131634
   },
   "casualty": {
+    "redAIEnabled": false,
+    "redCommander": {
+      "supply": {
+        "balance": 120,
+        "time": 0,
+        "cooldown": 0,
+        "earned": 0,
+        "overflow": 0,
+        "spent": 0,
+        "purchases": 0,
+        "ledger": []
+      },
+      "squads": [],
+      "nextSquadId": 1,
+      "strategy": {
+        "mode": "GARRISON",
+        "label": "Reinforcing FOB"
+      },
+      "nextDecisionAt": 0,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [],
+      "blockReason": "ready",
+      "observations": null
+    },
     "time": 8.18333333333332,
     "units": [
       {
-        "id": 12,
+        "id": 7,
         "team": 1,
         "type": "rifle",
         "x": 2523,
         "y": 460,
-        "phase": 0.78818181818186,
+        "phase": 0.23818181818186,
         "velocity": -47,
         "state": "guard",
         "timer": 0,
@@ -661,12 +769,12 @@
         "arrived": true
       },
       {
-        "id": 13,
+        "id": 8,
         "team": 1,
         "type": "rocket",
         "x": 2480,
         "y": 460,
-        "phase": 0.07545454545386905,
+        "phase": 0.5254545454538689,
         "velocity": -33,
         "state": "fireStop",
         "timer": 0,
@@ -770,19 +878,19 @@
         "slots": {
           "rifle": [
             null,
-            12
+            7
           ],
           "rocket": [
-            13
+            8
           ]
         },
         "reservations": {
           "rifle": [
             null,
-            12
+            7
           ],
           "rocket": [
-            13
+            8
           ]
         },
         "state": "UNDERSTAFFED",
@@ -805,7 +913,7 @@
           {
             "covered": true,
             "baseX": 2480,
-            "id": 11,
+            "id": 6,
             "amount": 0.3333333333333335,
             "hp": 2.6666666666666665
           }
@@ -821,13 +929,13 @@
           {
             "covered": true,
             "baseX": 2480,
-            "id": 12,
+            "id": 7,
             "amount": 0.3333333333333335,
             "hp": 2.6666666666666665
           },
           {
             "covered": false,
-            "id": 14,
+            "id": 9,
             "amount": 2,
             "hp": 2
           }
@@ -843,7 +951,7 @@
           {
             "covered": true,
             "baseX": 2480,
-            "id": 11,
+            "id": 6,
             "amount": 0.3333333333333333,
             "hp": 0
           }

@@ -1,14 +1,41 @@
 {
   "launch": {
+    "redAIEnabled": false,
+    "redCommander": {
+      "supply": {
+        "balance": 120,
+        "time": 0,
+        "cooldown": 0,
+        "earned": 0,
+        "overflow": 0,
+        "spent": 0,
+        "purchases": 0,
+        "ledger": []
+      },
+      "squads": [],
+      "nextSquadId": 1,
+      "strategy": {
+        "mode": "GARRISON",
+        "label": "Reinforcing FOB"
+      },
+      "nextDecisionAt": 0,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [],
+      "blockReason": "ready",
+      "observations": null
+    },
     "time": 0.7000000000000005,
     "units": [
       {
-        "id": 11,
+        "id": 6,
         "team": 1,
         "type": "rocket",
         "x": 2200,
         "y": 460,
-        "phase": 0.41000000000000014,
+        "phase": 0.8599999999999999,
         "velocity": -33,
         "state": "fireStop",
         "timer": 0.7000000000000005,
@@ -20,9 +47,9 @@
         "hitFlash": 0,
         "rocketCooldown": 3,
         "rocketAimTime": 0,
-        "rocketTargetId": 12,
+        "rocketTargetId": 7,
         "rocketGoal": {
-          "targetId": 12,
+          "targetId": 7,
           "originX": 2178.1452212706577,
           "originY": 391.95448893395474,
           "vx": -198.39219049454303,
@@ -34,12 +61,12 @@
         }
       },
       {
-        "id": 12,
+        "id": 7,
         "team": 0,
         "type": "rifle",
         "x": 1632.8999999999987,
         "y": 460,
-        "phase": 0.46772727272727294,
+        "phase": 0.9177272727272733,
         "velocity": 47,
         "state": "march",
         "timer": 0.7000000000000005,
@@ -163,7 +190,7 @@
     "rockets": [
       {
         "team": 1,
-        "shooterId": 11,
+        "shooterId": 6,
         "originX": 2178.1452212706577,
         "originY": 391.95448893395474,
         "vx": -195.58516715659584,
@@ -175,7 +202,7 @@
         "x": 2174.8854684847142,
         "y": 388.1030001736712,
         "ground": 460,
-        "targetId": 12,
+        "targetId": 7,
         "targetX": 1632.1166666666654,
         "spread": 60.86133333333353,
         "error": 12.306618293727478,
@@ -190,7 +217,7 @@
         "type": "launch",
         "id": 1,
         "team": 1,
-        "shooterId": 11,
+        "shooterId": 6,
         "aimedX": 1735.5233642031149,
         "impactX": 1747.8299824968424,
         "targetX": 1632.1166666666654,
@@ -207,15 +234,42 @@
     "randomState": 1831565855
   },
   "landed": {
+    "redAIEnabled": false,
+    "redCommander": {
+      "supply": {
+        "balance": 120,
+        "time": 0,
+        "cooldown": 0,
+        "earned": 0,
+        "overflow": 0,
+        "spent": 0,
+        "purchases": 0,
+        "ledger": []
+      },
+      "squads": [],
+      "nextSquadId": 1,
+      "strategy": {
+        "mode": "GARRISON",
+        "label": "Reinforcing FOB"
+      },
+      "nextDecisionAt": 0,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [],
+      "blockReason": "ready",
+      "observations": null
+    },
     "time": 2.8999999999999946,
     "units": [
       {
-        "id": 11,
+        "id": 6,
         "team": 1,
         "type": "rocket",
         "x": 2200,
         "y": 460,
-        "phase": 0.41000000000000014,
+        "phase": 0.8599999999999999,
         "velocity": -33,
         "state": "fireStop",
         "timer": 2.8999999999999946,
@@ -227,9 +281,9 @@
         "hitFlash": 0,
         "rocketCooldown": 0.8000000000000065,
         "rocketAimTime": 0,
-        "rocketTargetId": 12,
+        "rocketTargetId": 7,
         "rocketGoal": {
-          "targetId": 12,
+          "targetId": 7,
           "originX": 2178.1452212706577,
           "originY": 391.95448893395474,
           "vx": -173.59003661845617,
@@ -241,12 +295,12 @@
         }
       },
       {
-        "id": 12,
+        "id": 7,
         "team": 0,
         "type": "rifle",
         "x": 1736.2999999999947,
         "y": 460,
-        "phase": 0.8177272727272743,
+        "phase": 0.26772727272727426,
         "velocity": 47,
         "state": "march",
         "timer": 2.8999999999999946,
@@ -381,7 +435,7 @@
         "type": "launch",
         "id": 1,
         "team": 1,
-        "shooterId": 11,
+        "shooterId": 6,
         "aimedX": 1735.5233642031149,
         "impactX": 1747.8299824968424,
         "targetX": 1632.1166666666654,
@@ -398,7 +452,7 @@
         "hits": [
           {
             "covered": false,
-            "id": 12,
+            "id": 7,
             "amount": 1.0776014002521879,
             "hp": 1.9223985997478121
           }

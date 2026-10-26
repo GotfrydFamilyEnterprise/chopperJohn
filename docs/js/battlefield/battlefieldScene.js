@@ -1,15 +1,18 @@
-import {clamp} from "./units/soldierCommon.js?v=0.6.1";
-import {createRifleman,updateRifleman,drawRifleman} from "./units/rifleman.js?v=0.6.1";
-import {createRocketeer,updateRocketeer,drawRocketeer} from "./units/rocketeer.js?v=0.6.1";
-import {createBase} from "./bases/baseCommon.js?v=0.6.1";
-import {drawHeadquarters} from "./bases/headquarters.js?v=0.6.1";
-import {drawForwardBase,occupied,assignDefender,releaseDeadDefenders,advanceDefender,refreshOccupation,drawForwardFront} from "./bases/forwardBase.js?v=0.6.1";
-import {WEAPONS,createRandom,selectTarget,chooseRocketTarget,updateRocketWeapon,rocketPosition,resolveRifleHit,resolveRocketBlast} from "./combat/weapons.js?v=0.6.1";
-import {drawCombatEffects} from "./combat/effects.js?v=0.6.1";
+import {clamp} from "./units/soldierCommon.js?v=0.7.0";
+import {createRifleman,updateRifleman,drawRifleman} from "./units/rifleman.js?v=0.7.0";
+import {createRocketeer,updateRocketeer,drawRocketeer} from "./units/rocketeer.js?v=0.7.0";
+import {createBase} from "./bases/baseCommon.js?v=0.7.0";
+import {drawHeadquarters} from "./bases/headquarters.js?v=0.7.0";
+import {drawForwardBase,occupied,assignDefender,releaseDeadDefenders,advanceDefender,refreshOccupation,drawForwardFront} from "./bases/forwardBase.js?v=0.7.0";
+import {WEAPONS,createRandom,selectTarget,chooseRocketTarget,updateRocketWeapon,rocketPosition,resolveRifleHit,resolveRocketBlast} from "./combat/weapons.js?v=0.7.0";
+import {drawCombatEffects} from "./combat/effects.js?v=0.7.0";
+import {createRedCommander,updateRedCommander,redMovementOrder} from "./ai/redCommander.js?v=0.7.0";
+import {renderRedEconomy} from "./ui/redEconomyPanel.js?v=0.7.0";
 const cv=document.getElementById("field"),ctx=cv.getContext("2d");
 const W=3600,GROUND=460,DT=1/60;
 const testing=new URLSearchParams(location.search).has("test");
 let followFocus=null;
+let redCommander=createRedCommander(),redAIEnabled=true;
 let followRockets=new URLSearchParams(location.search).get("view")==="rockets",shotsFired=0;
 let combatEnabled=true,random=createRandom(),seed=0xc0ffee;
 let rockets=[],explosions=[],impacts=[],combatEvents=[],nextRoundId=1;
@@ -17,16 +20,17 @@ function recordCombat(event){if(event.type==="launch")shotsFired++;combatEvents.
 function explodeRocket(x,team,id){const hits=resolveRocketBlast(x,team,units,bases,random);explosions.push({x,y:GROUND,age:0});recordCombat({type:"explosion",id,x,team,hits});}
 let viewW=innerWidth,viewH=innerHeight,ratio=1,scale=1,camera=0,dragId=null,lastPointerX=0,dragDistance=0,acc=0,last=0,time=0,paused=false,units=[],bases=[],bullets=[],nextId=1;
 function resize(){viewW=innerWidth;viewH=innerHeight;ratio=Math.min(devicePixelRatio||1,2);cv.width=Math.round(viewW*ratio);cv.height=Math.round(viewH*ratio);scale=Math.max(.58,Math.min(viewH/585,1.35));camera=clamp(camera,0,Math.max(0,W-viewW/scale));}
-function spawn(team,type,x){units.push(type==="rifle"?createRifleman(nextId++,team,x,GROUND):createRocketeer(nextId++,team,x,GROUND));}
-function reset(resetSeed=0xc0ffee){seed=resetSeed>>>0;random=createRandom(seed);units=[];bullets=[];rockets=[];explosions=[];impacts=[];combatEvents=[];nextRoundId=1;nextId=1;shotsFired=0;followFocus=null;time=0;camera=0;paused=false;document.getElementById("pause").textContent="Pause";
+function spawn(team,type,x){const unit=type==="rifle"?createRifleman(nextId++,team,x,GROUND):createRocketeer(nextId++,team,x,GROUND);units.push(unit);return unit;}
+function reset(resetSeed=0xc0ffee){seed=resetSeed>>>0;random=createRandom(seed);units=[];bullets=[];rockets=[];explosions=[];impacts=[];combatEvents=[];nextRoundId=1;nextId=1;shotsFired=0;followFocus=null;time=0;camera=0;paused=false;redCommander=createRedCommander();redAIEnabled=true;document.getElementById("pause").textContent="Pause";
  bases=[createBase(110,0,true),createBase(W-110,1,true),createBase(1120,0,false),createBase(W-1120,1,false)];
- for(let i=0;i<3;i++){spawn(0,"rifle",220+i*36);spawn(1,"rifle",W-220-i*36);}
- spawn(0,"rocket",170);spawn(1,"rocket",W-170);
- // RC-10: an assault rocketeer per side advances after the other fills the FOB.
- spawn(0,"rocket",200);spawn(1,"rocket",W-200);
+ for(let i=0;i<3;i++)spawn(0,"rifle",220+i*36);
+ spawn(0,"rocket",170);
+ // EC-01: blue stays manual; every red opening/replacement unit must be purchased.
+ spawn(0,"rocket",200);
 }
 function command(team,type){spawn(team,type,team===0?200:W-200);}
 function update(dt){if(paused)return;time+=dt;
+ if(redAIEnabled)updateRedCommander(redCommander,dt,units,bases,(type,x)=>spawn(1,type,x));
  for(const b of bases)if(!b.main){
   b.coverFlash=Math.max(0,(b.coverFlash||0)-dt);
   b.flagProgress=clamp(b.flagProgress+(occupied(b)?1:-1)*dt*.8,0,1);
@@ -41,8 +45,9 @@ function update(dt){if(paused)return;time+=dt;
   }
   const target=combatEnabled?(u.type==="rifle"?selectTarget(u,units,0,WEAPONS.rifleRange):chooseRocketTarget(u,units)):null;
   if(u.guardBase!==null){advanceDefender(bases.find(b=>!b.main&&b.x===u.guardBase),u,dt,!!target);}
+  const order=redMovementOrder(redCommander,u,units,dt);
   if(u.type==="rifle"){
-   if(u.guardBase===null)updateRifleman(u,dt,!!target);
+   if(u.guardBase===null)updateRifleman(u,dt,!!target,order?.maxSpeed??Infinity);
    u.fireCooldown-=dt;
    if(target&&u.fireCooldown<=0){
     const direction=u.team===0?1:-1;
@@ -50,7 +55,7 @@ function update(dt){if(paused)return;time+=dt;
     u.fireCooldown=.32;
    }
   }else{
-   if(u.guardBase===null)updateRocketeer(u,dt,!!target);
+   if(u.guardBase===null)updateRocketeer(u,dt,!!target,order?.maxSpeed??Infinity);
    const rocket=updateRocketWeapon(u,target,dt,random);
    if(rocket){rocket.id=nextRoundId++;rockets.push(rocket);recordCombat({type:"launch",id:rocket.id,team:u.team,shooterId:u.id,aimedX:rocket.aimedX,impactX:rocket.impactX,targetX:rocket.targetX,targetVelocity:rocket.targetVelocity,flightTime:rocket.flightTime,spread:rocket.spread});}
   }
@@ -77,6 +82,7 @@ function update(dt){if(paused)return;time+=dt;
  for(const b of bases)if(!b.main){releaseDeadDefenders(b,aliveIds);refreshOccupation(b);}
 }
 function draw(){
+ renderRedEconomy(document.getElementById("redEconomy"),redCommander);
  if(followRockets){
   if(followFocus&&time>followFocus.until)followFocus=null;
   if(!followFocus&&rockets.length){const shot=rockets[0];followFocus={start:shot.originX,end:shot.impactX,until:time+shot.flightTime-shot.age+.45};}
@@ -113,15 +119,15 @@ function draw(){
  ctx.restore();document.getElementById("count").textContent=" · "+units.length+" soldiers · "+bullets.length+" rounds · "+rockets.length+" flying · "+shotsFired+" launched";
 }
 function frame(ts){const dt=Math.min((ts-last)/1000||0,.06);last=ts;acc=Math.min(acc+dt,.2);while(acc>=DT){update(DT);acc-=DT;}draw();requestAnimationFrame(frame);}
-function leaveFollow(){followRockets=false;followFocus=null;document.getElementById("followRockets").classList.remove("active");resize();}
+function leaveFollow(){const wasFollowing=followRockets;followRockets=false;followFocus=null;document.getElementById("followRockets").classList.remove("active");if(wasFollowing)resize();}
 cv.addEventListener("pointerdown",e=>{leaveFollow();dragId=e.pointerId;lastPointerX=e.clientX;dragDistance=0;cv.setPointerCapture(e.pointerId);});
 cv.addEventListener("pointermove",e=>{if(e.pointerId!==dragId)return;const dx=e.clientX-lastPointerX;dragDistance+=Math.abs(dx);camera=clamp(camera-dx/scale,0,Math.max(0,W-viewW/scale));lastPointerX=e.clientX;});
 cv.addEventListener("pointerup",()=>{dragId=null;});
 cv.addEventListener("pointercancel",()=>dragId=null);
-for(const [id,team,type] of [["blueRifle",0,"rifle"],["blueRocket",0,"rocket"],["redRifle",1,"rifle"],["redRocket",1,"rocket"]])
+for(const [id,team,type] of [["blueRifle",0,"rifle"],["blueRocket",0,"rocket"]])
  document.getElementById(id).addEventListener("click",()=>command(team,type));
-document.getElementById("jumpBlue").addEventListener("click",()=>{leaveFollow();camera=clamp(1120-viewW/(2*scale),0,W-viewW/scale);});
-document.getElementById("jumpRed").addEventListener("click",()=>{leaveFollow();camera=clamp(W-1120-viewW/(2*scale),0,W-viewW/scale);});
+document.getElementById("jumpBlue").addEventListener("click",()=>{leaveFollow();camera=clamp(1120-viewW/(2*scale),0,W-viewW/scale);draw();});
+document.getElementById("jumpRed").addEventListener("click",()=>{leaveFollow();camera=clamp(W-1120-viewW/(2*scale),0,W-viewW/scale);draw();});
 document.getElementById("followRockets").addEventListener("click",e=>{followRockets=!followRockets;e.target.classList.toggle("active",followRockets);if(!followRockets)resize();draw();});
 document.getElementById("pause").addEventListener("click",e=>{paused=!paused;e.target.textContent=paused?"Resume":"Pause";});
 document.getElementById("reset").addEventListener("click",e=>{e.preventDefault();reset();});
@@ -129,13 +135,14 @@ addEventListener("resize",()=>{resize();draw();});
 addEventListener("keydown",e=>{if(e.key==="ArrowRight"||e.key==="ArrowLeft")leaveFollow();if(e.key==="ArrowRight")camera=clamp(camera+130,0,W-viewW/scale);if(e.key==="ArrowLeft")camera=clamp(camera-130,0,W-viewW/scale);});
 resize();reset();document.getElementById("followRockets").classList.toggle("active",followRockets);
 if(testing)window.battlefieldTest={
- reset:(value=0xc0ffee)=>{reset(value);combatEnabled=false;draw();},
+ reset:(value=0xc0ffee)=>{reset(value);combatEnabled=false;redAIEnabled=false;draw();},
  step:(n=1)=>{for(let i=0;i<n;i++)update(DT);draw();},
  spawn:(team,type,x)=>{spawn(team,type,x??(team===0?200:W-200));return nextId-1;},
  kill:id=>{const u=units.find(u=>u.id===id);if(u)u.hp=0;},
  combat:value=>combatEnabled=value,
- clear:()=>{units=[];bullets=[];rockets=[];explosions=[];impacts=[];combatEvents=[];for(const b of bases)if(!b.main){releaseDeadDefenders(b,new Set());refreshOccupation(b);}},
- snapshot:()=>structuredClone({time,units,bases,bullets,rockets,explosions,combatEvents,seed,shotsFired,camera,scale,followRockets,randomState:random.state()}),
+ clear:()=>{redAIEnabled=false;units=[];bullets=[];rockets=[];explosions=[];impacts=[];combatEvents=[];for(const b of bases)if(!b.main){releaseDeadDefenders(b,new Set());refreshOccupation(b);}},
+ redAI:value=>{redAIEnabled=value;},
+ snapshot:()=>structuredClone({redAIEnabled,redCommander,time,units,bases,bullets,rockets,explosions,combatEvents,seed,shotsFired,camera,scale,followRockets,randomState:random.state()}),
  patchUnit:(id,changes)=>Object.assign(units.find(unit=>unit.id===id),changes),
  impactRocket:(x,team)=>{explodeRocket(x,team,nextRoundId++);draw();},
  camera:x=>{camera=clamp(x-viewW/(2*scale),0,W-viewW/scale);draw();}

@@ -47,3 +47,16 @@ Every PR must provide a requirements traceability table: ID, implementation path
 
 | RC-09 | Both directions, moving toward/away and stopped targets; lose target mid-aim | Lead follows observed motion and solved flight time; no lead when stationary; autonomous lock/reacquire; no homing |
 | RC-10 | Reload normal starting wave, no spawn clicks; use Follow rockets then pan/jump/reset | Both teams fire within first minute, launch/impact visible on phone, cumulative count updates, follow exits on manual camera control, reset restores empty FOBs |
+
+## Supply and AI acceptance
+
+| ID | Browser/module scenario | Required observation |
+|---|---|---|
+| EC-01..04 | Start, accrue, purchase, wait, hit cap, kill unit, pause/reset |120 start,5/s,240 cap;25/60 costs,2s spacing,15 cap; auditable conservation, no free red troops |
+| EC-05 | Phone and landscape HUD; blue deployment |Supply/objective/progress legible; red automatic, blue manual |
+| AI-01 | First12s, staff FOB, kill defender |Exactly2 rifle+1 rocket bought for opening; count incoming; one replacement, physical arrival |
+| AI-02 | Enemy near red HQ while preparing group |Defensive objective; release existing squad, paid emergency purchases obey limits |
+| AI-03/SQ-01..02 | Ordinary and staffed-enemy-FOB plans |Correct composition/cost,60 reserve, physical rally before release, bounded movement and coordinated march |
+| AI-04 | Kill field members/groups repeatedly |Count incoming support, then12s regroup and bounded larger wave; no repeated tiny feeds |
+| AI-05..06 | Repeated replay, source import boundaries |Same decisions, public observations only; isolated resource/strategy/orders/UI layers |
+| SQ-03..04 | Existing FOB/rocket suite with AI isolated; natural opening with AI active |Preserved guard posts, damage, leading, ranges and both scenes |

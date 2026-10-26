@@ -1,0 +1,90 @@
+
+> test:unit
+> node tests-unit/adversarial.test.js && node tests-unit/rocket-combat.test.js && node tests-unit/rocket-review.test.js && node tests-unit/rocket-leading.test.js && node tests-unit/red-economy.test.js && node tests-unit/red-economy-review.test.js
+
+✔ FOB-03..08,10 pure logic adversarial faction 0 (7.36999ms)
+✔ FOB-03..08,10 pure logic adversarial faction 1 (0.956772ms)
+✔ AN-02 stance world coordinate invariant; transition continuity (0.347396ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16.573177
+✔ RC-01 inclusive targeting and overlap faction 0 (4.917277ms)
+✔ RC-01 inclusive targeting and overlap faction 1 (0.546774ms)
+✔ RC-03/04 ballistic landing, upward launch, scatter bounds and variance (24.952925ms)
+✔ RC-02 aim interruption and full reload (6.011332ms)
+✔ BC-01/03 only arrived registered soldiers get a probabilistic half hit (2.795894ms)
+✔ BC-02 shared single random defender, no double AoE, ordinary bystanders (7.128069ms)
+✔ RC-05 exposed falloff, boundary and no friendly fire (1.485435ms)
+✔ BC-03 seeded penetrations approximate 1/20; exposed hits stay 1 HP (7.035663ms)
+✔ BC-05 repeated thirds kill cleanly, release slot, replacement starts exposed (1.926047ms)
+✔ RC-07 identical seeded rockets and damage, different seed changes scatter (3.069394ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 70.948387
+✔ review RC-02 full reload must precede a new full aim (5.268654ms)
+✔ review BC-02 footprint inclusive edges, partial bunker, no flag dependency (4.016118ms)
+✔ review BC-01 reservations and passers never gain cover; BC-03 independent endpoints (0.746826ms)
+✔ review RC-03/04 mirrored endpoint extremes land analytically on intended ground (0.776239ms)
+✔ review RC-09 leading stays ballistic and mirror-symmetric throughout actual firing band (1.68007ms)
+✔ review RC-09 locked targets behind, friendly, dead and inside minimum are reacquired (0.74897ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 21.718706
+✔ RC-09 leading intercept team 0, velocity -47 (1.344126ms)
+✔ RC-09 leading intercept team 0, velocity 0 (0.205048ms)
+✔ RC-09 leading intercept team 0, velocity 47 (1.301588ms)
+✔ RC-09 leading intercept team 1, velocity -47 (0.156404ms)
+✔ RC-09 leading intercept team 1, velocity 0 (0.213588ms)
+✔ RC-09 leading intercept team 1, velocity 47 (0.116947ms)
+✔ RC-09 autonomous target lock remains stable and reacquires only eligible targets (0.313629ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11.115242
+✔ EC-01 income, cap, accounting and no FOB income (1.154971ms)
+✔ EC-02/03 atomic charge, cooldown, reserve and population cap (0.323098ms)
+✔ AI-01 opening garrison is paid and incoming defenders are never duplicated (7.07215ms)
+✔ AI-02 emergency uses reserve; ordinary wave keeps60 and correct composition (29.083296ms)
+✔ AI-03 staffed enemy bunker selects rocket-heavy assault (2.137505ms)
+✔ SQ-01 gathering walks to rally; released rifles match slowest soldier without teleport (0.700816ms)
+✔ AI-04 repeated field losses trigger regroup and stronger future composition (0.415828ms)
+✔ EC-04 deterministic commander replay and ledger conservation (78.501864ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 132.128233
+✔ review EC-02 reserve and cooldown reject without invoking deployment factory (1.410236ms)
+✔ review AI-01 redirects paid assembling replacement without charging or duplicate order (2.310575ms)
+✔ review AI-02 emergency immediately preempts assembling wave despite decision cooldown (5.66839ms)
+✔ review AI-04 tenth casualty stops support purchases immediately during regroup (9.829974ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27.64732
