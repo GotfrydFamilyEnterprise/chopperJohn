@@ -1,8 +1,8 @@
-import {STRATEGY_RULES} from './strategy.js';
+import {STRATEGY_RULES, factionRules} from './strategy.js';
 // SQ-01..04: orders affect walking limits, never coordinates, weapons or damage.
-export function createSquad(id, role, composition, now) {
+export function createSquad(id, role, composition, now, rules = factionRules(1)) {
   return {id, role, composition: {...composition}, members: [], phase: role === 'defense' ? 'advance' : 'gather',
-    rallyX: STRATEGY_RULES.rallyX, goalX: role === 'defense' ? STRATEGY_RULES.defenseX : 170,
+    direction: rules.direction, rallyX: rules.rallyX, goalX: role === 'defense' ? rules.defenseX : rules.goalX,
     reinforce: true, launched: false, createdAt: now, casualties: 0};
 }
 export function addMember(squad, unit) {
@@ -38,10 +38,11 @@ export function refreshSquads(squads, units, now) {
     const members = membersOf(squad, units);
     const joined = members.filter(unit => unit.order?.joined);
     if (squad.phase === 'advance' && members.length && !joined.length) members[0].order.joined = true;
-    const rear = Math.max(...members.filter(unit => unit.order?.joined).map(unit => unit.x));
-    for (const unit of members) if (Math.abs(unit.x - rear) <= 120) unit.order.joined = true;
+    const direction = squad.direction ?? -1;
+    const rear = Math.min(...members.filter(unit => unit.order?.joined).map(unit => unit.x * direction));
+    for (const unit of members) if (Math.abs(unit.x * direction - rear) <= 120) unit.order.joined = true;
     if (squad.phase === 'gather' && now >= (squad.holdUntil || 0) && ['rifle','rocket'].every(type => members.filter(unit => unit.type === type).length >= squad.composition[type]) &&
-      members.every((unit, index) => unit.x <= squad.rallyX + index * 14 + 0.001)) {
+      members.every((unit, index) => (unit.x - (squad.rallyX - direction * index * 14)) * direction >= -0.001)) {
       squad.phase = 'advance'; squad.launched = true; squad.launchedAt = now;
       for (const unit of members) unit.order.joined = true;
     }
@@ -52,16 +53,17 @@ export function movementOrder(unit, units, squads, dt) {
   const squad = squads.find(value => value.id === unit.order?.squadId && value.phase !== 'retired');
   if (!squad || unit.guardBase !== null) return null;
   const members = membersOf(squad, units);
+  const direction = squad.direction ?? -1;
   if (squad.phase === 'gather') {
     const index = members.findIndex(value => value.id === unit.id);
-    const goal = squad.rallyX + Math.max(0, index) * 14;
-    return {maxSpeed: Math.min(Math.abs(unit.velocity), Math.max(0, (unit.x - goal) / dt)), waiting: true};
+    const goal = squad.rallyX - direction * Math.max(0, index) * 14;
+    return {maxSpeed: Math.min(Math.abs(unit.velocity), Math.max(0, (goal - unit.x) * direction / dt)), waiting: true};
   }
   const joined = members.filter(value => value.order?.joined);
   const ownSpeed = Math.abs(unit.velocity);
   const groupSpeed = Math.min(...joined.map(value => Math.abs(value.velocity)), ownSpeed);
-  const rear = Math.max(...joined.map(value => value.x));
-  const tooFarAhead = unit.order?.joined && rear - unit.x > STRATEGY_RULES.maxFormationGap;
+  const rear = Math.min(...joined.map(value => value.x * direction));
+  const tooFarAhead = unit.order?.joined && unit.x * direction - rear > STRATEGY_RULES.maxFormationGap;
   const speed = tooFarAhead ? 0 : unit.order?.joined ? groupSpeed : ownSpeed;
-  return {maxSpeed: Math.min(speed, Math.max(0, (unit.x - squad.goalX) / dt)), waiting: tooFarAhead};
+  return {maxSpeed: Math.min(speed, Math.max(0, (squad.goalX - unit.x) * direction / dt)), waiting: tooFarAhead};
 }

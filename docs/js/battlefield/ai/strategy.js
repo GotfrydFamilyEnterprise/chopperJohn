@@ -4,28 +4,36 @@ export const STRATEGY_RULES = Object.freeze({
   threatRadius: 800, decisionInterval: 3, regroupSeconds: 12,
   fieldLossThreshold: 10, maxFormationGap: 360,
 });
+// EC-06: identical strategy and economy, mirrored about the battlefield center.
+export function factionRules(team) {
+  if (team !== 0 && team !== 1) throw new RangeError('Invalid faction');
+  return {...STRATEGY_RULES, team, direction: team === 0 ? 1 : -1,
+    hqX: team === 0 ? 110 : 3490, spawnX: team === 0 ? 170 : 3430,
+    rallyX: team === 0 ? 280 : 3320, defenseX: team === 0 ? 330 : 3270,
+    goalX: team === 0 ? 3430 : 170};
+}
 export const COMPOSITIONS = Object.freeze({
   intercept: Object.freeze({rifle: 3, rocket: 2}),
   assault: Object.freeze({rifle: 2, rocket: 3}),
   defense: Object.freeze({rifle: 3, rocket: 1}),
 });
-export function observeBattlefield(units, bases) {
+export function observeBattlefield(units, bases, rules = factionRules(1)) {
   const live = units.filter(unit => unit.hp > 0);
-  const allies = live.filter(unit => unit.team === STRATEGY_RULES.team);
-  const enemies = live.filter(unit => unit.team !== STRATEGY_RULES.team);
-  const fob = bases.find(base => !base.main && base.team === STRATEGY_RULES.team);
-  const enemyFob = bases.find(base => !base.main && base.team !== STRATEGY_RULES.team);
+  const allies = live.filter(unit => unit.team === rules.team);
+  const enemies = live.filter(unit => unit.team !== rules.team);
+  const fob = bases.find(base => !base.main && base.team === rules.team);
+  const enemyFob = bases.find(base => !base.main && base.team !== rules.team);
   const incoming = {rifle: 0, rocket: 0}, stationed = {rifle: 0, rocket: 0};
   for (const unit of allies) {
     if (!fob || !(unit.type in incoming)) continue;
     if (unit.guardBase === fob.x) {
       incoming[unit.type]++;
       if (unit.arrived && fob.slots[unit.type]?.includes(unit.id)) stationed[unit.type]++;
-    } else if (unit.order?.role === 'garrison' && unit.x >= fob.x - 80) incoming[unit.type]++;
+    } else if (unit.order?.role === 'garrison' && (unit.x - fob.x) * rules.direction <= 80) incoming[unit.type]++;
   }
   const missing = {rifle: fob ? Math.max(0, 2 - incoming.rifle) : 0,
     rocket: fob ? Math.max(0, 1 - incoming.rocket) : 0};
-  const threatened = enemies.some(enemy => Math.abs(enemy.x - STRATEGY_RULES.hqX) <= STRATEGY_RULES.threatRadius);
+  const threatened = enemies.some(enemy => Math.abs(enemy.x - rules.hqX) <= STRATEGY_RULES.threatRadius);
   const enemyStaffed = !!enemyFob && enemies.some(unit => unit.arrived && unit.guardBase === enemyFob.x && enemyFob.slots[unit.type]?.includes(unit.id));
   return {allies, enemies, fob, enemyFob, missing, incoming, stationed, threatened, enemyStaffed};
 }

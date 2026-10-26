@@ -120,10 +120,10 @@ test('RC-07 identical browser combat after reset, seeded variation',async({page}
 });
 test('RC-08 mobile navigation, pan, spawn and reset retain separate scenes',async({page})=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));await empty(page);
- await page.locator('#blueRocket').click();await page.locator('#blueRifle').click();
- expect((await page.evaluate(()=>battlefieldTest.snapshot())).units).toHaveLength(2);
+ await page.locator('#blueRocket').click();await expect(page.locator('#blueRifle')).toBeDisabled();
+ expect((await page.evaluate(()=>battlefieldTest.snapshot())).units).toHaveLength(1);
  await page.locator('#jumpRed').click();await page.locator('#reset').click();
- expect((await page.evaluate(()=>battlefieldTest.snapshot())).units).toHaveLength(5);
+ expect((await page.evaluate(()=>battlefieldTest.snapshot())).units).toHaveLength(10);
  await page.getByRole('link',{name:'Flight School'}).click();await expect(page).toHaveURL(/index.html$/);
  expect(errors).toEqual([]);
 });

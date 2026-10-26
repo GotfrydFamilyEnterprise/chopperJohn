@@ -60,3 +60,10 @@ Every PR must provide a requirements traceability table: ID, implementation path
 | AI-04 | Kill field members/groups repeatedly |Count incoming support, then12s regroup and bounded larger wave; no repeated tiny feeds |
 | AI-05..06 | Repeated replay, source import boundaries |Same decisions, public observations only; isolated resource/strategy/orders/UI layers |
 | SQ-03..04 | Existing FOB/rocket suite with AI isolated; natural opening with AI active |Preserved guard posts, damage, leading, ranges and both scenes |
+
+## Shared economy acceptance (supersedes red-only opening/UI expectations)
+| ID | Scenario | Required observation |
+|---|---|---|
+| EC-06 | Start both factions; advance with combat off; purchase manually; population cap | Five free soldiers per side (3 rifles,2 rockets), empty FOBs, equal independent120 accounts; identical later purchase limits, no free button deployment or economic cross-debit |
+| EC-07 | Mirror garrison/assault/emergency/loss scenarios | Same decisions, costs, timings and bounded mirrored movement; both automatic commanders active |
+| EC-08 | Pause/reset, repeat seed/commands, phone/landscape screenshots; natural rockets | Both budgets frozen/restored, legible separate HUDs, paid buttons/cooldown, deterministic replay; natural rocket fire for both sides within60 seconds |

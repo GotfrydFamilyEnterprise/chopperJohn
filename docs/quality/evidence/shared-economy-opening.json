@@ -1,0 +1,2143 @@
+{
+  "start": {
+    "blueAIEnabled": true,
+    "blueCommander": {
+      "rules": {
+        "team": 0,
+        "hqX": 110,
+        "spawnX": 170,
+        "rallyX": 280,
+        "defenseX": 330,
+        "threatRadius": 800,
+        "decisionInterval": 3,
+        "regroupSeconds": 12,
+        "fieldLossThreshold": 10,
+        "maxFormationGap": 360,
+        "direction": 1,
+        "goalX": 3430
+      },
+      "supply": {
+        "balance": 120,
+        "time": 0,
+        "cooldown": 0,
+        "earned": 0,
+        "overflow": 0,
+        "spent": 0,
+        "purchases": 0,
+        "ledger": []
+      },
+      "squads": [],
+      "nextSquadId": 1,
+      "strategy": {
+        "mode": "GARRISON",
+        "label": "Reinforcing FOB"
+      },
+      "nextDecisionAt": 0,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [],
+      "blockReason": "ready",
+      "observations": {
+        "living": 5
+      }
+    },
+    "redAIEnabled": true,
+    "redCommander": {
+      "rules": {
+        "team": 1,
+        "hqX": 3490,
+        "spawnX": 3430,
+        "rallyX": 3320,
+        "defenseX": 3270,
+        "threatRadius": 800,
+        "decisionInterval": 3,
+        "regroupSeconds": 12,
+        "fieldLossThreshold": 10,
+        "maxFormationGap": 360,
+        "direction": -1,
+        "goalX": 170
+      },
+      "supply": {
+        "balance": 120,
+        "time": 0,
+        "cooldown": 0,
+        "earned": 0,
+        "overflow": 0,
+        "spent": 0,
+        "purchases": 0,
+        "ledger": []
+      },
+      "squads": [],
+      "nextSquadId": 1,
+      "strategy": {
+        "mode": "GARRISON",
+        "label": "Reinforcing FOB"
+      },
+      "nextDecisionAt": 0,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [],
+      "blockReason": "ready",
+      "observations": {
+        "living": 5
+      }
+    },
+    "time": 0,
+    "units": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 220,
+        "y": 460,
+        "phase": 0.31,
+        "velocity": 47,
+        "state": "march",
+        "timer": 0,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        }
+      },
+      {
+        "id": 2,
+        "team": 0,
+        "type": "rifle",
+        "x": 256,
+        "y": 460,
+        "phase": 0.62,
+        "velocity": 47,
+        "state": "march",
+        "timer": 0,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        }
+      },
+      {
+        "id": 3,
+        "team": 0,
+        "type": "rifle",
+        "x": 292,
+        "y": 460,
+        "phase": 0.9299999999999999,
+        "velocity": 47,
+        "state": "march",
+        "timer": 0,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "opening-assault"
+        }
+      },
+      {
+        "id": 4,
+        "team": 0,
+        "type": "rocket",
+        "x": 170,
+        "y": 460,
+        "phase": 0.24,
+        "velocity": 33,
+        "state": "march",
+        "timer": 0,
+        "observedVelocity": 0,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        }
+      },
+      {
+        "id": 5,
+        "team": 0,
+        "type": "rocket",
+        "x": 200,
+        "y": 460,
+        "phase": 0.55,
+        "velocity": 33,
+        "state": "march",
+        "timer": 0,
+        "observedVelocity": 0,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "opening-assault"
+        }
+      },
+      {
+        "id": 6,
+        "team": 1,
+        "type": "rifle",
+        "x": 3380,
+        "y": 460,
+        "phase": 0.8599999999999999,
+        "velocity": -47,
+        "state": "march",
+        "timer": 0,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        }
+      },
+      {
+        "id": 7,
+        "team": 1,
+        "type": "rifle",
+        "x": 3344,
+        "y": 460,
+        "phase": 0.16999999999999993,
+        "velocity": -47,
+        "state": "march",
+        "timer": 0,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        }
+      },
+      {
+        "id": 8,
+        "team": 1,
+        "type": "rifle",
+        "x": 3308,
+        "y": 460,
+        "phase": 0.48,
+        "velocity": -47,
+        "state": "march",
+        "timer": 0,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "opening-assault"
+        }
+      },
+      {
+        "id": 9,
+        "team": 1,
+        "type": "rocket",
+        "x": 3430,
+        "y": 460,
+        "phase": 0.79,
+        "velocity": -33,
+        "state": "march",
+        "timer": 0,
+        "observedVelocity": 0,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        }
+      },
+      {
+        "id": 10,
+        "team": 1,
+        "type": "rocket",
+        "x": 3400,
+        "y": 460,
+        "phase": 0.10000000000000009,
+        "velocity": -33,
+        "state": "march",
+        "timer": 0,
+        "observedVelocity": 0,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "opening-assault"
+        }
+      }
+    ],
+    "bases": [
+      {
+        "x": 110,
+        "team": 0,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 3490,
+        "team": 1,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 1120,
+        "team": 0,
+        "main": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 2480,
+        "team": 1,
+        "main": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      }
+    ],
+    "bullets": [],
+    "rockets": [],
+    "explosions": [],
+    "combatEvents": [],
+    "seed": 12648430,
+    "shotsFired": 0,
+    "camera": 0,
+    "scale": 1.35,
+    "followRockets": false,
+    "randomState": 12648430
+  },
+  "incoming": {
+    "blueAIEnabled": true,
+    "blueCommander": {
+      "rules": {
+        "team": 0,
+        "hqX": 110,
+        "spawnX": 170,
+        "rallyX": 280,
+        "defenseX": 330,
+        "threatRadius": 800,
+        "decisionInterval": 3,
+        "regroupSeconds": 12,
+        "fieldLossThreshold": 10,
+        "maxFormationGap": 360,
+        "direction": 1,
+        "goalX": 3430
+      },
+      "supply": {
+        "balance": 104.99999999999659,
+        "time": 12.000000000000176,
+        "cooldown": 0,
+        "earned": 60.00000000000061,
+        "overflow": 0,
+        "spent": 75,
+        "purchases": 3,
+        "ledger": [
+          {
+            "time": 0.016666666666666666,
+            "unitId": 11,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 95.08333333333333
+          },
+          {
+            "time": 2.0166666666666644,
+            "unitId": 13,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 80.08333333333276
+          },
+          {
+            "time": 4.016666666666658,
+            "unitId": 15,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 65.08333333333219
+          }
+        ]
+      },
+      "squads": [
+        {
+          "id": 1,
+          "role": "intercept",
+          "composition": {
+            "rifle": 3,
+            "rocket": 2
+          },
+          "members": [
+            11,
+            13,
+            15
+          ],
+          "phase": "gather",
+          "direction": 1,
+          "rallyX": 280,
+          "goalX": 3430,
+          "reinforce": true,
+          "launched": false,
+          "createdAt": 0.016666666666666666,
+          "casualties": 0
+        }
+      ],
+      "nextSquadId": 2,
+      "strategy": {
+        "mode": "PREPARE",
+        "label": "Preparing interception",
+        "squadId": 1
+      },
+      "nextDecisionAt": 12.016666666666694,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [
+        {
+          "time": 0.016666666666666666,
+          "type": "objective",
+          "mode": "PREPARE"
+        },
+        {
+          "time": 0.016666666666666666,
+          "type": "purchase",
+          "unitId": 11,
+          "kind": "rifle",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 2.0166666666666644,
+          "type": "purchase",
+          "unitId": 13,
+          "kind": "rifle",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 4.016666666666658,
+          "type": "purchase",
+          "unitId": 15,
+          "kind": "rifle",
+          "role": "intercept",
+          "squadId": 1
+        }
+      ],
+      "blockReason": "saving-supply",
+      "observations": {
+        "living": 8,
+        "incoming": {
+          "rifle": 2,
+          "rocket": 1
+        },
+        "stationed": {
+          "rifle": 0,
+          "rocket": 0
+        }
+      }
+    },
+    "redAIEnabled": true,
+    "redCommander": {
+      "rules": {
+        "team": 1,
+        "hqX": 3490,
+        "spawnX": 3430,
+        "rallyX": 3320,
+        "defenseX": 3270,
+        "threatRadius": 800,
+        "decisionInterval": 3,
+        "regroupSeconds": 12,
+        "fieldLossThreshold": 10,
+        "maxFormationGap": 360,
+        "direction": -1,
+        "goalX": 170
+      },
+      "supply": {
+        "balance": 104.99999999999659,
+        "time": 12.000000000000176,
+        "cooldown": 0,
+        "earned": 60.00000000000061,
+        "overflow": 0,
+        "spent": 75,
+        "purchases": 3,
+        "ledger": [
+          {
+            "time": 0.016666666666666666,
+            "unitId": 12,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 95.08333333333333
+          },
+          {
+            "time": 2.0166666666666644,
+            "unitId": 14,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 80.08333333333276
+          },
+          {
+            "time": 4.016666666666658,
+            "unitId": 16,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 65.08333333333219
+          }
+        ]
+      },
+      "squads": [
+        {
+          "id": 1,
+          "role": "intercept",
+          "composition": {
+            "rifle": 3,
+            "rocket": 2
+          },
+          "members": [
+            12,
+            14,
+            16
+          ],
+          "phase": "gather",
+          "direction": -1,
+          "rallyX": 3320,
+          "goalX": 170,
+          "reinforce": true,
+          "launched": false,
+          "createdAt": 0.016666666666666666,
+          "casualties": 0
+        }
+      ],
+      "nextSquadId": 2,
+      "strategy": {
+        "mode": "PREPARE",
+        "label": "Preparing interception",
+        "squadId": 1
+      },
+      "nextDecisionAt": 12.016666666666694,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [
+        {
+          "time": 0.016666666666666666,
+          "type": "objective",
+          "mode": "PREPARE"
+        },
+        {
+          "time": 0.016666666666666666,
+          "type": "purchase",
+          "unitId": 12,
+          "kind": "rifle",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 2.0166666666666644,
+          "type": "purchase",
+          "unitId": 14,
+          "kind": "rifle",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 4.016666666666658,
+          "type": "purchase",
+          "unitId": 16,
+          "kind": "rifle",
+          "role": "intercept",
+          "squadId": 1
+        }
+      ],
+      "blockReason": "saving-supply",
+      "observations": {
+        "living": 8,
+        "incoming": {
+          "rifle": 2,
+          "rocket": 1
+        },
+        "stationed": {
+          "rifle": 0,
+          "rocket": 0
+        }
+      }
+    },
+    "time": 12.000000000000176,
+    "units": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 783.9999999999981,
+        "y": 460,
+        "phase": 0.12818181818182517,
+        "velocity": 47,
+        "state": "march",
+        "timer": 12.000000000000176,
+        "observedVelocity": 46.99999999999818,
+        "hp": 3,
+        "fireCooldown": -12.000000000000176,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        }
+      },
+      {
+        "id": 2,
+        "team": 0,
+        "type": "rifle",
+        "x": 819.9999999999967,
+        "y": 460,
+        "phase": 0.43818181818182506,
+        "velocity": 47,
+        "state": "march",
+        "timer": 12.000000000000176,
+        "observedVelocity": 46.99999999999818,
+        "hp": 3,
+        "fireCooldown": -12.000000000000176,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        }
+      },
+      {
+        "id": 3,
+        "team": 0,
+        "type": "rifle",
+        "x": 855.9999999999941,
+        "y": 460,
+        "phase": 0.748181818181825,
+        "velocity": 47,
+        "state": "march",
+        "timer": 12.000000000000176,
+        "observedVelocity": 46.99999999999818,
+        "hp": 3,
+        "fireCooldown": -12.000000000000176,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "opening-assault"
+        }
+      },
+      {
+        "id": 4,
+        "team": 0,
+        "type": "rocket",
+        "x": 566.0000000000026,
+        "y": 460,
+        "phase": 0.23999999999998783,
+        "velocity": 33,
+        "state": "march",
+        "timer": 12.000000000000176,
+        "observedVelocity": 32.99999999999727,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        },
+        "rocketCooldown": 0,
+        "rocketAimTime": 0,
+        "rocketTargetId": null,
+        "rocketGoal": null
+      },
+      {
+        "id": 5,
+        "team": 0,
+        "type": "rocket",
+        "x": 595.9999999999995,
+        "y": 460,
+        "phase": 0.5499999999999879,
+        "velocity": 33,
+        "state": "march",
+        "timer": 12.000000000000176,
+        "observedVelocity": 32.99999999999727,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "opening-assault"
+        },
+        "rocketCooldown": 0,
+        "rocketAimTime": 0,
+        "rocketTargetId": null,
+        "rocketGoal": null
+      },
+      {
+        "id": 6,
+        "team": 1,
+        "type": "rifle",
+        "x": 2816.000000000022,
+        "y": 460,
+        "phase": 0.678181818181825,
+        "velocity": -47,
+        "state": "march",
+        "timer": 12.000000000000176,
+        "observedVelocity": -46.99999999999818,
+        "hp": 3,
+        "fireCooldown": -12.000000000000176,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        }
+      },
+      {
+        "id": 7,
+        "team": 1,
+        "type": "rifle",
+        "x": 2780.000000000022,
+        "y": 460,
+        "phase": 0.9881818181818253,
+        "velocity": -47,
+        "state": "march",
+        "timer": 12.000000000000176,
+        "observedVelocity": -46.99999999999818,
+        "hp": 3,
+        "fireCooldown": -12.000000000000176,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        }
+      },
+      {
+        "id": 8,
+        "team": 1,
+        "type": "rifle",
+        "x": 2744.000000000022,
+        "y": 460,
+        "phase": 0.29818181818182515,
+        "velocity": -47,
+        "state": "march",
+        "timer": 12.000000000000176,
+        "observedVelocity": -46.99999999999818,
+        "hp": 3,
+        "fireCooldown": -12.000000000000176,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "opening-assault"
+        }
+      },
+      {
+        "id": 9,
+        "team": 1,
+        "type": "rocket",
+        "x": 3033.999999999869,
+        "y": 460,
+        "phase": 0.7899999999999879,
+        "velocity": -33,
+        "state": "march",
+        "timer": 12.000000000000176,
+        "observedVelocity": -33.000000000010914,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        },
+        "rocketCooldown": 0,
+        "rocketAimTime": 0,
+        "rocketTargetId": null,
+        "rocketGoal": null
+      },
+      {
+        "id": 10,
+        "team": 1,
+        "type": "rocket",
+        "x": 3003.999999999869,
+        "y": 460,
+        "phase": 0.09999999999998796,
+        "velocity": -33,
+        "state": "march",
+        "timer": 12.000000000000176,
+        "observedVelocity": -33.000000000010914,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "opening-assault"
+        },
+        "rocketCooldown": 0,
+        "rocketAimTime": 0,
+        "rocketTargetId": null,
+        "rocketGoal": null
+      },
+      {
+        "id": 11,
+        "team": 0,
+        "type": "rifle",
+        "x": 280,
+        "y": 460,
+        "phase": 0.9099999999999885,
+        "velocity": 47,
+        "state": "march",
+        "timer": 12.000000000000176,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": -12.000000000000176,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        }
+      },
+      {
+        "id": 12,
+        "team": 1,
+        "type": "rifle",
+        "x": 3320,
+        "y": 460,
+        "phase": 0.22000000000009756,
+        "velocity": -47,
+        "state": "march",
+        "timer": 12.000000000000176,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": -12.000000000000176,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        }
+      },
+      {
+        "id": 13,
+        "team": 0,
+        "type": "rifle",
+        "x": 266,
+        "y": 460,
+        "phase": 0.2118181818181806,
+        "velocity": 47,
+        "state": "march",
+        "timer": 10.000000000000076,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": -10.000000000000076,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        }
+      },
+      {
+        "id": 14,
+        "team": 1,
+        "type": "rifle",
+        "x": 3334,
+        "y": 460,
+        "phase": 0.5218181818182671,
+        "velocity": -47,
+        "state": "march",
+        "timer": 10.000000000000076,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": -10.000000000000076,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        }
+      },
+      {
+        "id": 15,
+        "team": 0,
+        "type": "rifle",
+        "x": 252,
+        "y": 460,
+        "phase": 0.5136363636363696,
+        "velocity": 47,
+        "state": "march",
+        "timer": 7.999999999999977,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": -7.999999999999977,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        }
+      },
+      {
+        "id": 16,
+        "team": 1,
+        "type": "rifle",
+        "x": 3348,
+        "y": 460,
+        "phase": 0.8236363636364363,
+        "velocity": -47,
+        "state": "march",
+        "timer": 7.999999999999977,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": -7.999999999999977,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        }
+      }
+    ],
+    "bases": [
+      {
+        "x": 110,
+        "team": 0,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 3490,
+        "team": 1,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 1120,
+        "team": 0,
+        "main": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "coverFlash": 0
+      },
+      {
+        "x": 2480,
+        "team": 1,
+        "main": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "coverFlash": 0
+      }
+    ],
+    "bullets": [],
+    "rockets": [],
+    "explosions": [],
+    "combatEvents": [],
+    "seed": 12648430,
+    "shotsFired": 0,
+    "camera": 0,
+    "scale": 1.35,
+    "followRockets": false,
+    "randomState": 12648430
+  },
+  "stationed": {
+    "blueAIEnabled": true,
+    "blueCommander": {
+      "rules": {
+        "team": 0,
+        "hqX": 110,
+        "spawnX": 170,
+        "rallyX": 280,
+        "defenseX": 330,
+        "threatRadius": 800,
+        "decisionInterval": 3,
+        "regroupSeconds": 12,
+        "fieldLossThreshold": 10,
+        "maxFormationGap": 360,
+        "direction": 1,
+        "goalX": 3430
+      },
+      "supply": {
+        "balance": 69.99999999999136,
+        "time": 33.99999999999935,
+        "cooldown": 2.1024848528838902e-15,
+        "earned": 170.00000000000185,
+        "overflow": 0,
+        "spent": 220,
+        "purchases": 6,
+        "ledger": [
+          {
+            "time": 0.016666666666666666,
+            "unitId": 11,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 95.08333333333333
+          },
+          {
+            "time": 2.0166666666666644,
+            "unitId": 13,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 80.08333333333276
+          },
+          {
+            "time": 4.016666666666658,
+            "unitId": 15,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 65.08333333333219
+          },
+          {
+            "time": 15.000000000000325,
+            "unitId": 17,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 59.99999999999574
+          },
+          {
+            "time": 26.999999999999748,
+            "unitId": 19,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 59.99999999999267
+          },
+          {
+            "time": 31.999999999999464,
+            "unitId": 21,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 59.99999999999159
+          }
+        ]
+      },
+      "squads": [
+        {
+          "id": 1,
+          "role": "intercept",
+          "composition": {
+            "rifle": 3,
+            "rocket": 2
+          },
+          "members": [
+            11,
+            13,
+            15,
+            17,
+            19
+          ],
+          "phase": "advance",
+          "direction": 1,
+          "rallyX": 280,
+          "goalX": 3430,
+          "reinforce": true,
+          "launched": true,
+          "createdAt": 0.016666666666666666,
+          "casualties": 0,
+          "launchedAt": 28.649999999999654
+        },
+        {
+          "id": 2,
+          "role": "assault",
+          "composition": {
+            "rifle": 2,
+            "rocket": 3
+          },
+          "members": [
+            21
+          ],
+          "phase": "gather",
+          "direction": 1,
+          "rallyX": 280,
+          "goalX": 3430,
+          "reinforce": true,
+          "launched": false,
+          "createdAt": 30.016666666666243,
+          "casualties": 0
+        }
+      ],
+      "nextSquadId": 3,
+      "strategy": {
+        "mode": "PREPARE",
+        "label": "Preparing assault",
+        "squadId": 2
+      },
+      "nextDecisionAt": 36.016666666666076,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [
+        {
+          "time": 0.016666666666666666,
+          "type": "objective",
+          "mode": "PREPARE"
+        },
+        {
+          "time": 0.016666666666666666,
+          "type": "purchase",
+          "unitId": 11,
+          "kind": "rifle",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 2.0166666666666644,
+          "type": "purchase",
+          "unitId": 13,
+          "kind": "rifle",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 4.016666666666658,
+          "type": "purchase",
+          "unitId": 15,
+          "kind": "rifle",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 15.000000000000325,
+          "type": "purchase",
+          "unitId": 17,
+          "kind": "rocket",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 26.999999999999748,
+          "type": "purchase",
+          "unitId": 19,
+          "kind": "rocket",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 31.999999999999464,
+          "type": "purchase",
+          "unitId": 21,
+          "kind": "rifle",
+          "role": "assault",
+          "squadId": 2
+        }
+      ],
+      "blockReason": "saving-supply",
+      "observations": {
+        "living": 11,
+        "incoming": {
+          "rifle": 2,
+          "rocket": 1
+        },
+        "stationed": {
+          "rifle": 2,
+          "rocket": 1
+        }
+      }
+    },
+    "redAIEnabled": true,
+    "redCommander": {
+      "rules": {
+        "team": 1,
+        "hqX": 3490,
+        "spawnX": 3430,
+        "rallyX": 3320,
+        "defenseX": 3270,
+        "threatRadius": 800,
+        "decisionInterval": 3,
+        "regroupSeconds": 12,
+        "fieldLossThreshold": 10,
+        "maxFormationGap": 360,
+        "direction": -1,
+        "goalX": 170
+      },
+      "supply": {
+        "balance": 69.99999999999136,
+        "time": 33.99999999999935,
+        "cooldown": 2.1024848528838902e-15,
+        "earned": 170.00000000000185,
+        "overflow": 0,
+        "spent": 220,
+        "purchases": 6,
+        "ledger": [
+          {
+            "time": 0.016666666666666666,
+            "unitId": 12,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 95.08333333333333
+          },
+          {
+            "time": 2.0166666666666644,
+            "unitId": 14,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 80.08333333333276
+          },
+          {
+            "time": 4.016666666666658,
+            "unitId": 16,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 65.08333333333219
+          },
+          {
+            "time": 15.000000000000325,
+            "unitId": 18,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 59.99999999999574
+          },
+          {
+            "time": 26.999999999999748,
+            "unitId": 20,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 59.99999999999267
+          },
+          {
+            "time": 31.999999999999464,
+            "unitId": 22,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 59.99999999999159
+          }
+        ]
+      },
+      "squads": [
+        {
+          "id": 1,
+          "role": "intercept",
+          "composition": {
+            "rifle": 3,
+            "rocket": 2
+          },
+          "members": [
+            12,
+            14,
+            16,
+            18,
+            20
+          ],
+          "phase": "advance",
+          "direction": -1,
+          "rallyX": 3320,
+          "goalX": 170,
+          "reinforce": true,
+          "launched": true,
+          "createdAt": 0.016666666666666666,
+          "casualties": 0,
+          "launchedAt": 28.649999999999654
+        },
+        {
+          "id": 2,
+          "role": "assault",
+          "composition": {
+            "rifle": 2,
+            "rocket": 3
+          },
+          "members": [
+            22
+          ],
+          "phase": "gather",
+          "direction": -1,
+          "rallyX": 3320,
+          "goalX": 170,
+          "reinforce": true,
+          "launched": false,
+          "createdAt": 30.016666666666243,
+          "casualties": 0
+        }
+      ],
+      "nextSquadId": 3,
+      "strategy": {
+        "mode": "PREPARE",
+        "label": "Preparing assault",
+        "squadId": 2
+      },
+      "nextDecisionAt": 36.016666666666076,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [
+        {
+          "time": 0.016666666666666666,
+          "type": "objective",
+          "mode": "PREPARE"
+        },
+        {
+          "time": 0.016666666666666666,
+          "type": "purchase",
+          "unitId": 12,
+          "kind": "rifle",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 2.0166666666666644,
+          "type": "purchase",
+          "unitId": 14,
+          "kind": "rifle",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 4.016666666666658,
+          "type": "purchase",
+          "unitId": 16,
+          "kind": "rifle",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 15.000000000000325,
+          "type": "purchase",
+          "unitId": 18,
+          "kind": "rocket",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 26.999999999999748,
+          "type": "purchase",
+          "unitId": 20,
+          "kind": "rocket",
+          "role": "intercept",
+          "squadId": 1
+        },
+        {
+          "time": 31.999999999999464,
+          "type": "purchase",
+          "unitId": 22,
+          "kind": "rifle",
+          "role": "assault",
+          "squadId": 2
+        }
+      ],
+      "blockReason": "saving-supply",
+      "observations": {
+        "living": 11,
+        "incoming": {
+          "rifle": 2,
+          "rocket": 1
+        },
+        "stationed": {
+          "rifle": 2,
+          "rocket": 1
+        }
+      }
+    },
+    "time": 33.99999999999935,
+    "units": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 1817.9999999999582,
+        "y": 460,
+        "phase": 0.6281818181818378,
+        "velocity": 47,
+        "state": "march",
+        "timer": 33.99999999999935,
+        "observedVelocity": 46.99999999999818,
+        "hp": 3,
+        "fireCooldown": -33.99999999999935,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        }
+      },
+      {
+        "id": 2,
+        "team": 0,
+        "type": "rifle",
+        "x": 1163,
+        "y": 460,
+        "phase": 0.23363636363674808,
+        "velocity": 47,
+        "state": "guard",
+        "timer": 16.266666666667025,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": -33.99999999999935,
+        "guardBase": 1120,
+        "guardSlot": 1,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        },
+        "arrived": true
+      },
+      {
+        "id": 3,
+        "team": 0,
+        "type": "rifle",
+        "x": 1077,
+        "y": 460,
+        "phase": 0.7709090909094292,
+        "velocity": 47,
+        "state": "guard",
+        "timer": 15.50000000000035,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": -33.99999999999935,
+        "guardBase": 1120,
+        "guardSlot": 0,
+        "hitFlash": 0,
+        "order": {
+          "role": "opening-assault"
+        },
+        "arrived": true
+      },
+      {
+        "id": 4,
+        "team": 0,
+        "type": "rocket",
+        "x": 1291.9999999999427,
+        "y": 460,
+        "phase": 0.7399999999999659,
+        "velocity": 33,
+        "state": "march",
+        "timer": 33.99999999999935,
+        "observedVelocity": 32.99999999999727,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        },
+        "rocketCooldown": 0,
+        "rocketAimTime": 0,
+        "rocketTargetId": null,
+        "rocketGoal": null
+      },
+      {
+        "id": 5,
+        "team": 0,
+        "type": "rocket",
+        "x": 1120,
+        "y": 460,
+        "phase": 0.4590909090918754,
+        "velocity": 33,
+        "state": "fireStop",
+        "timer": 24.84999999999987,
+        "observedVelocity": 0,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": 1120,
+        "guardSlot": 0,
+        "hitFlash": 0,
+        "order": {
+          "role": "opening-assault"
+        },
+        "rocketCooldown": 0,
+        "rocketAimTime": 0,
+        "rocketTargetId": null,
+        "rocketGoal": null,
+        "arrived": true
+      },
+      {
+        "id": 6,
+        "team": 1,
+        "type": "rifle",
+        "x": 1782.0000000000618,
+        "y": 460,
+        "phase": 0.17818181818183756,
+        "velocity": -47,
+        "state": "march",
+        "timer": 33.99999999999935,
+        "observedVelocity": -46.99999999999818,
+        "hp": 3,
+        "fireCooldown": -33.99999999999935,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        }
+      },
+      {
+        "id": 7,
+        "team": 1,
+        "type": "rifle",
+        "x": 2523,
+        "y": 460,
+        "phase": 0.8290909090916413,
+        "velocity": -47,
+        "state": "guard",
+        "timer": 16.266666666667025,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": -33.99999999999935,
+        "guardBase": 2480,
+        "guardSlot": 1,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        },
+        "arrived": true
+      },
+      {
+        "id": 8,
+        "team": 1,
+        "type": "rifle",
+        "x": 2437,
+        "y": 460,
+        "phase": 0.27545454545532166,
+        "velocity": -47,
+        "state": "guard",
+        "timer": 15.50000000000035,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": -33.99999999999935,
+        "guardBase": 2480,
+        "guardSlot": 0,
+        "hitFlash": 0,
+        "order": {
+          "role": "opening-assault"
+        },
+        "arrived": true
+      },
+      {
+        "id": 9,
+        "team": 1,
+        "type": "rocket",
+        "x": 2307.999999999629,
+        "y": 460,
+        "phase": 0.2899999999999661,
+        "velocity": -33,
+        "state": "march",
+        "timer": 33.99999999999935,
+        "observedVelocity": -33.000000000010914,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "garrison"
+        },
+        "rocketCooldown": 0,
+        "rocketAimTime": 0,
+        "rocketTargetId": null,
+        "rocketGoal": null
+      },
+      {
+        "id": 10,
+        "team": 1,
+        "type": "rocket",
+        "x": 2480,
+        "y": 460,
+        "phase": 0.009090909083968812,
+        "velocity": -33,
+        "state": "fireStop",
+        "timer": 24.84999999999987,
+        "observedVelocity": 0,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": 2480,
+        "guardSlot": 0,
+        "hitFlash": 0,
+        "order": {
+          "role": "opening-assault"
+        },
+        "rocketCooldown": 0,
+        "rocketAimTime": 0,
+        "rocketTargetId": null,
+        "rocketGoal": null,
+        "arrived": true
+      },
+      {
+        "id": 11,
+        "team": 0,
+        "type": "rifle",
+        "x": 457.10000000000366,
+        "y": 460,
+        "phase": 0.9349999999999831,
+        "velocity": 47,
+        "state": "march",
+        "timer": 33.99999999999935,
+        "observedVelocity": 33.00000000000068,
+        "hp": 3,
+        "fireCooldown": -33.99999999999935,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        }
+      },
+      {
+        "id": 12,
+        "team": 1,
+        "type": "rifle",
+        "x": 3142.8999999999414,
+        "y": 460,
+        "phase": 0.2450000000000921,
+        "velocity": -47,
+        "state": "march",
+        "timer": 33.99999999999935,
+        "observedVelocity": -33.000000000010914,
+        "hp": 3,
+        "fireCooldown": -33.99999999999935,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        }
+      },
+      {
+        "id": 13,
+        "team": 0,
+        "type": "rifle",
+        "x": 443.10000000000366,
+        "y": 460,
+        "phase": 0.23681818181817516,
+        "velocity": 47,
+        "state": "march",
+        "timer": 31.999999999999464,
+        "observedVelocity": 33.00000000000068,
+        "hp": 3,
+        "fireCooldown": -31.999999999999464,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        }
+      },
+      {
+        "id": 14,
+        "team": 1,
+        "type": "rifle",
+        "x": 3156.8999999999414,
+        "y": 460,
+        "phase": 0.5468181818182617,
+        "velocity": -47,
+        "state": "march",
+        "timer": 31.999999999999464,
+        "observedVelocity": -33.000000000010914,
+        "hp": 3,
+        "fireCooldown": -31.999999999999464,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        }
+      },
+      {
+        "id": 15,
+        "team": 0,
+        "type": "rifle",
+        "x": 429.10000000000366,
+        "y": 460,
+        "phase": 0.5386363636363641,
+        "velocity": 47,
+        "state": "march",
+        "timer": 29.999999999999577,
+        "observedVelocity": 33.00000000000068,
+        "hp": 3,
+        "fireCooldown": -29.999999999999577,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        }
+      },
+      {
+        "id": 16,
+        "team": 1,
+        "type": "rifle",
+        "x": 3170.8999999999414,
+        "y": 460,
+        "phase": 0.8486363636364308,
+        "velocity": -47,
+        "state": "march",
+        "timer": 29.999999999999577,
+        "observedVelocity": -33.000000000010914,
+        "hp": 3,
+        "fireCooldown": -29.999999999999577,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        }
+      },
+      {
+        "id": 17,
+        "team": 0,
+        "type": "rocket",
+        "x": 415.10000000000366,
+        "y": 460,
+        "phase": 0.8404545454545055,
+        "velocity": 33,
+        "state": "march",
+        "timer": 19.01666666666687,
+        "observedVelocity": 33.00000000000068,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        },
+        "rocketCooldown": 0,
+        "rocketAimTime": 0,
+        "rocketTargetId": null,
+        "rocketGoal": null
+      },
+      {
+        "id": 18,
+        "team": 1,
+        "type": "rocket",
+        "x": 3184.8999999999414,
+        "y": 460,
+        "phase": 0.1504545454540288,
+        "velocity": -33,
+        "state": "march",
+        "timer": 19.01666666666687,
+        "observedVelocity": -33.000000000010914,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        },
+        "rocketCooldown": 0,
+        "rocketAimTime": 0,
+        "rocketTargetId": null,
+        "rocketGoal": null
+      },
+      {
+        "id": 19,
+        "team": 0,
+        "type": "rocket",
+        "x": 401.10000000000366,
+        "y": 460,
+        "phase": 0.14227272727269452,
+        "velocity": 33,
+        "state": "march",
+        "timer": 7.016666666666647,
+        "observedVelocity": 33.00000000000068,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        },
+        "rocketCooldown": 0,
+        "rocketAimTime": 0,
+        "rocketTargetId": null,
+        "rocketGoal": null
+      },
+      {
+        "id": 20,
+        "team": 1,
+        "type": "rocket",
+        "x": 3198.8999999999414,
+        "y": 460,
+        "phase": 0.4522727272723156,
+        "velocity": -33,
+        "state": "march",
+        "timer": 7.016666666666647,
+        "observedVelocity": -33.000000000010914,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "intercept",
+          "squadId": 1,
+          "joined": true
+        },
+        "rocketCooldown": 0,
+        "rocketAimTime": 0,
+        "rocketTargetId": null,
+        "rocketGoal": null
+      },
+      {
+        "id": 21,
+        "team": 0,
+        "type": "rifle",
+        "x": 264.7833333333334,
+        "y": 460,
+        "phase": 0.6641666666666678,
+        "velocity": 47,
+        "state": "march",
+        "timer": 2.0166666666666644,
+        "observedVelocity": 47.00000000000159,
+        "hp": 3,
+        "fireCooldown": -2.0166666666666644,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "assault",
+          "squadId": 2,
+          "joined": true
+        }
+      },
+      {
+        "id": 22,
+        "team": 1,
+        "type": "rifle",
+        "x": 3335.2166666666703,
+        "y": 460,
+        "phase": 0.9741666666666683,
+        "velocity": -47,
+        "state": "march",
+        "timer": 2.0166666666666644,
+        "observedVelocity": -46.99999999999818,
+        "hp": 3,
+        "fireCooldown": -2.0166666666666644,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "order": {
+          "role": "assault",
+          "squadId": 2,
+          "joined": true
+        }
+      }
+    ],
+    "bases": [
+      {
+        "x": 110,
+        "team": 0,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 3490,
+        "team": 1,
+        "main": true,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0
+      },
+      {
+        "x": 1120,
+        "team": 0,
+        "main": false,
+        "slots": {
+          "rifle": [
+            3,
+            2
+          ],
+          "rocket": [
+            5
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            3,
+            2
+          ],
+          "rocket": [
+            5
+          ]
+        },
+        "state": "OCCUPIED",
+        "everOccupied": true,
+        "flagProgress": 1,
+        "coverFlash": 0
+      },
+      {
+        "x": 2480,
+        "team": 1,
+        "main": false,
+        "slots": {
+          "rifle": [
+            8,
+            7
+          ],
+          "rocket": [
+            10
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            8,
+            7
+          ],
+          "rocket": [
+            10
+          ]
+        },
+        "state": "OCCUPIED",
+        "everOccupied": true,
+        "flagProgress": 1,
+        "coverFlash": 0
+      }
+    ],
+    "bullets": [],
+    "rockets": [],
+    "explosions": [],
+    "combatEvents": [],
+    "seed": 12648430,
+    "shotsFired": 0,
+    "camera": 0,
+    "scale": 1.35,
+    "followRockets": false,
+    "randomState": 12648430
+  }
+}

@@ -1,0 +1,35 @@
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:07] "GET / HTTP/1.1" 200 -
+
+Running 1 test using 1 worker
+
+(node:18514) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18514) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /battlefield.html?test HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/battlefieldScene.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/units/rifleman.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/units/soldierCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/units/rocketeer.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/bases/baseCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/bases/headquarters.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/bases/forwardBase.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/combat/effects.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/ai/redCommander.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/ui/redEconomyPanel.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/combat/weapons.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/economy/supply.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/ai/squads.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/economy/supply.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 01:39:09] "GET /js/battlefield/ai/strategy.js HTTP/1.1" 200 -
+  ✓  1 tests/shared-economy.spec.js:2:1 › EC-06/08 manual commands reject population cap, cooldown and paused forced events (482ms)
+
+  1 passed (2.4s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
