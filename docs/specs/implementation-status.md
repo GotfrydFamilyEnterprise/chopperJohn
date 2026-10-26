@@ -102,3 +102,21 @@ Sites preview v0.8.1 native publication succeeded (deployment appgdep_6adecd3a0b
 
 ## V1 helicopter — planning only
 User requested a full story and test plan before introducing the helicopter. See `docs/specs/v1-helicopter-plan.md`: confirmed enemy-only fire,10%/1HP helicopter penetration of stationed FOB defenders, rockets-only aircraft attacks, current-velocity leading, inherited distance scatter and maximum-range explosion. User subsequently selected ballistic arcs, any-direction aiming,10-second respawn and proximity detonation. User also selected100 hull,20 direct/5 nearby rocket damage, parked helipad repair, and the machine-gun-only/8rps/exposed1HP baseline. User confirmed direct hull impacts or closest-approach bursts within25 units, plus5 hull/s repair while landed and stationary on the pad. Precise collision shapes, range metric and launch tuning remain proposed defaults. No aircraft gameplay code, scene changes, new test results or deployment are asserted by this planning work.
+
+## V1 helicopter implementation — 2026-10-26
+
+**IMPLEMENTED / REVIEW PENDING**, separate feature branch; planning PR #7 merged. H-01–05, HG-01–03 and AA-01–06 are implemented in isolated aircraft, interception, projectile, weapon, allocation, camera and input modules. Both economy accounts and five-soldier openings remain unchanged.
+
+Rocket groups reserve approximately two thirds for reachable aircraft and one third for ground threats (rounded, retaining one ground role when feasible); single launchers prioritize aircraft. Capability and valid targets override quotas. Typed changes restart aim but preserve reload; committed shots never steer.
+
+Executed evidence: 77 module checks pass; full browser run 59 pass plus targeted 17 pass (61 distinct browser checks overall, including two independent reviewer probes). Raw outputs are in `docs/quality/evidence/v1-module-results.txt`, `v1-browser-full-results.txt`, and `v1-browser-review-results.txt`. Deterministic fixtures isolate flight, troops, weapons, projectiles, damage, repairs and economy. Actual joystick flight from the pad produced enemy AA launch at 14.1 seconds and a proximity hit at 15.7 seconds. Screenshots/traces are under `docs/quality/evidence/v1-*`.
+
+Independent review: `docs/quality/v1-helicopter-adversarial-review.md`; no confirmed production blocker. Physical iPhone/Safari play, full visual evasion/destruction/repair sequence and complete Flight School tutorial remain UNVERIFIED. Existing Flight School source and Unity directories are unchanged. No unconditional completion or merge claim.
+
+## Compact battlefield interface — 2026-10-26
+
+UI-01/02 implemented on PR8 feature branch. Rifle/rocket SVG deployment icons with visible costs sit beside FIRE/TURN; secondary controls, Flight School and full strategic details are in the top-right disclosure. A slim HUD retains faction supply/population and hull. Camera bands reclaim the previous large strategy/tool rows, prioritizing landscape. Menu open releases held inputs; outside tap, Escape and actions close it; keyboard controls respect focused UI.
+
+Validation:77 module checks passed. Full browser run64 passed with one portrait fixture failure (outside tap incorrectly landed within the menu); corrected coordinate and focused run4 passed, covering65 distinct checks overall. No failed production assertion remains. Raw logs: `evidence/compact-module-results.txt`, `compact-regression-results.txt`, `compact-ui-results.txt`. Screenshots inspected at844×390,740×360 and390×844. Physical Safari remains UNVERIFIED. Independent review report: `docs/quality/compact-ui-adversarial-review.md`.
+
+Released private preview: https://chopperjohn-fob-preview.earthyluck64.chatgpt.site/battlefield.html?v=1.0.1 . Native deployment succeeded, id `appgdep_6adf5d9cd9108191be77f184f181ad9e`, exact Sites source `46b36f2863a13c1dc38d6e8cbdf1eca01377a05b`. GitHub Pages has not changed; gameplay PR still requires user acceptance before merge.

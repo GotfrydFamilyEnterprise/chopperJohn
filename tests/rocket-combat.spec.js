@@ -1,3 +1,4 @@
+import {menuAction} from './menu-helper.js';
 import {test,expect} from '@playwright/test';
 import {writeFileSync} from 'node:fs';
 const evidence='docs/quality/evidence';
@@ -57,13 +58,13 @@ test('RC-03/06 rockets do not home; shooter death, pause and reset',async({page}
   battlefieldTest.step(1);return {rocket,state:battlefieldTest.snapshot()};
  });
  expect(result.state.rockets).toHaveLength(1);
- await page.locator('#pause').click();const paused=await page.evaluate(()=>battlefieldTest.snapshot());
+ await menuAction(page,'#pause');const paused=await page.evaluate(()=>battlefieldTest.snapshot());
  await page.evaluate(()=>battlefieldTest.step(60));expect(await page.evaluate(()=>battlefieldTest.snapshot())).toEqual(paused);
- await page.locator('#pause').click();
+ await menuAction(page,'#pause');
  const state=await page.evaluate(()=>{battlefieldTest.step(180);return battlefieldTest.snapshot();});
  expect(state.combatEvents.find(e=>e.type==='explosion').x).toBeCloseTo(result.rocket.impactX);
  expect(state.units[0].hp).toBe(4);
- await page.locator('#reset').click();const reset=await page.evaluate(()=>battlefieldTest.snapshot());
+ await menuAction(page,'#reset');const reset=await page.evaluate(()=>battlefieldTest.snapshot());
  expect(reset.rockets).toHaveLength(0);expect(reset.explosions).toHaveLength(0);expect(reset.combatEvents).toHaveLength(0);
  expect(reset.units.every(u=>!u.rocketAimTime&&!u.rocketCooldown)).toBeTruthy();
 });
@@ -122,8 +123,8 @@ test('RC-08 mobile navigation, pan, spawn and reset retain separate scenes',asyn
  const errors=[];page.on('pageerror',e=>errors.push(e.message));await empty(page);
  await page.locator('#blueRocket').click();await expect(page.locator('#blueRifle')).toBeDisabled();
  expect((await page.evaluate(()=>battlefieldTest.snapshot())).units).toHaveLength(1);
- await page.locator('#jumpRed').click();await page.locator('#reset').click();
+ await menuAction(page,'#jumpRed');await menuAction(page,'#reset');
  expect((await page.evaluate(()=>battlefieldTest.snapshot())).units).toHaveLength(10);
- await page.getByRole('link',{name:'Flight School'}).click();await expect(page).toHaveURL(/index.html$/);
+ await page.locator('#menuToggle').click();await page.getByRole('link',{name:/Flight School/}).click();await expect(page).toHaveURL(/index.html$/);
  expect(errors).toEqual([]);
 });

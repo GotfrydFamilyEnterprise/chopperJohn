@@ -1,6 +1,6 @@
 # V1 helicopter battlefield: stories and validation plan
 
-Status: **DESIGN ONLY — no helicopter introduced into the battlefield.**
+Status: **APPROVED IMPLEMENTATION BASELINE — user merged the plan and authorized building.** This document retains the design history; current execution evidence belongs in implementation-status.md, not this planning matrix.
 
 This plan separates approved rules from proposed tuning and unanswered decisions. A test listed here is planned, not executed or passing evidence. Read with requirements.md, acceptance.md and quality/adversarial-review.md. No Flight School or legacy Unity edits are authorized by this plan.
 
@@ -28,7 +28,7 @@ The existing ground battle, equal Supply accounts, five free starting soldiers p
 
 ## 2. Decisions still to settle
 
-Suggested defaults below are **not approved settings**. Implementation should wait for answers that affect flight, damage or lifecycle.
+Suggested defaults below are **not approved settings**. The user subsequently authorized merging and building. Explicit answers below are approved rules; the remaining suggested defaults are now initial implementation tuning choices under that authorization, recorded in requirements.md H-TUNING. They remain reviewable rather than blocking routine implementation.
 
 | Decision | Suggested starting choice | Why it matters |
 |---|---|---|
@@ -37,7 +37,7 @@ Suggested defaults below are **not approved settings**. Implementation should wa
 | Anti-air launch speed / gravity | Proposed initial speed 450 units/s and gravity240 units/s², choosing the earliest feasible upward-launch arc | Initial speed is fixed, but gravity changes velocity during flight. At450 and gravity240, maximum rise from a vertical launch is about422 units; include battlefield ceiling reachability in tests. Ground gravity is240. Verify reachability/path budget and tune reaction time in play. |
 | Air target band / expiry metric | Proposed 225–600 units of 2D muzzle-to-target distance; **proposed 600-unit radial reach from the launch muzzle** for expiry, rather than600 accumulated curved-path length | A nonstraight arc to a target600 units away travels more than600 units; a600-path fuse would silently shorten effective reach. A radial600 fuse preserves the intended reach where a ballistic solution exists. This metric still needs approval. |
 | Anti-air aiming direction | **Approved: any direction**, including above/behind; launcher visually rotates while guard feet remain fixed | Current ground shots remain forward-only. |
-| Target priority | Keep an eligible aim lock; when acquiring, helicopter first if a reachable shot exists, otherwise nearest eligible ground target | Avoid aim thrashing and ensure anti-air is observable. No firing an impossible intercept or free extra ammo cadence. |
+| Target priority | **Latest approved direction:** helicopter is higher threat and immediately preempts ground aim; groups split2/3 air and1/3 ground where both threats are reachable, with stable assignments | Avoid aim thrashing and ensure anti-air is observable. No firing an impossible intercept or free extra ammo cadence. |
 | Helicopter HP / rocket damage | **Approved:100 hull,20 direct-hit damage,5 nearby-explosion damage**, never both from one rocket | Five direct hits or20 nearby bursts destroy full hull without repairs. Define how proximity allows direct hits before coding. Hull proximity damage has no inferred ground-style zero-at-edge falloff. |
 | Damage to exposed infantry | **Approved:1 HP per helicopter bullet** | User confirmed the proposed machine-gun-only baseline, including exposed damage. |
 | Rocket detonation triggers | **Approved: physical hull hit for20, or near-miss burst at closest approach within25 units for5.** Terrain/range expiry also ends the shot | No immediate outer-radius fuse that prevents direct hits. Resolve the first actual event, exactly once; do not use future pilot inputs to classify a shot. |
@@ -267,7 +267,7 @@ Capture and independently inspect: landed helicopter/pad; takeoff; tilted/turnin
 
 ## 7. Delivery gates
 
-1. Review this plan and close blocking design choices. No gameplay implementation yet. Direct-hit/proximity sequencing and5 hull/s repair are approved. Range metric, launch tuning and remaining proposed defaults must be accepted before their stories start; these completed answers do not authorize introducing the aircraft yet.
+1. Review this plan and close blocking design choices. No gameplay implementation yet. Direct-hit/proximity sequencing and5 hull/s repair are approved. The user subsequently authorized merging and building, including isolated interaction tests and helicopter-first target prioritization with split group responsibilities. Initial defaults are selected under that authorization and recorded in H-TUNING.
 2. Implement V1-02..04 and review flight/phone handling in a preview before adding combat complexity.
 3. Implement V1-05..06; prove enemy-only exposed/covered gun behavior while anti-air is isolated.
 4. Implement V1-07..11; prove interception, maximum-reach fuse, proximity evasion and lifecycle with controlled fixtures and ordinary natural gameplay.

@@ -1,0 +1,129 @@
+
+Running 65 tests using 1 worker
+
+(node:35868) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35868) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/compact-ui.spec.js:12:5 › UI-01/02 compact primary controls and expanded menu 844 (1.6s)
+  ✓   2 tests/compact-ui.spec.js:12:5 › UI-01/02 compact primary controls and expanded menu 740 (1.4s)
+  ✘   3 tests/compact-ui.spec.js:12:5 › UI-01/02 compact primary controls and expanded menu 390 (30.0s)
+(node:36266) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:36266) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   4 tests/compact-ui.spec.js:88:1 › UI-01 menu releases held fire and keyboard input; camera uses reclaimed landscape area (636ms)
+  ✓   5 tests/determinism.spec.js:2:1 › QA-01 repeated HQ arrivals have identical fixed-step state traces (1.6s)
+  ✓   6 tests/engagement.spec.js:2:28 › RI-02 RO-02 entry retains combat posture faction 0 (296ms)
+  ✓   7 tests/engagement.spec.js:2:28 › RI-02 RO-02 entry retains combat posture faction 1 (261ms)
+  ✓   8 tests/engagement.spec.js:29:1 › CB-01 muzzle segment damages enemy at close range (253ms)
+  ✓   9 tests/fob.spec.js:3:28 › FOB-01..10 faction 0 (11.6s)
+  ✓  10 tests/fob.spec.js:3:28 › FOB-01..10 faction 1 (11.1s)
+  ✓  11 tests/fob.spec.js:109:1 › CB-01 visible shots damage opposing rocket infantry (261ms)
+  ✓  12 tests/fullscreen-adversarial-review.spec.js:8:1 › FS-02 unsupported explanation and dismissal preserve paused game and camera (740ms)
+  ✓  13 tests/fullscreen-adversarial-review.spec.js:30:1 › FS-02 rejected request remains inactive and handles Escape (426ms)
+  ✓  14 tests/fullscreen-adversarial-review.spec.js:46:1 › FS-02 standalone does not request fullscreen (407ms)
+  ✓  15 tests/fullscreen-adversarial-review.spec.js:62:1 › FS-01 vendor change and browser exit synchronize (474ms)
+  ✓  16 tests/fullscreen-adversarial-review.spec.js:88:1 › FS-01 actual root fullscreen preserves state and browser exit updates button (667ms)
+  ✓  17 tests/fullscreen.spec.js:4:1 › FS-01/03 actual fullscreen enter, button exit and browser exit preserve paused game (1.3s)
+  ✓  18 tests/fullscreen.spec.js:29:1 › FS-02 unsupported browser shows honest iPhone guidance, closes and retains gameplay (940ms)
+  ✓  19 tests/fullscreen.spec.js:57:1 › FS-02 rejected requests and standalone launch never falsely report native fullscreen (965ms)
+  ✓  20 tests/fullscreen.spec.js:86:1 › FS-03 portrait and landscape fullscreen button remains visible without overlapping other controls (1.1s)
+  ✓  21 tests/red-economy-review.spec.js:2:1 › review AI-02 emergency releases an already assembling physical wave (730ms)
+  ✓  22 tests/red-economy-review.spec.js:33:1 › review EC-05 red status remains inside portrait and landscape viewport (2.3s)
+  ✓  23 tests/red-economy.spec.js:4:1 › EC-01..04 equal free opening grant, later income reconciles, no duplicate incoming garrison (1.4s)
+  ✓  24 tests/red-economy.spec.js:38:1 › SQ-01/02 actual squads assemble, advance together and keep physical motion bounded (3.9s)
+  ✓  25 tests/red-economy.spec.js:80:1 › AI-01 replacement counts in transit; EC-05 UI and pause/reset stay coherent (1.5s)
+  ✓  26 tests/red-economy.spec.js:113:1 › AI-02 HQ danger buys defense using reserve; red cap remains15 in prolonged play (3.3s)
+  ✓  27 tests/rocket-combat.spec.js:16:28 › RC-01/02/03/05/06 mirrored rocket flight faction 0 (2.1s)
+  ✓  28 tests/rocket-combat.spec.js:16:28 › RC-01/02/03/05/06 mirrored rocket flight faction 1 (2.4s)
+  ✓  29 tests/rocket-combat.spec.js:94:28 › RC-01 browser range boundaries faction 0 (361ms)
+  ✓  30 tests/rocket-combat.spec.js:94:28 › RC-01 browser range boundaries faction 1 (429ms)
+  ✓  31 tests/rocket-combat.spec.js:120:1 › RC-03/06 rockets do not home; shooter death, pause and reset (748ms)
+  ✓  32 tests/rocket-combat.spec.js:163:28 › BC-01/02/04/05 bunker shared hits and casualty faction 0 (351ms)
+  ✓  33 tests/rocket-combat.spec.js:163:28 › BC-01/02/04/05 bunker shared hits and casualty faction 1 (344ms)
+  ✓  34 tests/rocket-combat.spec.js:212:1 › BC-03 real rifle rounds mostly absorbed, occasional half damage (322ms)
+  ✓  35 tests/rocket-combat.spec.js:235:1 › RC-07 identical browser combat after reset, seeded variation (413ms)
+  ✓  36 tests/rocket-combat.spec.js:261:1 › RC-08 mobile navigation, pan, spawn and reset retain separate scenes (797ms)
+  ✓  37 tests/rocket-follow-review.spec.js:3:1 › review RC-10 follow contains both endpoints, pause/reset/manual navigation remain usable (3.5s)
+  ✓  38 tests/rocket-natural-play.spec.js:4:28 › RC-09 real marching target is led faction 0 (773ms)
+  ✓  39 tests/rocket-natural-play.spec.js:4:28 › RC-09 real marching target is led faction 1 (482ms)
+  ✓  40 tests/rocket-natural-play.spec.js:43:1 › RC-10 normal opening wave fires without manual deployments and follow shows flight (2.1s)
+  ✓  41 tests/rocket-review.spec.js:3:28 › review RC-03/05 airborne rocket survives both deaths and infantry crossing faction 0 (376ms)
+  ✓  42 tests/rocket-review.spec.js:3:28 › review RC-03/05 airborne rocket survives both deaths and infantry crossing faction 1 (282ms)
+  ✓  43 tests/rocket-review.spec.js:43:1 › review RC-02 actual browser launch intervals include full reload then full aim (319ms)
+  ✓  44 tests/shared-economy-review.spec.js:4:1 › review EC-06 exact free mirrored grant and independent paid button transaction (2.0s)
+  ✓  45 tests/shared-economy-review.spec.js:38:1 › review EC-07 mirrored no-combat decisions, accounting and physical speed through 120 seconds (13.0s)
+  ✓  46 tests/shared-economy-review.spec.js:83:1 › review EC-08 seeded replay and autonomous bilateral rocket launch within minute (2.5s)
+  ✓  47 tests/shared-economy-review.spec.js:100:1 › review EC-08 both HUDs and controls visible portrait landscape (2.3s)
+  ✓  48 tests/shared-economy.spec.js:3:1 › EC-06/08 manual commands reject population cap, cooldown and paused forced events (996ms)
+  ✓  49 tests/v1-helicopter-integration.spec.js:4:1 › HG-COVER real helicopter gun distinguishes contact absorption and penetrating casualty with vacancy (434ms)
+  ✓  50 tests/v1-helicopter-integration.spec.js:51:1 › H-INPUT simultaneous real touch joystick and fire, cancellation and blur release both (678ms)
+  ✓  51 tests/v1-helicopter-integration.spec.js:97:1 › AA-FUSE ordinary launch remains unguided after target death and explodes at actual600 reach (1.0s)
+  ✓  52 tests/v1-helicopter-integration.spec.js:136:1 › QA-H01 complete mixed flight/weapon/controller replay is deterministic (2.4s)
+  ✓  53 tests/v1-helicopter-integration.spec.js:171:1 › V1-NATURAL actual joystick flies from pad into ordinary paid battle and draws anti-air fire (1.1s)
+  ✓  54 tests/v1-helicopter.spec.js:13:1 › H-START/INPUT/PAD actual opening on helipad, takeoff, pause, reset, economy intact (1.1s)
+  ✓  55 tests/v1-helicopter.spec.js:48:1 › H-REPAIR/RESPAWN isolated physics and lifecycle with exact timing (486ms)
+  ✓  56 tests/v1-helicopter.spec.js:81:1 › HG-TEAM/SWEEP isolated gun uses actual 2D hits, no friendly fire or altitude-only hits (980ms)
+  ✓  57 tests/v1-helicopter.spec.js:118:1 › AA-PRIORITY mixed firefight ground aim preempted by helicopter, rifles continue ground fire (715ms)
+  ✓  58 tests/v1-helicopter.spec.js:175:50 › AA-GROUP mixed threats split2 launchers into1 air and1 ground (497ms)
+  ✓  59 tests/v1-helicopter.spec.js:175:50 › AA-GROUP mixed threats split3 launchers into2 air and1 ground (990ms)
+  ✓  60 tests/v1-helicopter.spec.js:175:50 › AA-GROUP mixed threats split6 launchers into4 air and2 ground (685ms)
+  ✓  61 tests/v1-helicopter.spec.js:201:1 › AA-COLLISION/FUSE isolated direct, nearby and maximum-range burst resolve once (781ms)
+  ✓  62 tests/v1-helicopter.spec.js:246:1 › QA-H01 isolation gates freeze projectiles or damage separately and replay deterministically (545ms)
+  ✓  63 tests/v1-helicopter.spec.js:292:1 › H-UI portrait/landscape controls visible and distinct; turn and held fire work (1.5s)
+  ✓  64 tests/v1-independent-review.spec.js:3:1 › review H-RESPAWN pause freezes pending replacement without resetting battle (1.6s)
+  ✓  65 tests/v1-independent-review.spec.js:23:1 › review AA-FUSE committed shot survives disabled aircraft and terminates exactly once (576ms)
+
+
+  1) tests/compact-ui.spec.js:12:5 › UI-01/02 compact primary controls and expanded menu 390 ───────
+
+    [31mTest timeout of 30000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#field')[22m
+    [2m    - locator resolved to <canvas id="field" width="390" height="844"></canvas>[22m
+    [2m  - attempting click action[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <span id="count"> · 10 soldiers · 0 rounds · 0 flying · 0 launched</span> from <details open="" id="gameMenu">…</details> subtree intercepts pointer events[22m
+    [2m    - retrying click action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <span id="count"> · 10 soldiers · 0 rounds · 0 flying · 0 launched</span> from <details open="" id="gameMenu">…</details> subtree intercepts pointer events[22m
+    [2m    - retrying click action[22m
+    [2m      - waiting 100ms[22m
+    [2m    47 × waiting for element to be visible, enabled and stable[22m
+    [2m       - element is visible, enabled and stable[22m
+    [2m       - scrolling into view if needed[22m
+    [2m       - done scrolling[22m
+    [2m       - <span id="count"> · 10 soldiers · 0 rounds · 0 flying · 0 launched</span> from <details open="" id="gameMenu">…</details> subtree intercepts pointer events[22m
+    [2m     - retrying click action[22m
+    [2m       - waiting 500ms[22m
+
+
+      10 |  await page.screenshot({path:`docs/quality/evidence/compact-closed-${vp.width}.png`});
+      11 |  await page.locator('#menuToggle').click();await expect(page.locator('#blueStrategy')).toContainText('Supply');await expect(page.locator('#redStrategy')).toContainText('Supply');const panel=await page.locator('#menuPanel').boundingBox();expect(panel.x).toBeGreaterThanOrEqual(0);expect(panel.y+panel.height).toBeLessThanOrEqual(vp.height);await page.screenshot({path:`docs/quality/evidence/compact-menu-${vp.width}.png`});
+    > 12 |  await page.keyboard.press('Escape');await expect(page.locator('#pause')).not.toBeVisible();await page.locator('#menuToggle').click();await page.locator('#field').click({position:{x:vp.width/2,y:vp.height/2}});await expect(page.locator('#pause')).not.toBeVisible();
+         |                                                                                                                                                                    ^
+      13 |  // Isolate manual purchasing from the automatic commander cooldown.
+      14 |  await page.evaluate(()=>{battlefieldTest.blueAI(false);battlefieldTest.redAI(false);});
+      15 |  await page.locator('#blueRifle').click();let s=await page.evaluate(()=>battlefieldTest.snapshot());expect(s.blueCommander.supply.balance).toBe(95);expect(s.units.filter(u=>u.team===0)).toHaveLength(6);
+        at /workspace/chopperJohn/tests/compact-ui.spec.js:12:164
+
+    Error Context: test-results/compact-ui-UI-01-02-compac-536f8-trols-and-expanded-menu-390/error-context.md
+
+  1 failed
+    tests/compact-ui.spec.js:12:5 › UI-01/02 compact primary controls and expanded menu 390 ────────
+  64 passed (2.3m)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
