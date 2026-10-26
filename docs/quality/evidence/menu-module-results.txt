@@ -1,0 +1,180 @@
+
+> test:unit
+> node tests-unit/adversarial.test.js && node tests-unit/rocket-combat.test.js && node tests-unit/rocket-review.test.js && node tests-unit/rocket-leading.test.js && node tests-unit/red-economy.test.js && node tests-unit/red-economy-review.test.js && node tests-unit/shared-economy-review.test.js && node tests-unit/v1-helicopter.test.js && node tests-unit/v1-independent-review.test.js && node tests-unit/air-balance.test.js && node tests-unit/session-flow.test.js
+
+✔ FOB-03..08,10 pure logic adversarial faction 0 (13.526692ms)
+✔ FOB-03..08,10 pure logic adversarial faction 1 (0.779446ms)
+✔ AN-02 stance world coordinate invariant; transition continuity (0.332899ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 26.063903
+✔ RC-01 inclusive targeting and overlap faction 0 (5.466167ms)
+✔ RC-01 inclusive targeting and overlap faction 1 (0.200189ms)
+✔ RC-03/04 ballistic landing, upward launch, scatter bounds and variance (36.879577ms)
+✔ RC-02 aim interruption and full reload (2.729257ms)
+✔ BC-01/03 only arrived registered soldiers get a probabilistic half hit (1.463044ms)
+✔ BC-02 shared single random defender, no double AoE, ordinary bystanders (2.093404ms)
+✔ RC-05 exposed falloff, boundary and no friendly fire (1.688773ms)
+✔ BC-03 seeded penetrations approximate 1/20; exposed hits stay 1 HP (21.06062ms)
+✔ BC-05 repeated thirds kill cleanly, release slot, replacement starts exposed (1.739539ms)
+✔ RC-07 identical seeded rockets and damage, different seed changes scatter (6.365236ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 95.176481
+✔ review RC-02 full reload must precede a new full aim (6.496887ms)
+✔ review BC-02 footprint inclusive edges, partial bunker, no flag dependency (4.969883ms)
+✔ review BC-01 reservations and passers never gain cover; BC-03 independent endpoints (0.800618ms)
+✔ review RC-03/04 mirrored endpoint extremes land analytically on intended ground (0.772115ms)
+✔ review RC-09 leading stays ballistic and mirror-symmetric throughout actual firing band (2.187363ms)
+✔ review RC-09 locked targets behind, friendly, dead and inside minimum are reacquired (0.556507ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 29.274333
+✔ RC-09 leading intercept team 0, velocity -47 (2.370256ms)
+✔ RC-09 leading intercept team 0, velocity 0 (0.24336ms)
+✔ RC-09 leading intercept team 0, velocity 47 (4.033815ms)
+✔ RC-09 leading intercept team 1, velocity -47 (0.269413ms)
+✔ RC-09 leading intercept team 1, velocity 0 (0.171258ms)
+✔ RC-09 leading intercept team 1, velocity 47 (0.12366ms)
+✔ RC-09 autonomous target lock remains stable and reacquires only eligible targets (1.652408ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20.879839
+✔ EC-01 income, cap, accounting and no FOB income (4.812872ms)
+✔ EC-02/03 atomic charge, cooldown, reserve and population cap (0.874661ms)
+✔ AI-01 opening garrison is paid and incoming defenders are never duplicated (12.626081ms)
+✔ AI-02 emergency uses reserve; ordinary wave keeps60 and correct composition (35.996572ms)
+✔ AI-03 staffed enemy bunker selects rocket-heavy assault (2.289404ms)
+✔ SQ-01 gathering walks to rally; released rifles match slowest soldier without teleport (0.776084ms)
+✔ AI-04 repeated field losses trigger regroup and stronger future composition (0.87012ms)
+✔ EC-04 deterministic commander replay and ledger conservation (87.741863ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 161.551622
+✔ review EC-02 reserve and cooldown reject without invoking deployment factory (1.00741ms)
+✔ review AI-01 redirects paid assembling replacement without charging or duplicate order (3.280674ms)
+✔ review AI-02 emergency immediately preempts assembling wave despite decision cooldown (2.882872ms)
+✔ review AI-04 tenth casualty stops support purchases immediately during regroup (13.5325ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 32.233548
+✔ review EC-07 mirrored HQ emergency interrupts gathering and charges identical reserve (5.192245ms)
+✔ review SQ-01/02 mirrored rally holds without snapping and limits joined formation (0.738117ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 21.333816
+✔ H-START/FLIGHT/TURN neutral pad, accepted cyclic lag and momentum (7.389245ms)
+✔ H-LANDING hard contact damages once; world/ceiling bounds are finite (4.145122ms)
+✔ H-REPAIR exact5/s only parked, cap100 and dead cannot revive (1.100139ms)
+✔ H-DEATH/RESPAWN unique identity after exactly10s; no duplicate death (0.486248ms)
+✔ AA-INTERCEPT independent numeric ballistic oracle hover (3.382267ms)
+✔ AA-INTERCEPT independent numeric ballistic oracle approach (0.857561ms)
+✔ AA-INTERCEPT independent numeric ballistic oracle diagonal (0.415832ms)
+✔ AA-INTERCEPT independent numeric ballistic oracle behind (0.35224ms)
+✔ AA-PRIORITY helicopter immediately preempts ground aim, full aim and shared reload (1.594454ms)
+✔ AA-UNREACHABLE no friendly/dead/impossible diversion; ground lock retained (0.579343ms)
+✔ AA-SCATTER exact inherited error anchors and one RNG draw, fallback does not resample (0.903762ms)
+✔ AA-NOHOMING/EVADE same committed arc; steady hit, early acceleration/braking can evade (49.980973ms)
+✔ AA-FUSE range crossing is radial600 with exact substep event and visible cause (0.708365ms)
+✔ AA-PROXIMITY near miss detonates at closest approach for5, direct20 never stacks (13.218119ms)
+✔ AA-BLAST2D airburst above infantry causes no phantom ground damage or friendly hull damage (1.400146ms)
+✔ HG-CADENCE/MUZZLE 8/s, aircraft velocity inherited and turning transform matches gun (1.475198ms)
+✔ HG-SWEEP/TEAM fast bullets hit first actual enemy shape, not friendly or wrong-height (0.660527ms)
+✔ HG-COVER/ODDS contact-only independent10%/1HP; rifle5%/0.5 preserved (20.719159ms)
+✔ AA-GROUP group1 uses1 air and remaining ground with stable assignments (1.757438ms)
+✔ AA-GROUP group2 uses1 air and remaining ground with stable assignments (0.552895ms)
+✔ AA-GROUP group3 uses2 air and remaining ground with stable assignments (1.260265ms)
+✔ AA-GROUP group4 uses3 air and remaining ground with stable assignments (1.730504ms)
+✔ AA-GROUP group5 uses3 air and remaining ground with stable assignments (0.718ms)
+✔ AA-GROUP group6 uses4 air and remaining ground with stable assignments (1.999702ms)
+✔ AA-GROUP no unused capacity: all air if no ground target, separated groups cannot share distant quota (0.245652ms)
+✔ H-FLIGHT-REFERENCE airborne traces match unchanged actual Flight School source (7.593716ms)
+✔ AA-ELIGIBLE true muzzle-distance boundary224.99 (0.71189ms)
+✔ AA-ELIGIBLE true muzzle-distance boundary225 (0.113127ms)
+✔ AA-ELIGIBLE true muzzle-distance boundary250 (0.071144ms)
+✔ AA-ELIGIBLE true muzzle-distance boundary600 (0.064436ms)
+✔ AA-ELIGIBLE true muzzle-distance boundary600.01 (0.061061ms)
+✔ HG-CADENCE subframe shots travel only after their actual birth time (0.177905ms)
+✔ AA-SCATTER recorded scattered intercept agrees with actual trajectory and signed aim error (0.480291ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 148.02256
+✔ AA-COLLISION independent coarse/fine event equivalence (75.0225ms)
+✔ AA-COLLISION initial receding envelope and initial direct resolve immediately exactly once (0.44026ms)
+✔ H-DEATH parked dead aircraft cannot repair and repeated damage cannot restart timer (0.931878ms)
+✔ AA-GROUP disconnected factions/groups and capability fallback never assign unavailable threats (4.40556ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 96.687933
+✔ BAL-02 paid replacement waits ten seconds and enough supply, charges exactly once (38.546128ms)
+✔ BAL-02 transaction failure and replacement do not alter troop cooldown (5.237308ms)
+✔ BAL-03 gun spends exactly120 rounds over15 seconds then cannot fire (5.155258ms)
+✔ BAL-03 parked reload30/s, cap, fire/moving/off-pad/dead restrictions (0.439193ms)
+✔ BAL-04 exposure threshold, hysteresis, friendly and destroyed filtering (0.427178ms)
+✔ BAL-04 red buys paid anti-air rather than rifle spam, no duplicates and cooldown/cap (6.618406ms)
+✔ BAL-05 staggered air launches retain aim/reload and committed trajectories (79.479466ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 167.870118
+✔ MENU-01/02 session transitions discard practice progress and validate modes (4.140709ms)
+✔ MENU-03 goals do not advance on time, wrong position, incomplete turn or partial purchases (0.404534ms)
+✔ MENU-03 gun progress uses cumulative count even after history ring fills (2.371354ms)
+✔ MENU-03 completion requires landed, stationary, fully rearmed pad state (0.515264ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 26.437433

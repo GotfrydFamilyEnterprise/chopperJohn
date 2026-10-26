@@ -2,7 +2,7 @@
   "id": "./battlefield.html",
   "name": "ChopperJohn Battlefield",
   "short_name": "ChopperJohn",
-  "start_url": "./battlefield.html?view=rockets",
+  "start_url": "./battlefield.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#101b2c",

@@ -1,0 +1,24 @@
+
+Running 10 tests using 1 worker
+
+(node:61245) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:61245) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/compact-ui.spec.js:12:5 › UI-01/02 compact primary controls and expanded menu 844 (1.4s)
+  ✓   2 tests/compact-ui.spec.js:12:5 › UI-01/02 compact primary controls and expanded menu 740 (1.3s)
+  ✓   3 tests/compact-ui.spec.js:12:5 › UI-01/02 compact primary controls and expanded menu 390 (2.2s)
+  ✓   4 tests/compact-ui.spec.js:88:1 › UI-01 menu releases held fire and keyboard input; camera uses reclaimed landscape area (604ms)
+  ✓   5 tests/session-menu.spec.js:46:1 › MENU-01/04 normal menu version/copyright, no ticking or inputs, clean new game (956ms)
+  ✓   6 tests/session-menu.spec.js:78:1 › MENU-02 end game releases held keys/projectiles, closes menus and freezes session, repeat starts (1.6s)
+  ✓   7 tests/session-menu.spec.js:121:1 › MENU-03 complete tutorial using actual controls and normal purchases, then fresh live battle (1.8s)
+  ✓   8 tests/session-menu.spec.js:172:1 › MENU-01/03/04 phone layouts, tutorial restart/end and keyboard focus (3.5s)
+  ✓   9 tests/session-menu.spec.js:217:1 › MENU-05 Tutorial welcome is a separate frozen launch path, with end/back and safe empty range (1.6s)
+  ✓  10 tests/touch-guards.spec.js:2:1 › UI-03 long press cannot select control text or open context menus; held fire and turn remain usable (1.8s)
+
+  10 passed (20.2s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
