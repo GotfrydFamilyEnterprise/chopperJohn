@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"><title>ChopperJohn | Battlefield</title>
+<link rel="manifest" href="./battlefield.webmanifest"><meta name="theme-color" content="#101b2c"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="ChopperJohn">
 <style>
 *{box-sizing:border-box}html,body{margin:0;height:100%;overflow:hidden;background:#101b2c;font-family:system-ui,-apple-system,sans-serif;color:#eef7ff;touch-action:none}canvas{display:block;width:100vw;height:100dvh;touch-action:none}
 #top{position:fixed;top:env(safe-area-inset-top);left:0;right:0;display:flex;gap:8px;align-items:center;justify-content:space-between;padding:9px 12px;background:#0b1727d8;font-size:12px}
@@ -10,10 +11,12 @@ button:disabled{opacity:.45}button.rocket{background:#73532cdd}button.red{backgr
 #help{position:fixed;bottom:calc(env(safe-area-inset-bottom) + 65px);left:50%;transform:translateX(-50%);padding:5px 10px;border-radius:8px;background:#0b1727c8;font-size:11px;white-space:nowrap;pointer-events:none}
 @media(max-width:580px){button{font-size:11px;padding:9px 7px}#help{font-size:10px;bottom:calc(env(safe-area-inset-bottom) + 90px)}#top{font-size:11px}}
 @media(max-height:500px){#economies{top:44px;padding:5px 10px}#help{top:105px;bottom:auto}#tools{gap:4px}#tools button{font-size:11px;padding:8px 7px}}
+dialog{max-width:min(90vw,420px);border:1px solid #91aec7;border-radius:14px;background:#14283d;color:#eef7ff;padding:20px;touch-action:auto}dialog::backdrop{background:#000a}dialog p{font-size:15px;line-height:1.5}dialog form{text-align:right}html:fullscreen,html:-webkit-full-screen{background:#101b2c}
 </style></head><body>
 <canvas id="field"></canvas>
-<div id="top"><span><b>ChopperJohn · Battlefield v0.8</b> <span id="count"></span></span><span><a href="./index.html">Flight School</a> · <a href="#" id="reset">Reset</a></span></div>
+<div id="top"><span><b>ChopperJohn · Battlefield v0.8.1</b> <span id="count"></span></span><span><a href="./index.html">Flight School</a> · <a href="#" id="reset">Reset</a></span></div>
 <div id="economies"><div id="blueEconomy" role="status" aria-label="Blue strategy">Blue · 120/240 Supply · +5/s · Reinforcing FOB</div><div id="redEconomy" role="status" aria-label="Red strategy">Red · 120/240 Supply · +5/s · Reinforcing FOB</div></div>
 <div id="help">Drag to pan · Rockets 225–600 · Follow rockets to watch</div>
-<div id="tools"><button id="blueRifle">Blue rifle · 25</button><button class="rocket" id="blueRocket">Blue rocket · 60</button><button id="jumpBlue">Blue FOB</button><button id="jumpRed">Red FOB</button><button id="followRockets">Follow rockets</button><button id="pause">Pause</button></div>
-<script type="module" src="./js/battlefield/battlefieldScene.js?v=0.8.0"></script></body></html>
+<div id="tools"><button id="blueRifle">Blue rifle · 25</button><button class="rocket" id="blueRocket">Blue rocket · 60</button><button id="jumpBlue">Blue FOB</button><button id="jumpRed">Red FOB</button><button id="followRockets">Follow rockets</button><button id="fullscreen" aria-pressed="false">Fullscreen</button><button id="pause">Pause</button></div>
+<dialog id="fullscreenHelp" aria-labelledby="fullscreenTitle"><h2 id="fullscreenTitle">Fullscreen play</h2><p id="fullscreenMessage"></p><form method="dialog"><button>Got it</button></form></dialog>
+<script type="module" src="./js/battlefield/battlefieldScene.js?v=0.8.1.1"></script></body></html>

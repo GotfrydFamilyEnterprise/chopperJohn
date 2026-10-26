@@ -29,3 +29,6 @@ After accepting and merging PR3, user approved one-resource red provisioning:120
 
 ## v0.8 — user requests fair economy for both sides
 User explicitly supersedes the red-only economy: apply identical accounting and limits to blue and red. Reuse one faction-parameterized commander with mirrored geometry, automatically buying garrisons and waves on both sides. Preserve optional blue intervention through paid, capped, cooldown-limited buttons. User follow-up explicitly requests five free soldiers for each side, matching the prior blue opening:3 rifles+2 rockets, mirrored starting positions, with2 rifles+1 rocket assigned to staff each FOB and the remainder advancing. Both accounts still start at120; all later units cost Supply. Preserve first-minute natural rocket firing.
+
+## Fullscreen control
+User requests an on-screen way to hide the browser top bar. Add a Battlefield view-only fullscreen toggle using standard/vendor document-root APIs where supported. iPhone browsers may not support arbitrary element fullscreen; provide honest Safari Home Screen instructions plus standalone manifest/Apple metadata instead of pretending a CSS change hides browser chrome. No Flight School changes or automatic merge.

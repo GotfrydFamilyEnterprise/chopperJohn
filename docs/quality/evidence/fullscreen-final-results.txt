@@ -1,0 +1,206 @@
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:34] "GET / HTTP/1.1" 200 -
+
+Running 9 tests using 1 worker
+
+(node:22205) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:22205) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /battlefield.html?test HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/battlefieldScene.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/ui/fullscreen.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/units/rocketeer.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/bases/baseCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/units/soldierCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/bases/forwardBase.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/units/rifleman.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/bases/headquarters.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/combat/weapons.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/ai/redCommander.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/combat/effects.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/economy/supply.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/ui/redEconomyPanel.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/economy/supply.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/ai/strategy.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/ai/squads.js HTTP/1.1" 200 -
+  ✓  1 tests/fullscreen-adversarial-review.spec.js:7:1 › FS-02 unsupported explanation and dismissal preserve paused game and camera (413ms)
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /battlefield.html?test HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/battlefieldScene.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/ui/fullscreen.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/units/rifleman.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/units/soldierCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/bases/headquarters.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/bases/baseCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/units/rocketeer.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/bases/forwardBase.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/combat/effects.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/ai/redCommander.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/combat/weapons.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/ui/redEconomyPanel.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/economy/supply.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/economy/supply.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/ai/strategy.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:35] "GET /js/battlefield/ai/squads.js HTTP/1.1" 200 -
+  ✓  2 tests/fullscreen-adversarial-review.spec.js:29:1 › FS-02 rejected request remains inactive and handles Escape (218ms)
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /battlefield.html?test HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/battlefieldScene.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/units/soldierCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ui/fullscreen.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/units/rocketeer.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/units/rifleman.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/bases/forwardBase.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ai/redCommander.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ui/redEconomyPanel.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/combat/weapons.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/combat/effects.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/bases/baseCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/bases/headquarters.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/economy/supply.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ai/strategy.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/economy/supply.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ai/squads.js HTTP/1.1" 200 -
+  ✓  3 tests/fullscreen-adversarial-review.spec.js:45:1 › FS-02 standalone does not request fullscreen (196ms)
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /battlefield.html?test HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/battlefieldScene.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/units/soldierCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ui/fullscreen.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/units/rifleman.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/bases/headquarters.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/bases/baseCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/units/rocketeer.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/combat/weapons.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/bases/forwardBase.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/combat/effects.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ai/redCommander.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ui/redEconomyPanel.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/economy/supply.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/economy/supply.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ai/squads.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ai/strategy.js HTTP/1.1" 200 -
+  ✓  4 tests/fullscreen-adversarial-review.spec.js:61:1 › FS-01 vendor change and browser exit synchronize (270ms)
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /battlefield.html?test HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/battlefieldScene.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/units/rifleman.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/bases/headquarters.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/units/soldierCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/bases/baseCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ui/fullscreen.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/units/rocketeer.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/economy/supply.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/combat/effects.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ui/redEconomyPanel.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ai/redCommander.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/bases/forwardBase.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/combat/weapons.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/economy/supply.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ai/squads.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:36] "GET /js/battlefield/ai/strategy.js HTTP/1.1" 200 -
+  ✓  5 tests/fullscreen-adversarial-review.spec.js:87:1 › FS-01 actual root fullscreen preserves state and browser exit updates button (488ms)
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /battlefield.html?test HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/battlefieldScene.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/ui/fullscreen.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/units/rifleman.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/units/rocketeer.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/units/soldierCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/bases/headquarters.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/bases/baseCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/combat/weapons.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/bases/forwardBase.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/ai/redCommander.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/ui/redEconomyPanel.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/combat/effects.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/economy/supply.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/ai/strategy.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/economy/supply.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/ai/squads.js HTTP/1.1" 200 -
+  ✓  6 tests/fullscreen.spec.js:3:1 › FS-01/03 actual fullscreen enter, button exit and browser exit preserve paused game (673ms)
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /battlefield.html?test HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/battlefieldScene.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/ui/fullscreen.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/units/soldierCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/units/rifleman.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/bases/headquarters.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/bases/baseCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/units/rocketeer.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/bases/forwardBase.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/combat/weapons.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/combat/effects.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/ui/redEconomyPanel.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/economy/supply.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/ai/redCommander.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/economy/supply.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/ai/strategy.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:37] "GET /js/battlefield/ai/squads.js HTTP/1.1" 200 -
+  ✓  7 tests/fullscreen.spec.js:28:1 › FS-02 unsupported browser shows honest iPhone guidance, closes and retains gameplay (287ms)
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /battlefield.html?test HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/battlefieldScene.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/ui/fullscreen.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/units/soldierCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/bases/baseCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/combat/weapons.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/bases/forwardBase.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/units/rocketeer.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/bases/headquarters.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/units/rifleman.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/ai/redCommander.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/combat/effects.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/ui/redEconomyPanel.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/economy/supply.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/economy/supply.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/ai/strategy.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/ai/squads.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /battlefield.webmanifest HTTP/1.1" 200 -
+  ✓  8 tests/fullscreen.spec.js:56:1 › FS-02 rejected requests and standalone launch never falsely report native fullscreen (315ms)
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /battlefield.html?test HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/battlefieldScene.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/ui/fullscreen.js?v=0.8.1 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/units/soldierCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/units/rifleman.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/units/rocketeer.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/bases/baseCommon.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/bases/headquarters.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/ui/redEconomyPanel.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/economy/supply.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/combat/effects.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/ai/redCommander.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/bases/forwardBase.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/combat/weapons.js?v=0.8.0 HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/combat/weapons.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/units/soldierCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/bases/baseCommon.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/economy/supply.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/ai/strategy.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/ai/squads.js HTTP/1.1" 200 -
+[2m[WebServer] [22m127.0.0.1 - - [26/Oct/2026 03:51:38] "GET /js/battlefield/ui/fullscreen.js?v=0.8.1 HTTP/1.1" 304 -
+  ✓  9 tests/fullscreen.spec.js:85:1 › FS-03 portrait and landscape fullscreen button remains visible without overlapping other controls (331ms)
+
+  9 passed (4.7s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice
