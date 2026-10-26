@@ -35,3 +35,6 @@ User requests an on-screen way to hide the browser top bar. Add a Battlefield vi
 
 ## V1.1 — manual blue and helicopter logistics
 User accepted the proposed balance pass and explicitly rejected automatic blue troop purchases. Preserve equal account rules and five free openings, but blue infantry spending is exclusively manual. Build90-supply replacement after10s minimum,120-round gun with30/s parked rearm, red paid air-response and staggered anti-air without changing flight feel or damage. See BAL-01..05 for tuning and exact scope. No hull performance penalty or new victory system in this pass.
+
+## V1.2 main menu and tutorial
+User asks for New Game and Tutorial from a versioned main menu, ending either through the dropdown, and copyright Ilya Gotfryd2026. Implement an isolated six-goal battlefield practice tutorial using real controls, rather than changing the separate accepted Flight School. The main menu freezes simulation; New Game always resets. No save/resume or victory system implied.
