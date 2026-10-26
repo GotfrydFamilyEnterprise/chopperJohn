@@ -35,3 +35,7 @@ Keep historical Flight School, absorbed-hit feedback, visible near/far scatter a
 ## Final documentation corrections
 
 The implementer corrected the remaining600-path wording to selected maximum-reach fuse, marked projectile speed/lifetime and full-hull respawn as proposed, and added explicit matrix entries for H-CONTRACT, HG-MUZZLE/HG-CADENCE, AA-LIFETIME and H-PAD. This records documentation changes only; pending user decisions and future executable validation remain open.
+
+## Subsequent user decisions
+
+After this planning review, the user explicitly selected physical direct hits or closest-approach near-miss bursts within25 units, and5 hull/s repair while landed and stationary on the pad. Those two design questions are now resolved in the plan. The earlier pending findings above describe the reviewed draft; they are not current blockers. Other labeled tuning proposals remain proposals. No gameplay implementation, tests or independent behavioral approval are asserted by this documentation update.
