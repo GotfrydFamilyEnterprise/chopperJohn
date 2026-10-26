@@ -24,7 +24,7 @@ export function drawCombatEffects(ctx, rockets, explosions, impacts) {
     ctx.fillStyle = explosion.age < 0.12 ? '#ffed9c' : '#b49a74';
     ctx.beginPath(); ctx.ellipse(explosion.x, explosion.y - 7, 8 + 17 * Math.min(1, life * 4), 8 + 20 * life, 0, 0, Math.PI * 2); ctx.fill();
     ctx.strokeStyle = '#f1b265'; ctx.lineWidth = 2;
-    ctx.beginPath(); ctx.ellipse(explosion.x, explosion.y, WEAPONS.blastRadius, 5, 0, 0, Math.PI * 2); ctx.stroke();
+    ctx.beginPath(); ctx.ellipse(explosion.x, explosion.y, WEAPONS.blastRadius, explosion.air?WEAPONS.blastRadius:5, 0, 0, Math.PI * 2); ctx.stroke();
     ctx.fillStyle = '#a68c68';
     for (let i = 0; i < 6; i++) {
       const x = explosion.x + (i - 2.5) * life * 14;

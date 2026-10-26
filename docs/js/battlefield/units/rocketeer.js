@@ -12,7 +12,7 @@ export function drawRocketeer(ctx,u){
  ctx.strokeStyle=p.colors.body;ctx.lineWidth=3;
  if(aiming){
    // Launcher is horizontal and supported at the shoulder.
-   ctx.save();ctx.translate(0,-42-b);ctx.rotate(-WEAPONS.rocketAngle);
+   ctx.save();ctx.translate(0,-42-b);ctx.rotate(u.rocketAirAim??-WEAPONS.rocketAngle);
    ctx.fillStyle="#626b5d";ctx.fillRect(-5,-4,39,9);
    ctx.fillStyle="#c0ad7f";ctx.fillRect(27,-6,8,4);ctx.restore();
    p.line([0,-34-b],[6,-43-b]);p.line([6,-43-b],[14,-56-b]);

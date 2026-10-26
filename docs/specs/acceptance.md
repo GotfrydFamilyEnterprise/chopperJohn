@@ -73,3 +73,14 @@ Every PR must provide a requirements traceability table: ID, implementation path
 | FS-01 | Enter actual Chromium fullscreen by button; exit by button and browser API | Root is fullscreen, all controls retained; label/pressed state synchronized; state preserved |
 | FS-02 | Remove fullscreen API; reject promise; simulate standalone | Honest dismissible help, Home Screen steps; no unhandled rejection; standalone does not request fullscreen |
 | FS-03 | Phone portrait/landscape screenshots, pause/reset/deployment after toggle | Usable control layout, canvas matches viewport, same simulation state; existing gameplay suite passes |
+
+
+## V1 priorities and isolated interaction acceptance
+| ID | Scenario | Required observation |
+|---|---|---|
+| AA-PRIORITY | Ground firefight, helicopter arrives during aim/reload; then leaves/dies/unreachable | Lone eligible rocket switches immediately, full new0.7s aim, shared reload retained; rifles keep ground targets; existing rockets remain unguided |
+| AA-GROUP |2/3/4/5/6 launchers with mixed threats; lose one threat, lose member/capability, separated clusters |1/1,2/1,3/1,3/2,4/2 split where capable; stable assignments, legitimate fallback, no free shots or guard movement |
+| QA-H02 | Independently gate flight/troops/weapons/projectiles/damage/repair/commanders | Frozen selected subsystem while others run; no fixture-only PASS substituted for actual ordinary play |
+| V1-NATURAL | Actual joystick flight from blue pad into ordinary battle | Paid red launcher fires ballistic anti-air; hull damage, visible committed flight/bursts; no hidden spawn dependency |
+
+Detailed H/HG/AA assertions, boundary cases and screenshot checklist remain in `v1-helicopter-plan.md`. Evidence must be recorded separately; this table is not a PASS claim.

@@ -12,11 +12,21 @@ button:disabled{opacity:.45}button.rocket{background:#73532cdd}button.red{backgr
 @media(max-width:580px){button{font-size:11px;padding:9px 7px}#help{font-size:10px;bottom:calc(env(safe-area-inset-bottom) + 90px)}#top{font-size:11px}}
 @media(max-height:500px){#economies{top:44px;padding:5px 10px}#help{top:105px;bottom:auto}#tools{gap:4px}#tools button{font-size:11px;padding:8px 7px}}
 dialog{max-width:min(90vw,420px);border:1px solid #91aec7;border-radius:14px;background:#14283d;color:#eef7ff;padding:20px;touch-action:auto}dialog::backdrop{background:#000a}dialog p{font-size:15px;line-height:1.5}dialog form{text-align:right}html:fullscreen,html:-webkit-full-screen{background:#101b2c}
+#pilotStatus{position:fixed;left:8px;right:8px;top:calc(env(safe-area-inset-top) + 124px);font-size:11px;color:#cce8fa;text-align:center;pointer-events:none}
+#tools{bottom:calc(env(safe-area-inset-bottom) + 150px)}#help{bottom:calc(env(safe-area-inset-bottom) + 230px);white-space:normal;text-align:center;width:max-content;max-width:95vw}
+#pilotControls{position:fixed;inset:0;pointer-events:none}#pilotStick,#heliTurn,#heliFire{position:absolute;pointer-events:auto;touch-action:none}
+#pilotStick{left:calc(env(safe-area-inset-left) + 18px);bottom:calc(env(safe-area-inset-bottom) + 18px);width:112px;height:112px;border:2px solid #ffffff70;border-radius:50%;background:#19355099}
+#pilotKnob{position:absolute;left:36px;top:36px;width:36px;height:36px;border-radius:50%;background:#b9e5ffbb;border:2px solid white;pointer-events:none}
+#heliFire{right:calc(env(safe-area-inset-right) + 18px);bottom:calc(env(safe-area-inset-bottom) + 24px);width:86px;height:86px;border-radius:50%;background:#a83e49dd;font-size:16px}
+#heliTurn{right:calc(env(safe-area-inset-right) + 116px);bottom:calc(env(safe-area-inset-bottom) + 40px);width:68px;height:68px;border-radius:50%;background:#285e88dd;font-size:11px}
+@media(max-height:500px){#pilotStatus{top:90px}#tools{top:108px;bottom:auto}#help{display:none}}
+#battleHUD{position:fixed;top:calc(env(safe-area-inset-top) + 72px);left:8px;right:8px}#battleHUD #economies{position:static}#battleHUD #pilotStatus{position:static;margin-top:4px}@media(max-height:500px){#battleHUD{top:44px}}
 </style></head><body>
 <canvas id="field"></canvas>
-<div id="top"><span><b>ChopperJohn · Battlefield v0.8.1</b> <span id="count"></span></span><span><a href="./index.html">Flight School</a> · <a href="#" id="reset">Reset</a></span></div>
-<div id="economies"><div id="blueEconomy" role="status" aria-label="Blue strategy">Blue · 120/240 Supply · +5/s · Reinforcing FOB</div><div id="redEconomy" role="status" aria-label="Red strategy">Red · 120/240 Supply · +5/s · Reinforcing FOB</div></div>
-<div id="help">Drag to pan · Rockets 225–600 · Follow rockets to watch</div>
-<div id="tools"><button id="blueRifle">Blue rifle · 25</button><button class="rocket" id="blueRocket">Blue rocket · 60</button><button id="jumpBlue">Blue FOB</button><button id="jumpRed">Red FOB</button><button id="followRockets">Follow rockets</button><button id="fullscreen" aria-pressed="false">Fullscreen</button><button id="pause">Pause</button></div>
+<div id="top"><span><b>ChopperJohn · Battlefield v1.0</b> <span id="count"></span></span><span><a href="./index.html">Flight School</a> · <a href="#" id="reset">Reset</a></span></div>
+<div id="battleHUD"><div id="economies"><div id="blueEconomy" role="status" aria-label="Blue strategy">Blue · 120/240 Supply · +5/s · Reinforcing FOB</div><div id="redEconomy" role="status" aria-label="Red strategy">Red · 120/240 Supply · +5/s · Reinforcing FOB</div></div>
+<div id="pilotStatus" role="status">Hull100/100 · Landed</div></div><div id="help">Stick: pitch/lift · FIRE · TURN · WASD / arrows · Space / T</div>
+<div id="tools"><button id="blueRifle">Blue rifle · 25</button><button class="rocket" id="blueRocket">Blue rocket · 60</button><button id="jumpBlue">Blue FOB</button><button id="jumpRed">Red FOB</button><button id="followHelicopter">Follow heli</button><button id="followRockets">Follow rockets</button><button id="fullscreen" aria-pressed="false">Fullscreen</button><button id="pause">Pause</button></div>
+<div id="pilotControls"><div id="pilotStick" role="group" aria-label="Flight joystick"><div id="pilotKnob"></div></div><button id="heliTurn" aria-label="Turn helicopter">↻ TURN</button><button id="heliFire" aria-label="Fire helicopter machine gun">FIRE</button></div>
 <dialog id="fullscreenHelp" aria-labelledby="fullscreenTitle"><h2 id="fullscreenTitle">Fullscreen play</h2><p id="fullscreenMessage"></p><form method="dialog"><button>Got it</button></form></dialog>
-<script type="module" src="./js/battlefield/battlefieldScene.js?v=0.8.1.1"></script></body></html>
+<script type="module" src="./js/battlefield/battlefieldScene.js?v=1.0.0"></script></body></html>
