@@ -1,11 +1,11 @@
 import {createSoldier,drawBody,endBody,updateWalking} from "./soldierCommon.js";
 import {WEAPONS} from "../combat/weapons.js";
 export function createRocketeer(id,team,x,ground){return createSoldier(id,team,"rocket",x,ground);}
-export function updateRocketeer(u,dt,enemyNearby){
+export function updateRocketeer(u,dt,enemyNearby,maxSpeed=Infinity){
  // RC-02: scene weapon logic owns aiming/reload; this preserves the accepted gait.
  u.state=u.guardBase!==null?"fireStop":enemyNearby?"fireStop":"march";
- if(enemyNearby)u.timer+=dt;
- else updateWalking(u,dt,1);
+ if(enemyNearby||u.guardBase!==null||maxSpeed<=0)u.timer+=dt;
+ else updateWalking(u,dt,Math.min(1,maxSpeed/Math.abs(u.velocity||1)));
 }
 export function drawRocketeer(ctx,u){
  const aiming=u.state==="fireStop",p=drawBody(ctx,u,aiming?0:1),b=p.bob;

@@ -22,3 +22,7 @@ User visually accepted the FOB gameplay and authorized merge of PR #2. The subse
 ### User follow-up: no visible firing, farther range, autonomous targets and leading
 
 The original v0.6 default wave never fired a rocket in a 180-second replay: all rocketeers became out-of-range bunker guards. Adding rockets manually fired after ~43 seconds, off the starting camera. Address with a normal assault rocket per faction, a Follow rockets view and observable launch counts. User explicitly superseded no-leading design: predict moving targets from observed movement, then commit the unguided ballistic trajectory. User selected a 600-unit maximum; the original 225 minimum and 25-unit overlap remain. Preserve the original 500±50 precision anchor and extend to 600±66.
+
+## User-approved red economy
+
+After accepting and merging PR3, user approved one-resource red provisioning:120 start,5/s,240 stored, rifle25/rocket60,2-second deployments,15 living soldiers. No FOB income/upkeep. Automatic garrison repair, HQ emergency, coordinated3R+2RO or2R+3RO waves, reserve and loss adaptation; blue stays manual for testing. User explicitly requested proper code isolation. New red units must be paid, replacing its formerly free initial wave. Reserve60, threat radius800, regroup12s after2 wiped groups/10 field casualties and360 formation gap are implementation tuning values recorded for review. No HQ health/victory, reverse-facing retreat or new weapons are added.

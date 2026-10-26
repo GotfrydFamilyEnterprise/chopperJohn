@@ -1,13 +1,40 @@
 {
+  "redAIEnabled": false,
+  "redCommander": {
+    "supply": {
+      "balance": 120,
+      "time": 0,
+      "cooldown": 0,
+      "earned": 0,
+      "overflow": 0,
+      "spent": 0,
+      "purchases": 0,
+      "ledger": []
+    },
+    "squads": [],
+    "nextSquadId": 1,
+    "strategy": {
+      "mode": "GARRISON",
+      "label": "Reinforcing FOB"
+    },
+    "nextDecisionAt": 0,
+    "regroupUntil": 0,
+    "fieldLosses": 0,
+    "failedWaves": 0,
+    "stronger": false,
+    "events": [],
+    "blockReason": "ready",
+    "observations": null
+  },
   "time": 17.500000000000288,
   "units": [
     {
-      "id": 11,
+      "id": 6,
       "team": 0,
       "type": "rifle",
       "x": 1077,
       "y": 460,
-      "phase": 0.47818181818186045,
+      "phase": 0.9281818181818601,
       "velocity": 47,
       "state": "guard",
       "timer": 0,
@@ -20,12 +47,12 @@
       "arrived": true
     },
     {
-      "id": 12,
+      "id": 7,
       "team": 0,
       "type": "rifle",
       "x": 1163,
       "y": 460,
-      "phase": 0.7427272727273907,
+      "phase": 0.19272727272739076,
       "velocity": 47,
       "state": "guard",
       "timer": 0,
@@ -38,12 +65,12 @@
       "arrived": true
     },
     {
-      "id": 13,
+      "id": 8,
       "team": 0,
       "type": "rocket",
       "x": 1120,
       "y": 460,
-      "phase": 0.07545454545471136,
+      "phase": 0.5254545454547113,
       "velocity": 33,
       "state": "fireStop",
       "timer": 0,
@@ -60,12 +87,12 @@
       "rocketGoal": null
     },
     {
-      "id": 14,
+      "id": 9,
       "team": 1,
       "type": "rifle",
       "x": 1300,
       "y": 460,
-      "phase": 0.33999999999999986,
+      "phase": 0.79,
       "velocity": 0,
       "state": "fireWalk",
       "timer": 10.833333333333451,
@@ -136,20 +163,20 @@
       "main": false,
       "slots": {
         "rifle": [
-          11,
-          12
+          6,
+          7
         ],
         "rocket": [
-          13
+          8
         ]
       },
       "reservations": {
         "rifle": [
-          11,
-          12
+          6,
+          7
         ],
         "rocket": [
-          13
+          8
         ]
       },
       "state": "OCCUPIED",
@@ -203,7 +230,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9999
     },
@@ -212,7 +239,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -221,7 +248,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9998
     },
@@ -230,7 +257,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9997
     },
@@ -239,7 +266,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -248,7 +275,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9996
     },
@@ -257,7 +284,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9995
     },
@@ -266,7 +293,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -275,7 +302,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9994
     },
@@ -284,7 +311,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9993
     },
@@ -293,7 +320,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -302,7 +329,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9992
     },
@@ -311,7 +338,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9991
     },
@@ -320,7 +347,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -329,7 +356,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9990
     },
@@ -338,7 +365,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9989
     },
@@ -347,7 +374,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -356,7 +383,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9988
     },
@@ -365,7 +392,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9987
     },
@@ -374,7 +401,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -383,7 +410,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9986
     },
@@ -392,7 +419,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9985
     },
@@ -401,7 +428,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -410,7 +437,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9984
     },
@@ -419,7 +446,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9983
     },
@@ -428,7 +455,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -437,7 +464,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9982
     },
@@ -446,7 +473,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9981
     },
@@ -455,7 +482,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -464,7 +491,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9980
     },
@@ -473,7 +500,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9979
     },
@@ -482,7 +509,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -491,7 +518,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9978
     },
@@ -500,7 +527,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9977
     },
@@ -509,7 +536,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -518,7 +545,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9976
     },
@@ -527,7 +554,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9975
     },
@@ -536,7 +563,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -545,7 +572,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9974
     },
@@ -554,7 +581,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9973
     },
@@ -563,7 +590,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -572,7 +599,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9972
     },
@@ -581,7 +608,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9971
     },
@@ -590,7 +617,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -599,7 +626,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9970
     },
@@ -608,7 +635,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9969
     },
@@ -617,7 +644,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -626,7 +653,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9968
     },
@@ -635,7 +662,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9967
     },
@@ -644,7 +671,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -653,7 +680,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9966
     },
@@ -662,7 +689,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9965
     },
@@ -671,7 +698,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -680,7 +707,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9964
     },
@@ -689,7 +716,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9963
     },
@@ -698,7 +725,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -707,7 +734,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9962
     },
@@ -716,7 +743,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9961
     },
@@ -725,7 +752,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -734,7 +761,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9960
     },
@@ -743,7 +770,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9959
     },
@@ -752,7 +779,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -761,7 +788,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9958
     },
@@ -770,7 +797,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9957
     },
@@ -779,7 +806,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -788,7 +815,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9956
     },
@@ -797,7 +824,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9955
     },
@@ -806,7 +833,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -815,7 +842,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9954
     },
@@ -824,7 +851,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9953
     },
@@ -833,7 +860,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -842,7 +869,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9952
     },
@@ -851,7 +878,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9951
     },
@@ -860,7 +887,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -869,7 +896,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9950
     },
@@ -878,7 +905,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9949
     },
@@ -887,7 +914,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -896,7 +923,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9948
     },
@@ -905,7 +932,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9947
     },
@@ -914,7 +941,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -923,7 +950,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9946
     },
@@ -932,7 +959,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9945
     },
@@ -941,7 +968,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -950,7 +977,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9944
     },
@@ -959,7 +986,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9943
     },
@@ -968,7 +995,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -977,7 +1004,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9942
     },
@@ -986,7 +1013,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9941
     },
@@ -995,7 +1022,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -1004,7 +1031,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9940
     },
@@ -1013,7 +1040,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9939
     },
@@ -1022,7 +1049,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 3
     },
@@ -1031,7 +1058,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9938
     },
@@ -1040,7 +1067,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9937
     },
@@ -1049,7 +1076,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0.5,
       "hp": 2.5
     },
@@ -1058,7 +1085,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9936
     },
@@ -1067,7 +1094,7 @@
       "type": "bulletHit",
       "team": 0,
       "covered": false,
-      "id": 14,
+      "id": 9,
       "amount": 1,
       "hp": 9935
     },
@@ -1076,7 +1103,7 @@
       "type": "bulletHit",
       "team": 1,
       "covered": true,
-      "id": 12,
+      "id": 7,
       "amount": 0,
       "hp": 2.5
     }

@@ -6,12 +6,14 @@
 a{color:#b8e1ff}#tools{position:fixed;bottom:calc(env(safe-area-inset-bottom) + 12px);left:8px;right:8px;display:flex;gap:7px;flex-wrap:wrap;justify-content:center}
 button{border:1px solid #91aec7;border-radius:10px;background:#1b4668e8;color:white;padding:11px 13px;font-weight:700;touch-action:manipulation}
 button.rocket{background:#73532cdd}button.red{background:#793b46e8}button.active{outline:3px solid #f1d16d}
+#redEconomy{position:fixed;top:calc(env(safe-area-inset-top) + 72px);left:8px;right:8px;padding:7px 10px;border:1px solid #aa6b64;border-radius:8px;background:#381e29ed;font-size:11px;line-height:1.4;pointer-events:none}
 #help{position:fixed;bottom:calc(env(safe-area-inset-bottom) + 65px);left:50%;transform:translateX(-50%);padding:5px 10px;border-radius:8px;background:#0b1727c8;font-size:11px;white-space:nowrap;pointer-events:none}
 @media(max-width:580px){button{font-size:11px;padding:9px 7px}#help{font-size:10px;bottom:calc(env(safe-area-inset-bottom) + 90px)}#top{font-size:11px}}
-@media(max-height:500px){#help{top:48px;bottom:auto}#tools{gap:4px}#tools button{font-size:11px;padding:8px 7px}}
+@media(max-height:500px){#redEconomy{top:44px;padding:5px 10px}#help{top:80px;bottom:auto}#tools{gap:4px}#tools button{font-size:11px;padding:8px 7px}}
 </style></head><body>
 <canvas id="field"></canvas>
-<div id="top"><span><b>ChopperJohn · Battlefield v0.6.1</b> <span id="count"></span></span><span><a href="./index.html">Flight School</a> · <a href="#" id="reset">Reset</a></span></div>
+<div id="top"><span><b>ChopperJohn · Battlefield v0.7</b> <span id="count"></span></span><span><a href="./index.html">Flight School</a> · <a href="#" id="reset">Reset</a></span></div>
+<div id="redEconomy" role="status" aria-label="Red strategy">Red · 120/240 Supply · +5/s · Reinforcing FOB</div>
 <div id="help">Drag to pan · Rockets 225–600 · Follow rockets to watch</div>
-<div id="tools"><button id="blueRifle">+ Blue rifle</button><button class="rocket" id="blueRocket">+ Blue rocket</button><button class="red" id="redRifle">+ Red rifle</button><button class="red rocket" id="redRocket">+ Red rocket</button><button id="jumpBlue">Blue FOB</button><button id="jumpRed">Red FOB</button><button id="followRockets">Follow rockets</button><button id="pause">Pause</button></div>
-<script type="module" src="./js/battlefield/battlefieldScene.js?v=0.6.1"></script></body></html>
+<div id="tools"><button id="blueRifle">+ Blue rifle</button><button class="rocket" id="blueRocket">+ Blue rocket</button><button id="jumpBlue">Blue FOB</button><button id="jumpRed">Red FOB</button><button id="followRockets">Follow rockets</button><button id="pause">Pause</button></div>
+<script type="module" src="./js/battlefield/battlefieldScene.js?v=0.7.0"></script></body></html>

@@ -72,3 +72,15 @@ The user reported no visible rocket fire, then requested farther range, autonomo
 - Added opt-in Follow rockets view, visible launch count, predicted aim marker and aiming/reloading/guarding/advancing labels. Fit origin/impact to phone screen, retain impact briefly, and exit follow on manual pan/arrow/FOB jump. Link: `battlefield.html?v=0.6.1&view=rockets`.
 - Validation: **24 browser tests passed** at confirmed600, **26 module checks passed**. Independent reviewer executed new math/target probes, authored browser follow/control tests, and inspected raw final logs, mirrored moving-target screenshots and ordinary-wave trace. See `docs/quality/rocket-natural-play-adversarial-review.md` and `evidence/rocket-leading-*`.
 - All new firing/leading/follow checks PASS; overall acceptance remains PARTIAL for previously documented near/far visible-miss comparison, absorbed-hit visual capture and full Flight School/physical iPhone regressions. No new merge authorization; PR3 stays unmerged.
+
+
+## v0.7 — red Supply economy and strategic squads
+
+User accepted and merged PR3, then approved the red economy and requested proper code isolation. New feature is on `feature/red-supply-and-strategy`; it is not automatically merged.
+
+- Red starts with 120 Supply and no free troops. HQ earns 5/s to a 240 cap. Rifle costs 25, rocket 60; every deployment observes a 2-second cooldown and 15-living-unit cap, including incoming troops and garrisons. Blue remains manual.
+- Separate pure modules own Supply transactions, public observation/strategy, squad readiness/movement and commander composition. A separate UI adapter renders status. Scene only injects spawn, ticks the controller and applies speed limits. See `docs/quality/red-economy-architecture.md`.
+- Priorities: HQ defense, FOB staffing/replacement (including already-paid incoming units), wave gathering, support for active squads and rocket-heavy bunker assaults. Wave purchases retain 60 Supply; emergencies may spend it. Actual troops walk to rally before release, and rifles march at the slowest joined unit's speed. Loss adaptation waits 12 seconds and strengthens future groups.
+- Validation: **30 browser checks passed**, including two unchanged independently authored emergency/HUD probes; **38 module checks passed**. Existing FOB/rocket behavior passed with the commander isolated in fixtures. Normal-game checks keep paid red provisioning enabled. Raw logs, transactions, rally traces and portrait/landscape screenshots are in `docs/quality/evidence/red-economy-*`.
+- Independent review found a regroup/cached-order purchase on the triggering tick; fixed by immediate strategy reevaluation and a rally hold. Independent regression confirms no purchases through the full regroup interval, then a stronger next wave. The original blank test-mode FOB camera capture was repaired by immediate redraw.
+- Review: `docs/quality/red-economy-adversarial-review.md`. New economy/AI/order checks PASS; broad Flight School/physical iPhone acceptance remains UNVERIFIED. No claim that all historical acceptance gaps are resolved. No merge without new user approval.

@@ -18,3 +18,6 @@ Playwright serves `docs/` at localhost:8000 and uses a 390×844 phone viewport. 
 - Review tests: see the independent review report for extra probes and limitations.
 
 Screenshots are saved in `docs/quality/evidence/`; Playwright attaches lifecycle JSON to results. CI uploads captures and test results. A Chromium phone viewport does not establish Safari or physical iPhone acceptance. GitHub Pages deployment is not implied by these local tests.
+
+
+v0.7: normal URLs start paid red AI and retain blue manual deployment. Test API `reset()` and `clear()` disable the commander for isolated combat scenarios; `redAI(true)` enables it explicitly. Fresh test page loads use the real opening economy. Snapshots include `redCommander` with account/ledger, strategy, squads and events. `tests/red-economy.spec.js` covers real purchases, rally movement, casualties, cap and pause/reset; independently authored `tests/red-economy-review.spec.js` covers emergency preemption and both HUD orientations. `npm run test:unit` includes isolated economy/controller/order probes and independent negative tests.

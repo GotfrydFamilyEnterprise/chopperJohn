@@ -37,7 +37,7 @@ test('RC-10 normal opening wave fires without manual deployments and follow show
  await page.evaluate(()=>battlefieldTest.step(30));
  await page.screenshot({path:'docs/quality/evidence/rocket-opening-follow.png'});
  await expect(page.locator('#count')).toContainText('launched');
- const both=await page.evaluate(()=>{battlefieldTest.step(600);return battlefieldTest.snapshot();});
+ const both=await page.evaluate(()=>{battlefieldTest.step(Math.max(0,Math.ceil((60-battlefieldTest.snapshot().time)*60)));return battlefieldTest.snapshot();});
  expect(new Set(both.combatEvents.filter(e=>e.type==='launch').map(e=>e.team)).size).toBe(2);
  writeFileSync('docs/quality/evidence/rocket-opening-follow-trace.json',JSON.stringify({first:result,both},null,2));
  await page.locator('#jumpBlue').click();expect((await page.evaluate(()=>battlefieldTest.snapshot())).followRockets).toBe(false);
