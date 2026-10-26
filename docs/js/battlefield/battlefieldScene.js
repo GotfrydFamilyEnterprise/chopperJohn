@@ -1,8 +1,9 @@
-import {pilotView,groundOffset} from "./ui/battlefieldCamera.js?v=1.0.0";
+import {installGameMenu} from "./ui/gameMenu.js?v=1.0.1";
+import {pilotView,groundOffset} from "./ui/battlefieldCamera.js?v=1.0.1";
 import {allocateRocketTargets} from "./combat/rocketAllocation.js?v=1.0.0";
 import {createHelicopter,updateHelicopter,repairHelicopter,turnHelicopter,damageHelicopter} from "./aircraft/helicopter.js?v=1.0.0";
 import {drawHelicopter,drawHelipad} from "./aircraft/helicopterRenderer.js?v=1.0.0";
-import {installPilotControls} from "./ui/pilotControls.js?v=1.0.0";
+import {installPilotControls} from "./ui/pilotControls.js?v=1.0.1";
 import {updatePrioritizedRocket} from "./combat/targetPriority.js?v=1.0.0";
 import {updateHelicopterGun,stepHelicopterBullet} from "./combat/helicopterGun.js?v=1.0.0";
 import {stepBattleRocket,resolveAirburstGround,helicopterBurstDamage} from "./combat/airRocketFlight.js?v=1.0.0";
@@ -17,7 +18,7 @@ import {drawForwardBase,occupied,assignDefender,releaseDeadDefenders,advanceDefe
 import {WEAPONS,createRandom,selectTarget,resolveRifleHit,resolveRocketBlast} from "./combat/weapons.js?v=1.0.0";
 import {drawCombatEffects} from "./combat/effects.js?v=1.0.0";
 import {createCommander,updateCommander,commanderMovementOrder} from "./ai/redCommander.js?v=1.0.0";
-import {renderRedEconomy} from "./ui/redEconomyPanel.js?v=1.0.0";
+import {renderRedEconomy} from "./ui/redEconomyPanel.js?v=1.0.1";
 import {purchaseUnit,purchaseStatus} from "./economy/supply.js?v=1.0.0";
 const cv=document.getElementById("field"),ctx=cv.getContext("2d");
 const W=3600,GROUND=460,DT=1/60;
@@ -141,13 +142,13 @@ function update(dt){if(paused)return;time+=dt;
  for(const b of bases)if(!b.main){releaseDeadDefenders(b,aliveIds);refreshOccupation(b);}
 }
 function draw(){
- document.getElementById("pilotStatus").textContent=helicopterEnabled?(helicopter.hp<=0?`Helicopter lost · respawn ${Math.ceil(helicopter.respawnRemaining)}s`:`Hull ${Math.ceil(helicopter.hp)}/100 · ${helicopter.repairing?"Repairing +5/s":helicopter.grounded?"Landed · lift to take off":"Airborne"}`):"Ground battle test";
+ document.getElementById("pilotStatus").textContent=helicopterEnabled?(helicopter.hp<=0?`Respawn ${Math.ceil(helicopter.respawnRemaining)}s`:`Hull ${Math.ceil(helicopter.hp)}${helicopter.repairing?" +5/s":""}`):"Ground battle test";
  document.getElementById("followHelicopter").classList.toggle("active",followHelicopter);
- document.getElementById("help").hidden=followHelicopter&&helicopterEnabled;
+
  cameraOffsetY=null;
  for(const state of [blueCommander,redCommander])state.observations={...state.observations,living:units.filter(u=>u.hp>0&&u.team===state.rules.team).length};
- renderRedEconomy(document.getElementById("redEconomy"),redCommander);
- renderRedEconomy(document.getElementById("blueEconomy"),blueCommander);
+ renderRedEconomy(document.getElementById("redEconomy"),redCommander,document.getElementById("redStrategy"));
+ renderRedEconomy(document.getElementById("blueEconomy"),blueCommander,document.getElementById("blueStrategy"));
  for(const [id,type] of [["blueRifle","rifle"],["blueRocket","rocket"]]){
   const button=document.getElementById(id);
   const reason=purchaseStatus(blueCommander.supply,type,units.filter(u=>u.hp>0&&u.team===0).length);
@@ -205,11 +206,12 @@ document.getElementById("jumpBlue").addEventListener("click",()=>{leaveFollow();
 document.getElementById("jumpRed").addEventListener("click",()=>{leaveFollow();camera=clamp(W-1120-viewW/(2*scale),0,W-viewW/scale);draw();});
 document.getElementById("followRockets").addEventListener("click",e=>{followHelicopter=false;followRockets=!followRockets;e.target.classList.toggle("active",followRockets);if(!followRockets)resize();draw();});
 document.getElementById("pause").addEventListener("click",e=>{paused=!paused;controls?.release();testPilotInput=null;e.target.textContent=paused?"Resume":"Pause";});
-document.getElementById("reset").addEventListener("click",e=>{e.preventDefault();reset();});
+document.getElementById("reset").addEventListener("click",e=>{e.preventDefault();reset();draw();});
 addEventListener("resize",()=>{resize();draw();});
 addEventListener("keydown",e=>{if(followHelicopter)return;if(e.key==="ArrowRight"||e.key==="ArrowLeft")leaveFollow();if(e.key==="ArrowRight")camera=clamp(camera+130,0,W-viewW/scale);if(e.key==="ArrowLeft")camera=clamp(camera-130,0,W-viewW/scale);});
 controls=installPilotControls({stick:document.getElementById("pilotStick"),knob:document.getElementById("pilotKnob"),fire:document.getElementById("heliFire"),turn:document.getElementById("heliTurn"),canControl:()=>!paused&&helicopter.hp>0,onTurn:()=>{if(!paused)turnHelicopter(helicopter);},onEngage:()=>{followRockets=false;followHelicopter=true;document.getElementById("followRockets").classList.remove("active");}});
  document.getElementById("followHelicopter").addEventListener("click",()=>{leaveFollow();followHelicopter=true;draw();});
+installGameMenu(document.getElementById("gameMenu"),()=>controls?.release());
 resize();reset();document.getElementById("followRockets").classList.toggle("active",followRockets);
 if(testing)window.battlefieldTest={
  reset:(value=0xc0ffee)=>{reset(value);combatEnabled=false;redAIEnabled=false;blueAIEnabled=false;helicopterEnabled=false;followHelicopter=false;draw();},

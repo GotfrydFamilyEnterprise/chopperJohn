@@ -1,3 +1,4 @@
+import {menuAction} from './menu-helper.js';
 import {test,expect} from '@playwright/test';
 import {writeFileSync} from 'node:fs';
 for(const team of [0,1])test(`RC-09 real marching target is led faction ${team}`,async({page})=>{
@@ -40,8 +41,8 @@ test('RC-10 normal opening wave fires without manual deployments and follow show
  const both=await page.evaluate(()=>{battlefieldTest.step(Math.max(0,Math.ceil((60-battlefieldTest.snapshot().time)*60)));return battlefieldTest.snapshot();});
  expect(new Set(both.combatEvents.filter(e=>e.type==='launch').map(e=>e.team)).size).toBe(2);
  writeFileSync('docs/quality/evidence/rocket-opening-follow-trace.json',JSON.stringify({first:result,both},null,2));
- await page.locator('#jumpBlue').click();expect((await page.evaluate(()=>battlefieldTest.snapshot())).followRockets).toBe(false);
- await page.locator('#followRockets').click();expect((await page.evaluate(()=>battlefieldTest.snapshot())).followRockets).toBe(true);
+ await menuAction(page,'#jumpBlue');expect((await page.evaluate(()=>battlefieldTest.snapshot())).followRockets).toBe(false);
+ await menuAction(page,'#followRockets');expect((await page.evaluate(()=>battlefieldTest.snapshot())).followRockets).toBe(true);
  await page.mouse.move(100,400);await page.mouse.down();await page.mouse.up();
  expect((await page.evaluate(()=>battlefieldTest.snapshot())).followRockets).toBe(false);
  expect(errors).toEqual([]);

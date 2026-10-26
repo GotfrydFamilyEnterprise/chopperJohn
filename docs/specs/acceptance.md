@@ -84,3 +84,5 @@ Every PR must provide a requirements traceability table: ID, implementation path
 | V1-NATURAL | Actual joystick flight from blue pad into ordinary battle | Paid red launcher fires ballistic anti-air; hull damage, visible committed flight/bursts; no hidden spawn dependency |
 
 Detailed H/HG/AA assertions, boundary cases and screenshot checklist remain in `v1-helicopter-plan.md`. Evidence must be recorded separately; this table is not a PASS claim.
+
+| UI-01/02 | Landscape844×390,740×360 and portrait390×844; open menu, deploy both types, fire/turn, pause/reset/fullscreen/camera | Only compact HUD, flight controls and icon deployment visible while closed; unobscured center; no overlapping primary targets; readable costs and strategy details on demand; menu dismissal and released held input; camera fits pad/aircraft with reclaimed bands |

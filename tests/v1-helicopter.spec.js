@@ -1,3 +1,4 @@
+import {menuAction} from './menu-helper.js';
 import {test,expect} from '@playwright/test';
 import {writeFileSync} from 'node:fs';
 const snapshot=p=>p.evaluate(()=>battlefieldTest.snapshot());
@@ -8,8 +9,8 @@ test('H-START/INPUT/PAD actual opening on helipad, takeoff, pause, reset, econom
  await page.screenshot({path:'docs/quality/evidence/v1-start-portrait.png'});
  const stick=await page.locator('#pilotStick').boundingBox();await page.mouse.move(stick.x+stick.width/2,stick.y+stick.height/2);await page.mouse.down();await page.mouse.move(stick.x+stick.width/2,stick.y+8);
  await page.evaluate(()=>battlefieldTest.step(120));s=await snapshot(page);expect(s.helicopter.y).toBeLessThan(350);await page.mouse.up();
- await page.locator('#pause').click();const before=await snapshot(page);await page.evaluate(()=>battlefieldTest.step(600));expect(await snapshot(page)).toEqual(before);
- await page.locator('#reset').click();s=await snapshot(page);expect(s.helicopter.y).toBe(437);expect(s.helicopter.hp).toBe(100);expect(s.units).toHaveLength(10);expect(s.blueCommander.supply.balance).toBe(120);expect(errors).toEqual([]);
+ await menuAction(page,'#pause');const before=await snapshot(page);await page.evaluate(()=>battlefieldTest.step(600));expect(await snapshot(page)).toEqual(before);
+ await menuAction(page,'#reset');s=await snapshot(page);expect(s.helicopter.y).toBe(437);expect(s.helicopter.hp).toBe(100);expect(s.units).toHaveLength(10);expect(s.blueCommander.supply.balance).toBe(120);expect(errors).toEqual([]);
 });
 test('H-REPAIR/RESPAWN isolated physics and lifecycle with exact timing',async({page})=>{
  await isolate(page);await page.evaluate(()=>{battlefieldTest.combat(false);battlefieldTest.patchHelicopter({hp:50});battlefieldTest.step(600);});expect((await snapshot(page)).helicopter.hp).toBeCloseTo(100,7);
@@ -49,7 +50,7 @@ test('QA-H01 isolation gates freeze projectiles or damage separately and replay 
 });
 test('H-UI portrait/landscape controls visible and distinct; turn and held fire work',async({page})=>{
  for(const vp of [{width:390,height:844},{width:844,height:390}]){await page.setViewportSize(vp);await page.goto('/battlefield.html?test');
- const ids=['pilotStick','heliFire','heliTurn','followHelicopter','fullscreen','pause','blueRifle','blueRocket'];const boxes=[];
+ const ids=['pilotStick','heliFire','heliTurn','menuToggle','blueRifle','blueRocket'];const boxes=[];
  for(const id of ids){const b=await page.locator('#'+id).boundingBox();expect(b.x).toBeGreaterThanOrEqual(0);expect(b.y).toBeGreaterThanOrEqual(0);expect(b.x+b.width).toBeLessThanOrEqual(vp.width);expect(b.y+b.height).toBeLessThanOrEqual(vp.height);boxes.push(b);}
  for(let i=0;i<boxes.length;i++)for(let j=i+1;j<boxes.length;j++){const a=boxes[i],b=boxes[j];expect(a.x+a.width<=b.x||b.x+b.width<=a.x||a.y+a.height<=b.y||b.y+b.height<=a.y).toBe(true);}
  const fire=await page.locator('#heliFire').boundingBox();await page.mouse.move(fire.x+fire.width/2,fire.y+fire.height/2);await page.mouse.down();await page.evaluate(()=>battlefieldTest.step(60));await page.mouse.up();expect((await snapshot(page)).combatEvents.some(e=>e.type==='helicopterShot')).toBe(true);
