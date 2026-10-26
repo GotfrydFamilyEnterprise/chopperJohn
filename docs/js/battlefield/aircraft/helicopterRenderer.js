@@ -1,7 +1,7 @@
 import {apparentFacing} from './helicopter.js';
 export function drawHelipad(ctx,ground){ctx.fillStyle='#657d88';ctx.fillRect(310,ground-6,180,7);ctx.strokeStyle='#c6eafa';ctx.lineWidth=2;ctx.strokeRect(320,ground-6,160,7);ctx.font='bold 20px system-ui';ctx.textAlign='center';ctx.fillStyle='#c6eafa';ctx.fillText('H',400,ground+29);ctx.font='10px system-ui';ctx.fillText('BLUE HELIPAD · REPAIR',400,ground+44);}
 export function drawHelicopter(ctx,h){
- if(h.hp<=0){ctx.save();ctx.fillStyle='#e5bf9b';ctx.font='bold 12px system-ui';ctx.textAlign='center';ctx.fillText(`HELICOPTER LOST · ${Math.ceil(h.respawnRemaining)}s`,h.x,h.y-32);ctx.restore();return;}
+ if(h.hp<=0){ctx.save();ctx.fillStyle='#e5bf9b';ctx.font='bold 12px system-ui';ctx.textAlign='center';ctx.fillText((h.respawnRemaining>0?`HELICOPTER LOST · ${Math.ceil(h.respawnRemaining)}s`:"AWAITING 90 SUPPLY"),h.x,h.y-32);ctx.restore();return;}
  ctx.save();ctx.translate(h.x,h.y);ctx.scale(apparentFacing(h),1);ctx.rotate(h.angle);
  ctx.fillStyle='#bcd3de';ctx.fillRect(-2,-31,4,10);
  ctx.fillStyle=h.hitFlash>0?'#ffe3a0':'#57b7cf';ctx.beginPath();ctx.moveTo(-28,-7);ctx.lineTo(19,-7);ctx.quadraticCurveTo(39,-5,34,9);ctx.lineTo(-18,12);ctx.closePath();ctx.fill();

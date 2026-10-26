@@ -36,3 +36,14 @@ export function purchaseUnit(account, type, livingUnits, factory, reserve = 0) {
   if (account.ledger.length > 128) account.ledger.shift();
   return {unit, reason: 'deployed'};
 }
+
+// BAL-02: aircraft is outside the infantry cap/cooldown, but never outside accounting.
+export function purchaseReplacement(account,factory){
+ const cost=90;
+ if(account.balance+EPS<cost)return {unit:null,reason:'saving-supply'};
+ const unit=factory();if(!unit)return {unit:null,reason:'deployment-failed'};
+ account.balance=Math.max(0,account.balance-cost);account.spent+=cost;account.purchases++;
+ account.ledger.push({time:account.time,unitId:unit.id,type:'helicopter',cost,balance:account.balance});
+ if(account.ledger.length>128)account.ledger.shift();
+ return {unit,reason:'deployed'};
+}

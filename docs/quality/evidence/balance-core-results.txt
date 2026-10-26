@@ -1,0 +1,18 @@
+
+Running 4 tests using 1 worker
+
+(node:47617) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:47617) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/air-balance.spec.js:5:1 › BAL-01 ordinary blue never auto buys; income, manual cooldown, pause and reset (1.5s)
+  ✓  2 tests/air-balance.spec.js:46:1 › BAL-02 destroyed helicopter waits for supply and only charges once at90 (955ms)
+  ✓  3 tests/air-balance.spec.js:86:1 › BAL-03 finite actual gun, empty no fire, parked rearm and repair, pause and off-pad (1.0s)
+  ✓  4 tests/air-balance.spec.js:160:1 › BAL-04/05 real paid red response, spaced group firing and deterministic replay (970ms)
+
+  4 passed (8.4s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

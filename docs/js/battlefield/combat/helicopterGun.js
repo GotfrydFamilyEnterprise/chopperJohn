@@ -4,10 +4,10 @@ import {stationedBase,applyDamage} from './weapons.js';
 // HG-01..03: no rifle damage rules are changed by the aircraft gun.
 export function updateHelicopterGun(h,fire,dt,previous=h){
  const prior=h.fireCooldown;h.fireCooldown=Math.max(0,prior-dt);
- if(!fire||h.hp<=0)return [];
+ if(!fire||h.hp<=0||h.ammo<1-1e-8)return [];
  const shots=[];let offset=prior;
- while(offset<dt-1e-9){const at=lerpAircraft(previous,h,dt?offset/dt:1),m=helicopterMuzzle(at);if(m.dx||m.dy)shots.push({kind:'helicopterBullet',team:h.team,x:m.x,y:m.y,vx:m.dx*680+h.vx,vy:m.dy*680+h.vy,ttl:1.2,age:0,spawnDelay:offset});offset+=.125;}
- h.fireCooldown=offset-dt;return shots;
+ while(offset<dt-1e-9&&h.ammo>=1-1e-8){const at=lerpAircraft(previous,h,dt?offset/dt:1),m=helicopterMuzzle(at);if(m.dx||m.dy){h.ammo=Math.max(0,h.ammo-1);shots.push({kind:'helicopterBullet',team:h.team,x:m.x,y:m.y,vx:m.dx*680+h.vx,vy:m.dy*680+h.vy,ttl:1.2,age:0,spawnDelay:offset});}offset+=.125;}
+ h.fireCooldown=Math.max(0,offset-dt);return shots;
 }
 export function resolveHelicopterHit(u,bases,random){const cover=stationedBase(u,bases),damage=cover?(random()<.10?1:0):1;if(cover)cover.coverFlash=.12;return {covered:!!cover,...applyDamage(u,damage)};}
 export function stepHelicopterBullet(p,dt,units,bases,random,ground=460,damage=true){

@@ -32,3 +32,6 @@ User explicitly supersedes the red-only economy: apply identical accounting and 
 
 ## Fullscreen control
 User requests an on-screen way to hide the browser top bar. Add a Battlefield view-only fullscreen toggle using standard/vendor document-root APIs where supported. iPhone browsers may not support arbitrary element fullscreen; provide honest Safari Home Screen instructions plus standalone manifest/Apple metadata instead of pretending a CSS change hides browser chrome. No Flight School changes or automatic merge.
+
+## V1.1 — manual blue and helicopter logistics
+User accepted the proposed balance pass and explicitly rejected automatic blue troop purchases. Preserve equal account rules and five free openings, but blue infantry spending is exclusively manual. Build90-supply replacement after10s minimum,120-round gun with30/s parked rearm, red paid air-response and staggered anti-air without changing flight feel or damage. See BAL-01..05 for tuning and exact scope. No hull performance penalty or new victory system in this pass.

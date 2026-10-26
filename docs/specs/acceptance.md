@@ -86,3 +86,9 @@ Every PR must provide a requirements traceability table: ID, implementation path
 Detailed H/HG/AA assertions, boundary cases and screenshot checklist remain in `v1-helicopter-plan.md`. Evidence must be recorded separately; this table is not a PASS claim.
 
 | UI-01/02 | Landscape844×390,740×360 and portrait390×844; open menu, deploy both types, fire/turn, pause/reset/fullscreen/camera | Only compact HUD, flight controls and icon deployment visible while closed; unobscured center; no overlapping primary targets; readable costs and strategy details on demand; menu dismissal and released held input; camera fits pad/aircraft with reclaimed bands |
+
+| BAL-01 | Normal opening,120s without clicks, manual purchases/cooldown/cap, pause/reset | Blue buys zero infantry and earns income; red provisions; explicit purchases alone add blue infantry; reset restores manual default |
+| BAL-02 | Destroy at low/high balance,599/600ticks, insufficient funds then accrue, pause/reset | No early/free replacement, exactly90 charge once on confirmed spawn; ledgers reconcile, cap/cooldown unchanged, full hull/ammo |
+| BAL-03 | Hold fire15s then empty, park/off-pad/moving/dead/paused, resume fire | Exactly120 rounds, no negative ammo;30/s parked rearm, capped120, physical shots preserve old damage/cadence; HUD usable in landscape |
+| BAL-04/05 | Sustained/brief/friendly/dead/out-of-area aircraft; simultaneous ground fight; repeated seed | Paid bounded red response and expiry; rifle screen retained; air launch timestamps separated while individual full aim/reload and ground behavior remain |
+| UI-03 | Long press FIRE/TURN/deployment/menu; simultaneous joystick+fire; normal menu navigation | No selected text or gameplay context menu; button actions and held firing preserved; no stuck controls; inspect CSS WebKit protection and actual browser long press |
