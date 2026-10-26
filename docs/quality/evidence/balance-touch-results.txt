@@ -1,0 +1,4 @@
+Actual root execution 2026-10-26:
+PLAYWRIGHT_BROWSERS_PATH=/workspace/pw-browsers npx playwright test tests/touch-guards.spec.js
+1 passed (3.6s).
+UI-03: selection style none on controls; cancel contextmenu/selectstart/dragstart; actual CDP two-touch long press1200ms;8shots in1simulationsecond, joystick lift, no selection, release stops fire, TURN flips and menu opens/closes. Physical Safari UNVERIFIED.

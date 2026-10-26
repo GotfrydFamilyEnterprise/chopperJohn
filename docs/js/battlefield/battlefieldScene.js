@@ -1,25 +1,27 @@
-import {installGameMenu} from "./ui/gameMenu.js?v=1.0.1";
-import {pilotView,groundOffset} from "./ui/battlefieldCamera.js?v=1.0.1";
-import {allocateRocketTargets} from "./combat/rocketAllocation.js?v=1.0.0";
-import {createHelicopter,updateHelicopter,repairHelicopter,turnHelicopter,damageHelicopter} from "./aircraft/helicopter.js?v=1.0.0";
-import {drawHelicopter,drawHelipad} from "./aircraft/helicopterRenderer.js?v=1.0.0";
-import {installPilotControls} from "./ui/pilotControls.js?v=1.0.1";
-import {updatePrioritizedRocket} from "./combat/targetPriority.js?v=1.0.0";
-import {updateHelicopterGun,stepHelicopterBullet} from "./combat/helicopterGun.js?v=1.0.0";
-import {stepBattleRocket,resolveAirburstGround,helicopterBurstDamage} from "./combat/airRocketFlight.js?v=1.0.0";
-import {hullDistance} from "./combat/collision2d.js?v=1.0.0";
-import {installFullscreen} from "./ui/fullscreen.js?v=1.0.0";
-import {clamp} from "./units/soldierCommon.js?v=1.0.0";
-import {createRifleman,updateRifleman,drawRifleman} from "./units/rifleman.js?v=1.0.0";
-import {createRocketeer,updateRocketeer,drawRocketeer} from "./units/rocketeer.js?v=1.0.0";
-import {createBase} from "./bases/baseCommon.js?v=1.0.0";
-import {drawHeadquarters} from "./bases/headquarters.js?v=1.0.0";
-import {drawForwardBase,occupied,assignDefender,releaseDeadDefenders,advanceDefender,refreshOccupation,drawForwardFront} from "./bases/forwardBase.js?v=1.0.0";
-import {WEAPONS,createRandom,selectTarget,resolveRifleHit,resolveRocketBlast} from "./combat/weapons.js?v=1.0.0";
-import {drawCombatEffects} from "./combat/effects.js?v=1.0.0";
-import {createCommander,updateCommander,commanderMovementOrder} from "./ai/redCommander.js?v=1.0.0";
-import {renderRedEconomy} from "./ui/redEconomyPanel.js?v=1.0.1";
-import {purchaseUnit,purchaseStatus} from "./economy/supply.js?v=1.0.0";
+import {installTouchGuards} from "./ui/touchGuards.js?v=1.1.0";
+import {updateAircraftSupport} from "./aircraft/aircraftSupport.js?v=1.1.0";
+import {installGameMenu} from "./ui/gameMenu.js?v=1.1.0";
+import {pilotView,groundOffset} from "./ui/battlefieldCamera.js?v=1.1.0";
+import {allocateRocketTargets} from "./combat/rocketAllocation.js?v=1.1.0";
+import {createHelicopter,updateHelicopter,repairHelicopter,turnHelicopter,damageHelicopter} from "./aircraft/helicopter.js?v=1.1.0";
+import {drawHelicopter,drawHelipad} from "./aircraft/helicopterRenderer.js?v=1.1.0";
+import {installPilotControls} from "./ui/pilotControls.js?v=1.1.0";
+import {updatePrioritizedRocket} from "./combat/targetPriority.js?v=1.1.0";
+import {updateHelicopterGun,stepHelicopterBullet} from "./combat/helicopterGun.js?v=1.1.0";
+import {stepBattleRocket,resolveAirburstGround,helicopterBurstDamage} from "./combat/airRocketFlight.js?v=1.1.0";
+import {hullDistance} from "./combat/collision2d.js?v=1.1.0";
+import {installFullscreen} from "./ui/fullscreen.js?v=1.1.0";
+import {clamp} from "./units/soldierCommon.js?v=1.1.0";
+import {createRifleman,updateRifleman,drawRifleman} from "./units/rifleman.js?v=1.1.0";
+import {createRocketeer,updateRocketeer,drawRocketeer} from "./units/rocketeer.js?v=1.1.0";
+import {createBase} from "./bases/baseCommon.js?v=1.1.0";
+import {drawHeadquarters} from "./bases/headquarters.js?v=1.1.0";
+import {drawForwardBase,occupied,assignDefender,releaseDeadDefenders,advanceDefender,refreshOccupation,drawForwardFront} from "./bases/forwardBase.js?v=1.1.0";
+import {WEAPONS,createRandom,selectTarget,resolveRifleHit,resolveRocketBlast} from "./combat/weapons.js?v=1.1.0";
+import {drawCombatEffects} from "./combat/effects.js?v=1.1.0";
+import {createCommander,updateCommander,commanderMovementOrder} from "./ai/redCommander.js?v=1.1.0";
+import {renderRedEconomy} from "./ui/redEconomyPanel.js?v=1.1.0";
+import {purchaseUnit,purchaseStatus,accrueSupply} from "./economy/supply.js?v=1.1.0";
 const cv=document.getElementById("field"),ctx=cv.getContext("2d");
 const W=3600,GROUND=460,DT=1/60;
 const testing=new URLSearchParams(location.search).has("test");
@@ -27,7 +29,7 @@ let followFocus=null,helicopter=createHelicopter(),helicopterEnabled=true,gunRou
 let followHelicopter=new URLSearchParams(location.search).get("view")!=="rockets",cameraOffsetY=null;
 const defaultSystems=()=>({flight:true,troops:true,weapons:true,projectiles:true,damage:true,repairs:true,commanders:true,kinematic:false});
 let systems=defaultSystems();
-let redCommander=createCommander(1),blueCommander=createCommander(0),redAIEnabled=true,blueAIEnabled=true;
+let redCommander=createCommander(1),blueCommander=createCommander(0),redAIEnabled=true,blueAIEnabled=false;
 let followRockets=new URLSearchParams(location.search).get("view")==="rockets",shotsFired=0;
 let combatEnabled=true,random=createRandom(),seed=0xc0ffee;
 let rockets=[],explosions=[],impacts=[],combatEvents=[],nextRoundId=1;
@@ -36,7 +38,7 @@ function explodeRocket(x,team,id){const hits=systems.damage?resolveRocketBlast(x
 let viewW=innerWidth,viewH=innerHeight,ratio=1,scale=1,camera=0,dragId=null,lastPointerX=0,dragDistance=0,acc=0,last=0,time=0,paused=false,units=[],bases=[],bullets=[],nextId=1;
 function resize(){viewW=innerWidth;viewH=innerHeight;ratio=Math.min(devicePixelRatio||1,2);cv.width=Math.round(viewW*ratio);cv.height=Math.round(viewH*ratio);scale=Math.max(.58,Math.min(viewH/585,1.35));camera=clamp(camera,0,Math.max(0,W-viewW/scale));}
 function spawn(team,type,x){const unit=type==="rifle"?createRifleman(nextId++,team,x,GROUND):createRocketeer(nextId++,team,x,GROUND);units.push(unit);return unit;}
-function reset(resetSeed=0xc0ffee){seed=resetSeed>>>0;random=createRandom(seed);airRandom=createRandom(seed^0xa17c9e33);helicopter=createHelicopter();helicopterEnabled=true;gunRounds=[];systems=defaultSystems();testPilotInput=null;controls?.release();followHelicopter=!followRockets;units=[];bullets=[];rockets=[];explosions=[];impacts=[];combatEvents=[];nextRoundId=1;nextId=1;shotsFired=0;followFocus=null;time=0;camera=0;paused=false;redCommander=createCommander(1);blueCommander=createCommander(0);redAIEnabled=true;blueAIEnabled=true;document.getElementById("pause").textContent="Pause";
+function reset(resetSeed=0xc0ffee){seed=resetSeed>>>0;random=createRandom(seed);airRandom=createRandom(seed^0xa17c9e33);helicopter=createHelicopter();helicopterEnabled=true;gunRounds=[];systems=defaultSystems();testPilotInput=null;controls?.release();followHelicopter=!followRockets;units=[];bullets=[];rockets=[];explosions=[];impacts=[];combatEvents=[];nextRoundId=1;nextId=1;shotsFired=0;followFocus=null;time=0;camera=0;paused=false;redCommander=createCommander(1);blueCommander=createCommander(0);redAIEnabled=true;blueAIEnabled=false;blueCommander.strategy={mode:"MANUAL",label:"Manual deployment"};document.getElementById("pause").textContent="Pause";
  bases=[createBase(110,0,true),createBase(W-110,1,true),createBase(1120,0,false),createBase(W-1120,1,false)];
  // EC-06: equal five-soldier opening grants; all later deployments are paid.
  for(const team of [0,1]){
@@ -64,7 +66,7 @@ function update(dt){if(paused)return;time+=dt;
  if(helicopterEnabled){
   if(helicopter.hp<=0){controls?.release();testPilotInput=null;}
   const input=testPilotInput??controls?.read()??{x:0,y:0,fire:false};
-  const result=systems.flight?updateHelicopter(helicopter,input,dt,GROUND,W,{kinematic:systems.kinematic,damage:systems.damage}):{};
+  const result=systems.flight?updateHelicopter(helicopter,input,dt,GROUND,W,{kinematic:systems.kinematic,damage:systems.damage,respawn:false}):{};
   if(result.respawned){controls?.release();testPilotInput=null;recordCombat({type:"respawn",id:helicopter.id});}
   if(systems.weapons&&combatEnabled)for(const shot of updateHelicopterGun(helicopter,!result.respawned&&!!input.fire,dt,previousHelicopter)){
    shot.id=nextRoundId++;gunRounds.push(shot);recordCombat({type:"helicopterShot",shotTime:time-dt+shot.spawnDelay,id:shot.id,x:shot.x,y:shot.y,vx:shot.vx,vy:shot.vy});
@@ -74,14 +76,20 @@ function update(dt){if(paused)return;time+=dt;
  const observedUnits=[...units];
  for(const [state,enabled] of [[blueCommander,blueAIEnabled],[redCommander,redAIEnabled]])if(enabled&&systems.commanders){
   const ownView=[...observedUnits];
-  updateCommander(state,dt,ownView,bases,(type,x)=>{const unit=spawn(state.rules.team,type,x);ownView.push(unit);return unit;});
+  updateCommander(state,dt,ownView,bases,(type,x)=>{const unit=spawn(state.rules.team,type,x);ownView.push(unit);return unit;},helicopterEnabled?helicopter:null);
+ }
+ // BAL-01: manual blue income continues; no commander gets a blue purchase callback.
+ if(systems.commanders&&!blueAIEnabled)accrueSupply(blueCommander.supply,dt);
+ if(helicopterEnabled){
+  const service=updateAircraftSupport(helicopter,dt,blueCommander.supply,{fire:!!(testPilotInput??controls?.read())?.fire,rearm:systems.repairs,replace:systems.flight&&systems.commanders,ground:GROUND});
+  if(service.respawned){controls?.release();testPilotInput=null;recordCombat({type:"respawn",id:helicopter.id,cost:service.cost});}
  }
  for(const b of bases)if(!b.main){
   b.coverFlash=Math.max(0,(b.coverFlash||0)-dt);
   b.flagProgress=clamp(b.flagProgress+(occupied(b)?1:-1)*dt*.8,0,1);
  }
  const previousPositions=new Map(units.map(unit=>[unit.id,unit.x]));
- const allocations=combatEnabled&&systems.weapons?allocateRocketTargets(units,helicopterEnabled?helicopter:null):new Map();
+ const allocations=combatEnabled&&systems.weapons?allocateRocketTargets(units,helicopterEnabled?helicopter:null,{stagger:true}):new Map();
  for(const u of units){
   if(u.hp<=0)continue;
   u.hitFlash=Math.max(0,u.hitFlash-dt);
@@ -142,7 +150,7 @@ function update(dt){if(paused)return;time+=dt;
  for(const b of bases)if(!b.main){releaseDeadDefenders(b,aliveIds);refreshOccupation(b);}
 }
 function draw(){
- document.getElementById("pilotStatus").textContent=helicopterEnabled?(helicopter.hp<=0?`Respawn ${Math.ceil(helicopter.respawnRemaining)}s`:`Hull ${Math.ceil(helicopter.hp)}${helicopter.repairing?" +5/s":""}`):"Ground battle test";
+ document.getElementById("pilotStatus").textContent=helicopterEnabled?(helicopter.hp<=0?(helicopter.respawnRemaining>0?`Respawn ${Math.ceil(helicopter.respawnRemaining)}s · 90 supply`:`Need 90 supply · ${Math.floor(blueCommander.supply.balance)}/90`):`Hull ${Math.ceil(helicopter.hp)} · Ammo ${Math.floor(helicopter.ammo)}${helicopter.rearming?" +30/s":helicopter.ammo<1?" · REARM":""}${helicopter.repairing?" +5HP/s":""}`):"Ground battle test";
  document.getElementById("followHelicopter").classList.toggle("active",followHelicopter);
 
  cameraOffsetY=null;
@@ -211,6 +219,7 @@ addEventListener("resize",()=>{resize();draw();});
 addEventListener("keydown",e=>{if(followHelicopter)return;if(e.key==="ArrowRight"||e.key==="ArrowLeft")leaveFollow();if(e.key==="ArrowRight")camera=clamp(camera+130,0,W-viewW/scale);if(e.key==="ArrowLeft")camera=clamp(camera-130,0,W-viewW/scale);});
 controls=installPilotControls({stick:document.getElementById("pilotStick"),knob:document.getElementById("pilotKnob"),fire:document.getElementById("heliFire"),turn:document.getElementById("heliTurn"),canControl:()=>!paused&&helicopter.hp>0,onTurn:()=>{if(!paused)turnHelicopter(helicopter);},onEngage:()=>{followRockets=false;followHelicopter=true;document.getElementById("followRockets").classList.remove("active");}});
  document.getElementById("followHelicopter").addEventListener("click",()=>{leaveFollow();followHelicopter=true;draw();});
+installTouchGuards();
 installGameMenu(document.getElementById("gameMenu"),()=>controls?.release());
 resize();reset();document.getElementById("followRockets").classList.toggle("active",followRockets);
 if(testing)window.battlefieldTest={

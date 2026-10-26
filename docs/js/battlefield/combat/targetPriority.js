@@ -19,7 +19,7 @@ export function updatePrioritizedRocket(unit,choice,dt,groundRandom,airRandom){
  unit.rocketGoal={...plan,targetKind:'air',targetId:target.id,impactX:plan.aimedX,impactY:plan.aimedY};
  if(unit.rocketCooldown>1e-9)return null;
  unit.rocketAimTime=(unit.rocketAimTime||0)+Math.max(0,dt-previous);
- if(unit.rocketAimTime+1e-9<WEAPONS.rocketAimSeconds)return null;
+ if(unit.rocketAimTime+1e-9<WEAPONS.rocketAimSeconds+(choice.volleyDelay||0))return null;
  const rocket=launchAirRocket(unit,target,airRandom);if(!rocket){unit.rocketAimTime=0;return null;}
  unit.rocketAimTime=0;unit.rocketCooldown=3;return rocket;
 }

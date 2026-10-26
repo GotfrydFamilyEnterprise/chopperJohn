@@ -2,15 +2,15 @@
 export const FLIGHT = Object.freeze({maxPitch:.61,rotorRate:12,bodyRate:3.7,thrust:395,gravity:330,horizontalDamping:.45,verticalDamping:.9,maxHorizontal:270,maxVertical:200});
 export const AIRCRAFT = Object.freeze({padX:400,padHalfWidth:90,hullHalfWidth:32,hullHalfHeight:12,hull:100,repairRate:5,respawnSeconds:10});
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
-export function createHelicopter(ground=460,generation=1){return {kind:'air',id:`helicopter:${generation}`,generation,team:0,x:AIRCRAFT.padX,y:ground-23,vx:0,vy:0,observedVx:0,observedVy:0,facing:1,angle:0,rotorAngle:0,turnTime:0,turnFrom:1,hp:100,fireCooldown:0,grounded:true,respawnRemaining:0,hitFlash:0,repairing:false,rotorTime:0};}
+export function createHelicopter(ground=460,generation=1){return {kind:'air',id:`helicopter:${generation}`,generation,team:0,x:AIRCRAFT.padX,y:ground-23,vx:0,vy:0,observedVx:0,observedVy:0,facing:1,angle:0,rotorAngle:0,turnTime:0,turnFrom:1,hp:100,ammo:120,rearming:false,fireCooldown:0,grounded:true,respawnRemaining:0,hitFlash:0,repairing:false,rotorTime:0};}
 export function apparentFacing(h){return h.turnTime>0?h.turnFrom*Math.cos(Math.PI*(1-h.turnTime/.42)):h.facing;}
 export function turnHelicopter(h){if(h.hp<=0||h.turnTime>0)return false;h.turnFrom=h.facing;h.facing=-h.facing;h.turnTime=.42;return true;}
 export function damageHelicopter(h,amount){if(h.hp<=0||amount<=0)return 0;const dealt=Math.min(h.hp,amount);h.hp-=dealt;h.hitFlash=.15;if(h.hp<=1e-9){h.hp=0;h.respawnRemaining=10;h.repairing=false;}return dealt;}
 export function parkedOnPad(h,ground=460){return h.hp>0&&h.grounded&&Math.abs(h.y-(ground-23))<1e-6&&Math.abs(h.x-400)+32<=90+1e-8&&Math.abs(h.vx)<=5&&Math.abs(h.vy)<1e-6;}
 export function repairHelicopter(h,dt,ground=460){h.repairing=parkedOnPad(h,ground)&&h.hp<100;if(h.repairing)h.hp=Math.min(100,h.hp+5*dt);}
-export function updateHelicopter(h,input,dt,ground=460,width=3600,{kinematic=false,damage=true}={}){
+export function updateHelicopter(h,input,dt,ground=460,width=3600,{kinematic=false,damage=true,respawn=true}={}){
  if(!Number.isFinite(dt)||dt<0)throw new RangeError("Invalid flight timestep");if(dt===0)return {};
- if(h.hp<=0){h.respawnRemaining=Math.max(0,h.respawnRemaining-dt);if(h.respawnRemaining<=1e-8){Object.assign(h,createHelicopter(ground,h.generation+1));return {respawned:true};}return {};}
+ if(h.hp<=0){h.respawnRemaining=Math.max(0,h.respawnRemaining-dt);if(respawn&&h.respawnRemaining<=1e-8){Object.assign(h,createHelicopter(ground,h.generation+1));return {respawned:true};}return {};}
  h.hitFlash=Math.max(0,h.hitFlash-dt);h.rotorTime+=dt;
  const oldX=h.x,oldY=h.y;
  if(kinematic){h.x+=h.vx*dt;h.y+=h.vy*dt;h.grounded=false;}

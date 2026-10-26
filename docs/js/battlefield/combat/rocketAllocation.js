@@ -4,7 +4,7 @@ import {planAirShot} from './airInterception.js';
 // With both threats present, target2/3 air and1/3 ground, rounded to nearest,
 // reserving at least one ground-capable soldier. Capability always beats quota.
 export const ROCKET_ALLOCATION=Object.freeze({airShare:2/3,clusterGap:240});
-export function allocateRocketTargets(units,helicopter){
+export function allocateRocketTargets(units,helicopter,{stagger=false}={}){
  const choices=new Map();
  for(const team of [0,1]){
   const rockets=units.filter(u=>u.hp>0&&u.type==='rocket'&&u.team===team).sort((a,b)=>a.x-b.x||a.id-b.id),groups=[];
@@ -26,7 +26,8 @@ export function allocateRocketTargets(units,helicopter){
     if(entries.length===1)roles.set(entries[0].unit.id,entries[0].air?'air':'ground');
    }
    const airCount=[...roles.values()].filter(v=>v==='air').length,groundCount=roles.size-airCount;
-   for(const e of entries){const kind=roles.get(e.unit.id);choices.set(e.unit.id,{kind,target:kind==='air'?helicopter:e.ground,plan:kind==='air'?e.air:null,allocation:{air:airCount,ground:groundCount,size:roles.size}});}
+   const airRanks=new Map(entries.filter(e=>roles.get(e.unit.id)==='air').map(e=>e.unit.id).sort((a,b)=>a-b).map((id,rank)=>[id,rank]));
+   for(const e of entries){const kind=roles.get(e.unit.id);choices.set(e.unit.id,{kind,target:kind==='air'?helicopter:e.ground,plan:kind==='air'?e.air:null,volleyDelay:kind==='air'&&stagger?airRanks.get(e.unit.id)*.22:0,allocation:{air:airCount,ground:groundCount,size:roles.size}});}
   }
  }
  return choices;

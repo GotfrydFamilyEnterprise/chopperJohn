@@ -44,12 +44,13 @@ export function firstMissing(composition, members) {
 export function chooseStrategy(view, squads, now, regroupUntil, stronger) {
   if (view.threatened) return {mode: 'DEFEND', label: 'Defending HQ', role: 'defense'};
   if (view.missing.rifle || view.missing.rocket) return {mode: 'GARRISON', label: 'Reinforcing FOB'};
+  if (view.airPressure && (view.allies.filter(u=>u.type==='rocket').length<3||view.allies.filter(u=>u.type==='rifle').length<2)) return {mode:'AIR_DEFEND',label:'Countering helicopter',role:'air-defense'};
   if (now < regroupUntil) return {mode: 'REGROUP', label: 'Regrouping'};
   const gathering = squads.find(squad => squad.phase === 'gather');
   if (gathering) return {mode: 'PREPARE', label: gathering.role === 'assault' ? 'Preparing assault' : 'Preparing interception', squadId: gathering.id};
   const support = squads.find(squad => squad.phase === 'advance' && squad.role !== 'defense' && squad.reinforce && firstMissing(squad.composition, view.allies.filter(unit => squad.members.includes(unit.id))));
   if (support) return {mode: 'SUPPORT', label: 'Reinforcing advancing troops', squadId: support.id};
-  const role = view.enemyStaffed ? 'assault' : 'intercept';
+  const role = view.airPressure ? 'assault' : view.enemyStaffed ? 'assault' : 'intercept';
   const composition = {...COMPOSITIONS[role]};
   if (stronger) {composition.rifle++; composition.rocket++;}
   return {mode: 'PREPARE', label: role === 'assault' ? 'Preparing assault' : 'Preparing interception', role, composition};

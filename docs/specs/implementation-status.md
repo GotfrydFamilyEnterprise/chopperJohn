@@ -120,3 +120,13 @@ UI-01/02 implemented on PR8 feature branch. Rifle/rocket SVG deployment icons wi
 Validation:77 module checks passed. Full browser run64 passed with one portrait fixture failure (outside tap incorrectly landed within the menu); corrected coordinate and focused run4 passed, covering65 distinct checks overall. No failed production assertion remains. Raw logs: `evidence/compact-module-results.txt`, `compact-regression-results.txt`, `compact-ui-results.txt`. Screenshots inspected at844×390,740×360 and390×844. Physical Safari remains UNVERIFIED. Independent review report: `docs/quality/compact-ui-adversarial-review.md`.
 
 Released private preview: https://chopperjohn-fob-preview.earthyluck64.chatgpt.site/battlefield.html?v=1.0.1 . Native deployment succeeded, id `appgdep_6adf5d9cd9108191be77f184f181ad9e`, exact Sites source `46b36f2863a13c1dc38d6e8cbdf1eca01377a05b`. GitHub Pages has not changed; gameplay PR still requires user acceptance before merge.
+
+## V1.1 manual blue, helicopter logistics and touch controls — 2026-10-26
+
+BAL-01..05/UI-03 implemented on feature/manual-blue-and-air-balance. Blue never provisions infantry automatically; its income/cap/opening remain identical, explicit troop buttons charge normally. Helicopter replacement is a separate automatic90-supply transaction after10s minimum; insufficient funds hold the destroyed state.120 ammo,8rps,30 rounds/s parked rearming with FIRE released; repair/flight/damage unchanged. Red responds to sustained visible aircraft with paid rockets while restoring a minimum rifle screen. Stable-ID air ranks stagger launches0.22s without steering existing rockets.
+
+Touch controls suppress text selection/WebKit callouts, context menus and dragging. Actual1200ms two-touch Chromium hold retains8shots/s and joystick lift, no selected text, released fire, usable TURN/menu. Physical Safari remains UNVERIFIED.
+
+Validation:84 module checks pass (77 previous+7 new); full real-browser suite70 passed in1.3m. Raw logs: evidence/balance-module-results.txt and balance-browser-final-results.txt. The earlier regression log retained68 passes and one test-fixture failure (reset intentionally disables AI; corrected by explicit redAI(true)); final suite is clean. Independent reviewer found rifle-screen and unstable-rank edge cases; both corrected and independently re-probed. Report: docs/quality/air-balance-adversarial-review.md. No confirmed source blocker; physicalSafari and reviewer-owned browser execution UNVERIFIED. Landscape/portrait HUD screenshots and balance-response-trace.json are recorded separately.
+
+Public Sites preview v1.1.0 published for mobile acceptance; GitHub Pages remains v1.0.1 until this branch is accepted and merged. No merge authorization inferred.

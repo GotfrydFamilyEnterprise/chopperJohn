@@ -1,0 +1,3 @@
+PASS BAL04 restores rifle screen even when already 3 rockets
+PASS BAL05 air ranks stable while crossing within group
+PASS BAL03 120 actual shots at timesteps 1/120,1/60,1/30,.25,1s

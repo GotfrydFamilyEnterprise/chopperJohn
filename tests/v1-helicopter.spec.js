@@ -15,7 +15,7 @@ test('H-START/INPUT/PAD actual opening on helipad, takeoff, pause, reset, econom
 test('H-REPAIR/RESPAWN isolated physics and lifecycle with exact timing',async({page})=>{
  await isolate(page);await page.evaluate(()=>{battlefieldTest.combat(false);battlefieldTest.patchHelicopter({hp:50});battlefieldTest.step(600);});expect((await snapshot(page)).helicopter.hp).toBeCloseTo(100,7);
  await page.evaluate(()=>{battlefieldTest.patchHelicopter({hp:50,x:500});battlefieldTest.step(60);});expect((await snapshot(page)).helicopter.hp).toBe(50);
- await page.evaluate(()=>{battlefieldTest.damageHelicopter(100);battlefieldTest.step(599);});let s=await snapshot(page);expect(s.helicopter.hp).toBe(0);await page.evaluate(()=>battlefieldTest.step());s=await snapshot(page);expect(s.helicopter.hp).toBe(100);expect(s.helicopter.id).toBe('helicopter:2');expect(s.helicopter.x).toBe(400);expect(s.units).toHaveLength(0);
+ await page.evaluate(()=>{battlefieldTest.systems({commanders:true});battlefieldTest.damageHelicopter(100);battlefieldTest.step(599);});let s=await snapshot(page);expect(s.helicopter.hp).toBe(0);await page.evaluate(()=>battlefieldTest.step());s=await snapshot(page);expect(s.helicopter.hp).toBe(100);expect(s.helicopter.id).toBe('helicopter:2');expect(s.helicopter.x).toBe(400);expect(s.units).toHaveLength(0);
 });
 test('HG-TEAM/SWEEP isolated gun uses actual 2D hits, no friendly fire or altitude-only hits',async({page})=>{
  await isolate(page);const result=await page.evaluate(()=>{battlefieldTest.combat(true);battlefieldTest.systems({flight:false,troops:false,weapons:false});const friendly=battlefieldTest.spawn(0,'rifle',1500),enemy=battlefieldTest.spawn(1,'rocket',1550),far=battlefieldTest.spawn(1,'rifle',1600);battlefieldTest.injectProjectile({kind:'helicopterBullet',team:0,x:1400,y:430,vx:3000,vy:0,ttl:1,age:0});battlefieldTest.step(6);return {friendly,enemy,far,s:battlefieldTest.snapshot()};});
@@ -35,7 +35,7 @@ test('AA-PRIORITY mixed firefight ground aim preempted by helicopter, rifles con
  await page.evaluate(()=>battlefieldTest.view(2050,.6));await page.screenshot({path:'docs/quality/evidence/v1-priority-mixed-firefight.png'});writeFileSync('docs/quality/evidence/v1-priority-trace.json',JSON.stringify(result,null,2));
 });
 for(const [n,air] of [[2,1],[3,2],[6,4]])test(`AA-GROUP mixed threats split${n} launchers into${air} air and${n-air} ground`,async({page})=>{
- await isolate(page);const s=await page.evaluate(n=>{battlefieldTest.combat(true);battlefieldTest.systems({flight:false,troops:false,damage:false});battlefieldTest.patchHelicopter({x:1800,y:220,grounded:false});for(let i=0;i<n;i++)battlefieldTest.spawn(1,'rocket',2200+i*8);battlefieldTest.spawn(0,'rifle',1850);battlefieldTest.step(42);return battlefieldTest.snapshot();},n);
+ await isolate(page);const s=await page.evaluate(n=>{battlefieldTest.combat(true);battlefieldTest.systems({flight:false,troops:false,damage:false});battlefieldTest.patchHelicopter({x:1800,y:220,grounded:false});for(let i=0;i<n;i++)battlefieldTest.spawn(1,'rocket',2200+i*8);battlefieldTest.spawn(0,'rifle',1850);battlefieldTest.step(84);return battlefieldTest.snapshot();},n);
  expect(s.units.filter(u=>u.type==='rocket'&&u.rocketAssignment==='air')).toHaveLength(air);expect(s.units.filter(u=>u.type==='rocket'&&u.rocketAssignment==='ground')).toHaveLength(n-air);
  expect(s.rockets.filter(r=>r.kind==='airRocket')).toHaveLength(air);expect(s.rockets.filter(r=>r.kind!=='airRocket')).toHaveLength(n-air);
 });

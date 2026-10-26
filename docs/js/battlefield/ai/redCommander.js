@@ -1,3 +1,4 @@
+import {updateAirPressure} from './airPressure.js';
 import {SUPPLY_RULES, createSupply, accrueSupply, purchaseUnit} from '../economy/supply.js';
 import {STRATEGY_RULES, COMPOSITIONS, observeBattlefield, chooseStrategy, firstMissing, factionRules} from './strategy.js';
 import {createSquad, addMember, membersOf, detachForGarrison, refreshSquads, movementOrder} from './squads.js';
@@ -11,7 +12,7 @@ function record(state, event) {
   state.events.push({time: state.supply.time, ...event});
   if (state.events.length > 128) state.events.shift();
 }
-export function updateCommander(state, dt, units, bases, deploy) {
+export function updateCommander(state, dt, units, bases, deploy, helicopter=null) {
   const rules = state.rules;
   accrueSupply(state.supply, dt);
   const now = state.supply.time;
@@ -25,11 +26,12 @@ export function updateCommander(state, dt, units, bases, deploy) {
     record(state, {type: 'regroup', until: state.regroupUntil});
   }
   let view = observeBattlefield(units, bases, rules);
+  view.airPressure=updateAirPressure(state,helicopter,dt);
   if (!view.threatened) for (const squad of state.squads) if (squad.role === 'defense' && squad.phase !== 'retired') {
     squad.role = 'intercept'; squad.composition = {...COMPOSITIONS.intercept}; squad.phase = 'gather'; squad.goalX = rules.goalX;
     for (const unit of membersOf(squad, units)) unit.order.role = squad.role;
   }
-  const critical = (view.threatened && state.strategy.mode !== 'DEFEND') ||
+  const critical = (view.airPressure && !state.observations?.airPressure) || (!view.airPressure && !!state.observations?.airPressure) || (view.threatened && state.strategy.mode !== 'DEFEND') ||
     (!view.threatened && (view.missing.rifle || view.missing.rocket) && state.strategy.mode !== 'GARRISON');
   if (now + 1e-8 >= state.nextDecisionAt || critical) {
     const before = state.strategy.mode;
@@ -48,6 +50,12 @@ export function updateCommander(state, dt, units, bases, deploy) {
       }
     }
     role = 'garrison';
+  } else if (state.strategy.mode === 'AIR_DEFEND') {
+    role='air-defense';
+    squad=state.squads.find(g=>g.role===role&&g.phase!=='retired');
+    if(!squad){squad=createSquad(state.nextSquadId++,role,{rifle:2,rocket:3},now,rules);squad.phase='advance';squad.goalX=view.fob?view.fob.x-rules.direction*150:rules.defenseX;state.squads.push(squad);}
+    // Retain a rifle screen; count all living/incoming launchers rather than duplicate groups.
+    type=view.allies.filter(u=>u.type==='rifle').length<2?'rifle':view.allies.filter(u=>u.type==='rocket').length<3?'rocket':null;
   } else if (state.strategy.mode === 'DEFEND') {
     // Already-paid rally troops respond immediately instead of waiting for a full wave.
     for (const group of state.squads) if (group.phase === 'gather') {
@@ -72,7 +80,7 @@ export function updateCommander(state, dt, units, bases, deploy) {
   }
   state.blockReason = type ? 'ready' : state.strategy.mode === 'REGROUP' ? 'regrouping' : 'awaiting-orders';
   if (type) {
-    const reserve = role === 'garrison' || role === 'defense' ? 0 : SUPPLY_RULES.reserve;
+    const reserve = role === 'garrison' || role === 'defense' || role === 'air-defense' ? 0 : SUPPLY_RULES.reserve;
     const purchase = purchaseUnit(state.supply, type, view.allies.length, kind => {
       const unit = deploy(kind, rules.spawnX);
       if (!unit) return null;
@@ -83,7 +91,7 @@ export function updateCommander(state, dt, units, bases, deploy) {
     if (purchase.unit) record(state, {type: 'purchase', unitId: purchase.unit.id, kind: type, role, squadId: squad?.id ?? null});
   }
   state.observations = {living: units.filter(unit => unit.hp > 0 && unit.team === rules.team).length,
-    incoming: view.incoming, stationed: view.stationed};
+    airPressure:view.airPressure, incoming: view.incoming, stationed: view.stationed};
   state.squads = state.squads.filter(squad => squad.phase !== 'retired' || now - (squad.retiredAt ?? 0) < 30);
 }
 export function commanderMovementOrder(state, unit, units, dt) {

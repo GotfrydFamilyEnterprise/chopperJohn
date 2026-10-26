@@ -274,3 +274,5 @@ Capture and independently inspect: landed helicopter/pad; takeoff; tilted/turnin
 5. Execute V1-12..13, resolve review findings, publish the complete reviewable build/PR, then merge only after explicit user authorization. Verify GitHub Pages separately after merge.
 
 No new tanks, capture, helicopter transport, repair upgrades or repair costs, multiple aircraft, fuel/ammo economy, destructible HQs or victory system are implied. Basic parked-pad repair is approved. If requested, add explicit stories and tests rather than quietly expanding this milestone.
+
+V1.1 superseding authorization: BAL-01..05 now introduce ammo/rearming and paid replacement under the user's accepted balance proposal; the original no-ammo/free-respawn scope above is historical. Normal blue troop provisioning is manual only; natural tests no longer require blue AI purchases.
