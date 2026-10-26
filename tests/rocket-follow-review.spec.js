@@ -16,7 +16,7 @@ test('review RC-10 follow contains both endpoints, pause/reset/manual navigation
  await page.locator('#reset').click();const reset=await page.evaluate(()=>{battlefieldTest.step(0);return battlefieldTest.snapshot();});
  expect(reset.shotsFired).toBe(0);expect(reset.rockets).toHaveLength(0);expect(reset.combatEvents).toHaveLength(0);
  expect(reset.bases.filter(b=>!b.main).every(b=>b.state==='UNCLAIMED'&&b.flagProgress===0)).toBe(true);
- expect(reset.units.filter(u=>u.type==='rocket')).toHaveLength(2);
+ expect(reset.units.filter(u=>u.type==='rocket')).toHaveLength(4);
  expect(reset.units.every(u=>!u.rocketAimTime&&!u.rocketCooldown&&!u.rocketGoal)).toBe(true);
  await page.keyboard.press('ArrowRight');expect((await page.evaluate(()=>battlefieldTest.snapshot())).followRockets).toBe(false);
  await page.locator('#followRockets').click();expect((await page.evaluate(()=>battlefieldTest.snapshot())).followRockets).toBe(true);

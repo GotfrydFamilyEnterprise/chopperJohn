@@ -4,7 +4,7 @@ test('QA-01 repeated HQ arrivals have identical fixed-step state traces',async({
  const runs=await page.evaluate(()=>{
   const runs=[];
   for(let repeat=0;repeat<2;repeat++){
-   battlefieldTest.reset();battlefieldTest.redAI(true);const trace=[];
+   battlefieldTest.reset();battlefieldTest.redAI(true);battlefieldTest.blueAI(true);const trace=[];
    for(let i=0;i<24;i++){battlefieldTest.step(120);trace.push(battlefieldTest.snapshot());}
    runs.push(trace);
   }
