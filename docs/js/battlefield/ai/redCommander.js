@@ -1,6 +1,6 @@
 import {updateAirPressure} from './airPressure.js';
 import {SUPPLY_RULES, createSupply, accrueSupply, purchaseUnit} from '../economy/supply.js';
-import {STRATEGY_RULES, COMPOSITIONS, observeBattlefield, chooseStrategy, firstMissing, factionRules} from './strategy.js?v=1.3.0';
+import {STRATEGY_RULES, COMPOSITIONS, observeBattlefield, chooseStrategy, firstMissing, factionRules} from './strategy.js?v=1.3.1';
 import {createSquad, addMember, membersOf, detachForGarrison, refreshSquads, movementOrder} from './squads.js';
 // AI-01..06: deterministic composition root; the scene injects the spawn factory.
 export function createCommander(team = 1) {

@@ -162,3 +162,10 @@ Validation:98 module checks passed. Full browser suite82 passed (1.3m); eight fo
 Fresh independent review: docs/quality/takeover-adversarial-review.md. Six independent probe groups passed;11 screenshots independently inspected. One missingCONTESTED label at0progress found and corrected, independently re-probed. No remaining production source blocker. Reviewer-owned Chromium execution was blocked at launch; physical iPhone/Safari and full independent browser rerun remain UNVERIFIED. No automatic merge; prepare public playable review version and PR, with GitHub Pages staying on previously mergedv1.2.1 until user acceptance.
 
 Public v1.3.0 review build published successfully: Sites source79e0d4c9e58a937ac7953e71af423ac80ad0252b, savedversion13, deploymentappgdep_6adfff96c7788191ad62d36e86306a90. Audience preserved public. Play: https://chopperjohn-fob-preview.earthyluck64.chatgpt.site/battlefield?v=1.3.0 . PR11 remains unmerged for user review; GitHub Pages stillv1.2.1.
+
+## V1.3.1 outpost durability adjustment (CAP-01/04/06)
+Both FOBs now require20 hostile reaching rocket explosions; HQs remain6. Shared defense capacity drives initialization, fallback, rebuild, status denominator and compact pips. Capture/contest/rebuild timing and infantry cover damage are unchanged. Menu help and version updated.
+
+Validation:98 module checks passed; nine focused takeover browser tests passed. Full regression83 passed with one stale menu-version expectation failing; expectation updated to1.3.1 and focused retry passed, yielding84 distinct passing browser checks across runs. Evidence: outpost-*-results.txt, outpost-nineteen-hits.png and refreshed takeover screenshots/traces. Physical Safari remains UNVERIFIED. Independent review: docs/quality/outpost-durability-review.md.
+
+Public review deployment succeeded: version14, source6d253310c727a9e73cf313fae7605d7a7ecb6aa0, deploymentappgdep_6ae0210f6238819181053a9ce7bd29bc. Play https://chopperjohn-fob-preview.earthyluck64.chatgpt.site/battlefield?v=1.3.1 . PR11 stays unmerged for user review; GitHub Pages remains the previous merged version.

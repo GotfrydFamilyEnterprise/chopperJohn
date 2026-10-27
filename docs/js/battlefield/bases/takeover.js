@@ -1,5 +1,6 @@
+import {defenseCapacity} from './defenseRules.js?v=1.3.1';
 // CAP-01..06: deterministic structural damage, ownership and rebuilding; no DOM/RNG.
-export const TAKEOVER=Object.freeze({defenseHits:6,captureSeconds:5,rebuildSeconds:20,interior:58});
+export const TAKEOVER=Object.freeze({captureSeconds:5,rebuildSeconds:20,interior:58});
 export function insideBase(unit,base){return unit.hp>0&&Math.abs(unit.x-base.x)<=TAKEOVER.interior;}
 export function capturePoint(base,team){return base.x+(team===0?-43:43);}
 export function rocketDefenseBlast(point,team,bases){
@@ -7,7 +8,7 @@ export function rocketDefenseBlast(point,team,bases){
  for(const b of bases){
   const dx=Math.max(b.x-80-point.x,0,point.x-b.x-80),dy=Math.max(460-(b.main?197:116)-point.y,0,point.y-460);
   if(b.team===team||Math.hypot(dx,dy)>25)continue;
-  const before=b.defensePoints??6;b.defensePoints=Math.max(0,before-1);b.rebuildProgress=0;b.defenseFlash=.2;
+  const before=b.defensePoints??defenseCapacity(b);b.defensePoints=Math.max(0,before-1);b.rebuildProgress=0;b.defenseFlash=.2;
   events.push({type:b.defensePoints===0&&before>0?'breach':'defenseHit',baseX:b.x,team,remaining:b.defensePoints});
  }
  return events;
@@ -28,7 +29,7 @@ function transfer(base,team,capturer,units){
 export function updateTakeover(base,units,dt){
  if(!Number.isFinite(dt)||dt<0)throw new RangeError('Invalid capture timestep');
  base.defenseFlash=Math.max(0,(base.defenseFlash||0)-dt);
- if((base.defensePoints??6)>0){base.captureProgress=0;base.captureTeam=null;base.rebuildProgress=0;base.contested=false;return null;}
+ if((base.defensePoints??defenseCapacity(base))>0){base.captureProgress=0;base.captureTeam=null;base.rebuildProgress=0;base.contested=false;return null;}
  const present=units.filter(u=>['rifle','rocket'].includes(u.type)&&insideBase(u,base));
  const attackers=present.filter(u=>u.team!==base.team&&u.type==='rifle'&&u.guardBase===null).sort((a,b)=>a.id-b.id);
  const defenders=present.filter(u=>u.team===base.team);
@@ -42,7 +43,7 @@ export function updateTakeover(base,units,dt){
  }
  const builder=defenders.some(u=>u.type==='rifle');
  const enemy=present.some(u=>u.team!==base.team);
- if(builder&&!enemy){base.rebuildProgress=(base.rebuildProgress||0)+dt;if(base.rebuildProgress+1e-8>=TAKEOVER.rebuildSeconds){base.defensePoints=6;base.rebuildProgress=0;return {type:'rebuilt',baseX:base.x,team:base.team};}}
+ if(builder&&!enemy){base.rebuildProgress=(base.rebuildProgress||0)+dt;if(base.rebuildProgress+1e-8>=TAKEOVER.rebuildSeconds){base.defensePoints=defenseCapacity(base);base.rebuildProgress=0;return {type:'rebuilt',baseX:base.x,team:base.team};}}
  else base.rebuildProgress=0;
  return null;
 }

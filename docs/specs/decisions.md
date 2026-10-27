@@ -41,3 +41,6 @@ User asks for New Game and Tutorial from a versioned main menu, ending either th
 
 ## V1.3 takeover and game end
 User approved rocket-only breaching, rifle-only physical occupation,6 defense hits,5s uncontested hold and20s rifle-present rebuild. User explicitly selected main headquarters takeover ending the game, in addition to FOB ownership. CAP-01..06 supersede historical capture-out-of-scope and captured-flag rules; initial FOB staffing behavior remains. No capture supply/spawn bonus or soldier conversion. Both sides use the same rules; blue purchasing stays manual.
+
+## V1.3.1 outpost durability
+After winning the takeover preview, user requested significantly more rocket hits for outposts. Tune both FOBs to20 hits (from6); HQs remain6. Rebuilding/reset/display use the appropriate base capacity. Capture timing, damage to infantry and economy stay unchanged.

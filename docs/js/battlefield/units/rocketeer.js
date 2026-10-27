@@ -1,5 +1,5 @@
 import {createSoldier,drawBody,endBody,updateWalking} from "./soldierCommon.js";
-import {WEAPONS} from "../combat/weapons.js?v=1.3.0";
+import {WEAPONS} from "../combat/weapons.js?v=1.3.1";
 export function createRocketeer(id,team,x,ground){return createSoldier(id,team,"rocket",x,ground);}
 export function updateRocketeer(u,dt,enemyNearby,maxSpeed=Infinity){
  // RC-02: scene weapon logic owns aiming/reload; this preserves the accepted gait.

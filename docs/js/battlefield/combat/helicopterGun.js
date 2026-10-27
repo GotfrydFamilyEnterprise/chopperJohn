@@ -1,6 +1,6 @@
 import {helicopterMuzzle} from '../aircraft/helicopter.js';
 import {segmentBox,soldierBox,lerpAircraft} from './collision2d.js';
-import {stationedBase,applyDamage} from './weapons.js?v=1.3.0';
+import {stationedBase,applyDamage} from './weapons.js?v=1.3.1';
 // HG-01..03: no rifle damage rules are changed by the aircraft gun.
 export function updateHelicopterGun(h,fire,dt,previous=h){
  const prior=h.fireCooldown;h.fireCooldown=Math.max(0,prior-dt);
