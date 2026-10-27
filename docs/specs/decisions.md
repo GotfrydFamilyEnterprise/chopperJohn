@@ -38,3 +38,6 @@ User accepted the proposed balance pass and explicitly rejected automatic blue t
 
 ## V1.2 main menu and tutorial
 User asks for New Game and Tutorial from a versioned main menu, ending either through the dropdown, and copyright Ilya Gotfryd2026. Implement an isolated six-goal battlefield practice tutorial using real controls, rather than changing the separate accepted Flight School. The main menu freezes simulation; New Game always resets. No save/resume or victory system implied.
+
+## V1.3 takeover and game end
+User approved rocket-only breaching, rifle-only physical occupation,6 defense hits,5s uncontested hold and20s rifle-present rebuild. User explicitly selected main headquarters takeover ending the game, in addition to FOB ownership. CAP-01..06 supersede historical capture-out-of-scope and captured-flag rules; initial FOB staffing behavior remains. No capture supply/spawn bonus or soldier conversion. Both sides use the same rules; blue purchasing stays manual.

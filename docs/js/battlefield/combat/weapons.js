@@ -105,7 +105,7 @@ export function updateRocketWeapon(unit, target, dt, random) {
 
 export function stationedBase(unit, bases) {
   if (!unit.arrived || unit.hp <= 0) return null;
-  return bases.find(base => !base.main && base.team === unit.team && base.x === unit.guardBase &&
+  return bases.find(base => !base.main && base.defensePoints!==0 && base.team === unit.team && base.x === unit.guardBase &&
     base.slots[unit.type]?.includes(unit.id)) ?? null;
 }
 

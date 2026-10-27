@@ -1,0 +1,1671 @@
+{
+  "flight": {
+    "id": 11,
+    "s": {
+      "session": {
+        "mode": "game",
+        "tutorial": null
+      },
+      "matchResult": null,
+      "gunShotsTotal": 0,
+      "helicopter": {
+        "kind": "air",
+        "id": "helicopter:1",
+        "generation": 1,
+        "team": 0,
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "observedVx": 0,
+        "observedVy": 0,
+        "facing": 1,
+        "angle": 0,
+        "rotorAngle": 0,
+        "turnTime": 0,
+        "turnFrom": 1,
+        "hp": 100,
+        "ammo": 120,
+        "rearming": false,
+        "fireCooldown": 0,
+        "grounded": true,
+        "respawnRemaining": 0,
+        "hitFlash": 0,
+        "repairing": false,
+        "rotorTime": 0
+      },
+      "helicopterEnabled": false,
+      "gunRounds": [],
+      "systems": {
+        "flight": true,
+        "troops": true,
+        "weapons": true,
+        "projectiles": true,
+        "damage": true,
+        "repairs": true,
+        "commanders": true,
+        "takeover": true,
+        "kinematic": false
+      },
+      "followHelicopter": false,
+      "pilotInput": {
+        "x": 0,
+        "y": 0,
+        "fire": false
+      },
+      "airRandomState": 2709298732,
+      "blueAIEnabled": false,
+      "blueCommander": {
+        "rules": {
+          "team": 0,
+          "hqX": 110,
+          "spawnX": 170,
+          "rallyX": 280,
+          "defenseX": 330,
+          "threatRadius": 800,
+          "decisionInterval": 3,
+          "regroupSeconds": 12,
+          "fieldLossThreshold": 10,
+          "maxFormationGap": 360,
+          "direction": 1,
+          "goalX": 3430
+        },
+        "supply": {
+          "balance": 240,
+          "time": 24.99999999999986,
+          "cooldown": 0,
+          "earned": 119.99999999998528,
+          "overflow": 5.0000000000122675,
+          "spent": 0,
+          "purchases": 0,
+          "ledger": []
+        },
+        "squads": [],
+        "nextSquadId": 1,
+        "strategy": {
+          "mode": "MANUAL",
+          "label": "Manual deployment"
+        },
+        "nextDecisionAt": 0,
+        "regroupUntil": 0,
+        "fieldLosses": 0,
+        "failedWaves": 0,
+        "stronger": false,
+        "events": [],
+        "blockReason": "ready",
+        "observations": {
+          "living": 1
+        }
+      },
+      "redAIEnabled": false,
+      "redCommander": {
+        "rules": {
+          "team": 1,
+          "hqX": 3490,
+          "spawnX": 3430,
+          "rallyX": 3320,
+          "defenseX": 3270,
+          "threatRadius": 800,
+          "decisionInterval": 3,
+          "regroupSeconds": 12,
+          "fieldLossThreshold": 10,
+          "maxFormationGap": 360,
+          "direction": -1,
+          "goalX": 170
+        },
+        "supply": {
+          "balance": 120,
+          "time": 0,
+          "cooldown": 0,
+          "earned": 0,
+          "overflow": 0,
+          "spent": 0,
+          "purchases": 0,
+          "ledger": []
+        },
+        "squads": [],
+        "nextSquadId": 1,
+        "strategy": {
+          "mode": "GARRISON",
+          "label": "Reinforcing FOB"
+        },
+        "nextDecisionAt": 0,
+        "regroupUntil": 0,
+        "fieldLosses": 0,
+        "failedWaves": 0,
+        "stronger": false,
+        "events": [],
+        "blockReason": "ready",
+        "observations": {
+          "living": 0
+        }
+      },
+      "time": 24.99999999999986,
+      "units": [
+        {
+          "id": 11,
+          "team": 0,
+          "type": "rocket",
+          "x": 2312.0000000000437,
+          "y": 460,
+          "phase": 0.40999999999999603,
+          "velocity": 33,
+          "state": "march",
+          "timer": 24.99999999999986,
+          "observedVelocity": 33.000000000010914,
+          "hp": 4,
+          "fireCooldown": 0,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0,
+          "rocketAssignment": null,
+          "rocketAllocation": null,
+          "rocketTargetId": null,
+          "rocketAimTime": 0,
+          "rocketTargetKind": null,
+          "rocketAirAim": null,
+          "rocketCooldown": 0,
+          "rocketGoal": null
+        }
+      ],
+      "bases": [
+        {
+          "x": 110,
+          "team": 0,
+          "main": true,
+          "defensePoints": 6,
+          "captureProgress": 0,
+          "captureTeam": null,
+          "rebuildProgress": 0,
+          "everCaptured": false,
+          "slots": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "reservations": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "state": "UNCLAIMED",
+          "everOccupied": false,
+          "flagProgress": 0,
+          "defenseFlash": 0,
+          "contested": false
+        },
+        {
+          "x": 3490,
+          "team": 1,
+          "main": true,
+          "defensePoints": 6,
+          "captureProgress": 0,
+          "captureTeam": null,
+          "rebuildProgress": 0,
+          "everCaptured": false,
+          "slots": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "reservations": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "state": "UNCLAIMED",
+          "everOccupied": false,
+          "flagProgress": 0,
+          "defenseFlash": 0,
+          "contested": false
+        },
+        {
+          "x": 1120,
+          "team": 0,
+          "main": false,
+          "defensePoints": 6,
+          "captureProgress": 0,
+          "captureTeam": null,
+          "rebuildProgress": 0,
+          "everCaptured": false,
+          "slots": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "reservations": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "state": "UNCLAIMED",
+          "everOccupied": false,
+          "flagProgress": 0,
+          "coverFlash": 0,
+          "defenseFlash": 0,
+          "contested": false
+        },
+        {
+          "x": 2480,
+          "team": 1,
+          "main": false,
+          "defensePoints": 0,
+          "captureProgress": 0,
+          "captureTeam": null,
+          "rebuildProgress": 0,
+          "everCaptured": false,
+          "slots": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "reservations": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "state": "UNCLAIMED",
+          "everOccupied": false,
+          "flagProgress": 0,
+          "coverFlash": 0,
+          "defenseFlash": 0,
+          "contested": false
+        }
+      ],
+      "bullets": [],
+      "rockets": [],
+      "explosions": [],
+      "combatEvents": [
+        {
+          "time": 0.7000000000000005,
+          "type": "launch",
+          "id": 1,
+          "team": 0,
+          "shooterId": 11,
+          "targetKind": "ground",
+          "targetId": "base:2480",
+          "originX": 2201.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 153.9763855057614,
+          "vy": -183.5019106011622,
+          "aimedX": 2480,
+          "impactX": 2484.823171249591,
+          "targetX": 2480,
+          "targetVelocity": 0,
+          "flightTime": 1.8377388947713706,
+          "spread": 14
+        },
+        {
+          "time": 2.533333333333329,
+          "type": "defenseHit",
+          "baseX": 2480,
+          "team": 0,
+          "remaining": 5
+        },
+        {
+          "time": 2.533333333333329,
+          "type": "explosion",
+          "id": 1,
+          "x": 2484.823171249591,
+          "y": 460,
+          "team": 0,
+          "cause": "ground",
+          "hits": []
+        },
+        {
+          "time": 4.39999999999999,
+          "type": "launch",
+          "id": 2,
+          "team": 0,
+          "shooterId": 11,
+          "targetKind": "ground",
+          "targetId": "base:2480",
+          "originX": 2201.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 155.42648930856367,
+          "vy": -185.23007701778633,
+          "aimedX": 2480,
+          "impactX": 2489.406489048153,
+          "targetX": 2480,
+          "targetVelocity": 0,
+          "flightTime": 1.8500817434532848,
+          "spread": 14
+        },
+        {
+          "time": 6.249999999999983,
+          "type": "defenseHit",
+          "baseX": 2480,
+          "team": 0,
+          "remaining": 4
+        },
+        {
+          "time": 6.249999999999983,
+          "type": "explosion",
+          "id": 2,
+          "x": 2489.406489048153,
+          "y": 460,
+          "team": 0,
+          "cause": "ground",
+          "hits": []
+        },
+        {
+          "time": 8.099999999999982,
+          "type": "launch",
+          "id": 3,
+          "team": 0,
+          "shooterId": 11,
+          "targetKind": "ground",
+          "targetId": "base:2480",
+          "originX": 2201.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 154.66365457022064,
+          "vy": -184.32096597781035,
+          "aimedX": 2480,
+          "impactX": 2486.990492685698,
+          "targetX": 2480,
+          "targetVelocity": 0,
+          "flightTime": 1.8435857781111582,
+          "spread": 14
+        },
+        {
+          "time": 9.933333333333406,
+          "type": "defenseHit",
+          "baseX": 2480,
+          "team": 0,
+          "remaining": 3
+        },
+        {
+          "time": 9.933333333333406,
+          "type": "explosion",
+          "id": 3,
+          "x": 2486.990492685698,
+          "y": 460,
+          "team": 0,
+          "cause": "ground",
+          "hits": []
+        },
+        {
+          "time": 11.800000000000166,
+          "type": "launch",
+          "id": 4,
+          "team": 0,
+          "shooterId": 11,
+          "targetKind": "ground",
+          "targetId": "base:2480",
+          "originX": 2201.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 148.33584846611976,
+          "vy": -176.77978032000854,
+          "aimedX": 2480,
+          "impactX": 2467.3696798710153,
+          "targetX": 2480,
+          "targetVelocity": 0,
+          "flightTime": 1.7899577471477983,
+          "spread": 14
+        },
+        {
+          "time": 13.583333333333588,
+          "type": "defenseHit",
+          "baseX": 2480,
+          "team": 0,
+          "remaining": 2
+        },
+        {
+          "time": 13.583333333333588,
+          "type": "explosion",
+          "id": 4,
+          "x": 2467.3696798710153,
+          "y": 460,
+          "team": 0,
+          "cause": "ground",
+          "hits": []
+        },
+        {
+          "time": 15.50000000000035,
+          "type": "launch",
+          "id": 5,
+          "team": 0,
+          "shooterId": 11,
+          "targetKind": "ground",
+          "targetId": "base:2480",
+          "originX": 2201.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 151.68742352117116,
+          "vy": -180.77403193271516,
+          "aimedX": 2480,
+          "impactX": 2477.6687012836337,
+          "targetX": 2480,
+          "targetVelocity": 0,
+          "flightTime": 1.818304485314142,
+          "spread": 14
+        },
+        {
+          "time": 17.316666666666965,
+          "type": "defenseHit",
+          "baseX": 2480,
+          "team": 0,
+          "remaining": 1
+        },
+        {
+          "time": 17.316666666666965,
+          "type": "explosion",
+          "id": 5,
+          "x": 2477.6687012836337,
+          "y": 460,
+          "team": 0,
+          "cause": "ground",
+          "hits": []
+        },
+        {
+          "time": 19.20000000000019,
+          "type": "launch",
+          "id": 6,
+          "team": 0,
+          "shooterId": 11,
+          "targetKind": "ground",
+          "targetId": "base:2480",
+          "originX": 2201.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 151.04475243590161,
+          "vy": -180.00812635798877,
+          "aimedX": 2480,
+          "impactX": 2475.67757763993,
+          "targetX": 2480,
+          "targetVelocity": 0,
+          "flightTime": 1.8128587355379255,
+          "spread": 14
+        },
+        {
+          "time": 21.00000000000009,
+          "type": "breach",
+          "baseX": 2480,
+          "team": 0,
+          "remaining": 0
+        },
+        {
+          "time": 21.00000000000009,
+          "type": "explosion",
+          "id": 6,
+          "x": 2475.67757763993,
+          "y": 460,
+          "team": 0,
+          "cause": "ground",
+          "hits": []
+        }
+      ],
+      "seed": 31,
+      "shotsFired": 6,
+      "camera": 0,
+      "scale": 0.6724137931034483,
+      "followRockets": false,
+      "randomState": 2399460317
+    }
+  },
+  "approach": {
+    "id": 12,
+    "maxStep": 0.783333333333303,
+    "firstCapture": 27.599999999999714,
+    "result": {
+      "session": {
+        "mode": "game",
+        "tutorial": null
+      },
+      "matchResult": null,
+      "gunShotsTotal": 0,
+      "helicopter": {
+        "kind": "air",
+        "id": "helicopter:1",
+        "generation": 1,
+        "team": 0,
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "observedVx": 0,
+        "observedVy": 0,
+        "facing": 1,
+        "angle": 0,
+        "rotorAngle": 0,
+        "turnTime": 0,
+        "turnFrom": 1,
+        "hp": 100,
+        "ammo": 120,
+        "rearming": false,
+        "fireCooldown": 0,
+        "grounded": true,
+        "respawnRemaining": 0,
+        "hitFlash": 0,
+        "repairing": false,
+        "rotorTime": 0
+      },
+      "helicopterEnabled": false,
+      "gunRounds": [],
+      "systems": {
+        "flight": true,
+        "troops": true,
+        "weapons": false,
+        "projectiles": true,
+        "damage": true,
+        "repairs": true,
+        "commanders": true,
+        "takeover": true,
+        "kinematic": false
+      },
+      "followHelicopter": false,
+      "pilotInput": {
+        "x": 0,
+        "y": 0,
+        "fire": false
+      },
+      "airRandomState": 2709298732,
+      "blueAIEnabled": false,
+      "blueCommander": {
+        "rules": {
+          "team": 0,
+          "hqX": 110,
+          "spawnX": 170,
+          "rallyX": 280,
+          "defenseX": 330,
+          "threatRadius": 800,
+          "decisionInterval": 3,
+          "regroupSeconds": 12,
+          "fieldLossThreshold": 10,
+          "maxFormationGap": 360,
+          "direction": 1,
+          "goalX": 3430
+        },
+        "supply": {
+          "balance": 240,
+          "time": 32.58333333333277,
+          "cooldown": 0,
+          "earned": 119.99999999998528,
+          "overflow": 42.91666666667906,
+          "spent": 0,
+          "purchases": 0,
+          "ledger": []
+        },
+        "squads": [],
+        "nextSquadId": 1,
+        "strategy": {
+          "mode": "MANUAL",
+          "label": "Manual deployment"
+        },
+        "nextDecisionAt": 0,
+        "regroupUntil": 0,
+        "fieldLosses": 0,
+        "failedWaves": 0,
+        "stronger": false,
+        "events": [],
+        "blockReason": "ready",
+        "observations": {
+          "living": 2
+        }
+      },
+      "redAIEnabled": false,
+      "redCommander": {
+        "rules": {
+          "team": 1,
+          "hqX": 3490,
+          "spawnX": 3430,
+          "rallyX": 3320,
+          "defenseX": 3270,
+          "threatRadius": 800,
+          "decisionInterval": 3,
+          "regroupSeconds": 12,
+          "fieldLossThreshold": 10,
+          "maxFormationGap": 360,
+          "direction": -1,
+          "goalX": 170
+        },
+        "supply": {
+          "balance": 120,
+          "time": 0,
+          "cooldown": 0,
+          "earned": 0,
+          "overflow": 0,
+          "spent": 0,
+          "purchases": 0,
+          "ledger": []
+        },
+        "squads": [],
+        "nextSquadId": 1,
+        "strategy": {
+          "mode": "GARRISON",
+          "label": "Reinforcing FOB"
+        },
+        "nextDecisionAt": 0,
+        "regroupUntil": 0,
+        "fieldLosses": 0,
+        "failedWaves": 0,
+        "stronger": false,
+        "events": [],
+        "blockReason": "ready",
+        "observations": {
+          "living": 0
+        }
+      },
+      "time": 32.58333333333277,
+      "units": [
+        {
+          "id": 11,
+          "team": 0,
+          "type": "rocket",
+          "x": 2562.2500000001264,
+          "y": 460,
+          "phase": 0.09749999999998779,
+          "velocity": 33,
+          "state": "march",
+          "timer": 32.58333333333277,
+          "observedVelocity": 33.000000000010914,
+          "hp": 4,
+          "fireCooldown": 0,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0,
+          "rocketAssignment": null,
+          "rocketAllocation": null,
+          "rocketTargetId": null,
+          "rocketAimTime": 0,
+          "rocketTargetKind": null,
+          "rocketAirAim": null,
+          "rocketCooldown": 0,
+          "rocketGoal": null
+        },
+        {
+          "id": 12,
+          "team": 0,
+          "type": "rifle",
+          "x": 2437,
+          "y": 460,
+          "phase": 0.8336363636364851,
+          "velocity": 47,
+          "state": "guard",
+          "timer": 7.583333333333312,
+          "observedVelocity": 0,
+          "hp": 3,
+          "fireCooldown": -7.583333333333312,
+          "guardBase": 2480,
+          "guardSlot": 0,
+          "hitFlash": 0,
+          "arrived": true,
+          "order": {
+            "role": "garrison",
+            "baseX": 2480
+          }
+        }
+      ],
+      "bases": [
+        {
+          "x": 110,
+          "team": 0,
+          "main": true,
+          "defensePoints": 6,
+          "captureProgress": 0,
+          "captureTeam": null,
+          "rebuildProgress": 0,
+          "everCaptured": false,
+          "slots": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "reservations": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "state": "UNCLAIMED",
+          "everOccupied": false,
+          "flagProgress": 0,
+          "defenseFlash": 0,
+          "contested": false
+        },
+        {
+          "x": 3490,
+          "team": 1,
+          "main": true,
+          "defensePoints": 6,
+          "captureProgress": 0,
+          "captureTeam": null,
+          "rebuildProgress": 0,
+          "everCaptured": false,
+          "slots": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "reservations": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "state": "UNCLAIMED",
+          "everOccupied": false,
+          "flagProgress": 0,
+          "defenseFlash": 0,
+          "contested": false
+        },
+        {
+          "x": 1120,
+          "team": 0,
+          "main": false,
+          "defensePoints": 6,
+          "captureProgress": 0,
+          "captureTeam": null,
+          "rebuildProgress": 0,
+          "everCaptured": false,
+          "slots": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "reservations": {
+            "rifle": [
+              null,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "state": "UNCLAIMED",
+          "everOccupied": false,
+          "flagProgress": 0,
+          "coverFlash": 0,
+          "defenseFlash": 0,
+          "contested": false
+        },
+        {
+          "x": 2480,
+          "team": 0,
+          "main": false,
+          "defensePoints": 0,
+          "captureProgress": 0,
+          "captureTeam": null,
+          "rebuildProgress": 0,
+          "everCaptured": true,
+          "slots": {
+            "rifle": [
+              12,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "reservations": {
+            "rifle": [
+              12,
+              null
+            ],
+            "rocket": [
+              null
+            ]
+          },
+          "state": "ASSEMBLING",
+          "everOccupied": false,
+          "flagProgress": 0,
+          "coverFlash": 0,
+          "defenseFlash": 0,
+          "contested": false
+        }
+      ],
+      "bullets": [],
+      "rockets": [],
+      "explosions": [],
+      "combatEvents": [
+        {
+          "time": 0.7000000000000005,
+          "type": "launch",
+          "id": 1,
+          "team": 0,
+          "shooterId": 11,
+          "targetKind": "ground",
+          "targetId": "base:2480",
+          "originX": 2201.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 153.9763855057614,
+          "vy": -183.5019106011622,
+          "aimedX": 2480,
+          "impactX": 2484.823171249591,
+          "targetX": 2480,
+          "targetVelocity": 0,
+          "flightTime": 1.8377388947713706,
+          "spread": 14
+        },
+        {
+          "time": 2.533333333333329,
+          "type": "defenseHit",
+          "baseX": 2480,
+          "team": 0,
+          "remaining": 5
+        },
+        {
+          "time": 2.533333333333329,
+          "type": "explosion",
+          "id": 1,
+          "x": 2484.823171249591,
+          "y": 460,
+          "team": 0,
+          "cause": "ground",
+          "hits": []
+        },
+        {
+          "time": 4.39999999999999,
+          "type": "launch",
+          "id": 2,
+          "team": 0,
+          "shooterId": 11,
+          "targetKind": "ground",
+          "targetId": "base:2480",
+          "originX": 2201.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 155.42648930856367,
+          "vy": -185.23007701778633,
+          "aimedX": 2480,
+          "impactX": 2489.406489048153,
+          "targetX": 2480,
+          "targetVelocity": 0,
+          "flightTime": 1.8500817434532848,
+          "spread": 14
+        },
+        {
+          "time": 6.249999999999983,
+          "type": "defenseHit",
+          "baseX": 2480,
+          "team": 0,
+          "remaining": 4
+        },
+        {
+          "time": 6.249999999999983,
+          "type": "explosion",
+          "id": 2,
+          "x": 2489.406489048153,
+          "y": 460,
+          "team": 0,
+          "cause": "ground",
+          "hits": []
+        },
+        {
+          "time": 8.099999999999982,
+          "type": "launch",
+          "id": 3,
+          "team": 0,
+          "shooterId": 11,
+          "targetKind": "ground",
+          "targetId": "base:2480",
+          "originX": 2201.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 154.66365457022064,
+          "vy": -184.32096597781035,
+          "aimedX": 2480,
+          "impactX": 2486.990492685698,
+          "targetX": 2480,
+          "targetVelocity": 0,
+          "flightTime": 1.8435857781111582,
+          "spread": 14
+        },
+        {
+          "time": 9.933333333333406,
+          "type": "defenseHit",
+          "baseX": 2480,
+          "team": 0,
+          "remaining": 3
+        },
+        {
+          "time": 9.933333333333406,
+          "type": "explosion",
+          "id": 3,
+          "x": 2486.990492685698,
+          "y": 460,
+          "team": 0,
+          "cause": "ground",
+          "hits": []
+        },
+        {
+          "time": 11.800000000000166,
+          "type": "launch",
+          "id": 4,
+          "team": 0,
+          "shooterId": 11,
+          "targetKind": "ground",
+          "targetId": "base:2480",
+          "originX": 2201.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 148.33584846611976,
+          "vy": -176.77978032000854,
+          "aimedX": 2480,
+          "impactX": 2467.3696798710153,
+          "targetX": 2480,
+          "targetVelocity": 0,
+          "flightTime": 1.7899577471477983,
+          "spread": 14
+        },
+        {
+          "time": 13.583333333333588,
+          "type": "defenseHit",
+          "baseX": 2480,
+          "team": 0,
+          "remaining": 2
+        },
+        {
+          "time": 13.583333333333588,
+          "type": "explosion",
+          "id": 4,
+          "x": 2467.3696798710153,
+          "y": 460,
+          "team": 0,
+          "cause": "ground",
+          "hits": []
+        },
+        {
+          "time": 15.50000000000035,
+          "type": "launch",
+          "id": 5,
+          "team": 0,
+          "shooterId": 11,
+          "targetKind": "ground",
+          "targetId": "base:2480",
+          "originX": 2201.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 151.68742352117116,
+          "vy": -180.77403193271516,
+          "aimedX": 2480,
+          "impactX": 2477.6687012836337,
+          "targetX": 2480,
+          "targetVelocity": 0,
+          "flightTime": 1.818304485314142,
+          "spread": 14
+        },
+        {
+          "time": 17.316666666666965,
+          "type": "defenseHit",
+          "baseX": 2480,
+          "team": 0,
+          "remaining": 1
+        },
+        {
+          "time": 17.316666666666965,
+          "type": "explosion",
+          "id": 5,
+          "x": 2477.6687012836337,
+          "y": 460,
+          "team": 0,
+          "cause": "ground",
+          "hits": []
+        },
+        {
+          "time": 19.20000000000019,
+          "type": "launch",
+          "id": 6,
+          "team": 0,
+          "shooterId": 11,
+          "targetKind": "ground",
+          "targetId": "base:2480",
+          "originX": 2201.8547787293423,
+          "originY": 391.95448893395474,
+          "vx": 151.04475243590161,
+          "vy": -180.00812635798877,
+          "aimedX": 2480,
+          "impactX": 2475.67757763993,
+          "targetX": 2480,
+          "targetVelocity": 0,
+          "flightTime": 1.8128587355379255,
+          "spread": 14
+        },
+        {
+          "time": 21.00000000000009,
+          "type": "breach",
+          "baseX": 2480,
+          "team": 0,
+          "remaining": 0
+        },
+        {
+          "time": 21.00000000000009,
+          "type": "explosion",
+          "id": 6,
+          "x": 2475.67757763993,
+          "y": 460,
+          "team": 0,
+          "cause": "ground",
+          "hits": []
+        },
+        {
+          "time": 32.58333333333277,
+          "type": "captured",
+          "baseX": 2480,
+          "main": false,
+          "team": 0,
+          "previousTeam": 1,
+          "capturerId": 12
+        }
+      ],
+      "seed": 31,
+      "shotsFired": 6,
+      "camera": 2263.3333333333335,
+      "scale": 0.9,
+      "followRockets": false,
+      "randomState": 2399460317
+    }
+  },
+  "rebuilt": {
+    "session": {
+      "mode": "game",
+      "tutorial": null
+    },
+    "matchResult": null,
+    "gunShotsTotal": 0,
+    "helicopter": {
+      "kind": "air",
+      "id": "helicopter:1",
+      "generation": 1,
+      "team": 0,
+      "x": 400,
+      "y": 437,
+      "vx": 0,
+      "vy": 0,
+      "observedVx": 0,
+      "observedVy": 0,
+      "facing": 1,
+      "angle": 0,
+      "rotorAngle": 0,
+      "turnTime": 0,
+      "turnFrom": 1,
+      "hp": 100,
+      "ammo": 120,
+      "rearming": false,
+      "fireCooldown": 0,
+      "grounded": true,
+      "respawnRemaining": 0,
+      "hitFlash": 0,
+      "repairing": false,
+      "rotorTime": 0
+    },
+    "helicopterEnabled": false,
+    "gunRounds": [],
+    "systems": {
+      "flight": true,
+      "troops": true,
+      "weapons": false,
+      "projectiles": true,
+      "damage": true,
+      "repairs": true,
+      "commanders": true,
+      "takeover": true,
+      "kinematic": false
+    },
+    "followHelicopter": false,
+    "pilotInput": {
+      "x": 0,
+      "y": 0,
+      "fire": false
+    },
+    "airRandomState": 2709298732,
+    "blueAIEnabled": false,
+    "blueCommander": {
+      "rules": {
+        "team": 0,
+        "hqX": 110,
+        "spawnX": 170,
+        "rallyX": 280,
+        "defenseX": 330,
+        "threatRadius": 800,
+        "decisionInterval": 3,
+        "regroupSeconds": 12,
+        "fieldLossThreshold": 10,
+        "maxFormationGap": 360,
+        "direction": 1,
+        "goalX": 3430
+      },
+      "supply": {
+        "balance": 240,
+        "time": 52.58333333333163,
+        "cooldown": 0,
+        "earned": 119.99999999998528,
+        "overflow": 142.9166666666777,
+        "spent": 0,
+        "purchases": 0,
+        "ledger": []
+      },
+      "squads": [],
+      "nextSquadId": 1,
+      "strategy": {
+        "mode": "MANUAL",
+        "label": "Manual deployment"
+      },
+      "nextDecisionAt": 0,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [],
+      "blockReason": "ready",
+      "observations": {
+        "living": 2
+      }
+    },
+    "redAIEnabled": false,
+    "redCommander": {
+      "rules": {
+        "team": 1,
+        "hqX": 3490,
+        "spawnX": 3430,
+        "rallyX": 3320,
+        "defenseX": 3270,
+        "threatRadius": 800,
+        "decisionInterval": 3,
+        "regroupSeconds": 12,
+        "fieldLossThreshold": 10,
+        "maxFormationGap": 360,
+        "direction": -1,
+        "goalX": 170
+      },
+      "supply": {
+        "balance": 120,
+        "time": 0,
+        "cooldown": 0,
+        "earned": 0,
+        "overflow": 0,
+        "spent": 0,
+        "purchases": 0,
+        "ledger": []
+      },
+      "squads": [],
+      "nextSquadId": 1,
+      "strategy": {
+        "mode": "GARRISON",
+        "label": "Reinforcing FOB"
+      },
+      "nextDecisionAt": 0,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [],
+      "blockReason": "ready",
+      "observations": {
+        "living": 0
+      }
+    },
+    "time": 52.58333333333163,
+    "units": [
+      {
+        "id": 11,
+        "team": 0,
+        "type": "rocket",
+        "x": 3222.2500000003447,
+        "y": 460,
+        "phase": 0.0974999999999678,
+        "velocity": 33,
+        "state": "march",
+        "timer": 52.58333333333163,
+        "observedVelocity": 33.000000000010914,
+        "hp": 4,
+        "fireCooldown": 0,
+        "guardBase": null,
+        "guardSlot": null,
+        "hitFlash": 0,
+        "rocketAssignment": null,
+        "rocketAllocation": null,
+        "rocketTargetId": null,
+        "rocketAimTime": 0,
+        "rocketTargetKind": null,
+        "rocketAirAim": null,
+        "rocketCooldown": 0,
+        "rocketGoal": null
+      },
+      {
+        "id": 12,
+        "team": 0,
+        "type": "rifle",
+        "x": 2437,
+        "y": 460,
+        "phase": 0.8336363636364851,
+        "velocity": 47,
+        "state": "guard",
+        "timer": 7.583333333333312,
+        "observedVelocity": 0,
+        "hp": 3,
+        "fireCooldown": -27.583333333333048,
+        "guardBase": 2480,
+        "guardSlot": 0,
+        "hitFlash": 0,
+        "arrived": true,
+        "order": {
+          "role": "garrison",
+          "baseX": 2480
+        }
+      }
+    ],
+    "bases": [
+      {
+        "x": 110,
+        "team": 0,
+        "main": true,
+        "defensePoints": 6,
+        "captureProgress": 0,
+        "captureTeam": null,
+        "rebuildProgress": 0,
+        "everCaptured": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "defenseFlash": 0,
+        "contested": false
+      },
+      {
+        "x": 3490,
+        "team": 1,
+        "main": true,
+        "defensePoints": 6,
+        "captureProgress": 0,
+        "captureTeam": null,
+        "rebuildProgress": 0,
+        "everCaptured": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "defenseFlash": 0,
+        "contested": false
+      },
+      {
+        "x": 1120,
+        "team": 0,
+        "main": false,
+        "defensePoints": 6,
+        "captureProgress": 0,
+        "captureTeam": null,
+        "rebuildProgress": 0,
+        "everCaptured": false,
+        "slots": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            null,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "UNCLAIMED",
+        "everOccupied": false,
+        "flagProgress": 0,
+        "coverFlash": 0,
+        "defenseFlash": 0,
+        "contested": false
+      },
+      {
+        "x": 2480,
+        "team": 0,
+        "main": false,
+        "defensePoints": 6,
+        "captureProgress": 0,
+        "captureTeam": null,
+        "rebuildProgress": 0,
+        "everCaptured": true,
+        "slots": {
+          "rifle": [
+            12,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "reservations": {
+          "rifle": [
+            12,
+            null
+          ],
+          "rocket": [
+            null
+          ]
+        },
+        "state": "ASSEMBLING",
+        "everOccupied": false,
+        "flagProgress": 1,
+        "coverFlash": 0,
+        "defenseFlash": 0,
+        "contested": false
+      }
+    ],
+    "bullets": [],
+    "rockets": [],
+    "explosions": [],
+    "combatEvents": [
+      {
+        "time": 0.7000000000000005,
+        "type": "launch",
+        "id": 1,
+        "team": 0,
+        "shooterId": 11,
+        "targetKind": "ground",
+        "targetId": "base:2480",
+        "originX": 2201.8547787293423,
+        "originY": 391.95448893395474,
+        "vx": 153.9763855057614,
+        "vy": -183.5019106011622,
+        "aimedX": 2480,
+        "impactX": 2484.823171249591,
+        "targetX": 2480,
+        "targetVelocity": 0,
+        "flightTime": 1.8377388947713706,
+        "spread": 14
+      },
+      {
+        "time": 2.533333333333329,
+        "type": "defenseHit",
+        "baseX": 2480,
+        "team": 0,
+        "remaining": 5
+      },
+      {
+        "time": 2.533333333333329,
+        "type": "explosion",
+        "id": 1,
+        "x": 2484.823171249591,
+        "y": 460,
+        "team": 0,
+        "cause": "ground",
+        "hits": []
+      },
+      {
+        "time": 4.39999999999999,
+        "type": "launch",
+        "id": 2,
+        "team": 0,
+        "shooterId": 11,
+        "targetKind": "ground",
+        "targetId": "base:2480",
+        "originX": 2201.8547787293423,
+        "originY": 391.95448893395474,
+        "vx": 155.42648930856367,
+        "vy": -185.23007701778633,
+        "aimedX": 2480,
+        "impactX": 2489.406489048153,
+        "targetX": 2480,
+        "targetVelocity": 0,
+        "flightTime": 1.8500817434532848,
+        "spread": 14
+      },
+      {
+        "time": 6.249999999999983,
+        "type": "defenseHit",
+        "baseX": 2480,
+        "team": 0,
+        "remaining": 4
+      },
+      {
+        "time": 6.249999999999983,
+        "type": "explosion",
+        "id": 2,
+        "x": 2489.406489048153,
+        "y": 460,
+        "team": 0,
+        "cause": "ground",
+        "hits": []
+      },
+      {
+        "time": 8.099999999999982,
+        "type": "launch",
+        "id": 3,
+        "team": 0,
+        "shooterId": 11,
+        "targetKind": "ground",
+        "targetId": "base:2480",
+        "originX": 2201.8547787293423,
+        "originY": 391.95448893395474,
+        "vx": 154.66365457022064,
+        "vy": -184.32096597781035,
+        "aimedX": 2480,
+        "impactX": 2486.990492685698,
+        "targetX": 2480,
+        "targetVelocity": 0,
+        "flightTime": 1.8435857781111582,
+        "spread": 14
+      },
+      {
+        "time": 9.933333333333406,
+        "type": "defenseHit",
+        "baseX": 2480,
+        "team": 0,
+        "remaining": 3
+      },
+      {
+        "time": 9.933333333333406,
+        "type": "explosion",
+        "id": 3,
+        "x": 2486.990492685698,
+        "y": 460,
+        "team": 0,
+        "cause": "ground",
+        "hits": []
+      },
+      {
+        "time": 11.800000000000166,
+        "type": "launch",
+        "id": 4,
+        "team": 0,
+        "shooterId": 11,
+        "targetKind": "ground",
+        "targetId": "base:2480",
+        "originX": 2201.8547787293423,
+        "originY": 391.95448893395474,
+        "vx": 148.33584846611976,
+        "vy": -176.77978032000854,
+        "aimedX": 2480,
+        "impactX": 2467.3696798710153,
+        "targetX": 2480,
+        "targetVelocity": 0,
+        "flightTime": 1.7899577471477983,
+        "spread": 14
+      },
+      {
+        "time": 13.583333333333588,
+        "type": "defenseHit",
+        "baseX": 2480,
+        "team": 0,
+        "remaining": 2
+      },
+      {
+        "time": 13.583333333333588,
+        "type": "explosion",
+        "id": 4,
+        "x": 2467.3696798710153,
+        "y": 460,
+        "team": 0,
+        "cause": "ground",
+        "hits": []
+      },
+      {
+        "time": 15.50000000000035,
+        "type": "launch",
+        "id": 5,
+        "team": 0,
+        "shooterId": 11,
+        "targetKind": "ground",
+        "targetId": "base:2480",
+        "originX": 2201.8547787293423,
+        "originY": 391.95448893395474,
+        "vx": 151.68742352117116,
+        "vy": -180.77403193271516,
+        "aimedX": 2480,
+        "impactX": 2477.6687012836337,
+        "targetX": 2480,
+        "targetVelocity": 0,
+        "flightTime": 1.818304485314142,
+        "spread": 14
+      },
+      {
+        "time": 17.316666666666965,
+        "type": "defenseHit",
+        "baseX": 2480,
+        "team": 0,
+        "remaining": 1
+      },
+      {
+        "time": 17.316666666666965,
+        "type": "explosion",
+        "id": 5,
+        "x": 2477.6687012836337,
+        "y": 460,
+        "team": 0,
+        "cause": "ground",
+        "hits": []
+      },
+      {
+        "time": 19.20000000000019,
+        "type": "launch",
+        "id": 6,
+        "team": 0,
+        "shooterId": 11,
+        "targetKind": "ground",
+        "targetId": "base:2480",
+        "originX": 2201.8547787293423,
+        "originY": 391.95448893395474,
+        "vx": 151.04475243590161,
+        "vy": -180.00812635798877,
+        "aimedX": 2480,
+        "impactX": 2475.67757763993,
+        "targetX": 2480,
+        "targetVelocity": 0,
+        "flightTime": 1.8128587355379255,
+        "spread": 14
+      },
+      {
+        "time": 21.00000000000009,
+        "type": "breach",
+        "baseX": 2480,
+        "team": 0,
+        "remaining": 0
+      },
+      {
+        "time": 21.00000000000009,
+        "type": "explosion",
+        "id": 6,
+        "x": 2475.67757763993,
+        "y": 460,
+        "team": 0,
+        "cause": "ground",
+        "hits": []
+      },
+      {
+        "time": 32.58333333333277,
+        "type": "captured",
+        "baseX": 2480,
+        "main": false,
+        "team": 0,
+        "previousTeam": 1,
+        "capturerId": 12
+      },
+      {
+        "time": 52.58333333333163,
+        "type": "rebuilt",
+        "baseX": 2480,
+        "team": 0
+      }
+    ],
+    "seed": 31,
+    "shotsFired": 6,
+    "camera": 2263.3333333333335,
+    "scale": 0.9,
+    "followRockets": false,
+    "randomState": 2399460317
+  }
+}

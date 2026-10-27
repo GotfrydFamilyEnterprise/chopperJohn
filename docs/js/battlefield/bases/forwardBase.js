@@ -34,6 +34,7 @@ export function releaseDeadDefenders(b,aliveIds){
 }
 export function drawForwardBase(ctx,b){
  drawFoundation(ctx,b);
+ ctx.globalAlpha=b.defensePoints===0?.35:1;
  // Four posts holding a camouflaged fabric roof.
  ctx.strokeStyle="#6b6a50";ctx.lineWidth=6;
  for(const x of [-58,-21,21,58]){ctx.beginPath();ctx.moveTo(x,-12);ctx.lineTo(x,-91);ctx.stroke();}
@@ -56,6 +57,7 @@ export function drawForwardBase(ctx,b){
   ctx.lineTo(x+15,y+2);ctx.lineTo(x+7,y+6);ctx.closePath();ctx.fill();
  }
  ctx.restore();
+ ctx.globalAlpha=1;
  ctx.fillStyle=baseTextColor(b.team);ctx.font="bold 13px system-ui";ctx.textAlign="center";
  ctx.fillText(b.state+" · "+b.slots.rifle.filter(x=>x!==null).length+"/2 R · "+b.slots.rocket.filter(x=>x!==null).length+"/1 AT",0,-124);
  // Flag physically rises only after the occupation requirement is satisfied.
@@ -68,7 +70,7 @@ export function drawForwardFront(ctx,b){
  const front="#b7a07a",shadow="#77664d";
  drawFoundation(ctx,b);
  // Sandbags as overlapping staggered ovals.
- for(let row=0;row<3;row++)for(let i=0;i<7;i++){
+ for(let row=0;row<(b.defensePoints===0?1:3);row++)for(let i=0;i<7;i++){
   const x=-67+i*22+(row%2)*10,y=-5-row*7;
   ctx.fillStyle=(i+row)%2?front:shadow;ctx.beginPath();ctx.ellipse(x,y,13,5,0,0,Math.PI*2);ctx.fill();
   ctx.strokeStyle="#493d2f";ctx.lineWidth=.8;ctx.stroke();

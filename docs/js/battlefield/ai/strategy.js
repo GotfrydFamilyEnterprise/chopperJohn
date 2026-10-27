@@ -21,18 +21,16 @@ export function observeBattlefield(units, bases, rules = factionRules(1)) {
   const live = units.filter(unit => unit.hp > 0);
   const allies = live.filter(unit => unit.team === rules.team);
   const enemies = live.filter(unit => unit.team !== rules.team);
-  const fob = bases.find(base => !base.main && base.team === rules.team);
-  const enemyFob = bases.find(base => !base.main && base.team !== rules.team);
-  const incoming = {rifle: 0, rocket: 0}, stationed = {rifle: 0, rocket: 0};
-  for (const unit of allies) {
-    if (!fob || !(unit.type in incoming)) continue;
-    if (unit.guardBase === fob.x) {
-      incoming[unit.type]++;
-      if (unit.arrived && fob.slots[unit.type]?.includes(unit.id)) stationed[unit.type]++;
-    } else if (unit.order?.role === 'garrison' && (unit.x - fob.x) * rules.direction <= 80) incoming[unit.type]++;
-  }
-  const missing = {rifle: fob ? Math.max(0, 2 - incoming.rifle) : 0,
-    rocket: fob ? Math.max(0, 1 - incoming.rocket) : 0};
+  const owned=bases.filter(base=>!base.main&&base.team===rules.team).sort((a,b)=>Math.abs(a.x-rules.hqX)-Math.abs(b.x-rules.hqX));
+  const enemyFob=bases.filter(base=>!base.main&&base.team!==rules.team).sort((a,b)=>Math.abs(a.x-rules.hqX)-Math.abs(b.x-rules.hqX))[0];
+  const count=base=>{const incoming={rifle:0,rocket:0},stationed={rifle:0,rocket:0};
+   if(base)for(const unit of allies){if(!(unit.type in incoming))continue;
+    if(unit.guardBase===base.x){incoming[unit.type]++;if(unit.arrived&&base.slots[unit.type]?.includes(unit.id))stationed[unit.type]++;}
+    else if(unit.order?.role==='garrison'&&(unit.order.baseX===base.x||unit.order.baseX==null&&base===owned[0])&&(unit.x-base.x)*rules.direction<=80)incoming[unit.type]++;
+   }return {incoming,stationed};};
+  const fob=owned.find(base=>{const {incoming}=count(base);return incoming.rifle<2||incoming.rocket<1;})??owned[0];
+  const {incoming,stationed}=count(fob);
+  const missing={rifle:fob?Math.max(0,2-incoming.rifle):0,rocket:fob?Math.max(0,1-incoming.rocket):0};
   const threatened = enemies.some(enemy => Math.abs(enemy.x - rules.hqX) <= STRATEGY_RULES.threatRadius);
   const enemyStaffed = !!enemyFob && enemies.some(unit => unit.arrived && unit.guardBase === enemyFob.x && enemyFob.slots[unit.type]?.includes(unit.id));
   return {allies, enemies, fob, enemyFob, missing, incoming, stationed, threatened, enemyStaffed};
