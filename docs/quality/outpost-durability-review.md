@@ -1,0 +1,13 @@
+# Independent outpost durability review — v1.3.1
+
+Scope: CAP-01/04/06 durability change, reviewed against AGENTS.md, requirements, acceptance, implementation status, review protocol and working diff. No production edits by reviewer.
+
+- **PASS — CAP-01/03/04/06, module behavior.** Reviewer independently executed `node tests-unit/takeover.test.js`: 10/10 passed. Additional independently designed assertions passed for both owners and both structure types: FOB19 hits leaves1, HQ5 leaves1, next hit breaches; friendly and just-outside-footprint explosions do nothing; intact structure blocks a rifle's30-second capture attempt;5-second capture changes owner;19.99 seconds never rebuilds; hostile rocket resets rebuilding;20 continuous seconds restores20 for FOB/6 for HQ; fresh initialization and status denominators match capacity.
+- **PASS — CAP-06 visual evidence.** Independently inspected `evidence/outpost-nineteen-hits.png` at390×844. “RED FOB · DEFENSE1/20” is readable above the open net-and-post bunker; damage ticks and compact controls remain visible. This screenshot establishes this staged state only.
+- **Corrected finding — CAP-06, medium.** Initial `docs/battlefield.html` help still described all defenses as6 hits. Reported to implementer; implementer reports correction to FOB20/HQ6. Reviewer did not independently rerun browser text verification after correction.
+- **UNVERIFIED — independent browser execution.** Reviewer's Playwright launch failed before tests because sandbox denied socket creation (`PermissionError` in webServer). Retry requesting network permission did not return a completed result before review cutoff. Do not count that invocation as passing. Implementer's browser results are separate evidence, not reviewer-owned execution.
+- **UNVERIFIED — release/device acceptance.** Reviewer did not independently verify deployed v1.3.1, warm-cache update, physical iPhone/Safari or full Flight School progression. Static inspection found shared capacity used by initialization, rebuild, target fallback and displayed denominators; no additional constant mismatch established in the inspected production changes.
+
+Cross-feature assessment: independently exercised capture gating, ownership transfer, rebuild reset and faction/structure symmetry; no blocking simulation discrepancy found in these bounded probes. Historical v1.3 six-hit evidence remains historical and must not be presented as current FOB durability evidence.
+
+Recommendation: **INSUFFICIENT EVIDENCE** for unconditional merge under the repository gate because independent browser/deployment checks remain UNVERIFIED. No unresolved production simulation blocker established by this bounded review. User acceptance/merge authorization remains separate.

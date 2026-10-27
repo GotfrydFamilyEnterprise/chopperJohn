@@ -1,4 +1,4 @@
-import {WEAPONS, rocketPosition} from './weapons.js';
+import {WEAPONS, rocketPosition} from './weapons.js?v=1.3.1';
 
 // RC-06: analytic trails share the projectile's real trajectory; no visual RNG.
 export function drawCombatEffects(ctx, rockets, explosions, impacts) {

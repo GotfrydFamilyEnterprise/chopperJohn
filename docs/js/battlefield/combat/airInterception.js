@@ -1,4 +1,4 @@
-import {rocketSpread} from './weapons.js';
+import {rocketSpread} from './weapons.js?v=1.3.1';
 export const ANTI_AIR=Object.freeze({speed:450,gravity:240,minRange:225,maxRange:600,barrel:34,proximity:25});
 const value=(p,t)=>p.reduce((n,c)=>n*t+c,0);
 // Recursively bracket derivative roots, then bisect monotone polynomial pieces.

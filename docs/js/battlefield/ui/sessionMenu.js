@@ -1,4 +1,4 @@
-import {GAME_VERSION} from '../session/version.js?v=1.2.1';
+import {GAME_VERSION} from '../session/version.js?v=1.3.1';
 import {TUTORIAL_STEPS} from '../session/tutorial.js';
 // MENU-01..04: presentation only; never mutates units, budgets or physics.
 export function installSessionMenu({state,onStart,onEnd,root=document}){

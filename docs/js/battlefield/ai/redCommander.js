@@ -1,6 +1,6 @@
 import {updateAirPressure} from './airPressure.js';
 import {SUPPLY_RULES, createSupply, accrueSupply, purchaseUnit} from '../economy/supply.js';
-import {STRATEGY_RULES, COMPOSITIONS, observeBattlefield, chooseStrategy, firstMissing, factionRules} from './strategy.js';
+import {STRATEGY_RULES, COMPOSITIONS, observeBattlefield, chooseStrategy, firstMissing, factionRules} from './strategy.js?v=1.3.1';
 import {createSquad, addMember, membersOf, detachForGarrison, refreshSquads, movementOrder} from './squads.js';
 // AI-01..06: deterministic composition root; the scene injects the spawn factory.
 export function createCommander(team = 1) {
@@ -45,7 +45,7 @@ export function updateCommander(state, dt, units, bases, deploy, helicopter=null
     if (type) {
       const candidate = view.allies.find(unit => unit.type === type && unit.guardBase === null && unit.order?.squadId && (unit.x - view.fob.x) * rules.direction <= 80);
       if (candidate) {
-        detachForGarrison(state.squads, candidate); record(state, {type: 'redirect', unitId: candidate.id, role: 'garrison'});
+        detachForGarrison(state.squads, candidate);candidate.order.baseX=view.fob.x; record(state, {type: 'redirect', unitId: candidate.id, role: 'garrison'});
         view = observeBattlefield(units, bases, rules); type = view.missing.rifle ? 'rifle' : view.missing.rocket ? 'rocket' : null;
       }
     }
@@ -84,7 +84,7 @@ export function updateCommander(state, dt, units, bases, deploy, helicopter=null
     const purchase = purchaseUnit(state.supply, type, view.allies.length, kind => {
       const unit = deploy(kind, rules.spawnX);
       if (!unit) return null;
-      if (role === 'garrison') unit.order = {role}; else addMember(squad, unit);
+      if (role === 'garrison') unit.order = {role,baseX:view.fob.x}; else addMember(squad, unit);
       return unit;
     }, reserve);
     state.blockReason = purchase.reason;
