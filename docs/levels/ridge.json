@@ -106,6 +106,94 @@
         }
       ],
       "combat": true
+    },
+    {
+      "id": "crest-red",
+      "name": "Red holds high ground",
+      "description": "Red holds the high ground while Blue walks uphill and fires when terrain and range allow.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 220,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 600,
+          "mode": "hold"
+        }
+      ]
+    },
+    {
+      "id": "crest-blue",
+      "name": "Blue holds high ground",
+      "description": "Blue holds the high ground while Red walks uphill and fires when terrain and range allow.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 600,
+          "mode": "hold"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 980,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "approach-blue",
+      "name": "Blue approaches first",
+      "description": "Both walk and fire. Blue begins nearer the high ground; compare first shots, health and result.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 350,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 980,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "approach-red",
+      "name": "Red approaches first",
+      "description": "Both walk and fire. Red begins nearer the high ground; compare first shots, health and result.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 220,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 850,
+          "mode": "walk"
+        }
+      ]
     }
   ]
 }

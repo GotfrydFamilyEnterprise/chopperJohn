@@ -34,3 +34,35 @@ test('TL-04 terrain-aware rockets launch/impact without homing, scatter, elevate
 test('TL-05 same seed and steps reproduce all states, fresh reset discards old damage/projectiles',()=>{
  const a=createSimulation(level('ridge'),'rockets'),b=createSimulation(level('ridge'),'rockets');stepSimulation(a,2400);for(let i=0;i<24;i++)stepSimulation(b,100);assert.deepEqual(snapshot(a),snapshot(b));assert.deepEqual(snapshot(createSimulation(level('ridge'),'rockets')),snapshot(createSimulation(level('ridge'),'rockets')));assert.throws(()=>stepSimulation(a,-1));
 });
+test('TL-06 all terrain presets physically walk/fire while holders stay fixed and metrics reflect shots',()=>{
+ for(const id of ['ridge','valley','bumps'])for(const scenarioId of ['crest-red','crest-blue','approach-blue','approach-red']){
+  const sim=createSimulation(level(id),scenarioId),initial=sim.units.map(u=>u.x);let movingFire=false,pendingReturn=false;
+  for(let i=0;i<12000&&!sim.result;i++){
+   const before=sim.units.map(u=>({...u}));stepSimulation(sim);
+   sim.units.forEach((u,k)=>{if(u.mode==='hold')assert.equal(u.x,initial[k]);if(u.mode==='walk'&&u.hp>0&&u.shotsFired>0&&Math.abs(u.x-before[k].x)>0)movingFire=true;assert.equal(u.y,groundY(sim.level,u.x));});
+   if(sim.units.some(u=>u.hp===0)&&sim.projectiles.length){pendingReturn=true;assert.equal(sim.result,null);}
+  }
+  assert.ok(movingFire,id+scenarioId);assert.ok(sim.result);assert.ok(sim.units.every(u=>u.firstShotAt>0&&u.shotsFired>=3));assert.equal(sim.stats.rifleShots,sim.units.reduce((n,u)=>n+u.shotsFired,0));assert.equal(sim.projectiles.length,0);
+  const final=snapshot(sim);stepSimulation(sim,1200);assert.deepEqual(snapshot(sim),final);
+
+ }
+});
+test('TL-06 mirrored ridge swaps winner, and array order does not alter contact or result',()=>{
+ const d=level('ridge'),a=createSimulation(d,'approach-blue'),b=createSimulation(d,'approach-red');stepSimulation(a,12000);stepSimulation(b,12000);assert.equal(a.result.winner,0);assert.equal(b.result.winner,1);assert.ok(Math.abs(a.result.time-b.result.time)<1e-8);assert.equal(a.units[0].hp,b.units[1].hp);
+ const reversed=structuredClone(d);reversed.scenarios.forEach(s=>s.units.reverse());const c=createSimulation(reversed,'approach-blue');stepSimulation(c,12000);assert.deepEqual(c.result,a.result);
+ for(const u of a.units){const v=c.units.find(v=>v.id===u.id);assert.equal(v.hp,u.hp);assert.ok(Math.abs(v.x-u.x)<1e-8);assert.equal(v.firstShotAt,u.firstShotAt);assert.equal(v.shotsFired,u.shotsFired);}
+});
+test('TL-06 actual uphill/downhill barrel direction, return fire settles before draw',()=>{
+ const s=createSimulation(level('ridge'),'crest-red');while(!s.stats.rifleShots)stepSimulation(s);assert.ok(s.units[0].rifleAimAngle<0);assert.ok(Math.sin(s.units[1].rifleAimAngle)>0);assert.equal(s.units[0].firstShotAt,s.units[1].firstShotAt);assert.ok(s.projectiles.some(p=>p.vy<0));assert.ok(s.projectiles.some(p=>p.vy>0));stepSimulation(s,12000);assert.equal(s.result.winner,null);assert.ok(s.units.every(u=>u.hp===0));assert.equal(s.projectiles.length,0);
+});
+test('TL-06 fired outcome metrics and full replay reset remain deterministic',async()=>{
+ const {combatSummary}=await import('../docs/js/battlefield/terrain/outcomes.js');
+ const a=createSimulation(level('ridge'),'approach-blue');stepSimulation(a,12000);const summary=combatSummary(a);assert.match(summary.outcome,/Blue survives/);assert.equal(summary.teams[0].hp,1);assert.equal(summary.teams[0].shots,4);assert.equal(summary.teams[0].firstShot,5.5);
+ const b=createSimulation(level('ridge'),'approach-blue');for(let i=0;i<1200;i++)stepSimulation(b,10);assert.deepEqual(snapshot(a),snapshot(b));const fresh=combatSummary(createSimulation(level('ridge'),'approach-blue'));assert.ok(fresh.teams.every(t=>t.shots===0&&t.firstShot===null));assert.equal(fresh.outcome,'Waiting for contact');
+});
+test('TL-06 one death cannot finish a match before a slower return bullet arrives',()=>{
+ const d=level('ridge');d.terrain.points=[[0,0],[1200,0]];const s=createSimulation(d,'rifles');s.units.forEach(u=>u.fireCooldown=1000);s.units.forEach(u=>u.hp=1);
+ s.projectiles.push({kind:'bullet',team:0,x:712,y:468,vx:900,vy:0,age:0},{kind:'bullet',team:1,x:580,y:468,vx:-100,vy:0,age:0});
+ stepSimulation(s,2);assert.equal(s.units[1].hp,0);assert.equal(s.units[0].hp,1);assert.equal(s.result,null);assert.equal(s.projectiles.length,1);
+ stepSimulation(s,200);assert.equal(s.result.winner,null);assert.ok(s.result.time>.9);assert.ok(s.units.every(u=>u.hp===0));
+});

@@ -111,3 +111,6 @@ Detailed H/HG/AA assertions, boundary cases and screenshot checklist remain in `
 | TL-03 | Ridge rifles vs valley rifles; visible eyes but buried muzzle; vertical/tangent/reverse sweeps | Ridge no acquisition/damage; valley real casualties; earliest soil contact stops physical bullets |
 | TL-04 | Real scattered rocket flights, elevated endpoint, target move after launch | Terrain collision, committed trajectory, enemy-only splash, no main-game rule change |
 | TL-05 | Replay/reset/run/pause/step/editor/zoom/pan and layouts, normal entry | Same-seed state identity, paused clocks, controls in viewport, no production test hook |
+
+| TL-06 | Both crest-holding directions and asymmetric walk/fire on all3 terrains; swap faction/array order; real bullets, first-shot/state/HP/result metrics | Holders do not move; walkers slow/fire only on acquisition and can lose targets behind crest; bullets resolve actual terrain/body contact; mirrored ridge result reverses without hardcoded bonus; no premature win while return fire in flight; frozen outcome/reset replay |
+| TL-06 | Quarter/half/normal playback,0.1s/1s steps, direct scenario URL; phone/landscape result/readouts | Same simulation-time behavior regardless of playback speed; controls/readouts fit and remain usable; no test-hook leak |

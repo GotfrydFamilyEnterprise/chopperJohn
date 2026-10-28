@@ -30,4 +30,4 @@ export function validateLevel(input){
  // Retain only supported data; caller changes cannot mutate a running level.
  return {schemaVersion:1,id:input.id,name:input.name,description:String(input.description??'').slice(0,500),seed:input.seed,world:{width,baseline},terrain:{points:points.map(p=>[...p])},scenarios:input.scenarios.map(s=>({id:s.id,name:s.name,combat:s.combat,description:String(s.description??'').slice(0,500),units:s.units.map(u=>({id:u.id,team:u.team,type:u.type,x:u.x,mode:u.mode}))}))};
 }
-export async function loadLevel(url,fetcher=fetch){const response=await fetcher(url);if(!response.ok)throw new Error(`Level could not load (${response.status})`);return validateLevel(await response.json());}
+export async function loadLevel(url,fetcher=fetch){const response=await fetcher(url,{cache:'no-cache'});if(!response.ok)throw new Error(`Level could not load (${response.status})`);return validateLevel(await response.json());}

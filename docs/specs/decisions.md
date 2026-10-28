@@ -47,3 +47,6 @@ After winning the takeover preview, user requested significantly more rocket hit
 
 ## Terrain Lab exploration
 User requested JSON-defined levels and separate exploration of hills, valleys and bumps, then explicitly selected all three experiments together: slope walking, rifle visibility/bullet cover, ballistic rockets over terrain. The lab is a separate page with pure data/geometry/simulation modules. Its experimental rocket knowledge of obscured ground positions is labeled, not silently applied to normal AI. No deliberate cover-seeking AI is introduced yet; first follow-up proposed is riflemen advancing to and holding at a useful crest firing position, followed by measured cover seeking.
+
+## Terrain Lab mixed encounters
+User requested uneven approach timing and real walk/fire exchanges when one soldier is on top and the other moving, including reversed roles. Add fixed JSON scenario starts/orders and observed outcomes, not autonomous cover selection or automatic height damage buffs. All movement precedes weapon acquisition for the tick. Declare outcome only after return projectiles settle; expose slow playback and fine stepping for inspection.

@@ -2,7 +2,7 @@
 
 Open `terrain-lab.html` to try these levels separately from Battlefield. This is an experimental heightfield format, not yet the main game's level loader. The lab shares infantry statistics, gait, weapon constants and seeded RNG; terrain targeting/flight adapters are isolated under `js/battlefield/terrain/`.
 
-Each JSON file supplies the full terrain and initial experiments. There are no hardcoded hill shapes in the simulation or renderer. Use **Level JSON** to edit, import, apply or download a level. Applying starts a fresh paused experiment. It does not overwrite the repository file or save automatically. To add a shipped level, add its JSON here and its option in `terrain-lab.html`.
+Each JSON file supplies the full terrain and initial experiments. Four walk-and-fire presets add red/blue holding high ground against an approaching opponent, plus uneven approaches with either faction nearer. These use ordinary rifle health, speed, range and damage; there is no automatic height bonus. There are no hardcoded hill shapes in the simulation or renderer. Use **Level JSON** to edit, import, apply or download a level. Applying starts a fresh paused experiment. It does not overwrite the repository file or save automatically. To add a shipped level, add its JSON here and its option in `terrain-lab.html`.
 
 ```json
 {
@@ -34,6 +34,8 @@ Each JSON file supplies the full terrain and initial experiments. There are no h
 
 The baseline is faintly drawn for reference. Green dotted lines mean unobstructed eye-to-eye geometry; amber means terrain intervenes. A green line does not assert a target is in range or that a muzzle is clear. Rifle range stays 250 forward. Rockets use 225–600 forward, aim 0.7 seconds, reload 3 seconds, gravity 240, existing scatter anchors and observed horizontal motion lead. They may target obscured ground positions in this experiment, then fly unguided until hitting the first surface. Splash is enemy-only, radius 25, up to 2 HP with linear distance falloff and terrain occlusion. No bunker cover roll applies in this terrain-only lab.
 
-Experiments start paused. **Run**, **+1 second**, and **Reset** use fixed 1/120-second steps and the JSON seed. Sight/zoom/pan never consume RNG. No economy, bases, helicopter or victory are simulated here. These need later terrain integration stories; the production battlefield retains flat ground.
+Experiments start paused. **Run**, **+1 second**, and **Reset** use fixed 1/120-second steps and the JSON seed. Choose ¼, ½ or normal speed to change playback only; +0.1s advances12 fixed ticks. The team readout shows actual remainingHP, shots and first-shot simulation time. Moving rifles slow to42% speed while engaging; holding rifles stay at their initial point. Terrain can interrupt sight and stop bullets after a shot. Outcome is declared only when the last opposing soldier is dead and all in-flight projectiles resolve, so return fire can produce mutual elimination. Finished experiments freeze until Reset. Sight/zoom/pan never consume RNG. No economy, bases, helicopter or victory are simulated here. These need later terrain integration stories; the production battlefield retains flat ground.
 
 Next useful decisions: how much of a body must be visible to acquire a target; whether rocketeers require spotters for indirect fire; how steep slopes affect speed; prone/crouched stances; whether blast can wrap over a crest; and where buildings/pads can be placed. Test geometry first before changing campaign balance.
+
+Direct comparison links can select a preset with `?scenario=crest-red`, `crest-blue`, `approach-blue` or `approach-red`. They start paused and expose no test controller without `?test`.
