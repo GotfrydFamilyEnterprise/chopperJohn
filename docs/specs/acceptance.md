@@ -114,3 +114,7 @@ Detailed H/HG/AA assertions, boundary cases and screenshot checklist remain in `
 
 | TL-06 | Both crest-holding directions and asymmetric walk/fire on all3 terrains; swap faction/array order; real bullets, first-shot/state/HP/result metrics | Holders do not move; walkers slow/fire only on acquisition and can lose targets behind crest; bullets resolve actual terrain/body contact; mirrored ridge result reverses without hardcoded bonus; no premature win while return fire in flight; frozen outcome/reset replay |
 | TL-06 | Quarter/half/normal playback,0.1s/1s steps, direct scenario URL; phone/landscape result/readouts | Same simulation-time behavior regardless of playback speed; controls/readouts fit and remain usable; no test-hook leak |
+
+| TL-07 | Angled tracer math and screenshots; 800/800.01,225/224.99 acquisition; extended scatter | Tracer parallel to actual velocity; lab-only range, correct error bounds and no friendly/behind/dead acquisition |
+| TL-07 | Open/blocked ridge arcs, elevated endpoints, moving-target prediction and unreachable fixtures | Sampled shortest feasible shot within speed/angle limits, actual muzzle, full vertex clearance; committed shot/first terrain hit, no homing |
+| TL-07 | Four JSON terrains, uneven rocket approaches and mixed encounters, reset/batching/camera | Real walking before acquisition, stop-to-aim, clear launch orientation, real shots/impacts/damage; both parties fit, seeded replay matches |

@@ -1,7 +1,8 @@
-import {validateLevel} from './level.js?v=0.2.0';
-import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=0.2.0';
+import {LAB_ROCKET,labRocketSpread,planTerrainRocket} from './ballistics.js?v=0.3.0';
+import {validateLevel} from './level.js?v=0.3.0';
+import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=0.3.0';
 import {createSoldier} from '../units/soldierCommon.js';
-import {WEAPONS,createRandom,rocketSpread,applyDamage} from '../combat/weapons.js?v=1.3.1';
+import {WEAPONS,createRandom,applyDamage} from '../combat/weapons.js?v=1.3.1';
 export const LAB_STEP=1/120;
 export const eye=u=>({x:u.x,y:u.y-40});
 export function createSimulation(data,scenarioId){
@@ -12,22 +13,10 @@ export function createSimulation(data,scenarioId){
 export function targetFor(sim,u){
  if(!sim.level.scenarios.find(s=>s.id===sim.scenarioId).combat)return null;
  const dir=u.team===0?1:-1;
- return sim.units.filter(v=>v.hp>0&&v.team!==u.team&&(v.x-u.x)*dir>=(u.type==='rifle'?0:WEAPONS.rocketMinRange)&&(v.x-u.x)*dir<=(u.type==='rifle'?WEAPONS.rifleRange:WEAPONS.rocketMaxRange)&&(u.type==='rocket'||visible(sim.level,eye(u),eye(v)))).sort((a,b)=>Math.abs(a.x-u.x)-Math.abs(b.x-u.x)||a.id-b.id)[0]??null;
+ return sim.units.filter(v=>v.hp>0&&v.team!==u.team&&(v.x-u.x)*dir>=(u.type==='rifle'?0:LAB_ROCKET.minRange)&&(v.x-u.x)*dir<=(u.type==='rifle'?WEAPONS.rifleRange:LAB_ROCKET.maxRange)&&(u.type==='rocket'?!!rocketPlan(sim.level,u,v):visible(sim.level,eye(u),eye(v)))).sort((a,b)=>Math.abs(a.x-u.x)-Math.abs(b.x-u.x)||a.id-b.id)[0]??null;
 }
-// Experimental terrain rocket: fixed upward angle, elevated landing and current-velocity lead.
-export function rocketPlan(level,u,target,error=0){
- const direction=u.team===0?1:-1,angle=WEAPONS.rocketAngle;
- const originX=u.x+direction*34*Math.cos(angle),originY=u.y-42-34*Math.sin(angle);
- let time=0,impactX,vx,vy;
- for(let i=0;i<16;i++){
-  impactX=Math.max(0,Math.min(level.world.width,target.x+(target.observedVelocity||0)*time+error));
-  const distance=(impactX-originX)*direction,drop=groundY(level,impactX)-originY,denominator=drop+distance*Math.tan(angle);
-  if(distance<=0||denominator<=0)return null;
-  const speed=Math.sqrt(WEAPONS.gravity*distance*distance/(2*Math.cos(angle)**2*denominator));
-  vx=direction*speed*Math.cos(angle);vy=-speed*Math.sin(angle);time=distance/Math.abs(vx);
- }
- return {x:originX,y:originY,originX,originY,vx,vy,flightTime:time,impactX,age:0};
-}
+// TL-07: public adapter retained for isolated solver tests.
+export const rocketPlan=planTerrainRocket;
 function event(sim,e){sim.events.push({tick:sim.tick,...e});if(sim.events.length>400)sim.events.shift();}
 function recordShot(sim,u){u.shotsFired++;if(u.firstShotAt===null)u.firstShotAt=sim.time;}
 function damageUnit(u,amount){const damage=applyDamage(u,amount);u.damageTaken+=damage.amount;return damage;}
@@ -77,13 +66,14 @@ export function stepSimulation(sim,count=1){
     recordShot(sim,u);sim.stats.rifleShots++;u.fireCooldown=.32;event(sim,{type:'rifleShot',id:u.id,x:u.x,y:u.y});
    }
    if(u.type==='rocket'){
+    const goal=target?rocketPlan(sim.level,u,target):null;u.rocketGoal=goal;u.rocketAimAngle=sim.time-(u.lastRocketAt??-Infinity)<.15?u.lastRocketAngle:goal?.angle??null;
     u.rocketCooldown=Math.max(0,(u.rocketCooldown||0)-LAB_STEP);
     if(!target||u.rocketTargetId!==target.id){u.rocketAimTime=0;u.rocketTargetId=target?.id??null;}
     if(target&&u.rocketCooldown<=1e-8){
      u.rocketAimTime=(u.rocketAimTime||0)+LAB_STEP;
      if(u.rocketAimTime+1e-8>=WEAPONS.rocketAimSeconds){
-      const error=(sim.random()*2-1)*rocketSpread(Math.abs(target.x-u.x)),plan=rocketPlan(sim.level,u,target,error);
-      if(plan){sim.projectiles.push({...plan,kind:'rocket',team:u.team});recordShot(sim,u);sim.stats.rocketShots++;event(sim,{type:'rocketShot',id:u.id,error,impactX:plan.impactX});}
+      const error=(sim.random()*2-1)*labRocketSpread(Math.abs(target.x-u.x)),plan=rocketPlan(sim.level,u,target,error);
+      if(plan){sim.projectiles.push({...plan,kind:'rocket',team:u.team});recordShot(sim,u);u.rocketAimAngle=plan.angle;u.lastRocketAngle=plan.angle;u.lastRocketAt=sim.time;sim.stats.rocketShots++;event(sim,{type:'rocketShot',id:u.id,error,impactX:plan.impactX,angle:plan.angle,flightTime:plan.flightTime,speed:plan.speed});}
       u.rocketAimTime=0;u.rocketCooldown=WEAPONS.rocketReloadSeconds;
      }
     }

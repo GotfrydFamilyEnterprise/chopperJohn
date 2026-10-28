@@ -50,3 +50,6 @@ User requested JSON-defined levels and separate exploration of hills, valleys an
 
 ## Terrain Lab mixed encounters
 User requested uneven approach timing and real walk/fire exchanges when one soldier is on top and the other moving, including reversed roles. Add fixed JSON scenario starts/orders and observed outcomes, not autonomous cover selection or automatic height damage buffs. All movement precedes weapon acquisition for the tick. Declare outcome only after return projectiles settle; expose slow playback and fine stepping for inspection.
+
+## Terrain Lab v0.3
+User requested angled bullet appearance, uneven rocketeer approaches, increased range and optimal rocket trajectories. User explicitly selected800 units. Apply this exploration to the separate lab: fix tracer orientation, preserve shot scatter, use a bounded shortest-clear-flight search and add longer terrain/mixed encounters. Do not silently alter the live main-game600-range model. Solver speed520,20ms search,8–80° and2-unit clearance are explicit testable starting choices under implementation authorization.

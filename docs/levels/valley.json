@@ -198,6 +198,50 @@
           "mode": "walk"
         }
       ]
+    },
+    {
+      "id": "rocket-approach-blue",
+      "name": "Rockets: Blue nearer",
+      "description": "Uneven rocketeer approach. Stop to aim when a terrain-clearing shot is available within 225\u2013800; watch variable launch angles and long-range scatter.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 200,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 1120,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "rocket-approach-red",
+      "name": "Rockets: Red nearer",
+      "description": "Uneven rocketeer approach. Stop to aim when a terrain-clearing shot is available within 225\u2013800; watch variable launch angles and long-range scatter.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 80,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 1000,
+          "mode": "walk"
+        }
+      ]
     }
   ]
 }

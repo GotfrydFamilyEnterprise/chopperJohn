@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "id": "rocket-ridge",
+  "name": "Rocket ridge",
+  "description": "Longer terrain for 800-unit firing, asymmetric approaches and mixed weapons.",
+  "seed": 31,
+  "world": {
+    "width": 1800,
+    "baseline": 500
+  },
+  "terrain": {
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        550,
+        0
+      ],
+      [
+        680,
+        10
+      ],
+      [
+        900,
+        180
+      ],
+      [
+        1120,
+        10
+      ],
+      [
+        1250,
+        0
+      ],
+      [
+        1800,
+        0
+      ]
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "rocket-approach-blue",
+      "name": "Rockets: Blue nearer",
+      "description": "Blue starts on the rising side; Red approaches over flatter ground. Both stop to aim once an 800-unit clear firing solution is possible.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 680,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 1680,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "rocket-approach-red",
+      "name": "Rockets: Red nearer",
+      "description": "Mirrored uneven approach: Red is nearer the ridge. Watch variable angles, committed arcs and range scatter.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 120,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 1120,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "rocket-crest-red",
+      "name": "Red rocket holds crest",
+      "description": "Red holds the ridge; Blue approaches from beyond maximum range, then stops to aim uphill.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 80,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 900,
+          "mode": "hold"
+        }
+      ]
+    },
+    {
+      "id": "rocket-crest-blue",
+      "name": "Blue rocket holds crest",
+      "description": "Blue holds the ridge; Red approaches from beyond maximum range, then stops to aim uphill.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 900,
+          "mode": "hold"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 1720,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "mixed-rocket-blue",
+      "name": "Blue rocket vs rifle",
+      "description": "A Blue rocketeer approaches the ridge while a Red rifleman keeps advancing. Rifle bullets follow their actual uphill/downhill direction.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 680,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 1250,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "mixed-rocket-red",
+      "name": "Red rocket vs rifle",
+      "description": "Mirrored mixed-weapons approach. The rifle keeps walking; the rocket launcher stops to aim and lead current movement.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 550,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 1120,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "rocket-range",
+      "name": "800-unit rocket exchange",
+      "description": "Both hold exactly 800 units apart. Accuracy is lower at this range; the solver chooses the quickest clear arc for each scattered landing point.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 500,
+          "mode": "hold"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 1300,
+          "mode": "hold"
+        }
+      ]
+    }
+  ]
+}
