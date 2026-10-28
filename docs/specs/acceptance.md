@@ -102,3 +102,12 @@ Detailed H/HG/AA assertions, boundary cases and screenshot checklist remain in `
 | CAP-03/04 | Both teams, intact/breached/contested, rocket-only, capturer death, physical approach, ownership/recapture |5s hold only rifle, no teleport, paused contest/no-speedstack; slotcleanup, firstcapturer realpost, newfriendlygarrisons |
 | CAP-04 | Friendly rifle rebuild19.99/20s; enemy interruption/rocket reset; no builder | No early protection, correct reset, one full restore; no new income/troops |
 | CAP-05/06 | Both HQ victories, simultaneous captures, holdFIRE/pause/reset/menu; phone screenshots, tutorial | Result freezesallclocks/inputs, correctwinner/draw, freshrestart; readablebaseprogress, tutorialunchanged |
+
+## Terrain playground acceptance
+| IDs | Experiment | Expected evidence |
+|---|---|---|
+| TL-01 | Fetch three examples; edit/import/download; malformed geometry/version/units; failed fetch and retry | Validated JSON round trip, actionable errors, no partial state replacement |
+| TL-02 | Both directions over corners/hills/valleys, 1/120 samples | Ground contact, bounded surface movement, no shots in walking experiment; phone/landscape screenshots |
+| TL-03 | Ridge rifles vs valley rifles; visible eyes but buried muzzle; vertical/tangent/reverse sweeps | Ridge no acquisition/damage; valley real casualties; earliest soil contact stops physical bullets |
+| TL-04 | Real scattered rocket flights, elevated endpoint, target move after launch | Terrain collision, committed trajectory, enemy-only splash, no main-game rule change |
+| TL-05 | Replay/reset/run/pause/step/editor/zoom/pan and layouts, normal entry | Same-seed state identity, paused clocks, controls in viewport, no production test hook |

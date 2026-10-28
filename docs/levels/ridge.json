@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "ridge",
+  "name": "Ridgeline",
+  "description": "A tall central ridge hides nearby riflemen. Rockets can arc over it.",
+  "seed": 31,
+  "world": {
+    "width": 1200,
+    "baseline": 500
+  },
+  "terrain": {
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        350,
+        0
+      ],
+      [
+        420,
+        10
+      ],
+      [
+        600,
+        150
+      ],
+      [
+        780,
+        10
+      ],
+      [
+        850,
+        0
+      ],
+      [
+        1200,
+        0
+      ]
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "walk",
+      "name": "Walk the ground",
+      "description": "Unarmed movement experiment. Watch both soldiers follow the surface at 47 units/s along slopes.",
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 80,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 1120,
+          "mode": "walk"
+        }
+      ],
+      "combat": false
+    },
+    {
+      "id": "rifles",
+      "name": "Rifle cover",
+      "description": "Two stationary riflemen 240 units apart. Green means visible; amber means terrain blocks their sight line.",
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 480,
+          "mode": "hold"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 720,
+          "mode": "hold"
+        }
+      ],
+      "combat": true
+    },
+    {
+      "id": "rockets",
+      "name": "Rockets over cover",
+      "description": "Rocketeers can target ground positions behind a hill in this experiment. Watch scattered arcs hit the first terrain they reach.",
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 350,
+          "mode": "hold"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 850,
+          "mode": "hold"
+        }
+      ],
+      "combat": true
+    }
+  ]
+}

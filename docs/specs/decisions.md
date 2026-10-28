@@ -44,3 +44,6 @@ User approved rocket-only breaching, rifle-only physical occupation,6 defense hi
 
 ## V1.3.1 outpost durability
 After winning the takeover preview, user requested significantly more rocket hits for outposts. Tune both FOBs to20 hits (from6); HQs remain6. Rebuilding/reset/display use the appropriate base capacity. Capture timing, damage to infantry and economy stay unchanged.
+
+## Terrain Lab exploration
+User requested JSON-defined levels and separate exploration of hills, valleys and bumps, then explicitly selected all three experiments together: slope walking, rifle visibility/bullet cover, ballistic rockets over terrain. The lab is a separate page with pure data/geometry/simulation modules. Its experimental rocket knowledge of obscured ground positions is labeled, not silently applied to normal AI. No deliberate cover-seeking AI is introduced yet; first follow-up proposed is riflemen advancing to and holding at a useful crest firing position, followed by measured cover seeking.
