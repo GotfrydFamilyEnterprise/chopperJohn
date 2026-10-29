@@ -2,7 +2,7 @@
 
 2026-10-28. Separate reviewer context `/root/height_reach_review`. Reviewed AGENTS.md, requirements/acceptance TL-07/08, implementation status, adversarial-review protocol, actual source and working diff against `225ec82`. No production source edited. Scope is isolated Terrain Lab height-dependent reach; PR12 remains unmerged.
 
-Recommendation: **source PASS; browser/visual completion UNVERIFIED; INSUFFICIENT EVIDENCE for unconditional merge**. No blocking source discrepancy found in bounded review.
+Recommendation: **source and supplied visual evidence PASS; reviewer-owned browser execution UNVERIFIED; INSUFFICIENT EVIDENCE for unconditional merge**. No blocking source or supplied-visual discrepancy found in bounded review.
 
 | Requirement | Status | Independently executed evidence |
 | --- | --- | --- |
@@ -12,9 +12,11 @@ Recommendation: **source PASS; browser/visual completion UNVERIFIED; INSUFFICIEN
 | TL-08 common vertical translation | PASS | Own baseline shifts -350 and+250, with corresponding shooter shift, preserve vx,vy,speed,flightTime within1e-8 in both high fixtures. |
 | TL-08 unbounded worsening spread/approximate diagnostic | PASS | Own spread(1000)=130; existing anchors remain5/20/50/66/98. Readout uses1° clear-air sweep (`ballistics.js:12–21`), separate from solver acquisition. Reach increases with drop. UI distinguishes reach≈ from clear/no-clear arc (`scene.js:17`). |
 | TL-08 deterministic collision/reload/replay regression | PASS | Reviewer executed `node tests-unit/terrain.test.js`:24 passed,0 failed (3.55s), including lead, terrain collision, per-attempt scattering, mirrored height and replay assertions. Own10s height probes observed physical impacts. No height damage/precision bonus added; damage remains shared weapon tuning. |
-| TL-08 caption reservation/mobile screenshots | UNVERIFIED | Source passes caption height+20 into renderer topInset and fits within remaining height. New terrain-height screenshots were absent when initial report was written; no independent browser process launched for this bounded review. Source inspection cannot establish visible arc/participant framing. |
+| TL-08 caption reservation/mobile screenshots | PASS | On2026-10-29 independently opened all five CI artifact screenshots: `terrain-height-height-blue-portrait.png`, `terrain-height-height-blue-landscape.png`, `terrain-height-height-red-portrait.png`, `terrain-height-height-red-landscape.png`, `terrain-height-flat-landscape.png`. Both actors and in-flight rocket streaks remain visible below captions in both mirrored orientations. Readouts show downhill951/uphill612 at860, mirrored shot counts1/0, and equal-ground reach800/no clear arc/zero shots. Landscape actor labels are small but no relevant participant/projectile is obscured. |
 | Public deployment / physical Safari | UNVERIFIED | Outside this source review; no deployment or physical-device execution performed. |
 
 Cross-feature scope: production Battlefield weapon/module files and Flight School were absent from reviewed diff. Existing20 TL-01..07 unit cases passed with four new TL-08 cases. Several older tests still assert the obsolete looser520 speed bound; this is a low-severity coverage limitation, not an observed cap violation: production solver uses413.6 and reviewer explicitly checked that bound on both mirrored high shots.
 
-The AGENTS completion gate and adversarial-review protocol prohibit unconditional merge approval while mandatory browser/visual validation is UNVERIFIED. No source blocker is being held open merely because execution evidence is incomplete.
+Follow-up2026-10-29: root supplied GitHub CI artifacts for commit `b9162bb` and reported102 passing browser tests plus the unit step. The five screenshots above were independently inspected, so supplied visual evidence is now PASS. This reviewer did not independently launch the browser suite or verify the CI run over the network; reviewer-owned browser execution remains UNVERIFIED. Public v0.4 deployment was still pending at this review.
+
+The adversarial-review protocol precludes an unconditional independent merge recommendation while reviewer-owned browser execution remains UNVERIFIED. No source or visual blocker is being held open merely because execution evidence is incomplete.
