@@ -102,3 +102,22 @@ Detailed H/HG/AA assertions, boundary cases and screenshot checklist remain in `
 | CAP-03/04 | Both teams, intact/breached/contested, rocket-only, capturer death, physical approach, ownership/recapture |5s hold only rifle, no teleport, paused contest/no-speedstack; slotcleanup, firstcapturer realpost, newfriendlygarrisons |
 | CAP-04 | Friendly rifle rebuild19.99/20s; enemy interruption/rocket reset; no builder | No early protection, correct reset, one full restore; no new income/troops |
 | CAP-05/06 | Both HQ victories, simultaneous captures, holdFIRE/pause/reset/menu; phone screenshots, tutorial | Result freezesallclocks/inputs, correctwinner/draw, freshrestart; readablebaseprogress, tutorialunchanged |
+
+## Terrain playground acceptance
+| IDs | Experiment | Expected evidence |
+|---|---|---|
+| TL-01 | Fetch three examples; edit/import/download; malformed geometry/version/units; failed fetch and retry | Validated JSON round trip, actionable errors, no partial state replacement |
+| TL-02 | Both directions over corners/hills/valleys, 1/120 samples | Ground contact, bounded surface movement, no shots in walking experiment; phone/landscape screenshots |
+| TL-03 | Ridge rifles vs valley rifles; visible eyes but buried muzzle; vertical/tangent/reverse sweeps | Ridge no acquisition/damage; valley real casualties; earliest soil contact stops physical bullets |
+| TL-04 | Real scattered rocket flights, elevated endpoint, target move after launch | Terrain collision, committed trajectory, enemy-only splash, no main-game rule change |
+| TL-05 | Replay/reset/run/pause/step/editor/zoom/pan and layouts, normal entry | Same-seed state identity, paused clocks, controls in viewport, no production test hook |
+
+| TL-06 | Both crest-holding directions and asymmetric walk/fire on all3 terrains; swap faction/array order; real bullets, first-shot/state/HP/result metrics | Holders do not move; walkers slow/fire only on acquisition and can lose targets behind crest; bullets resolve actual terrain/body contact; mirrored ridge result reverses without hardcoded bonus; no premature win while return fire in flight; frozen outcome/reset replay |
+| TL-06 | Quarter/half/normal playback,0.1s/1s steps, direct scenario URL; phone/landscape result/readouts | Same simulation-time behavior regardless of playback speed; controls/readouts fit and remain usable; no test-hook leak |
+
+| TL-07 | Angled tracer math and screenshots; 800/800.01,225/224.99 acquisition; extended scatter | Tracer parallel to actual velocity; lab-only range, correct error bounds and no friendly/behind/dead acquisition |
+| TL-07 | Open/blocked ridge arcs, elevated endpoints, moving-target prediction and unreachable fixtures | Sampled shortest feasible shot within speed/angle limits, actual muzzle, full vertex clearance; committed shot/first terrain hit, no homing |
+| TL-07 | Four JSON terrains, uneven rocket approaches and mixed encounters, reset/batching/camera | Real walking before acquisition, stop-to-aim, clear launch orientation, real shots/impacts/damage; both parties fit, seeded replay matches |
+
+| TL-08 | Mirrored high/low860-unit encounters vs same-height860; closer uphill unreachable; flat800/810 | Higher shooter can launch beyond800, low/uphill and equal-ground rejected at860; approximate800 baseline,225 minimum retained, correct physical collision/reload |
+| TL-08 | Common vertical translation, varying height, long-range spread, diagnostic readouts/caption fit | Equal height difference yields equal solution; spread continues past800; reachable shots meet actual speed/terrain limits, diagnostic text distinguishes approximate reach from clear arc; mobile screenshots/replay |

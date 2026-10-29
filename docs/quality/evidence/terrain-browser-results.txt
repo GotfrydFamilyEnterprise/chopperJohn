@@ -1,0 +1,20 @@
+
+Running 6 tests using 1 worker
+
+(node:7325) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7325) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/terrain.spec.js:8:1 › TL-01/03/05 JSON-loaded ridge blocks rifle sight; valley changes outcome, deterministic reset (640ms)
+  ✓  2 tests/terrain.spec.js:32:1 › TL-02/04/05 walking follows geometry and seeded rockets fly over ridge and collide (466ms)
+  ✓  3 tests/terrain.spec.js:60:1 › TL-01/05 edit/apply JSON and rejected edits preserve state, import/download round trip (632ms)
+  ✓  4 tests/terrain.spec.js:94:1 › TL-05 actual run/pause/step and phone controls/editor fit, text guards, normal page hides test hook (1.3s)
+  ✓  5 tests/terrain.spec.js:134:1 › TL-01 failed level fetch leaves recoverable visible error (277ms)
+  ✓  6 tests/terrain.spec.js:148:1 › TL-01/05 stale fetch cannot overwrite newer level and later fetch error stays visible (690ms)
+
+  6 passed (6.4s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

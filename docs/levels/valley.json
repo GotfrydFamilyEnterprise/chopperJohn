@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "id": "valley",
+  "name": "Valley",
+  "description": "A sheltered depression between two raised shoulders.",
+  "seed": 31,
+  "world": {
+    "width": 1200,
+    "baseline": 500
+  },
+  "terrain": {
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        250,
+        40
+      ],
+      [
+        400,
+        40
+      ],
+      [
+        520,
+        -80
+      ],
+      [
+        680,
+        -80
+      ],
+      [
+        800,
+        40
+      ],
+      [
+        950,
+        40
+      ],
+      [
+        1200,
+        0
+      ]
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "walk",
+      "name": "Walk the ground",
+      "description": "Unarmed movement experiment. Watch both soldiers follow the surface at 47 units/s along slopes.",
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 80,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 1120,
+          "mode": "walk"
+        }
+      ],
+      "combat": false
+    },
+    {
+      "id": "rifles",
+      "name": "Rifle cover",
+      "description": "Two stationary riflemen 240 units apart. Green means visible; amber means terrain blocks their sight line.",
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 480,
+          "mode": "hold"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 720,
+          "mode": "hold"
+        }
+      ],
+      "combat": true
+    },
+    {
+      "id": "rockets",
+      "name": "Rockets over cover",
+      "description": "Rocketeers can target ground positions behind a hill in this experiment. Watch scattered arcs hit the first terrain they reach.",
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 350,
+          "mode": "hold"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 850,
+          "mode": "hold"
+        }
+      ],
+      "combat": true
+    },
+    {
+      "id": "crest-red",
+      "name": "Red holds high ground",
+      "description": "Red holds the high ground while Blue walks uphill and fires when terrain and range allow.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 80,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 400,
+          "mode": "hold"
+        }
+      ]
+    },
+    {
+      "id": "crest-blue",
+      "name": "Blue holds high ground",
+      "description": "Blue holds the high ground while Red walks uphill and fires when terrain and range allow.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 800,
+          "mode": "hold"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 1120,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "approach-blue",
+      "name": "Blue approaches first",
+      "description": "Both walk and fire. Blue begins nearer the high ground; compare first shots, health and result.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 250,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 1120,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "approach-red",
+      "name": "Red approaches first",
+      "description": "Both walk and fire. Red begins nearer the high ground; compare first shots, health and result.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 80,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 950,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "rocket-approach-blue",
+      "name": "Rockets: Blue nearer",
+      "description": "Uneven rocketeer approach. Stop to aim when a terrain-clearing shot is available at a height-dependent reachable distance; watch variable launch angles and long-range scatter.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 200,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 1120,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "rocket-approach-red",
+      "name": "Rockets: Red nearer",
+      "description": "Uneven rocketeer approach. Stop to aim when a terrain-clearing shot is available at a height-dependent reachable distance; watch variable launch angles and long-range scatter.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 80,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 1000,
+          "mode": "walk"
+        }
+      ]
+    }
+  ]
+}
