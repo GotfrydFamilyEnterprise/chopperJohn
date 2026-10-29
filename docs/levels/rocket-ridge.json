@@ -44,7 +44,7 @@
     {
       "id": "rocket-approach-blue",
       "name": "Rockets: Blue nearer",
-      "description": "Blue starts on the rising side; Red approaches over flatter ground. Both stop to aim once an 800-unit clear firing solution is possible.",
+      "description": "Blue starts on the rising side; Red approaches over flatter ground. Both stop to aim once an clear firing solution is possible.",
       "combat": true,
       "units": [
         {
@@ -88,7 +88,7 @@
     {
       "id": "rocket-crest-red",
       "name": "Red rocket holds crest",
-      "description": "Red holds the ridge; Blue approaches from beyond maximum range, then stops to aim uphill.",
+      "description": "Red holds the ridge; Blue approaches from from lower ground, then stops to aim uphill.",
       "combat": true,
       "units": [
         {
@@ -110,7 +110,7 @@
     {
       "id": "rocket-crest-blue",
       "name": "Blue rocket holds crest",
-      "description": "Blue holds the ridge; Red approaches from beyond maximum range, then stops to aim uphill.",
+      "description": "Blue holds the ridge; Red approaches from from lower ground, then stops to aim uphill.",
       "combat": true,
       "units": [
         {
@@ -176,7 +176,7 @@
     {
       "id": "rocket-range",
       "name": "800-unit rocket exchange",
-      "description": "Both hold exactly 800 units apart. Accuracy is lower at this range; the solver chooses the quickest clear arc for each scattered landing point.",
+      "description": "Both hold exactly 800 units apart. Equal-ground reach is approximately800; scatter can exceed available power. The solver attempts the quickest feasible clear arc.",
       "combat": true,
       "units": [
         {
@@ -191,6 +191,72 @@
           "team": 1,
           "type": "rocket",
           "x": 1300,
+          "mode": "hold"
+        }
+      ]
+    },
+    {
+      "id": "height-blue",
+      "name": "Blue high: 860 units",
+      "description": "Blue is180 units higher. At860 separation, Blue can arc downhill while Red cannot reach uphill. Compare actual clear shots and approximate clear-air reach.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 900,
+          "mode": "hold"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 1760,
+          "mode": "hold"
+        }
+      ]
+    },
+    {
+      "id": "height-red",
+      "name": "Red high: 860 units",
+      "description": "Mirrored height advantage: Red can fire860 units downhill. Blue has the same weapon power but cannot yet reach uphill.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 40,
+          "mode": "hold"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 900,
+          "mode": "hold"
+        }
+      ]
+    },
+    {
+      "id": "height-flat",
+      "name": "Flat: 860 out of reach",
+      "description": "Both stand at equal ground height860 units apart. The same launch power reaches approximately800 on flat ground; no arbitrary distance cap decides eligibility.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rocket",
+          "x": 470,
+          "mode": "hold"
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rocket",
+          "x": 1330,
           "mode": "hold"
         }
       ]

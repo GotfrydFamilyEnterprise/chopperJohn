@@ -73,29 +73,46 @@ test('TL-07 angular tracers are parallel to actual bullet velocity in every dire
 });
 test('TL-07 800-unit lab range and scatter, inclusive bounds and target filtering',async()=>{
  const {LAB_ROCKET,labRocketSpread}=await import('../docs/js/battlefield/terrain/ballistics.js');const {targetFor}=await import('../docs/js/battlefield/terrain/simulation.js');
- assert.equal(LAB_ROCKET.maxRange,800);assert.equal(labRocketSpread(600),66);assert.equal(labRocketSpread(800),98);
+ assert.equal(LAB_ROCKET.levelGroundRange,800);assert.equal(labRocketSpread(600),66);assert.equal(labRocketSpread(800),98);
  const d=level('rocket-ridge');d.terrain.points=[[0,0],[1800,0]];const s=createSimulation(d,'rocket-range'),u=s.units[0],target=s.units[1];assert.equal(targetFor(s,u).id,target.id);
- target.x=1300.01;assert.equal(targetFor(s,u),null);target.x=725;assert.equal(targetFor(s,u).id,target.id);target.x=724.99;assert.equal(targetFor(s,u),null);target.x=1300;target.team=0;assert.equal(targetFor(s,u),null);target.team=1;target.hp=0;assert.equal(targetFor(s,u),null);
+ target.x=1310;assert.equal(targetFor(s,u),null);target.x=725;assert.equal(targetFor(s,u).id,target.id);target.x=724.99;assert.equal(targetFor(s,u),null);target.x=1300;target.team=0;assert.equal(targetFor(s,u),null);target.team=1;target.hp=0;assert.equal(targetFor(s,u),null);
 });
 test('TL-07 solver picks low open arc and higher clear ridge arc with exact endpoint and real muzzle',async()=>{
- const {planTerrainRocket,LAB_ROCKET}=await import('../docs/js/battlefield/terrain/ballistics.js');const d=level('rocket-ridge'),flat=structuredClone(d);flat.terrain.points=[[0,0],[1800,0]];const u={x:500,y:500,team:0},t={x:1300,observedVelocity:0},low=planTerrainRocket(flat,u,t),high=planTerrainRocket(d,u,t);
+ const {planTerrainRocket,LAB_ROCKET}=await import('../docs/js/battlefield/terrain/ballistics.js');const d=level('ridge'),flat=structuredClone(d);flat.terrain.points=[[0,0],[1200,0]];const u={x:350,y:500,team:0},t={x:850,observedVelocity:0},low=planTerrainRocket(flat,u,t),high=planTerrainRocket(d,u,t);
  assert.ok(high.elevation>low.elevation);assert.ok(high.flightTime>low.flightTime);assert.ok(Math.abs(low.elevation-50*Math.PI/180)>.1);
  for(const shot of [low,high]){assert.ok(shot.speed<=LAB_ROCKET.maxSpeed);assert.ok(Math.abs(Math.hypot(shot.originX-u.x,shot.originY-(u.y-42))-34)<1e-8);assert.ok(Math.abs(shot.originX+shot.vx*shot.flightTime-shot.impactX)<1e-7);assert.ok(Math.abs(shot.originY+shot.vy*shot.flightTime+120*shot.flightTime**2-groundY(d,shot.impactX))<1e-7);for(let t=.001;t<shot.flightTime-.001;t+=.002){const p={x:shot.originX+shot.vx*t,y:shot.originY+shot.vy*t+120*t*t};assert.ok(p.y<groundY(shot===low?flat:d,p.x));}}
- const mirrored=planTerrainRocket(d,{x:1300,y:500,team:1},{x:500,observedVelocity:0});assert.ok(Math.abs(mirrored.flightTime-high.flightTime)<1e-8);assert.ok(Math.abs(mirrored.vx+high.vx)<1e-8);
+ const mirrored=planTerrainRocket(d,{x:850,y:500,team:1},{x:350,observedVelocity:0});assert.ok(Math.abs(mirrored.flightTime-high.flightTime)<1e-8);assert.ok(Math.abs(mirrored.vx+high.vx)<1e-8);
 });
 test('TL-07 solver search is within20ms of a fine independent feasibility oracle',async()=>{
  const {planTerrainRocket}=await import('../docs/js/battlefield/terrain/ballistics.js');const d=level('rocket-ridge'),u={x:500,y:500,team:0},target={x:1300,observedVelocity:0},shot=planTerrainRocket(d,u,target);let oracle=null;
- for(let t=1;t<4;t+=.001){const dx=800,dy=42-120*t*t,len=Math.hypot(dx,dy),speed=(len-34)/t,nx=dx/len,ny=dy/len,angle=Math.atan2(-ny,nx);if(speed>520||angle<8*Math.PI/180||angle>80*Math.PI/180)continue;let clear=true;for(let j=0;j<=1000;j++){const a=t*j/1000,x=u.x+34*nx+nx*speed*a,y=u.y-42+34*ny+ny*speed*a+120*a*a;if(j<1000&&groundY(d,x)-y<0){clear=false;break;}}if(clear){oracle=t;break;}}
+ for(let t=1;t<4;t+=.001){const dx=800,dy=42-120*t*t,len=Math.hypot(dx,dy),speed=(len-34)/t,nx=dx/len,ny=dy/len,angle=Math.atan2(-ny,nx);if(speed>413.6||angle<8*Math.PI/180||angle>80*Math.PI/180)continue;let clear=true;for(let j=0;j<=1000;j++){const a=t*j/1000,x=u.x+34*nx+nx*speed*a,y=u.y-42+34*ny+ny*speed*a+120*a*a;if(j<1000&&groundY(d,x)-y<0){clear=false;break;}}if(clear){oracle=t;break;}}
  assert.ok(oracle!==null);assert.ok(shot.flightTime>=oracle-.002);assert.ok(shot.flightTime-oracle<.04); // 20ms grid plus explicit2-unit ridge safety.
 });
 test('TL-07 lead, unreachable rejection and unchanged committed trajectories',async()=>{
  const {planTerrainRocket}=await import('../docs/js/battlefield/terrain/ballistics.js');const d=level('rocket-ridge'),u={x:500,y:500,team:0};const shot=planTerrainRocket(d,u,{x:1150,observedVelocity:20});assert.ok(shot.aimedX>1150);assert.ok(Math.abs(shot.aimedX-1150-20*shot.flightTime)<1e-8);assert.equal(planTerrainRocket(d,{...u,y:1500},{x:1300}),null);
- const s=createSimulation(d,'rocket-approach-blue');stepSimulation(s,600);assert.ok(s.units[0].x>680);assert.ok(s.units[1].x<1680);assert.ok(s.stats.rocketShots>=2);const p={...s.projectiles[0]};s.units[1].x-=40;stepSimulation(s,12);const live=s.projectiles.find(v=>v.originX===p.originX);if(live){assert.equal(live.vx,p.vx);assert.equal(live.vy,p.vy);}assert.ok(s.events.some(e=>e.type==='rocketShot'&&Number.isFinite(e.angle)));
+ const s=createSimulation(d,'rocket-approach-blue');stepSimulation(s,1200);assert.ok(s.units[0].x>680);assert.ok(s.units[1].x<1680);assert.ok(s.stats.rocketShots>=2);const p={...s.projectiles[0]};s.units[1].x-=40;stepSimulation(s,12);const live=s.projectiles.find(v=>v.originX===p.originX);if(live){assert.equal(live.vx,p.vx);assert.equal(live.vy,p.vy);}assert.ok(s.events.some(e=>e.type==='rocketShot'&&Number.isFinite(e.angle)));
 });
 test('TL-07 longer-level rocket encounters replay identically across step batching',()=>{
  const d=level('rocket-ridge');for(const id of ['rocket-approach-blue','rocket-approach-red','mixed-rocket-blue','mixed-rocket-red']){const a=createSimulation(d,id),b=createSimulation(d,id);stepSimulation(a,2400);for(let i=0;i<240;i++)stepSimulation(b,10);assert.deepEqual(snapshot(a),snapshot(b));assert.ok(a.stats.rocketShots>0);assert.ok(a.stats.terrainHits>0);}
 });
 test('TL-07 inward scatter cannot skip a faster feasible trajectory (independent review regression)',async()=>{
  const {planTerrainRocket}=await import('../docs/js/battlefield/terrain/ballistics.js');const d=level('rocket-ridge');d.terrain.points=[[0,0],[1800,0]];
- const shot=planTerrainRocket(d,{x:500,y:500,team:0},{x:1300,observedVelocity:0},-98);assert.ok(shot.flightTime<1.343);assert.equal(shot.impactX,1202);assert.ok(shot.speed<=520);assert.ok(Math.abs(shot.originY+shot.vy*shot.flightTime+120*shot.flightTime**2-500)<1e-8);
+ const shot=planTerrainRocket(d,{x:500,y:500,team:0},{x:1300,observedVelocity:0},-98);assert.ok(shot.flightTime<1.855);assert.equal(shot.impactX,1202);assert.ok(shot.speed<=413.6);assert.ok(Math.abs(shot.originY+shot.vy*shot.flightTime+120*shot.flightTime**2-500)<1e-8);
+});
+test('TL-08 relative height changes reach in both mirrored directions, no hard800 cutoff',async()=>{
+ const {targetFor}=await import('../docs/js/battlefield/terrain/simulation.js');const d=level('rocket-ridge');
+ for(const [id,high] of [['height-blue',0],['height-red',1]]){const s=createSimulation(d,id),a=s.units[high],b=s.units[1-high];assert.equal(Math.abs(a.x-b.x),860);assert.ok(targetFor(s,a));assert.equal(targetFor(s,b),null);stepSimulation(s,360);assert.ok(a.shotsFired>0);assert.equal(b.shotsFired,0);assert.ok(a.rocketReach.clearAir>860);assert.ok(b.rocketReach.clearAir<860);}
+ const flat=createSimulation(d,'height-flat');stepSimulation(flat,1200);assert.equal(flat.stats.rocketShots,0);assert.ok(flat.units.every(u=>u.rocketReach.clearAir>799&&u.rocketReach.clearAir<801));
+ const closer=createSimulation(d,'height-blue');closer.units[1].x=1600;assert.ok(targetFor(closer,closer.units[0]));assert.equal(targetFor(closer,closer.units[1]),null);
+});
+test('TL-08 clear-air estimate is monotonic in drop and scatter keeps widening beyond800',async()=>{
+ const {rocketReachAtDrop,labRocketSpread,LAB_ROCKET}=await import('../docs/js/battlefield/terrain/ballistics.js');assert.equal(LAB_ROCKET.maxRange,undefined);
+ assert.ok(rocketReachAtDrop(-138)<rocketReachAtDrop(42));assert.ok(rocketReachAtDrop(42)<rocketReachAtDrop(222));assert.ok(Math.abs(rocketReachAtDrop(42)-800)<1);assert.ok(Math.abs(rocketReachAtDrop(222)-951)<1);assert.equal(labRocketSpread(900),114);assert.equal(labRocketSpread(1000),130);
+});
+test('TL-08 vertical translation alone preserves trajectory and target eligibility',async()=>{
+ const {planTerrainRocket}=await import('../docs/js/battlefield/terrain/ballistics.js');const {targetFor}=await import('../docs/js/battlefield/terrain/simulation.js');const d=level('rocket-ridge'),raised=structuredClone(d);raised.world.baseline+=100;
+ const a=createSimulation(d,'height-blue'),b=createSimulation(raised,'height-blue'),p=planTerrainRocket(d,a.units[0],a.units[1]),q=planTerrainRocket(raised,b.units[0],b.units[1]);assert.ok(p&&q);for(const key of ['vx','vy','flightTime','angle','speed'])assert.ok(Math.abs(p[key]-q[key])<1e-8);assert.ok(Math.abs(q.originY-p.originY-100)<1e-8);assert.equal(!!targetFor(a,a.units[0]),!!targetFor(b,b.units[0]));assert.equal(!!targetFor(a,a.units[1]),!!targetFor(b,b.units[1]));
+});
+test('TL-08 diagnostics and actual shots remain deterministic through height advantage replay',()=>{
+ for(const id of ['height-blue','height-red','height-flat']){const a=createSimulation(level('rocket-ridge'),id),b=createSimulation(level('rocket-ridge'),id);stepSimulation(a,2400);for(let i=0;i<240;i++)stepSimulation(b,10);assert.deepEqual(snapshot(a),snapshot(b));if(id==='height-flat')assert.equal(a.stats.hits,0);else assert.ok(a.stats.terrainHits>0);}
 });

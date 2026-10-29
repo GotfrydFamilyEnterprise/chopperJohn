@@ -1,6 +1,6 @@
-import {LAB_ROCKET,labRocketSpread,planTerrainRocket} from './ballistics.js?v=0.3.0';
-import {validateLevel} from './level.js?v=0.3.0';
-import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=0.3.0';
+import {LAB_ROCKET,labRocketSpread,planTerrainRocket,rocketReachAtDrop} from './ballistics.js?v=0.4.0';
+import {validateLevel} from './level.js?v=0.4.0';
+import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=0.4.0';
 import {createSoldier} from '../units/soldierCommon.js';
 import {WEAPONS,createRandom,applyDamage} from '../combat/weapons.js?v=1.3.1';
 export const LAB_STEP=1/120;
@@ -13,7 +13,7 @@ export function createSimulation(data,scenarioId){
 export function targetFor(sim,u){
  if(!sim.level.scenarios.find(s=>s.id===sim.scenarioId).combat)return null;
  const dir=u.team===0?1:-1;
- return sim.units.filter(v=>v.hp>0&&v.team!==u.team&&(v.x-u.x)*dir>=(u.type==='rifle'?0:LAB_ROCKET.minRange)&&(v.x-u.x)*dir<=(u.type==='rifle'?WEAPONS.rifleRange:LAB_ROCKET.maxRange)&&(u.type==='rocket'?!!rocketPlan(sim.level,u,v):visible(sim.level,eye(u),eye(v)))).sort((a,b)=>Math.abs(a.x-u.x)-Math.abs(b.x-u.x)||a.id-b.id)[0]??null;
+ return sim.units.filter(v=>v.hp>0&&v.team!==u.team&&(v.x-u.x)*dir>=(u.type==='rifle'?0:LAB_ROCKET.minRange)&&(u.type!=='rifle'||(v.x-u.x)*dir<=WEAPONS.rifleRange)&&(u.type==='rocket'?!!rocketPlan(sim.level,u,v):visible(sim.level,eye(u),eye(v)))).sort((a,b)=>Math.abs(a.x-u.x)-Math.abs(b.x-u.x)||a.id-b.id)[0]??null;
 }
 // TL-07: public adapter retained for isolated solver tests.
 export const rocketPlan=planTerrainRocket;
@@ -66,6 +66,8 @@ export function stepSimulation(sim,count=1){
     recordShot(sim,u);sim.stats.rifleShots++;u.fireCooldown=.32;event(sim,{type:'rifleShot',id:u.id,x:u.x,y:u.y});
    }
    if(u.type==='rocket'){
+    const dir=u.team===0?1:-1,focus=target||sim.units.filter(v=>v.hp>0&&v.team!==u.team&&(v.x-u.x)*dir>0).sort((a,b)=>Math.abs(a.x-u.x)-Math.abs(b.x-u.x)||a.id-b.id)[0];
+    u.rocketReach=focus?{targetId:focus.id,distance:Math.abs(focus.x-u.x),drop:focus.y-(u.y-42),terrainDrop:focus.y-u.y,clearAir:rocketReachAtDrop(focus.y-(u.y-42)),reachable:!!target}:null;
     const goal=target?rocketPlan(sim.level,u,target):null;u.rocketGoal=goal;u.rocketAimAngle=sim.time-(u.lastRocketAt??-Infinity)<.15?u.lastRocketAngle:goal?.angle??null;
     u.rocketCooldown=Math.max(0,(u.rocketCooldown||0)-LAB_STEP);
     if(!target||u.rocketTargetId!==target.id){u.rocketAimTime=0;u.rocketTargetId=target?.id??null;}

@@ -53,3 +53,6 @@ User requested uneven approach timing and real walk/fire exchanges when one sold
 
 ## Terrain Lab v0.3
 User requested angled bullet appearance, uneven rocketeer approaches, increased range and optimal rocket trajectories. User explicitly selected800 units. Apply this exploration to the separate lab: fix tracer orientation, preserve shot scatter, use a bounded shortest-clear-flight search and add longer terrain/mixed encounters. Do not silently alter the live main-game600-range model. Solver speed520,20ms search,8–80° and2-unit clearance are explicit testable starting choices under implementation authorization.
+
+## Terrain Lab v0.4 relative height instead of a distance cap
+User supersedes the fixed800 rule: use height difference between weapon and target. Keep approximate800 equal-ground baseline by calibrating constant launch power413.6, rather than retaining520 power and silently increasing level-ground reach. No absolute-altitude bonus, height damage boost or arbitrary linear range multiplier. Actual ballistic feasibility stays authoritative. Clear-air range is approximate diagnostics only; mirrored860-unit presets expose the difference.

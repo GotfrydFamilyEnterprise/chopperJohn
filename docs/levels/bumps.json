@@ -210,7 +210,7 @@
     {
       "id": "rocket-approach-blue",
       "name": "Rockets: Blue nearer",
-      "description": "Uneven rocketeer approach. Stop to aim when a terrain-clearing shot is available within 225\u2013800; watch variable launch angles and long-range scatter.",
+      "description": "Uneven rocketeer approach. Stop to aim when a terrain-clearing shot is available at a height-dependent reachable distance; watch variable launch angles and long-range scatter.",
       "combat": true,
       "units": [
         {
@@ -232,7 +232,7 @@
     {
       "id": "rocket-approach-red",
       "name": "Rockets: Red nearer",
-      "description": "Uneven rocketeer approach. Stop to aim when a terrain-clearing shot is available within 225\u2013800; watch variable launch angles and long-range scatter.",
+      "description": "Uneven rocketeer approach. Stop to aim when a terrain-clearing shot is available at a height-dependent reachable distance; watch variable launch angles and long-range scatter.",
       "combat": true,
       "units": [
         {

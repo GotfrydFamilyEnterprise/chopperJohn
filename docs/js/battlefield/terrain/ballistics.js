@@ -1,11 +1,24 @@
-import {groundY} from './heightfield.js?v=0.3.0';
+import {groundY} from './heightfield.js?v=0.4.0';
 // TL-07: playground tuning; production weapon range/speed is untouched.
-export const LAB_ROCKET=Object.freeze({minRange:225,maxRange:800,maxSpeed:520,gravity:240,barrel:34,timeStep:.02,maxFlight:7.8,clearance:2});
+export const LAB_ROCKET=Object.freeze({minRange:225,levelGroundRange:800,maxSpeed:413.6,gravity:240,barrel:34,timeStep:.02,maxFlight:7.8,clearance:2});
 export function labRocketSpread(distance){
- const r=Math.max(225,Math.min(LAB_ROCKET.maxRange,distance));
+ const r=Math.max(225,distance);
  if(r<=350)return 5+(r-225)*15/125;
  if(r<=500)return 20+(r-350)*30/150;
  return 50+(r-500)*.16;
+}
+// TL-08: informational clear-air reach at this weapon-to-ground drop. Acquisition
+// uses the actual terrain/intercept solver below, never this approximate display.
+export function rocketReachAtDrop(drop){
+ const {maxSpeed:s,barrel:l,gravity:g}=LAB_ROCKET;
+ let best=0;
+ for(let degrees=8;degrees<=80;degrees++){
+  const a=degrees*Math.PI/180,sin=Math.sin(a),disc=s*s*sin*sin+2*g*(drop+l*sin);
+  if(disc<0)continue;
+  const t=(s*sin+Math.sqrt(disc))/g;
+  if(t>0&&t<=LAB_ROCKET.maxFlight)best=Math.max(best,(l+s*t)*Math.cos(a));
+ }
+ return best;
 }
 export function ballisticPosition(shot,t){return {x:shot.originX+shot.vx*t,y:shot.originY+shot.vy*t+LAB_ROCKET.gravity*t*t/2};}
 // On each linear ground segment clearance is a concave quadratic, so its

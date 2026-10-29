@@ -1,6 +1,6 @@
-import {projectileTail} from './ballistics.js?v=0.3.0';
-import {groundY,visible} from './heightfield.js?v=0.3.0';
-import {eye} from './simulation.js?v=0.3.0';
+import {projectileTail} from './ballistics.js?v=0.4.0';
+import {groundY,visible} from './heightfield.js?v=0.4.0';
+import {eye} from './simulation.js?v=0.4.0';
 import {gait,TEAM_COLORS} from '../units/soldierCommon.js';
 function line(ctx,a,b){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
 function soldier(ctx,u,level){
@@ -16,10 +16,10 @@ function soldier(ctx,u,level){
  ctx.fillStyle='#102332';ctx.fillRect(x-15,y-71,30,3);ctx.fillStyle=color.body;ctx.fillRect(x-15,y-71,30*u.hp/(u.type==='rocket'?4:3),3);
  ctx.font='10px system-ui';ctx.textAlign='center';ctx.fillText((u.team===0?'B':'R')+' · '+(u.type==='rocket'&&aiming?((u.rocketCooldown||0)>0?'RELOAD':'AIM')+(u.rocketAimAngle===null?'':' '+Math.round(Math.atan2(-Math.sin(u.rocketAimAngle),Math.abs(Math.cos(u.rocketAimAngle)))*180/Math.PI)+'°'):u.mode==='hold'?'HOLD':aiming?'WALK + FIRE':'WALK'),x,y-78);
 }
-export function drawLab(ctx,width,height,sim,{sight=true,zoom=1,center=600}={}){
- const {level}=sim,scale=Math.min(width/level.world.width,height/430)*zoom;
+export function drawLab(ctx,width,height,sim,{sight=true,zoom=1,center=600,topInset=0}={}){
+ const {level}=sim,scale=Math.min(width/level.world.width,Math.max(1,height-topInset)/430)*zoom;
  const viewWidth=width/scale,viewCenter=viewWidth>=level.world.width?level.world.width/2:Math.max(viewWidth/2,Math.min(level.world.width-viewWidth/2,center));
- const offsetX=width/2-viewCenter*scale,offsetY=height*.72-level.world.baseline*scale;
+ const offsetX=width/2-viewCenter*scale,offsetY=topInset+(height-topInset)*.72-level.world.baseline*scale;
  ctx.clearRect(0,0,width,height);const sky=ctx.createLinearGradient(0,0,0,height);sky.addColorStop(0,'#12283b');sky.addColorStop(1,'#38575d');ctx.fillStyle=sky;ctx.fillRect(0,0,width,height);
  ctx.save();ctx.translate(offsetX,offsetY);ctx.scale(scale,scale);
  // Faint baseline makes positive hills and negative valleys comparable.
