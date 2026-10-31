@@ -1,0 +1,29 @@
+
+> test:balance
+> node scripts/terrain-balance.mjs
+
+close radius 25 done (1.1s)
+close radius 40 done (2.3s)
+close radius 50 done (3.7s)
+long radius 25 done (10.8s)
+long radius 40 done (15.2s)
+long radius 50 done (18.4s)
+screen radius 25 done (36.2s)
+screen radius 40 done (61.6s)
+screen radius 50 done (85.0s)
+cluster radius 25 done (88.7s)
+cluster radius 40 done (91.8s)
+cluster radius 50 done (93.2s)
+spread radius 25 done (111.3s)
+spread radius 40 done (125.4s)
+spread radius 50 done (139.6s)
+high radius 25 done (153.5s)
+high radius 40 done (170.0s)
+high radius 50 done (187.2s)
+reverse radius 25 done (244.7s)
+reverse radius 40 done (320.9s)
+reverse radius 50 done (397.1s)
+mirror radius 25 done (416.7s)
+mirror radius 40 done (433.6s)
+mirror radius 50 done (447.5s)
+{"games":576,"seconds":447.503,"output":"docs/quality/evidence/terrain-balance-results.json"}

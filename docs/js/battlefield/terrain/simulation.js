@@ -1,14 +1,15 @@
-import {LAB_ROCKET,labRocketSpread,planTerrainRocket,rocketReachAtDrop} from './ballistics.js?v=0.4.0';
-import {validateLevel} from './level.js?v=0.4.0';
-import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=0.4.0';
+import {checkedBlastRadius} from './balance.js?v=0.5.0';
+import {LAB_ROCKET,labRocketSpread,planTerrainRocket,rocketReachAtDrop} from './ballistics.js?v=0.5.0';
+import {validateLevel} from './level.js?v=0.5.0';
+import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=0.5.0';
 import {createSoldier} from '../units/soldierCommon.js';
 import {WEAPONS,createRandom,applyDamage} from '../combat/weapons.js?v=1.3.1';
 export const LAB_STEP=1/120;
 export const eye=u=>({x:u.x,y:u.y-40});
-export function createSimulation(data,scenarioId){
+export function createSimulation(data,scenarioId,options={}){
  const level=validateLevel(data),scenario=level.scenarios.find(s=>s.id===scenarioId);
  if(!scenario)throw new Error('Unknown scenario');
- return {level,scenarioId,time:0,tick:0,result:null,random:createRandom(level.seed),units:scenario.units.map(u=>({...createSoldier(u.id,u.team,u.type,u.x,groundY(level,u.x)),mode:u.mode,shotsFired:0,firstShotAt:null,damageTaken:0})),projectiles:[],effects:[],events:[],stats:{rifleShots:0,rocketShots:0,terrainHits:0,hits:0}};
+ return {level,scenarioId,blastRadius:checkedBlastRadius(options.blastRadius),time:0,tick:0,result:null,random:createRandom(level.seed),units:scenario.units.map(u=>({...createSoldier(u.id,u.team,u.type,u.x,groundY(level,u.x)),mode:u.mode,shotsFired:0,firstShotAt:null,damageTaken:0})),projectiles:[],effects:[],events:[],stats:{rifleShots:0,rocketShots:0,terrainHits:0,hits:0}};
 }
 export function targetFor(sim,u){
  if(!sim.level.scenarios.find(s=>s.id===sim.scenarioId).combat)return null;
@@ -30,12 +31,12 @@ function unitContact(a,b,u){
  return low;
 }
 function detonate(sim,p,point){
- sim.stats.terrainHits++;sim.effects.push({...point,age:0,kind:'blast'});event(sim,{type:'rocketImpact',x:point.x,y:point.y});
+ sim.stats.terrainHits++;sim.effects.push({...point,age:0,kind:'blast',radius:sim.blastRadius});event(sim,{type:'rocketImpact',x:point.x,y:point.y});
  for(const u of sim.units)if(u.hp>0&&u.team!==p.team){
   const body={x:u.x,y:u.y-20},distance=Math.hypot(u.x-point.x,u.y-point.y);
   // Surface burst starts just above soil, and hills occlude splash too.
-  if(distance<WEAPONS.blastRadius&&visible(sim.level,{x:point.x,y:point.y-.1},body)){
-   const damage=damageUnit(u,WEAPONS.blastDamage*(1-distance/WEAPONS.blastRadius));sim.stats.hits++;event(sim,{type:'damage',weapon:'rocket',...damage});
+  if(distance<sim.blastRadius&&visible(sim.level,{x:point.x,y:point.y-.1},body)){
+   const damage=damageUnit(u,WEAPONS.blastDamage*(1-distance/sim.blastRadius));sim.stats.hits++;event(sim,{type:'damage',weapon:'rocket',...damage});
   }
  }
 }
@@ -74,7 +75,7 @@ export function stepSimulation(sim,count=1){
     if(target&&u.rocketCooldown<=1e-8){
      u.rocketAimTime=(u.rocketAimTime||0)+LAB_STEP;
      if(u.rocketAimTime+1e-8>=WEAPONS.rocketAimSeconds){
-      const error=(sim.random()*2-1)*labRocketSpread(Math.abs(target.x-u.x)),plan=rocketPlan(sim.level,u,target,error);
+      const error=(sim.random()*2-1)*labRocketSpread(Math.abs(target.x-u.x))*dir,plan=rocketPlan(sim.level,u,target,error);
       if(plan){sim.projectiles.push({...plan,kind:'rocket',team:u.team});recordShot(sim,u);u.rocketAimAngle=plan.angle;u.lastRocketAngle=plan.angle;u.lastRocketAt=sim.time;sim.stats.rocketShots++;event(sim,{type:'rocketShot',id:u.id,error,impactX:plan.impactX,angle:plan.angle,flightTime:plan.flightTime,speed:plan.speed});}
       u.rocketAimTime=0;u.rocketCooldown=WEAPONS.rocketReloadSeconds;
      }
@@ -100,4 +101,4 @@ export function stepSimulation(sim,count=1){
  }
  return sim;
 }
-export function snapshot(sim){return {levelId:sim.level.id,scenarioId:sim.scenarioId,tick:sim.tick,time:sim.time,result:sim.result?{...sim.result}:null,randomState:sim.random.state(),units:structuredClone(sim.units),projectiles:structuredClone(sim.projectiles),events:structuredClone(sim.events),stats:{...sim.stats}};}
+export function snapshot(sim){return {levelId:sim.level.id,scenarioId:sim.scenarioId,blastRadius:sim.blastRadius,tick:sim.tick,time:sim.time,result:sim.result?{...sim.result}:null,randomState:sim.random.state(),units:structuredClone(sim.units),projectiles:structuredClone(sim.projectiles),effects:structuredClone(sim.effects),events:structuredClone(sim.events),stats:{...sim.stats}};}

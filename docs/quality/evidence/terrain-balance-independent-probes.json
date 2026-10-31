@@ -1,0 +1,91 @@
+{
+  "passed": "mirrors at 30s, three-radius enemy-kind/edge/friendly, unresolved separation, production radius",
+  "rows": [
+    {
+      "id": "close",
+      "time": 3.3833333333333333,
+      "result": {
+        "winner": 0,
+        "time": 3.3833333333333333
+      },
+      "costs": [
+        {
+          "fielded": 300,
+          "surviving": 250,
+          "lost": 50,
+          "alive": 10
+        },
+        {
+          "fielded": 300,
+          "surviving": 0,
+          "lost": 300,
+          "alive": 0
+        }
+      ],
+      "projectiles": 0
+    },
+    {
+      "id": "long",
+      "time": 15.008333333333333,
+      "result": {
+        "winner": 0,
+        "time": 15.008333333333333
+      },
+      "costs": [
+        {
+          "fielded": 300,
+          "surviving": 100,
+          "lost": 200,
+          "alive": 4
+        },
+        {
+          "fielded": 300,
+          "surviving": 0,
+          "lost": 300,
+          "alive": 0
+        }
+      ],
+      "projectiles": 0
+    },
+    {
+      "id": "reverse",
+      "time": 30,
+      "result": null,
+      "costs": [
+        {
+          "fielded": 220,
+          "surviving": 120,
+          "lost": 100,
+          "alive": 2
+        },
+        {
+          "fielded": 240,
+          "surviving": 240,
+          "lost": 0,
+          "alive": 4
+        }
+      ],
+      "projectiles": 0
+    },
+    {
+      "id": "mirror",
+      "time": 30,
+      "result": null,
+      "costs": [
+        {
+          "fielded": 220,
+          "surviving": 120,
+          "lost": 100,
+          "alive": 2
+        },
+        {
+          "fielded": 220,
+          "surviving": 120,
+          "lost": 100,
+          "alive": 2
+        }
+      ],
+      "projectiles": 0
+    }
+  ]
+}

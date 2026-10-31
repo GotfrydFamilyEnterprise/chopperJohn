@@ -121,3 +121,7 @@ Detailed H/HG/AA assertions, boundary cases and screenshot checklist remain in `
 
 | TL-08 | Mirrored high/low860-unit encounters vs same-height860; closer uphill unreachable; flat800/810 | Higher shooter can launch beyond800, low/uphill and equal-ground rejected at860; approximate800 baseline,225 minimum retained, correct physical collision/reload |
 | TL-08 | Common vertical translation, varying height, long-range spread, diagnostic readouts/caption fit | Equal height difference yields equal solution; spread continues past800; reachable shots meet actual speed/terrain limits, diagnostic text distinguishes approximate reach from clear arc; mobile screenshots/replay |
+
+| TL-09 | Real25/40/50 bursts at center/edge/outside, friendly/terrain shielding, UI changes/reset, visual outline | Default40 lab-only;2HP center/linear falloff; real radius drawn, deterministic fresh reset; production25 unchanged |
+| TL-09 | Shared-cost fielded/lost/survivor summaries; exact300/common240 encounters, mobile presets/report | Correct25/60 prices and explicit20 Supply remainder; no automatic purchases or price change; playable formations and readable results |
+| TL-09 | Multi-seed mirrored comparison across8 cases/3 radii, elapsed/projectiles/HP/cost traces | Actual engine outcomes, unresolved timeouts separated, full-cost survivor accounting explicit; strategic conclusions limited to preassembled infantry encounters, no full-economy balance claim |

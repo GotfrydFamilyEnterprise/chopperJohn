@@ -1,6 +1,6 @@
-import {projectileTail} from './ballistics.js?v=0.4.0';
-import {groundY,visible} from './heightfield.js?v=0.4.0';
-import {eye} from './simulation.js?v=0.4.0';
+import {projectileTail} from './ballistics.js?v=0.5.0';
+import {groundY,visible} from './heightfield.js?v=0.5.0';
+import {eye} from './simulation.js?v=0.5.0';
 import {gait,TEAM_COLORS} from '../units/soldierCommon.js';
 function line(ctx,a,b){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
 function soldier(ctx,u,level){
@@ -31,6 +31,6 @@ export function drawLab(ctx,width,height,sim,{sight=true,zoom=1,center=600,topIn
  if(sight){const live=sim.units.filter(u=>u.hp>0);for(let i=0;i<live.length;i++)for(let j=i+1;j<live.length;j++)if(live[i].team!==live[j].team){const a=eye(live[i]),b=eye(live[j]);ctx.strokeStyle=visible(level,a,b)?'#8ce4b6':'#f0b463';ctx.lineWidth=1.5;ctx.setLineDash([5,5]);line(ctx,a,b);ctx.setLineDash([]);}}
  for(const u of sim.units)if(u.hp>0)soldier(ctx,u,level);else{ctx.strokeStyle=TEAM_COLORS[u.team].body;ctx.lineWidth=2;line(ctx,{x:u.x-6,y:u.y-10},{x:u.x+6,y:u.y});line(ctx,{x:u.x+6,y:u.y-10},{x:u.x-6,y:u.y});ctx.fillStyle=TEAM_COLORS[u.team].body;ctx.font='10px system-ui';ctx.textAlign='center';ctx.fillText((u.team===0?'BLUE':'RED')+' DOWN',u.x,u.y-17);}
  for(const p of sim.projectiles){if(p.kind==='rocket'){ctx.beginPath();for(let i=0;i<=10;i++){const t=Math.max(0,p.age-(10-i)*.025),x=p.originX+p.vx*t,y=p.originY+p.vy*t+120*t*t;if(i)ctx.lineTo(x,y);else ctx.moveTo(x,y);}ctx.strokeStyle='#e6bf8c';ctx.lineWidth=1.5;ctx.stroke();}ctx.strokeStyle=p.kind==='rocket'?'#ffb65c':'#fff2ba';ctx.lineWidth=p.kind==='rocket'?4:2;line(ctx,projectileTail(p),{x:p.x,y:p.y});}
- for(const e of sim.effects){ctx.globalAlpha=1-e.age/.65;ctx.fillStyle=e.kind==='blast'?'#efb866':'#e9dec4';ctx.beginPath();ctx.arc(e.x,e.y,e.kind==='blast'?8+e.age*25:3,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;}
+ for(const e of sim.effects){ctx.globalAlpha=1-e.age/.65;ctx.fillStyle=e.kind==='blast'?'#efb866':'#e9dec4';ctx.beginPath();ctx.arc(e.x,e.y,e.kind==='blast'?8+e.age*25:3,0,Math.PI*2);ctx.fill();if(e.kind==='blast'){ctx.strokeStyle='#ffd9a0';ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(e.x,e.y,e.radius,0,Math.PI*2);ctx.stroke();}ctx.globalAlpha=1;}
  ctx.restore();return {scale,offsetX,offsetY};
 }
