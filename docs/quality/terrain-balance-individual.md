@@ -1,5 +1,7 @@
 # Terrain Lab v0.5: ground-force balance findings
 
+**Archived individual-damage model (commit7668503). The current playground defaults to shared damage. These findings describe the earlier model; choose Each soldier or `?damage=individual` to replay it.**
+
 TL-09 experiment: **576 actual encounters**, using12 seeds, two mirrored placements, eight scenarios and three blast radii. All runs use the real1/120-second Terrain Lab engine and stop at a settled elimination result or90 simulation seconds. Mirrors are paired symmetry checks, not additional independent seeds. The sample is an initial tuning sweep, not proof of universal balance.
 
 These measurements use the **current per-soldier splash model**: every enemy at the blast center can receive2HP. Shared randomized group damage is a separate proposal and is not included in these results.
