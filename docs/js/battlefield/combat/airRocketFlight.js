@@ -1,6 +1,6 @@
-import {airPosition} from './airInterception.js';
-import {hullDistance,lerpAircraft,boxDistance,soldierBox} from './collision2d.js';
-import {stationedBase,applyDamage} from './weapons.js?v=1.3.1';
+import {airPosition} from './airInterception.js?v=2.0.0';
+import {hullDistance,lerpAircraft,boxDistance,soldierBox} from './collision2d.js?v=2.0.0';
+import {stationedBase,applyDamage} from './weapons.js?v=2.0.0';
 // AA-COLLISION: <=4ms curved substeps (gravity chord error <0.0005 units),
 // with bounded minimization and bisection against the interpolated moving hull.
 export function stepBattleRocket(r,dt,previousHelicopter,helicopter,ground=460){
@@ -29,7 +29,7 @@ export function stepBattleRocket(r,dt,previousHelicopter,helicopter,ground=460){
 }
 export function resolveAirburstGround(point,team,units,bases,random){
  const hits=[];
- for(const base of bases){if(base.main||base.team===team||boxDistance(point,{left:base.x-80,right:base.x+80,top:460-70,bottom:460})>25)continue;const guards=units.filter(u=>stationedBase(u,[base]));if(guards.length){base.coverFlash=.2;const victim=guards[Math.floor(random()*guards.length)];hits.push({covered:true,baseX:base.x,...applyDamage(victim,1/3)});}}
+ for(const base of bases){if(base.main||base.team===team||boxDistance(point,{left:base.x-80,right:base.x+80,top:(base.y??460)-70,bottom:base.y??460})>25)continue;const guards=units.filter(u=>stationedBase(u,[base]));if(guards.length){base.coverFlash=.2;const victim=guards[Math.floor(random()*guards.length)];hits.push({covered:true,baseX:base.x,...applyDamage(victim,1/3)});}}
  for(const u of units){if(u.hp<=0||u.team===team||stationedBase(u,bases))continue;const d=boxDistance(point,soldierBox(u));if(d<25)hits.push({covered:false,...applyDamage(u,2*(1-d/25))});}
  return hits;
 }

@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "kind": "battlefield",
+  "id": "first-assault",
+  "name": "First assault",
+  "description": "Support your troops. Rockets breach defenses; riflemen capture the enemy headquarters.",
+  "seed": 31,
+  "world": {
+    "width": 2800,
+    "baseline": 460
+  },
+  "terrain": {
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        2800,
+        0
+      ]
+    ]
+  },
+  "balanceProfile": "campaign-v1",
+  "bases": [
+    {
+      "id": "blue-hq",
+      "type": "hq",
+      "team": 0,
+      "x": 110
+    },
+    {
+      "id": "red-hq",
+      "type": "hq",
+      "team": 1,
+      "x": 2690
+    },
+    {
+      "id": "blue-fob",
+      "type": "fob",
+      "team": 0,
+      "x": 850
+    },
+    {
+      "id": "red-fob",
+      "type": "fob",
+      "team": 1,
+      "x": 1950
+    }
+  ],
+  "helipad": {
+    "id": "blue-pad",
+    "x": 400
+  },
+  "factions": [
+    {
+      "team": 0,
+      "controller": "manual",
+      "spawnX": 170,
+      "rallyX": 280,
+      "defenseX": 330,
+      "supply": 120,
+      "opening": [
+        {
+          "type": "rifle",
+          "x": 220,
+          "order": "garrison"
+        },
+        {
+          "type": "rifle",
+          "x": 256,
+          "order": "garrison"
+        },
+        {
+          "type": "rifle",
+          "x": 292,
+          "order": "advance"
+        },
+        {
+          "type": "rocket",
+          "x": 170,
+          "order": "garrison"
+        },
+        {
+          "type": "rocket",
+          "x": 200,
+          "order": "advance"
+        }
+      ],
+      "wave": {
+        "rifle": 2,
+        "rocket": 1
+      }
+    },
+    {
+      "team": 1,
+      "controller": "ai",
+      "spawnX": 2630,
+      "rallyX": 2520,
+      "defenseX": 2470,
+      "supply": 120,
+      "opening": [
+        {
+          "type": "rifle",
+          "x": 2580,
+          "order": "garrison"
+        },
+        {
+          "type": "rifle",
+          "x": 2544,
+          "order": "garrison"
+        },
+        {
+          "type": "rifle",
+          "x": 2508,
+          "order": "advance"
+        },
+        {
+          "type": "rocket",
+          "x": 2630,
+          "order": "garrison"
+        },
+        {
+          "type": "rocket",
+          "x": 2600,
+          "order": "advance"
+        }
+      ],
+      "wave": {
+        "rifle": 2,
+        "rocket": 1
+      }
+    }
+  ],
+  "objective": {
+    "type": "capture-hq",
+    "target": "red-hq"
+  }
+}

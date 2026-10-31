@@ -1,10 +1,10 @@
-import {updateAirPressure} from './airPressure.js';
-import {SUPPLY_RULES, createSupply, accrueSupply, purchaseUnit} from '../economy/supply.js';
-import {STRATEGY_RULES, COMPOSITIONS, observeBattlefield, chooseStrategy, firstMissing, factionRules} from './strategy.js?v=1.3.1';
-import {createSquad, addMember, membersOf, detachForGarrison, refreshSquads, movementOrder} from './squads.js';
+import {updateAirPressure} from './airPressure.js?v=2.0.0';
+import {SUPPLY_RULES, createSupply, accrueSupply, purchaseUnit} from '../economy/supply.js?v=2.0.0';
+import {STRATEGY_RULES, COMPOSITIONS, observeBattlefield, chooseStrategy, firstMissing, factionRules} from './strategy.js?v=2.0.0';
+import {createSquad, addMember, membersOf, detachForGarrison, refreshSquads, movementOrder} from './squads.js?v=2.0.0';
 // AI-01..06: deterministic composition root; the scene injects the spawn factory.
-export function createCommander(team = 1) {
-  return {rules: factionRules(team), supply: createSupply(), squads: [], nextSquadId: 1, strategy: {mode: 'GARRISON', label: 'Reinforcing FOB'},
+export function createCommander(team = 1,options = {}) {
+  return {rules: {...factionRules(team),...options.rules}, compositions: options.compositions??COMPOSITIONS, supply: createSupply(), squads: [], nextSquadId: 1, strategy: {mode: 'GARRISON', label: 'Reinforcing FOB'},
     nextDecisionAt: 0, regroupUntil: 0, fieldLosses: 0, failedWaves: 0, stronger: false,
     events: [], blockReason: 'ready', observations: null};
 }
@@ -28,14 +28,14 @@ export function updateCommander(state, dt, units, bases, deploy, helicopter=null
   let view = observeBattlefield(units, bases, rules);
   view.airPressure=updateAirPressure(state,helicopter,dt);
   if (!view.threatened) for (const squad of state.squads) if (squad.role === 'defense' && squad.phase !== 'retired') {
-    squad.role = 'intercept'; squad.composition = {...COMPOSITIONS.intercept}; squad.phase = 'gather'; squad.goalX = rules.goalX;
+    squad.role = 'intercept'; squad.composition = {...state.compositions.intercept}; squad.phase = 'gather'; squad.goalX = rules.goalX;
     for (const unit of membersOf(squad, units)) unit.order.role = squad.role;
   }
   const critical = (view.airPressure && !state.observations?.airPressure) || (!view.airPressure && !!state.observations?.airPressure) || (view.threatened && state.strategy.mode !== 'DEFEND') ||
     (!view.threatened && (view.missing.rifle || view.missing.rocket) && state.strategy.mode !== 'GARRISON');
   if (now + 1e-8 >= state.nextDecisionAt || critical) {
     const before = state.strategy.mode;
-    state.strategy = chooseStrategy(view, state.squads, now, state.regroupUntil, state.stronger);
+    state.strategy = chooseStrategy(view, state.squads, now, state.regroupUntil, state.stronger,state.compositions);
     state.nextDecisionAt = now + STRATEGY_RULES.decisionInterval;
     if (before !== state.strategy.mode) record(state, {type: 'objective', mode: state.strategy.mode});
   }
@@ -60,11 +60,11 @@ export function updateCommander(state, dt, units, bases, deploy, helicopter=null
     // Already-paid rally troops respond immediately instead of waiting for a full wave.
     for (const group of state.squads) if (group.phase === 'gather') {
       group.phase = 'advance'; group.role = 'defense'; group.goalX = rules.defenseX;
-      group.composition = {...COMPOSITIONS.defense}; group.launched = true;
+      group.composition = {...state.compositions.defense}; group.launched = true;
       for (const unit of membersOf(group, units)) {unit.order.role = 'defense'; unit.order.joined = true;}
     }
     squad = state.squads.find(group => group.role === 'defense' && group.phase !== 'retired');
-    if (!squad) {squad = createSquad(state.nextSquadId++, 'defense', COMPOSITIONS.defense, now, rules); state.squads.push(squad);}
+    if (!squad) {squad = createSquad(state.nextSquadId++, 'defense', state.compositions.defense, now, rules); state.squads.push(squad);}
     type = firstMissing(squad.composition, membersOf(squad, units)); role = 'defense';
   } else if (state.strategy.mode === 'PREPARE' || state.strategy.mode === 'SUPPORT') {
     squad = state.squads.find(group => group.id === state.strategy.squadId && group.phase !== 'retired');

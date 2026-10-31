@@ -1,9 +1,10 @@
-import {forceEconomics,checkedBlastRadius} from './balance.js?v=0.6.0';
-import {combatSummary} from './outcomes.js?v=0.6.0';
-import {loadLevel,validateLevel} from './level.js?v=0.6.0';
-import {createSimulation,stepSimulation,snapshot,LAB_STEP} from './simulation.js?v=0.6.0';
-import {drawLab} from './renderer.js?v=0.6.0';
-import {installTouchGuards} from '../ui/touchGuards.js';
+import {installTestInteractions} from '../ui/testInteractions.js?v=2.0.0';
+import {forceEconomics,checkedBlastRadius} from './balance.js?v=2.0.0';
+import {combatSummary} from './outcomes.js?v=2.0.0';
+import {loadLevel,validateLevel} from './level.js?v=2.0.0';
+import {createSimulation,stepSimulation,snapshot,LAB_STEP} from './simulation.js?v=2.0.0';
+import {drawLab} from './renderer.js?v=2.0.0';
+import {installTouchGuards} from '../ui/touchGuards.js?v=2.0.0';
 const $=id=>document.getElementById(id),canvas=$('canvas'),ctx=canvas.getContext('2d');
 let portrait=innerWidth<500,loadError='',loading=false;
 let data,sim,running=false,last=0,accumulator=0,loadId=0,zoom=portrait?2:1,center=600,transform,drag;
@@ -32,6 +33,7 @@ canvas.onpointerdown=e=>{drag={id:e.pointerId,x:e.clientX,center};canvas.setPoin
 document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
 window.addEventListener('resize',()=>{const next=innerWidth<500;if(next!==portrait){portrait=next;fitScenario();}render();});
 if(testMode)window.terrainTest={snapshot:()=>snapshot(sim),step:count=>{pause();stepSimulation(sim,count);render();},load:level=>{install(validateLevel(level));},scenario:id=>start(id)};
+if(testMode)window.terrainTest.interact=installTestInteractions({enabled:true,step:n=>{if(!$('step').disabled&&$('jsonPanel').hidden)window.terrainTest.step(n);},snapshot:()=>window.terrainTest.snapshot(),dt:LAB_STEP});
 function frame(now){const elapsed=Math.min(.1,(now-last)/1000||0);last=now;if(running&&sim){accumulator+=elapsed*Number($('speed').value);while(accumulator>=LAB_STEP){stepSimulation(sim);accumulator-=LAB_STEP;if(sim.result){pause();break;}}}render();requestAnimationFrame(frame);}
 const requestedModel=new URLSearchParams(location.search).get('damage');if(['shared','individual'].includes(requestedModel))$('damageModel').value=requestedModel;
 const requestedBlast=Number(new URLSearchParams(location.search).get('blast')||40);try{$('blast').value=String(checkedBlastRadius(requestedBlast));}catch{}

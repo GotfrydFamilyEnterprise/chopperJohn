@@ -1,4 +1,4 @@
-import {defenseCapacity} from './defenseRules.js?v=1.3.1';
+import {defenseCapacity} from './defenseRules.js?v=2.0.0';
 // CAP-06: status is drawn in-world, preserving the compact pilot HUD.
 export function baseStatus(b){
  const owner=b.team===0?'BLUE':'RED',kind=b.main?'HQ':'FOB';

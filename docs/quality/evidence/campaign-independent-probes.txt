@@ -1,0 +1,7 @@
+PASS JSON rejects NaN slope, duplicate teams, invalid opening types; validated clone isolated
+PASS actual rifle collision respects ridge and friendly filter
+PASS rocket real 0.7 aim, 3 reload, target change resets
+PASS actual paid replacement waits 10s; insufficient Supply prevents free aircraft
+PASS guard registration continuous, vacancy and enemy exclusion
+PASS capture contested halts, rocketeer alone cannot capture, draw freezes
+6 independent groups passed

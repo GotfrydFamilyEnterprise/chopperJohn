@@ -1,4 +1,4 @@
-import {STRATEGY_RULES, factionRules} from './strategy.js';
+import {STRATEGY_RULES, factionRules} from './strategy.js?v=2.0.0';
 // SQ-01..04: orders affect walking limits, never coordinates, weapons or damage.
 export function createSquad(id, role, composition, now, rules = factionRules(1)) {
   return {id, role, composition: {...composition}, members: [], phase: role === 'defense' ? 'advance' : 'gather',

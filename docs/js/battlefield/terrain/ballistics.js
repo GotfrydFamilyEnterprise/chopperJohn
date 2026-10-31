@@ -1,4 +1,4 @@
-import {groundY} from './heightfield.js?v=0.6.0';
+import {groundY} from './heightfield.js?v=2.0.0';
 // TL-07: playground tuning; production weapon range/speed is untouched.
 export const LAB_ROCKET=Object.freeze({minRange:225,levelGroundRange:800,maxSpeed:413.6,gravity:240,barrel:34,timeStep:.02,maxFlight:7.8,clearance:2});
 export function labRocketSpread(distance){
@@ -38,6 +38,13 @@ export function planTerrainRocket(level,u,target,error=0){
  const dir=u.team===0?1:-1,shoulder={x:u.x,y:u.y-42},velocity=target.observedVelocity||0;
  const initialAim=Math.max(0,Math.min(level.world.width,target.x));
  const initialImpact=Math.max(0,Math.min(level.world.width,initialAim+error));
+ // CP-02: conservative physical bound before the trajectory search. Allow the
+ // full barrel on both axes and the lowest future terrain point, plus all
+ // possible target travel. This rejects only necessarily impossible shots.
+ const lowest=level.world.baseline-Math.min(...level.terrain.points.map(p=>p[1]));
+ const drop=lowest-shoulder.y+LAB_ROCKET.barrel,disc=LAB_ROCKET.maxSpeed**2+2*LAB_ROCKET.gravity*drop;
+ const upper=LAB_ROCKET.barrel+LAB_ROCKET.maxSpeed*Math.sqrt(Math.max(0,disc))/LAB_ROCKET.gravity;
+ if(disc<0||Math.abs(initialImpact-u.x)>upper+Math.abs(velocity)*LAB_ROCKET.maxFlight+1e-6)return null;
  const start=Math.max(.1,(Math.abs(initialImpact-u.x)-LAB_ROCKET.barrel)/(LAB_ROCKET.maxSpeed+Math.abs(velocity)));
  for(let index=0;;index++){
   const t=start+index*LAB_ROCKET.timeStep;if(t>LAB_ROCKET.maxFlight)return null;

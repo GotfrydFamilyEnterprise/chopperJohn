@@ -1,0 +1,63 @@
+{
+  "secondsLimit": 180,
+  "seedCount": 1,
+  "scope": "Identical explicit blue purchase policy; actual control-input support controller; red AI fully active; no teleporting, damage injection or free purchases. Unfinished is not victory. One policy is not proof no ground-only strategy can win.",
+  "rows": [
+    {
+      "level": "first-assault",
+      "seed": 31,
+      "support": "active",
+      "time": 167.84166666666667,
+      "winner": 0,
+      "finished": true,
+      "shots": 150,
+      "rocketShots": 59,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 1988.641332740395,
+        "y": 330.09338509864375,
+        "vx": 18.729764292398194,
+        "vy": 0.14628426301197062,
+        "ammo": 85,
+        "grounded": false,
+        "phase": "sortie"
+      },
+      "sorties": 1,
+      "purchases": [
+        26,
+        36
+      ],
+      "spent": [
+        825,
+        935
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "living": [
+        15,
+        0
+      ]
+    }
+  ]
+}
