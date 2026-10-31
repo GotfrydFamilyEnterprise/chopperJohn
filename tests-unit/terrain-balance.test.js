@@ -7,7 +7,7 @@ import {SUPPLY_RULES} from '../docs/js/battlefield/economy/supply.js';
 const radiusBurst=(radius,blocked=false)=>{
  const d=balanceLevel();d.scenarios=[{id:'burst',name:'Burst fixture',combat:false,units:[0,20,25,39,40,50].map((offset,i)=>({id:i+1,team:1,type:'rifle',mode:'hold',x:1200+offset})).concat({id:7,team:0,type:'rocket',mode:'hold',x:1200})}];
  if(blocked)d.terrain.points=[[0,0],[1200,0],[1219,19],[1238,0],[2400,0]];
- const sim=createSimulation(d,'burst',{blastRadius:radius});
+ const sim=createSimulation(d,'burst',{blastRadius:radius,damageModel:'individual'});
  sim.projectiles.push({kind:'rocket',team:0,x:1200,y:500,originX:1200,originY:500,vx:100,vy:0,age:0});stepSimulation(sim);return sim;
 };
 test('TL-09 blast comparison changes real damage radius, retains center/falloff/edge/friendly rules',()=>{

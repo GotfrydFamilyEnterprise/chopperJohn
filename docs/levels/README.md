@@ -55,3 +55,7 @@ The clear-air reach readout is an approximate1° angle sweep for this relative v
 ## v0.5 strategic encounters (TL-09)
 
 `battle-lines.json` contains exact300-Supply close/open/cluster/spread battles and220-vs240 mixed/common-budget and220-vs220 control encounters. `battle-hill.json` adds a mixed attack against elevated holding rockets and a both-advance variant; `battle-cover.json` tests a mixed attack across a ridge. All are ordinary schemaVersion1 levels. Radius is a separate experiment control (25/40/50, default40), not a hidden level-data field; changing it resets the paused encounter. The prices shown import shared production rules. Forces are preassembled and obey15 per faction;300 Supply means accumulated purchases, not an opening bank. See `balance-report.html` for measured multi-seed outcomes and limits. Range diagnostics show one representative launcher per faction in multi-unit encounters.
+
+## v0.6 shared splash (TL-10)
+
+Default shared damage uses one distance-weighted, sublinear crowd budget with seeded randomized capped shares. The damage model selector restarts paused and keeps individual damage available; `?damage=individual` selects the baseline and `?damage=shared` selects the new default. Radius remains40 by default. The new matrix is evidence/terrain-balance-results.json; the original committed baseline is archived separately as terrain-balance-individual-results.json. No normal Battlefield or economy rules change.

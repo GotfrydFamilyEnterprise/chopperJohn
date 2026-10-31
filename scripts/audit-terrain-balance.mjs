@@ -9,7 +9,7 @@ const path='docs/quality/evidence/terrain-balance-results.json',report=JSON.pars
 let replayed=0;
 for(const row of report.runs){
  if(row.outcome!=='timeout'){row.projectilesRemaining=0;continue;}
- const sim=createSimulation(encounterLevel(row.case,row.seed,row.mirrored),row.case,{blastRadius:row.radius});stepSimulation(sim,Math.ceil(report.secondsLimit/LAB_STEP));
+ const sim=createSimulation(encounterLevel(row.case,row.seed,row.mirrored),row.case,{blastRadius:row.radius,damageModel:report.damageModel==='per-soldier-linear-falloff'?'individual':report.damageModel});stepSimulation(sim,Math.ceil(report.secondsLimit/LAB_STEP));
  assert.equal(sim.result,null);assert.equal(sim.time,row.elapsed);const attack=row.mirrored?1:0;
  assert.deepEqual([attack,1-attack].map(t=>forceEconomics(sim,t)),row.forces);
  assert.deepEqual([attack,1-attack].map(t=>sim.units.filter(u=>u.team===t).reduce((n,u)=>n+u.hp,0)),row.hp);

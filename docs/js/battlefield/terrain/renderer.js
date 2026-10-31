@@ -1,6 +1,6 @@
-import {projectileTail} from './ballistics.js?v=0.5.0';
-import {groundY,visible} from './heightfield.js?v=0.5.0';
-import {eye} from './simulation.js?v=0.5.0';
+import {projectileTail} from './ballistics.js?v=0.6.0';
+import {groundY,visible} from './heightfield.js?v=0.6.0';
+import {eye} from './simulation.js?v=0.6.0';
 import {gait,TEAM_COLORS} from '../units/soldierCommon.js';
 function line(ctx,a,b){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
 function soldier(ctx,u,level){

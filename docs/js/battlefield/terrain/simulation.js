@@ -1,7 +1,8 @@
-import {checkedBlastRadius} from './balance.js?v=0.5.0';
-import {LAB_ROCKET,labRocketSpread,planTerrainRocket,rocketReachAtDrop} from './ballistics.js?v=0.5.0';
-import {validateLevel} from './level.js?v=0.5.0';
-import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=0.5.0';
+import {allocateSplash,checkedDamageModel} from './splash.js?v=0.6.0';
+import {checkedBlastRadius} from './balance.js?v=0.6.0';
+import {LAB_ROCKET,labRocketSpread,planTerrainRocket,rocketReachAtDrop} from './ballistics.js?v=0.6.0';
+import {validateLevel} from './level.js?v=0.6.0';
+import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=0.6.0';
 import {createSoldier} from '../units/soldierCommon.js';
 import {WEAPONS,createRandom,applyDamage} from '../combat/weapons.js?v=1.3.1';
 export const LAB_STEP=1/120;
@@ -9,7 +10,7 @@ export const eye=u=>({x:u.x,y:u.y-40});
 export function createSimulation(data,scenarioId,options={}){
  const level=validateLevel(data),scenario=level.scenarios.find(s=>s.id===scenarioId);
  if(!scenario)throw new Error('Unknown scenario');
- return {level,scenarioId,blastRadius:checkedBlastRadius(options.blastRadius),time:0,tick:0,result:null,random:createRandom(level.seed),units:scenario.units.map(u=>({...createSoldier(u.id,u.team,u.type,u.x,groundY(level,u.x)),mode:u.mode,shotsFired:0,firstShotAt:null,damageTaken:0})),projectiles:[],effects:[],events:[],stats:{rifleShots:0,rocketShots:0,terrainHits:0,hits:0}};
+ return {level,scenarioId,blastRadius:checkedBlastRadius(options.blastRadius),damageModel:checkedDamageModel(options.damageModel),time:0,tick:0,result:null,random:createRandom(level.seed),units:scenario.units.map(u=>({...createSoldier(u.id,u.team,u.type,u.x,groundY(level,u.x)),mode:u.mode,shotsFired:0,firstShotAt:null,damageTaken:0})),projectiles:[],effects:[],events:[],stats:{rifleShots:0,rocketShots:0,terrainHits:0,hits:0}};
 }
 export function targetFor(sim,u){
  if(!sim.level.scenarios.find(s=>s.id===sim.scenarioId).combat)return null;
@@ -31,14 +32,11 @@ function unitContact(a,b,u){
  return low;
 }
 function detonate(sim,p,point){
- sim.stats.terrainHits++;sim.effects.push({...point,age:0,kind:'blast',radius:sim.blastRadius});event(sim,{type:'rocketImpact',x:point.x,y:point.y});
- for(const u of sim.units)if(u.hp>0&&u.team!==p.team){
-  const body={x:u.x,y:u.y-20},distance=Math.hypot(u.x-point.x,u.y-point.y);
-  // Surface burst starts just above soil, and hills occlude splash too.
-  if(distance<sim.blastRadius&&visible(sim.level,{x:point.x,y:point.y-.1},body)){
-   const damage=damageUnit(u,WEAPONS.blastDamage*(1-distance/sim.blastRadius));sim.stats.hits++;event(sim,{type:'damage',weapon:'rocket',...damage});
-  }
- }
+ const candidates=sim.units.filter(u=>u.hp>0&&u.team!==p.team).map(u=>({u,distance:Math.hypot(u.x-point.x,u.y-point.y)})).filter(({u,distance})=>distance<sim.blastRadius&&visible(sim.level,{x:point.x,y:point.y-.1},{x:u.x,y:u.y-20}));
+ const allocation=allocateSplash(candidates.map(({u,distance})=>({id:u.id,falloff:1-distance/sim.blastRadius})),sim.random,sim.damageModel);
+ sim.stats.terrainHits++;sim.effects.push({...point,age:0,kind:'blast',radius:sim.blastRadius,budget:allocation.budget});event(sim,{type:'rocketImpact',x:point.x,y:point.y,budget:allocation.budget,damageModel:sim.damageModel});
+ // Allocate before applying HP: overkill is discarded, never smartly redirected.
+ for(const share of allocation.shares){const u=sim.units.find(u=>u.id===share.id);if(share.amount>0){const damage=damageUnit(u,share.amount);sim.stats.hits++;event(sim,{type:'damage',weapon:'rocket',allocated:share.amount,...damage});}}
 }
 export function stepSimulation(sim,count=1){
  if(!Number.isInteger(count)||count<0||count>24000)throw new Error('Invalid step count');
@@ -101,4 +99,4 @@ export function stepSimulation(sim,count=1){
  }
  return sim;
 }
-export function snapshot(sim){return {levelId:sim.level.id,scenarioId:sim.scenarioId,blastRadius:sim.blastRadius,tick:sim.tick,time:sim.time,result:sim.result?{...sim.result}:null,randomState:sim.random.state(),units:structuredClone(sim.units),projectiles:structuredClone(sim.projectiles),effects:structuredClone(sim.effects),events:structuredClone(sim.events),stats:{...sim.stats}};}
+export function snapshot(sim){return {levelId:sim.level.id,scenarioId:sim.scenarioId,blastRadius:sim.blastRadius,damageModel:sim.damageModel,tick:sim.tick,time:sim.time,result:sim.result?{...sim.result}:null,randomState:sim.random.state(),units:structuredClone(sim.units),projectiles:structuredClone(sim.projectiles),effects:structuredClone(sim.effects),events:structuredClone(sim.events),stats:{...sim.stats}};}
