@@ -1,0 +1,23 @@
+
+Running 9 tests using 1 worker
+
+(node:69531) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:69531) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/takeover.spec.js:15:28 › CAP-01/03/04 faction0 actual empty-base rocket breach, physical rifle takeover and rebuild (965ms)
+  ✓  2 tests/takeover.spec.js:15:28 › CAP-01/03/04 faction1 actual empty-base rocket breach, physical rifle takeover and rebuild (999ms)
+  ✓  3 tests/takeover.spec.js:110:1 › CAP-03 contest pauses, rifle loss resets, rockets cannot capture; intact base blocks (346ms)
+  ✓  4 tests/takeover.spec.js:151:1 › CAP-01/02 real rifle/helicopter bullets never damage walls; only stationed breach removes cover (341ms)
+  ✓  5 tests/takeover.spec.js:212:28 › CAP-05 headquarters capture ends game faction0, freezes all clocks, fresh restart (639ms)
+  ✓  6 tests/takeover.spec.js:212:28 › CAP-05 headquarters capture ends game faction1, freezes all clocks, fresh restart (761ms)
+  ✓  7 tests/takeover.spec.js:262:1 › CAP-05 simultaneous HQ draw, result dropdown exit and tutorial remains safe (542ms)
+  ✓  8 tests/takeover.spec.js:286:1 › CAP-06 owner/capture/zero-progress contested/rebuild status is visible in-world and dropdown (716ms)
+  ✓  9 tests/takeover.spec.js:331:1 › CAP-01/04/06 FOB survives nineteen hits, twentieth breaches; HQ still six, readable mobile capacity (519ms)
+
+  9 passed (7.8s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

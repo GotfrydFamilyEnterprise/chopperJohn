@@ -1,16 +1,17 @@
-import {chooseRocketTarget} from './weapons.js';
+import {chooseAssaultRocketTarget} from '../bases/assaultOrders.js';
+import {chooseRocketTarget} from './weapons.js?v=1.3.1';
 import {planAirShot} from './airInterception.js';
 // AA-GROUP: groups are same-faction rocket soldiers linked by <=240 world units.
 // With both threats present, target2/3 air and1/3 ground, rounded to nearest,
 // reserving at least one ground-capable soldier. Capability always beats quota.
 export const ROCKET_ALLOCATION=Object.freeze({airShare:2/3,clusterGap:240});
-export function allocateRocketTargets(units,helicopter,{stagger=false}={}){
+export function allocateRocketTargets(units,helicopter,{stagger=false,bases=[]}={}){
  const choices=new Map();
  for(const team of [0,1]){
   const rockets=units.filter(u=>u.hp>0&&u.type==='rocket'&&u.team===team).sort((a,b)=>a.x-b.x||a.id-b.id),groups=[];
   for(const u of rockets){const group=groups.at(-1);if(!group||u.x-group.at(-1).x>240)groups.push([u]);else group.push(u);}
   for(const group of groups){
-   const entries=group.map(unit=>({unit,air:helicopter?planAirShot(unit,helicopter):null,ground:chooseRocketTarget(unit,units)})).filter(e=>e.air||e.ground);
+   const entries=group.map(unit=>({unit,air:helicopter?planAirShot(unit,helicopter):null,ground:bases.length?chooseAssaultRocketTarget(unit,units,bases):chooseRocketTarget(unit,units)})).filter(e=>e.air||e.ground);
    const air=entries.filter(e=>e.air),ground=entries.filter(e=>e.ground),roles=new Map();
    if(!air.length)for(const e of entries)roles.set(e.unit.id,'ground');
    else if(!ground.length)for(const e of entries)roles.set(e.unit.id,'air');
