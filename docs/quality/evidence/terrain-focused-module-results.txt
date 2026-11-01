@@ -1,0 +1,16 @@
+✔ TL-01 shipped JSON levels round trip, clone, malformed geometry/units/version rejected (5.851347ms)
+✔ TL-01 network failures and non-JSON data fail explicitly (0.799158ms)
+✔ TL-02 surface interpolation/clamping and constant surface speed through corners (57.639071ms)
+✔ TL-03 swept collision blocks both directions, vertical/tangent/start-underground cases (2.992243ms)
+✔ TL-03 ridge conceals while valley exposes: real shots/damage, enemy-only filters (29.146932ms)
+✔ TL-03 physical bullets stop on slope when eyes visible but muzzle occluded (11.927916ms)
+✔ TL-04 terrain-aware rockets launch/impact without homing, scatter, elevated endpoint and cover (43.036835ms)
+✔ TL-05 same seed and steps reproduce all states, fresh reset discards old damage/projectiles (40.284977ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 216.695379

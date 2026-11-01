@@ -44,3 +44,15 @@ User approved rocket-only breaching, rifle-only physical occupation,6 defense hi
 
 ## V1.3.1 outpost durability
 After winning the takeover preview, user requested significantly more rocket hits for outposts. Tune both FOBs to20 hits (from6); HQs remain6. Rebuilding/reset/display use the appropriate base capacity. Capture timing, damage to infantry and economy stay unchanged.
+
+## Terrain Lab exploration
+User requested JSON-defined levels and separate exploration of hills, valleys and bumps, then explicitly selected all three experiments together: slope walking, rifle visibility/bullet cover, ballistic rockets over terrain. The lab is a separate page with pure data/geometry/simulation modules. Its experimental rocket knowledge of obscured ground positions is labeled, not silently applied to normal AI. No deliberate cover-seeking AI is introduced yet; first follow-up proposed is riflemen advancing to and holding at a useful crest firing position, followed by measured cover seeking.
+
+## Terrain Lab mixed encounters
+User requested uneven approach timing and real walk/fire exchanges when one soldier is on top and the other moving, including reversed roles. Add fixed JSON scenario starts/orders and observed outcomes, not autonomous cover selection or automatic height damage buffs. All movement precedes weapon acquisition for the tick. Declare outcome only after return projectiles settle; expose slow playback and fine stepping for inspection.
+
+## Terrain Lab v0.3
+User requested angled bullet appearance, uneven rocketeer approaches, increased range and optimal rocket trajectories. User explicitly selected800 units. Apply this exploration to the separate lab: fix tracer orientation, preserve shot scatter, use a bounded shortest-clear-flight search and add longer terrain/mixed encounters. Do not silently alter the live main-game600-range model. Solver speed520,20ms search,8–80° and2-unit clearance are explicit testable starting choices under implementation authorization.
+
+## Terrain Lab v0.4 relative height instead of a distance cap
+User supersedes the fixed800 rule: use height difference between weapon and target. Keep approximate800 equal-ground baseline by calibrating constant launch power413.6, rather than retaining520 power and silently increasing level-ground reach. No absolute-altitude bonus, height damage boost or arbitrary linear range multiplier. Actual ballistic feasibility stays authoritative. Clear-air range is approximate diagnostics only; mirrored860-unit presets expose the difference.

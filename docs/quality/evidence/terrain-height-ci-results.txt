@@ -1,0 +1,48 @@
+GitHub Browser acceptance run40791916724, commit b9162bb564865699eba60daef6107626746fc7a9\n2026-10-29T00:07:14.5764765Z # tests 3
+2026-10-29T00:07:14.5779118Z # pass 3
+2026-10-29T00:07:14.5779540Z # fail 0
+2026-10-29T00:07:14.6882322Z # tests 10
+2026-10-29T00:07:14.6882768Z # pass 10
+2026-10-29T00:07:14.6882980Z # fail 0
+2026-10-29T00:07:14.7517121Z # tests 6
+2026-10-29T00:07:14.7518156Z # pass 6
+2026-10-29T00:07:14.7519119Z # fail 0
+2026-10-29T00:07:14.8088226Z # tests 7
+2026-10-29T00:07:14.8089802Z # pass 7
+2026-10-29T00:07:14.8090255Z # fail 0
+2026-10-29T00:07:15.0534852Z # tests 8
+2026-10-29T00:07:15.0535265Z # pass 8
+2026-10-29T00:07:15.0535474Z # fail 0
+2026-10-29T00:07:15.1209708Z # tests 4
+2026-10-29T00:07:15.1210961Z # pass 4
+2026-10-29T00:07:15.1211543Z # fail 0
+2026-10-29T00:07:15.1775683Z # tests 2
+2026-10-29T00:07:15.1778088Z # pass 2
+2026-10-29T00:07:15.1779317Z # fail 0
+2026-10-29T00:07:15.3305092Z # tests 33
+2026-10-29T00:07:15.3305472Z # pass 33
+2026-10-29T00:07:15.3305658Z # fail 0
+2026-10-29T00:07:15.4094756Z # tests 4
+2026-10-29T00:07:15.4095672Z # pass 4
+2026-10-29T00:07:15.4096242Z # fail 0
+2026-10-29T00:07:15.4981836Z # tests 7
+2026-10-29T00:07:15.4982212Z # pass 7
+2026-10-29T00:07:15.4982392Z # fail 0
+2026-10-29T00:07:15.5521803Z # tests 4
+2026-10-29T00:07:15.5523111Z # pass 4
+2026-10-29T00:07:15.5523700Z # fail 0
+2026-10-29T00:07:15.6233616Z # tests 10
+2026-10-29T00:07:15.6234233Z # pass 10
+2026-10-29T00:07:15.6234797Z # fail 0
+2026-10-29T00:07:18.4817432Z # Subtest: TL-08 relative height changes reach in both mirrored directions, no hard800 cutoff
+2026-10-29T00:07:18.4831970Z ok 21 - TL-08 relative height changes reach in both mirrored directions, no hard800 cutoff
+2026-10-29T00:07:18.4834767Z # Subtest: TL-08 clear-air estimate is monotonic in drop and scatter keeps widening beyond800
+2026-10-29T00:07:18.4836038Z ok 22 - TL-08 clear-air estimate is monotonic in drop and scatter keeps widening beyond800
+2026-10-29T00:07:18.4838958Z # Subtest: TL-08 vertical translation alone preserves trajectory and target eligibility
+2026-10-29T00:07:18.4840226Z ok 23 - TL-08 vertical translation alone preserves trajectory and target eligibility
+2026-10-29T00:07:18.4843064Z # Subtest: TL-08 diagnostics and actual shots remain deterministic through height advantage replay
+2026-10-29T00:07:18.4844960Z ok 24 - TL-08 diagnostics and actual shots remain deterministic through height advantage replay
+2026-10-29T00:07:18.4847951Z # tests 24
+2026-10-29T00:07:18.4848922Z # pass 24
+2026-10-29T00:07:18.4849278Z # fail 0
+2026-10-29T00:08:43.5787693Z   102 passed (1.1m)\n

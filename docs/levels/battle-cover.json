@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "battle-cover",
+  "name": "Battle cover",
+  "seed": 1,
+  "description": "Preassembled ground encounters using real unit prices. No income, reinforcement, FOB or helicopter simulation.",
+  "world": {
+    "width": 2400,
+    "baseline": 500
+  },
+  "terrain": {
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        1000,
+        0
+      ],
+      [
+        1200,
+        180
+      ],
+      [
+        1400,
+        0
+      ],
+      [
+        2400,
+        0
+      ]
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "reverse",
+      "name": "Reverse-slope cover",
+      "description": "240 Supply budget. Same mixed attack and holding rockets, with a hill between them.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 875,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 0,
+          "type": "rifle",
+          "x": 840,
+          "mode": "walk"
+        },
+        {
+          "id": 3,
+          "team": 0,
+          "type": "rifle",
+          "x": 805,
+          "mode": "walk"
+        },
+        {
+          "id": 4,
+          "team": 0,
+          "type": "rifle",
+          "x": 770,
+          "mode": "walk"
+        },
+        {
+          "id": 5,
+          "team": 0,
+          "type": "rocket",
+          "x": 735,
+          "mode": "walk"
+        },
+        {
+          "id": 6,
+          "team": 0,
+          "type": "rocket",
+          "x": 700,
+          "mode": "walk"
+        },
+        {
+          "id": 7,
+          "team": 1,
+          "type": "rocket",
+          "x": 1525,
+          "mode": "hold"
+        },
+        {
+          "id": 8,
+          "team": 1,
+          "type": "rocket",
+          "x": 1560,
+          "mode": "hold"
+        },
+        {
+          "id": 9,
+          "team": 1,
+          "type": "rocket",
+          "x": 1595,
+          "mode": "hold"
+        },
+        {
+          "id": 10,
+          "team": 1,
+          "type": "rocket",
+          "x": 1630,
+          "mode": "hold"
+        }
+      ]
+    }
+  ]
+}

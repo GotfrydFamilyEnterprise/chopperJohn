@@ -1,0 +1,703 @@
+{
+  "schemaVersion": 1,
+  "id": "battle-lines",
+  "name": "Battle lines",
+  "seed": 1,
+  "description": "Preassembled ground encounters using real unit prices. No income, reinforcement, FOB or helicopter simulation.",
+  "world": {
+    "width": 2400,
+    "baseline": 500
+  },
+  "terrain": {
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        2400,
+        0
+      ]
+    ]
+  },
+  "scenarios": [
+    {
+      "id": "close",
+      "name": "Close rush",
+      "description": "300 Supply each. Leading riflemen start inside the rocket minimum range.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 1105,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 0,
+          "type": "rifle",
+          "x": 1087,
+          "mode": "walk"
+        },
+        {
+          "id": 3,
+          "team": 0,
+          "type": "rifle",
+          "x": 1069,
+          "mode": "walk"
+        },
+        {
+          "id": 4,
+          "team": 0,
+          "type": "rifle",
+          "x": 1051,
+          "mode": "walk"
+        },
+        {
+          "id": 5,
+          "team": 0,
+          "type": "rifle",
+          "x": 1033,
+          "mode": "walk"
+        },
+        {
+          "id": 6,
+          "team": 0,
+          "type": "rifle",
+          "x": 1015,
+          "mode": "walk"
+        },
+        {
+          "id": 7,
+          "team": 0,
+          "type": "rifle",
+          "x": 997,
+          "mode": "walk"
+        },
+        {
+          "id": 8,
+          "team": 0,
+          "type": "rifle",
+          "x": 979,
+          "mode": "walk"
+        },
+        {
+          "id": 9,
+          "team": 0,
+          "type": "rifle",
+          "x": 961,
+          "mode": "walk"
+        },
+        {
+          "id": 10,
+          "team": 0,
+          "type": "rifle",
+          "x": 943,
+          "mode": "walk"
+        },
+        {
+          "id": 11,
+          "team": 0,
+          "type": "rifle",
+          "x": 925,
+          "mode": "walk"
+        },
+        {
+          "id": 12,
+          "team": 0,
+          "type": "rifle",
+          "x": 907,
+          "mode": "walk"
+        },
+        {
+          "id": 13,
+          "team": 1,
+          "type": "rocket",
+          "x": 1295,
+          "mode": "walk"
+        },
+        {
+          "id": 14,
+          "team": 1,
+          "type": "rocket",
+          "x": 1313,
+          "mode": "walk"
+        },
+        {
+          "id": 15,
+          "team": 1,
+          "type": "rocket",
+          "x": 1331,
+          "mode": "walk"
+        },
+        {
+          "id": 16,
+          "team": 1,
+          "type": "rocket",
+          "x": 1349,
+          "mode": "walk"
+        },
+        {
+          "id": 17,
+          "team": 1,
+          "type": "rocket",
+          "x": 1367,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "long",
+      "name": "Open approach",
+      "description": "300 Supply each. Riflemen must cross open ground under rocket fire.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 875,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 0,
+          "type": "rifle",
+          "x": 857,
+          "mode": "walk"
+        },
+        {
+          "id": 3,
+          "team": 0,
+          "type": "rifle",
+          "x": 839,
+          "mode": "walk"
+        },
+        {
+          "id": 4,
+          "team": 0,
+          "type": "rifle",
+          "x": 821,
+          "mode": "walk"
+        },
+        {
+          "id": 5,
+          "team": 0,
+          "type": "rifle",
+          "x": 803,
+          "mode": "walk"
+        },
+        {
+          "id": 6,
+          "team": 0,
+          "type": "rifle",
+          "x": 785,
+          "mode": "walk"
+        },
+        {
+          "id": 7,
+          "team": 0,
+          "type": "rifle",
+          "x": 767,
+          "mode": "walk"
+        },
+        {
+          "id": 8,
+          "team": 0,
+          "type": "rifle",
+          "x": 749,
+          "mode": "walk"
+        },
+        {
+          "id": 9,
+          "team": 0,
+          "type": "rifle",
+          "x": 731,
+          "mode": "walk"
+        },
+        {
+          "id": 10,
+          "team": 0,
+          "type": "rifle",
+          "x": 713,
+          "mode": "walk"
+        },
+        {
+          "id": 11,
+          "team": 0,
+          "type": "rifle",
+          "x": 695,
+          "mode": "walk"
+        },
+        {
+          "id": 12,
+          "team": 0,
+          "type": "rifle",
+          "x": 677,
+          "mode": "walk"
+        },
+        {
+          "id": 13,
+          "team": 1,
+          "type": "rocket",
+          "x": 1525,
+          "mode": "walk"
+        },
+        {
+          "id": 14,
+          "team": 1,
+          "type": "rocket",
+          "x": 1543,
+          "mode": "walk"
+        },
+        {
+          "id": 15,
+          "team": 1,
+          "type": "rocket",
+          "x": 1561,
+          "mode": "walk"
+        },
+        {
+          "id": 16,
+          "team": 1,
+          "type": "rocket",
+          "x": 1579,
+          "mode": "walk"
+        },
+        {
+          "id": 17,
+          "team": 1,
+          "type": "rocket",
+          "x": 1597,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "screen",
+      "name": "Mixed screen",
+      "description": "240 Supply budget: Blue 4 rifles + 2 rockets (220, 20 unspent); Red 4 rockets (240).",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 875,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 0,
+          "type": "rifle",
+          "x": 840,
+          "mode": "walk"
+        },
+        {
+          "id": 3,
+          "team": 0,
+          "type": "rifle",
+          "x": 805,
+          "mode": "walk"
+        },
+        {
+          "id": 4,
+          "team": 0,
+          "type": "rifle",
+          "x": 770,
+          "mode": "walk"
+        },
+        {
+          "id": 5,
+          "team": 0,
+          "type": "rocket",
+          "x": 735,
+          "mode": "walk"
+        },
+        {
+          "id": 6,
+          "team": 0,
+          "type": "rocket",
+          "x": 700,
+          "mode": "walk"
+        },
+        {
+          "id": 7,
+          "team": 1,
+          "type": "rocket",
+          "x": 1525,
+          "mode": "walk"
+        },
+        {
+          "id": 8,
+          "team": 1,
+          "type": "rocket",
+          "x": 1560,
+          "mode": "walk"
+        },
+        {
+          "id": 9,
+          "team": 1,
+          "type": "rocket",
+          "x": 1595,
+          "mode": "walk"
+        },
+        {
+          "id": 10,
+          "team": 1,
+          "type": "rocket",
+          "x": 1630,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "cluster",
+      "name": "Clustered advance",
+      "description": "300 Supply each. Closely packed riflemen approach a rocket force.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 875,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 0,
+          "type": "rifle",
+          "x": 867,
+          "mode": "walk"
+        },
+        {
+          "id": 3,
+          "team": 0,
+          "type": "rifle",
+          "x": 859,
+          "mode": "walk"
+        },
+        {
+          "id": 4,
+          "team": 0,
+          "type": "rifle",
+          "x": 851,
+          "mode": "walk"
+        },
+        {
+          "id": 5,
+          "team": 0,
+          "type": "rifle",
+          "x": 843,
+          "mode": "walk"
+        },
+        {
+          "id": 6,
+          "team": 0,
+          "type": "rifle",
+          "x": 835,
+          "mode": "walk"
+        },
+        {
+          "id": 7,
+          "team": 0,
+          "type": "rifle",
+          "x": 827,
+          "mode": "walk"
+        },
+        {
+          "id": 8,
+          "team": 0,
+          "type": "rifle",
+          "x": 819,
+          "mode": "walk"
+        },
+        {
+          "id": 9,
+          "team": 0,
+          "type": "rifle",
+          "x": 811,
+          "mode": "walk"
+        },
+        {
+          "id": 10,
+          "team": 0,
+          "type": "rifle",
+          "x": 803,
+          "mode": "walk"
+        },
+        {
+          "id": 11,
+          "team": 0,
+          "type": "rifle",
+          "x": 795,
+          "mode": "walk"
+        },
+        {
+          "id": 12,
+          "team": 0,
+          "type": "rifle",
+          "x": 787,
+          "mode": "walk"
+        },
+        {
+          "id": 13,
+          "team": 1,
+          "type": "rocket",
+          "x": 1525,
+          "mode": "walk"
+        },
+        {
+          "id": 14,
+          "team": 1,
+          "type": "rocket",
+          "x": 1533,
+          "mode": "walk"
+        },
+        {
+          "id": 15,
+          "team": 1,
+          "type": "rocket",
+          "x": 1541,
+          "mode": "walk"
+        },
+        {
+          "id": 16,
+          "team": 1,
+          "type": "rocket",
+          "x": 1549,
+          "mode": "walk"
+        },
+        {
+          "id": 17,
+          "team": 1,
+          "type": "rocket",
+          "x": 1557,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "spread",
+      "name": "Spread advance",
+      "description": "300 Supply each. Same troops with wider spacing; compare Clustered advance.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 875,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 0,
+          "type": "rifle",
+          "x": 830,
+          "mode": "walk"
+        },
+        {
+          "id": 3,
+          "team": 0,
+          "type": "rifle",
+          "x": 785,
+          "mode": "walk"
+        },
+        {
+          "id": 4,
+          "team": 0,
+          "type": "rifle",
+          "x": 740,
+          "mode": "walk"
+        },
+        {
+          "id": 5,
+          "team": 0,
+          "type": "rifle",
+          "x": 695,
+          "mode": "walk"
+        },
+        {
+          "id": 6,
+          "team": 0,
+          "type": "rifle",
+          "x": 650,
+          "mode": "walk"
+        },
+        {
+          "id": 7,
+          "team": 0,
+          "type": "rifle",
+          "x": 605,
+          "mode": "walk"
+        },
+        {
+          "id": 8,
+          "team": 0,
+          "type": "rifle",
+          "x": 560,
+          "mode": "walk"
+        },
+        {
+          "id": 9,
+          "team": 0,
+          "type": "rifle",
+          "x": 515,
+          "mode": "walk"
+        },
+        {
+          "id": 10,
+          "team": 0,
+          "type": "rifle",
+          "x": 470,
+          "mode": "walk"
+        },
+        {
+          "id": 11,
+          "team": 0,
+          "type": "rifle",
+          "x": 425,
+          "mode": "walk"
+        },
+        {
+          "id": 12,
+          "team": 0,
+          "type": "rifle",
+          "x": 380,
+          "mode": "walk"
+        },
+        {
+          "id": 13,
+          "team": 1,
+          "type": "rocket",
+          "x": 1525,
+          "mode": "walk"
+        },
+        {
+          "id": 14,
+          "team": 1,
+          "type": "rocket",
+          "x": 1570,
+          "mode": "walk"
+        },
+        {
+          "id": 15,
+          "team": 1,
+          "type": "rocket",
+          "x": 1615,
+          "mode": "walk"
+        },
+        {
+          "id": 16,
+          "team": 1,
+          "type": "rocket",
+          "x": 1660,
+          "mode": "walk"
+        },
+        {
+          "id": 17,
+          "team": 1,
+          "type": "rocket",
+          "x": 1705,
+          "mode": "walk"
+        }
+      ]
+    },
+    {
+      "id": "mirror",
+      "name": "Identical mixed forces",
+      "description": "220 Supply each: 4 rifles + 2 rockets. A faction-bias control, not a target win rate.",
+      "combat": true,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 875,
+          "mode": "walk"
+        },
+        {
+          "id": 2,
+          "team": 0,
+          "type": "rifle",
+          "x": 840,
+          "mode": "walk"
+        },
+        {
+          "id": 3,
+          "team": 0,
+          "type": "rifle",
+          "x": 805,
+          "mode": "walk"
+        },
+        {
+          "id": 4,
+          "team": 0,
+          "type": "rifle",
+          "x": 770,
+          "mode": "walk"
+        },
+        {
+          "id": 5,
+          "team": 0,
+          "type": "rocket",
+          "x": 735,
+          "mode": "walk"
+        },
+        {
+          "id": 6,
+          "team": 0,
+          "type": "rocket",
+          "x": 700,
+          "mode": "walk"
+        },
+        {
+          "id": 7,
+          "team": 1,
+          "type": "rifle",
+          "x": 1525,
+          "mode": "walk"
+        },
+        {
+          "id": 8,
+          "team": 1,
+          "type": "rifle",
+          "x": 1560,
+          "mode": "walk"
+        },
+        {
+          "id": 9,
+          "team": 1,
+          "type": "rifle",
+          "x": 1595,
+          "mode": "walk"
+        },
+        {
+          "id": 10,
+          "team": 1,
+          "type": "rifle",
+          "x": 1630,
+          "mode": "walk"
+        },
+        {
+          "id": 11,
+          "team": 1,
+          "type": "rocket",
+          "x": 1665,
+          "mode": "walk"
+        },
+        {
+          "id": 12,
+          "team": 1,
+          "type": "rocket",
+          "x": 1700,
+          "mode": "walk"
+        }
+      ]
+    }
+  ]
+}

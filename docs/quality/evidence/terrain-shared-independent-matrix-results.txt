@@ -1,0 +1,9 @@
+PASS archived baseline exact JSON equality to7668503;576 unique rows;24 aggregates;288 mirrored pairs (HP tolerance1e-8);timeout/projectile/cost invariants;all report percentages/play links/baseline counts
+close {'attackWins': 12, 'defenseWins': 0, 'mutual': 0, 'timeouts': 0}
+long {'attackWins': 11, 'defenseWins': 1, 'mutual': 0, 'timeouts': 0}
+screen {'attackWins': 2, 'defenseWins': 10, 'mutual': 0, 'timeouts': 0}
+cluster {'attackWins': 8, 'defenseWins': 2, 'mutual': 2, 'timeouts': 0}
+spread {'attackWins': 12, 'defenseWins': 0, 'mutual': 0, 'timeouts': 0}
+high {'attackWins': 0, 'defenseWins': 12, 'mutual': 0, 'timeouts': 0}
+reverse {'attackWins': 1, 'defenseWins': 3, 'mutual': 0, 'timeouts': 8}
+mirror {'attackWins': 6, 'defenseWins': 6, 'mutual': 0, 'timeouts': 0}

@@ -1,0 +1,9 @@
+PASS 20,000 independent variable-count/cap/budget/permutation cases
+means 0.7071085962542997,0.7072860227733417,0.7070798361493377,0.7074449830049783,0.7073561043004609,0.7063220517488412,0.7065737851101684,0.7076828701509535
+PASS 100,000 eight-way randomized allocations unbiased across ID; visible variance
+PASS actual dead/friendly/edge/outside exclusion preserves same RNG and allocations
+PASS actual terrain-blocked unit does not dilute centered enemy or consume RNG
+PASS overkill has identical allocated shares and RNG to full-HP impact
+PASS weak combined fringe preserves exact cap damage and RNG
+PASS individual mode exactly preserves old simulator outcomes/RNG in 8 cases after 20 seconds
+7 independent probe groups PASS

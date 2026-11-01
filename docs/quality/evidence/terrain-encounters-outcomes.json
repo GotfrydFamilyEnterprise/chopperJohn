@@ -1,0 +1,2362 @@
+[
+  {
+    "level": "ridge",
+    "scenario": "crest-red",
+    "initial": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 220,
+        "mode": "walk"
+      },
+      {
+        "id": 2,
+        "team": 1,
+        "type": "rifle",
+        "x": 600,
+        "mode": "hold"
+      }
+    ],
+    "final": {
+      "levelId": "ridge",
+      "scenarioId": "crest-red",
+      "tick": 441,
+      "time": 3.675,
+      "result": {
+        "winner": null,
+        "time": 3.675
+      },
+      "randomState": 31,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 367.78328771254576,
+          "y": 497.4595303267792,
+          "phase": 0.6687110843760453,
+          "velocity": 47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": 19.54160300487274,
+          "hp": 0,
+          "fireCooldown": 0.06166666666666651,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 3,
+          "firstShotAt": 2.7666666666666666,
+          "damageTaken": 3,
+          "rifleAimAngle": -0.5600193288790665
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 600,
+          "y": 350,
+          "phase": 0.62,
+          "velocity": -47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": 0,
+          "hp": 0,
+          "fireCooldown": 0.06166666666666651,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "hold",
+          "shotsFired": 3,
+          "firstShotAt": 2.7666666666666666,
+          "damageTaken": 3,
+          "rifleAimAngle": 2.5506047980558497
+        }
+      ],
+      "projectiles": [],
+      "events": [
+        {
+          "tick": 332,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 350.032998316453,
+          "y": 499.99528595479245
+        },
+        {
+          "tick": 332,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 600,
+          "y": 350
+        },
+        {
+          "tick": 364,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 365,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 371,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 356.38401929303666,
+          "y": 499.08799724385193
+        },
+        {
+          "tick": 371,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 600,
+          "y": 350
+        },
+        {
+          "tick": 403,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 403,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 410,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 362.7350402696203,
+          "y": 498.1807085329114
+        },
+        {
+          "tick": 410,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 600,
+          "y": 350
+        },
+        {
+          "tick": 441,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 0
+        },
+        {
+          "tick": 441,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 0
+        }
+      ],
+      "stats": {
+        "rifleShots": 6,
+        "rocketShots": 0,
+        "terrainHits": 0,
+        "hits": 6
+      }
+    }
+  },
+  {
+    "level": "ridge",
+    "scenario": "crest-blue",
+    "initial": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 600,
+        "mode": "hold"
+      },
+      {
+        "id": 2,
+        "team": 1,
+        "type": "rifle",
+        "x": 980,
+        "mode": "walk"
+      }
+    ],
+    "final": {
+      "levelId": "ridge",
+      "scenarioId": "crest-blue",
+      "tick": 441,
+      "time": 3.675,
+      "result": {
+        "winner": null,
+        "time": 3.675
+      },
+      "randomState": 31,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 600,
+          "y": 350,
+          "phase": 0.31,
+          "velocity": 47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": 0,
+          "hp": 0,
+          "fireCooldown": 0.06166666666666651,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "hold",
+          "shotsFired": 3,
+          "firstShotAt": 2.7666666666666666,
+          "damageTaken": 3,
+          "rifleAimAngle": 0.5909878555339394
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 832.2167122874569,
+          "y": 497.45953032677954,
+          "phase": 0.978711084375989,
+          "velocity": -47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": -19.54160300487274,
+          "hp": 0,
+          "fireCooldown": 0.06166666666666651,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 3,
+          "firstShotAt": 2.7666666666666666,
+          "damageTaken": 3,
+          "rifleAimAngle": -2.581573324710731
+        }
+      ],
+      "projectiles": [],
+      "events": [
+        {
+          "tick": 332,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 600,
+          "y": 350
+        },
+        {
+          "tick": 332,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 849.9670016835496,
+          "y": 499.9952859547928
+        },
+        {
+          "tick": 364,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 365,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 371,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 600,
+          "y": 350
+        },
+        {
+          "tick": 371,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 843.615980706966,
+          "y": 499.08799724385227
+        },
+        {
+          "tick": 403,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 403,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 410,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 600,
+          "y": 350
+        },
+        {
+          "tick": 410,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 837.2649597303823,
+          "y": 498.18070853291175
+        },
+        {
+          "tick": 441,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 0
+        },
+        {
+          "tick": 441,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 0
+        }
+      ],
+      "stats": {
+        "rifleShots": 6,
+        "rocketShots": 0,
+        "terrainHits": 0,
+        "hits": 6
+      }
+    }
+  },
+  {
+    "level": "ridge",
+    "scenario": "approach-blue",
+    "initial": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 350,
+        "mode": "walk"
+      },
+      {
+        "id": 2,
+        "team": 1,
+        "type": "rifle",
+        "x": 980,
+        "mode": "walk"
+      }
+    ],
+    "final": {
+      "levelId": "ridge",
+      "scenarioId": "approach-blue",
+      "tick": 792,
+      "time": 6.6,
+      "result": {
+        "winner": 0,
+        "time": 6.6
+      },
+      "randomState": 31,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 585.3719116747571,
+          "y": 361.37740203074446,
+          "phase": 0.6593616289717521,
+          "velocity": 47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": 15.581812771015393,
+          "hp": 1,
+          "fireCooldown": 0.1949999999999998,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.14166666666666666,
+          "mode": "walk",
+          "shotsFired": 4,
+          "firstShotAt": 5.5,
+          "damageTaken": 2,
+          "rifleAimAngle": 0.5892618877030494
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 717.2438765841678,
+          "y": 441.189681787686,
+          "phase": 0.591730077632551,
+          "velocity": -47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": -15.581812771015393,
+          "hp": 0,
+          "fireCooldown": 0.1949999999999998,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 4,
+          "firstShotAt": 5.5,
+          "damageTaken": 3,
+          "rifleAimAngle": -2.6088051912125483
+        }
+      ],
+      "projectiles": [],
+      "events": [
+        {
+          "tick": 660,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 568.2319176266402,
+          "y": 374.7085085126132
+        },
+        {
+          "tick": 660,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 734.3838706322847,
+          "y": 454.52078826955477
+        },
+        {
+          "tick": 660,
+          "type": "bulletBlocked",
+          "x": 598.8948438874298,
+          "y": 351.2145892073698
+        },
+        {
+          "tick": 671,
+          "type": "bulletBlocked",
+          "x": 623.7809041549842,
+          "y": 368.49625878720997
+        },
+        {
+          "tick": 699,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 573.2960067772202,
+          "y": 370.7697725066065
+        },
+        {
+          "tick": 699,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 729.3197814817047,
+          "y": 450.5820522635481
+        },
+        {
+          "tick": 712,
+          "type": "bulletBlocked",
+          "x": 607.0750439076036,
+          "y": 355.50281192813605
+        },
+        {
+          "tick": 716,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 738,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 578.3600959278002,
+          "y": 366.83103650059985
+        },
+        {
+          "tick": 738,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 724.2556923311247,
+          "y": 446.6433162575414
+        },
+        {
+          "tick": 754,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 754,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 777,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 583.4241850783802,
+          "y": 362.8923004945932
+        },
+        {
+          "tick": 777,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 719.1916031805447,
+          "y": 442.70458025153476
+        },
+        {
+          "tick": 791,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 792,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 0
+        }
+      ],
+      "stats": {
+        "rifleShots": 8,
+        "rocketShots": 0,
+        "terrainHits": 3,
+        "hits": 5
+      }
+    }
+  },
+  {
+    "level": "ridge",
+    "scenario": "approach-red",
+    "initial": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 220,
+        "mode": "walk"
+      },
+      {
+        "id": 2,
+        "team": 1,
+        "type": "rifle",
+        "x": 850,
+        "mode": "walk"
+      }
+    ],
+    "final": {
+      "levelId": "ridge",
+      "scenarioId": "approach-red",
+      "tick": 792,
+      "time": 6.6,
+      "result": {
+        "winner": 1,
+        "time": 6.6
+      },
+      "randomState": 31,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 482.7561234158185,
+          "y": 441.1896817876967,
+          "phase": 0.28173007763224084,
+          "velocity": 47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": 15.581812771008572,
+          "hp": 0,
+          "fireCooldown": 0.1949999999999998,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 4,
+          "firstShotAt": 5.5,
+          "damageTaken": 3,
+          "rifleAimAngle": -0.5327874623773955
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 614.6280883252259,
+          "y": 361.3774020307313,
+          "phase": 0.9693616289721297,
+          "velocity": -47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": -15.581812771015393,
+          "hp": 1,
+          "fireCooldown": 0.1949999999999998,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.14166666666666666,
+          "mode": "walk",
+          "shotsFired": 4,
+          "firstShotAt": 5.5,
+          "damageTaken": 2,
+          "rifleAimAngle": 2.552330765886602
+        }
+      ],
+      "projectiles": [],
+      "events": [
+        {
+          "tick": 660,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 465.61612936770905,
+          "y": 454.5207882695596
+        },
+        {
+          "tick": 660,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 631.7680823733428,
+          "y": 374.7085085126
+        },
+        {
+          "tick": 660,
+          "type": "bulletBlocked",
+          "x": 601.1051561125548,
+          "y": 351.2145892073595
+        },
+        {
+          "tick": 671,
+          "type": "bulletBlocked",
+          "x": 576.2190958450572,
+          "y": 368.49625878717774
+        },
+        {
+          "tick": 699,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 470.68021851828684,
+          "y": 450.5820522635547
+        },
+        {
+          "tick": 699,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 626.7039932227628,
+          "y": 370.7697725065933
+        },
+        {
+          "tick": 712,
+          "type": "bulletBlocked",
+          "x": 592.9249560924545,
+          "y": 355.502811928091
+        },
+        {
+          "tick": 716,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 738,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 475.7443076688646,
+          "y": 446.6433162575497
+        },
+        {
+          "tick": 738,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 621.6399040721828,
+          "y": 366.83103650058666
+        },
+        {
+          "tick": 754,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 754,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 777,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 480.8083968194424,
+          "y": 442.7045802515448
+        },
+        {
+          "tick": 777,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 616.5758149216028,
+          "y": 362.89230049458
+        },
+        {
+          "tick": 791,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 792,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 0
+        }
+      ],
+      "stats": {
+        "rifleShots": 8,
+        "rocketShots": 0,
+        "terrainHits": 3,
+        "hits": 5
+      }
+    }
+  },
+  {
+    "level": "valley",
+    "scenario": "crest-red",
+    "initial": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 80,
+        "mode": "walk"
+      },
+      {
+        "id": 2,
+        "team": 1,
+        "type": "rifle",
+        "x": 400,
+        "mode": "hold"
+      }
+    ],
+    "final": {
+      "levelId": "valley",
+      "scenarioId": "crest-red",
+      "tick": 285,
+      "time": 2.375,
+      "result": {
+        "winner": null,
+        "time": 2.375
+      },
+      "randomState": 31,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 166.7320124778438,
+          "y": 473.322878003545,
+          "phase": 0.2811821017691759,
+          "velocity": 47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": 19.492078074036954,
+          "hp": 0,
+          "fireCooldown": 0.1116666666666665,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 3,
+          "firstShotAt": 1.5083333333333333,
+          "damageTaken": 3,
+          "rifleAimAngle": -0.03644485096942236
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 400,
+          "y": 460,
+          "phase": 0.62,
+          "velocity": -47,
+          "state": "march",
+          "timer": 0,
+          "observedVelocity": 0,
+          "hp": 0,
+          "fireCooldown": 0.10333333333333317,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "hold",
+          "shotsFired": 3,
+          "firstShotAt": 1.5083333333333333,
+          "damageTaken": 3,
+          "rifleAimAngle": null
+        }
+      ],
+      "projectiles": [],
+      "events": [
+        {
+          "tick": 181,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 150.00131213096208,
+          "y": 475.99979005904606
+        },
+        {
+          "tick": 181,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 400,
+          "y": 460
+        },
+        {
+          "tick": 208,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 208,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 220,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 156.3362375050241,
+          "y": 474.98620199919617
+        },
+        {
+          "tick": 220,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 400,
+          "y": 460
+        },
+        {
+          "tick": 246,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 247,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 259,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 162.6711628790861,
+          "y": 473.9726139393462
+        },
+        {
+          "tick": 259,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 400,
+          "y": 460
+        },
+        {
+          "tick": 284,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 0
+        },
+        {
+          "tick": 285,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 0
+        }
+      ],
+      "stats": {
+        "rifleShots": 6,
+        "rocketShots": 0,
+        "terrainHits": 0,
+        "hits": 6
+      }
+    }
+  },
+  {
+    "level": "valley",
+    "scenario": "crest-blue",
+    "initial": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 800,
+        "mode": "hold"
+      },
+      {
+        "id": 2,
+        "team": 1,
+        "type": "rifle",
+        "x": 1120,
+        "mode": "walk"
+      }
+    ],
+    "final": {
+      "levelId": "valley",
+      "scenarioId": "crest-blue",
+      "tick": 285,
+      "time": 2.375,
+      "result": {
+        "winner": null,
+        "time": 2.375
+      },
+      "randomState": 31,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 800,
+          "y": 460,
+          "phase": 0.31,
+          "velocity": 47,
+          "state": "march",
+          "timer": 0,
+          "observedVelocity": 0,
+          "hp": 0,
+          "fireCooldown": 0.10333333333333317,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "hold",
+          "shotsFired": 3,
+          "firstShotAt": 1.5083333333333333,
+          "damageTaken": 3,
+          "rifleAimAngle": null
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 1033.2679875221684,
+          "y": 473.3228780035469,
+          "phase": 0.5911821017688974,
+          "velocity": -47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": -19.492078074026722,
+          "hp": 0,
+          "fireCooldown": 0.1116666666666665,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 3,
+          "firstShotAt": 1.5083333333333333,
+          "damageTaken": 3,
+          "rifleAimAngle": -3.1051478026203645
+        }
+      ],
+      "projectiles": [],
+      "events": [
+        {
+          "tick": 181,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 800,
+          "y": 460
+        },
+        {
+          "tick": 181,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 1049.9986878690413,
+          "y": 475.99979005904663
+        },
+        {
+          "tick": 208,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 208,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 220,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 800,
+          "y": 460
+        },
+        {
+          "tick": 220,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 1043.6637624949826,
+          "y": 474.9862019991972
+        },
+        {
+          "tick": 246,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 247,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 259,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 800,
+          "y": 460
+        },
+        {
+          "tick": 259,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 1037.328837120924,
+          "y": 473.9726139393478
+        },
+        {
+          "tick": 284,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 0
+        },
+        {
+          "tick": 285,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 0
+        }
+      ],
+      "stats": {
+        "rifleShots": 6,
+        "rocketShots": 0,
+        "terrainHits": 0,
+        "hits": 6
+      }
+    }
+  },
+  {
+    "level": "valley",
+    "scenario": "approach-blue",
+    "initial": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 250,
+        "mode": "walk"
+      },
+      {
+        "id": 2,
+        "team": 1,
+        "type": "rifle",
+        "x": 1120,
+        "mode": "walk"
+      }
+    ],
+    "final": {
+      "levelId": "valley",
+      "scenarioId": "approach-blue",
+      "tick": 969,
+      "time": 8.075,
+      "result": {
+        "winner": null,
+        "time": 8.075
+      },
+      "randomState": 31,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 556.1940391819013,
+          "y": 580,
+          "phase": 0.26895543595230786,
+          "velocity": 47,
+          "state": "march",
+          "timer": 0,
+          "observedVelocity": 46.99999999999818,
+          "hp": 0,
+          "fireCooldown": 0.09499999999999983,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 3,
+          "firstShotAt": 7.2,
+          "damageTaken": 3,
+          "rifleAimAngle": null
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 776.4209933837061,
+          "y": 483.5790066162939,
+          "phase": 0.4286137867339539,
+          "velocity": -47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": -13.958287860623386,
+          "hp": 0,
+          "fireCooldown": 0.10333333333333317,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 3,
+          "firstShotAt": 7.2,
+          "damageTaken": 3,
+          "rifleAimAngle": 2.7019269972541076
+        }
+      ],
+      "projectiles": [],
+      "events": [
+        {
+          "tick": 864,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 538.6943725152372,
+          "y": 580
+        },
+        {
+          "tick": 864,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 788.5181761962464,
+          "y": 471.4818238037536
+        },
+        {
+          "tick": 894,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 894,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 903,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 545.1098725152362,
+          "y": 580
+        },
+        {
+          "tick": 903,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 783.9817326415438,
+          "y": 476.0182673584562
+        },
+        {
+          "tick": 931,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 931,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 942,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 551.5253725152353,
+          "y": 580
+        },
+        {
+          "tick": 942,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 779.4452890868412,
+          "y": 480.55471091315883
+        },
+        {
+          "tick": 968,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 0
+        },
+        {
+          "tick": 969,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 0
+        }
+      ],
+      "stats": {
+        "rifleShots": 6,
+        "rocketShots": 0,
+        "terrainHits": 0,
+        "hits": 6
+      }
+    }
+  },
+  {
+    "level": "valley",
+    "scenario": "approach-red",
+    "initial": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 80,
+        "mode": "walk"
+      },
+      {
+        "id": 2,
+        "team": 1,
+        "type": "rifle",
+        "x": 950,
+        "mode": "walk"
+      }
+    ],
+    "final": {
+      "levelId": "valley",
+      "scenarioId": "approach-red",
+      "tick": 969,
+      "time": 8.075,
+      "result": {
+        "winner": null,
+        "time": 8.075
+      },
+      "randomState": 31,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 423.57900661630185,
+          "y": 483.57900661630185,
+          "phase": 0.11861378673413067,
+          "velocity": 47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": 13.958287860623386,
+          "hp": 0,
+          "fireCooldown": 0.10333333333333317,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 3,
+          "firstShotAt": 7.2,
+          "damageTaken": 3,
+          "rifleAimAngle": 0.43966565633566884
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 643.805960818099,
+          "y": 580,
+          "phase": 0.5789554359522997,
+          "velocity": -47,
+          "state": "march",
+          "timer": 0,
+          "observedVelocity": -46.99999999999818,
+          "hp": 0,
+          "fireCooldown": 0.09499999999999983,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 3,
+          "firstShotAt": 7.2,
+          "damageTaken": 3,
+          "rifleAimAngle": null
+        }
+      ],
+      "projectiles": [],
+      "events": [
+        {
+          "tick": 864,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 411.4818238037616,
+          "y": 471.4818238037616
+        },
+        {
+          "tick": 864,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 661.3056274847631,
+          "y": 580
+        },
+        {
+          "tick": 894,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 894,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 903,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 416.0182673584642,
+          "y": 476.0182673584642
+        },
+        {
+          "tick": 903,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 654.8901274847641,
+          "y": 580
+        },
+        {
+          "tick": 931,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 931,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 942,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 420.5547109131668,
+          "y": 480.5547109131668
+        },
+        {
+          "tick": 942,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 648.474627484765,
+          "y": 580
+        },
+        {
+          "tick": 968,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 0
+        },
+        {
+          "tick": 969,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 0
+        }
+      ],
+      "stats": {
+        "rifleShots": 6,
+        "rocketShots": 0,
+        "terrainHits": 0,
+        "hits": 6
+      }
+    }
+  },
+  {
+    "level": "bumps",
+    "scenario": "crest-red",
+    "initial": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 360,
+        "mode": "walk"
+      },
+      {
+        "id": 2,
+        "team": 1,
+        "type": "rifle",
+        "x": 740,
+        "mode": "hold"
+      }
+    ],
+    "final": {
+      "levelId": "bumps",
+      "scenarioId": "crest-red",
+      "tick": 471,
+      "time": 3.925,
+      "result": {
+        "winner": null,
+        "time": 3.925
+      },
+      "randomState": 31,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 505.6955576578831,
+          "y": 484.1353077076075,
+          "phase": 0.6212626740427906,
+          "velocity": 47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": 18.038639969763608,
+          "hp": 0,
+          "fireCooldown": 0.10333333333333317,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 3,
+          "firstShotAt": 3.058333333333333,
+          "damageTaken": 3,
+          "rifleAimAngle": -0.10486830359638927
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 740,
+          "y": 455,
+          "phase": 0.62,
+          "velocity": -47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": 0,
+          "hp": 0,
+          "fireCooldown": 0.10333333333333317,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "hold",
+          "shotsFired": 3,
+          "firstShotAt": 3.058333333333333,
+          "damageTaken": 3,
+          "rifleAimAngle": 2.9938133333753725
+        }
+      ],
+      "projectiles": [],
+      "events": [
+        {
+          "tick": 367,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 490.062069684088,
+          "y": 491.0835245848498
+        },
+        {
+          "tick": 367,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 740,
+          "y": 455
+        },
+        {
+          "tick": 394,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 395,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 406,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 495.92462767426116,
+          "y": 488.47794325588393
+        },
+        {
+          "tick": 406,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 740,
+          "y": 455
+        },
+        {
+          "tick": 432,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 433,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 445,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 501.78718566443433,
+          "y": 485.8723619269181
+        },
+        {
+          "tick": 445,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 740,
+          "y": 455
+        },
+        {
+          "tick": 471,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 0
+        },
+        {
+          "tick": 471,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 0
+        }
+      ],
+      "stats": {
+        "rifleShots": 6,
+        "rocketShots": 0,
+        "terrainHits": 0,
+        "hits": 6
+      }
+    }
+  },
+  {
+    "level": "bumps",
+    "scenario": "crest-blue",
+    "initial": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 380,
+        "mode": "hold"
+      },
+      {
+        "id": 2,
+        "team": 1,
+        "type": "rifle",
+        "x": 760,
+        "mode": "walk"
+      }
+    ],
+    "final": {
+      "levelId": "bumps",
+      "scenarioId": "crest-blue",
+      "tick": 474,
+      "time": 3.9499999999999997,
+      "result": {
+        "winner": null,
+        "time": 3.9499999999999997
+      },
+      "randomState": 31,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 380,
+          "y": 455,
+          "phase": 0.31,
+          "velocity": 47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": 0,
+          "hp": 0,
+          "fireCooldown": 0.10333333333333317,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "hold",
+          "shotsFired": 3,
+          "firstShotAt": 3.0833333333333335,
+          "damageTaken": 3,
+          "rifleAimAngle": 0.14780391778900362
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 614.3239492123131,
+          "y": 484.1439774276947,
+          "phase": 0.9308193360837836,
+          "velocity": -47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": -18.038639969763608,
+          "hp": 0,
+          "fireCooldown": 0.10333333333333317,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 3,
+          "firstShotAt": 3.0833333333333335,
+          "damageTaken": 3,
+          "rifleAimAngle": -3.0366958138639584
+        }
+      ],
+      "projectiles": [],
+      "events": [
+        {
+          "tick": 370,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 380,
+          "y": 455
+        },
+        {
+          "tick": 370,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 629.9574371861082,
+          "y": 491.092194304937
+        },
+        {
+          "tick": 397,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 398,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 409,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 380,
+          "y": 455
+        },
+        {
+          "tick": 409,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 624.094879195935,
+          "y": 488.4866129759711
+        },
+        {
+          "tick": 435,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 436,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 448,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 380,
+          "y": 455
+        },
+        {
+          "tick": 448,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 618.2323212057619,
+          "y": 485.8810316470053
+        },
+        {
+          "tick": 474,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 0
+        },
+        {
+          "tick": 474,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 0
+        }
+      ],
+      "stats": {
+        "rifleShots": 6,
+        "rocketShots": 0,
+        "terrainHits": 0,
+        "hits": 6
+      }
+    }
+  },
+  {
+    "level": "bumps",
+    "scenario": "approach-blue",
+    "initial": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 380,
+        "mode": "walk"
+      },
+      {
+        "id": 2,
+        "team": 1,
+        "type": "rifle",
+        "x": 1120,
+        "mode": "walk"
+      }
+    ],
+    "final": {
+      "levelId": "bumps",
+      "scenarioId": "approach-blue",
+      "tick": 981,
+      "time": 8.175,
+      "result": {
+        "winner": null,
+        "time": 8.175
+      },
+      "randomState": 31,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 676.4803681651681,
+          "y": 486.75981591741595,
+          "phase": 0.04819018557199299,
+          "velocity": 47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": 17.655992750342193,
+          "hp": 0,
+          "fireCooldown": 0.22833333333333314,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 8,
+          "firstShotAt": 5.491666666666666,
+          "damageTaken": 3,
+          "rifleAimAngle": 0.02204469703647786
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 798.6880863741193,
+          "y": 484.34404318705964,
+          "phase": 0.9225434914973004,
+          "velocity": -47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": -17.655992750342193,
+          "hp": 0,
+          "fireCooldown": 0.22833333333333314,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 8,
+          "firstShotAt": 5.491666666666666,
+          "damageTaken": 3,
+          "rifleAimAngle": 3.07840653331312
+        }
+      ],
+      "projectiles": [],
+      "events": [
+        {
+          "tick": 659,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 613.9118624348689,
+          "y": 483.96082774883064
+        },
+        {
+          "tick": 659,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 863.6262178347364,
+          "y": 494.39563036087725
+        },
+        {
+          "tick": 686,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 686,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 698,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 619.7744204250421,
+          "y": 486.5664090777965
+        },
+        {
+          "tick": 698,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 857.2980076163934,
+          "y": 495.4503320639344
+        },
+        {
+          "tick": 708,
+          "type": "bulletBlocked",
+          "x": 743.2579970900201,
+          "y": 456.62899854501006
+        },
+        {
+          "tick": 709,
+          "type": "bulletBlocked",
+          "x": 737.415627428051,
+          "y": 456.2921862859745
+        },
+        {
+          "tick": 737,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 625.6369784152153,
+          "y": 489.17199040676235
+        },
+        {
+          "tick": 737,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 850.9697973980504,
+          "y": 496.5050337669916
+        },
+        {
+          "tick": 746,
+          "type": "bulletBlocked",
+          "x": 734.0760914067009,
+          "y": 457.96195429664954
+        },
+        {
+          "tick": 746,
+          "type": "bulletBlocked",
+          "x": 746.9122822001394,
+          "y": 458.4561411000697
+        },
+        {
+          "tick": 776,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 631.4995364053884,
+          "y": 491.7775717357282
+        },
+        {
+          "tick": 776,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 844.6415871797075,
+          "y": 497.55973547004874
+        },
+        {
+          "tick": 784,
+          "type": "bulletBlocked",
+          "x": 730.6866994450793,
+          "y": 459.65665027746036
+        },
+        {
+          "tick": 784,
+          "type": "bulletBlocked",
+          "x": 750.4491296477262,
+          "y": 460.2245648238631
+        },
+        {
+          "tick": 853,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 657.6473092314698,
+          "y": 496.1763453842651
+        },
+        {
+          "tick": 853,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 817.5211453078176,
+          "y": 493.7605726539088
+        },
+        {
+          "tick": 857,
+          "type": "bulletBlocked",
+          "x": 749.5514587104935,
+          "y": 459.77572935524677
+        },
+        {
+          "tick": 858,
+          "type": "bulletBlocked",
+          "x": 729.4190021893808,
+          "y": 460.2904989053096
+        },
+        {
+          "tick": 892,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 663.385506875331,
+          "y": 493.3072465623345
+        },
+        {
+          "tick": 892,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 811.7829476639564,
+          "y": 490.8914738319782
+        },
+        {
+          "tick": 896,
+          "type": "bulletBlocked",
+          "x": 744.2506414857223,
+          "y": 457.12532074286116
+        },
+        {
+          "tick": 897,
+          "type": "bulletBlocked",
+          "x": 734.9850679157455,
+          "y": 457.50746604212725
+        },
+        {
+          "tick": 931,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 669.1237045191922,
+          "y": 490.4381477404039
+        },
+        {
+          "tick": 931,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 806.0447500200952,
+          "y": 488.0223750100476
+        },
+        {
+          "tick": 943,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 943,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 970,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 674.8619021630534,
+          "y": 487.5690489184733
+        },
+        {
+          "tick": 970,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 800.306552376234,
+          "y": 485.153276188117
+        },
+        {
+          "tick": 981,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 0
+        },
+        {
+          "tick": 981,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 0
+        }
+      ],
+      "stats": {
+        "rifleShots": 16,
+        "rocketShots": 0,
+        "terrainHits": 10,
+        "hits": 6
+      }
+    }
+  },
+  {
+    "level": "bumps",
+    "scenario": "approach-red",
+    "initial": [
+      {
+        "id": 1,
+        "team": 0,
+        "type": "rifle",
+        "x": 80,
+        "mode": "walk"
+      },
+      {
+        "id": 2,
+        "team": 1,
+        "type": "rifle",
+        "x": 740,
+        "mode": "walk"
+      }
+    ],
+    "final": {
+      "levelId": "bumps",
+      "scenarioId": "approach-red",
+      "tick": 655,
+      "time": 5.458333333333333,
+      "result": {
+        "winner": null,
+        "time": 5.458333333333333
+      },
+      "randomState": 31,
+      "units": [
+        {
+          "id": 1,
+          "team": 0,
+          "type": "rifle",
+          "x": 309.8843974646301,
+          "y": 479.2707854930126,
+          "phase": 0.5346453969234201,
+          "velocity": 47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": 18.654025089711013,
+          "hp": 0,
+          "fireCooldown": 0.11999999999999983,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 3,
+          "firstShotAt": 4.608333333333333,
+          "damageTaken": 3,
+          "rifleAimAngle": -0.0016691294400318023
+        },
+        {
+          "id": 2,
+          "team": 1,
+          "type": "rifle",
+          "x": 528.6937030510526,
+          "y": 473.91390975508773,
+          "phase": 0.422415839748795,
+          "velocity": -47,
+          "state": "fireWalk",
+          "timer": 0,
+          "observedVelocity": -18.038639969763608,
+          "hp": 0,
+          "fireCooldown": 0.11999999999999983,
+          "guardBase": null,
+          "guardSlot": null,
+          "hitFlash": 0.15,
+          "mode": "walk",
+          "shotsFired": 3,
+          "firstShotAt": 4.608333333333333,
+          "damageTaken": 3,
+          "rifleAimAngle": 3.0931907068431403
+        }
+      ],
+      "projectiles": [],
+      "events": [
+        {
+          "tick": 553,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 294.02847613837577,
+          "y": 484.7593736444084
+        },
+        {
+          "tick": 553,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 544.0265470253516,
+          "y": 467.09931243317703
+        },
+        {
+          "tick": 580,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 580,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 2
+        },
+        {
+          "tick": 592,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 300.09103429253184,
+          "y": 482.6607958218159
+        },
+        {
+          "tick": 592,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 538.1639890351785,
+          "y": 469.7048937621429
+        },
+        {
+          "tick": 617,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 617,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 1
+        },
+        {
+          "tick": 631,
+          "type": "rifleShot",
+          "id": 1,
+          "x": 306.1535924466879,
+          "y": 480.56221799922344
+        },
+        {
+          "tick": 631,
+          "type": "rifleShot",
+          "id": 2,
+          "x": 532.3014310450053,
+          "y": 472.31047509110874
+        },
+        {
+          "tick": 655,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 1,
+          "id": 2,
+          "amount": 1,
+          "hp": 0
+        },
+        {
+          "tick": 655,
+          "type": "damage",
+          "weapon": "rifle",
+          "shooterId": 2,
+          "id": 1,
+          "amount": 1,
+          "hp": 0
+        }
+      ],
+      "stats": {
+        "rifleShots": 6,
+        "rocketShots": 0,
+        "terrainHits": 0,
+        "hits": 6
+      }
+    }
+  }
+]
