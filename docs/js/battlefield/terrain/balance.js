@@ -1,6 +1,6 @@
 // TL-09: encounter economics use production prices; these are preassembled forces,
 // not a model of live income, deployment timing, reinforcements, bases or aircraft.
-import {SUPPLY_RULES} from '../economy/supply.js?v=2.0.0';
+import {SUPPLY_RULES} from '../economy/supply.js?v=2.1.0';
 export const BLAST_RADII=Object.freeze([25,40,50]);
 export const DEFAULT_BLAST_RADIUS=40;
 export function checkedBlastRadius(radius=DEFAULT_BLAST_RADIUS){

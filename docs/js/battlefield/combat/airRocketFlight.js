@@ -1,6 +1,6 @@
-import {airPosition} from './airInterception.js?v=2.0.0';
-import {hullDistance,lerpAircraft,boxDistance,soldierBox} from './collision2d.js?v=2.0.0';
-import {stationedBase,applyDamage} from './weapons.js?v=2.0.0';
+import {airPosition} from './airInterception.js?v=2.1.0';
+import {hullDistance,lerpAircraft,boxDistance,soldierBox} from './collision2d.js?v=2.1.0';
+import {stationedBase,applyDamage} from './weapons.js?v=2.1.0';
 // AA-COLLISION: <=4ms curved substeps (gravity chord error <0.0005 units),
 // with bounded minimization and bisection against the interpolated moving hull.
 export function stepBattleRocket(r,dt,previousHelicopter,helicopter,ground=460){

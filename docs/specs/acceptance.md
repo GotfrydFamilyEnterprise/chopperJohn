@@ -136,3 +136,10 @@ Detailed H/HG/AA assertions, boundary cases and screenshot checklist remain in `
 | CP-04 | Lock/unlock, real5s capture, defeat/draw, retry/next/menu, reload/corrupt/blocked storage, mobile/screenshots | Fresh attempts, sequential persisted completions, honest storage fallback, no input/time leak, controls fit |
 | CP-05 | Repeat no/limited/active support policies over both JSON maps and fixed seeds | Actual outcome/cost/shot evidence, deterministic replay, bounded support/difficulty interpretation; independent review and public preview |
 | CP-06 | Same button/held-control hooks on three test scenes; actual real-input regression suite | Disabled/menu/result/pause cannot be bypassed, actual paid purchases and ammo/turn/flight obey rules, deterministic seconds-to-ticks; production URLs have no hooks |
+
+| PL-01 | Deploy/cooldown/cap/invalid/failed/paused leader orders; two factions and two-leader limit | Ordinary paid rifle leader, no unrelated blue auto-buy, same accounting limits, confirmed-spawn charges only |
+| PL-02 | Physical rally then formation on both maps; reuse field troops vs guards; three tactics | No early launch or teleport; actual rifle screen/rocket standoff/rear leader, stable common-frame orders, real capture handoff |
+| PL-03 | Kill one follower, empty funds/full cap, leader death, joined speed and combat | Unique same-type queued HQ replacement; exactly2× physical catch-up only, normal firing/HP; leader loss cancels resupply without deleting paid survivors |
+| PL-04 | Mobile portrait/landscape sergeant button/dropdown/tactics/rank/sprint/status, normal/test routes | No overlapping/unreachable controls; real interaction hooks and production absence; reset/results/pause preserve gates |
+| PL-05 | Overlapping opposing riflemen, intact/breached guard posts and real captures | Barrel sweep hits point-blank enemies; cover and breach/capture values unchanged; diagnostics reflect actual events |
+| PL-06 | Multi-seed campaign comparison and repeat replay, independent adversarial review/screenshots | Actual outcomes/spending/resupply/breach times, no injected natural-play success, honest unresolved results and limits |

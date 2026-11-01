@@ -1,0 +1,64 @@
+[
+  {
+    "name": "No blue autonomous purchase without sergeant",
+    "status": "PASS",
+    "details": {
+      "seconds": 60,
+      "blueLiving": 5
+    }
+  },
+  {
+    "name": "Cap/max2/failed spawn/invalid composition do not spend",
+    "status": "PASS"
+  },
+  {
+    "name": "Pause/results freeze all world state and reject direct commands",
+    "status": "PASS"
+  },
+  {
+    "name": "Replacement blocked by cap/funds; no duplicated purchase; disband frees active slot",
+    "status": "PASS"
+  },
+  {
+    "name": "Guards/reservations/garrison orders cannot be adopted; groups bypass vacancies",
+    "status": "PASS"
+  },
+  {
+    "name": "Pure module faction mirror matches rally/recruitment and formation",
+    "status": "PASS",
+    "details": {
+      "phase": "breach",
+      "spent": 195
+    }
+  },
+  {
+    "name": "Rifle capture physically transfers guard and creates one paid vacancy",
+    "status": "PASS",
+    "details": {
+      "time": 25,
+      "baseId": "red-fob",
+      "team": 0
+    }
+  },
+  {
+    "name": "Joining rocket stops sprint to aim at reachable enemy aircraft",
+    "status": "PASS",
+    "details": {
+      "aim": 0.008333333333333333,
+      "assignment": "air"
+    }
+  },
+  {
+    "name": "Replacement sprint follows slope surface at exactly twice normal speed without mutation",
+    "status": "PASS",
+    "details": {
+      "surfaceDistance": 66.00000000000598,
+      "seconds": 1,
+      "normalSurfaceSpeed": 33
+    }
+  },
+  {
+    "name": "All tactics preserve rear leader, rifle screen and distinct rocket standoff in both directions",
+    "status": "PASS"
+  }
+]

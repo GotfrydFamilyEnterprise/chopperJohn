@@ -1,5 +1,5 @@
-import {parkedOnPad,createHelicopter} from './helicopter.js?v=2.0.0';
-import {purchaseReplacement} from '../economy/supply.js?v=2.0.0';
+import {parkedOnPad,createHelicopter} from './helicopter.js?v=2.1.0';
+import {purchaseReplacement} from '../economy/supply.js?v=2.1.0';
 // BAL-02/03: pad logistics and replacement accounting, separate from flight physics.
 export const AIR_SUPPORT=Object.freeze({ammo:120,rearmRate:30,replacementCost:90});
 export function updateAircraftSupport(h,dt,account,{fire=false,rearm=true,replace=true,ground=460}={}){

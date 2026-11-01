@@ -1,6 +1,6 @@
 // CP-02: shared terrain infantry rules for the lab and campaign battlefield.
-import {LAB_ROCKET,planTerrainRocket,labRocketSpread} from '../terrain/ballistics.js?v=2.0.0';
-import {groundY,visible,walkSurface} from '../terrain/heightfield.js?v=2.0.0';
+import {LAB_ROCKET,planTerrainRocket,labRocketSpread} from '../terrain/ballistics.js?v=2.1.0';
+import {groundY,visible,walkSurface} from '../terrain/heightfield.js?v=2.1.0';
 export const infantryEye=u=>({x:u.x,y:u.y-40});
 export function infantryTarget(level,u,units,bases=[],plan=planTerrainRocket){
  const dir=u.team===0?1:-1;
@@ -13,7 +13,7 @@ export function walkInfantry(level,u,distance,dt){
  const before=u.x;u.x=Math.max(40,Math.min(level.world.width-40,walkSurface(level,u.x,distance)));u.y=groundY(level,u.x);u.observedVelocity=(u.x-before)/dt;u.phase=(u.phase+Math.abs(u.x-before)/44)%1;
 }
 export function rifleBearing(u,target){return target?Math.atan2(target.y-32-(u.y-37),target.x-(u.x+(u.team===0?5:-5))):null;}
-export function rifleRound(u,target){const angle=rifleBearing(u,target);return {x:u.x+(u.team===0?5:-5)+29*Math.cos(angle),y:u.y-37+29*Math.sin(angle),vx:900*Math.cos(angle),vy:900*Math.sin(angle),shooterId:u.id,age:0,ttl:2,kind:'bullet',team:u.team};}
+export function rifleRound(u,target){const angle=rifleBearing(u,target);return {originX:u.x+(u.team===0?5:-5),originY:u.y-37,x:u.x+(u.team===0?5:-5)+29*Math.cos(angle),y:u.y-37+29*Math.sin(angle),vx:900*Math.cos(angle),vy:900*Math.sin(angle),shooterId:u.id,age:0,ttl:2,kind:'bullet',team:u.team};}
 export function updateGroundRocket(level,u,target,dt,time,random,planShot=planTerrainRocket){
  const goal=target?planShot(level,u,target):null;u.rocketGoal=goal;u.rocketAimAngle=time-(u.lastRocketAt??-Infinity)<.15?u.lastRocketAngle:goal?.angle??null;
  u.rocketCooldown=Math.max(0,(u.rocketCooldown||0)-dt);
