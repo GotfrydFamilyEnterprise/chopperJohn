@@ -1,0 +1,1015 @@
+{
+  "secondsLimit": 420,
+  "seedCount": 3,
+  "scope": "Identical explicit blue purchase policy; actual control-input support controller; red AI fully active; no teleporting, damage injection or free purchases. Unfinished is not victory. One policy is not proof no ground-only strategy can win.",
+  "rows": [
+    {
+      "level": "first-assault",
+      "seed": 31,
+      "support": "none",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 0,
+      "rocketShots": 910,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "sortie"
+      },
+      "sorties": 0,
+      "purchases": [
+        78,
+        62
+      ],
+      "spent": [
+        2195,
+        1935
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 20
+        }
+      ],
+      "living": [
+        9,
+        15
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 31,
+      "support": "limited",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 40,
+      "rocketShots": 822,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400.00000000002217,
+        "y": 437,
+        "vx": -3.0304572998033855e-12,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "return"
+      },
+      "sorties": 0,
+      "purchases": [
+        84,
+        75
+      ],
+      "spent": [
+        2205,
+        2155
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "living": [
+        14,
+        9
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 31,
+      "support": "active",
+      "time": 167.84166666666667,
+      "winner": 0,
+      "finished": true,
+      "shots": 150,
+      "rocketShots": 59,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 1988.641332740395,
+        "y": 330.09338509864375,
+        "vx": 18.729764292398194,
+        "vy": 0.14628426301197062,
+        "ammo": 85,
+        "grounded": false,
+        "phase": "sortie"
+      },
+      "sorties": 1,
+      "purchases": [
+        26,
+        36
+      ],
+      "spent": [
+        825,
+        935
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "living": [
+        15,
+        0
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 32,
+      "support": "none",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 0,
+      "rocketShots": 1051,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "sortie"
+      },
+      "sorties": 0,
+      "purchases": [
+        84,
+        65
+      ],
+      "spent": [
+        2205,
+        1940
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "living": [
+        12,
+        13
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 32,
+      "support": "limited",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 40,
+      "rocketShots": 793,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400.00000000002217,
+        "y": 437,
+        "vx": -3.0304572998033855e-12,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "return"
+      },
+      "sorties": 0,
+      "purchases": [
+        84,
+        76
+      ],
+      "spent": [
+        2205,
+        2180
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "living": [
+        14,
+        10
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 32,
+      "support": "active",
+      "time": 144.475,
+      "winner": 0,
+      "finished": true,
+      "shots": 166,
+      "rocketShots": 54,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 1477.459808630283,
+        "y": 330.00913500624904,
+        "vx": 3.70501824281604,
+        "vy": -0.061270900195665494,
+        "ammo": 69,
+        "grounded": false,
+        "phase": "sortie"
+      },
+      "sorties": 1,
+      "purchases": [
+        22,
+        32
+      ],
+      "spent": [
+        655,
+        835
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "living": [
+        15,
+        0
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 33,
+      "support": "none",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 0,
+      "rocketShots": 980,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "sortie"
+      },
+      "sorties": 0,
+      "purchases": [
+        81,
+        60
+      ],
+      "spent": [
+        2200,
+        1885
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 20
+        }
+      ],
+      "living": [
+        7,
+        13
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 33,
+      "support": "limited",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 40,
+      "rocketShots": 859,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400.00000000002217,
+        "y": 437,
+        "vx": -3.0304572998033855e-12,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "return"
+      },
+      "sorties": 0,
+      "purchases": [
+        84,
+        72
+      ],
+      "spent": [
+        2205,
+        2115
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "living": [
+        13,
+        11
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 33,
+      "support": "active",
+      "time": 166.28333333333333,
+      "winner": 0,
+      "finished": true,
+      "shots": 158,
+      "rocketShots": 57,
+      "helicopterHp": 95.0000000000033,
+      "generation": 1,
+      "aircraft": {
+        "x": 1791.2889384696814,
+        "y": 329.9904641221902,
+        "vx": 145.60752861371944,
+        "vy": 0.0036183083196117756,
+        "ammo": 82,
+        "grounded": false,
+        "phase": "sortie"
+      },
+      "sorties": 1,
+      "purchases": [
+        26,
+        36
+      ],
+      "spent": [
+        825,
+        935
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "living": [
+        15,
+        1
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 73,
+      "support": "none",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 0,
+      "rocketShots": 752,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "sortie"
+      },
+      "sorties": 0,
+      "purchases": [
+        79,
+        56
+      ],
+      "spent": [
+        2115,
+        1855
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "living": [
+        11,
+        14
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 73,
+      "support": "limited",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 20,
+      "rocketShots": 755,
+      "helicopterHp": 100,
+      "generation": 2,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "return"
+      },
+      "sorties": 0,
+      "purchases": [
+        78,
+        55
+      ],
+      "spent": [
+        2120,
+        1760
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "living": [
+        15,
+        9
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 73,
+      "support": "active",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 125,
+      "rocketShots": 612,
+      "helicopterHp": 90.00000000000176,
+      "generation": 3,
+      "aircraft": {
+        "x": 2891.4278106659467,
+        "y": 250.44374856320172,
+        "vx": -106.26431216871298,
+        "vy": -20.091967577072836,
+        "ammo": 88,
+        "grounded": false,
+        "phase": "sortie"
+      },
+      "sorties": 3,
+      "purchases": [
+        68,
+        62
+      ],
+      "spent": [
+        1935,
+        2005
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "living": [
+        15,
+        0
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 74,
+      "support": "none",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 0,
+      "rocketShots": 666,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "sortie"
+      },
+      "sorties": 0,
+      "purchases": [
+        72,
+        57
+      ],
+      "spent": [
+        1905,
+        1915
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 18
+        }
+      ],
+      "living": [
+        15,
+        5
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 74,
+      "support": "limited",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 20,
+      "rocketShots": 768,
+      "helicopterHp": 100,
+      "generation": 2,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "return"
+      },
+      "sorties": 0,
+      "purchases": [
+        78,
+        67
+      ],
+      "spent": [
+        2120,
+        2060
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "living": [
+        15,
+        10
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 74,
+      "support": "active",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 217,
+      "rocketShots": 592,
+      "helicopterHp": 95.00000000000395,
+      "generation": 2,
+      "aircraft": {
+        "x": 2959.405086190569,
+        "y": 305.0664957378653,
+        "vx": -129.1888609522166,
+        "vy": 8.158301003141952,
+        "ammo": 0,
+        "grounded": false,
+        "phase": "return"
+      },
+      "sorties": 3,
+      "purchases": [
+        66,
+        70
+      ],
+      "spent": [
+        1820,
+        2205
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "living": [
+        14,
+        0
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 75,
+      "support": "none",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 0,
+      "rocketShots": 664,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "sortie"
+      },
+      "sorties": 0,
+      "purchases": [
+        66,
+        61
+      ],
+      "spent": [
+        1755,
+        2050
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 17
+        }
+      ],
+      "living": [
+        15,
+        4
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 75,
+      "support": "limited",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 20,
+      "rocketShots": 775,
+      "helicopterHp": 100,
+      "generation": 2,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "return"
+      },
+      "sorties": 0,
+      "purchases": [
+        80,
+        61
+      ],
+      "spent": [
+        2170,
+        1945
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "living": [
+        15,
+        10
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 75,
+      "support": "active",
+      "time": 420,
+      "winner": null,
+      "finished": false,
+      "shots": 43,
+      "rocketShots": 796,
+      "helicopterHp": 0,
+      "generation": 2,
+      "aircraft": {
+        "x": 3036.295800738519,
+        "y": 329.977986370705,
+        "vx": -145.8269347937151,
+        "vy": -0.08646983267733287,
+        "ammo": 97,
+        "grounded": false,
+        "phase": "return"
+      },
+      "sorties": 1,
+      "purchases": [
+        80,
+        62
+      ],
+      "spent": [
+        2170,
+        1970
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "living": [
+        15,
+        10
+      ]
+    }
+  ]
+}

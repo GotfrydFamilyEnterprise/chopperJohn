@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "kind": "battlefield",
+  "id": "ridgeline",
+  "name": "Ridgeline",
+  "description": "Enemy rockets hold the heights. Clear reinforcements from the air while your assault crosses the ridge.",
+  "seed": 73,
+  "world": {
+    "width": 3600,
+    "baseline": 460
+  },
+  "terrain": {
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        1220,
+        0
+      ],
+      [
+        1560,
+        125
+      ],
+      [
+        2020,
+        125
+      ],
+      [
+        2320,
+        75
+      ],
+      [
+        2620,
+        75
+      ],
+      [
+        2900,
+        0
+      ],
+      [
+        3600,
+        0
+      ]
+    ]
+  },
+  "balanceProfile": "campaign-v1",
+  "bases": [
+    {
+      "id": "blue-hq",
+      "type": "hq",
+      "team": 0,
+      "x": 110
+    },
+    {
+      "id": "red-hq",
+      "type": "hq",
+      "team": 1,
+      "x": 3490
+    },
+    {
+      "id": "blue-fob",
+      "type": "fob",
+      "team": 0,
+      "x": 1000
+    },
+    {
+      "id": "red-fob",
+      "type": "fob",
+      "team": 1,
+      "x": 2470
+    }
+  ],
+  "helipad": {
+    "id": "blue-pad",
+    "x": 400
+  },
+  "factions": [
+    {
+      "team": 0,
+      "controller": "manual",
+      "spawnX": 170,
+      "rallyX": 280,
+      "defenseX": 330,
+      "supply": 120,
+      "opening": [
+        {
+          "type": "rifle",
+          "x": 220,
+          "order": "garrison"
+        },
+        {
+          "type": "rifle",
+          "x": 256,
+          "order": "garrison"
+        },
+        {
+          "type": "rifle",
+          "x": 292,
+          "order": "advance"
+        },
+        {
+          "type": "rocket",
+          "x": 170,
+          "order": "garrison"
+        },
+        {
+          "type": "rocket",
+          "x": 200,
+          "order": "advance"
+        }
+      ],
+      "wave": {
+        "rifle": 3,
+        "rocket": 2
+      }
+    },
+    {
+      "team": 1,
+      "controller": "ai",
+      "spawnX": 3430,
+      "rallyX": 3320,
+      "defenseX": 3270,
+      "supply": 120,
+      "opening": [
+        {
+          "type": "rifle",
+          "x": 3380,
+          "order": "garrison"
+        },
+        {
+          "type": "rifle",
+          "x": 3344,
+          "order": "garrison"
+        },
+        {
+          "type": "rifle",
+          "x": 3308,
+          "order": "advance"
+        },
+        {
+          "type": "rocket",
+          "x": 3430,
+          "order": "garrison"
+        },
+        {
+          "type": "rocket",
+          "x": 3400,
+          "order": "advance"
+        }
+      ],
+      "wave": {
+        "rifle": 3,
+        "rocket": 2
+      }
+    }
+  ],
+  "objective": {
+    "type": "capture-hq",
+    "target": "red-hq"
+  }
+}

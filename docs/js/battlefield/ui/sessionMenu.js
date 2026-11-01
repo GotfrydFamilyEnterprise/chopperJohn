@@ -1,5 +1,5 @@
-import {GAME_VERSION} from '../session/version.js?v=1.3.1';
-import {TUTORIAL_STEPS} from '../session/tutorial.js';
+import {GAME_VERSION} from '../session/version.js?v=2.0.0';
+import {TUTORIAL_STEPS} from '../session/tutorial.js?v=2.0.0';
 // MENU-01..04: presentation only; never mutates units, budgets or physics.
 export function installSessionMenu({state,onStart,onEnd,root=document}){
  const menu=root.getElementById('mainMenu'),card=root.getElementById('tutorialCard'),end=root.getElementById('endSession');

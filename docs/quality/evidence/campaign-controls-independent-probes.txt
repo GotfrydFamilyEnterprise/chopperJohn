@@ -1,0 +1,1 @@
+PASS CP-06 independent fake-DOM/real pilot-handler probes: disabled/hidden/inert/CSS-hidden/modal/offscreen/covered; production installer disabled; fire/stick/turn gates; bounded normalization; hold finally release on error; deterministic advance; real click dispatch; releaseAll/blur. Browser user activation/geometry remain separate evidence.

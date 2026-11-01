@@ -1,4 +1,4 @@
-import {defenseCapacity} from './defenseRules.js?v=1.3.1';
+import {defenseCapacity} from './defenseRules.js?v=2.0.0';
 // CAP-01..06: deterministic structural damage, ownership and rebuilding; no DOM/RNG.
 export const TAKEOVER=Object.freeze({captureSeconds:5,rebuildSeconds:20,interior:58});
 export function insideBase(unit,base){return unit.hp>0&&Math.abs(unit.x-base.x)<=TAKEOVER.interior;}
@@ -6,7 +6,7 @@ export function capturePoint(base,team){return base.x+(team===0?-43:43);}
 export function rocketDefenseBlast(point,team,bases){
  const events=[];
  for(const b of bases){
-  const dx=Math.max(b.x-80-point.x,0,point.x-b.x-80),dy=Math.max(460-(b.main?197:116)-point.y,0,point.y-460);
+  const dx=Math.max(b.x-80-point.x,0,point.x-b.x-80),dy=Math.max((b.y??460)-(b.main?197:116)-point.y,0,point.y-(b.y??460));
   if(b.team===team||Math.hypot(dx,dy)>25)continue;
   const before=b.defensePoints??defenseCapacity(b);b.defensePoints=Math.max(0,before-1);b.rebuildProgress=0;b.defenseFlash=.2;
   events.push({type:b.defensePoints===0&&before>0?'breach':'defenseHit',baseX:b.x,team,remaining:b.defensePoints});

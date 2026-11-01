@@ -1,10 +1,11 @@
-import {allocateSplash,checkedDamageModel} from './splash.js?v=0.6.0';
-import {checkedBlastRadius} from './balance.js?v=0.6.0';
-import {LAB_ROCKET,labRocketSpread,planTerrainRocket,rocketReachAtDrop} from './ballistics.js?v=0.6.0';
-import {validateLevel} from './level.js?v=0.6.0';
-import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=0.6.0';
-import {createSoldier} from '../units/soldierCommon.js';
-import {WEAPONS,createRandom,applyDamage} from '../combat/weapons.js?v=1.3.1';
+import {infantryTarget,rifleBearing,rifleRound,updateGroundRocket} from '../combat/groundInfantry.js?v=2.0.0';
+import {allocateSplash,checkedDamageModel} from './splash.js?v=2.0.0';
+import {checkedBlastRadius} from './balance.js?v=2.0.0';
+import {LAB_ROCKET,labRocketSpread,planTerrainRocket,rocketReachAtDrop} from './ballistics.js?v=2.0.0';
+import {validateLevel} from './level.js?v=2.0.0';
+import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=2.0.0';
+import {createSoldier} from '../units/soldierCommon.js?v=2.0.0';
+import {WEAPONS,createRandom,applyDamage} from '../combat/weapons.js?v=2.0.0';
 export const LAB_STEP=1/120;
 export const eye=u=>({x:u.x,y:u.y-40});
 export function createSimulation(data,scenarioId,options={}){
@@ -14,8 +15,7 @@ export function createSimulation(data,scenarioId,options={}){
 }
 export function targetFor(sim,u){
  if(!sim.level.scenarios.find(s=>s.id===sim.scenarioId).combat)return null;
- const dir=u.team===0?1:-1;
- return sim.units.filter(v=>v.hp>0&&v.team!==u.team&&(v.x-u.x)*dir>=(u.type==='rifle'?0:LAB_ROCKET.minRange)&&(u.type!=='rifle'||(v.x-u.x)*dir<=WEAPONS.rifleRange)&&(u.type==='rocket'?!!rocketPlan(sim.level,u,v):visible(sim.level,eye(u),eye(v)))).sort((a,b)=>Math.abs(a.x-u.x)-Math.abs(b.x-u.x)||a.id-b.id)[0]??null;
+ return infantryTarget(sim.level,u,sim.units);
 }
 // TL-07: public adapter retained for isolated solver tests.
 export const rocketPlan=planTerrainRocket;
@@ -56,28 +56,18 @@ export function stepSimulation(sim,count=1){
    if(u.hp<=0)continue;
    const target=targetFor(sim,u);
    u.state=target?(u.type==='rocket'?'fireStop':'fireWalk'):'march';
-   u.rifleAimAngle=target?Math.atan2(target.y-32-(u.y-37),target.x-(u.x+(u.team===0?5:-5))):null;
+   u.rifleAimAngle=rifleBearing(u,target);
    u.fireCooldown=Math.max(0,u.fireCooldown-LAB_STEP);
    if(u.type==='rifle'&&target&&u.fireCooldown<=1e-8){
     // Real muzzle and uphill/downhill trajectory, no hidden penetration roll.
-    const angle=u.rifleAimAngle,a={x:u.x+(u.team===0?5:-5)+29*Math.cos(angle),y:u.y-37+29*Math.sin(angle)};
-    sim.projectiles.push({...a,vx:900*Math.cos(angle),vy:900*Math.sin(angle),shooterId:u.id,age:0,kind:'bullet',team:u.team});
+    sim.projectiles.push(rifleRound(u,target));
     recordShot(sim,u);sim.stats.rifleShots++;u.fireCooldown=.32;event(sim,{type:'rifleShot',id:u.id,x:u.x,y:u.y});
    }
    if(u.type==='rocket'){
     const dir=u.team===0?1:-1,focus=target||sim.units.filter(v=>v.hp>0&&v.team!==u.team&&(v.x-u.x)*dir>0).sort((a,b)=>Math.abs(a.x-u.x)-Math.abs(b.x-u.x)||a.id-b.id)[0];
     u.rocketReach=focus?{targetId:focus.id,distance:Math.abs(focus.x-u.x),drop:focus.y-(u.y-42),terrainDrop:focus.y-u.y,clearAir:rocketReachAtDrop(focus.y-(u.y-42)),reachable:!!target}:null;
-    const goal=target?rocketPlan(sim.level,u,target):null;u.rocketGoal=goal;u.rocketAimAngle=sim.time-(u.lastRocketAt??-Infinity)<.15?u.lastRocketAngle:goal?.angle??null;
-    u.rocketCooldown=Math.max(0,(u.rocketCooldown||0)-LAB_STEP);
-    if(!target||u.rocketTargetId!==target.id){u.rocketAimTime=0;u.rocketTargetId=target?.id??null;}
-    if(target&&u.rocketCooldown<=1e-8){
-     u.rocketAimTime=(u.rocketAimTime||0)+LAB_STEP;
-     if(u.rocketAimTime+1e-8>=WEAPONS.rocketAimSeconds){
-      const error=(sim.random()*2-1)*labRocketSpread(Math.abs(target.x-u.x))*dir,plan=rocketPlan(sim.level,u,target,error);
-      if(plan){sim.projectiles.push({...plan,kind:'rocket',team:u.team});recordShot(sim,u);u.rocketAimAngle=plan.angle;u.lastRocketAngle=plan.angle;u.lastRocketAt=sim.time;sim.stats.rocketShots++;event(sim,{type:'rocketShot',id:u.id,error,impactX:plan.impactX,angle:plan.angle,flightTime:plan.flightTime,speed:plan.speed});}
-      u.rocketAimTime=0;u.rocketCooldown=WEAPONS.rocketReloadSeconds;
-     }
-    }
+    const rocket=updateGroundRocket(sim.level,u,target,LAB_STEP,sim.time,sim.random);
+    if(rocket){sim.projectiles.push(rocket);recordShot(sim,u);sim.stats.rocketShots++;event(sim,{type:'rocketShot',id:u.id,error:rocket.error,impactX:rocket.impactX,angle:rocket.angle,flightTime:rocket.flightTime,speed:rocket.speed});}
    }
   }
   sim.projectiles=sim.projectiles.filter(p=>{

@@ -1,0 +1,3247 @@
+{
+  "secondsLimit": 600,
+  "seedCount": 3,
+  "scope": "Identical explicit blue purchase policy; actual control-input support controller; red AI fully active; no teleporting, damage injection or free purchases. Unfinished is not victory. One policy is not proof no ground-only strategy can win.",
+  "rows": [
+    {
+      "level": "first-assault",
+      "seed": 31,
+      "support": "none",
+      "time": 600,
+      "winner": null,
+      "finished": false,
+      "shots": 0,
+      "rocketShots": 1204,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "sortie"
+      },
+      "sorties": 0,
+      "purchases": [
+        106,
+        77
+      ],
+      "spent": [
+        3070,
+        2485
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 17
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 807,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 850,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 893,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1106.9249999999656,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1106.9249999999656,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 961.9999999999434,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1109.99999999997,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 827.9999999999808,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 357.999999999999,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        9,
+        11
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 31,
+      "support": "limited",
+      "time": 600,
+      "winner": null,
+      "finished": false,
+      "shots": 40,
+      "rocketShots": 1183,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400.00000000002217,
+        "y": 437,
+        "vx": -3.0304572998033855e-12,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "return"
+      },
+      "sorties": 0,
+      "purchases": [
+        120,
+        113
+      ],
+      "spent": [
+        3105,
+        3070
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 893,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 807,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1440.500000000076,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 850,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1440.500000000076,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1440.500000000076,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1440.500000000076,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1673.9999999999482,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1485.9999999999554,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1203.9999999999663,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1015.9999999999735,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 733.9999999999844,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 545.9999999999917,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 264.0000000000026,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        14,
+        9
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 31,
+      "support": "active",
+      "time": 167.84166666666667,
+      "winner": 0,
+      "finished": true,
+      "shots": 163,
+      "rocketShots": 61,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 2000.1954887404518,
+        "y": 330.07623035849946,
+        "vx": 48.32995063154387,
+        "vy": 0.2098915905123015,
+        "ammo": 72,
+        "grounded": false,
+        "phase": "sortie"
+      },
+      "sorties": 1,
+      "purchases": [
+        24,
+        36
+      ],
+      "spent": [
+        705,
+        935
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 893,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 807,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1950,
+          "guardBase": 1950,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 850,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2760,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2760,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2760,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1907,
+          "guardBase": 1950,
+          "state": "guard",
+          "order": {
+            "role": "garrison",
+            "baseX": 1950
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1993,
+          "guardBase": 1950,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2647,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2230.558333333366,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1948.5583333332709,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1760.5583333332781,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1478.558333333289,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 820.5583333333144,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        15,
+        0
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 32,
+      "support": "none",
+      "time": 600,
+      "winner": null,
+      "finished": false,
+      "shots": 0,
+      "rocketShots": 1497,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "sortie"
+      },
+      "sorties": 0,
+      "purchases": [
+        118,
+        93
+      ],
+      "spent": [
+        3090,
+        2710
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 893,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 807,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 850,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1392.6500000000601,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1392.6500000000601,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1392.6500000000601,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1366.5250000000515,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1861.9999999999409,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1579.9999999999518,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1391.999999999959,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1109.99999999997,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 921.9999999999771,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 639.9999999999881,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 451.99999999999534,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        14,
+        7
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 32,
+      "support": "limited",
+      "time": 600,
+      "winner": null,
+      "finished": false,
+      "shots": 40,
+      "rocketShots": 1216,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400.00000000002217,
+        "y": 437,
+        "vx": -3.0304572998033855e-12,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "return"
+      },
+      "sorties": 0,
+      "purchases": [
+        120,
+        113
+      ],
+      "spent": [
+        3105,
+        3070
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 893,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 807,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1423.7250000000704,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 850,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1423.7250000000704,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1423.7250000000704,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1423.7250000000704,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1667.866499999951,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1485.9999999999554,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1203.9999999999663,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1015.9999999999735,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 733.9999999999844,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 545.9999999999917,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 264.0000000000026,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        14,
+        8
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 32,
+      "support": "active",
+      "time": 154.04166666666666,
+      "winner": 0,
+      "finished": true,
+      "shots": 166,
+      "rocketShots": 59,
+      "helicopterHp": 95.00000000000227,
+      "generation": 1,
+      "aircraft": {
+        "x": 1470.5727807955332,
+        "y": 330.01308111481364,
+        "vx": 123.67980309888337,
+        "vy": -0.06494189253272303,
+        "ammo": 74,
+        "grounded": false,
+        "phase": "sortie"
+      },
+      "sorties": 1,
+      "purchases": [
+        23,
+        34
+      ],
+      "spent": [
+        680,
+        885
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 893,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 807,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1950,
+          "guardBase": 1950,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 850,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2374.1250000003847,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2374.1250000003847,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2374.1250000003847,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1907,
+          "guardBase": 1950,
+          "state": "guard",
+          "order": {
+            "role": "garrison",
+            "baseX": 1950
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1993,
+          "guardBase": 1950,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2647,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2239.9583333333712,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1581.958333333285,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1299.958333333296,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 641.9583333333213,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 171.9583333333334,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        15,
+        1
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 33,
+      "support": "none",
+      "time": 600,
+      "winner": null,
+      "finished": false,
+      "shots": 0,
+      "rocketShots": 1303,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "sortie"
+      },
+      "sorties": 0,
+      "purchases": [
+        110,
+        76
+      ],
+      "spent": [
+        3100,
+        2495
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 20
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 807,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 850,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 970.5249999999427,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 970.5249999999427,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 893,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 970.5249999999427,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 921.9999999999771,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 545.9999999999917,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 301.99999999999795,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        9,
+        12
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 33,
+      "support": "limited",
+      "time": 600,
+      "winner": null,
+      "finished": false,
+      "shots": 40,
+      "rocketShots": 1181,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400.00000000002217,
+        "y": 437,
+        "vx": -3.0304572998033855e-12,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "return"
+      },
+      "sorties": 0,
+      "purchases": [
+        120,
+        113
+      ],
+      "spent": [
+        3105,
+        3070
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 893,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 807,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1457.2750000000815,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 850,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1457.2750000000815,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1457.2750000000815,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1457.2750000000815,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1485.9999999999554,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1203.9999999999663,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1015.9999999999735,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 733.9999999999844,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 545.9999999999917,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 264.0000000000026,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        13,
+        8
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 33,
+      "support": "active",
+      "time": 247.84166666666667,
+      "winner": 0,
+      "finished": true,
+      "shots": 188,
+      "rocketShots": 96,
+      "helicopterHp": 95.0000000000033,
+      "generation": 1,
+      "aircraft": {
+        "x": 1396.17931411388,
+        "y": 329.9892663870952,
+        "vx": -0.38470143827559533,
+        "vy": 0.004738994322714855,
+        "ammo": 52,
+        "grounded": false,
+        "phase": "sortie"
+      },
+      "sorties": 1,
+      "purchases": [
+        37,
+        52
+      ],
+      "spent": [
+        1135,
+        1335
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 893,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 807,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1950,
+          "guardBase": 1950,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 850,
+          "guardBase": 850,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1907,
+          "guardBase": 1950,
+          "state": "guard",
+          "order": {
+            "role": "garrison",
+            "baseX": 1950
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1993,
+          "guardBase": 1950,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2760,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2760,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2741.250000000506,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2647,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2647,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2136.558333333315,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1290.5583333332963,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1008.5583333333071,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 820.5583333333144,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        15,
+        0
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 73,
+      "support": "none",
+      "time": 600,
+      "winner": null,
+      "finished": false,
+      "shots": 0,
+      "rocketShots": 1080,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "sortie"
+      },
+      "sorties": 0,
+      "purchases": [
+        107,
+        65
+      ],
+      "spent": [
+        3095,
+        2115
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 20
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 957,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1000,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 827.9999999999808,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 733.9999999999844,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 301.99999999999795,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        5,
+        11
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 73,
+      "support": "limited",
+      "time": 600,
+      "winner": null,
+      "finished": false,
+      "shots": 40,
+      "rocketShots": 1062,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400.00000000002217,
+        "y": 437,
+        "vx": -3.0304572998033855e-12,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "return"
+      },
+      "sorties": 0,
+      "purchases": [
+        107,
+        85
+      ],
+      "spent": [
+        2780,
+        2650
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 0
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 1043,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 957,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2283.342602907935,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1000,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2283.342602907935,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2283.342602907935,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2283.342602907935,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2427,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison",
+            "baseX": 2470
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2513,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2587.6119597516285,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2399.6119597515267,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2305.8077245230133,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1933.7500862664497,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1293.2091271648956,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 357.999999999999,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        15,
+        8
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 73,
+      "support": "active",
+      "time": 430.09166666666664,
+      "winner": 0,
+      "finished": true,
+      "shots": 445,
+      "rocketShots": 210,
+      "helicopterHp": 95,
+      "generation": 1,
+      "aircraft": {
+        "x": 1982.7798809013862,
+        "y": 205.64433517209804,
+        "vx": 97.36413715697265,
+        "vy": -0.45061096325416616,
+        "ammo": 25,
+        "grounded": false,
+        "phase": "sortie"
+      },
+      "sorties": 3,
+      "purchases": [
+        48,
+        85
+      ],
+      "spent": [
+        1375,
+        2265
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 1043,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 957,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2470,
+          "guardBase": 2470,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1000,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 3560,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2427,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison",
+            "baseX": 2470
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2513,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 3560,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 3560,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 3447,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2217.3364095046504,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1938.0584195997828,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1562.0584195997974,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 832.308333333314,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 174.30833333333348,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        15,
+        1
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 74,
+      "support": "none",
+      "time": 600,
+      "winner": null,
+      "finished": false,
+      "shots": 0,
+      "rocketShots": 829,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "sortie"
+      },
+      "sorties": 0,
+      "purchases": [
+        89,
+        86
+      ],
+      "spent": [
+        2330,
+        2780
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 16
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 1043,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 957,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2403.8369597517417,
+          "guardBase": 2470,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1000,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2403.8369597517417,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2403.8369597517417,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2403.8369597517417,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2427,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison",
+            "baseX": 2470
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2513,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2770.3130693126336,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1839.7500862664533,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1293.2091271648956,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1109.99999999997,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 639.9999999999881,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 264.0000000000026,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        15,
+        4
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 74,
+      "support": "limited",
+      "time": 600,
+      "winner": null,
+      "finished": false,
+      "shots": 40,
+      "rocketShots": 1039,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400.00000000002217,
+        "y": 437,
+        "vx": -3.0304572998033855e-12,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "return"
+      },
+      "sorties": 1,
+      "purchases": [
+        103,
+        102
+      ],
+      "spent": [
+        2680,
+        3005
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 1043,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 957,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2403.8369597517417,
+          "guardBase": 2470,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1000,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2403.8369597517417,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2403.8369597517417,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2403.8369597517417,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2427,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison",
+            "baseX": 2470
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2513,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2953.741298938825,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2770.3130693126336,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1557.888279222711,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 827.9999999999808,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 733.9999999999844,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 357.999999999999,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        15,
+        5
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 74,
+      "support": "active",
+      "time": 167.35,
+      "winner": 0,
+      "finished": true,
+      "shots": 215,
+      "rocketShots": 65,
+      "helicopterHp": 95.00000000000244,
+      "generation": 1,
+      "aircraft": {
+        "x": 1960.5077482079917,
+        "y": 209.56685890545646,
+        "vx": -61.54844821209048,
+        "vy": -1.9123672364323114,
+        "ammo": 25,
+        "grounded": false,
+        "phase": "sortie"
+      },
+      "sorties": 1,
+      "purchases": [
+        17,
+        34
+      ],
+      "spent": [
+        530,
+        955
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 1043,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 957,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2470,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1000,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 3447,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 3447,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2731.288768032046,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2731.288768032046,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2731.288768032046,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2427,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison",
+            "baseX": 2470
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2513,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 3283.289632272321,
+          "guardBase": null,
+          "state": "fireWalk",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1903.2000862664509,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 609.4499999999892,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 327.45000000000016,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        15,
+        1
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 75,
+      "support": "none",
+      "time": 600,
+      "winner": null,
+      "finished": false,
+      "shots": 0,
+      "rocketShots": 859,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400,
+        "y": 437,
+        "vx": 0,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "sortie"
+      },
+      "sorties": 0,
+      "purchases": [
+        84,
+        96
+      ],
+      "spent": [
+        2205,
+        2995
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 14
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 1043,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 957,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2470,
+          "guardBase": 2470,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1000,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2686.130696624305,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2686.130696624305,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2686.130696624305,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2427,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2513,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2305.8077245230133,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1839.7500862664533,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1381.4355111841674,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1015.9999999999735,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 545.9999999999917,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 357.999999999999,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        15,
+        1
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 75,
+      "support": "limited",
+      "time": 600,
+      "winner": null,
+      "finished": false,
+      "shots": 40,
+      "rocketShots": 1205,
+      "helicopterHp": 100,
+      "generation": 1,
+      "aircraft": {
+        "x": 400.00000000002217,
+        "y": 437,
+        "vx": -3.0304572998033855e-12,
+        "vy": 0,
+        "ammo": 120,
+        "grounded": true,
+        "phase": "return"
+      },
+      "sorties": 0,
+      "purchases": [
+        113,
+        96
+      ],
+      "spent": [
+        2930,
+        2855
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 1043,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 957,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1775.4750862663486,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1000,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1775.4750862663486,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1775.4750862663486,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1775.4750862663486,
+          "guardBase": null,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2120.365666842602,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1745.750086266457,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1557.888279222711,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1381.4355111841674,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1203.9999999999663,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1015.9999999999735,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 545.9999999999917,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 264.0000000000026,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        15,
+        7
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 75,
+      "support": "active",
+      "time": 214.20833333333334,
+      "winner": 0,
+      "finished": true,
+      "shots": 190,
+      "rocketShots": 108,
+      "helicopterHp": 95.00000000000546,
+      "generation": 1,
+      "aircraft": {
+        "x": 1801.3086060971666,
+        "y": 205.13528282601024,
+        "vx": 32.4380312024821,
+        "vy": 0.19350270081191343,
+        "ammo": 92,
+        "grounded": false,
+        "phase": "sortie"
+      },
+      "sorties": 2,
+      "purchases": [
+        27,
+        42
+      ],
+      "spent": [
+        850,
+        1190
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ],
+      "blueForce": [
+        {
+          "type": "rifle",
+          "x": 1043,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 957,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 2470,
+          "guardBase": 2470,
+          "state": "fireStop",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 1000,
+          "guardBase": 1000,
+          "state": "guard",
+          "order": {
+            "role": "opening-assault"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 3560,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2427,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison",
+            "baseX": 2470
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2513,
+          "guardBase": 2470,
+          "state": "guard",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 3447,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 3447,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 2315.4661650272014,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1478.85214353878,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1213.7916666666326,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rifle",
+          "x": 1025.79166666664,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 572.8749999999756,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        },
+        {
+          "type": "rocket",
+          "x": 506.874999999981,
+          "guardBase": null,
+          "state": "march",
+          "order": {
+            "role": "garrison"
+          }
+        }
+      ],
+      "living": [
+        15,
+        1
+      ]
+    }
+  ]
+}

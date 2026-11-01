@@ -31,7 +31,7 @@ export function observeBattlefield(units, bases, rules = factionRules(1)) {
   const fob=owned.find(base=>{const {incoming}=count(base);return incoming.rifle<2||incoming.rocket<1;})??owned[0];
   const {incoming,stationed}=count(fob);
   const missing={rifle:fob?Math.max(0,2-incoming.rifle):0,rocket:fob?Math.max(0,1-incoming.rocket):0};
-  const threatened = enemies.some(enemy => Math.abs(enemy.x - rules.hqX) <= STRATEGY_RULES.threatRadius);
+  const threatened = enemies.some(enemy => Math.abs(enemy.x - rules.hqX) <= rules.threatRadius);
   const enemyStaffed = !!enemyFob && enemies.some(unit => unit.arrived && unit.guardBase === enemyFob.x && enemyFob.slots[unit.type]?.includes(unit.id));
   return {allies, enemies, fob, enemyFob, missing, incoming, stationed, threatened, enemyStaffed};
 }
@@ -39,7 +39,7 @@ export function firstMissing(composition, members) {
   for (const type of ['rifle', 'rocket']) if (members.filter(unit => unit.type === type).length < composition[type]) return type;
   return null;
 }
-export function chooseStrategy(view, squads, now, regroupUntil, stronger) {
+export function chooseStrategy(view, squads, now, regroupUntil, stronger,compositions=COMPOSITIONS) {
   if (view.threatened) return {mode: 'DEFEND', label: 'Defending HQ', role: 'defense'};
   if (view.missing.rifle || view.missing.rocket) return {mode: 'GARRISON', label: 'Reinforcing FOB'};
   if (view.airPressure && (view.allies.filter(u=>u.type==='rocket').length<3||view.allies.filter(u=>u.type==='rifle').length<2)) return {mode:'AIR_DEFEND',label:'Countering helicopter',role:'air-defense'};
@@ -49,7 +49,7 @@ export function chooseStrategy(view, squads, now, regroupUntil, stronger) {
   const support = squads.find(squad => squad.phase === 'advance' && squad.role !== 'defense' && squad.reinforce && firstMissing(squad.composition, view.allies.filter(unit => squad.members.includes(unit.id))));
   if (support) return {mode: 'SUPPORT', label: 'Reinforcing advancing troops', squadId: support.id};
   const role = view.airPressure ? 'assault' : view.enemyStaffed ? 'assault' : 'intercept';
-  const composition = {...COMPOSITIONS[role]};
+  const composition = {...compositions[role]};
   if (stronger) {composition.rifle++; composition.rocket++;}
   return {mode: 'PREPARE', label: role === 'assault' ? 'Preparing assault' : 'Preparing interception', role, composition};
 }

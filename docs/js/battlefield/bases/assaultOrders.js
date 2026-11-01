@@ -1,6 +1,6 @@
-import {defenseCapacity} from './defenseRules.js?v=1.3.1';
-import {capturePoint} from './takeover.js';
-import {chooseRocketTarget,WEAPONS} from '../combat/weapons.js?v=1.3.1';
+import {defenseCapacity} from './defenseRules.js?v=2.0.0';
+import {capturePoint} from './takeover.js?v=2.0.0';
+import {chooseRocketTarget,WEAPONS} from '../combat/weapons.js?v=2.0.0';
 // CAP-01/03: empty fortified structures remain valid rocket targets.
 export function chooseAssaultRocketTarget(unit,units,bases){
  const direction=unit.team===0?1:-1;

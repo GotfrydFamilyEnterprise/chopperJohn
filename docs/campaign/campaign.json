@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "first-sorties",
+  "levels": [
+    {
+      "id": "first-assault",
+      "name": "First assault",
+      "file": "first-assault.json"
+    },
+    {
+      "id": "ridgeline",
+      "name": "Ridgeline",
+      "file": "ridgeline.json"
+    }
+  ]
+}
