@@ -131,7 +131,7 @@ Detailed H/HG/AA assertions, boundary cases and screenshot checklist remain in `
 | TL-10 | Fresh shared matrix vs archived individual baseline and independent review | Correct model labels and regenerated metrics/findings, honest timeouts and economic scope; no imported old-model conclusions |
 
 | CP-01 | JSON roundtrip and invalid map/catalog/profile/base/pad/faction/objective, fetch errors/retry | Both real maps load from JSON; failed candidates never replace active state; stable catalog links and safe geometry |
-| CP-02 | Matching infantry encounters in lab/campaign; live wave/paid buttons, guards and breach | Shared trajectory/weapon/damage rules; no blue infantry auto-buy; protected vs exposed rules and pre-breach ordering preserved |
+| CP-02 | Matching infantry encounters in lab/campaign; live wave/paid buttons, guards and breach | Shared trajectory/weapon/damage rules; no blue infantry auto-buy outside explicitly authorized platoons (PL-01–03); protected vs exposed rules and pre-breach ordering preserved |
 | CP-03 | Ground footsteps/angled bullets/terrain-blocked gun and rockets, elevated structures, live flight/AA/repair/capture | Geometric collision and actual y coordinates, real aircraft lifecycle and capture outcomes, frozen results |
 | CP-04 | Lock/unlock, real5s capture, defeat/draw, retry/next/menu, reload/corrupt/blocked storage, mobile/screenshots | Fresh attempts, sequential persisted completions, honest storage fallback, no input/time leak, controls fit |
 | CP-05 | Repeat no/limited/active support policies over both JSON maps and fixed seeds | Actual outcome/cost/shot evidence, deterministic replay, bounded support/difficulty interpretation; independent review and public preview |

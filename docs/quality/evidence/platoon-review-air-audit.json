@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "rows": 8,
+  "wins": 6,
+  "unfinished": 2,
+  "rowsSummary": [
+    {
+      "level": "first-assault",
+      "tactic": "independent",
+      "time": 137.66666666666666,
+      "rounds": 149,
+      "finished": true
+    },
+    {
+      "level": "first-assault",
+      "tactic": "assault",
+      "time": 131.96666666666667,
+      "rounds": 158,
+      "finished": true
+    },
+    {
+      "level": "first-assault",
+      "tactic": "siege",
+      "time": 123.30833333333334,
+      "rounds": 150,
+      "finished": true
+    },
+    {
+      "level": "first-assault",
+      "tactic": "spread",
+      "time": 600,
+      "rounds": 155,
+      "finished": false
+    },
+    {
+      "level": "ridgeline",
+      "tactic": "independent",
+      "time": 301.9166666666667,
+      "rounds": 352,
+      "finished": true
+    },
+    {
+      "level": "ridgeline",
+      "tactic": "assault",
+      "time": 600,
+      "rounds": 219,
+      "finished": false
+    },
+    {
+      "level": "ridgeline",
+      "tactic": "siege",
+      "time": 145.65,
+      "rounds": 195,
+      "finished": true
+    },
+    {
+      "level": "ridgeline",
+      "tactic": "spread",
+      "time": 144.975,
+      "rounds": 221,
+      "finished": true
+    }
+  ]
+}
