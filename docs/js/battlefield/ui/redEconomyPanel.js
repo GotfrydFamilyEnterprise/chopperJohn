@@ -1,4 +1,4 @@
-import {SUPPLY_RULES} from '../economy/supply.js?v=2.0.0';
+import {SUPPLY_RULES} from '../economy/supply.js?v=2.1.0';
 // EC-05: a narrow UI adapter; no accounting or strategic decisions live here.
 export function renderRedEconomy(element, state, detail) {
   const account = state.supply;

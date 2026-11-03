@@ -1,7 +1,7 @@
-import {projectileTail} from './ballistics.js?v=2.0.0';
-import {groundY,visible} from './heightfield.js?v=2.0.0';
-import {eye} from './simulation.js?v=2.0.0';
-import {gait,TEAM_COLORS} from '../units/soldierCommon.js?v=2.0.0';
+import {projectileTail} from './ballistics.js?v=2.1.0';
+import {groundY,visible} from './heightfield.js?v=2.1.0';
+import {eye} from './simulation.js?v=2.1.0';
+import {gait,TEAM_COLORS} from '../units/soldierCommon.js?v=2.1.0';
 function line(ctx,a,b){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
 export function drawTerrainSoldier(ctx,u,level){
  const dir=u.team===0?1:-1,color=TEAM_COLORS[u.team],pose=gait(u.phase,u.mode==='walk'&&Math.abs(u.observedVelocity||0)>1e-9?1:0),x=u.x,y=u.y;

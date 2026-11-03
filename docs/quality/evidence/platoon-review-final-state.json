@@ -1,0 +1,2768 @@
+{
+  "units": [
+    {
+      "id": 1,
+      "team": 0,
+      "type": "rifle",
+      "x": 893,
+      "y": 460,
+      "phase": 0.6054545454545672,
+      "velocity": 47,
+      "state": "guard",
+      "timer": 0,
+      "observedVelocity": 0,
+      "hp": 3,
+      "fireCooldown": 0,
+      "guardBase": 850,
+      "guardSlot": 1,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 0,
+      "firstShotAt": null,
+      "damageTaken": 0,
+      "order": {
+        "role": "garrison"
+      },
+      "sprinting": false,
+      "rifleAimAngle": null,
+      "arrived": true
+    },
+    {
+      "id": 2,
+      "team": 0,
+      "type": "rifle",
+      "x": 807,
+      "y": 460,
+      "phase": 0.14272727272728997,
+      "velocity": 47,
+      "state": "guard",
+      "timer": 0,
+      "observedVelocity": 0,
+      "hp": 3,
+      "fireCooldown": 0,
+      "guardBase": 850,
+      "guardSlot": 0,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 0,
+      "firstShotAt": null,
+      "damageTaken": 0,
+      "order": {
+        "role": "garrison"
+      },
+      "sprinting": false,
+      "rifleAimAngle": null,
+      "arrived": true
+    },
+    {
+      "id": 4,
+      "team": 0,
+      "type": "rocket",
+      "x": 850,
+      "y": 460,
+      "phase": 0.6945454545454973,
+      "velocity": 33,
+      "state": "guard",
+      "timer": 0,
+      "observedVelocity": 0,
+      "hp": 4,
+      "fireCooldown": 0,
+      "guardBase": 850,
+      "guardSlot": 0,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 13,
+      "firstShotAt": 26.349999999999998,
+      "damageTaken": 0,
+      "order": {
+        "role": "garrison"
+      },
+      "sprinting": false,
+      "rocketAssignment": null,
+      "rocketAllocation": null,
+      "rocketTargetId": null,
+      "rocketAimTime": 0,
+      "rocketTargetKind": null,
+      "rocketGoal": null,
+      "rocketAimAngle": null,
+      "rocketCooldown": 0,
+      "arrived": true,
+      "lastRocketAngle": -0.4967456223782568,
+      "lastRocketAt": 82.175
+    },
+    {
+      "id": 5,
+      "team": 0,
+      "type": "rocket",
+      "x": 2120,
+      "y": 460,
+      "phase": 0.18636363636375314,
+      "velocity": 33,
+      "state": "march",
+      "timer": 0,
+      "observedVelocity": 0,
+      "hp": 3.0171453526099885,
+      "fireCooldown": 0,
+      "guardBase": null,
+      "guardSlot": null,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 94,
+      "firstShotAt": 27.9,
+      "damageTaken": 0.9828546473900115,
+      "order": {
+        "role": "platoon",
+        "platoonId": 1
+      },
+      "platoonId": 1,
+      "platoonSlot": 2,
+      "sprinting": false,
+      "rocketAssignment": null,
+      "rocketAllocation": null,
+      "rocketTargetId": null,
+      "rocketAimTime": 0,
+      "rocketTargetKind": null,
+      "rocketGoal": null,
+      "rocketAimAngle": null,
+      "rocketCooldown": 1.6916666666666713,
+      "lastRocketAngle": -0.17411788961067684,
+      "lastRocketAt": 478.69166666666666
+    },
+    {
+      "id": 11,
+      "team": 0,
+      "type": "rifle",
+      "x": 1940,
+      "y": 460,
+      "phase": 0.6372727272728339,
+      "velocity": 47,
+      "state": "march",
+      "timer": 0,
+      "observedVelocity": 0,
+      "hp": 3,
+      "fireCooldown": 0,
+      "guardBase": null,
+      "guardSlot": null,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 0,
+      "firstShotAt": null,
+      "damageTaken": 0,
+      "isSergeant": true,
+      "captureEligible": false,
+      "platoonId": 1,
+      "order": {
+        "role": "platoon",
+        "platoonId": 1
+      },
+      "sprinting": false,
+      "rifleAimAngle": null
+    },
+    {
+      "id": 15,
+      "team": 0,
+      "type": "rocket",
+      "x": 2170,
+      "y": 460,
+      "phase": 0.10454545454557497,
+      "velocity": 33,
+      "state": "march",
+      "timer": 0,
+      "observedVelocity": 0,
+      "hp": 1.9485099321594506,
+      "fireCooldown": 0,
+      "guardBase": null,
+      "guardSlot": null,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 98,
+      "firstShotAt": 27.141666666666666,
+      "damageTaken": 2.0514900678405494,
+      "platoonId": 1,
+      "platoonSlot": 3,
+      "order": {
+        "role": "platoon",
+        "platoonId": 1
+      },
+      "sprinting": false,
+      "rocketAssignment": null,
+      "rocketAllocation": null,
+      "rocketTargetId": null,
+      "rocketAimTime": 0,
+      "rocketTargetKind": null,
+      "rocketGoal": null,
+      "rocketAimAngle": null,
+      "rocketCooldown": 1.6916666666666713,
+      "lastRocketAngle": -0.14213022822756816,
+      "lastRocketAt": 478.69166666666666
+    },
+    {
+      "id": 17,
+      "team": 0,
+      "type": "rifle",
+      "x": 1940,
+      "y": 460,
+      "phase": 0.4972727272728324,
+      "velocity": 47,
+      "state": "march",
+      "timer": 0,
+      "observedVelocity": 0,
+      "hp": 3,
+      "fireCooldown": 0,
+      "guardBase": null,
+      "guardSlot": null,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 0,
+      "firstShotAt": null,
+      "damageTaken": 0,
+      "isSergeant": true,
+      "captureEligible": false,
+      "platoonId": 4,
+      "order": {
+        "role": "platoon",
+        "platoonId": 4
+      },
+      "sprinting": false,
+      "rifleAimAngle": null
+    },
+    {
+      "id": 21,
+      "team": 0,
+      "type": "rocket",
+      "x": 2120,
+      "y": 460,
+      "phase": 0.8281818181819354,
+      "velocity": 33,
+      "state": "march",
+      "timer": 0,
+      "observedVelocity": 0,
+      "hp": 3.077877540937047,
+      "fireCooldown": 0,
+      "guardBase": null,
+      "guardSlot": null,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 82,
+      "firstShotAt": 72.30833333333334,
+      "damageTaken": 0.9221224590629529,
+      "platoonId": 4,
+      "platoonSlot": 2,
+      "order": {
+        "role": "platoon",
+        "platoonId": 4
+      },
+      "sprinting": false,
+      "rocketAssignment": null,
+      "rocketAllocation": null,
+      "rocketTargetId": null,
+      "rocketAimTime": 0,
+      "rocketTargetKind": null,
+      "rocketGoal": null,
+      "rocketAimAngle": null,
+      "rocketCooldown": 1.6916666666666713,
+      "lastRocketAngle": -0.1816941770680059,
+      "lastRocketAt": 478.69166666666666
+    },
+    {
+      "id": 30,
+      "team": 0,
+      "type": "rocket",
+      "x": 2170,
+      "y": 460,
+      "phase": 0.7545454545455739,
+      "velocity": 33,
+      "state": "march",
+      "timer": 0,
+      "observedVelocity": 0,
+      "hp": 3.088565608025016,
+      "fireCooldown": 0,
+      "guardBase": null,
+      "guardSlot": null,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 87,
+      "firstShotAt": 67.95833333333333,
+      "damageTaken": 0.9114343919749839,
+      "platoonId": 4,
+      "platoonSlot": 3,
+      "order": {
+        "role": "platoon",
+        "platoonId": 4
+      },
+      "sprinting": false,
+      "rocketAssignment": null,
+      "rocketAllocation": null,
+      "rocketTargetId": null,
+      "rocketAimTime": 0,
+      "rocketTargetKind": null,
+      "rocketGoal": null,
+      "rocketAimAngle": null,
+      "rocketCooldown": 1.6916666666666713,
+      "lastRocketAngle": -0.18228694122308747,
+      "lastRocketAt": 478.69166666666666
+    },
+    {
+      "id": 175,
+      "team": 0,
+      "type": "rifle",
+      "x": 2165.1499999999446,
+      "y": 460,
+      "phase": 0.5943181818169442,
+      "velocity": 47,
+      "state": "march",
+      "timer": 0,
+      "observedVelocity": 93.99999999999636,
+      "hp": 3,
+      "fireCooldown": 0,
+      "guardBase": null,
+      "guardSlot": null,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 0,
+      "firstShotAt": null,
+      "damageTaken": 0,
+      "platoonId": 4,
+      "platoonSlot": 1,
+      "order": {
+        "role": "platoon",
+        "platoonId": 4
+      },
+      "sprinting": true,
+      "rifleAimAngle": null
+    },
+    {
+      "id": 177,
+      "team": 0,
+      "type": "rifle",
+      "x": 1695.1499999999628,
+      "y": 460,
+      "phase": 0.5324999999991663,
+      "velocity": 47,
+      "state": "march",
+      "timer": 0,
+      "observedVelocity": 93.99999999999636,
+      "hp": 3,
+      "fireCooldown": 0,
+      "guardBase": null,
+      "guardSlot": null,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 0,
+      "firstShotAt": null,
+      "damageTaken": 0,
+      "platoonId": 1,
+      "platoonSlot": 1,
+      "order": {
+        "role": "platoon",
+        "platoonId": 1
+      },
+      "sprinting": true,
+      "rifleAimAngle": null
+    },
+    {
+      "id": 180,
+      "team": 0,
+      "type": "rifle",
+      "x": 752.7999999999992,
+      "y": 460,
+      "phase": 0.045454545454523126,
+      "velocity": 47,
+      "state": "march",
+      "timer": 0,
+      "observedVelocity": 93.99999999999636,
+      "hp": 3,
+      "fireCooldown": 0,
+      "guardBase": null,
+      "guardSlot": null,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 0,
+      "firstShotAt": null,
+      "damageTaken": 0,
+      "platoonId": 4,
+      "platoonSlot": 0,
+      "order": {
+        "role": "platoon",
+        "platoonId": 4
+      },
+      "sprinting": true,
+      "rifleAimAngle": null
+    },
+    {
+      "id": 182,
+      "team": 0,
+      "type": "rifle",
+      "x": 282.8000000000007,
+      "y": 460,
+      "phase": 0.9836363636363779,
+      "velocity": 47,
+      "state": "march",
+      "timer": 0,
+      "observedVelocity": 94.00000000000318,
+      "hp": 3,
+      "fireCooldown": 0,
+      "guardBase": null,
+      "guardSlot": null,
+      "hitFlash": 0,
+      "mode": "walk",
+      "shotsFired": 0,
+      "firstShotAt": null,
+      "damageTaken": 0,
+      "platoonId": 1,
+      "platoonSlot": 0,
+      "order": {
+        "role": "platoon",
+        "platoonId": 1
+      },
+      "sprinting": true,
+      "rifleAimAngle": null
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "team": 0,
+      "leaderId": 11,
+      "strategy": "siege",
+      "composition": {
+        "rifle": 3,
+        "rocket": 2
+      },
+      "phase": "capture",
+      "rallyX": 280,
+      "createdAt": 0,
+      "launchedAt": 5.275,
+      "slots": [
+        {
+          "index": 0,
+          "type": "rifle",
+          "unitId": 182,
+          "joined": false,
+          "replacement": true
+        },
+        {
+          "index": 1,
+          "type": "rifle",
+          "unitId": 177,
+          "joined": false,
+          "replacement": true
+        },
+        {
+          "index": 2,
+          "type": "rocket",
+          "unitId": 5,
+          "joined": true,
+          "replacement": false
+        },
+        {
+          "index": 3,
+          "type": "rocket",
+          "unitId": 15,
+          "joined": true,
+          "replacement": false
+        }
+      ],
+      "blockReason": "advancing",
+      "objectiveId": "red-hq"
+    },
+    {
+      "id": 4,
+      "team": 0,
+      "leaderId": 17,
+      "strategy": "siege",
+      "composition": {
+        "rifle": 3,
+        "rocket": 2
+      },
+      "phase": "capture",
+      "rallyX": 280,
+      "createdAt": 6,
+      "launchedAt": 53.275,
+      "slots": [
+        {
+          "index": 0,
+          "type": "rifle",
+          "unitId": 180,
+          "joined": false,
+          "replacement": true
+        },
+        {
+          "index": 1,
+          "type": "rifle",
+          "unitId": 175,
+          "joined": false,
+          "replacement": true
+        },
+        {
+          "index": 2,
+          "type": "rocket",
+          "unitId": 21,
+          "joined": true,
+          "replacement": false
+        },
+        {
+          "index": 3,
+          "type": "rocket",
+          "unitId": 30,
+          "joined": true,
+          "replacement": false
+        }
+      ],
+      "blockReason": "advancing",
+      "objectiveId": "red-hq"
+    }
+  ],
+  "bases": [
+    {
+      "x": 110,
+      "team": 0,
+      "main": true,
+      "defensePoints": 6,
+      "captureProgress": 0,
+      "captureTeam": null,
+      "rebuildProgress": 0,
+      "everCaptured": false,
+      "slots": {
+        "rifle": [
+          null,
+          null
+        ],
+        "rocket": [
+          null
+        ]
+      },
+      "reservations": {
+        "rifle": [
+          null,
+          null
+        ],
+        "rocket": [
+          null
+        ]
+      },
+      "state": "UNCLAIMED",
+      "everOccupied": false,
+      "flagProgress": 0,
+      "id": "blue-hq",
+      "y": 460,
+      "coverFlash": 0,
+      "defenseFlash": 0,
+      "contested": false
+    },
+    {
+      "x": 2690,
+      "team": 1,
+      "main": true,
+      "defensePoints": 0,
+      "captureProgress": 0,
+      "captureTeam": null,
+      "rebuildProgress": 0,
+      "everCaptured": false,
+      "slots": {
+        "rifle": [
+          null,
+          null
+        ],
+        "rocket": [
+          null
+        ]
+      },
+      "reservations": {
+        "rifle": [
+          null,
+          null
+        ],
+        "rocket": [
+          null
+        ]
+      },
+      "state": "UNCLAIMED",
+      "everOccupied": false,
+      "flagProgress": 0,
+      "id": "red-hq",
+      "y": 460,
+      "coverFlash": 0,
+      "defenseFlash": 0,
+      "contested": false
+    },
+    {
+      "x": 850,
+      "team": 0,
+      "main": false,
+      "defensePoints": 20,
+      "captureProgress": 0,
+      "captureTeam": null,
+      "rebuildProgress": 0,
+      "everCaptured": false,
+      "slots": {
+        "rifle": [
+          2,
+          1
+        ],
+        "rocket": [
+          4
+        ]
+      },
+      "reservations": {
+        "rifle": [
+          2,
+          1
+        ],
+        "rocket": [
+          4
+        ]
+      },
+      "state": "OCCUPIED",
+      "everOccupied": true,
+      "flagProgress": 1,
+      "id": "blue-fob",
+      "y": 460,
+      "coverFlash": 0,
+      "defenseFlash": 0,
+      "contested": false
+    },
+    {
+      "x": 1950,
+      "team": 0,
+      "main": false,
+      "defensePoints": 20,
+      "captureProgress": 0,
+      "captureTeam": null,
+      "rebuildProgress": 0,
+      "everCaptured": true,
+      "slots": {
+        "rifle": [
+          null,
+          null
+        ],
+        "rocket": [
+          null
+        ]
+      },
+      "reservations": {
+        "rifle": [
+          null,
+          null
+        ],
+        "rocket": [
+          null
+        ]
+      },
+      "state": "UNCLAIMED",
+      "everOccupied": false,
+      "flagProgress": 1,
+      "id": "red-fob",
+      "y": 460,
+      "coverFlash": 0,
+      "defenseFlash": 0,
+      "contested": false
+    }
+  ],
+  "commanders": [
+    {
+      "rules": {
+        "team": 0,
+        "hqX": 110,
+        "spawnX": 170,
+        "rallyX": 280,
+        "defenseX": 330,
+        "threatRadius": 800,
+        "decisionInterval": 3,
+        "regroupSeconds": 12,
+        "fieldLossThreshold": 10,
+        "maxFormationGap": 360,
+        "direction": 1,
+        "goalX": 2630
+      },
+      "compositions": {
+        "intercept": {
+          "rifle": 3,
+          "rocket": 2
+        },
+        "assault": {
+          "rifle": 3,
+          "rocket": 3
+        },
+        "defense": {
+          "rifle": 3,
+          "rocket": 1
+        }
+      },
+      "supply": {
+        "balance": 220.9583333333263,
+        "time": 479.9999999997278,
+        "cooldown": 0.8083333333333376,
+        "earned": 2205.958333334489,
+        "overflow": 194.04166666641686,
+        "spent": 2105,
+        "purchases": 80,
+        "ledger": [
+          {
+            "time": 0,
+            "unitId": 11,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 95
+          },
+          {
+            "time": 1.9999999999999953,
+            "unitId": 13,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 80.00000000000114
+          },
+          {
+            "time": 3.9999999999999885,
+            "unitId": 15,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 30.000000000002274
+          },
+          {
+            "time": 6.000000000000088,
+            "unitId": 17,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 15.000000000001876
+          },
+          {
+            "time": 8.000000000000187,
+            "unitId": 19,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 2.1174173525650986e-12
+          },
+          {
+            "time": 12.999999999999902,
+            "unitId": 20,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 2.284394895468722e-12
+          },
+          {
+            "time": 24.999999999999222,
+            "unitId": 21,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 1.0587086762825493e-12
+          },
+          {
+            "time": 29.999999999998938,
+            "unitId": 23,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.2256862191861728e-12
+          },
+          {
+            "time": 34.99999999999866,
+            "unitId": 25,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.3926637620897964e-12
+          },
+          {
+            "time": 45.17499999999808,
+            "unitId": 28,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 25.875000000000682
+          },
+          {
+            "time": 51.99999999999769,
+            "unitId": 30,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 0
+          },
+          {
+            "time": 56.99999999999741,
+            "unitId": 33,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.6342482922482304e-13
+          },
+          {
+            "time": 61.99999999999712,
+            "unitId": 35,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 3.304023721284466e-13
+          },
+          {
+            "time": 68.36666666666714,
+            "unitId": 36,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 6.833333333334025
+          },
+          {
+            "time": 75.51666666667283,
+            "unitId": 39,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 17.58333333333377
+          },
+          {
+            "time": 89.8333333333509,
+            "unitId": 43,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 64.16666666666855
+          },
+          {
+            "time": 93.733333333354,
+            "unitId": 44,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 58.666666666670764
+          },
+          {
+            "time": 101.1166666666932,
+            "unitId": 47,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 70.58333333334072
+          },
+          {
+            "time": 104.83333333336283,
+            "unitId": 48,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 64.16666666667616
+          },
+          {
+            "time": 108.11666666669878,
+            "unitId": 50,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 55.5833333333447
+          },
+          {
+            "time": 112.20000000003536,
+            "unitId": 51,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 51.00000000001225
+          },
+          {
+            "time": 120.41666666670857,
+            "unitId": 54,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 67.08333333334804
+          },
+          {
+            "time": 126.22500000004652,
+            "unitId": 56,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 71.125000000018
+          },
+          {
+            "time": 129.43333333337995,
+            "unitId": 57,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 62.166666666686496
+          },
+          {
+            "time": 132.20833333337742,
+            "unitId": 59,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 51.04166666668776
+          },
+          {
+            "time": 141.95000000003523,
+            "unitId": 62,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 74.75000000002443
+          },
+          {
+            "time": 147.51666666669684,
+            "unitId": 64,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 77.58333333336093
+          },
+          {
+            "time": 151.93333333335949,
+            "unitId": 66,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 74.66666666669677
+          },
+          {
+            "time": 157.55833333335437,
+            "unitId": 68,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 77.79166666669997
+          },
+          {
+            "time": 162.67500000001638,
+            "unitId": 70,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 78.37500000003621
+          },
+          {
+            "time": 166.58333333334616,
+            "unitId": 72,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 72.9166666667051
+          },
+          {
+            "time": 178.30000000000217,
+            "unitId": 75,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 106.50000000004388
+          },
+          {
+            "time": 189.6666666666585,
+            "unitId": 77,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 138.33333333337163
+          },
+          {
+            "time": 192.81666666665564,
+            "unitId": 78,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 129.08333333336805
+          },
+          {
+            "time": 204.33333333331183,
+            "unitId": 82,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 161.6666666666883
+          },
+          {
+            "time": 206.70833333330967,
+            "unitId": 83,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 148.5416666666856
+          },
+          {
+            "time": 212.04166666663815,
+            "unitId": 85,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 150.2083333333462
+          },
+          {
+            "time": 216.28333333330096,
+            "unitId": 87,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 146.4166666666747
+          },
+          {
+            "time": 227.40833333329084,
+            "unitId": 90,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 177.04166666666205
+          },
+          {
+            "time": 230.68333333328786,
+            "unitId": 92,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 168.41666666665833
+          },
+          {
+            "time": 235.72499999994994,
+            "unitId": 94,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 168.62499999998593
+          },
+          {
+            "time": 239.89999999994615,
+            "unitId": 96,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 164.49999999998118
+          },
+          {
+            "time": 250.0166666666036,
+            "unitId": 99,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 190.08333333330302
+          },
+          {
+            "time": 252.99999999993423,
+            "unitId": 101,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 179.9999999999663
+          },
+          {
+            "time": 258.3333333332627,
+            "unitId": 103,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 181.6666666666269
+          },
+          {
+            "time": 262.2166666665925,
+            "unitId": 104,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 176.08333333328915
+          },
+          {
+            "time": 272.6249999999164,
+            "unitId": 107,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 203.12499999994398
+          },
+          {
+            "time": 276.14166666657985,
+            "unitId": 109,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 195.70833333327332
+          },
+          {
+            "time": 283.44999999990654,
+            "unitId": 112,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 207.24999999993167
+          },
+          {
+            "time": 288.7083333332351,
+            "unitId": 114,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 208.54166666659236
+          },
+          {
+            "time": 298.7416666665593,
+            "unitId": 117,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 215
+          },
+          {
+            "time": 303.6666666665548,
+            "unitId": 119,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.6249999999944
+          },
+          {
+            "time": 308.7666666665502,
+            "unitId": 121,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 215
+          },
+          {
+            "time": 313.7833333332123,
+            "unitId": 123,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 215
+          },
+          {
+            "time": 323.79999999986984,
+            "unitId": 126,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 215
+          },
+          {
+            "time": 328.7999999998653,
+            "unitId": 128,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.99999999999432
+          },
+          {
+            "time": 333.7833333331941,
+            "unitId": 130,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.91666666665532
+          },
+          {
+            "time": 338.78333333318955,
+            "unitId": 132,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.91666666664963
+          },
+          {
+            "time": 348.8083333331804,
+            "unitId": 135,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 215
+          },
+          {
+            "time": 353.8083333331759,
+            "unitId": 137,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.99999999999432
+          },
+          {
+            "time": 358.78333333317136,
+            "unitId": 139,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.87499999998866
+          },
+          {
+            "time": 363.7833333331668,
+            "unitId": 141,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.87499999998298
+          },
+          {
+            "time": 373.8083333331577,
+            "unitId": 144,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 215
+          },
+          {
+            "time": 378.80833333315314,
+            "unitId": 146,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.99999999999432
+          },
+          {
+            "time": 383.7833333331486,
+            "unitId": 148,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.87499999998866
+          },
+          {
+            "time": 388.78333333314407,
+            "unitId": 150,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.87499999998298
+          },
+          {
+            "time": 398.80833333313495,
+            "unitId": 153,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 215
+          },
+          {
+            "time": 403.8083333331304,
+            "unitId": 155,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.99999999999432
+          },
+          {
+            "time": 408.7833333331259,
+            "unitId": 157,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.87499999998866
+          },
+          {
+            "time": 413.78333333312133,
+            "unitId": 159,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.87499999998298
+          },
+          {
+            "time": 423.8083333331122,
+            "unitId": 162,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 215
+          },
+          {
+            "time": 428.80833333310767,
+            "unitId": 164,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.99999999999432
+          },
+          {
+            "time": 433.78333333310314,
+            "unitId": 166,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.87499999998866
+          },
+          {
+            "time": 438.7833333330986,
+            "unitId": 168,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.87499999998298
+          },
+          {
+            "time": 448.8083333330895,
+            "unitId": 171,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 215
+          },
+          {
+            "time": 453.80833333308493,
+            "unitId": 173,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.99999999999432
+          },
+          {
+            "time": 458.7833333330804,
+            "unitId": 175,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.87499999998866
+          },
+          {
+            "time": 463.78333333307586,
+            "unitId": 177,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.87499999998298
+          },
+          {
+            "time": 473.80833333306674,
+            "unitId": 180,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 215
+          },
+          {
+            "time": 478.8083333330622,
+            "unitId": 182,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 214.99999999999432
+          }
+        ]
+      },
+      "squads": [],
+      "nextSquadId": 1,
+      "strategy": {
+        "mode": "MANUAL",
+        "label": "Manual deployment"
+      },
+      "nextDecisionAt": 0,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [],
+      "blockReason": "ready",
+      "observations": null
+    },
+    {
+      "rules": {
+        "team": 1,
+        "hqX": 2690,
+        "spawnX": 2630,
+        "rallyX": 2520,
+        "defenseX": 2470,
+        "threatRadius": 800,
+        "decisionInterval": 3,
+        "regroupSeconds": 12,
+        "fieldLossThreshold": 10,
+        "maxFormationGap": 360,
+        "direction": -1,
+        "goalX": 170
+      },
+      "compositions": {
+        "intercept": {
+          "rifle": 2,
+          "rocket": 1
+        },
+        "assault": {
+          "rifle": 2,
+          "rocket": 2
+        },
+        "defense": {
+          "rifle": 3,
+          "rocket": 1
+        }
+      },
+      "supply": {
+        "balance": 10.000000000017485,
+        "time": 479.9999999997278,
+        "cooldown": 4.603956105242446e-15,
+        "earned": 2400.000000000209,
+        "overflow": 0,
+        "spent": 2510,
+        "purchases": 92,
+        "ledger": [
+          {
+            "time": 0.008333333333333333,
+            "unitId": 12,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 95.04166666666667
+          },
+          {
+            "time": 3.108333333333325,
+            "unitId": 14,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 85.54166666666843
+          },
+          {
+            "time": 5.108333333333377,
+            "unitId": 16,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 70.54166666666957
+          },
+          {
+            "time": 7.108333333333476,
+            "unitId": 18,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 20.541666666670707
+          },
+          {
+            "time": 29.733333333332286,
+            "unitId": 22,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 108.66666666667518
+          },
+          {
+            "time": 34.19166666666537,
+            "unitId": 24,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 105.95833333334338
+          },
+          {
+            "time": 42.399999999998236,
+            "unitId": 26,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 122.00000000000821
+          },
+          {
+            "time": 44.39999999999812,
+            "unitId": 27,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 72.00000000000799
+          },
+          {
+            "time": 46.39999999999801,
+            "unitId": 29,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 57.00000000000912
+          },
+          {
+            "time": 53.69166666666426,
+            "unitId": 31,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 68.45833333334541
+          },
+          {
+            "time": 55.69166666666415,
+            "unitId": 32,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 18.458333333346545
+          },
+          {
+            "time": 58.80833333333064,
+            "unitId": 34,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 9.041666666680143
+          },
+          {
+            "time": 68.36666666666714,
+            "unitId": 37,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 31.833333333345756
+          },
+          {
+            "time": 72.5083333333371,
+            "unitId": 38,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 27.541666666677926
+          },
+          {
+            "time": 79.00000000000894,
+            "unitId": 40,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 9.79127889877418e-12
+          },
+          {
+            "time": 84.00000000001292,
+            "unitId": 41,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 9.958256441677804e-12
+          },
+          {
+            "time": 89.0000000000169,
+            "unitId": 42,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.0125233984581428e-11
+          },
+          {
+            "time": 94.00000000002088,
+            "unitId": 45,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.0292211527485051e-11
+          },
+          {
+            "time": 99.00000000002485,
+            "unitId": 46,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.0459189070388675e-11
+          },
+          {
+            "time": 107.50833333336496,
+            "unitId": 49,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 17.54166666667689
+          },
+          {
+            "time": 113.7500000000366,
+            "unitId": 52,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 23.750000000009678
+          },
+          {
+            "time": 119.79166666670807,
+            "unitId": 53,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 28.958333333341997
+          },
+          {
+            "time": 126.00000000004634,
+            "unitId": 55,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 7.155165349104209e-12
+          },
+          {
+            "time": 131.0000000000452,
+            "unitId": 58,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 7.322142892007832e-12
+          },
+          {
+            "time": 136.00000000004064,
+            "unitId": 60,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 7.489120434911456e-12
+          },
+          {
+            "time": 141.0000000000361,
+            "unitId": 61,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 7.65609797781508e-12
+          },
+          {
+            "time": 147.24166666669709,
+            "unitId": 63,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 6.208333333341333
+          },
+          {
+            "time": 151.000000000027,
+            "unitId": 65,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 8.15347789284715e-12
+          },
+          {
+            "time": 156.00000000002245,
+            "unitId": 67,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 8.320455435750773e-12
+          },
+          {
+            "time": 161.0000000000179,
+            "unitId": 69,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 8.487432978654397e-12
+          },
+          {
+            "time": 166.00000000001336,
+            "unitId": 71,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 8.65441052155802e-12
+          },
+          {
+            "time": 171.0000000000088,
+            "unitId": 73,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 8.821388064461644e-12
+          },
+          {
+            "time": 176.00000000000426,
+            "unitId": 74,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 8.988365607365267e-12
+          },
+          {
+            "time": 187.99999999999335,
+            "unitId": 76,
+            "type": "rocket",
+            "cost": 60,
+            "balance": 7.759126674500294e-12
+          },
+          {
+            "time": 192.9999999999888,
+            "unitId": 79,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 7.926104217403918e-12
+          },
+          {
+            "time": 198.33333333331728,
+            "unitId": 80,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.6666666666748071
+          },
+          {
+            "time": 202.9999999999797,
+            "unitId": 81,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 8.306244581035571e-12
+          },
+          {
+            "time": 207.99999999997516,
+            "unitId": 84,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 8.473222123939195e-12
+          },
+          {
+            "time": 212.9999999999706,
+            "unitId": 86,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 8.640199666842818e-12
+          },
+          {
+            "time": 217.99999999996606,
+            "unitId": 88,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 8.807177209746442e-12
+          },
+          {
+            "time": 222.99999999996152,
+            "unitId": 89,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 8.974154752650065e-12
+          },
+          {
+            "time": 227.99999999995697,
+            "unitId": 91,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 9.141132295553689e-12
+          },
+          {
+            "time": 232.99999999995242,
+            "unitId": 93,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 9.308109838457312e-12
+          },
+          {
+            "time": 237.99999999994787,
+            "unitId": 95,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 9.475087381360936e-12
+          },
+          {
+            "time": 242.99999999994333,
+            "unitId": 97,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 9.64206492426456e-12
+          },
+          {
+            "time": 247.99999999993878,
+            "unitId": 98,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 9.809042467168183e-12
+          },
+          {
+            "time": 252.99999999993423,
+            "unitId": 100,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 9.976020010071807e-12
+          },
+          {
+            "time": 257.9999999999297,
+            "unitId": 102,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.014299755297543e-11
+          },
+          {
+            "time": 262.99999999992514,
+            "unitId": 105,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.0309975095879054e-11
+          },
+          {
+            "time": 267.9999999999206,
+            "unitId": 106,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.0476952638782677e-11
+          },
+          {
+            "time": 272.99999999991604,
+            "unitId": 108,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.06439301816863e-11
+          },
+          {
+            "time": 277.9999999999115,
+            "unitId": 110,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.0810907724589924e-11
+          },
+          {
+            "time": 282.99999999990695,
+            "unitId": 111,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.0977885267493548e-11
+          },
+          {
+            "time": 287.9999999999024,
+            "unitId": 113,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.1144862810397171e-11
+          },
+          {
+            "time": 292.99999999989785,
+            "unitId": 115,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.1311840353300795e-11
+          },
+          {
+            "time": 297.9999999998933,
+            "unitId": 116,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.1478817896204419e-11
+          },
+          {
+            "time": 302.99999999988876,
+            "unitId": 118,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.1645795439108042e-11
+          },
+          {
+            "time": 307.9999999998842,
+            "unitId": 120,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.1812772982011666e-11
+          },
+          {
+            "time": 312.99999999987966,
+            "unitId": 122,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.1979750524915289e-11
+          },
+          {
+            "time": 317.9999999998751,
+            "unitId": 124,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.2146728067818913e-11
+          },
+          {
+            "time": 322.99999999987057,
+            "unitId": 125,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.2313705610722536e-11
+          },
+          {
+            "time": 327.999999999866,
+            "unitId": 127,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.248068315362616e-11
+          },
+          {
+            "time": 332.9999999998615,
+            "unitId": 129,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.2647660696529783e-11
+          },
+          {
+            "time": 337.9999999998569,
+            "unitId": 131,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.2814638239433407e-11
+          },
+          {
+            "time": 342.9999999998524,
+            "unitId": 133,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.298161578233703e-11
+          },
+          {
+            "time": 347.99999999984783,
+            "unitId": 134,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.3148593325240654e-11
+          },
+          {
+            "time": 352.9999999998433,
+            "unitId": 136,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.3315570868144277e-11
+          },
+          {
+            "time": 357.99999999983874,
+            "unitId": 138,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.3482548411047901e-11
+          },
+          {
+            "time": 362.9999999998342,
+            "unitId": 140,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.3649525953951525e-11
+          },
+          {
+            "time": 367.99999999982964,
+            "unitId": 142,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.3816503496855148e-11
+          },
+          {
+            "time": 372.9999999998251,
+            "unitId": 143,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.3983481039758772e-11
+          },
+          {
+            "time": 377.99999999982055,
+            "unitId": 145,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.4150458582662395e-11
+          },
+          {
+            "time": 382.999999999816,
+            "unitId": 147,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.4317436125566019e-11
+          },
+          {
+            "time": 387.99999999981145,
+            "unitId": 149,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.4484413668469642e-11
+          },
+          {
+            "time": 392.9999999998069,
+            "unitId": 151,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.4651391211373266e-11
+          },
+          {
+            "time": 397.99999999980236,
+            "unitId": 152,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.481836875427689e-11
+          },
+          {
+            "time": 402.9999999997978,
+            "unitId": 154,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.4985346297180513e-11
+          },
+          {
+            "time": 407.99999999979326,
+            "unitId": 156,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.5152323840084136e-11
+          },
+          {
+            "time": 412.9999999997887,
+            "unitId": 158,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.531930138298776e-11
+          },
+          {
+            "time": 417.99999999978417,
+            "unitId": 160,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.5486278925891384e-11
+          },
+          {
+            "time": 422.9999999997796,
+            "unitId": 161,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.5653256468795007e-11
+          },
+          {
+            "time": 427.99999999977507,
+            "unitId": 163,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.582023401169863e-11
+          },
+          {
+            "time": 432.9999999997705,
+            "unitId": 165,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.5987211554602254e-11
+          },
+          {
+            "time": 437.999999999766,
+            "unitId": 167,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.6154189097505878e-11
+          },
+          {
+            "time": 442.9999999997614,
+            "unitId": 169,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.63211666404095e-11
+          },
+          {
+            "time": 447.9999999997569,
+            "unitId": 170,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.6488144183313125e-11
+          },
+          {
+            "time": 452.99999999975233,
+            "unitId": 172,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.6655121726216748e-11
+          },
+          {
+            "time": 457.9999999997478,
+            "unitId": 174,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.6822099269120372e-11
+          },
+          {
+            "time": 462.99999999974324,
+            "unitId": 176,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.6989076812023995e-11
+          },
+          {
+            "time": 467.9999999997387,
+            "unitId": 178,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.715605435492762e-11
+          },
+          {
+            "time": 472.99999999973414,
+            "unitId": 179,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.7323031897831243e-11
+          },
+          {
+            "time": 477.9999999997296,
+            "unitId": 181,
+            "type": "rifle",
+            "cost": 25,
+            "balance": 1.7490009440734866e-11
+          }
+        ]
+      },
+      "squads": [
+        {
+          "id": 42,
+          "role": "defense",
+          "composition": {
+            "rifle": 3,
+            "rocket": 1
+          },
+          "members": [],
+          "phase": "retired",
+          "direction": -1,
+          "rallyX": 2520,
+          "goalX": 2470,
+          "reinforce": true,
+          "launched": true,
+          "createdAt": 448.8083333330895,
+          "casualties": 0,
+          "retiredAt": 453.80833333308493
+        },
+        {
+          "id": 43,
+          "role": "defense",
+          "composition": {
+            "rifle": 3,
+            "rocket": 1
+          },
+          "members": [],
+          "phase": "retired",
+          "direction": -1,
+          "rallyX": 2520,
+          "goalX": 2470,
+          "reinforce": true,
+          "launched": true,
+          "createdAt": 453.80833333308493,
+          "casualties": 0,
+          "retiredAt": 458.7833333330804
+        },
+        {
+          "id": 44,
+          "role": "defense",
+          "composition": {
+            "rifle": 3,
+            "rocket": 1
+          },
+          "members": [],
+          "phase": "retired",
+          "direction": -1,
+          "rallyX": 2520,
+          "goalX": 2470,
+          "reinforce": true,
+          "launched": true,
+          "createdAt": 458.7833333330804,
+          "casualties": 0,
+          "retiredAt": 463.78333333307586
+        },
+        {
+          "id": 45,
+          "role": "defense",
+          "composition": {
+            "rifle": 3,
+            "rocket": 1
+          },
+          "members": [],
+          "phase": "retired",
+          "direction": -1,
+          "rallyX": 2520,
+          "goalX": 2470,
+          "reinforce": true,
+          "launched": true,
+          "createdAt": 463.78333333307586,
+          "casualties": 0,
+          "retiredAt": 469.60833333307056
+        },
+        {
+          "id": 46,
+          "role": "defense",
+          "composition": {
+            "rifle": 3,
+            "rocket": 1
+          },
+          "members": [],
+          "phase": "retired",
+          "direction": -1,
+          "rallyX": 2520,
+          "goalX": 2470,
+          "reinforce": true,
+          "launched": true,
+          "createdAt": 469.60833333307056,
+          "casualties": 0,
+          "retiredAt": 473.80833333306674
+        },
+        {
+          "id": 47,
+          "role": "defense",
+          "composition": {
+            "rifle": 3,
+            "rocket": 1
+          },
+          "members": [],
+          "phase": "retired",
+          "direction": -1,
+          "rallyX": 2520,
+          "goalX": 2470,
+          "reinforce": true,
+          "launched": true,
+          "createdAt": 473.80833333306674,
+          "casualties": 0,
+          "retiredAt": 478.8083333330622
+        },
+        {
+          "id": 48,
+          "role": "defense",
+          "composition": {
+            "rifle": 3,
+            "rocket": 1
+          },
+          "members": [],
+          "phase": "advance",
+          "direction": -1,
+          "rallyX": 2520,
+          "goalX": 2470,
+          "reinforce": true,
+          "launched": false,
+          "createdAt": 478.8083333330622,
+          "casualties": 0
+        }
+      ],
+      "nextSquadId": 49,
+      "strategy": {
+        "mode": "DEFEND",
+        "label": "Defending HQ",
+        "role": "defense"
+      },
+      "nextDecisionAt": 482.2333333330618,
+      "regroupUntil": 0,
+      "fieldLosses": 0,
+      "failedWaves": 0,
+      "stronger": false,
+      "events": [
+        {
+          "time": 0.008333333333333333,
+          "type": "objective",
+          "mode": "PREPARE"
+        },
+        {
+          "time": 113.7500000000366,
+          "type": "objective",
+          "mode": "GARRISON"
+        },
+        {
+          "time": 113.7500000000366,
+          "type": "purchase",
+          "unitId": 52,
+          "kind": "rifle",
+          "role": "garrison",
+          "squadId": null
+        },
+        {
+          "time": 119.79166666670807,
+          "type": "purchase",
+          "unitId": 53,
+          "kind": "rifle",
+          "role": "garrison",
+          "squadId": null
+        },
+        {
+          "time": 126.00000000004634,
+          "type": "purchase",
+          "unitId": 55,
+          "kind": "rocket",
+          "role": "garrison",
+          "squadId": null
+        },
+        {
+          "time": 129.000000000047,
+          "type": "objective",
+          "mode": "DEFEND"
+        },
+        {
+          "time": 129.43333333337995,
+          "type": "objective",
+          "mode": "GARRISON"
+        },
+        {
+          "time": 131.0000000000452,
+          "type": "purchase",
+          "unitId": 58,
+          "kind": "rifle",
+          "role": "garrison",
+          "squadId": null
+        },
+        {
+          "time": 136.00000000004064,
+          "type": "purchase",
+          "unitId": 60,
+          "kind": "rifle",
+          "role": "garrison",
+          "squadId": null
+        },
+        {
+          "time": 138.43333333337176,
+          "type": "objective",
+          "mode": "PREPARE"
+        },
+        {
+          "time": 140.73333333336967,
+          "type": "objective",
+          "mode": "DEFEND"
+        },
+        {
+          "time": 141.0000000000361,
+          "type": "purchase",
+          "unitId": 61,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 2
+        },
+        {
+          "time": 141.95000000003523,
+          "type": "objective",
+          "mode": "GARRISON"
+        },
+        {
+          "time": 141.95000000003523,
+          "type": "redirect",
+          "unitId": 61,
+          "role": "garrison"
+        },
+        {
+          "time": 144.9500000000325,
+          "type": "objective",
+          "mode": "PREPARE"
+        },
+        {
+          "time": 147.24166666669709,
+          "type": "objective",
+          "mode": "DEFEND"
+        },
+        {
+          "time": 147.24166666669709,
+          "type": "purchase",
+          "unitId": 63,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 3
+        },
+        {
+          "time": 147.51666666669684,
+          "type": "objective",
+          "mode": "GARRISON"
+        },
+        {
+          "time": 147.51666666669684,
+          "type": "redirect",
+          "unitId": 63,
+          "role": "garrison"
+        },
+        {
+          "time": 150.1250000000278,
+          "type": "objective",
+          "mode": "DEFEND"
+        },
+        {
+          "time": 151.000000000027,
+          "type": "purchase",
+          "unitId": 65,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 4
+        },
+        {
+          "time": 151.93333333335949,
+          "type": "objective",
+          "mode": "GARRISON"
+        },
+        {
+          "time": 151.93333333335949,
+          "type": "redirect",
+          "unitId": 65,
+          "role": "garrison"
+        },
+        {
+          "time": 152.5250000000256,
+          "type": "objective",
+          "mode": "DEFEND"
+        },
+        {
+          "time": 156.00000000002245,
+          "type": "purchase",
+          "unitId": 67,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 158.52500000002016,
+          "type": "objective",
+          "mode": "PREPARE"
+        },
+        {
+          "time": 170.23333333334284,
+          "type": "objective",
+          "mode": "DEFEND"
+        },
+        {
+          "time": 171.0000000000088,
+          "type": "purchase",
+          "unitId": 73,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 176.00000000000426,
+          "type": "purchase",
+          "unitId": 74,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 187.99999999999335,
+          "type": "purchase",
+          "unitId": 76,
+          "kind": "rocket",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 198.33333333331728,
+          "type": "purchase",
+          "unitId": 80,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 202.9999999999797,
+          "type": "purchase",
+          "unitId": 81,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 207.99999999997516,
+          "type": "purchase",
+          "unitId": 84,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 212.9999999999706,
+          "type": "purchase",
+          "unitId": 86,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 217.99999999996606,
+          "type": "purchase",
+          "unitId": 88,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 222.99999999996152,
+          "type": "purchase",
+          "unitId": 89,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 227.99999999995697,
+          "type": "purchase",
+          "unitId": 91,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 232.99999999995242,
+          "type": "purchase",
+          "unitId": 93,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 237.99999999994787,
+          "type": "purchase",
+          "unitId": 95,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 242.99999999994333,
+          "type": "purchase",
+          "unitId": 97,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 247.99999999993878,
+          "type": "purchase",
+          "unitId": 98,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 252.99999999993423,
+          "type": "purchase",
+          "unitId": 100,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 257.9999999999297,
+          "type": "purchase",
+          "unitId": 102,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 5
+        },
+        {
+          "time": 262.99999999992514,
+          "type": "purchase",
+          "unitId": 105,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 6
+        },
+        {
+          "time": 267.9999999999206,
+          "type": "purchase",
+          "unitId": 106,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 6
+        },
+        {
+          "time": 272.99999999991604,
+          "type": "purchase",
+          "unitId": 108,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 6
+        },
+        {
+          "time": 277.9999999999115,
+          "type": "purchase",
+          "unitId": 110,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 7
+        },
+        {
+          "time": 282.99999999990695,
+          "type": "purchase",
+          "unitId": 111,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 8
+        },
+        {
+          "time": 287.9999999999024,
+          "type": "purchase",
+          "unitId": 113,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 9
+        },
+        {
+          "time": 292.99999999989785,
+          "type": "purchase",
+          "unitId": 115,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 10
+        },
+        {
+          "time": 297.9999999998933,
+          "type": "purchase",
+          "unitId": 116,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 11
+        },
+        {
+          "time": 302.99999999988876,
+          "type": "purchase",
+          "unitId": 118,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 12
+        },
+        {
+          "time": 307.9999999998842,
+          "type": "purchase",
+          "unitId": 120,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 13
+        },
+        {
+          "time": 312.99999999987966,
+          "type": "purchase",
+          "unitId": 122,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 14
+        },
+        {
+          "time": 317.9999999998751,
+          "type": "purchase",
+          "unitId": 124,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 15
+        },
+        {
+          "time": 322.99999999987057,
+          "type": "purchase",
+          "unitId": 125,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 16
+        },
+        {
+          "time": 327.999999999866,
+          "type": "purchase",
+          "unitId": 127,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 17
+        },
+        {
+          "time": 332.9999999998615,
+          "type": "purchase",
+          "unitId": 129,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 18
+        },
+        {
+          "time": 337.9999999998569,
+          "type": "purchase",
+          "unitId": 131,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 19
+        },
+        {
+          "time": 342.9999999998524,
+          "type": "purchase",
+          "unitId": 133,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 20
+        },
+        {
+          "time": 347.99999999984783,
+          "type": "purchase",
+          "unitId": 134,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 21
+        },
+        {
+          "time": 352.9999999998433,
+          "type": "purchase",
+          "unitId": 136,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 22
+        },
+        {
+          "time": 357.99999999983874,
+          "type": "purchase",
+          "unitId": 138,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 23
+        },
+        {
+          "time": 362.9999999998342,
+          "type": "purchase",
+          "unitId": 140,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 24
+        },
+        {
+          "time": 367.99999999982964,
+          "type": "purchase",
+          "unitId": 142,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 25
+        },
+        {
+          "time": 372.9999999998251,
+          "type": "purchase",
+          "unitId": 143,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 26
+        },
+        {
+          "time": 377.99999999982055,
+          "type": "purchase",
+          "unitId": 145,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 27
+        },
+        {
+          "time": 382.999999999816,
+          "type": "purchase",
+          "unitId": 147,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 28
+        },
+        {
+          "time": 387.99999999981145,
+          "type": "purchase",
+          "unitId": 149,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 29
+        },
+        {
+          "time": 392.9999999998069,
+          "type": "purchase",
+          "unitId": 151,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 30
+        },
+        {
+          "time": 397.99999999980236,
+          "type": "purchase",
+          "unitId": 152,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 31
+        },
+        {
+          "time": 402.9999999997978,
+          "type": "purchase",
+          "unitId": 154,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 32
+        },
+        {
+          "time": 407.99999999979326,
+          "type": "purchase",
+          "unitId": 156,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 33
+        },
+        {
+          "time": 412.9999999997887,
+          "type": "purchase",
+          "unitId": 158,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 34
+        },
+        {
+          "time": 417.99999999978417,
+          "type": "purchase",
+          "unitId": 160,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 35
+        },
+        {
+          "time": 422.9999999997796,
+          "type": "purchase",
+          "unitId": 161,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 36
+        },
+        {
+          "time": 427.99999999977507,
+          "type": "purchase",
+          "unitId": 163,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 37
+        },
+        {
+          "time": 432.9999999997705,
+          "type": "purchase",
+          "unitId": 165,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 38
+        },
+        {
+          "time": 437.999999999766,
+          "type": "purchase",
+          "unitId": 167,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 39
+        },
+        {
+          "time": 442.9999999997614,
+          "type": "purchase",
+          "unitId": 169,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 40
+        },
+        {
+          "time": 447.9999999997569,
+          "type": "purchase",
+          "unitId": 170,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 41
+        },
+        {
+          "time": 452.99999999975233,
+          "type": "purchase",
+          "unitId": 172,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 42
+        },
+        {
+          "time": 457.9999999997478,
+          "type": "purchase",
+          "unitId": 174,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 43
+        },
+        {
+          "time": 462.99999999974324,
+          "type": "purchase",
+          "unitId": 176,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 44
+        },
+        {
+          "time": 467.9999999997387,
+          "type": "purchase",
+          "unitId": 178,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 45
+        },
+        {
+          "time": 472.99999999973414,
+          "type": "purchase",
+          "unitId": 179,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 46
+        },
+        {
+          "time": 477.9999999997296,
+          "type": "purchase",
+          "unitId": 181,
+          "kind": "rifle",
+          "role": "defense",
+          "squadId": 47
+        }
+      ],
+      "blockReason": "saving-supply",
+      "observations": {
+        "living": 0,
+        "airPressure": false,
+        "incoming": {
+          "rifle": 0,
+          "rocket": 0
+        },
+        "stationed": {
+          "rifle": 0,
+          "rocket": 0
+        }
+      },
+      "fieldRecruitmentBlocked": true,
+      "airPressure": {
+        "exposure": 0,
+        "quiet": 479.9999999997278,
+        "active": false
+      }
+    }
+  ]
+}

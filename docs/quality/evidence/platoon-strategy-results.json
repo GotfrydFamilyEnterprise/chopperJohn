@@ -1,0 +1,2475 @@
+{
+  "schemaVersion": 1,
+  "secondsLimit": 480,
+  "seedCount": 3,
+  "scope": "Same resources/prices/cooldown/cap and red Assault platoon controller. Independent blue uses explicit adaptive manual purchases; other blue strategies explicitly deploy paid sergeants and authorize their normal-price recruitment/replacement. Spending sequences differ and are reported. All cases include the point-blank collision fix. No teleporting, direct damage or forced result. Unfinished is not a draw or victory; bounded sample is not universal balance.",
+  "rows": [
+    {
+      "level": "first-assault",
+      "seed": 31,
+      "tactic": "independent",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        15,
+        3
+      ],
+      "supply": [
+        {
+          "spent": 2155,
+          "balance": 229.9999999999909,
+          "earned": 2265.000000000792,
+          "purchases": 82
+        },
+        {
+          "spent": 2520,
+          "balance": 1.3979928326079971e-11,
+          "earned": 2400.000000000209,
+          "purchases": 91
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          23.983333333333334,
+          22.991666666666667
+        ],
+        "breaches": [
+          {
+            "time": 157.93333333333334,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ],
+        "captures": [
+          {
+            "time": 279.6333333333333,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 263,
+        "rocketShots": 588,
+        "helicopterShots": 0,
+        "damage": 514.7995206973756,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 6,
+        "recruits": 33,
+        "replacements": 27,
+        "adopted": 4,
+        "disbanded": 6
+      },
+      "activeGroups": [],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 3
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 9
+        }
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 31,
+      "tactic": "assault",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        0,
+        15
+      ],
+      "supply": [
+        {
+          "spent": 2495,
+          "balance": 25.00000000000336,
+          "earned": 2400.000000000209,
+          "purchases": 83
+        },
+        {
+          "spent": 2025,
+          "balance": 240,
+          "earned": 2145.0000000012287,
+          "purchases": 60
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          26.349999999999998,
+          27.7
+        ],
+        "breaches": [
+          {
+            "time": 290.96666666666664,
+            "baseId": "blue-fob",
+            "team": 1
+          },
+          {
+            "time": 462.2083333333333,
+            "baseId": "blue-hq",
+            "team": 1
+          }
+        ],
+        "captures": [
+          {
+            "time": 370,
+            "baseId": "blue-fob",
+            "team": 1
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 165,
+        "rocketShots": 571,
+        "helicopterShots": 0,
+        "damage": 446.0874839029498,
+        "repairs": 23.45833333333384
+      },
+      "platoons": {
+        "leaders": 23,
+        "recruits": 118,
+        "replacements": 82,
+        "adopted": 14,
+        "disbanded": 21
+      },
+      "activeGroups": [
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "capture",
+          "missing": 0,
+          "joining": 2
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "capture",
+          "missing": 2,
+          "joining": 0
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 1,
+          "defenses": 14
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 19
+        }
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 31,
+      "tactic": "siege",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        13,
+        0
+      ],
+      "supply": [
+        {
+          "spent": 2105,
+          "balance": 220.9583333333263,
+          "earned": 2205.958333334489,
+          "purchases": 80
+        },
+        {
+          "spent": 2510,
+          "balance": 10.000000000017485,
+          "earned": 2400.000000000209,
+          "purchases": 92
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          26.349999999999998,
+          27.2
+        ],
+        "breaches": [
+          {
+            "time": 113.74166666666666,
+            "baseId": "red-fob",
+            "team": 0
+          },
+          {
+            "time": 244.23333333333332,
+            "baseId": "red-hq",
+            "team": 0
+          }
+        ],
+        "captures": [
+          {
+            "time": 157.55,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 357,
+        "rocketShots": 441,
+        "helicopterShots": 0,
+        "damage": 519.8679015662686,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 8,
+        "recruits": 95,
+        "replacements": 84,
+        "adopted": 7,
+        "disbanded": 6
+      },
+      "activeGroups": [
+        {
+          "team": 0,
+          "strategy": "siege",
+          "phase": "capture",
+          "missing": 0,
+          "joining": 2
+        },
+        {
+          "team": 0,
+          "strategy": "siege",
+          "phase": "capture",
+          "missing": 0,
+          "joining": 2
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 31,
+      "tactic": "spread",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        10,
+        9
+      ],
+      "supply": [
+        {
+          "spent": 2500,
+          "balance": 20.000000000000355,
+          "earned": 2400.000000000209,
+          "purchases": 79
+        },
+        {
+          "spent": 2520,
+          "balance": 3.568700890355103e-11,
+          "earned": 2400.000000000209,
+          "purchases": 77
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          26.349999999999998,
+          27.2
+        ],
+        "breaches": [],
+        "captures": []
+      },
+      "stats": {
+        "rifleShots": 261,
+        "rocketShots": 428,
+        "helicopterShots": 0,
+        "damage": 485.0757545408106,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 13,
+        "recruits": 142,
+        "replacements": 111,
+        "adopted": 5,
+        "disbanded": 9
+      },
+      "activeGroups": [
+        {
+          "team": 0,
+          "strategy": "spread",
+          "phase": "breach",
+          "missing": 1,
+          "joining": 3
+        },
+        {
+          "team": 0,
+          "strategy": "spread",
+          "phase": "breach",
+          "missing": 2,
+          "joining": 0
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 1
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 1
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 5
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 3
+        }
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 32,
+      "tactic": "independent",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        15,
+        4
+      ],
+      "supply": [
+        {
+          "spent": 2180,
+          "balance": 224.99999999998636,
+          "earned": 2285.000000000705,
+          "purchases": 83
+        },
+        {
+          "spent": 2520,
+          "balance": 2.091482542709855e-11,
+          "earned": 2400.000000000209,
+          "purchases": 91
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          22.65833333333333,
+          19.3
+        ],
+        "breaches": [
+          {
+            "time": 156.66666666666666,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ],
+        "captures": [
+          {
+            "time": 269.6333333333333,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 289,
+        "rocketShots": 548,
+        "helicopterShots": 0,
+        "damage": 507.4026655586225,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 8,
+        "recruits": 30,
+        "replacements": 25,
+        "adopted": 5,
+        "disbanded": 8
+      },
+      "activeGroups": [],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 12
+        }
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 32,
+      "tactic": "assault",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        10,
+        11
+      ],
+      "supply": [
+        {
+          "spent": 2520,
+          "balance": 4.689582056016661e-13,
+          "earned": 2400.000000000209,
+          "purchases": 84
+        },
+        {
+          "spent": 2510,
+          "balance": 10.000000000020803,
+          "earned": 2400.000000000209,
+          "purchases": 78
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          22.65833333333333,
+          27.7
+        ],
+        "breaches": [
+          {
+            "time": 294.05833333333334,
+            "baseId": "red-fob",
+            "team": 0
+          },
+          {
+            "time": 328.8333333333333,
+            "baseId": "blue-fob",
+            "team": 1
+          }
+        ],
+        "captures": []
+      },
+      "stats": {
+        "rifleShots": 272,
+        "rocketShots": 448,
+        "helicopterShots": 0,
+        "damage": 488.37447335069226,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 16,
+        "recruits": 144,
+        "replacements": 106,
+        "adopted": 5,
+        "disbanded": 12
+      },
+      "activeGroups": [
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 1
+        },
+        {
+          "team": 0,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 0
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 0
+        },
+        {
+          "team": 0,
+          "strategy": "assault",
+          "phase": "rally",
+          "missing": 3,
+          "joining": 1
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 10
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 20
+        }
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 32,
+      "tactic": "siege",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        13,
+        1
+      ],
+      "supply": [
+        {
+          "spent": 2225,
+          "balance": 236.54166666666177,
+          "earned": 2341.541666667265,
+          "purchases": 82
+        },
+        {
+          "spent": 2500,
+          "balance": 0.4583333333541985,
+          "earned": 2380.4583333336623,
+          "purchases": 86
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          22.65833333333333,
+          27.2
+        ],
+        "breaches": [
+          {
+            "time": 243.54166666666666,
+            "baseId": "red-fob",
+            "team": 0
+          },
+          {
+            "time": 350.64166666666665,
+            "baseId": "red-hq",
+            "team": 0
+          }
+        ],
+        "captures": [
+          {
+            "time": 285.7916666666667,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 285,
+        "rocketShots": 464,
+        "helicopterShots": 0,
+        "damage": 511.90847226412,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 11,
+        "recruits": 115,
+        "replacements": 95,
+        "adopted": 8,
+        "disbanded": 9
+      },
+      "activeGroups": [
+        {
+          "team": 0,
+          "strategy": "siege",
+          "phase": "capture",
+          "missing": 0,
+          "joining": 2
+        },
+        {
+          "team": 0,
+          "strategy": "siege",
+          "phase": "capture",
+          "missing": 0,
+          "joining": 1
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 12
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 32,
+      "tactic": "spread",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        5,
+        14
+      ],
+      "supply": [
+        {
+          "spent": 2505,
+          "balance": 14.999999999999922,
+          "earned": 2400.000000000209,
+          "purchases": 82
+        },
+        {
+          "spent": 2285,
+          "balance": 213.04166666663642,
+          "earned": 2378.0416666669685,
+          "purchases": 69
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          22.65833333333333,
+          27.2
+        ],
+        "breaches": [
+          {
+            "time": 127.63333333333333,
+            "baseId": "red-fob",
+            "team": 0
+          },
+          {
+            "time": 297.05833333333334,
+            "baseId": "blue-fob",
+            "team": 1
+          },
+          {
+            "time": 399.76666666666665,
+            "baseId": "blue-fob",
+            "team": 1
+          }
+        ],
+        "captures": [
+          {
+            "time": 453.3833333333333,
+            "baseId": "blue-fob",
+            "team": 1
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 231,
+        "rocketShots": 450,
+        "helicopterShots": 0,
+        "damage": 460.00686285778335,
+        "repairs": 65.45833333333131
+      },
+      "platoons": {
+        "leaders": 12,
+        "recruits": 134,
+        "replacements": 102,
+        "adopted": 4,
+        "disbanded": 9
+      },
+      "activeGroups": [
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 1
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 1
+        },
+        {
+          "team": 0,
+          "strategy": "spread",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 0
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 1,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 20
+        }
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 33,
+      "tactic": "independent",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        15,
+        6
+      ],
+      "supply": [
+        {
+          "spent": 2180,
+          "balance": 240,
+          "earned": 2300.0000000006858,
+          "purchases": 83
+        },
+        {
+          "spent": 2515,
+          "balance": 5.000000000005736,
+          "earned": 2400.000000000209,
+          "purchases": 88
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          23.983333333333334,
+          19.3
+        ],
+        "breaches": [
+          {
+            "time": 139.91666666666666,
+            "baseId": "red-fob",
+            "team": 0
+          },
+          {
+            "time": 434.7916666666667,
+            "baseId": "red-fob",
+            "team": 1
+          }
+        ],
+        "captures": [
+          {
+            "time": 273.6333333333333,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 266,
+        "rocketShots": 551,
+        "helicopterShots": 0,
+        "damage": 497.5209411735234,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 7,
+        "recruits": 39,
+        "replacements": 29,
+        "adopted": 3,
+        "disbanded": 5
+      },
+      "activeGroups": [
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "capture",
+          "missing": 2,
+          "joining": 0
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "rally",
+          "missing": 1,
+          "joining": 0
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 19
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 0
+        }
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 33,
+      "tactic": "assault",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        8,
+        10
+      ],
+      "supply": [
+        {
+          "spent": 2520,
+          "balance": 4.689582056016661e-13,
+          "earned": 2400.000000000209,
+          "purchases": 84
+        },
+        {
+          "spent": 2480,
+          "balance": 31.45833333333368,
+          "earned": 2391.4583333336186,
+          "purchases": 74
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          22.65833333333333,
+          27.7
+        ],
+        "breaches": [
+          {
+            "time": 359.3666666666667,
+            "baseId": "blue-fob",
+            "team": 1
+          }
+        ],
+        "captures": []
+      },
+      "stats": {
+        "rifleShots": 300,
+        "rocketShots": 318,
+        "helicopterShots": 0,
+        "damage": 483.953825834253,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 12,
+        "recruits": 146,
+        "replacements": 116,
+        "adopted": 5,
+        "disbanded": 8
+      },
+      "activeGroups": [
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 1
+        },
+        {
+          "team": 0,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 0
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 0
+        },
+        {
+          "team": 0,
+          "strategy": "assault",
+          "phase": "rally",
+          "missing": 3,
+          "joining": 1
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 13
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 12
+        }
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 33,
+      "tactic": "siege",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        11,
+        9
+      ],
+      "supply": [
+        {
+          "spent": 2465,
+          "balance": 55.00000000001319,
+          "earned": 2400.000000000209,
+          "purchases": 86
+        },
+        {
+          "spent": 2415,
+          "balance": 105.00000000001046,
+          "earned": 2400.000000000209,
+          "purchases": 84
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          22.65833333333333,
+          27.2
+        ],
+        "breaches": [
+          {
+            "time": 127.59166666666667,
+            "baseId": "red-fob",
+            "team": 0
+          },
+          {
+            "time": 293.26666666666665,
+            "baseId": "red-hq",
+            "team": 0
+          }
+        ],
+        "captures": [
+          {
+            "time": 202.29166666666666,
+            "baseId": "red-fob",
+            "team": 0
+          },
+          {
+            "time": 450.56666666666666,
+            "baseId": "red-fob",
+            "team": 1
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 258,
+        "rocketShots": 367,
+        "helicopterShots": 0,
+        "damage": 507.5815884663152,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 14,
+        "recruits": 115,
+        "replacements": 94,
+        "adopted": 6,
+        "disbanded": 10
+      },
+      "activeGroups": [
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 1
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 1
+        },
+        {
+          "team": 0,
+          "strategy": "siege",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 1
+        },
+        {
+          "team": 0,
+          "strategy": "siege",
+          "phase": "rally",
+          "missing": 2,
+          "joining": 0
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 20
+        }
+      ]
+    },
+    {
+      "level": "first-assault",
+      "seed": 33,
+      "tactic": "spread",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        11,
+        6
+      ],
+      "supply": [
+        {
+          "spent": 2510,
+          "balance": 10.000000000003377,
+          "earned": 2400.000000000209,
+          "purchases": 85
+        },
+        {
+          "spent": 2500,
+          "balance": 20.000000000019217,
+          "earned": 2400.000000000209,
+          "purchases": 79
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          22.65833333333333,
+          27.2
+        ],
+        "breaches": [
+          {
+            "time": 369.60833333333335,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ],
+        "captures": []
+      },
+      "stats": {
+        "rifleShots": 291,
+        "rocketShots": 385,
+        "helicopterShots": 0,
+        "damage": 504.11989273413434,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 14,
+        "recruits": 137,
+        "replacements": 106,
+        "adopted": 5,
+        "disbanded": 10
+      },
+      "activeGroups": [
+        {
+          "team": 0,
+          "strategy": "spread",
+          "phase": "capture",
+          "missing": 2,
+          "joining": 1
+        },
+        {
+          "team": 0,
+          "strategy": "spread",
+          "phase": "capture",
+          "missing": 0,
+          "joining": 2
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 1
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "rally",
+          "missing": 2,
+          "joining": 0
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 11
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 0
+        }
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 73,
+      "tactic": "independent",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        15,
+        5
+      ],
+      "supply": [
+        {
+          "spent": 1855,
+          "balance": 240,
+          "earned": 1975.0000000015307,
+          "purchases": 70
+        },
+        {
+          "spent": 2510,
+          "balance": 10.000000000002563,
+          "earned": 2400.000000000209,
+          "purchases": 85
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          35.75833333333333,
+          34.208333333333336
+        ],
+        "breaches": [
+          {
+            "time": 197.30833333333334,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ],
+        "captures": [
+          {
+            "time": 235.25833333333333,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 235,
+        "rocketShots": 528,
+        "helicopterShots": 0,
+        "damage": 456.30793204206634,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 6,
+        "recruits": 58,
+        "replacements": 41,
+        "adopted": 3,
+        "disbanded": 4
+      },
+      "activeGroups": [
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 4,
+          "joining": 0
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "rally",
+          "missing": 4,
+          "joining": 0
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 73,
+      "tactic": "assault",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        5,
+        12
+      ],
+      "supply": [
+        {
+          "spent": 2515,
+          "balance": 5.0000000000071285,
+          "earned": 2400.000000000209,
+          "purchases": 81
+        },
+        {
+          "spent": 2270,
+          "balance": 222.8749999999982,
+          "earned": 2372.8750000003197,
+          "purchases": 74
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          41.88333333333333,
+          41.88333333333333
+        ],
+        "breaches": [
+          {
+            "time": 342.21666666666664,
+            "baseId": "blue-fob",
+            "team": 1
+          }
+        ],
+        "captures": [
+          {
+            "time": 410.5,
+            "baseId": "blue-fob",
+            "team": 1
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 283,
+        "rocketShots": 381,
+        "helicopterShots": 0,
+        "damage": 486.25000098239593,
+        "repairs": 233.3749999999982
+      },
+      "platoons": {
+        "leaders": 11,
+        "recruits": 141,
+        "replacements": 108,
+        "adopted": 7,
+        "disbanded": 9
+      },
+      "activeGroups": [
+        {
+          "team": 0,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 1,
+          "joining": 1
+        },
+        {
+          "team": 0,
+          "strategy": "assault",
+          "phase": "rally",
+          "missing": 4,
+          "joining": 0
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 1,
+          "defenses": 12
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 2
+        }
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 73,
+      "tactic": "siege",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        13,
+        3
+      ],
+      "supply": [
+        {
+          "spent": 2055,
+          "balance": 240,
+          "earned": 2175.0000000011687,
+          "purchases": 71
+        },
+        {
+          "spent": 2480,
+          "balance": 40.00000000000174,
+          "earned": 2400.000000000209,
+          "purchases": 81
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          40.1,
+          41.733333333333334
+        ],
+        "breaches": [
+          {
+            "time": 335.2416666666667,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ],
+        "captures": [
+          {
+            "time": 416.2083333333333,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 272,
+        "rocketShots": 391,
+        "helicopterShots": 0,
+        "damage": 468.22631927595756,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 10,
+        "recruits": 130,
+        "replacements": 99,
+        "adopted": 6,
+        "disbanded": 8
+      },
+      "activeGroups": [
+        {
+          "team": 0,
+          "strategy": "siege",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 1
+        },
+        {
+          "team": 0,
+          "strategy": "siege",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 0
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 15
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 0
+        }
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 73,
+      "tactic": "spread",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        1,
+        12
+      ],
+      "supply": [
+        {
+          "spent": 2490,
+          "balance": 30.000000000007653,
+          "earned": 2400.000000000209,
+          "purchases": 87
+        },
+        {
+          "spent": 1785,
+          "balance": 188.99999999999795,
+          "earned": 1854.000000001227,
+          "purchases": 56
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          41.63333333333333,
+          41.63333333333333
+        ],
+        "breaches": [
+          {
+            "time": 172.19166666666666,
+            "baseId": "blue-fob",
+            "team": 1
+          },
+          {
+            "time": 392.4916666666667,
+            "baseId": "blue-hq",
+            "team": 1
+          }
+        ],
+        "captures": [
+          {
+            "time": 203.09166666666667,
+            "baseId": "blue-fob",
+            "team": 1
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 219,
+        "rocketShots": 450,
+        "helicopterShots": 0,
+        "damage": 448.84671921475353,
+        "repairs": 387.0416666667754
+      },
+      "platoons": {
+        "leaders": 24,
+        "recruits": 117,
+        "replacements": 84,
+        "adopted": 13,
+        "disbanded": 23
+      },
+      "activeGroups": [
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "capture",
+          "missing": 0,
+          "joining": 3
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 0
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 1,
+          "defenses": 12
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 20
+        }
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 74,
+      "tactic": "independent",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        15,
+        7
+      ],
+      "supply": [
+        {
+          "spent": 1905,
+          "balance": 240,
+          "earned": 2025.0000000015978,
+          "purchases": 72
+        },
+        {
+          "spent": 2480,
+          "balance": 40.00000000000019,
+          "earned": 2400.000000000209,
+          "purchases": 81
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          35.75833333333333,
+          30.516666666666666
+        ],
+        "breaches": [
+          {
+            "time": 200.80833333333334,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ],
+        "captures": [
+          {
+            "time": 263.2583333333333,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 204,
+        "rocketShots": 544,
+        "helicopterShots": 0,
+        "damage": 443.6929623153887,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 6,
+        "recruits": 60,
+        "replacements": 40,
+        "adopted": 3,
+        "disbanded": 5
+      },
+      "activeGroups": [
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "rally",
+          "missing": 1,
+          "joining": 0
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 74,
+      "tactic": "assault",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        11,
+        6
+      ],
+      "supply": [
+        {
+          "spent": 2510,
+          "balance": 9.999999999999993,
+          "earned": 2400.000000000209,
+          "purchases": 78
+        },
+        {
+          "spent": 2515,
+          "balance": 5.000000000003498,
+          "earned": 2400.000000000209,
+          "purchases": 88
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          41.88333333333333,
+          41.28333333333333
+        ],
+        "breaches": [
+          {
+            "time": 268.7416666666667,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ],
+        "captures": [
+          {
+            "time": 288.35833333333335,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 250,
+        "rocketShots": 344,
+        "helicopterShots": 0,
+        "damage": 511.00983452892257,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 11,
+        "recruits": 130,
+        "replacements": 99,
+        "adopted": 7,
+        "disbanded": 8
+      },
+      "activeGroups": [
+        {
+          "team": 0,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 1,
+          "joining": 3
+        },
+        {
+          "team": 0,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 1,
+          "joining": 3
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "rally",
+          "missing": 3,
+          "joining": 1
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 3
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 74,
+      "tactic": "siege",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        13,
+        1
+      ],
+      "supply": [
+        {
+          "spent": 1865,
+          "balance": 240,
+          "earned": 1985.0000000015875,
+          "purchases": 69
+        },
+        {
+          "spent": 2515,
+          "balance": 5.000000000008233,
+          "earned": 2400.000000000209,
+          "purchases": 88
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          40.1,
+          41.733333333333334
+        ],
+        "breaches": [
+          {
+            "time": 152.075,
+            "baseId": "red-fob",
+            "team": 0
+          },
+          {
+            "time": 264.7416666666667,
+            "baseId": "red-hq",
+            "team": 0
+          }
+        ],
+        "captures": [
+          {
+            "time": 191.59166666666667,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 223,
+        "rocketShots": 456,
+        "helicopterShots": 0,
+        "damage": 475.08249760208724,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 7,
+        "recruits": 94,
+        "replacements": 73,
+        "adopted": 5,
+        "disbanded": 5
+      },
+      "activeGroups": [
+        {
+          "team": 0,
+          "strategy": "siege",
+          "phase": "capture",
+          "missing": 0,
+          "joining": 2
+        },
+        {
+          "team": 0,
+          "strategy": "siege",
+          "phase": "capture",
+          "missing": 0,
+          "joining": 2
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 0
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 0
+        }
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 74,
+      "tactic": "spread",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        9,
+        9
+      ],
+      "supply": [
+        {
+          "spent": 2515,
+          "balance": 5.000000000014003,
+          "earned": 2400.000000000209,
+          "purchases": 95
+        },
+        {
+          "spent": 2515,
+          "balance": 5.000000000014113,
+          "earned": 2400.000000000209,
+          "purchases": 95
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          41.63333333333333,
+          40.78333333333333
+        ],
+        "breaches": [],
+        "captures": []
+      },
+      "stats": {
+        "rifleShots": 582,
+        "rocketShots": 193,
+        "helicopterShots": 0,
+        "damage": 559,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 4,
+        "recruits": 186,
+        "replacements": 174,
+        "adopted": 4,
+        "disbanded": 0
+      },
+      "activeGroups": [
+        {
+          "team": 0,
+          "strategy": "spread",
+          "phase": "breach",
+          "missing": 2,
+          "joining": 2
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 2,
+          "joining": 2
+        },
+        {
+          "team": 0,
+          "strategy": "spread",
+          "phase": "breach",
+          "missing": 2,
+          "joining": 2
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 2,
+          "joining": 2
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 20
+        }
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 75,
+      "tactic": "independent",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        14,
+        4
+      ],
+      "supply": [
+        {
+          "spent": 1815,
+          "balance": 240,
+          "earned": 1935.00000000145,
+          "purchases": 67
+        },
+        {
+          "spent": 2505,
+          "balance": 15.000000000000197,
+          "earned": 2400.000000000209,
+          "purchases": 82
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          35.75833333333333,
+          30.516666666666666
+        ],
+        "breaches": [
+          {
+            "time": 198.28333333333333,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ],
+        "captures": [
+          {
+            "time": 235.25833333333333,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 238,
+        "rocketShots": 482,
+        "helicopterShots": 0,
+        "damage": 448.6846511326896,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 6,
+        "recruits": 58,
+        "replacements": 37,
+        "adopted": 2,
+        "disbanded": 5
+      },
+      "activeGroups": [
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "rally",
+          "missing": 2,
+          "joining": 0
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 16
+        }
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 75,
+      "tactic": "assault",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        4,
+        14
+      ],
+      "supply": [
+        {
+          "spent": 2500,
+          "balance": 20.00000000000002,
+          "earned": 2400.000000000209,
+          "purchases": 79
+        },
+        {
+          "spent": 2475,
+          "balance": 45.00000000001401,
+          "earned": 2400.000000000209,
+          "purchases": 78
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          41.88333333333333,
+          41.28333333333333
+        ],
+        "breaches": [
+          {
+            "time": 162.3,
+            "baseId": "blue-fob",
+            "team": 1
+          },
+          {
+            "time": 424.94166666666666,
+            "baseId": "blue-fob",
+            "team": 1
+          }
+        ],
+        "captures": [
+          {
+            "time": 475.6583333333333,
+            "baseId": "blue-fob",
+            "team": 1
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 311,
+        "rocketShots": 292,
+        "helicopterShots": 0,
+        "damage": 480.3333333333327,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 12,
+        "recruits": 144,
+        "replacements": 104,
+        "adopted": 7,
+        "disbanded": 9
+      },
+      "activeGroups": [
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 1,
+          "joining": 3
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 2
+        },
+        {
+          "team": 0,
+          "strategy": "assault",
+          "phase": "rally",
+          "missing": 1,
+          "joining": 0
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 1,
+          "defenses": 0
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 13
+        }
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 75,
+      "tactic": "siege",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        13,
+        2
+      ],
+      "supply": [
+        {
+          "spent": 2135,
+          "balance": 226.24999999999176,
+          "earned": 2241.2500000009427,
+          "purchases": 77
+        },
+        {
+          "spent": 2510,
+          "balance": 10.000000000000659,
+          "earned": 2400.000000000209,
+          "purchases": 85
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          40.1,
+          40.78333333333333
+        ],
+        "breaches": [
+          {
+            "time": 200.41666666666666,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ],
+        "captures": [
+          {
+            "time": 307.05833333333334,
+            "baseId": "red-fob",
+            "team": 0
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 249,
+        "rocketShots": 474,
+        "helicopterShots": 0,
+        "damage": 496.05024260096263,
+        "repairs": 0
+      },
+      "platoons": {
+        "leaders": 8,
+        "recruits": 137,
+        "replacements": 114,
+        "adopted": 5,
+        "disbanded": 6
+      },
+      "activeGroups": [
+        {
+          "team": 0,
+          "strategy": "siege",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 2
+        },
+        {
+          "team": 0,
+          "strategy": "siege",
+          "phase": "breach",
+          "missing": 0,
+          "joining": 2
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 5
+        },
+        {
+          "id": "blue-fob",
+          "team": 0,
+          "defenses": 20
+        },
+        {
+          "id": "red-fob",
+          "team": 0,
+          "defenses": 20
+        }
+      ]
+    },
+    {
+      "level": "ridgeline",
+      "seed": 75,
+      "tactic": "spread",
+      "air": "none",
+      "time": 480,
+      "finished": false,
+      "winner": null,
+      "living": [
+        5,
+        15
+      ],
+      "supply": [
+        {
+          "spent": 2520,
+          "balance": 1.8332002582610585e-12,
+          "earned": 2400.000000000209,
+          "purchases": 84
+        },
+        {
+          "spent": 2250,
+          "balance": 240,
+          "earned": 2370.0000000004015,
+          "purchases": 69
+        }
+      ],
+      "metrics": {
+        "firstShot": [
+          41.63333333333333,
+          40.78333333333333
+        ],
+        "breaches": [
+          {
+            "time": 315.23333333333335,
+            "baseId": "blue-fob",
+            "team": 1
+          },
+          {
+            "time": 395.80833333333334,
+            "baseId": "blue-fob",
+            "team": 1
+          }
+        ],
+        "captures": [
+          {
+            "time": 445.98333333333335,
+            "baseId": "blue-fob",
+            "team": 1
+          }
+        ]
+      },
+      "stats": {
+        "rifleShots": 238,
+        "rocketShots": 404,
+        "helicopterShots": 0,
+        "damage": 467.91294280960113,
+        "repairs": 22.666666666669244
+      },
+      "platoons": {
+        "leaders": 13,
+        "recruits": 137,
+        "replacements": 93,
+        "adopted": 5,
+        "disbanded": 9
+      },
+      "activeGroups": [
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 1,
+          "joining": 1
+        },
+        {
+          "team": 1,
+          "strategy": "assault",
+          "phase": "breach",
+          "missing": 2,
+          "joining": 0
+        },
+        {
+          "team": 0,
+          "strategy": "spread",
+          "phase": "capture",
+          "missing": 2,
+          "joining": 2
+        },
+        {
+          "team": 0,
+          "strategy": "spread",
+          "phase": "rally",
+          "missing": 3,
+          "joining": 0
+        }
+      ],
+      "bases": [
+        {
+          "id": "blue-hq",
+          "team": 0,
+          "defenses": 6
+        },
+        {
+          "id": "red-hq",
+          "team": 1,
+          "defenses": 6
+        },
+        {
+          "id": "blue-fob",
+          "team": 1,
+          "defenses": 0
+        },
+        {
+          "id": "red-fob",
+          "team": 1,
+          "defenses": 13
+        }
+      ]
+    }
+  ]
+}

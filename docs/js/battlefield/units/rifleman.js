@@ -1,4 +1,4 @@
-import {createSoldier,drawBody,endBody,updateWalking} from "./soldierCommon.js?v=2.0.0";
+import {createSoldier,drawBody,endBody,updateWalking} from "./soldierCommon.js?v=2.1.0";
 export function createRifleman(id,team,x,ground){return createSoldier(id,team,"rifle",x,ground);}
 export function updateRifleman(u,dt,enemyNearby,maxSpeed=Infinity){
  // Aiming is animated without creating projectiles yet.

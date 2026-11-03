@@ -1,7 +1,7 @@
-import {updateAirPressure} from './airPressure.js?v=2.0.0';
-import {SUPPLY_RULES, createSupply, accrueSupply, purchaseUnit} from '../economy/supply.js?v=2.0.0';
-import {STRATEGY_RULES, COMPOSITIONS, observeBattlefield, chooseStrategy, firstMissing, factionRules} from './strategy.js?v=2.0.0';
-import {createSquad, addMember, membersOf, detachForGarrison, refreshSquads, movementOrder} from './squads.js?v=2.0.0';
+import {updateAirPressure} from './airPressure.js?v=2.1.0';
+import {SUPPLY_RULES, createSupply, accrueSupply, purchaseUnit} from '../economy/supply.js?v=2.1.0';
+import {STRATEGY_RULES, COMPOSITIONS, observeBattlefield, chooseStrategy, firstMissing, factionRules} from './strategy.js?v=2.1.0';
+import {createSquad, addMember, membersOf, detachForGarrison, refreshSquads, movementOrder} from './squads.js?v=2.1.0';
 // AI-01..06: deterministic composition root; the scene injects the spawn factory.
 export function createCommander(team = 1,options = {}) {
   return {rules: {...factionRules(team),...options.rules}, compositions: options.compositions??COMPOSITIONS, supply: createSupply(), squads: [], nextSquadId: 1, strategy: {mode: 'GARRISON', label: 'Reinforcing FOB'},
@@ -12,7 +12,8 @@ function record(state, event) {
   state.events.push({time: state.supply.time, ...event});
   if (state.events.length > 128) state.events.shift();
 }
-export function updateCommander(state, dt, units, bases, deploy, helicopter=null) {
+export function updateCommander(state, dt, units, bases, deploy, helicopter=null,{fieldPurchases=true}={}) {
+  state.fieldRecruitmentBlocked=false;
   const rules = state.rules;
   accrueSupply(state.supply, dt);
   const now = state.supply.time;
@@ -39,6 +40,7 @@ export function updateCommander(state, dt, units, bases, deploy, helicopter=null
     state.nextDecisionAt = now + STRATEGY_RULES.decisionInterval;
     if (before !== state.strategy.mode) record(state, {type: 'objective', mode: state.strategy.mode});
   }
+  if(!fieldPurchases&&['PREPARE','SUPPORT','REGROUP'].includes(state.strategy.mode)){state.blockReason='awaiting-orders';state.strategy.label='Provisioning platoons';state.observations={living:view.allies.length,airPressure:view.airPressure,incoming:view.incoming,stationed:view.stationed};return;}
   let type = null, squad = null, role = null;
   if (state.strategy.mode === 'GARRISON') {
     type = view.missing.rifle ? 'rifle' : view.missing.rocket ? 'rocket' : null;
@@ -79,6 +81,7 @@ export function updateCommander(state, dt, units, bases, deploy, helicopter=null
     if (squad) {type = firstMissing(squad.composition, membersOf(squad, units)); role = squad.role;}
   }
   state.blockReason = type ? 'ready' : state.strategy.mode === 'REGROUP' ? 'regrouping' : 'awaiting-orders';
+  state.fieldRecruitmentBlocked=!!type&&['garrison','defense','air-defense'].includes(role);
   if (type) {
     const reserve = role === 'garrison' || role === 'defense' || role === 'air-defense' ? 0 : SUPPLY_RULES.reserve;
     const purchase = purchaseUnit(state.supply, type, view.allies.length, kind => {

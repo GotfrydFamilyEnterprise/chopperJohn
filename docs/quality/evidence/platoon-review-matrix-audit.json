@@ -1,0 +1,345 @@
+{
+  "status": "PASS",
+  "rows": 24,
+  "scope": "Same resources/prices/cooldown/cap and red Assault platoon controller. Independent blue uses explicit adaptive manual purchases; other blue strategies explicitly deploy paid sergeants and authorize their normal-price recruitment/replacement. Spending sequences differ and are reported. All cases include the point-blank collision fix. No teleporting, direct damage or forced result. Unfinished is not a draw or victory; bounded sample is not universal balance.",
+  "summary": {
+    "first-assault:independent": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 3,
+      "blueSpent": [
+        2155,
+        2180,
+        2180
+      ],
+      "redSpent": [
+        2520,
+        2520,
+        2515
+      ],
+      "blueFobCaptures": 3,
+      "redFobCaptures": 0
+    },
+    "first-assault:assault": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 3,
+      "blueSpent": [
+        2495,
+        2520,
+        2520
+      ],
+      "redSpent": [
+        2025,
+        2510,
+        2480
+      ],
+      "blueFobCaptures": 0,
+      "redFobCaptures": 1
+    },
+    "first-assault:siege": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 3,
+      "blueSpent": [
+        2105,
+        2225,
+        2465
+      ],
+      "redSpent": [
+        2510,
+        2500,
+        2415
+      ],
+      "blueFobCaptures": 3,
+      "redFobCaptures": 1
+    },
+    "first-assault:spread": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 3,
+      "blueSpent": [
+        2500,
+        2505,
+        2510
+      ],
+      "redSpent": [
+        2520,
+        2285,
+        2500
+      ],
+      "blueFobCaptures": 0,
+      "redFobCaptures": 1
+    },
+    "ridgeline:independent": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 3,
+      "blueSpent": [
+        1855,
+        1905,
+        1815
+      ],
+      "redSpent": [
+        2510,
+        2480,
+        2505
+      ],
+      "blueFobCaptures": 3,
+      "redFobCaptures": 0
+    },
+    "ridgeline:assault": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 3,
+      "blueSpent": [
+        2515,
+        2510,
+        2500
+      ],
+      "redSpent": [
+        2270,
+        2515,
+        2475
+      ],
+      "blueFobCaptures": 1,
+      "redFobCaptures": 2
+    },
+    "ridgeline:siege": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 3,
+      "blueSpent": [
+        2055,
+        1865,
+        2135
+      ],
+      "redSpent": [
+        2480,
+        2515,
+        2510
+      ],
+      "blueFobCaptures": 3,
+      "redFobCaptures": 0
+    },
+    "ridgeline:spread": {
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "unfinished": 3,
+      "blueSpent": [
+        2490,
+        2515,
+        2520
+      ],
+      "redSpent": [
+        1785,
+        2515,
+        2250
+      ],
+      "blueFobCaptures": 0,
+      "redFobCaptures": 2
+    }
+  },
+  "audits": [
+    {
+      "key": "first-assault:31:independent",
+      "status": "PASS",
+      "balanceResidual": [
+        8.012648322619498e-10,
+        1.9520385308169352e-10
+      ]
+    },
+    {
+      "key": "first-assault:31:assault",
+      "status": "PASS",
+      "balanceResidual": [
+        2.0582291426762822e-10,
+        1.228727342095226e-9
+      ]
+    },
+    {
+      "key": "first-assault:31:siege",
+      "status": "PASS",
+      "balanceResidual": [
+        1.1627037110883975e-9,
+        1.9169910103755683e-10
+      ]
+    },
+    {
+      "key": "first-assault:31:spread",
+      "status": "PASS",
+      "balanceResidual": [
+        2.0882851003989344e-10,
+        1.7349677250422246e-10
+      ]
+    },
+    {
+      "key": "first-assault:32:independent",
+      "status": "PASS",
+      "balanceResidual": [
+        7.185008144006133e-10,
+        1.8826895598067495e-10
+      ]
+    },
+    {
+      "key": "first-assault:32:assault",
+      "status": "PASS",
+      "balanceResidual": [
+        2.0871482320217183e-10,
+        1.8838086646155716e-10
+      ]
+    },
+    {
+      "key": "first-assault:32:siege",
+      "status": "PASS",
+      "balanceResidual": [
+        6.031939392414642e-10,
+        3.080687371870283e-10
+      ]
+    },
+    {
+      "key": "first-assault:32:spread",
+      "status": "PASS",
+      "balanceResidual": [
+        2.092619411087071e-10,
+        3.3205083127541e-10
+      ]
+    },
+    {
+      "key": "first-assault:33:independent",
+      "status": "PASS",
+      "balanceResidual": [
+        6.857590051367879e-10,
+        2.0344792517335009e-10
+      ]
+    },
+    {
+      "key": "first-assault:33:assault",
+      "status": "PASS",
+      "balanceResidual": [
+        2.0871482320217183e-10,
+        2.84931189753479e-10
+      ]
+    },
+    {
+      "key": "first-assault:33:siege",
+      "status": "PASS",
+      "balanceResidual": [
+        1.9599610823206604e-10,
+        1.9872459233738482e-10
+      ]
+    },
+    {
+      "key": "first-assault:33:spread",
+      "status": "PASS",
+      "balanceResidual": [
+        2.0580692705607362e-10,
+        1.8996715311914159e-10
+      ]
+    },
+    {
+      "key": "ridgeline:73:independent",
+      "status": "PASS",
+      "balanceResidual": [
+        1.5306795830838382e-9,
+        2.0662049848851893e-10
+      ]
+    },
+    {
+      "key": "ridgeline:73:assault",
+      "status": "PASS",
+      "balanceResidual": [
+        2.020552614112603e-10,
+        3.2147795536729973e-10
+      ]
+    },
+    {
+      "key": "ridgeline:73:siege",
+      "status": "PASS",
+      "balanceResidual": [
+        1.1687006917782128e-9,
+        2.0744295170516125e-10
+      ]
+    },
+    {
+      "key": "ridgeline:73:spread",
+      "status": "PASS",
+      "balanceResidual": [
+        2.0153123614363722e-10,
+        1.2289547157706693e-9
+      ]
+    },
+    {
+      "key": "ridgeline:74:independent",
+      "status": "PASS",
+      "balanceResidual": [
+        1.597982191015035e-9,
+        2.0899193486911827e-10
+      ]
+    },
+    {
+      "key": "ridgeline:74:assault",
+      "status": "PASS",
+      "balanceResidual": [
+        2.091908868351311e-10,
+        2.056861347909944e-10
+      ]
+    },
+    {
+      "key": "ridgeline:74:siege",
+      "status": "PASS",
+      "balanceResidual": [
+        1.5875230019446462e-9,
+        2.0095036745715333e-10
+      ]
+    },
+    {
+      "key": "ridgeline:74:spread",
+      "status": "PASS",
+      "balanceResidual": [
+        1.9518076044278132e-10,
+        1.950706263187385e-10
+      ]
+    },
+    {
+      "key": "ridgeline:75:independent",
+      "status": "PASS",
+      "balanceResidual": [
+        1.4497345546260476e-9,
+        2.0898660579860007e-10
+      ]
+    },
+    {
+      "key": "ridgeline:75:assault",
+      "status": "PASS",
+      "balanceResidual": [
+        2.091624651257007e-10,
+        1.9517187865858432e-10
+      ]
+    },
+    {
+      "key": "ridgeline:75:siege",
+      "status": "PASS",
+      "balanceResidual": [
+        9.509335541224573e-10,
+        2.08524753020356e-10
+      ]
+    },
+    {
+      "key": "ridgeline:75:spread",
+      "status": "PASS",
+      "balanceResidual": [
+        2.0735058114951244e-10,
+        4.015419108327478e-10
+      ]
+    }
+  ]
+}

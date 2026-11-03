@@ -1,6 +1,6 @@
-import {chooseAssaultRocketTarget} from '../bases/assaultOrders.js?v=2.0.0';
-import {chooseRocketTarget} from './weapons.js?v=2.0.0';
-import {planAirShot} from './airInterception.js?v=2.0.0';
+import {chooseAssaultRocketTarget} from '../bases/assaultOrders.js?v=2.1.0';
+import {chooseRocketTarget} from './weapons.js?v=2.1.0';
+import {planAirShot} from './airInterception.js?v=2.1.0';
 // AA-GROUP: groups are same-faction rocket soldiers linked by <=240 world units.
 // With both threats present, target2/3 air and1/3 ground, rounded to nearest,
 // reserving at least one ground-capable soldier. Capability always beats quota.

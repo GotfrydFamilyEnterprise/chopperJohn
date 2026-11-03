@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "description": "Independent real-input Siege seed31 replay exactly reproduces full480s row, including every reported metric/capture/breach/stat/account and final roster/base state. Every tick checked cap/account/surface movement bounds.",
+  "maxPopulation": [
+    14,
+    9
+  ],
+  "maxGroups": [
+    2,
+    2
+  ],
+  "maxSurfaceSpeed": [
+    94.00000000001,
+    93.99999999999636
+  ],
+  "sprintTicks": [
+    176087,
+    16991
+  ],
+  "actual": {
+    "level": "first-assault",
+    "seed": 31,
+    "tactic": "siege",
+    "air": "none",
+    "time": 480,
+    "finished": false,
+    "winner": null,
+    "living": [
+      13,
+      0
+    ],
+    "supply": [
+      {
+        "spent": 2105,
+        "balance": 220.9583333333263,
+        "earned": 2205.958333334489,
+        "purchases": 80
+      },
+      {
+        "spent": 2510,
+        "balance": 10.000000000017485,
+        "earned": 2400.000000000209,
+        "purchases": 92
+      }
+    ],
+    "metrics": {
+      "firstShot": [
+        26.349999999999998,
+        27.2
+      ],
+      "breaches": [
+        {
+          "time": 113.74166666666666,
+          "baseId": "red-fob",
+          "team": 0
+        },
+        {
+          "time": 244.23333333333332,
+          "baseId": "red-hq",
+          "team": 0
+        }
+      ],
+      "captures": [
+        {
+          "time": 157.55,
+          "baseId": "red-fob",
+          "team": 0
+        }
+      ]
+    },
+    "stats": {
+      "rifleShots": 357,
+      "rocketShots": 441,
+      "helicopterShots": 0,
+      "damage": 519.8679015662686,
+      "repairs": 0
+    },
+    "platoons": {
+      "leaders": 8,
+      "recruits": 95,
+      "replacements": 84,
+      "adopted": 7,
+      "disbanded": 6
+    },
+    "activeGroups": [
+      {
+        "team": 0,
+        "strategy": "siege",
+        "phase": "capture",
+        "missing": 0,
+        "joining": 2
+      },
+      {
+        "team": 0,
+        "strategy": "siege",
+        "phase": "capture",
+        "missing": 0,
+        "joining": 2
+      }
+    ],
+    "bases": [
+      {
+        "id": "blue-hq",
+        "team": 0,
+        "defenses": 6
+      },
+      {
+        "id": "red-hq",
+        "team": 1,
+        "defenses": 0
+      },
+      {
+        "id": "blue-fob",
+        "team": 0,
+        "defenses": 20
+      },
+      {
+        "id": "red-fob",
+        "team": 0,
+        "defenses": 20
+      }
+    ]
+  }
+}
