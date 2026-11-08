@@ -1,0 +1,7 @@
+{
+  "source": "Post-F7 source with leaderRadius240",
+  "checks": 6825,
+  "guaranteedForwardSlack": 20,
+  "status": "PASS",
+  "failures": []
+}

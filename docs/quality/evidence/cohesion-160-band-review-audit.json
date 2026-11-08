@@ -1,0 +1,1899 @@
+{
+  "source": "49a30ee (production source at review start; review-only evidence added separately)",
+  "matrix": "platoon-tactics-results.json final 648 rows, not archived initial matrix",
+  "status": "PASS",
+  "checks": {
+    "rows": 648,
+    "grid": 648,
+    "replays": 8,
+    "initialComparisons": 216
+  },
+  "failures": [],
+  "mirrorPairs": 324,
+  "mirrorPairsWithDifferences": 69,
+  "outcomeDiscordances": [
+    {
+      "key": "rocket-heavy/mixed/assault/101/false",
+      "left": {
+        "case": "rocket-heavy",
+        "mix": "mixed",
+        "controller": "assault",
+        "seed": 101,
+        "mirrored": false,
+        "seconds": 72.33333333333333,
+        "outcome": "attack",
+        "initialCost": [
+          195,
+          230
+        ],
+        "alive": [
+          2,
+          0
+        ],
+        "survivingValue": [
+          120,
+          0
+        ],
+        "hp": [
+          3.002016537991378,
+          0
+        ],
+        "spent": [
+          25,
+          0
+        ],
+        "bank": [
+          95,
+          120
+        ],
+        "breachAt": null,
+        "captureAt": null,
+        "retreats": 1,
+        "regroups": 1,
+        "resumes": 0,
+        "maxLeaderGap": 148.61249999999893,
+        "shots": {
+          "rifle": 2,
+          "rocket": 46
+        },
+        "projectiles": 0
+      },
+      "right": {
+        "case": "rocket-heavy",
+        "mix": "mixed",
+        "controller": "assault",
+        "seed": 101,
+        "mirrored": true,
+        "seconds": 72.01666666666667,
+        "outcome": "defense",
+        "initialCost": [
+          195,
+          230
+        ],
+        "alive": [
+          0,
+          3
+        ],
+        "survivingValue": [
+          0,
+          180
+        ],
+        "hp": [
+          0,
+          1.9926959413298806
+        ],
+        "spent": [
+          25,
+          0
+        ],
+        "bank": [
+          95,
+          120
+        ],
+        "breachAt": null,
+        "captureAt": null,
+        "retreats": 1,
+        "regroups": 1,
+        "resumes": 0,
+        "maxLeaderGap": 148.61250000000473,
+        "shots": {
+          "rifle": 4,
+          "rocket": 48
+        },
+        "projectiles": 0
+      }
+    },
+    {
+      "key": "rocket-heavy/rocket/assault/101/false",
+      "left": {
+        "case": "rocket-heavy",
+        "mix": "rocket",
+        "controller": "assault",
+        "seed": 101,
+        "mirrored": false,
+        "seconds": 47.34166666666667,
+        "outcome": "attack",
+        "initialCost": [
+          230,
+          230
+        ],
+        "alive": [
+          1,
+          0
+        ],
+        "survivingValue": [
+          60,
+          0
+        ],
+        "hp": [
+          0.40497118760412154,
+          0
+        ],
+        "spent": [
+          25,
+          0
+        ],
+        "bank": [
+          95,
+          120
+        ],
+        "breachAt": null,
+        "captureAt": null,
+        "retreats": 0,
+        "regroups": 0,
+        "resumes": 0,
+        "maxLeaderGap": 160,
+        "shots": {
+          "rifle": 1,
+          "rocket": 46
+        },
+        "projectiles": 0
+      },
+      "right": {
+        "case": "rocket-heavy",
+        "mix": "rocket",
+        "controller": "assault",
+        "seed": 101,
+        "mirrored": true,
+        "seconds": 44.11666666666667,
+        "outcome": "defense",
+        "initialCost": [
+          230,
+          230
+        ],
+        "alive": [
+          0,
+          3
+        ],
+        "survivingValue": [
+          0,
+          180
+        ],
+        "hp": [
+          0,
+          2.660297306465341
+        ],
+        "spent": [
+          25,
+          0
+        ],
+        "bank": [
+          95,
+          120
+        ],
+        "breachAt": null,
+        "captureAt": null,
+        "retreats": 0,
+        "regroups": 0,
+        "resumes": 0,
+        "maxLeaderGap": 160,
+        "shots": {
+          "rifle": 0,
+          "rocket": 48
+        },
+        "projectiles": 0
+      }
+    }
+  ],
+  "maximumPairedElapsedDifference": 103.1,
+  "mirrorDifferences": [
+    {
+      "key": "three-rifles/rifle/assault/101/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        15.883333333333333,
+        15.891666666666666
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "three-rifles/rifle/assault/102/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        12.333333333333334,
+        12.341666666666667
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "three-rifles/rifle/assault/103/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        15.875,
+        15.883333333333333
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "three-rifles/rocket/assault/101/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        13.366666666666667,
+        13.375
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "three-rifles/rocket/assault/103/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        14.325,
+        14.333333333333334
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "three-rifles/rocket/spread/101/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        14.325,
+        14.333333333333334
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "three-rifles/rocket/spread/103/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        14.325,
+        14.333333333333334
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "three-mixed/rocket/assault/102/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        26.275,
+        26.28333333333333
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "three-mixed/rocket/spread/102/false",
+      "metrics": [
+        "hp"
+      ],
+      "seconds": [
+        36.09166666666667,
+        36.09166666666667
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "three-mixed/rocket/spread/103/false",
+      "metrics": [
+        "hp"
+      ],
+      "seconds": [
+        26.775,
+        26.775
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "equal-mixed/mixed/assault/101/false",
+      "metrics": [
+        "seconds",
+        "hp"
+      ],
+      "seconds": [
+        46.99166666666667,
+        47
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "equal-mixed/mixed/assault/102/false",
+      "metrics": [
+        "hp",
+        "maxLeaderGap"
+      ],
+      "seconds": [
+        35.85,
+        35.85
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "equal-mixed/mixed/assault/103/false",
+      "metrics": [
+        "seconds",
+        "hp"
+      ],
+      "seconds": [
+        32.40833333333333,
+        32.416666666666664
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "equal-mixed/rocket/assault/102/false",
+      "metrics": [
+        "seconds",
+        "hp"
+      ],
+      "seconds": [
+        32.13333333333333,
+        32.141666666666666
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "equal-mixed/rocket/siege/101/false",
+      "metrics": [
+        "seconds",
+        "hp",
+        "maxLeaderGap"
+      ],
+      "seconds": [
+        31.583333333333332,
+        31.558333333333334
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "equal-mixed/rocket/siege/103/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        68.29166666666667,
+        68.3
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-rifles/mixed/assault/103/false",
+      "metrics": [
+        "hp"
+      ],
+      "seconds": [
+        20.025,
+        20.025
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-rifles/rifle/assault/101/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        19.166666666666668,
+        19.175
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-rifles/rifle/assault/102/false",
+      "metrics": [
+        "seconds",
+        "hp"
+      ],
+      "seconds": [
+        19.90833333333333,
+        19.916666666666668
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-rifles/rifle/assault/103/false",
+      "metrics": [
+        "seconds",
+        "hp"
+      ],
+      "seconds": [
+        19.166666666666668,
+        19.175
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-rifles/rocket/assault/101/false",
+      "metrics": [
+        "hp"
+      ],
+      "seconds": [
+        19.666666666666668,
+        19.666666666666668
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-rifles/rocket/assault/102/false",
+      "metrics": [
+        "hp"
+      ],
+      "seconds": [
+        19.866666666666667,
+        19.866666666666667
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-rifles/rocket/assault/103/false",
+      "metrics": [
+        "seconds",
+        "hp"
+      ],
+      "seconds": [
+        19.35,
+        19.341666666666665
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-rifles/rocket/siege/102/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        18.625,
+        18.633333333333333
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "seven-rifles/rocket/siege/103/false",
+      "metrics": [
+        "hp"
+      ],
+      "seconds": [
+        20.075,
+        20.075
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-rifles/rocket/spread/101/false",
+      "metrics": [
+        "hp"
+      ],
+      "seconds": [
+        19.133333333333333,
+        19.133333333333333
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-rifles/rocket/spread/103/false",
+      "metrics": [
+        "seconds",
+        "hp"
+      ],
+      "seconds": [
+        19.35,
+        19.341666666666665
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-mixed/mixed/assault/102/false",
+      "metrics": [
+        "hp"
+      ],
+      "seconds": [
+        19.291666666666668,
+        19.291666666666668
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-mixed/mixed/assault/103/false",
+      "metrics": [
+        "seconds",
+        "hp"
+      ],
+      "seconds": [
+        19.15833333333333,
+        19.166666666666668
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-mixed/rifle/assault/102/false",
+      "metrics": [
+        "seconds",
+        "hp"
+      ],
+      "seconds": [
+        19.166666666666668,
+        19.175
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-mixed/rifle/assault/103/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        18.591666666666665,
+        18.6
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-mixed/rocket/assault/102/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        44.00833333333333,
+        44
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-mixed/rocket/assault/103/false",
+      "metrics": [
+        "seconds",
+        "hp"
+      ],
+      "seconds": [
+        18.53333333333333,
+        18.525
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-mixed/rocket/siege/101/false",
+      "metrics": [
+        "seconds",
+        "hp",
+        "maxLeaderGap"
+      ],
+      "seconds": [
+        60.574999999999996,
+        60.583333333333336
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "seven-mixed/rocket/siege/102/false",
+      "metrics": [
+        "seconds",
+        "hp"
+      ],
+      "seconds": [
+        39.05833333333333,
+        39.06666666666666
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "seven-mixed/rocket/siege/103/false",
+      "metrics": [
+        "hp"
+      ],
+      "seconds": [
+        18.733333333333334,
+        18.733333333333334
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "seven-mixed/rocket/spread/103/false",
+      "metrics": [
+        "hp"
+      ],
+      "seconds": [
+        18.4,
+        18.4
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "rocket-heavy/mixed/assault/101/false",
+      "metrics": [
+        "seconds",
+        "outcome",
+        "alive",
+        "survivingValue",
+        "hp",
+        "shots"
+      ],
+      "seconds": [
+        72.33333333333333,
+        72.01666666666667
+      ],
+      "outcome": [
+        "attack",
+        "defense"
+      ]
+    },
+    {
+      "key": "rocket-heavy/mixed/assault/102/false",
+      "metrics": [
+        "seconds",
+        "hp",
+        "maxLeaderGap",
+        "shots"
+      ],
+      "seconds": [
+        31.058333333333334,
+        53.19166666666666
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "rocket-heavy/rocket/assault/101/false",
+      "metrics": [
+        "seconds",
+        "outcome",
+        "alive",
+        "survivingValue",
+        "hp",
+        "shots"
+      ],
+      "seconds": [
+        47.34166666666667,
+        44.11666666666667
+      ],
+      "outcome": [
+        "attack",
+        "defense"
+      ]
+    },
+    {
+      "key": "rocket-heavy/rocket/assault/103/false",
+      "metrics": [
+        "hp"
+      ],
+      "seconds": [
+        34.55833333333333,
+        34.55833333333333
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "rocket-heavy/rocket/siege/101/false",
+      "metrics": [
+        "hp",
+        "maxLeaderGap"
+      ],
+      "seconds": [
+        35.325,
+        35.325
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "rocket-heavy/rocket/siege/102/false",
+      "metrics": [
+        "seconds",
+        "hp",
+        "maxLeaderGap"
+      ],
+      "seconds": [
+        33.05833333333333,
+        33.06666666666666
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "rocket-heavy/rocket/siege/103/false",
+      "metrics": [
+        "seconds",
+        "maxLeaderGap",
+        "shots"
+      ],
+      "seconds": [
+        56.15,
+        59.85
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "rocket-heavy/rocket/spread/101/false",
+      "metrics": [
+        "seconds"
+      ],
+      "seconds": [
+        39.78333333333333,
+        39.75833333333333
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "rocket-heavy/rocket/spread/102/false",
+      "metrics": [
+        "hp"
+      ],
+      "seconds": [
+        34.75,
+        34.75
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "rocket-heavy/rocket/spread/103/false",
+      "metrics": [
+        "seconds",
+        "hp"
+      ],
+      "seconds": [
+        35.28333333333333,
+        35.275
+      ],
+      "outcome": [
+        "attack",
+        "attack"
+      ]
+    },
+    {
+      "key": "supplied-fob/mixed/independent/101/false",
+      "metrics": [
+        "hp",
+        "spent",
+        "bank",
+        "shots"
+      ],
+      "seconds": [
+        360,
+        360
+      ],
+      "outcome": [
+        "unfinished",
+        "unfinished"
+      ]
+    },
+    {
+      "key": "supplied-fob/mixed/independent/102/false",
+      "metrics": [
+        "hp",
+        "bank",
+        "shots",
+        "projectiles"
+      ],
+      "seconds": [
+        360,
+        360
+      ],
+      "outcome": [
+        "unfinished",
+        "unfinished"
+      ]
+    },
+    {
+      "key": "supplied-fob/mixed/independent/103/false",
+      "metrics": [
+        "hp",
+        "spent",
+        "bank",
+        "shots",
+        "projectiles"
+      ],
+      "seconds": [
+        360,
+        360
+      ],
+      "outcome": [
+        "unfinished",
+        "unfinished"
+      ]
+    },
+    {
+      "key": "supplied-fob/mixed/assault/101/false",
+      "metrics": [
+        "seconds",
+        "alive",
+        "survivingValue",
+        "hp",
+        "spent",
+        "shots"
+      ],
+      "seconds": [
+        333.125,
+        300.8833333333333
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "supplied-fob/mixed/siege/101/false",
+      "metrics": [
+        "hp",
+        "spent",
+        "bank",
+        "maxLeaderGap",
+        "shots",
+        "projectiles"
+      ],
+      "seconds": [
+        360,
+        360
+      ],
+      "outcome": [
+        "unfinished",
+        "unfinished"
+      ]
+    },
+    {
+      "key": "supplied-fob/mixed/siege/102/false",
+      "metrics": [
+        "seconds",
+        "hp",
+        "bank",
+        "shots"
+      ],
+      "seconds": [
+        306.1583333333333,
+        303.56666666666666
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "supplied-fob/mixed/spread/102/false",
+      "metrics": [
+        "seconds",
+        "alive",
+        "survivingValue",
+        "hp",
+        "spent",
+        "bank",
+        "shots"
+      ],
+      "seconds": [
+        337.94166666666666,
+        328.59166666666664
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "supplied-fob/mixed/spread/103/false",
+      "metrics": [
+        "seconds",
+        "hp",
+        "spent",
+        "shots"
+      ],
+      "seconds": [
+        326.175,
+        326.43333333333334
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "supplied-fob/rifle/independent/101/false",
+      "metrics": [
+        "hp",
+        "bank",
+        "shots"
+      ],
+      "seconds": [
+        360,
+        360
+      ],
+      "outcome": [
+        "unfinished",
+        "unfinished"
+      ]
+    },
+    {
+      "key": "supplied-fob/rifle/independent/102/false",
+      "metrics": [
+        "hp",
+        "spent",
+        "bank",
+        "shots",
+        "projectiles"
+      ],
+      "seconds": [
+        360,
+        360
+      ],
+      "outcome": [
+        "unfinished",
+        "unfinished"
+      ]
+    },
+    {
+      "key": "supplied-fob/rifle/independent/103/false",
+      "metrics": [
+        "alive",
+        "survivingValue",
+        "hp",
+        "spent",
+        "bank",
+        "shots"
+      ],
+      "seconds": [
+        360,
+        360
+      ],
+      "outcome": [
+        "unfinished",
+        "unfinished"
+      ]
+    },
+    {
+      "key": "supplied-fob/rocket/independent/101/false",
+      "metrics": [
+        "hp",
+        "spent",
+        "bank",
+        "shots",
+        "projectiles"
+      ],
+      "seconds": [
+        360,
+        360
+      ],
+      "outcome": [
+        "unfinished",
+        "unfinished"
+      ]
+    },
+    {
+      "key": "supplied-fob/rocket/independent/102/false",
+      "metrics": [
+        "hp",
+        "spent",
+        "bank",
+        "shots",
+        "projectiles"
+      ],
+      "seconds": [
+        360,
+        360
+      ],
+      "outcome": [
+        "unfinished",
+        "unfinished"
+      ]
+    },
+    {
+      "key": "supplied-fob/rocket/independent/103/false",
+      "metrics": [
+        "hp",
+        "spent",
+        "bank",
+        "shots",
+        "projectiles"
+      ],
+      "seconds": [
+        360,
+        360
+      ],
+      "outcome": [
+        "unfinished",
+        "unfinished"
+      ]
+    },
+    {
+      "key": "supplied-fob/rocket/assault/102/false",
+      "metrics": [
+        "seconds",
+        "hp",
+        "spent",
+        "bank",
+        "shots"
+      ],
+      "seconds": [
+        236.24166666666667,
+        211.325
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "supplied-fob/rocket/assault/103/false",
+      "metrics": [
+        "seconds",
+        "alive",
+        "survivingValue",
+        "hp",
+        "spent",
+        "shots"
+      ],
+      "seconds": [
+        109.26666666666667,
+        195.81666666666666
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "supplied-fob/rocket/siege/101/false",
+      "metrics": [
+        "seconds",
+        "hp",
+        "spent",
+        "bank",
+        "shots"
+      ],
+      "seconds": [
+        245.35,
+        174.29166666666666
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "supplied-fob/rocket/siege/102/false",
+      "metrics": [
+        "seconds",
+        "alive",
+        "survivingValue",
+        "hp",
+        "spent",
+        "bank",
+        "shots"
+      ],
+      "seconds": [
+        191.90833333333333,
+        198.15
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "supplied-fob/rocket/siege/103/false",
+      "metrics": [
+        "seconds",
+        "hp",
+        "spent",
+        "shots"
+      ],
+      "seconds": [
+        193.03333333333333,
+        195.275
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "supplied-fob/rocket/spread/101/false",
+      "metrics": [
+        "seconds",
+        "hp",
+        "spent",
+        "shots"
+      ],
+      "seconds": [
+        175.75833333333333,
+        271.2583333333333
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "supplied-fob/rocket/spread/102/false",
+      "metrics": [
+        "seconds",
+        "alive",
+        "survivingValue",
+        "hp",
+        "spent",
+        "shots"
+      ],
+      "seconds": [
+        200.78333333333333,
+        189.975
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    },
+    {
+      "key": "supplied-fob/rocket/spread/103/false",
+      "metrics": [
+        "seconds",
+        "hp",
+        "spent",
+        "bank",
+        "shots"
+      ],
+      "seconds": [
+        193.85,
+        90.75
+      ],
+      "outcome": [
+        "defense",
+        "defense"
+      ]
+    }
+  ],
+  "aggregates": {
+    "three-rifles/independent": {
+      "attack": 18,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "three-rifles/assault": {
+      "attack": 18,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "three-rifles/siege": {
+      "attack": 18,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "three-rifles/spread": {
+      "attack": 18,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "three-mixed/independent": {
+      "attack": 18,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "three-mixed/assault": {
+      "attack": 14,
+      "defense": 4,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "three-mixed/siege": {
+      "attack": 14,
+      "defense": 2,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 2
+    },
+    "three-mixed/spread": {
+      "attack": 14,
+      "defense": 4,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "equal-mixed/independent": {
+      "attack": 2,
+      "defense": 14,
+      "mutual": 2,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "equal-mixed/assault": {
+      "attack": 10,
+      "defense": 8,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "equal-mixed/siege": {
+      "attack": 6,
+      "defense": 12,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "equal-mixed/spread": {
+      "attack": 10,
+      "defense": 8,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "seven-rifles/independent": {
+      "attack": 8,
+      "defense": 8,
+      "mutual": 2,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "seven-rifles/assault": {
+      "attack": 0,
+      "defense": 18,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "seven-rifles/siege": {
+      "attack": 2,
+      "defense": 14,
+      "mutual": 2,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "seven-rifles/spread": {
+      "attack": 0,
+      "defense": 18,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "seven-mixed/independent": {
+      "attack": 4,
+      "defense": 14,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "seven-mixed/assault": {
+      "attack": 0,
+      "defense": 18,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "seven-mixed/siege": {
+      "attack": 6,
+      "defense": 12,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "seven-mixed/spread": {
+      "attack": 2,
+      "defense": 16,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "rocket-heavy/independent": {
+      "attack": 6,
+      "defense": 10,
+      "mutual": 2,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "rocket-heavy/assault": {
+      "attack": 6,
+      "defense": 12,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "rocket-heavy/siege": {
+      "attack": 4,
+      "defense": 14,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "rocket-heavy/spread": {
+      "attack": 4,
+      "defense": 14,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 0
+    },
+    "empty-fob/independent": {
+      "attack": 0,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 18,
+      "unfinished": 0
+    },
+    "empty-fob/assault": {
+      "attack": 0,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 18,
+      "unfinished": 0
+    },
+    "empty-fob/siege": {
+      "attack": 0,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 18,
+      "unfinished": 0
+    },
+    "empty-fob/spread": {
+      "attack": 0,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 18,
+      "unfinished": 0
+    },
+    "staffed-fob/independent": {
+      "attack": 0,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 18
+    },
+    "staffed-fob/assault": {
+      "attack": 0,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 18
+    },
+    "staffed-fob/siege": {
+      "attack": 0,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 18
+    },
+    "staffed-fob/spread": {
+      "attack": 0,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 18
+    },
+    "supplied-fob/independent": {
+      "attack": 0,
+      "defense": 0,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 18
+    },
+    "supplied-fob/assault": {
+      "attack": 0,
+      "defense": 14,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 4
+    },
+    "supplied-fob/siege": {
+      "attack": 0,
+      "defense": 8,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 10
+    },
+    "supplied-fob/spread": {
+      "attack": 0,
+      "defense": 14,
+      "mutual": 0,
+      "capture": 0,
+      "unfinished": 4
+    }
+  },
+  "replays": [
+    {
+      "case": "equal-mixed",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 103,
+      "mirrored": false,
+      "seconds": 36.766666666666666,
+      "outcome": "attack",
+      "initialCost": [
+        195,
+        195
+      ],
+      "alive": [
+        2,
+        0
+      ],
+      "survivingValue": [
+        120,
+        0
+      ],
+      "hp": [
+        5.711457240691077,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 17,
+        "rocket": 19
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "equal-mixed",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 103,
+      "mirrored": true,
+      "seconds": 36.766666666666666,
+      "outcome": "attack",
+      "initialCost": [
+        195,
+        195
+      ],
+      "alive": [
+        2,
+        0
+      ],
+      "survivingValue": [
+        120,
+        0
+      ],
+      "hp": [
+        5.7114572406907165,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 17,
+        "rocket": 19
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "staffed-fob",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 103,
+      "mirrored": false,
+      "seconds": 240,
+      "outcome": "unfinished",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        3,
+        3
+      ],
+      "survivingValue": [
+        145,
+        110
+      ],
+      "hp": [
+        11,
+        7.999999999999999
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 239.87499999999113,
+      "shots": {
+        "rifle": 0,
+        "rocket": 18
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "staffed-fob",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 103,
+      "mirrored": true,
+      "seconds": 240,
+      "outcome": "unfinished",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        3,
+        3
+      ],
+      "survivingValue": [
+        145,
+        110
+      ],
+      "hp": [
+        11,
+        7.999999999999999
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 239.87499999973306,
+      "shots": {
+        "rifle": 0,
+        "rocket": 18
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "empty-fob",
+      "mix": "rocket",
+      "controller": "siege",
+      "seed": 103,
+      "mirrored": false,
+      "seconds": 74.38333333333333,
+      "outcome": "capture",
+      "initialCost": [
+        230,
+        0
+      ],
+      "alive": [
+        5,
+        0
+      ],
+      "survivingValue": [
+        230,
+        0
+      ],
+      "hp": [
+        18,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": 61.266666666666666,
+      "captureAt": 74.38333333333333,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 160,
+      "shots": {
+        "rifle": 0,
+        "rocket": 21
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "empty-fob",
+      "mix": "rocket",
+      "controller": "siege",
+      "seed": 103,
+      "mirrored": true,
+      "seconds": 74.38333333333333,
+      "outcome": "capture",
+      "initialCost": [
+        230,
+        0
+      ],
+      "alive": [
+        5,
+        0
+      ],
+      "survivingValue": [
+        230,
+        0
+      ],
+      "hp": [
+        18,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": 61.266666666666666,
+      "captureAt": 74.38333333333333,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 160,
+      "shots": {
+        "rifle": 0,
+        "rocket": 21
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "supplied-fob",
+      "mix": "rocket",
+      "controller": "assault",
+      "seed": 103,
+      "mirrored": false,
+      "seconds": 109.26666666666667,
+      "outcome": "defense",
+      "initialCost": [
+        230,
+        110
+      ],
+      "alive": [
+        0,
+        2
+      ],
+      "survivingValue": [
+        0,
+        85
+      ],
+      "hp": [
+        0,
+        5.569302871506888
+      ],
+      "spent": [
+        50,
+        210
+      ],
+      "bank": [
+        240,
+        240
+      ],
+      "breachAt": 58.141666666666666,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 160.03750000000264,
+      "shots": {
+        "rifle": 6,
+        "rocket": 65
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "supplied-fob",
+      "mix": "rocket",
+      "controller": "assault",
+      "seed": 103,
+      "mirrored": true,
+      "seconds": 195.81666666666666,
+      "outcome": "defense",
+      "initialCost": [
+        230,
+        110
+      ],
+      "alive": [
+        0,
+        3
+      ],
+      "survivingValue": [
+        0,
+        110
+      ],
+      "hp": [
+        0,
+        6.591983122862376
+      ],
+      "spent": [
+        50,
+        335
+      ],
+      "bank": [
+        240,
+        240
+      ],
+      "breachAt": 58.141666666666666,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 160.03749999998877,
+      "shots": {
+        "rifle": 6,
+        "rocket": 109
+      },
+      "projectiles": 0
+    }
+  ]
+}

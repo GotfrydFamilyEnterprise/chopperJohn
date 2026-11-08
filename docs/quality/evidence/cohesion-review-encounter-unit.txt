@@ -1,0 +1,13 @@
+✔ PL-09/10 matching starts, actual initial costs, mirrored stationed defenders, malformed data rejected (118.600076ms)
+✔ PL-08/10 world pause freezes supplied encounter accounts, orders and all simulation state (3.98491ms)
+✔ PL-08 supported large formations can physically regroup and meet80% resume (1002.420792ms)
+✔ PL-09 actual empty-FOB breach precedes physical capture; fixed runs never refill casualties (1273.167633ms)
+✔ PL-09/10 exact encounter replay and settled elimination outcomes (1689.355824ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4108.532099

@@ -1,0 +1,19 @@
+✔ PL-01 sergeant is an ordinary paid rifleman; invalid/disabled/paused/failed orders cannot spend (55.559137ms)
+✔ PL-01/02 full physical rally precedes launch; existing field troops reused while guards remain free (1040.74936ms)
+✔ PL-03 paid replacement is unique, queues for funds/cap, and physically sprints at twice speed until joined (2188.175778ms)
+✔ PL-03 leader death disbands and cancels resupply without deleting already paid troops (474.909001ms)
+✔ PL-02/04 both factions launch bounded squads and exact replay preserves orders, finances and damage (1696.504018ms)
+✔ PL-05 campaign close-range rifle collision includes barrel segment, ending overlapping post duels (11.846121ms)
+✔ PL-03 casualties during rally and after launch always buy a replacement, never adopt a spare (317.826461ms)
+✔ PL-03 full population queues casualty without charging and fills once space opens (676.342297ms)
+✔ PL-03/05 replacement retains actual double speed when entering capture approach (416.47312ms)
+✔ PL-01/03 red field recruitment preserves a missing garrison rocket saving priority (132.120265ms)
+✔ PL-01 JSON rejects a wave without a follower rifle before it can stall campaign AI (1.216232ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7093.42112

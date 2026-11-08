@@ -3,9 +3,11 @@
   "type": "module",
   "scripts": {
     "test": "playwright test",
-    "test:unit": "node tests-unit/adversarial.test.js && node tests-unit/rocket-combat.test.js && node tests-unit/rocket-review.test.js && node tests-unit/rocket-leading.test.js && node tests-unit/red-economy.test.js && node tests-unit/red-economy-review.test.js && node tests-unit/shared-economy-review.test.js && node tests-unit/v1-helicopter.test.js && node tests-unit/v1-independent-review.test.js && node tests-unit/air-balance.test.js && node tests-unit/session-flow.test.js && node tests-unit/takeover.test.js && node tests-unit/terrain.test.js && node tests-unit/terrain-balance.test.js && node tests-unit/terrain-splash.test.js && node tests-unit/campaign.test.js",
+    "test:unit": "node tests-unit/adversarial.test.js && node tests-unit/rocket-combat.test.js && node tests-unit/rocket-review.test.js && node tests-unit/rocket-leading.test.js && node tests-unit/red-economy.test.js && node tests-unit/red-economy-review.test.js && node tests-unit/shared-economy-review.test.js && node tests-unit/v1-helicopter.test.js && node tests-unit/v1-independent-review.test.js && node tests-unit/air-balance.test.js && node tests-unit/session-flow.test.js && node tests-unit/takeover.test.js && node tests-unit/terrain.test.js && node tests-unit/terrain-balance.test.js && node tests-unit/terrain-splash.test.js && node tests-unit/campaign.test.js && node tests-unit/platoons.test.js && node tests-unit/platoon-encounters.test.js",
     "test:balance": "node scripts/terrain-balance.mjs",
-    "test:campaign": "node scripts/campaign-benchmark.mjs"
+    "test:campaign": "node scripts/campaign-benchmark.mjs",
+    "test:platoons": "node scripts/platoon-benchmark.mjs",
+    "test:tactics": "node scripts/platoon-tactics-benchmark.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1"

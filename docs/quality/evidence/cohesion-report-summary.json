@@ -1,0 +1,2987 @@
+{
+  "rows": 648,
+  "primarySeeds": 3,
+  "mirrorDiscord": 3,
+  "pairs": 324,
+  "summary": {
+    "equalSpread": 2,
+    "equalIndependent": 1,
+    "rocketAssault": 3,
+    "rocketIndependent": 0,
+    "emptySiege": "72.0s",
+    "emptyIndependent": "90.8s",
+    "staffedCaptures": 0
+  },
+  "groups": [
+    {
+      "case": "three-rifles",
+      "name": "Five versus three riflemen",
+      "mix": "mixed",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            75
+          ],
+          "survivorValue": 170,
+          "extraSupply": 0,
+          "seconds": 9.675,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            75
+          ],
+          "survivorValue": 145,
+          "extraSupply": 0,
+          "seconds": 15.183333333333334,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            75
+          ],
+          "survivorValue": 145,
+          "extraSupply": 0,
+          "seconds": 8.375,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            75
+          ],
+          "survivorValue": 145,
+          "extraSupply": 0,
+          "seconds": 16.008333333333333,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "three-rifles",
+      "name": "Five versus three riflemen",
+      "mix": "rifle",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            75
+          ],
+          "survivorValue": 110,
+          "extraSupply": 0,
+          "seconds": 9.775,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            75
+          ],
+          "survivorValue": 110,
+          "extraSupply": 0,
+          "seconds": 15.875,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            75
+          ],
+          "survivorValue": 110,
+          "extraSupply": 0,
+          "seconds": 15.616666666666667,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            75
+          ],
+          "survivorValue": 110,
+          "extraSupply": 0,
+          "seconds": 15.7,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "three-rifles",
+      "name": "Five versus three riflemen",
+      "mix": "rocket",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            75
+          ],
+          "survivorValue": 205,
+          "extraSupply": 0,
+          "seconds": 9.741666666666667,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            75
+          ],
+          "survivorValue": 205,
+          "extraSupply": 0,
+          "seconds": 13.366666666666667,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            75
+          ],
+          "survivorValue": 205,
+          "extraSupply": 0,
+          "seconds": 13.591666666666667,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            75
+          ],
+          "survivorValue": 145,
+          "extraSupply": 0,
+          "seconds": 14.325,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        }
+      ]
+    },
+    {
+      "case": "three-mixed",
+      "name": "Five versus a smaller mixed force",
+      "mix": "mixed",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            110
+          ],
+          "survivorValue": 120,
+          "extraSupply": 0,
+          "seconds": 16.383333333333333,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            110
+          ],
+          "survivorValue": 120,
+          "extraSupply": 0,
+          "seconds": 75.85,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            110
+          ],
+          "survivorValue": 120,
+          "extraSupply": 0,
+          "seconds": 76.125,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            110
+          ],
+          "survivorValue": 120,
+          "extraSupply": 0,
+          "seconds": 65.21666666666667,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "three-mixed",
+      "name": "Five versus a smaller mixed force",
+      "mix": "rifle",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            110
+          ],
+          "survivorValue": 110,
+          "extraSupply": 0,
+          "seconds": 16.5,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 1,
+          "losses": 2,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 2,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            110
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 94.225,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 1,
+          "losses": 1,
+          "mutual": 0,
+          "unfinished": 1,
+          "mirror": {
+            "wins": 1,
+            "losses": 1,
+            "mutual": 0,
+            "unfinished": 1
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            110
+          ],
+          "survivorValue": 60,
+          "extraSupply": 0,
+          "seconds": 97.78333333333333,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 1,
+          "losses": 2,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 2,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            110
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 94.225,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "three-mixed",
+      "name": "Five versus a smaller mixed force",
+      "mix": "rocket",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            110
+          ],
+          "survivorValue": 180,
+          "extraSupply": 0,
+          "seconds": 26.616666666666667,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            110
+          ],
+          "survivorValue": 180,
+          "extraSupply": 0,
+          "seconds": 26.75,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            110
+          ],
+          "survivorValue": 180,
+          "extraSupply": 0,
+          "seconds": 28.333333333333332,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            110
+          ],
+          "survivorValue": 180,
+          "extraSupply": 0,
+          "seconds": 26.775,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        }
+      ]
+    },
+    {
+      "case": "equal-mixed",
+      "name": "Equal mixed forces",
+      "mix": "mixed",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 1,
+          "losses": 1,
+          "mutual": 1,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 1,
+            "mutual": 1,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            195
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 36.766666666666666,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 2,
+          "losses": 0,
+          "mutual": 1,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 2,
+            "losses": 0,
+            "mutual": 1,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            195
+          ],
+          "survivorValue": 120,
+          "extraSupply": 0,
+          "seconds": 46.983333333333334,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 1,
+          "losses": 2,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 2,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            195
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 58.56666666666666,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 2,
+          "losses": 1,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 2,
+            "losses": 1,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            195
+          ],
+          "survivorValue": 60,
+          "extraSupply": 0,
+          "seconds": 50.43333333333333,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "equal-mixed",
+      "name": "Equal mixed forces",
+      "mix": "rifle",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            195
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 56.88333333333333,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            195
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 45.69166666666666,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 1,
+          "losses": 2,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 2,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            195
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 76.34166666666667,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            195
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 45.69166666666666,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "equal-mixed",
+      "name": "Equal mixed forces",
+      "mix": "rocket",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            195
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 40.275,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            195
+          ],
+          "survivorValue": 120,
+          "extraSupply": 0,
+          "seconds": 61.49166666666667,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 2,
+          "losses": 1,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 2,
+            "losses": 1,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            195
+          ],
+          "survivorValue": 180,
+          "extraSupply": 0,
+          "seconds": 32.38333333333333,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 2,
+          "losses": 1,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 2,
+            "losses": 1,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            195
+          ],
+          "survivorValue": 120,
+          "extraSupply": 0,
+          "seconds": 57.475,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "seven-rifles",
+      "name": "Seven riflemen ·175 Supply",
+      "mix": "mixed",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 1,
+          "losses": 1,
+          "mutual": 1,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 1,
+            "mutual": 1,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            175
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 21.016666666666666,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            175
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.991666666666667,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 0,
+          "losses": 2,
+          "mutual": 1,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 2,
+            "mutual": 1,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            175
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 21.425,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            175
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.975,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "seven-rifles",
+      "name": "Seven riflemen ·175 Supply",
+      "mix": "rifle",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 1,
+          "losses": 2,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 2,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            175
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.733333333333334,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            175
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.166666666666668,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            175
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.05,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            175
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.166666666666668,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "seven-rifles",
+      "name": "Seven riflemen ·175 Supply",
+      "mix": "rocket",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 2,
+          "losses": 1,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 2,
+            "losses": 1,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            175
+          ],
+          "survivorValue": 60,
+          "extraSupply": 0,
+          "seconds": 20.183333333333334,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            175
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.666666666666668,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 1,
+          "losses": 2,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 2,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            175
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 20.075,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            175
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.35,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "seven-mixed",
+      "name": "Outnumbered by seven mixed troops",
+      "mix": "mixed",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 1,
+          "losses": 2,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 2,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            245
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.541666666666668,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            245
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.291666666666668,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            245
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 33.833333333333336,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            245
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.791666666666668,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "seven-mixed",
+      "name": "Outnumbered by seven mixed troops",
+      "mix": "rifle",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            245
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 41.61666666666667,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            245
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.041666666666668,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            245
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 40.725,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            245
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 19.308333333333334,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "seven-mixed",
+      "name": "Outnumbered by seven mixed troops",
+      "mix": "rocket",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 1,
+          "losses": 2,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 2,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            245
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 22.475,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            245
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 44.00833333333333,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 1,
+          "losses": 2,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 2,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            245
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 60.449999999999996,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 1,
+          "losses": 2,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 2,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            245
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 40.016666666666666,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "rocket-heavy",
+      "name": "Rocket-heavy opposition",
+      "mix": "mixed",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 1,
+          "losses": 1,
+          "mutual": 1,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 1,
+            "mutual": 1,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            230
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 35.375,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 1,
+          "losses": 2,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            230
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 40.583333333333336,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            230
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 46.291666666666664,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            230
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 53.625,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "rocket-heavy",
+      "name": "Rocket-heavy opposition",
+      "mix": "rifle",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            230
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 39.083333333333336,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            230
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 44.75,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            230
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 48.75833333333333,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            230
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 44.75,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "rocket-heavy",
+      "name": "Rocket-heavy opposition",
+      "mix": "rocket",
+      "kind": "field",
+      "resupply": false,
+      "limit": 120,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 2,
+          "losses": 1,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 2,
+            "losses": 1,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            230
+          ],
+          "survivorValue": 180,
+          "extraSupply": 0,
+          "seconds": 46.625,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 1,
+          "losses": 1,
+          "mutual": 1,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 1,
+            "losses": 1,
+            "mutual": 1,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            230
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 39.45,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 1,
+          "losses": 2,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 2,
+            "losses": 1,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            230
+          ],
+          "survivorValue": 0,
+          "extraSupply": 0,
+          "seconds": 56,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 2,
+          "losses": 1,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 2,
+            "losses": 1,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            230
+          ],
+          "survivorValue": 120,
+          "extraSupply": 0,
+          "seconds": 43.28333333333333,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 0
+        }
+      ]
+    },
+    {
+      "case": "empty-fob",
+      "name": "Empty fortified outpost",
+      "mix": "mixed",
+      "kind": "fob",
+      "resupply": false,
+      "limit": 240,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            0
+          ],
+          "survivorValue": 195,
+          "extraSupply": 0,
+          "seconds": 90.825,
+          "captureSeconds": 90.825,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            0
+          ],
+          "survivorValue": 195,
+          "extraSupply": 0,
+          "seconds": 73.63333333333333,
+          "captureSeconds": 73.63333333333333,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            0
+          ],
+          "survivorValue": 195,
+          "extraSupply": 0,
+          "seconds": 72.04166666666667,
+          "captureSeconds": 72.04166666666667,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            0
+          ],
+          "survivorValue": 195,
+          "extraSupply": 0,
+          "seconds": 73.78333333333333,
+          "captureSeconds": 73.78333333333333,
+          "breaches": 3,
+          "retreats": 0
+        }
+      ]
+    },
+    {
+      "case": "empty-fob",
+      "name": "Empty fortified outpost",
+      "mix": "rifle",
+      "kind": "fob",
+      "resupply": false,
+      "limit": 240,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            0
+          ],
+          "survivorValue": 160,
+          "extraSupply": 0,
+          "seconds": 153.58333333333334,
+          "captureSeconds": 153.58333333333334,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            0
+          ],
+          "survivorValue": 160,
+          "extraSupply": 0,
+          "seconds": 107.54166666666667,
+          "captureSeconds": 107.54166666666667,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            0
+          ],
+          "survivorValue": 160,
+          "extraSupply": 0,
+          "seconds": 105.75,
+          "captureSeconds": 105.75,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            0
+          ],
+          "survivorValue": 160,
+          "extraSupply": 0,
+          "seconds": 107.85,
+          "captureSeconds": 107.85,
+          "breaches": 3,
+          "retreats": 0
+        }
+      ]
+    },
+    {
+      "case": "empty-fob",
+      "name": "Empty fortified outpost",
+      "mix": "rocket",
+      "kind": "fob",
+      "resupply": false,
+      "limit": 240,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            0
+          ],
+          "survivorValue": 230,
+          "extraSupply": 0,
+          "seconds": 69.13333333333333,
+          "captureSeconds": 69.13333333333333,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            0
+          ],
+          "survivorValue": 230,
+          "extraSupply": 0,
+          "seconds": 62.8,
+          "captureSeconds": 62.8,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            0
+          ],
+          "survivorValue": 230,
+          "extraSupply": 0,
+          "seconds": 61.525,
+          "captureSeconds": 61.525,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 3,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 3,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            0
+          ],
+          "survivorValue": 230,
+          "extraSupply": 0,
+          "seconds": 73.875,
+          "captureSeconds": 73.875,
+          "breaches": 3,
+          "retreats": 0
+        }
+      ]
+    },
+    {
+      "case": "staffed-fob",
+      "name": "Staffed fortified outpost",
+      "mix": "mixed",
+      "kind": "fob",
+      "resupply": false,
+      "limit": 240,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            110
+          ],
+          "survivorValue": 120,
+          "extraSupply": 0,
+          "seconds": 240,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            110
+          ],
+          "survivorValue": 145,
+          "extraSupply": 0,
+          "seconds": 240,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            110
+          ],
+          "survivorValue": 145,
+          "extraSupply": 0,
+          "seconds": 240,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            110
+          ],
+          "survivorValue": 145,
+          "extraSupply": 0,
+          "seconds": 240,
+          "captureSeconds": null,
+          "breaches": 1,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "staffed-fob",
+      "name": "Staffed fortified outpost",
+      "mix": "rifle",
+      "kind": "fob",
+      "resupply": false,
+      "limit": 240,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            110
+          ],
+          "survivorValue": 60,
+          "extraSupply": 0,
+          "seconds": 240,
+          "captureSeconds": null,
+          "breaches": 2,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            110
+          ],
+          "survivorValue": 60,
+          "extraSupply": 0,
+          "seconds": 240,
+          "captureSeconds": null,
+          "breaches": 1,
+          "retreats": 1
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            110
+          ],
+          "survivorValue": 110,
+          "extraSupply": 0,
+          "seconds": 240,
+          "captureSeconds": null,
+          "breaches": 0,
+          "retreats": 1
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            110
+          ],
+          "survivorValue": 60,
+          "extraSupply": 0,
+          "seconds": 240,
+          "captureSeconds": null,
+          "breaches": 1,
+          "retreats": 1
+        }
+      ]
+    },
+    {
+      "case": "staffed-fob",
+      "name": "Staffed fortified outpost",
+      "mix": "rocket",
+      "kind": "fob",
+      "resupply": false,
+      "limit": 240,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            110
+          ],
+          "survivorValue": 180,
+          "extraSupply": 0,
+          "seconds": 240,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 1,
+          "mutual": 0,
+          "unfinished": 2,
+          "mirror": {
+            "wins": 0,
+            "losses": 1,
+            "mutual": 0,
+            "unfinished": 2
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            110
+          ],
+          "survivorValue": 180,
+          "extraSupply": 0,
+          "seconds": 240,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            110
+          ],
+          "survivorValue": 180,
+          "extraSupply": 0,
+          "seconds": 240,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 1,
+          "mutual": 0,
+          "unfinished": 2,
+          "mirror": {
+            "wins": 0,
+            "losses": 1,
+            "mutual": 0,
+            "unfinished": 2
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            110
+          ],
+          "survivorValue": 180,
+          "extraSupply": 0,
+          "seconds": 240,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 0
+        }
+      ]
+    },
+    {
+      "case": "supplied-fob",
+      "name": "Staffed outpost with paid replacements",
+      "mix": "mixed",
+      "kind": "fob",
+      "resupply": true,
+      "limit": 360,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            110
+          ],
+          "survivorValue": 195,
+          "extraSupply": 1025,
+          "seconds": 360,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            110
+          ],
+          "survivorValue": 0,
+          "extraSupply": 100,
+          "seconds": 310.1333333333333,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 2
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 2,
+            "mutual": 0,
+            "unfinished": 1
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            110
+          ],
+          "survivorValue": 0,
+          "extraSupply": 175,
+          "seconds": 298.275,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 3
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            195,
+            110
+          ],
+          "survivorValue": 0,
+          "extraSupply": 100,
+          "seconds": 247.81666666666666,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 2
+        }
+      ]
+    },
+    {
+      "case": "supplied-fob",
+      "name": "Staffed outpost with paid replacements",
+      "mix": "rifle",
+      "kind": "fob",
+      "resupply": true,
+      "limit": 360,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            110
+          ],
+          "survivorValue": 160,
+          "extraSupply": 1400,
+          "seconds": 360,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 1,
+          "mutual": 0,
+          "unfinished": 2,
+          "mirror": {
+            "wins": 0,
+            "losses": 1,
+            "mutual": 0,
+            "unfinished": 2
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            110
+          ],
+          "survivorValue": 60,
+          "extraSupply": 175,
+          "seconds": 360,
+          "captureSeconds": null,
+          "breaches": 2,
+          "retreats": 3
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            110
+          ],
+          "survivorValue": 60,
+          "extraSupply": 100,
+          "seconds": 360,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 2
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 1,
+          "mutual": 0,
+          "unfinished": 2,
+          "mirror": {
+            "wins": 0,
+            "losses": 1,
+            "mutual": 0,
+            "unfinished": 2
+          },
+          "samples": 3,
+          "initialCost": [
+            160,
+            110
+          ],
+          "survivorValue": 60,
+          "extraSupply": 175,
+          "seconds": 360,
+          "captureSeconds": null,
+          "breaches": 2,
+          "retreats": 3
+        }
+      ]
+    },
+    {
+      "case": "supplied-fob",
+      "name": "Staffed outpost with paid replacements",
+      "mix": "rocket",
+      "kind": "fob",
+      "resupply": true,
+      "limit": 360,
+      "policies": [
+        {
+          "controller": "independent",
+          "label": "Independent",
+          "wins": 0,
+          "losses": 0,
+          "mutual": 0,
+          "unfinished": 3,
+          "mirror": {
+            "wins": 0,
+            "losses": 0,
+            "mutual": 0,
+            "unfinished": 3
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            110
+          ],
+          "survivorValue": 230,
+          "extraSupply": 725,
+          "seconds": 360,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "assault",
+          "label": "Assault",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            110
+          ],
+          "survivorValue": 0,
+          "extraSupply": 25,
+          "seconds": 155.11666666666667,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "siege",
+          "label": "Siege",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            110
+          ],
+          "survivorValue": 0,
+          "extraSupply": 50,
+          "seconds": 211.575,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 0
+        },
+        {
+          "controller": "spread",
+          "label": "Spread",
+          "wins": 0,
+          "losses": 3,
+          "mutual": 0,
+          "unfinished": 0,
+          "mirror": {
+            "wins": 0,
+            "losses": 3,
+            "mutual": 0,
+            "unfinished": 0
+          },
+          "samples": 3,
+          "initialCost": [
+            230,
+            110
+          ],
+          "survivorValue": 0,
+          "extraSupply": 25,
+          "seconds": 217.00833333333333,
+          "captureSeconds": null,
+          "breaches": 3,
+          "retreats": 0
+        }
+      ]
+    }
+  ]
+}

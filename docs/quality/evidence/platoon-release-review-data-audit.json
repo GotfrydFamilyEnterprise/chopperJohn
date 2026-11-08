@@ -1,0 +1,113 @@
+{
+  "groundRows": 24,
+  "airRows": 8,
+  "ground": {
+    "first-assault:independent": {
+      "outpostCaptures": 3,
+      "median": 273.6,
+      "hqWins": 0
+    },
+    "first-assault:assault": {
+      "outpostCaptures": 0,
+      "median": null,
+      "hqWins": 0
+    },
+    "first-assault:siege": {
+      "outpostCaptures": 3,
+      "median": 202.3,
+      "hqWins": 0
+    },
+    "first-assault:spread": {
+      "outpostCaptures": 0,
+      "median": null,
+      "hqWins": 0
+    },
+    "ridgeline:independent": {
+      "outpostCaptures": 3,
+      "median": 235.3,
+      "hqWins": 0
+    },
+    "ridgeline:assault": {
+      "outpostCaptures": 1,
+      "median": 288.4,
+      "hqWins": 0
+    },
+    "ridgeline:siege": {
+      "outpostCaptures": 3,
+      "median": 307.1,
+      "hqWins": 0
+    },
+    "ridgeline:spread": {
+      "outpostCaptures": 0,
+      "median": null,
+      "hqWins": 0
+    }
+  },
+  "air": [
+    {
+      "level": "first-assault",
+      "tactic": "independent",
+      "finished": true,
+      "winner": 0,
+      "time": 137.7,
+      "rounds": 149
+    },
+    {
+      "level": "first-assault",
+      "tactic": "assault",
+      "finished": true,
+      "winner": 0,
+      "time": 132.0,
+      "rounds": 158
+    },
+    {
+      "level": "first-assault",
+      "tactic": "siege",
+      "finished": true,
+      "winner": 0,
+      "time": 123.3,
+      "rounds": 150
+    },
+    {
+      "level": "first-assault",
+      "tactic": "spread",
+      "finished": false,
+      "winner": null,
+      "time": 600,
+      "rounds": 155
+    },
+    {
+      "level": "ridgeline",
+      "tactic": "independent",
+      "finished": true,
+      "winner": 0,
+      "time": 301.9,
+      "rounds": 352
+    },
+    {
+      "level": "ridgeline",
+      "tactic": "assault",
+      "finished": false,
+      "winner": null,
+      "time": 600,
+      "rounds": 219
+    },
+    {
+      "level": "ridgeline",
+      "tactic": "siege",
+      "finished": true,
+      "winner": 0,
+      "time": 145.7,
+      "rounds": 195
+    },
+    {
+      "level": "ridgeline",
+      "tactic": "spread",
+      "finished": true,
+      "winner": 0,
+      "time": 145.0,
+      "rounds": 221
+    }
+  ],
+  "status": "PASS: recomputed counts/medians/times/rounds agree with report and method; browser overflow remains UNVERIFIED"
+}

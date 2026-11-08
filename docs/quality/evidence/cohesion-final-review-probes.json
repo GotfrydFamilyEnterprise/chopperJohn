@@ -1,0 +1,119 @@
+{
+  "reviewer": "independent cohesion review",
+  "rows": [
+    {
+      "name": "PL09 same initial force, HP, positions, seed and budget for every controller/case/mix/mirror",
+      "status": "PASS",
+      "evidence": {
+        "configurations": 270
+      }
+    },
+    {
+      "name": "PL09 mirrored stationed defenders stay at their posts on first second",
+      "status": "PASS",
+      "evidence": {
+        "seconds": 1
+      }
+    },
+    {
+      "name": "PL08 valid six-member composition reaches regroup after losses",
+      "status": "PASS",
+      "evidence": {
+        "phase": "regroup",
+        "seconds": 60.00833333333333
+      }
+    },
+    {
+      "name": "PL08 valid nine-member asymmetric recovery resumes above80% after six seconds",
+      "status": "PASS",
+      "evidence": {
+        "phase": "advance",
+        "ready": 8,
+        "total": 9
+      }
+    },
+    {
+      "name": "PL09 rejects impossible fortified guard rosters and nonboolean resupply",
+      "status": "PASS",
+      "evidence": {
+        "invalidCases": 3
+      }
+    },
+    {
+      "name": "PL08 exact60% trigger, 80% recovery, and minimum6seconds",
+      "status": "PASS",
+      "evidence": {
+        "events": [
+          "platoonRetreat",
+          "platoonRegroup",
+          "platoonResumed"
+        ]
+      }
+    },
+    {
+      "name": "PL08 withdrawing rifle cannot capture breached enemy base",
+      "status": "PASS",
+      "evidence": {
+        "seconds": 5
+      }
+    },
+    {
+      "name": "PL09 fixed force casualties cause no paid replacements or accrual",
+      "status": "PASS",
+      "evidence": {
+        "controllers": 6,
+        "seconds": 10
+      }
+    },
+    {
+      "name": "PL08 moving retreat launcher breaks ground aim while valid priority AA stays ordinary",
+      "status": "PASS",
+      "evidence": [
+        {
+          "air": false,
+          "moved": -0.27499999999997726,
+          "aim": 0,
+          "assignment": null
+        },
+        {
+          "air": true,
+          "moved": 0,
+          "aim": 0.008333333333333333,
+          "assignment": "air"
+        }
+      ]
+    },
+    {
+      "name": "PL07 actual backward surface travel reverses gait and leaves stance foot planted both directions",
+      "status": "PASS",
+      "evidence": [
+        {
+          "mirrored": false,
+          "travel": -2.7499999999997726,
+          "phase": 0.23750000000000582,
+          "stanceError": 0
+        },
+        {
+          "mirrored": true,
+          "travel": 2.7500000000009095,
+          "phase": 0.23749999999997917,
+          "stanceError": 0
+        }
+      ]
+    },
+    {
+      "name": "PL08 supplied encounter world pause freezes income, orders and every snapshot field",
+      "status": "PASS",
+      "evidence": {
+        "tick": 0
+      }
+    },
+    {
+      "name": "PL07..10 identical fixed step batching replay",
+      "status": "PASS",
+      "evidence": {
+        "seconds": 10
+      }
+    }
+  ]
+}

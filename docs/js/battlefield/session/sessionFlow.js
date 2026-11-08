@@ -1,4 +1,4 @@
-import {createTutorial,advanceTutorial} from './tutorial.js?v=2.0.0';
+import {createTutorial,advanceTutorial} from './tutorial.js?v=2.2.0';
 // MENU-01/02: pure session state; the scene owns resetting its simulation.
 export function createSession(mode='menu'){return {mode,tutorial:mode==='tutorial'?createTutorial():null};}
 export function beginSession(state,mode){if(!['game','tutorial','tutorial-intro'].includes(mode))throw new RangeError('Invalid session mode');state.mode=mode;state.tutorial=mode==='tutorial'?createTutorial():null;}

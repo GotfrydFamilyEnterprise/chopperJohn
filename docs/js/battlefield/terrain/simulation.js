@@ -1,11 +1,11 @@
-import {infantryTarget,rifleBearing,rifleRound,updateGroundRocket} from '../combat/groundInfantry.js?v=2.0.0';
-import {allocateSplash,checkedDamageModel} from './splash.js?v=2.0.0';
-import {checkedBlastRadius} from './balance.js?v=2.0.0';
-import {LAB_ROCKET,labRocketSpread,planTerrainRocket,rocketReachAtDrop} from './ballistics.js?v=2.0.0';
-import {validateLevel} from './level.js?v=2.0.0';
-import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=2.0.0';
-import {createSoldier} from '../units/soldierCommon.js?v=2.0.0';
-import {WEAPONS,createRandom,applyDamage} from '../combat/weapons.js?v=2.0.0';
+import {infantryTarget,rifleBearing,rifleRound,updateGroundRocket} from '../combat/groundInfantry.js?v=2.2.0';
+import {allocateSplash,checkedDamageModel} from './splash.js?v=2.2.0';
+import {checkedBlastRadius} from './balance.js?v=2.2.0';
+import {LAB_ROCKET,labRocketSpread,planTerrainRocket,rocketReachAtDrop} from './ballistics.js?v=2.2.0';
+import {validateLevel} from './level.js?v=2.2.0';
+import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=2.2.0';
+import {createSoldier} from '../units/soldierCommon.js?v=2.2.0';
+import {WEAPONS,createRandom,applyDamage} from '../combat/weapons.js?v=2.2.0';
 export const LAB_STEP=1/120;
 export const eye=u=>({x:u.x,y:u.y-40});
 export function createSimulation(data,scenarioId,options={}){
@@ -71,7 +71,7 @@ export function stepSimulation(sim,count=1){
    }
   }
   sim.projectiles=sim.projectiles.filter(p=>{
-   const a={x:p.x,y:p.y};p.age+=LAB_STEP;
+   const a={x:p.kind==='bullet'?(p.originX??p.x):p.x,y:p.kind==='bullet'?(p.originY??p.y):p.y};if(p.kind==='bullet'){delete p.originX;delete p.originY;}p.age+=LAB_STEP;
    const b=p.kind==='rocket'?{x:p.originX+p.vx*p.age,y:p.originY+p.vy*p.age+WEAPONS.gravity*p.age*p.age/2}:{x:p.x+p.vx*LAB_STEP,y:p.y+p.vy*LAB_STEP};
    const terrain=terrainContact(sim.level,a,b);let victim=null,first=terrain?.t??Infinity;
    if(p.kind==='bullet')for(const u of sim.units)if(u.hp>0&&u.team!==p.team){const t=unitContact(a,b,u);if(t!==null&&t<first){first=t;victim=u;}}

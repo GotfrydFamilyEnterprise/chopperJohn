@@ -1,0 +1,1116 @@
+{
+  "source": "49a30ee",
+  "checks": 6825,
+  "failures": [
+    {
+      "rifle": 2,
+      "rocket": 1,
+      "strategy": "siege",
+      "mask": 1,
+      "ready": 2,
+      "total": 3,
+      "centerOffset": -180,
+      "goalOffset": -20
+    },
+    {
+      "rifle": 2,
+      "rocket": 2,
+      "strategy": "siege",
+      "mask": 0,
+      "ready": 4,
+      "total": 4,
+      "centerOffset": -180,
+      "goalOffset": -20
+    },
+    {
+      "rifle": 2,
+      "rocket": 2,
+      "strategy": "siege",
+      "mask": 1,
+      "ready": 3,
+      "total": 4,
+      "centerOffset": -200,
+      "goalOffset": -40
+    },
+    {
+      "rifle": 2,
+      "rocket": 2,
+      "strategy": "spread",
+      "mask": 1,
+      "ready": 3,
+      "total": 4,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 2,
+      "rocket": 4,
+      "strategy": "assault",
+      "mask": 9,
+      "ready": 4,
+      "total": 6,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 4,
+      "strategy": "assault",
+      "mask": 17,
+      "ready": 4,
+      "total": 6,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 4,
+      "strategy": "assault",
+      "mask": 24,
+      "ready": 4,
+      "total": 6,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 4,
+      "strategy": "siege",
+      "mask": 9,
+      "ready": 4,
+      "total": 6,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 4,
+      "strategy": "siege",
+      "mask": 17,
+      "ready": 4,
+      "total": 6,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 4,
+      "strategy": "siege",
+      "mask": 24,
+      "ready": 4,
+      "total": 6,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 4,
+      "strategy": "spread",
+      "mask": 9,
+      "ready": 4,
+      "total": 6,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 4,
+      "strategy": "spread",
+      "mask": 17,
+      "ready": 4,
+      "total": 6,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 4,
+      "strategy": "spread",
+      "mask": 24,
+      "ready": 4,
+      "total": 6,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 5,
+      "strategy": "assault",
+      "mask": 17,
+      "ready": 5,
+      "total": 7,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 2,
+      "rocket": 5,
+      "strategy": "assault",
+      "mask": 33,
+      "ready": 5,
+      "total": 7,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 2,
+      "rocket": 5,
+      "strategy": "assault",
+      "mask": 48,
+      "ready": 5,
+      "total": 7,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 2,
+      "rocket": 5,
+      "strategy": "siege",
+      "mask": 17,
+      "ready": 5,
+      "total": 7,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 2,
+      "rocket": 5,
+      "strategy": "siege",
+      "mask": 33,
+      "ready": 5,
+      "total": 7,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 2,
+      "rocket": 5,
+      "strategy": "siege",
+      "mask": 48,
+      "ready": 5,
+      "total": 7,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 2,
+      "rocket": 5,
+      "strategy": "spread",
+      "mask": 17,
+      "ready": 5,
+      "total": 7,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 2,
+      "rocket": 5,
+      "strategy": "spread",
+      "mask": 33,
+      "ready": 5,
+      "total": 7,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 2,
+      "rocket": 5,
+      "strategy": "spread",
+      "mask": 48,
+      "ready": 5,
+      "total": 7,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 2,
+      "rocket": 6,
+      "strategy": "assault",
+      "mask": 49,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -172,
+      "goalOffset": -12
+    },
+    {
+      "rifle": 2,
+      "rocket": 6,
+      "strategy": "assault",
+      "mask": 81,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -172,
+      "goalOffset": -12
+    },
+    {
+      "rifle": 2,
+      "rocket": 6,
+      "strategy": "assault",
+      "mask": 97,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -172,
+      "goalOffset": -12
+    },
+    {
+      "rifle": 2,
+      "rocket": 6,
+      "strategy": "assault",
+      "mask": 112,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -172,
+      "goalOffset": -12
+    },
+    {
+      "rifle": 2,
+      "rocket": 6,
+      "strategy": "siege",
+      "mask": 49,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -172,
+      "goalOffset": -12
+    },
+    {
+      "rifle": 2,
+      "rocket": 6,
+      "strategy": "siege",
+      "mask": 81,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -172,
+      "goalOffset": -12
+    },
+    {
+      "rifle": 2,
+      "rocket": 6,
+      "strategy": "siege",
+      "mask": 97,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -172,
+      "goalOffset": -12
+    },
+    {
+      "rifle": 2,
+      "rocket": 6,
+      "strategy": "siege",
+      "mask": 112,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -172,
+      "goalOffset": -12
+    },
+    {
+      "rifle": 2,
+      "rocket": 6,
+      "strategy": "spread",
+      "mask": 49,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -172,
+      "goalOffset": -12
+    },
+    {
+      "rifle": 2,
+      "rocket": 6,
+      "strategy": "spread",
+      "mask": 81,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -172,
+      "goalOffset": -12
+    },
+    {
+      "rifle": 2,
+      "rocket": 6,
+      "strategy": "spread",
+      "mask": 97,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -172,
+      "goalOffset": -12
+    },
+    {
+      "rifle": 2,
+      "rocket": 6,
+      "strategy": "spread",
+      "mask": 112,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -172,
+      "goalOffset": -12
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "assault",
+      "mask": 49,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "assault",
+      "mask": 81,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "assault",
+      "mask": 97,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "assault",
+      "mask": 112,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "assault",
+      "mask": 145,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "assault",
+      "mask": 161,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "assault",
+      "mask": 176,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "assault",
+      "mask": 193,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "assault",
+      "mask": 208,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "assault",
+      "mask": 224,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "siege",
+      "mask": 49,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "siege",
+      "mask": 81,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "siege",
+      "mask": 97,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "siege",
+      "mask": 112,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "siege",
+      "mask": 145,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "siege",
+      "mask": 161,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "siege",
+      "mask": 176,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "siege",
+      "mask": 193,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "siege",
+      "mask": 208,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "siege",
+      "mask": 224,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "spread",
+      "mask": 49,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "spread",
+      "mask": 81,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "spread",
+      "mask": 97,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "spread",
+      "mask": 112,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "spread",
+      "mask": 145,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "spread",
+      "mask": 161,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "spread",
+      "mask": 176,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "spread",
+      "mask": 193,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "spread",
+      "mask": 208,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 7,
+      "strategy": "spread",
+      "mask": 224,
+      "ready": 6,
+      "total": 9,
+      "centerOffset": -166.66666666666663,
+      "goalOffset": -6.666666666666629
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "assault",
+      "mask": 97,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "assault",
+      "mask": 161,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "assault",
+      "mask": 193,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "assault",
+      "mask": 224,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "assault",
+      "mask": 289,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "assault",
+      "mask": 321,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "assault",
+      "mask": 352,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "assault",
+      "mask": 385,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "assault",
+      "mask": 416,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "assault",
+      "mask": 448,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "siege",
+      "mask": 97,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "siege",
+      "mask": 161,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "siege",
+      "mask": 193,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "siege",
+      "mask": 224,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "siege",
+      "mask": 289,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "siege",
+      "mask": 321,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "siege",
+      "mask": 352,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "siege",
+      "mask": 385,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "siege",
+      "mask": 416,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "siege",
+      "mask": 448,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "spread",
+      "mask": 97,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "spread",
+      "mask": 161,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "spread",
+      "mask": 193,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "spread",
+      "mask": 224,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "spread",
+      "mask": 289,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "spread",
+      "mask": 321,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "spread",
+      "mask": 352,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "spread",
+      "mask": 385,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "spread",
+      "mask": 416,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 2,
+      "rocket": 8,
+      "strategy": "spread",
+      "mask": 448,
+      "ready": 7,
+      "total": 10,
+      "centerOffset": -162.8571428571429,
+      "goalOffset": -2.8571428571428896
+    },
+    {
+      "rifle": 3,
+      "rocket": 2,
+      "strategy": "siege",
+      "mask": 1,
+      "ready": 4,
+      "total": 5,
+      "centerOffset": -180,
+      "goalOffset": -20
+    },
+    {
+      "rifle": 3,
+      "rocket": 2,
+      "strategy": "siege",
+      "mask": 2,
+      "ready": 4,
+      "total": 5,
+      "centerOffset": -180,
+      "goalOffset": -20
+    },
+    {
+      "rifle": 3,
+      "rocket": 5,
+      "strategy": "assault",
+      "mask": 35,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 3,
+      "rocket": 5,
+      "strategy": "assault",
+      "mask": 67,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 3,
+      "rocket": 5,
+      "strategy": "assault",
+      "mask": 97,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 3,
+      "rocket": 5,
+      "strategy": "assault",
+      "mask": 98,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 3,
+      "rocket": 5,
+      "strategy": "siege",
+      "mask": 35,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 3,
+      "rocket": 5,
+      "strategy": "siege",
+      "mask": 67,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 3,
+      "rocket": 5,
+      "strategy": "siege",
+      "mask": 97,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 3,
+      "rocket": 5,
+      "strategy": "siege",
+      "mask": 98,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 3,
+      "rocket": 5,
+      "strategy": "spread",
+      "mask": 35,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 3,
+      "rocket": 5,
+      "strategy": "spread",
+      "mask": 67,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 3,
+      "rocket": 5,
+      "strategy": "spread",
+      "mask": 97,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 3,
+      "rocket": 5,
+      "strategy": "spread",
+      "mask": 98,
+      "ready": 5,
+      "total": 8,
+      "centerOffset": -160,
+      "goalOffset": 0
+    },
+    {
+      "rifle": 4,
+      "rocket": 2,
+      "strategy": "siege",
+      "mask": 3,
+      "ready": 4,
+      "total": 6,
+      "centerOffset": -180,
+      "goalOffset": -20
+    },
+    {
+      "rifle": 4,
+      "rocket": 2,
+      "strategy": "siege",
+      "mask": 5,
+      "ready": 4,
+      "total": 6,
+      "centerOffset": -180,
+      "goalOffset": -20
+    },
+    {
+      "rifle": 4,
+      "rocket": 2,
+      "strategy": "siege",
+      "mask": 6,
+      "ready": 4,
+      "total": 6,
+      "centerOffset": -180,
+      "goalOffset": -20
+    }
+  ]
+}

@@ -1,0 +1,1526 @@
+{
+  "status": "PASS",
+  "checks": {
+    "rows": 648,
+    "expectedRows": 648,
+    "mirrors": 324,
+    "replays": 8
+  },
+  "failures": [],
+  "mirrorDifferences": [
+    {
+      "key": [
+        "three-rifles",
+        "rifle",
+        "assault",
+        101
+      ],
+      "metric": "seconds",
+      "left": 15.883333333333333,
+      "right": 15.891666666666666
+    },
+    {
+      "key": [
+        "three-rifles",
+        "rifle",
+        "assault",
+        102
+      ],
+      "metric": "seconds",
+      "left": 12.333333333333334,
+      "right": 12.341666666666667
+    },
+    {
+      "key": [
+        "three-rifles",
+        "rifle",
+        "assault",
+        103
+      ],
+      "metric": "seconds",
+      "left": 15.875,
+      "right": 15.883333333333333
+    },
+    {
+      "key": [
+        "three-mixed",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "seconds",
+      "left": 79.85,
+      "right": 79.83333333333333
+    },
+    {
+      "key": [
+        "three-mixed",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "maxLeaderGap",
+      "left": 151.79999999999654,
+      "right": 151.52500000001373
+    },
+    {
+      "key": [
+        "equal-mixed",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "hp",
+      "left": [
+        5.366917330280139,
+        0
+      ],
+      "right": [
+        5.361448325398868,
+        0
+      ]
+    },
+    {
+      "key": [
+        "equal-mixed",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "maxLeaderGap",
+      "left": 162.63749999999777,
+      "right": 162.91250000000946
+    },
+    {
+      "key": [
+        "seven-rifles",
+        "mixed",
+        "assault",
+        103
+      ],
+      "metric": "hp",
+      "left": [
+        0,
+        3.918930200752334
+      ],
+      "right": [
+        0,
+        3.909788321004984
+      ]
+    },
+    {
+      "key": [
+        "seven-rifles",
+        "rifle",
+        "assault",
+        101
+      ],
+      "metric": "seconds",
+      "left": 19.166666666666668,
+      "right": 19.175
+    },
+    {
+      "key": [
+        "seven-rifles",
+        "rifle",
+        "assault",
+        102
+      ],
+      "metric": "seconds",
+      "left": 19.90833333333333,
+      "right": 19.916666666666668
+    },
+    {
+      "key": [
+        "seven-rifles",
+        "rifle",
+        "assault",
+        102
+      ],
+      "metric": "hp",
+      "left": [
+        0,
+        1.6918749431557933
+      ],
+      "right": [
+        0,
+        1.70181124056754
+      ]
+    },
+    {
+      "key": [
+        "seven-rifles",
+        "rifle",
+        "assault",
+        103
+      ],
+      "metric": "seconds",
+      "left": 19.166666666666668,
+      "right": 19.175
+    },
+    {
+      "key": [
+        "seven-rifles",
+        "rifle",
+        "assault",
+        103
+      ],
+      "metric": "hp",
+      "left": [
+        0,
+        6.4426772627747475
+      ],
+      "right": [
+        0,
+        6.443083167777904
+      ]
+    },
+    {
+      "key": [
+        "seven-mixed",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "hp",
+      "left": [
+        0,
+        11.326227504051563
+      ],
+      "right": [
+        0,
+        11.33702697362098
+      ]
+    },
+    {
+      "key": [
+        "seven-mixed",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "maxLeaderGap",
+      "left": 153.8374999999985,
+      "right": 153.28750000000628
+    },
+    {
+      "key": [
+        "seven-mixed",
+        "mixed",
+        "assault",
+        103
+      ],
+      "metric": "seconds",
+      "left": 19.15833333333333,
+      "right": 19.166666666666668
+    },
+    {
+      "key": [
+        "seven-mixed",
+        "mixed",
+        "assault",
+        103
+      ],
+      "metric": "hp",
+      "left": [
+        0,
+        11.668833737652566
+      ],
+      "right": [
+        0,
+        11.658311755684998
+      ]
+    },
+    {
+      "key": [
+        "seven-mixed",
+        "rifle",
+        "assault",
+        102
+      ],
+      "metric": "seconds",
+      "left": 19.166666666666668,
+      "right": 19.175
+    },
+    {
+      "key": [
+        "seven-mixed",
+        "rifle",
+        "assault",
+        102
+      ],
+      "metric": "hp",
+      "left": [
+        0,
+        8.953070529735538
+      ],
+      "right": [
+        0,
+        8.952921251076623
+      ]
+    },
+    {
+      "key": [
+        "seven-mixed",
+        "rifle",
+        "assault",
+        103
+      ],
+      "metric": "seconds",
+      "left": 18.591666666666665,
+      "right": 18.6
+    },
+    {
+      "key": [
+        "rocket-heavy",
+        "mixed",
+        "assault",
+        101
+      ],
+      "metric": "seconds",
+      "left": 72.33333333333333,
+      "right": 72.01666666666667
+    },
+    {
+      "key": [
+        "rocket-heavy",
+        "mixed",
+        "assault",
+        101
+      ],
+      "metric": "outcome",
+      "left": "attack",
+      "right": "defense"
+    },
+    {
+      "key": [
+        "rocket-heavy",
+        "mixed",
+        "assault",
+        101
+      ],
+      "metric": "alive",
+      "left": [
+        2,
+        0
+      ],
+      "right": [
+        0,
+        3
+      ]
+    },
+    {
+      "key": [
+        "rocket-heavy",
+        "mixed",
+        "assault",
+        101
+      ],
+      "metric": "survivingValue",
+      "left": [
+        120,
+        0
+      ],
+      "right": [
+        0,
+        180
+      ]
+    },
+    {
+      "key": [
+        "rocket-heavy",
+        "mixed",
+        "assault",
+        101
+      ],
+      "metric": "hp",
+      "left": [
+        3.002016537991378,
+        0
+      ],
+      "right": [
+        0,
+        1.9926959413298806
+      ]
+    },
+    {
+      "key": [
+        "rocket-heavy",
+        "mixed",
+        "assault",
+        101
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 2,
+        "rocket": 46
+      },
+      "right": {
+        "rifle": 4,
+        "rocket": 48
+      }
+    },
+    {
+      "key": [
+        "rocket-heavy",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "seconds",
+      "left": 30.958333333333332,
+      "right": 28.341666666666665
+    },
+    {
+      "key": [
+        "rocket-heavy",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "hp",
+      "left": [
+        0,
+        8.09097541477345
+      ],
+      "right": [
+        0,
+        8.895246628639681
+      ]
+    },
+    {
+      "key": [
+        "rocket-heavy",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "maxLeaderGap",
+      "left": 143.1124999999994,
+      "right": 143.387500000003
+    },
+    {
+      "key": [
+        "rocket-heavy",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 6,
+        "rocket": 21
+      },
+      "right": {
+        "rifle": 4,
+        "rocket": 22
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        101
+      ],
+      "metric": "hp",
+      "left": [
+        14.613169134912937,
+        7.880101835255641
+      ],
+      "right": [
+        15.617205111841212,
+        6.253502107476347
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        101
+      ],
+      "metric": "spent",
+      "left": [
+        1050,
+        860
+      ],
+      "right": [
+        1075,
+        860
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        101
+      ],
+      "metric": "bank",
+      "left": [
+        240,
+        240
+      ],
+      "right": [
+        226.20833333333078,
+        215.9166666666551
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        101
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 167,
+        "rocket": 232
+      },
+      "right": {
+        "rifle": 162,
+        "rocket": 232
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        102
+      ],
+      "metric": "hp",
+      "left": [
+        14.9580965268358,
+        6.611839561256545
+      ],
+      "right": [
+        14.456178212604277,
+        9
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        102
+      ],
+      "metric": "bank",
+      "left": [
+        240,
+        240
+      ],
+      "right": [
+        240,
+        201.91666666666396
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        102
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 166,
+        "rocket": 227
+      },
+      "right": {
+        "rifle": 175,
+        "rocket": 235
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        102
+      ],
+      "metric": "projectiles",
+      "left": 3,
+      "right": 2
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        103
+      ],
+      "metric": "hp",
+      "left": [
+        13.136977630941523,
+        9.821510932636262
+      ],
+      "right": [
+        9.349457251575787,
+        7.909470088671743
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        103
+      ],
+      "metric": "spent",
+      "left": [
+        1075,
+        870
+      ],
+      "right": [
+        1050,
+        970
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        103
+      ],
+      "metric": "bank",
+      "left": [
+        240,
+        240
+      ],
+      "right": [
+        240,
+        218.04166666666598
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        103
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 181,
+        "rocket": 230
+      },
+      "right": {
+        "rifle": 181,
+        "rocket": 231
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "independent",
+        103
+      ],
+      "metric": "projectiles",
+      "left": 0,
+      "right": 3
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "seconds",
+      "left": 336.7583333333333,
+      "right": 360
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "outcome",
+      "left": "defense",
+      "right": "unfinished"
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "alive",
+      "left": [
+        0,
+        2
+      ],
+      "right": [
+        2,
+        3
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "survivingValue",
+      "left": [
+        0,
+        85
+      ],
+      "right": [
+        120,
+        110
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "hp",
+      "left": [
+        0,
+        4.3271106216022615
+      ],
+      "right": [
+        1.3725945901269057,
+        7.193277772894677
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "spent",
+      "left": [
+        275,
+        310
+      ],
+      "right": [
+        275,
+        445
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "assault",
+        102
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 12,
+        "rocket": 141
+      },
+      "right": {
+        "rifle": 12,
+        "rocket": 152
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "siege",
+        101
+      ],
+      "metric": "hp",
+      "left": [
+        15.960302938921643,
+        5.999999999999999
+      ],
+      "right": [
+        12.979539367873834,
+        10
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "siege",
+        101
+      ],
+      "metric": "spent",
+      "left": [
+        500,
+        210
+      ],
+      "right": [
+        500,
+        235
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "siege",
+        101
+      ],
+      "metric": "bank",
+      "left": [
+        217.6249999999994,
+        240
+      ],
+      "right": [
+        240,
+        240
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "siege",
+        101
+      ],
+      "metric": "maxLeaderGap",
+      "left": 239.9499999998718,
+      "right": 275.34166666665897
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "siege",
+        101
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 6,
+        "rocket": 135
+      },
+      "right": {
+        "rifle": 8,
+        "rocket": 128
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "siege",
+        101
+      ],
+      "metric": "projectiles",
+      "left": 2,
+      "right": 0
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "siege",
+        102
+      ],
+      "metric": "seconds",
+      "left": 290.375,
+      "right": 297.725
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "siege",
+        102
+      ],
+      "metric": "alive",
+      "left": [
+        0,
+        2
+      ],
+      "right": [
+        0,
+        3
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "siege",
+        102
+      ],
+      "metric": "survivingValue",
+      "left": [
+        0,
+        85
+      ],
+      "right": [
+        0,
+        110
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "siege",
+        102
+      ],
+      "metric": "hp",
+      "left": [
+        0,
+        3.2786318024832006
+      ],
+      "right": [
+        0,
+        4.997769251005826
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "siege",
+        102
+      ],
+      "metric": "spent",
+      "left": [
+        125,
+        220
+      ],
+      "right": [
+        125,
+        185
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "siege",
+        102
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 6,
+        "rocket": 102
+      },
+      "right": {
+        "rifle": 6,
+        "rocket": 104
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "spread",
+        102
+      ],
+      "metric": "seconds",
+      "left": 360,
+      "right": 313.98333333333335
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "spread",
+        102
+      ],
+      "metric": "outcome",
+      "left": "unfinished",
+      "right": "defense"
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "spread",
+        102
+      ],
+      "metric": "alive",
+      "left": [
+        1,
+        3
+      ],
+      "right": [
+        0,
+        3
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "spread",
+        102
+      ],
+      "metric": "survivingValue",
+      "left": [
+        60,
+        110
+      ],
+      "right": [
+        0,
+        110
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "spread",
+        102
+      ],
+      "metric": "hp",
+      "left": [
+        0.383050082383511,
+        6.320832778188992
+      ],
+      "right": [
+        0,
+        6.256883033520071
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "spread",
+        102
+      ],
+      "metric": "spent",
+      "left": [
+        300,
+        125
+      ],
+      "right": [
+        300,
+        50
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "spread",
+        102
+      ],
+      "metric": "bank",
+      "left": [
+        240,
+        239.29166666666114
+      ],
+      "right": [
+        240,
+        240
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "spread",
+        102
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 18,
+        "rocket": 108
+      },
+      "right": {
+        "rifle": 18,
+        "rocket": 91
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "mixed",
+        "spread",
+        102
+      ],
+      "metric": "projectiles",
+      "left": 1,
+      "right": 0
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        101
+      ],
+      "metric": "hp",
+      "left": [
+        16,
+        10
+      ],
+      "right": [
+        16,
+        7.870927371809023
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        101
+      ],
+      "metric": "bank",
+      "left": [
+        231.99999999998477,
+        213.458333333328
+      ],
+      "right": [
+        221.9166666666651,
+        221.12499999998155
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        101
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 235,
+        "rocket": 145
+      },
+      "right": {
+        "rifle": 234,
+        "rocket": 142
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        102
+      ],
+      "metric": "hp",
+      "left": [
+        14,
+        10
+      ],
+      "right": [
+        16,
+        7.093009116741195
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        102
+      ],
+      "metric": "spent",
+      "left": [
+        1400,
+        560
+      ],
+      "right": [
+        1425,
+        560
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        102
+      ],
+      "metric": "bank",
+      "left": [
+        240,
+        208.66666666666242
+      ],
+      "right": [
+        220.70833333332635,
+        224.79166666666444
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        102
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 271,
+        "rocket": 151
+      },
+      "right": {
+        "rifle": 266,
+        "rocket": 151
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        102
+      ],
+      "metric": "projectiles",
+      "left": 0,
+      "right": 1
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        103
+      ],
+      "metric": "alive",
+      "left": [
+        5,
+        3
+      ],
+      "right": [
+        4,
+        3
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        103
+      ],
+      "metric": "survivingValue",
+      "left": [
+        160,
+        110
+      ],
+      "right": [
+        135,
+        110
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        103
+      ],
+      "metric": "hp",
+      "left": [
+        13,
+        10
+      ],
+      "right": [
+        12,
+        7.217428540128827
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        103
+      ],
+      "metric": "spent",
+      "left": [
+        1425,
+        585
+      ],
+      "right": [
+        1400,
+        510
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        103
+      ],
+      "metric": "bank",
+      "left": [
+        226.70833333333067,
+        197.66666666665355
+      ],
+      "right": [
+        240,
+        240
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rifle",
+        "independent",
+        103
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 268,
+        "rocket": 156
+      },
+      "right": {
+        "rifle": 269,
+        "rocket": 153
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        101
+      ],
+      "metric": "hp",
+      "left": [
+        14.698081996424861,
+        7.75233561312092
+      ],
+      "right": [
+        14.083171244466794,
+        6.993244002523181
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        101
+      ],
+      "metric": "spent",
+      "left": [
+        750,
+        955
+      ],
+      "right": [
+        785,
+        1155
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        101
+      ],
+      "metric": "bank",
+      "left": [
+        225.58333333333093,
+        234.91666666665645
+      ],
+      "right": [
+        240,
+        240
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        101
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 73,
+        "rocket": 305
+      },
+      "right": {
+        "rifle": 81,
+        "rocket": 296
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        101
+      ],
+      "metric": "projectiles",
+      "left": 0,
+      "right": 3
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        102
+      ],
+      "metric": "hp",
+      "left": [
+        14.882965134969972,
+        6.580629560315241
+      ],
+      "right": [
+        7.834478499324531,
+        6.850453466467124
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        102
+      ],
+      "metric": "spent",
+      "left": [
+        725,
+        955
+      ],
+      "right": [
+        700,
+        1095
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        102
+      ],
+      "metric": "bank",
+      "left": [
+        240,
+        227.791666666616
+      ],
+      "right": [
+        240,
+        193.74999999992298
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        102
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 77,
+        "rocket": 282
+      },
+      "right": {
+        "rifle": 96,
+        "rocket": 294
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        102
+      ],
+      "metric": "projectiles",
+      "left": 1,
+      "right": 0
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        103
+      ],
+      "metric": "hp",
+      "left": [
+        15.191021712230764,
+        6.84981181775911
+      ],
+      "right": [
+        14.041697598846154,
+        4.601986924716721
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        103
+      ],
+      "metric": "spent",
+      "left": [
+        905,
+        970
+      ],
+      "right": [
+        785,
+        1095
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        103
+      ],
+      "metric": "bank",
+      "left": [
+        240,
+        240
+      ],
+      "right": [
+        240,
+        229.74999999999665
+      ]
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        103
+      ],
+      "metric": "shots",
+      "left": {
+        "rifle": 116,
+        "rocket": 290
+      },
+      "right": {
+        "rifle": 110,
+        "rocket": 312
+      }
+    },
+    {
+      "key": [
+        "supplied-fob",
+        "rocket",
+        "independent",
+        103
+      ],
+      "metric": "projectiles",
+      "left": 3,
+      "right": 2
+    }
+  ]
+}

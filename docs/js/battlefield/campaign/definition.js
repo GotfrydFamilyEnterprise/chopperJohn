@@ -1,6 +1,6 @@
 // CP-01: JSON is data only; validate a complete candidate before replacing state.
-import {validateLevel} from '../terrain/level.js?v=2.0.0';
-import {groundY} from '../terrain/heightfield.js?v=2.0.0';
+import {validateLevel} from '../terrain/level.js?v=2.2.0';
+import {groundY} from '../terrain/heightfield.js?v=2.2.0';
 export function validateBattlefield(input){
  const fail=m=>{throw new Error('Invalid battlefield: '+m);};
  if(input?.schemaVersion!==1||input.kind!=='battlefield')fail('schemaVersion1/kind battlefield required');
@@ -25,7 +25,7 @@ export function validateBattlefield(input){
   if(f.supply!==120)fail('campaign starts each side with120 Supply');
   if(!Array.isArray(f.opening)||f.opening.length!==5||f.opening.filter(u=>u.type==='rifle').length!==3||f.opening.filter(u=>u.type==='rocket').length!==2)fail('opening must be3 rifles and2 rockets');
   const opening=f.opening.map(u=>{if(!Number.isFinite(u.x)||u.x<80||u.x>layout.world.width-80||!['garrison','advance'].includes(u.order))fail('invalid opening unit');return {type:u.type,x:u.x,order:u.order};});
-  const composition=f.wave;if(!composition||!Number.isInteger(composition.rifle)||!Number.isInteger(composition.rocket)||composition.rifle<1||composition.rocket<1||composition.rifle+composition.rocket>10)fail('wave needs1–10 rifles/rockets with both types');
+  const composition=f.wave;if(!composition||!Number.isInteger(composition.rifle)||!Number.isInteger(composition.rocket)||composition.rifle<2||composition.rocket<1||composition.rifle+composition.rocket>10)fail('wave needs2+ rifles (including sergeant),1+ rocket, at most10 soldiers');
   return {team:f.team,controller:f.controller,spawnX:f.spawnX,rallyX:f.rallyX,defenseX:f.defenseX,supply:f.supply,opening,wave:{rifle:composition.rifle,rocket:composition.rocket}};
  });
  if(input.objective?.type!=='capture-hq'||!bases.some(b=>b.id===input.objective.target&&b.team===1&&b.type==='hq'))fail('objective must capture red HQ');

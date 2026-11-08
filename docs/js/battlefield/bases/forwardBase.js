@@ -1,4 +1,4 @@
-import {baseColor,baseTextColor,drawFoundation,finishBase} from "./baseCommon.js?v=2.0.0";
+import {baseColor,baseTextColor,drawFoundation,finishBase} from "./baseCommon.js?v=2.2.0";
 export const REQUIRED={rifle:2,rocket:1};
 export function occupied(b){return b.slots.rifle.every(id=>id!==null)&&b.slots.rocket[0]!==null;}
 export function assignDefender(b,u){
