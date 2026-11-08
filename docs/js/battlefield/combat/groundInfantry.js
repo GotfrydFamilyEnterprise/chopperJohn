@@ -1,6 +1,6 @@
 // CP-02: shared terrain infantry rules for the lab and campaign battlefield.
-import {LAB_ROCKET,planTerrainRocket,labRocketSpread} from '../terrain/ballistics.js?v=2.1.0';
-import {groundY,visible,walkSurface} from '../terrain/heightfield.js?v=2.1.0';
+import {LAB_ROCKET,planTerrainRocket,labRocketSpread} from '../terrain/ballistics.js?v=2.2.0';
+import {groundY,visible,walkSurface} from '../terrain/heightfield.js?v=2.2.0';
 export const infantryEye=u=>({x:u.x,y:u.y-40});
 export function infantryTarget(level,u,units,bases=[],plan=planTerrainRocket){
  const dir=u.team===0?1:-1;

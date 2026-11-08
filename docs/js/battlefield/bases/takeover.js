@@ -1,4 +1,4 @@
-import {defenseCapacity} from './defenseRules.js?v=2.1.0';
+import {defenseCapacity} from './defenseRules.js?v=2.2.0';
 // CAP-01..06: deterministic structural damage, ownership and rebuilding; no DOM/RNG.
 export const TAKEOVER=Object.freeze({captureSeconds:5,rebuildSeconds:20,interior:58});
 export function insideBase(unit,base){return unit.hp>0&&Math.abs(unit.x-base.x)<=TAKEOVER.interior;}
@@ -31,7 +31,7 @@ export function updateTakeover(base,units,dt){
  base.defenseFlash=Math.max(0,(base.defenseFlash||0)-dt);
  if((base.defensePoints??defenseCapacity(base))>0){base.captureProgress=0;base.captureTeam=null;base.rebuildProgress=0;base.contested=false;return null;}
  const present=units.filter(u=>['rifle','rocket'].includes(u.type)&&insideBase(u,base));
- const attackers=present.filter(u=>u.team!==base.team&&u.type==='rifle'&&u.captureEligible!==false&&u.guardBase===null).sort((a,b)=>a.id-b.id);
+ const attackers=present.filter(u=>u.team!==base.team&&u.type==='rifle'&&u.captureEligible!==false&&!u.withdrawing&&u.guardBase===null).sort((a,b)=>a.id-b.id);
  const defenders=present.filter(u=>u.team===base.team);
  base.contested=present.some(u=>u.team!==base.team)&&defenders.length>0;
  if(!attackers.length){base.captureProgress=0;base.captureTeam=null;}

@@ -1,22 +1,22 @@
-import {activePlatoons,platoonSummary} from '../ai/platoons.js?v=2.1.0';
-import {installTestInteractions} from '../ui/testInteractions.js?v=2.1.0';
-import {fetchJson,validateCampaign,validateBattlefield} from './definition.js?v=2.1.0';
-import {PROGRESS_KEY,readProgress,unlocked,completeLevel} from './progress.js?v=2.1.0';
-import {createWorld,stepWorld,buySergeant,buyInfantry,turnAircraft,worldSnapshot,CAMPAIGN_STEP,spawn} from './world.js?v=2.1.0';
-import {drawCampaign} from './renderer.js?v=2.1.0';
-import {groundY} from '../terrain/heightfield.js?v=2.1.0';
-import {pilotView,groundOffset} from '../ui/battlefieldCamera.js?v=2.1.0';
-import {installPilotControls} from '../ui/pilotControls.js?v=2.1.0';
-import {installGameMenu} from '../ui/gameMenu.js?v=2.1.0';
-import {installTouchGuards} from '../ui/touchGuards.js?v=2.1.0';
-import {installFullscreen} from '../ui/fullscreen.js?v=2.1.0';
-import {renderRedEconomy} from '../ui/redEconomyPanel.js?v=2.1.0';
-import {purchaseStatus} from '../economy/supply.js?v=2.1.0';
-import {baseStatus} from '../bases/takeoverRenderer.js?v=2.1.0';
+import {activePlatoons,platoonSummary} from '../ai/platoons.js?v=2.2.0';
+import {installTestInteractions} from '../ui/testInteractions.js?v=2.2.0';
+import {fetchJson,validateCampaign,validateBattlefield} from './definition.js?v=2.2.0';
+import {PROGRESS_KEY,readProgress,unlocked,completeLevel} from './progress.js?v=2.2.0';
+import {createWorld,stepWorld,buySergeant,buyInfantry,turnAircraft,worldSnapshot,CAMPAIGN_STEP,spawn} from './world.js?v=2.2.0';
+import {drawCampaign} from './renderer.js?v=2.2.0';
+import {groundY} from '../terrain/heightfield.js?v=2.2.0';
+import {pilotView,groundOffset} from '../ui/battlefieldCamera.js?v=2.2.0';
+import {installPilotControls} from '../ui/pilotControls.js?v=2.2.0';
+import {installGameMenu} from '../ui/gameMenu.js?v=2.2.0';
+import {installTouchGuards} from '../ui/touchGuards.js?v=2.2.0';
+import {installFullscreen} from '../ui/fullscreen.js?v=2.2.0';
+import {renderRedEconomy} from '../ui/redEconomyPanel.js?v=2.2.0';
+import {purchaseStatus} from '../economy/supply.js?v=2.2.0';
+import {baseStatus} from '../bases/takeoverRenderer.js?v=2.2.0';
 const $=id=>document.getElementById(id),canvas=$('field'),ctx=canvas.getContext('2d'),testing=new URLSearchParams(location.search).has('test');
 let campaign,progress={completed:[]},world=null,mode='menu',loadToken=0,controls,follow=true,view={scale:1,camera:0,offsetY:0},width=innerWidth,height=innerHeight,dpr=1,acc=0,last=0,drag=null,saved=true;
 let storage;try{storage=localStorage;}catch{storage=null;}
-for(const el of document.querySelectorAll('[data-game-version]'))el.textContent='v2.1.0';
+for(const el of document.querySelectorAll('[data-game-version]'))el.textContent='v2.2.0';
 $('followRockets').hidden=true;
 function release(){controls?.release();if(drag&&canvas.hasPointerCapture(drag.id))canvas.releasePointerCapture(drag.id);drag=null;acc=0;}
 function menu(){loadToken++;release();mode='menu';world=null;$('gameMenu').open=false;$('fullscreenHelp').close();renderMenu();draw();}

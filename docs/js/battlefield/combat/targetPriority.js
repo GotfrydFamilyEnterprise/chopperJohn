@@ -1,5 +1,5 @@
-import {chooseRocketTarget,updateRocketWeapon,WEAPONS} from './weapons.js?v=2.1.0';
-import {planAirShot,launchAirRocket} from './airInterception.js?v=2.1.0';
+import {chooseRocketTarget,updateRocketWeapon,WEAPONS} from './weapons.js?v=2.2.0';
+import {planAirShot,launchAirRocket} from './airInterception.js?v=2.2.0';
 // AA-PRIORITY: a reachable helicopter immediately preempts a ground aim lock.
 // The shared weapon clock is advanced exactly once, regardless of target kind.
 export function chooseRocketThreat(unit,units,helicopter){

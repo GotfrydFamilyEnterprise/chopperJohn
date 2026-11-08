@@ -1,6 +1,6 @@
 // CP-01: JSON is data only; validate a complete candidate before replacing state.
-import {validateLevel} from '../terrain/level.js?v=2.1.0';
-import {groundY} from '../terrain/heightfield.js?v=2.1.0';
+import {validateLevel} from '../terrain/level.js?v=2.2.0';
+import {groundY} from '../terrain/heightfield.js?v=2.2.0';
 export function validateBattlefield(input){
  const fail=m=>{throw new Error('Invalid battlefield: '+m);};
  if(input?.schemaVersion!==1||input.kind!=='battlefield')fail('schemaVersion1/kind battlefield required');

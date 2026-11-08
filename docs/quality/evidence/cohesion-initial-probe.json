@@ -1,0 +1,1602 @@
+{
+  "schemaVersion": 1,
+  "seeds": 1,
+  "controllers": [
+    "independent",
+    "siege"
+  ],
+  "mixes": [
+    "mixed"
+  ],
+  "prices": {
+    "rifle": 25,
+    "rocket": 60
+  },
+  "scope": "Isolated flat fixtures, five attackers from three explicit mixes; identical initial positions, units, seed and income/replacement settings for each controller within a case/mix/seed/mirror. Opponents always independent. Most cases fixed force/no recruitment; supplied-fob enables normal paid HQ replacements for both, platoon leader loss cancels its orders. Initial four attack followers and defenders are explicit scenario grants; all controllers pay25 for equivalent fifth rifle, leaving95 of120 Supply. Initial full force replacement value reported separately; do not double count that25 in total resource value. No helicopter, normal commander or natural campaign victory claim. Mirrored colors are paired robustness checks, not independent seeds. Unfinished is not a draw. No injected damage or forced wins after fixture initialization.",
+  "rows": [
+    {
+      "case": "three-rifles",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 9.675,
+      "outcome": "attack",
+      "initialCost": [
+        195,
+        75
+      ],
+      "alive": [
+        4,
+        0
+      ],
+      "survivingValue": [
+        170,
+        0
+      ],
+      "hp": [
+        12,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 12,
+        "rocket": 3
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "three-rifles",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 9.675,
+      "outcome": "attack",
+      "initialCost": [
+        195,
+        75
+      ],
+      "alive": [
+        4,
+        0
+      ],
+      "survivingValue": [
+        170,
+        0
+      ],
+      "hp": [
+        12,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 12,
+        "rocket": 3
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "three-rifles",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 11.6,
+      "outcome": "attack",
+      "initialCost": [
+        195,
+        75
+      ],
+      "alive": [
+        3,
+        0
+      ],
+      "survivingValue": [
+        145,
+        0
+      ],
+      "hp": [
+        11,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 196.20783333335135,
+      "shots": {
+        "rifle": 13,
+        "rocket": 4
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "three-rifles",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 11.6,
+      "outcome": "attack",
+      "initialCost": [
+        195,
+        75
+      ],
+      "alive": [
+        3,
+        0
+      ],
+      "survivingValue": [
+        145,
+        0
+      ],
+      "hp": [
+        11,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 196.20783333328882,
+      "shots": {
+        "rifle": 13,
+        "rocket": 4
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "three-mixed",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 16.35,
+      "outcome": "attack",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        2,
+        0
+      ],
+      "survivingValue": [
+        120,
+        0
+      ],
+      "hp": [
+        8,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 10,
+        "rocket": 10
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "three-mixed",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 16.35,
+      "outcome": "attack",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        2,
+        0
+      ],
+      "survivingValue": [
+        120,
+        0
+      ],
+      "hp": [
+        8,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 10,
+        "rocket": 10
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "three-mixed",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 86.075,
+      "outcome": "attack",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        2,
+        0
+      ],
+      "survivingValue": [
+        120,
+        0
+      ],
+      "hp": [
+        5.409897663361146,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 198.84483333335174,
+      "shots": {
+        "rifle": 9,
+        "rocket": 31
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "three-mixed",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 86.075,
+      "outcome": "attack",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        2,
+        0
+      ],
+      "survivingValue": [
+        120,
+        0
+      ],
+      "hp": [
+        5.409897663360811,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 198.8448333332899,
+      "shots": {
+        "rifle": 9,
+        "rocket": 31
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "equal-mixed",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 34.78333333333333,
+      "outcome": "defense",
+      "initialCost": [
+        195,
+        195
+      ],
+      "alive": [
+        0,
+        2
+      ],
+      "survivingValue": [
+        0,
+        120
+      ],
+      "hp": [
+        0,
+        8
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 14,
+        "rocket": 25
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "equal-mixed",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 34.78333333333333,
+      "outcome": "defense",
+      "initialCost": [
+        195,
+        195
+      ],
+      "alive": [
+        0,
+        2
+      ],
+      "survivingValue": [
+        0,
+        120
+      ],
+      "hp": [
+        0,
+        8
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 14,
+        "rocket": 25
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "equal-mixed",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 58.25,
+      "outcome": "defense",
+      "initialCost": [
+        195,
+        195
+      ],
+      "alive": [
+        0,
+        2
+      ],
+      "survivingValue": [
+        0,
+        120
+      ],
+      "hp": [
+        0,
+        8
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 202.78433333335317,
+      "shots": {
+        "rifle": 6,
+        "rocket": 32
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "equal-mixed",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 58.25,
+      "outcome": "defense",
+      "initialCost": [
+        195,
+        195
+      ],
+      "alive": [
+        0,
+        2
+      ],
+      "survivingValue": [
+        0,
+        120
+      ],
+      "hp": [
+        0,
+        8
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 202.7843333332844,
+      "shots": {
+        "rifle": 6,
+        "rocket": 32
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "seven-rifles",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 21.016666666666666,
+      "outcome": "mutual",
+      "initialCost": [
+        195,
+        175
+      ],
+      "alive": [
+        0,
+        0
+      ],
+      "survivingValue": [
+        0,
+        0
+      ],
+      "hp": [
+        0,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 28,
+        "rocket": 10
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "seven-rifles",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 21.016666666666666,
+      "outcome": "mutual",
+      "initialCost": [
+        195,
+        175
+      ],
+      "alive": [
+        0,
+        0
+      ],
+      "survivingValue": [
+        0,
+        0
+      ],
+      "hp": [
+        0,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 28,
+        "rocket": 10
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "seven-rifles",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 20.53333333333333,
+      "outcome": "defense",
+      "initialCost": [
+        195,
+        175
+      ],
+      "alive": [
+        0,
+        2
+      ],
+      "survivingValue": [
+        0,
+        50
+      ],
+      "hp": [
+        0,
+        2.94631720487252
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 196.20783333335135,
+      "shots": {
+        "rifle": 27,
+        "rocket": 8
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "seven-rifles",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 20.53333333333333,
+      "outcome": "defense",
+      "initialCost": [
+        195,
+        175
+      ],
+      "alive": [
+        0,
+        2
+      ],
+      "survivingValue": [
+        0,
+        50
+      ],
+      "hp": [
+        0,
+        2.946317204873458
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 196.20783333328882,
+      "shots": {
+        "rifle": 27,
+        "rocket": 8
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "seven-mixed",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 19.25,
+      "outcome": "defense",
+      "initialCost": [
+        195,
+        245
+      ],
+      "alive": [
+        0,
+        3
+      ],
+      "survivingValue": [
+        0,
+        145
+      ],
+      "hp": [
+        0,
+        10.61501521500682
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 19,
+        "rocket": 14
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "seven-mixed",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 19.25,
+      "outcome": "defense",
+      "initialCost": [
+        195,
+        245
+      ],
+      "alive": [
+        0,
+        3
+      ],
+      "survivingValue": [
+        0,
+        145
+      ],
+      "hp": [
+        0,
+        10.615015215006814
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 19,
+        "rocket": 14
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "seven-mixed",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 49.05833333333333,
+      "outcome": "attack",
+      "initialCost": [
+        195,
+        245
+      ],
+      "alive": [
+        2,
+        0
+      ],
+      "survivingValue": [
+        120,
+        0
+      ],
+      "hp": [
+        4.494289179073743,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 198.84483333335174,
+      "shots": {
+        "rifle": 17,
+        "rocket": 34
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "seven-mixed",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 49.05833333333333,
+      "outcome": "attack",
+      "initialCost": [
+        195,
+        245
+      ],
+      "alive": [
+        2,
+        0
+      ],
+      "survivingValue": [
+        120,
+        0
+      ],
+      "hp": [
+        4.494289179075084,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 198.8448333332899,
+      "shots": {
+        "rifle": 17,
+        "rocket": 34
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "rocket-heavy",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 66.25,
+      "outcome": "mutual",
+      "initialCost": [
+        195,
+        230
+      ],
+      "alive": [
+        0,
+        0
+      ],
+      "survivingValue": [
+        0,
+        0
+      ],
+      "hp": [
+        0,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 5,
+        "rocket": 52
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "rocket-heavy",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 66.25,
+      "outcome": "mutual",
+      "initialCost": [
+        195,
+        230
+      ],
+      "alive": [
+        0,
+        0
+      ],
+      "survivingValue": [
+        0,
+        0
+      ],
+      "hp": [
+        0,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 5,
+        "rocket": 52
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "rocket-heavy",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 46.291666666666664,
+      "outcome": "defense",
+      "initialCost": [
+        195,
+        230
+      ],
+      "alive": [
+        0,
+        3
+      ],
+      "survivingValue": [
+        0,
+        180
+      ],
+      "hp": [
+        0,
+        12
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 212.37499999999898,
+      "shots": {
+        "rifle": 6,
+        "rocket": 34
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "rocket-heavy",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 46.291666666666664,
+      "outcome": "defense",
+      "initialCost": [
+        195,
+        230
+      ],
+      "alive": [
+        0,
+        3
+      ],
+      "survivingValue": [
+        0,
+        180
+      ],
+      "hp": [
+        0,
+        12
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 212.3750000000041,
+      "shots": {
+        "rifle": 6,
+        "rocket": 34
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "empty-fob",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 240,
+      "outcome": "unfinished",
+      "initialCost": [
+        195,
+        0
+      ],
+      "alive": [
+        5,
+        0
+      ],
+      "survivingValue": [
+        195,
+        0
+      ],
+      "hp": [
+        17,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": 84.50833333333333,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 0,
+        "rocket": 21
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "empty-fob",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 240,
+      "outcome": "unfinished",
+      "initialCost": [
+        195,
+        0
+      ],
+      "alive": [
+        5,
+        0
+      ],
+      "survivingValue": [
+        195,
+        0
+      ],
+      "hp": [
+        17,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": 84.50833333333333,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 0,
+        "rocket": 21
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "empty-fob",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 71.45,
+      "outcome": "capture",
+      "initialCost": [
+        195,
+        0
+      ],
+      "alive": [
+        5,
+        0
+      ],
+      "survivingValue": [
+        195,
+        0
+      ],
+      "hp": [
+        17,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": 63.43333333333333,
+      "captureAt": 71.45,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 71.38749999995161,
+      "shots": {
+        "rifle": 0,
+        "rocket": 20
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "empty-fob",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 71.45,
+      "outcome": "capture",
+      "initialCost": [
+        195,
+        0
+      ],
+      "alive": [
+        5,
+        0
+      ],
+      "survivingValue": [
+        195,
+        0
+      ],
+      "hp": [
+        17,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": 63.43333333333333,
+      "captureAt": 71.45,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 71.38749999980814,
+      "shots": {
+        "rifle": 0,
+        "rocket": 20
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "staffed-fob",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 240,
+      "outcome": "unfinished",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        2,
+        0
+      ],
+      "survivingValue": [
+        120,
+        0
+      ],
+      "hp": [
+        8,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": 153.825,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 6,
+        "rocket": 50
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "staffed-fob",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 240,
+      "outcome": "unfinished",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        2,
+        0
+      ],
+      "survivingValue": [
+        120,
+        0
+      ],
+      "hp": [
+        8,
+        0
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": 153.825,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 6,
+        "rocket": 50
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "staffed-fob",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 240,
+      "outcome": "unfinished",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        3,
+        3
+      ],
+      "survivingValue": [
+        145,
+        110
+      ],
+      "hp": [
+        11,
+        10
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 183.57500000007553,
+      "shots": {
+        "rifle": 0,
+        "rocket": 7
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "staffed-fob",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 240,
+      "outcome": "unfinished",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        3,
+        3
+      ],
+      "survivingValue": [
+        145,
+        110
+      ],
+      "hp": [
+        11,
+        10
+      ],
+      "spent": [
+        25,
+        0
+      ],
+      "bank": [
+        95,
+        120
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 1,
+      "regroups": 1,
+      "resumes": 0,
+      "maxLeaderGap": 183.57500000000118,
+      "shots": {
+        "rifle": 0,
+        "rocket": 7
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "supplied-fob",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 360,
+      "outcome": "unfinished",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        5,
+        3
+      ],
+      "survivingValue": [
+        195,
+        110
+      ],
+      "hp": [
+        14.613169134912937,
+        7.880101835255641
+      ],
+      "spent": [
+        1050,
+        860
+      ],
+      "bank": [
+        240,
+        240
+      ],
+      "breachAt": 136.69166666666666,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 167,
+        "rocket": 232
+      },
+      "projectiles": 2
+    },
+    {
+      "case": "supplied-fob",
+      "mix": "mixed",
+      "controller": "independent",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 360,
+      "outcome": "unfinished",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        5,
+        3
+      ],
+      "survivingValue": [
+        195,
+        110
+      ],
+      "hp": [
+        9.701920425160163,
+        9.82719672972686
+      ],
+      "spent": [
+        1050,
+        910
+      ],
+      "bank": [
+        240,
+        237.54166666665586
+      ],
+      "breachAt": 129.30833333333334,
+      "captureAt": null,
+      "retreats": 0,
+      "regroups": 0,
+      "resumes": 0,
+      "maxLeaderGap": 0,
+      "shots": {
+        "rifle": 161,
+        "rocket": 234
+      },
+      "projectiles": 3
+    },
+    {
+      "case": "supplied-fob",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": false,
+      "seconds": 360,
+      "outcome": "unfinished",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        5,
+        3
+      ],
+      "survivingValue": [
+        195,
+        110
+      ],
+      "hp": [
+        15.057351135257486,
+        4.333333333333332
+      ],
+      "spent": [
+        475,
+        0
+      ],
+      "bank": [
+        217.58333333333275,
+        240
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 8,
+      "regroups": 8,
+      "resumes": 8,
+      "maxLeaderGap": 260.55000000005043,
+      "shots": {
+        "rifle": 20,
+        "rocket": 78
+      },
+      "projectiles": 0
+    },
+    {
+      "case": "supplied-fob",
+      "mix": "mixed",
+      "controller": "siege",
+      "seed": 101,
+      "mirrored": true,
+      "seconds": 360,
+      "outcome": "unfinished",
+      "initialCost": [
+        195,
+        110
+      ],
+      "alive": [
+        5,
+        3
+      ],
+      "survivingValue": [
+        195,
+        110
+      ],
+      "hp": [
+        15.057351135248794,
+        4.333333333333332
+      ],
+      "spent": [
+        475,
+        0
+      ],
+      "bank": [
+        217.58333333333275,
+        240
+      ],
+      "breachAt": null,
+      "captureAt": null,
+      "retreats": 8,
+      "regroups": 8,
+      "resumes": 8,
+      "maxLeaderGap": 260.54999999997835,
+      "shots": {
+        "rifle": 20,
+        "rocket": 78
+      },
+      "projectiles": 0
+    }
+  ]
+}

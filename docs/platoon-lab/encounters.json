@@ -1,0 +1,15 @@
+{
+ "schemaVersion":1,
+ "cases":[
+  {"id":"three-rifles","name":"Five versus three riflemen","kind":"field","defenders":{"rifle":3,"rocket":0},"seconds":120},
+  {"id":"three-mixed","name":"Five versus a smaller mixed force","kind":"field","defenders":{"rifle":2,"rocket":1},"seconds":120},
+  {"id":"equal-mixed","name":"Equal mixed forces","kind":"field","defenders":{"rifle":3,"rocket":2},"seconds":120},
+  {"id":"seven-rifles","name":"Seven riflemen ·175 Supply","kind":"field","defenders":{"rifle":7,"rocket":0},"seconds":120},
+  {"id":"seven-mixed","name":"Outnumbered by seven mixed troops","kind":"field","defenders":{"rifle":5,"rocket":2},"seconds":120},
+  {"id":"rocket-heavy","name":"Rocket-heavy opposition","kind":"field","defenders":{"rifle":2,"rocket":3},"seconds":120},
+  {"id":"empty-fob","name":"Empty fortified outpost","kind":"fob","defenders":{"rifle":0,"rocket":0},"seconds":240},
+  {"id":"staffed-fob","name":"Staffed fortified outpost","kind":"fob","defenders":{"rifle":2,"rocket":1},"seconds":240},
+  {"id":"supplied-fob","name":"Staffed outpost with paid replacements","kind":"fob","defenders":{"rifle":2,"rocket":1},"resupply":true,"seconds":360}
+ ],
+ "mixes":{"mixed":{"rifle":3,"rocket":2},"rifle":{"rifle":4,"rocket":1},"rocket":{"rifle":2,"rocket":3}}
+}

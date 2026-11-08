@@ -1,33 +1,33 @@
-import {prunePlatoons,createPlatoonState,createSergeant,updatePlatoons,activePlatoons,platoonOrder,groupFor,permitsEngagement,PLATOON_TACTICS} from '../ai/platoons.js?v=2.1.0';
-import {planTerrainRocket} from '../terrain/ballistics.js?v=2.1.0';
-import {planAirShot} from '../combat/airInterception.js?v=2.1.0';
+import {prunePlatoons,createPlatoonState,createSergeant,updatePlatoons,activePlatoons,platoonOrder,groupFor,permitsEngagement,PLATOON_TACTICS} from '../ai/platoons.js?v=2.2.0';
+import {planTerrainRocket} from '../terrain/ballistics.js?v=2.2.0';
+import {planAirShot} from '../combat/airInterception.js?v=2.2.0';
 // CP-02/03: pure campaign battlefield. UI injects input/orders; no DOM, storage or clock.
-import {validateBattlefield} from './definition.js?v=2.1.0';
-import {groundY,terrainContact,visible,walkSurface} from '../terrain/heightfield.js?v=2.1.0';
-import {allocateSplash} from '../terrain/splash.js?v=2.1.0';
-import {infantryTarget,rifleRound,rifleBearing,updateGroundRocket} from '../combat/groundInfantry.js?v=2.1.0';
-import {createSoldier} from '../units/soldierCommon.js?v=2.1.0';
-import {createRandom,applyDamage,stationedBase,resolveRifleHit} from '../combat/weapons.js?v=2.1.0';
-import {createBase} from '../bases/baseCommon.js?v=2.1.0';
-import {assignDefender,releaseDeadDefenders,refreshOccupation,occupied} from '../bases/forwardBase.js?v=2.1.0';
-import {rifleAssaultBase} from '../bases/assaultOrders.js?v=2.1.0';
-import {capturePoint,rocketDefenseBlast,updateTakeover,headquartersResult} from '../bases/takeover.js?v=2.1.0';
-import {createCommander,updateCommander,commanderMovementOrder} from '../ai/redCommander.js?v=2.1.0';
-import {purchaseUnit,accrueSupply} from '../economy/supply.js?v=2.1.0';
-import {createHelicopter,updateHelicopter,repairHelicopter,turnHelicopter,damageHelicopter} from '../aircraft/helicopter.js?v=2.1.0';
-import {updateAircraftSupport} from '../aircraft/aircraftSupport.js?v=2.1.0';
-import {updateHelicopterGun,resolveHelicopterHit} from '../combat/helicopterGun.js?v=2.1.0';
-import {allocateRocketTargets} from '../combat/rocketAllocation.js?v=2.1.0';
-import {updatePrioritizedRocket} from '../combat/targetPriority.js?v=2.1.0';
-import {stepBattleRocket,helicopterBurstDamage} from '../combat/airRocketFlight.js?v=2.1.0';
-import {segmentBox,soldierBox,boxDistance,lerpAircraft} from '../combat/collision2d.js?v=2.1.0';
+import {validateBattlefield} from './definition.js?v=2.2.0';
+import {groundY,terrainContact,visible,walkSurface} from '../terrain/heightfield.js?v=2.2.0';
+import {allocateSplash} from '../terrain/splash.js?v=2.2.0';
+import {infantryTarget,rifleRound,rifleBearing,updateGroundRocket} from '../combat/groundInfantry.js?v=2.2.0';
+import {createSoldier} from '../units/soldierCommon.js?v=2.2.0';
+import {createRandom,applyDamage,stationedBase,resolveRifleHit} from '../combat/weapons.js?v=2.2.0';
+import {createBase} from '../bases/baseCommon.js?v=2.2.0';
+import {assignDefender,releaseDeadDefenders,refreshOccupation,occupied} from '../bases/forwardBase.js?v=2.2.0';
+import {rifleAssaultBase,rifleHoldBase} from '../bases/assaultOrders.js?v=2.2.0';
+import {capturePoint,rocketDefenseBlast,updateTakeover,headquartersResult} from '../bases/takeover.js?v=2.2.0';
+import {createCommander,updateCommander,commanderMovementOrder} from '../ai/redCommander.js?v=2.2.0';
+import {purchaseUnit,accrueSupply} from '../economy/supply.js?v=2.2.0';
+import {createHelicopter,updateHelicopter,repairHelicopter,turnHelicopter,damageHelicopter} from '../aircraft/helicopter.js?v=2.2.0';
+import {updateAircraftSupport} from '../aircraft/aircraftSupport.js?v=2.2.0';
+import {updateHelicopterGun,resolveHelicopterHit} from '../combat/helicopterGun.js?v=2.2.0';
+import {allocateRocketTargets} from '../combat/rocketAllocation.js?v=2.2.0';
+import {updatePrioritizedRocket} from '../combat/targetPriority.js?v=2.2.0';
+import {stepBattleRocket,helicopterBurstDamage} from '../combat/airRocketFlight.js?v=2.2.0';
+import {segmentBox,soldierBox,boxDistance,lerpAircraft} from '../combat/collision2d.js?v=2.2.0';
 export const CAMPAIGN_STEP=1/120;
 export const CAMPAIGN_BALANCE=Object.freeze({id:'campaign-v1',blastRadius:40,damageModel:'shared'});
 export function record(w,e){if(e.type==='breach'||e.type==='captured'){const base=w.bases.find(b=>b.x===e.baseX);w.metrics[e.type==='breach'?'breaches':'captures'].push({time:w.time,baseId:base?.id,team:e.team});}w.events.push({tick:w.tick,time:w.time,...e});if(w.events.length>512)w.events.shift();}
 export function spawn(w,team,type,x){const u={...createSoldier(w.nextId++,team,type,x,groundY(w.level,x)),mode:'walk',shotsFired:0,firstShotAt:null,damageTaken:0};w.units.push(u);return u;}
 export function createWorld(input,{seed=input.seed,systems={},platoons=false}={}){
  const level=validateBattlefield(input);if(!Number.isInteger(seed)||seed<0||seed>0xffffffff)throw Error('Invalid seed');
- const w={level,seed,time:0,tick:0,nextId:1,nextRoundId:1,paused:false,result:null,units:[],bases:level.bases.map(b=>({...createBase(b.x,b.team,b.type==='hq'),id:b.id,y:groundY(level,b.x)})),projectiles:[],effects:[],events:[],random:createRandom(seed),airRandom:createRandom(seed^0xa17c9e33),stats:{rifleShots:0,rocketShots:0,helicopterShots:0,damage:0,repairs:0},metrics:{firstShot:[null,null],breaches:[],captures:[]},systems:{flight:true,troops:true,weapons:true,projectiles:true,damage:true,repairs:true,commanders:true,takeover:true,...systems}};
+ const w={level,seed,time:0,tick:0,nextId:1,nextRoundId:1,paused:false,result:null,units:[],bases:level.bases.map(b=>({...createBase(b.x,b.team,b.type==='hq'),id:b.id,y:groundY(level,b.x)})),projectiles:[],effects:[],events:[],random:createRandom(seed),airRandom:createRandom(seed^0xa17c9e33),stats:{rifleShots:0,rocketShots:0,helicopterShots:0,damage:0,repairs:0},metrics:{firstShot:[null,null],breaches:[],captures:[]},systems:{flight:true,troops:true,weapons:true,projectiles:true,damage:true,repairs:true,commanders:true,platoonRecruitment:false,rifleHold:true,takeover:true,...systems}};
  for(const p of level.terrain.points)Object.freeze(p);Object.freeze(level.terrain.points);Object.freeze(level.terrain);Object.freeze(level.world);Object.freeze(level);
  w.groundPlans=new Map();w.airPlans=new Map();
  w.planGround=(layout,u,t,error=0)=>{const key=[u.team,u.x,u.y,t.x,t.observedVelocity||0,error].join(':');if(!w.groundPlans.has(key)){if(w.groundPlans.size>8192)w.groundPlans.clear();w.groundPlans.set(key,planTerrainRocket(layout,u,t,error));}const p=w.groundPlans.get(key);return p?{...p}:null;};
@@ -62,7 +62,7 @@ export function explode(w,p,point){
  if(w.systems.takeover)for(const e of rocketDefenseBlast(point,p.team,w.bases))record(w,e);
 }
 function choices(w){return allocateRocketTargets(w.units,w.helicopter.hp>0?w.helicopter:null,{stagger:true,airPlanner:w.planAir,groundSelector:u=>groundTarget(w,u,true)});}
-function move(w,u,goal,distance){const old=u.x;let next=walkSurface(w.level,u.x,Math.sign(goal-u.x)*Math.min(distance,Math.abs(goal-u.x)));next=Math.max(Math.min(old,goal),Math.min(Math.max(old,goal),next));u.x=Math.max(40,Math.min(w.level.world.width-40,next));u.y=groundY(w.level,u.x);u.phase=(u.phase+Math.abs(u.x-old)/44)%1;u.observedVelocity=(u.x-old)/CAMPAIGN_STEP;}
+function move(w,u,goal,distance){const old=u.x;let next=walkSurface(w.level,u.x,Math.sign(goal-u.x)*Math.min(distance,Math.abs(goal-u.x)));next=Math.max(Math.min(old,goal),Math.min(Math.max(old,goal),next));u.x=Math.max(40,Math.min(w.level.world.width-40,next));u.y=groundY(w.level,u.x);u.phase=((u.phase+(u.x-old)*(u.team===0?1:-1)/44)%1+1)%1;u.observedVelocity=(u.x-old)/CAMPAIGN_STEP;}
 function shot(w,u,p,weapon){if(w.metrics.firstShot[u.team]===null)w.metrics.firstShot[u.team]=w.time;p.id=w.nextRoundId++;w.projectiles.push(p);u.shotsFired++;if(u.firstShotAt===null)u.firstShotAt=w.time;w.stats[weapon==='rifle'?'rifleShots':'rocketShots']++;record(w,{type:'launch',weapon,team:u.team,shooterId:u.id,targetKind:p.targetKind??'ground',...p});}
 function contactUnit(p,a,b,u){return segmentBox(a,b,p.kind==='helicopterBullet'?soldierBox(u):{left:u.x-7,right:u.x+7,top:u.y-54,bottom:u.y-8});}
 function advanceProjectiles(w,previousHelicopter){
@@ -90,7 +90,7 @@ export function stepWorld(w,input={},count=1){
   if(w.systems.commanders){accrueSupply(w.commanders[0].supply,dt);updateCommander(w.commanders[1],dt,[...w.units],w.bases,(type,x)=>{const u=spawn(w,1,type,x);return u;},w.helicopter,{fieldPurchases:!w.platoons.enabled});}
   if(w.platoons.enabled){
    if(w.systems.commanders){const groups=activePlatoons(w,1),recipe=w.level.factions.find(f=>f.team===1).wave;if(groups.length<2&&!groups.some(g=>g.phase==='rally')&&w.units.filter(u=>u.hp>0&&u.team===1).length+recipe.rifle+recipe.rocket<=15)buySergeant(w,1,w.platoons.redStrategy);}
-   updatePlatoons(w,(team,type,x)=>spawn(w,team,type,x),e=>record(w,e));
+   updatePlatoons(w,(team,type,x)=>spawn(w,team,type,x),e=>record(w,e),{purchases:w.systems.commanders||w.systems.platoonRecruitment});
   }
   if(w.systems.repairs){const before=w.helicopter.hp;repairHelicopter(w.helicopter,dt,groundY(w.level,w.level.helipad.x));w.stats.repairs+=Math.max(0,w.helicopter.hp-before);}
   if(w.systems.flight)updateAircraftSupport(w.helicopter,dt,w.commanders[0].supply,{fire:!!input.fire,rearm:w.systems.repairs,replace:w.systems.commanders,ground:groundY(w.level,w.level.helipad.x)});
@@ -99,10 +99,10 @@ export function stepWorld(w,input={},count=1){
   const beforeChoices=w.systems.weapons?choices(w):new Map(),targets=new Map(w.units.filter(u=>u.hp>0).map(u=>[u.id,!w.systems.weapons?null:u.type==='rocket'?beforeChoices.get(u.id)?.target:groundTarget(w,u)]));
   for(const u of w.units)if(u.hp>0){u.hitFlash=Math.max(0,u.hitFlash-dt);u.observedVelocity=0;u.y=groundY(w.level,u.x);
    if(u.guardBase===null&&!u.platoonId)for(const b of w.bases)if(!b.main&&b.team===u.team&&(b.x-u.x)*(u.team===0?1:-1)<=100&&(b.x-u.x)*(u.team===0?1:-1)>=-80&&assignDefender(b,u))break;
-   const engaging=!!targets.get(u.id),formation=platoonOrders.get(u.id),order=formation?null:commanderMovementOrder(w.commanders[u.team],u,w.units,dt),speed=Math.min(Math.abs(u.velocity)*(engaging?(u.type==='rifle'?.42:0):formation?.sprint?2:1),formation?.speed??order?.maxSpeed??Infinity);u.sprinting=!!formation?.sprint&&!engaging;
+   const engaging=!!targets.get(u.id),formation=platoonOrders.get(u.id),order=formation?null:commanderMovementOrder(w.commanders[u.team],u,w.units,dt),speed=Math.min(Math.abs(u.velocity)*(engaging?(u.type==='rifle'?.42:0):formation?.sprint?2:1),formation?.speed??order?.maxSpeed??Infinity);u.sprinting=!!formation?.sprint&&!engaging;u.withdrawing=!!formation?.withdraw;
    if(w.systems.troops){let goal=u.team===0?w.level.world.width-40:40;
     if(u.guardBase!==null){const b=w.bases.find(b=>b.x===u.guardBase);goal=b.x+(u.type==='rocket'?0:u.guardSlot===0?-43:43);move(w,u,goal,Math.abs(u.velocity)*dt*(engaging?(u.type==='rifle'?.42:0):1));if(Math.abs(u.x-goal)<1e-6){u.arrived=true;b.slots[u.type][u.guardSlot]=u.id;}}
-    else{const b=w.systems.takeover?rifleAssaultBase(u,w.bases):null;if(formation)goal=formation.goalX;if(b)goal=capturePoint(b,u.team);move(w,u,goal,(b?Math.abs(u.velocity)*(engaging?.42:formation?.sprint?2:1):speed)*dt);}
+    else{const b=w.systems.takeover&&(!formation||formation.allowCapture)?rifleAssaultBase(u,w.bases):null;if(formation)goal=formation.goalX;const hold=w.systems.takeover&&w.systems.rifleHold&&!formation?.withdraw?rifleHoldBase(u,w.bases):null;if(hold){const dir=u.team===0?1:-1;goal=dir*Math.min(goal*dir,(hold.x-dir*120)*dir);}if(b)goal=formation?Math.max(formation.captureMin,Math.min(formation.captureMax,capturePoint(b,u.team))):capturePoint(b,u.team);move(w,u,goal,(b?Math.abs(u.velocity)*(engaging?.42:formation?.sprint?2:1):speed)*dt);}
    }
    u.mode='walk';u.state=engaging?(u.type==='rifle'?'fireWalk':'fireStop'):u.arrived?'guard':'march';
   }

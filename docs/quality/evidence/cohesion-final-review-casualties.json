@@ -1,0 +1,136 @@
+{
+  "source": "Post-F7 source with leaderRadius240",
+  "status": "PASS",
+  "rows": [
+    {
+      "composition": {
+        "rifle": 3,
+        "rocket": 2
+      },
+      "mirrored": false,
+      "distance": 1320.000000000377,
+      "ready": 4,
+      "total": 5,
+      "phase": "advance",
+      "retreats": 0,
+      "status": "PASS"
+    },
+    {
+      "composition": {
+        "rifle": 3,
+        "rocket": 2
+      },
+      "mirrored": true,
+      "distance": 1320.0000000002613,
+      "ready": 4,
+      "total": 5,
+      "phase": "advance",
+      "retreats": 0,
+      "status": "PASS"
+    },
+    {
+      "composition": {
+        "rifle": 2,
+        "rocket": 2
+      },
+      "mirrored": false,
+      "distance": 1320.000000000377,
+      "ready": 3,
+      "total": 4,
+      "phase": "advance",
+      "retreats": 0,
+      "status": "PASS"
+    },
+    {
+      "composition": {
+        "rifle": 2,
+        "rocket": 2
+      },
+      "mirrored": true,
+      "distance": 1320.0000000002613,
+      "ready": 3,
+      "total": 4,
+      "phase": "advance",
+      "retreats": 0,
+      "status": "PASS"
+    },
+    {
+      "composition": {
+        "rifle": 2,
+        "rocket": 1
+      },
+      "mirrored": false,
+      "distance": 1320.000000000377,
+      "ready": 2,
+      "total": 3,
+      "phase": "advance",
+      "retreats": 0,
+      "status": "PASS"
+    },
+    {
+      "composition": {
+        "rifle": 2,
+        "rocket": 1
+      },
+      "mirrored": true,
+      "distance": 1320.0000000002613,
+      "ready": 2,
+      "total": 3,
+      "phase": "advance",
+      "retreats": 0,
+      "status": "PASS"
+    },
+    {
+      "composition": {
+        "rifle": 2,
+        "rocket": 4
+      },
+      "mirrored": false,
+      "distance": 1320.000000000377,
+      "ready": 4,
+      "total": 6,
+      "phase": "advance",
+      "retreats": 0,
+      "status": "PASS"
+    },
+    {
+      "composition": {
+        "rifle": 2,
+        "rocket": 4
+      },
+      "mirrored": true,
+      "distance": 1320.0000000002613,
+      "ready": 4,
+      "total": 6,
+      "phase": "advance",
+      "retreats": 0,
+      "status": "PASS"
+    },
+    {
+      "composition": {
+        "rifle": 2,
+        "rocket": 8
+      },
+      "mirrored": false,
+      "distance": 1320.000000000377,
+      "ready": 7,
+      "total": 10,
+      "phase": "advance",
+      "retreats": 0,
+      "status": "PASS"
+    },
+    {
+      "composition": {
+        "rifle": 2,
+        "rocket": 8
+      },
+      "mirrored": true,
+      "distance": 1320.0000000002613,
+      "ready": 7,
+      "total": 10,
+      "phase": "advance",
+      "retreats": 0,
+      "status": "PASS"
+    }
+  ]
+}

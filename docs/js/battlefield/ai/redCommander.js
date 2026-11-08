@@ -1,7 +1,7 @@
-import {updateAirPressure} from './airPressure.js?v=2.1.0';
-import {SUPPLY_RULES, createSupply, accrueSupply, purchaseUnit} from '../economy/supply.js?v=2.1.0';
-import {STRATEGY_RULES, COMPOSITIONS, observeBattlefield, chooseStrategy, firstMissing, factionRules} from './strategy.js?v=2.1.0';
-import {createSquad, addMember, membersOf, detachForGarrison, refreshSquads, movementOrder} from './squads.js?v=2.1.0';
+import {updateAirPressure} from './airPressure.js?v=2.2.0';
+import {SUPPLY_RULES, createSupply, accrueSupply, purchaseUnit} from '../economy/supply.js?v=2.2.0';
+import {STRATEGY_RULES, COMPOSITIONS, observeBattlefield, chooseStrategy, firstMissing, factionRules} from './strategy.js?v=2.2.0';
+import {createSquad, addMember, membersOf, detachForGarrison, refreshSquads, movementOrder} from './squads.js?v=2.2.0';
 // AI-01..06: deterministic composition root; the scene injects the spawn factory.
 export function createCommander(team = 1,options = {}) {
   return {rules: {...factionRules(team),...options.rules}, compositions: options.compositions??COMPOSITIONS, supply: createSupply(), squads: [], nextSquadId: 1, strategy: {mode: 'GARRISON', label: 'Reinforcing FOB'},

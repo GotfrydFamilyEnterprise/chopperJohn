@@ -1,4 +1,4 @@
-import {groundY} from './heightfield.js?v=2.1.0';
+import {groundY} from './heightfield.js?v=2.2.0';
 // TL-07: playground tuning; production weapon range/speed is untouched.
 export const LAB_ROCKET=Object.freeze({minRange:225,levelGroundRange:800,maxSpeed:413.6,gravity:240,barrel:34,timeStep:.02,maxFlight:7.8,clearance:2});
 export function labRocketSpread(distance){

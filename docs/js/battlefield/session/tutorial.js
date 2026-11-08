@@ -1,4 +1,4 @@
-import {parkedOnPad} from '../aircraft/helicopter.js?v=2.1.0';
+import {parkedOnPad} from '../aircraft/helicopter.js?v=2.2.0';
 // MENU-03: progress comes from actual flight/weapon/economy state, never a timer.
 export const TUTORIAL_STEPS=Object.freeze([
  {title:'Lift off',text:'Push the left stick up. Climb above the helipad; ease back toward the center to hover.'},

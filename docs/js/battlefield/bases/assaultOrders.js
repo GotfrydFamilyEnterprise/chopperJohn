@@ -1,6 +1,6 @@
-import {defenseCapacity} from './defenseRules.js?v=2.1.0';
-import {capturePoint} from './takeover.js?v=2.1.0';
-import {chooseRocketTarget,WEAPONS} from '../combat/weapons.js?v=2.1.0';
+import {defenseCapacity} from './defenseRules.js?v=2.2.0';
+import {capturePoint} from './takeover.js?v=2.2.0';
+import {chooseRocketTarget,WEAPONS} from '../combat/weapons.js?v=2.2.0';
 // CAP-01/03: empty fortified structures remain valid rocket targets.
 export function chooseAssaultRocketTarget(unit,units,bases){
  const direction=unit.team===0?1:-1;
@@ -17,4 +17,10 @@ export function rifleAssaultBase(unit,bases){
 export function advanceCaptureRifle(unit,base,dt,engaging){
  const distance=capturePoint(base,unit.team)-unit.x,step=Math.min(Math.abs(distance),Math.abs(unit.velocity)*dt*(engaging?.42:1));
  unit.x+=Math.sign(distance)*step;unit.phase=(unit.phase+step/44)%1;unit.timer+=dt;unit.state=engaging?'fireWalk':step?'march':'guard';
+}
+
+// PL-09: all Campaign rifles wait outside intact enemy fortifications for breach.
+export function rifleHoldBase(unit,bases){
+ if(unit.type!=='rifle'||unit.guardBase!==null||unit.captureEligible===false)return null;const dir=unit.team===0?1:-1;
+ return bases.filter(b=>b.team!==unit.team&&b.defensePoints>0&&(b.x-unit.x)*dir>=-80&&(b.x-unit.x)*dir<=300).sort((a,b)=>Math.abs(a.x-unit.x)-Math.abs(b.x-unit.x))[0]??null;
 }

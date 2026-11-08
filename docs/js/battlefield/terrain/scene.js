@@ -1,10 +1,10 @@
-import {installTestInteractions} from '../ui/testInteractions.js?v=2.1.0';
-import {forceEconomics,checkedBlastRadius} from './balance.js?v=2.1.0';
-import {combatSummary} from './outcomes.js?v=2.1.0';
-import {loadLevel,validateLevel} from './level.js?v=2.1.0';
-import {createSimulation,stepSimulation,snapshot,LAB_STEP} from './simulation.js?v=2.1.0';
-import {drawLab} from './renderer.js?v=2.1.0';
-import {installTouchGuards} from '../ui/touchGuards.js?v=2.1.0';
+import {installTestInteractions} from '../ui/testInteractions.js?v=2.2.0';
+import {forceEconomics,checkedBlastRadius} from './balance.js?v=2.2.0';
+import {combatSummary} from './outcomes.js?v=2.2.0';
+import {loadLevel,validateLevel} from './level.js?v=2.2.0';
+import {createSimulation,stepSimulation,snapshot,LAB_STEP} from './simulation.js?v=2.2.0';
+import {drawLab} from './renderer.js?v=2.2.0';
+import {installTouchGuards} from '../ui/touchGuards.js?v=2.2.0';
 const $=id=>document.getElementById(id),canvas=$('canvas'),ctx=canvas.getContext('2d');
 let portrait=innerWidth<500,loadError='',loading=false;
 let data,sim,running=false,last=0,accumulator=0,loadId=0,zoom=portrait?2:1,center=600,transform,drag;

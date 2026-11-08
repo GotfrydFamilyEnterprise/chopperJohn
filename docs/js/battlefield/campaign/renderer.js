@@ -1,11 +1,11 @@
 // CP-03: renderer consumes world state; it never advances combat or RNG.
-import {groundY} from '../terrain/heightfield.js?v=2.1.0';
-import {drawTerrainSoldier} from '../terrain/renderer.js?v=2.1.0';
-import {drawHeadquarters} from '../bases/headquarters.js?v=2.1.0';
-import {drawForwardBase,drawForwardFront} from '../bases/forwardBase.js?v=2.1.0';
-import {drawTakeover} from '../bases/takeoverRenderer.js?v=2.1.0';
-import {drawHelicopter,drawHelipad} from '../aircraft/helicopterRenderer.js?v=2.1.0';
-import {projectileTail} from '../terrain/ballistics.js?v=2.1.0';
+import {groundY} from '../terrain/heightfield.js?v=2.2.0';
+import {drawTerrainSoldier} from '../terrain/renderer.js?v=2.2.0';
+import {drawHeadquarters} from '../bases/headquarters.js?v=2.2.0';
+import {drawForwardBase,drawForwardFront} from '../bases/forwardBase.js?v=2.2.0';
+import {drawTakeover} from '../bases/takeoverRenderer.js?v=2.2.0';
+import {drawHelicopter,drawHelipad} from '../aircraft/helicopterRenderer.js?v=2.2.0';
+import {projectileTail} from '../terrain/ballistics.js?v=2.2.0';
 export function drawCampaign(ctx,width,height,w,{scale,camera,offsetY}){
  ctx.clearRect(0,0,width,height);const sky=ctx.createLinearGradient(0,0,0,height);sky.addColorStop(0,'#14283e');sky.addColorStop(1,'#385b61');ctx.fillStyle=sky;ctx.fillRect(0,0,width,height);if(!w)return;
  ctx.save();ctx.translate(0,offsetY);ctx.scale(scale,scale);ctx.translate(-camera,0);
@@ -15,7 +15,7 @@ export function drawCampaign(ctx,width,height,w,{scale,camera,offsetY}){
  ctx.save();ctx.translate(w.level.helipad.x-400,groundY(w.level,w.level.helipad.x)-460);drawHelipad(ctx,460);ctx.restore();
  for(const b of w.bases){ctx.save();ctx.translate(0,b.y-460);if(b.main)drawHeadquarters(ctx,b);else drawForwardBase(ctx,b);ctx.restore();}
  for(const u of w.units)if(u.hp>0)drawTerrainSoldier(ctx,u,w.level);
- for(const u of w.units)if(u.hp>0&&u.isSergeant){ctx.strokeStyle='#ffe08c';ctx.lineWidth=2;for(const dy of[0,5]){ctx.beginPath();ctx.moveTo(u.x-6,u.y-64-dy);ctx.lineTo(u.x,u.y-60-dy);ctx.lineTo(u.x+6,u.y-64-dy);ctx.stroke();}ctx.fillStyle='#ffe08c';ctx.font='bold 10px system-ui';ctx.textAlign='center';ctx.fillText('SGT '+u.platoonId,u.x,u.y-87);}
+ for(const u of w.units)if(u.hp>0&&u.isSergeant){ctx.strokeStyle='#ffe08c';ctx.lineWidth=2;for(const dy of[0,5]){ctx.beginPath();ctx.moveTo(u.x-6,u.y-64-dy);ctx.lineTo(u.x,u.y-60-dy);ctx.lineTo(u.x+6,u.y-64-dy);ctx.stroke();}ctx.fillStyle='#ffe08c';ctx.font='bold 10px system-ui';ctx.textAlign='center';const group=w.platoons?.groups.find(g=>g.id===u.platoonId);ctx.fillText('SGT '+u.platoonId+(group&&['retreat','regroup'].includes(group.phase)?' · '+group.phase.toUpperCase():''),u.x,u.y-87);}
  for(const u of w.units)if(u.hp>0&&u.sprinting){ctx.fillStyle='#d5e9d8';ctx.font='9px system-ui';ctx.textAlign='center';ctx.fillText('2× REJOIN',u.x,u.y-87);}
  for(const b of w.bases){ctx.save();ctx.translate(0,b.y-460);if(!b.main)drawForwardFront(ctx,b);drawTakeover(ctx,b);ctx.restore();}
  for(const p of w.projectiles){if(p.kind==='rocket'||p.kind==='airRocket'){ctx.strokeStyle='#e0c091';ctx.lineWidth=1.5;ctx.beginPath();for(let j=0;j<=8;j++){const t=Math.max(0,p.age-(8-j)*.025),x=p.originX+p.vx*t,y=p.originY+p.vy*t+120*t*t;if(j)ctx.lineTo(x,y);else ctx.moveTo(x,y);}ctx.stroke();}const tail=projectileTail(p);ctx.strokeStyle=p.kind==='rocket'||p.kind==='airRocket'?'#ffb75f':'#fff1b4';ctx.lineWidth=p.kind==='rocket'||p.kind==='airRocket'?4:2;ctx.beginPath();ctx.moveTo(tail.x,tail.y);ctx.lineTo(p.x,p.y);ctx.stroke();}

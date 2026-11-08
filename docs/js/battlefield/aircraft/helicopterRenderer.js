@@ -1,4 +1,4 @@
-import {apparentFacing} from './helicopter.js?v=2.1.0';
+import {apparentFacing} from './helicopter.js?v=2.2.0';
 export function drawHelipad(ctx,ground){ctx.fillStyle='#657d88';ctx.fillRect(310,ground-6,180,7);ctx.strokeStyle='#c6eafa';ctx.lineWidth=2;ctx.strokeRect(320,ground-6,160,7);ctx.font='bold 20px system-ui';ctx.textAlign='center';ctx.fillStyle='#c6eafa';ctx.fillText('H',400,ground+29);ctx.font='10px system-ui';ctx.fillText('BLUE HELIPAD · REPAIR',400,ground+44);}
 export function drawHelicopter(ctx,h){
  if(h.hp<=0){ctx.save();ctx.fillStyle='#e5bf9b';ctx.font='bold 12px system-ui';ctx.textAlign='center';ctx.fillText((h.respawnRemaining>0?`HELICOPTER LOST · ${Math.ceil(h.respawnRemaining)}s`:"AWAITING 90 SUPPLY"),h.x,h.y-32);ctx.restore();return;}

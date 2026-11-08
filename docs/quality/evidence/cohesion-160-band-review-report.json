@@ -1,0 +1,10 @@
+{
+  "source": "49a30ee production source; report generated separately",
+  "status": "PASS",
+  "groups": 27,
+  "cards": 108,
+  "primarySeeds": 3,
+  "pairedOutcomeDiscordances": 2,
+  "failures": [],
+  "limits": "Numerical embedding and method source audit only. Browser interaction, layout overflow, actual captures and physical Safari are separate gates."
+}

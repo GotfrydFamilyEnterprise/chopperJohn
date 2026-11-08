@@ -1,11 +1,11 @@
-import {infantryTarget,rifleBearing,rifleRound,updateGroundRocket} from '../combat/groundInfantry.js?v=2.1.0';
-import {allocateSplash,checkedDamageModel} from './splash.js?v=2.1.0';
-import {checkedBlastRadius} from './balance.js?v=2.1.0';
-import {LAB_ROCKET,labRocketSpread,planTerrainRocket,rocketReachAtDrop} from './ballistics.js?v=2.1.0';
-import {validateLevel} from './level.js?v=2.1.0';
-import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=2.1.0';
-import {createSoldier} from '../units/soldierCommon.js?v=2.1.0';
-import {WEAPONS,createRandom,applyDamage} from '../combat/weapons.js?v=2.1.0';
+import {infantryTarget,rifleBearing,rifleRound,updateGroundRocket} from '../combat/groundInfantry.js?v=2.2.0';
+import {allocateSplash,checkedDamageModel} from './splash.js?v=2.2.0';
+import {checkedBlastRadius} from './balance.js?v=2.2.0';
+import {LAB_ROCKET,labRocketSpread,planTerrainRocket,rocketReachAtDrop} from './ballistics.js?v=2.2.0';
+import {validateLevel} from './level.js?v=2.2.0';
+import {groundY,terrainContact,visible,walkSurface} from './heightfield.js?v=2.2.0';
+import {createSoldier} from '../units/soldierCommon.js?v=2.2.0';
+import {WEAPONS,createRandom,applyDamage} from '../combat/weapons.js?v=2.2.0';
 export const LAB_STEP=1/120;
 export const eye=u=>({x:u.x,y:u.y-40});
 export function createSimulation(data,scenarioId,options={}){
