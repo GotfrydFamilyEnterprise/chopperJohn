@@ -1,0 +1,13 @@
+{
+  "source": "2bee46ea34991666b3782780a7dd5467b7607376",
+  "run": "https://github.com/GotfrydFamilyEnterprise/chopperJohn/actions/runs/42451039912",
+  "jobId": 128640130014,
+  "conclusion": "success",
+  "moduleAssertionsPassed": 158,
+  "browserTestsPassed": 129,
+  "artifact": {"name":"mobile-browser-evidence","id":13605249527,"sha256":"64078f97d0a410b8f037b74137611b8890d4d31dd4f7a571d38bb6c502244a00"},
+  "independentVisualReview": "PASS: seven actual CI captures; see cohesion-adversarial-review.md",
+  "physicalSafari": "UNVERIFIED",
+  "previewPublication": "UNVERIFIED",
+  "merged": false
+}
