@@ -43,7 +43,7 @@ Show the tree when the user asks, and at natural checkpoints (a step or branch c
 
 ## Commands
 
-The examples use `$DAG` as shorthand for `python3 "<skill-dir>/scripts/dag.py"`; substitute that actual command rather than storing a shell command in a string (`<skill-dir>` is the folder containing this SKILL.md, e.g. `~/.agents/skills/work-dag` or `<project>/.agents/skills/work-dag`). State file, first match wins: `--state PATH`, then `$WORK_DAG_STATE`, then `./.work-dag/dag.json`. Every change prints the new tree; `add` and `branch` print the new id on the first line. `-q` suppresses the tree. IDs are case-insensitive. Mistakes give a one-line `error:` and exit 1.
+The examples use `$DAG` as shorthand for `python3 "<skill-dir>/scripts/dag.py"`; substitute that actual command rather than storing a shell command in a string (`<skill-dir>` is the folder containing this SKILL.md, e.g. `~/.agents/skills/work-dag` or `<project>/.agents/skills/work-dag`). State file, first match wins: `--state PATH`, then `$WORK_DAG_STATE`, then `./.work-dag/dag.json`. Every change prints the new tree; `add` and `branch` print the new id on the first line. `-q` suppresses the tree. IDs are case-insensitive. Handled domain and filesystem errors give a one-line `error:` and exit 1; argparse usage errors exit 2. Malformed state schemas may raise a traceback; preserve the file and investigate rather than resetting it.
 
 ```
 $DAG init "Plan a website migration" --trunk "Audit" "Build" "Launch"   # root title first; refuses to overwrite without --force
