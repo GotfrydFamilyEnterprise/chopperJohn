@@ -22,4 +22,6 @@ User operates Codex Cloud from iPhone. PR links, short test reports, screenshots
 
 ## Work DAG tracking
 
+Read `docs/roadmap.md` for the end-to-end product plan, current release boundaries and proposed level-generation work. Requirements remain authoritative; roadmap proposals are not implementation authorization.
+
 For substantial multi-step work, read and use `.agents/skills/work-dag/SKILL.md`; the user can also invoke `$work-dag` explicitly. Resume existing state at the configured path (default `.work-dag/dag.json`) and keep steps, decisions, outputs, and the cursor current. Initialize only when no state exists, using the actual task and evidence. Commit the state when the plan must persist across tasks. Continue authorized work at routine checkpoints; ask for input when a real decision is needed. Keep all requirement IDs, existing tests, review gates, and acceptance rules above in force. A DAG status does not prove feature completion or deployment.

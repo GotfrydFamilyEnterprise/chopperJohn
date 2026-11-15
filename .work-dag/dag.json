@@ -1,0 +1,612 @@
+{
+  "version": 1,
+  "root": "R0",
+  "cursor": "T5",
+  "history": [
+    {
+      "at": "2026-11-14T22:04",
+      "event": "init",
+      "node": "R0",
+      "text": "Integrate and exercise work-dag on ChopperJohn"
+    },
+    {
+      "at": "2026-11-14T22:04",
+      "event": "add",
+      "node": "T1",
+      "text": "Review and test skill PR36"
+    },
+    {
+      "at": "2026-11-14T22:04",
+      "event": "add",
+      "node": "T2",
+      "text": "Merge and refresh project checkout"
+    },
+    {
+      "at": "2026-11-14T22:04",
+      "event": "add",
+      "node": "T3",
+      "text": "Exercise project tracking and resume"
+    },
+    {
+      "at": "2026-11-14T22:04",
+      "event": "add",
+      "node": "T4",
+      "text": "Persist evidence and hand off"
+    },
+    {
+      "at": "2026-11-14T22:04",
+      "event": "go",
+      "node": "T1",
+      "text": ""
+    },
+    {
+      "at": "2026-11-14T22:04",
+      "event": "note",
+      "node": "T1",
+      "text": "16 Python tests passed locally; both PR36 GitHub checks passed; independent source review already recorded in skill VALIDATION.md."
+    },
+    {
+      "at": "2026-11-14T22:04",
+      "event": "done",
+      "node": "T1",
+      "text": "Verified exact PR blob hashes and executed all16 bundled tests."
+    },
+    {
+      "at": "2026-11-14T22:04",
+      "event": "next",
+      "node": "T2",
+      "text": ""
+    },
+    {
+      "at": "2026-11-14T22:04",
+      "event": "note",
+      "node": "T2",
+      "text": "PR36 merged with user authorization as bfb3919fd012ce600bba28cec3b14e37489bfbc2. Refreshing exact Git objects through connected GitHub API because the shell proxy is unreachable; local edits retained."
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "output",
+      "node": "T2",
+      "text": "AGENTS.md"
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "output",
+      "node": "T2",
+      "text": ".agents/skills/work-dag/SKILL.md"
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "done",
+      "node": "T2",
+      "text": "Merged PR36 and refreshed canonical master to bfb3919; all8 files and imported Git objects hash-verified; pre-existing work preserved."
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "next",
+      "node": "T3",
+      "text": ""
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "add",
+      "node": "B1",
+      "text": "Paid assault harness PR35"
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "enter",
+      "node": "B1",
+      "text": ""
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "park",
+      "node": "B1",
+      "text": "Keep the six-file paid-assault story separate and await its own acceptance."
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "trunk",
+      "node": "T3",
+      "text": ""
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "add",
+      "node": "B2",
+      "text": "Next small FOB tactics story"
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "enter",
+      "node": "B2",
+      "text": ""
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "park",
+      "node": "B2",
+      "text": "Backlog only; this exercise changes no gameplay."
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "trunk",
+      "node": "T3",
+      "text": ""
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "link",
+      "node": "B1",
+      "text": "extra parent T4"
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "note",
+      "node": "T3",
+      "text": "Seven live-state probes passed: four read-only commands, overwrite refusal, cycle refusal, and fresh-process resume. State/history bytes remained identical across all probes."
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "done",
+      "node": "T3",
+      "text": "Exercised real project branches, parking, cursor return, an extra parent link and evidence-preserving resume; no gameplay completion inferred."
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "next",
+      "node": "T4",
+      "text": ""
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "note",
+      "node": "T4",
+      "text": "State intentionally kept local at canonical project root for this first exercise. No additional source PR, game change or deployment required. The skill itself is merged and versioned in PR36."
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "output",
+      "node": "T4",
+      "text": ".work-dag/dag.json"
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "output",
+      "node": "T4",
+      "text": ".work-dag/exercise.md"
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "done",
+      "node": "T4",
+      "text": "Saved local plan and concise exercise evidence; PR35 remains unmerged and both future gameplay branches remain parked."
+    },
+    {
+      "at": "2026-11-14T22:06",
+      "event": "done",
+      "node": "R0",
+      "text": "Skill merged, canonical project refreshed and live-state exercise completed. Parked branches are future project work, not unfinished skill installation."
+    },
+    {
+      "at": "2026-11-15T05:27",
+      "event": "rename",
+      "node": "R0",
+      "text": "Integrate and exercise work-dag on ChopperJohn -> Deliver the ChopperJohn combined-arms campaign"
+    },
+    {
+      "at": "2026-11-15T05:27",
+      "event": "revise",
+      "node": "R0",
+      "text": "User requests the complete original-game-to-level-generation plan; expand the existing skill-exercise DAG and preserve its history."
+    },
+    {
+      "at": "2026-11-15T05:27",
+      "event": "add",
+      "node": "T5",
+      "text": "Reconcile the end-to-end game roadmap"
+    },
+    {
+      "at": "2026-11-15T05:27",
+      "event": "go",
+      "node": "T5",
+      "text": ""
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "rename",
+      "node": "T1",
+      "text": "Review and test skill PR36 -> Workflow: review tracking skill"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "rename",
+      "node": "T2",
+      "text": "Merge and refresh project checkout -> Workflow: merge tracking skill"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "rename",
+      "node": "T3",
+      "text": "Exercise project tracking and resume -> Workflow: exercise tracking"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "rename",
+      "node": "T4",
+      "text": "Persist evidence and hand off -> Workflow: save initial local plan"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "add",
+      "node": "T6",
+      "text": "Resolve defended-base assault tactics"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "add",
+      "node": "T7",
+      "text": "Validate helicopter-ground cooperation"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "add",
+      "node": "T8",
+      "text": "Develop terrain-aware troop decisions"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "add",
+      "node": "T9",
+      "text": "Expand the authored JSON campaign"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "add",
+      "node": "T10",
+      "text": "Design optional seeded level generation"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "add",
+      "node": "T11",
+      "text": "Qualify generated missions if selected"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "add",
+      "node": "T12",
+      "text": "Complete mobile campaign release"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "link",
+      "node": "B1",
+      "text": "extra parent T6"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "link",
+      "node": "B2",
+      "text": "extra parent T6"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "park",
+      "node": "T10",
+      "text": "Await authored-versus-procedural product decision; current task plans it, not implements it."
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "park",
+      "node": "T11",
+      "text": "No generator implementation until design and content role are agreed."
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "go",
+      "node": "T5",
+      "text": ""
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "add",
+      "node": "B3",
+      "text": "Requirements and release audit"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "enter",
+      "node": "B3",
+      "text": ""
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "done",
+      "node": "B3",
+      "text": "Mapped current, unmerged, missing and proposed work to requirement IDs and live issues; no fresh gameplay acceptance inferred."
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "trunk",
+      "node": "T5",
+      "text": ""
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "note",
+      "node": "T5",
+      "text": "Planning issue37, isolated four-file doc/state PR; new generation-design issue38 fills the missing planning boundary. Independent planning review underway."
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "output",
+      "node": "T5",
+      "text": "docs/roadmap.md"
+    },
+    {
+      "at": "2026-11-15T05:30",
+      "event": "output",
+      "node": "T5",
+      "text": ".work-dag/dag.json"
+    },
+    {
+      "at": "2026-11-15T05:31",
+      "event": "note",
+      "node": "T7",
+      "text": "The support study described as final in campaign/README predates v2.2 cohesion; it does not qualify current combined-arms balance. Measure current engine/policies under issue26."
+    },
+    {
+      "at": "2026-11-15T05:31",
+      "event": "note",
+      "node": "T12",
+      "text": "Accepted authored campaign may ship without optional generator stagesT10/T11. Device and release work runs throughout; no procedural prerequisite is implied."
+    },
+    {
+      "at": "2026-11-15T05:31",
+      "event": "note",
+      "node": "T5",
+      "text": "Fresh planning review found no direction blocker; clarified historical support evidence, optional generation versus release and authorized platoon spending exception."
+    },
+    {
+      "at": "2026-11-15T05:32",
+      "event": "note",
+      "node": "T4",
+      "text": "Initial exercise.md is deliberately local-only historical evidence; this planning PR versions the living DAG and roadmap, not that old report."
+    },
+    {
+      "at": "2026-11-15T05:59",
+      "event": "note",
+      "node": "T5",
+      "text": "Four-file planning/state scope independently reviewed: no remaining planning blocker after clarifying historical support evidence and optional generation. DAG/link/history checks and Markdown/catalog checks PASS; no gameplay tests rerun for this documentation-only change."
+    },
+    {
+      "at": "2026-11-15T05:59",
+      "event": "done",
+      "node": "T5",
+      "text": "Prepared the end-to-end roadmap and durable DAG for issue37 review. This completes planning only; future gameplay stages remain pending, optional generation parked, PR35 unmerged."
+    }
+  ],
+  "nodes": {
+    "R0": {
+      "title": "Deliver the ChopperJohn combined-arms campaign",
+      "trunk": true,
+      "status": "revising",
+      "parents": [],
+      "notes": [
+        "[2026-11-14] Skill merged, canonical project refreshed and live-state exercise completed. Parked branches are future project work, not unfinished skill installation.",
+        "[2026-11-15] revise: User requests the complete original-game-to-level-generation plan; expand the existing skill-exercise DAG and preserve its history."
+      ],
+      "outputs": []
+    },
+    "T1": {
+      "title": "Workflow: review tracking skill",
+      "trunk": true,
+      "status": "done",
+      "parents": [
+        "R0"
+      ],
+      "notes": [
+        "[2026-11-14] 16 Python tests passed locally; both PR36 GitHub checks passed; independent source review already recorded in skill VALIDATION.md.",
+        "[2026-11-14] Verified exact PR blob hashes and executed all16 bundled tests."
+      ],
+      "outputs": []
+    },
+    "T2": {
+      "title": "Workflow: merge tracking skill",
+      "trunk": true,
+      "status": "done",
+      "parents": [
+        "R0"
+      ],
+      "notes": [
+        "[2026-11-14] PR36 merged with user authorization as bfb3919fd012ce600bba28cec3b14e37489bfbc2. Refreshing exact Git objects through connected GitHub API because the shell proxy is unreachable; local edits retained.",
+        "[2026-11-14] Merged PR36 and refreshed canonical master to bfb3919; all8 files and imported Git objects hash-verified; pre-existing work preserved."
+      ],
+      "outputs": [
+        "AGENTS.md",
+        ".agents/skills/work-dag/SKILL.md"
+      ]
+    },
+    "T3": {
+      "title": "Workflow: exercise tracking",
+      "trunk": true,
+      "status": "done",
+      "parents": [
+        "R0"
+      ],
+      "notes": [
+        "[2026-11-14] Seven live-state probes passed: four read-only commands, overwrite refusal, cycle refusal, and fresh-process resume. State/history bytes remained identical across all probes.",
+        "[2026-11-14] Exercised real project branches, parking, cursor return, an extra parent link and evidence-preserving resume; no gameplay completion inferred."
+      ],
+      "outputs": []
+    },
+    "T4": {
+      "title": "Workflow: save initial local plan",
+      "trunk": true,
+      "status": "done",
+      "parents": [
+        "R0"
+      ],
+      "notes": [
+        "[2026-11-14] State intentionally kept local at canonical project root for this first exercise. No additional source PR, game change or deployment required. The skill itself is merged and versioned in PR36.",
+        "[2026-11-14] Saved local plan and concise exercise evidence; PR35 remains unmerged and both future gameplay branches remain parked.",
+        "[2026-11-15] Initial exercise.md is deliberately local-only historical evidence; this planning PR versions the living DAG and roadmap, not that old report."
+      ],
+      "outputs": [
+        ".work-dag/dag.json",
+        ".work-dag/exercise.md"
+      ]
+    },
+    "B1": {
+      "title": "Paid assault harness PR35",
+      "trunk": false,
+      "status": "parked",
+      "parents": [
+        "T3",
+        "T4",
+        "T6"
+      ],
+      "notes": [
+        "[2026-11-14] GitHub confirms PR35 is open and unmerged at9eecaef. Existing CI162 unit assertions/129 browser regressions passed. User acceptance is pending; no merge authorized in this skill task.",
+        "[2026-11-14] Keep the six-file paid-assault story separate and await its own acceptance."
+      ],
+      "outputs": []
+    },
+    "B2": {
+      "title": "Next small FOB tactics story",
+      "trunk": false,
+      "status": "parked",
+      "parents": [
+        "T3",
+        "T6"
+      ],
+      "notes": [
+        "[2026-11-14] Parent issue25: investigate preserving capture riflemen. Prior16 paid probes had no capture at240s. Any future implementation needs its own issue, branch and focused tests.",
+        "[2026-11-14] Backlog only; this exercise changes no gameplay."
+      ],
+      "outputs": []
+    },
+    "T5": {
+      "title": "Reconcile the end-to-end game roadmap",
+      "trunk": true,
+      "status": "done",
+      "parents": [
+        "R0"
+      ],
+      "notes": [
+        "[2026-11-15] Current planning-only audit: requirements, merged releases, missing decisions and short stories.",
+        "[2026-11-15] Planning issue37, isolated four-file doc/state PR; new generation-design issue38 fills the missing planning boundary. Independent planning review underway.",
+        "[2026-11-15] Fresh planning review found no direction blocker; clarified historical support evidence, optional generation versus release and authorized platoon spending exception.",
+        "[2026-11-15] Four-file planning/state scope independently reviewed: no remaining planning blocker after clarifying historical support evidence and optional generation. DAG/link/history checks and Markdown/catalog checks PASS; no gameplay tests rerun for this documentation-only change.",
+        "[2026-11-15] Prepared the end-to-end roadmap and durable DAG for issue37 review. This completes planning only; future gameplay stages remain pending, optional generation parked, PR35 unmerged."
+      ],
+      "outputs": [
+        "docs/roadmap.md",
+        ".work-dag/dag.json"
+      ]
+    },
+    "T6": {
+      "title": "Resolve defended-base assault tactics",
+      "trunk": true,
+      "status": "pending",
+      "parents": [
+        "R0"
+      ],
+      "notes": [
+        "[2026-11-15] Issue25; review issue34/PR35 separately, then one paid capture-force survival fix per issue/branch. No universal platoon superiority claim."
+      ],
+      "outputs": []
+    },
+    "T7": {
+      "title": "Validate helicopter-ground cooperation",
+      "trunk": true,
+      "status": "pending",
+      "parents": [
+        "R0"
+      ],
+      "notes": [
+        "[2026-11-15] Issues26/27/28: current-engine real-control support comparisons, targeted critical seed study and observable enemy decisions.",
+        "[2026-11-15] The support study described as final in campaign/README predates v2.2 cohesion; it does not qualify current combined-arms balance. Measure current engine/policies under issue26."
+      ],
+      "outputs": []
+    },
+    "T8": {
+      "title": "Develop terrain-aware troop decisions",
+      "trunk": true,
+      "status": "pending",
+      "parents": [
+        "R0"
+      ],
+      "notes": [
+        "[2026-11-15] Issue29: actual terrain physics exists; deliberate crest/cover/regroup decisions need separate experiments."
+      ],
+      "outputs": []
+    },
+    "T9": {
+      "title": "Expand the authored JSON campaign",
+      "trunk": true,
+      "status": "pending",
+      "parents": [
+        "R0"
+      ],
+      "notes": [
+        "[2026-11-15] Issue30: two maps already exist; add one mission at a time, measuring progression, support demand and unlock/retry behavior."
+      ],
+      "outputs": []
+    },
+    "T10": {
+      "title": "Design optional seeded level generation",
+      "trunk": true,
+      "status": "parked",
+      "parents": [
+        "R0"
+      ],
+      "notes": [
+        "[2026-11-15] Proposal only, design issue38. JSON maps are authored; combat RNG is not terrain generation. Decide scope before implementation.",
+        "[2026-11-15] Await authored-versus-procedural product decision; current task plans it, not implements it."
+      ],
+      "outputs": []
+    },
+    "T11": {
+      "title": "Qualify generated missions if selected",
+      "trunk": true,
+      "status": "parked",
+      "parents": [
+        "R0"
+      ],
+      "notes": [
+        "[2026-11-15] Blocked on the level-generation design decision, not an approved implementation. Reuse shared engine and validated mission JSON; stable seed/version/identity and qualification limits.",
+        "[2026-11-15] No generator implementation until design and content role are agreed."
+      ],
+      "outputs": []
+    },
+    "T12": {
+      "title": "Complete mobile campaign release",
+      "trunk": true,
+      "status": "pending",
+      "parents": [
+        "R0"
+      ],
+      "notes": [
+        "[2026-11-15] Issues31/33: device acceptance and release traceability run throughout. Final release needs scoped user acceptance, CI and verified Pages version.",
+        "[2026-11-15] Accepted authored campaign may ship without optional generator stagesT10/T11. Device and release work runs throughout; no procedural prerequisite is implied."
+      ],
+      "outputs": []
+    },
+    "B3": {
+      "title": "Requirements and release audit",
+      "trunk": false,
+      "status": "done",
+      "parents": [
+        "T5"
+      ],
+      "notes": [
+        "[2026-11-15] Read original and superseding contracts; verified master/PRs/catalog; found stale pre-merge roadmap and two authored maps, no procedural generator.",
+        "[2026-11-15] Mapped current, unmerged, missing and proposed work to requirement IDs and live issues; no fresh gameplay acceptance inferred."
+      ],
+      "outputs": []
+    }
+  }
+}
