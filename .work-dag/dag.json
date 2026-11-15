@@ -386,6 +386,12 @@
       "event": "done",
       "node": "T5",
       "text": "Prepared the end-to-end roadmap and durable DAG for issue37 review. This completes planning only; future gameplay stages remain pending, optional generation parked, PR35 unmerged."
+    },
+    {
+      "at": "2026-11-15T06:16",
+      "event": "note",
+      "node": "T5",
+      "text": "Published planning PR39 and reconciled GitHub roadmap15; added generation-design proposal38 under campaign30. Four-file plan remains unmerged for review; no gameplay stage executed."
     }
   ],
   "nodes": {
@@ -500,7 +506,8 @@
         "[2026-11-15] Planning issue37, isolated four-file doc/state PR; new generation-design issue38 fills the missing planning boundary. Independent planning review underway.",
         "[2026-11-15] Fresh planning review found no direction blocker; clarified historical support evidence, optional generation versus release and authorized platoon spending exception.",
         "[2026-11-15] Four-file planning/state scope independently reviewed: no remaining planning blocker after clarifying historical support evidence and optional generation. DAG/link/history checks and Markdown/catalog checks PASS; no gameplay tests rerun for this documentation-only change.",
-        "[2026-11-15] Prepared the end-to-end roadmap and durable DAG for issue37 review. This completes planning only; future gameplay stages remain pending, optional generation parked, PR35 unmerged."
+        "[2026-11-15] Prepared the end-to-end roadmap and durable DAG for issue37 review. This completes planning only; future gameplay stages remain pending, optional generation parked, PR35 unmerged.",
+        "[2026-11-15] Published planning PR39 and reconciled GitHub roadmap15; added generation-design proposal38 under campaign30. Four-file plan remains unmerged for review; no gameplay stage executed."
       ],
       "outputs": [
         "docs/roadmap.md",
