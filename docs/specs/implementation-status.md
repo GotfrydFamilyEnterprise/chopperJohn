@@ -290,6 +290,16 @@ Issue34 focused validation: all four tests PASS; fresh independent review repeat
 
 ## Codex work-dag tracking integration
 
+Current product/release reconciliation is in `../roadmap.md` (planning issue37). PR14 was user-merged asd9026ff and its Pages deployment42456759431/post-merge CI42456760023 completed successfully; workflow-only PR36 is now merged on master asbfb3919. The runtime remainsv2.2. PR35 is merged as08e74ca; PR41 remains unmerged. Earlier pre-merge entries below/above are historical. Physical Safari/Home Screen remains a separate gap; this planning pass adds no new gameplay or device-test claim.
+
 Developer workflow only; no gameplay requirement IDs or public product scope changed. Added `.agents/skills/work-dag/` and an additive AGENTS.md instruction for substantial multi-step tasks. Python helper/tests/template match the uploaded skill; Codex guidance resumes configured state, keeps one writer, and preserves all existing acceptance gates. DAG statuses are not proof of gameplay acceptance or deployment.
 
 Evidence: 16 bundled Python tests PASS; a separate reviewer independently repeated the suite and checked byte-preserving reads/resume, overwrite and cycle refusal, configured state isolation, and paths with spaces. See `.agents/skills/work-dag/VALIDATION.md` for scope, inherited limitations, and the independent review. Game/browser/screenshot suites were not run for this workflow-only change; no gameplay, visual, CI, or deployment acceptance is claimed. Current-session adoption requires updating the checkout and explicitly reading the skill; repository discovery does not refresh running sessions automatically. PR and user acceptance remain required before merge.
+
+## End-to-end product plan (issue37; planning only)
+
+`docs/roadmap.md` now reconciles the original helicopter/infantry player loop, preserved requirements, actual merged/unmerged work and the path through assaults, combined arms, terrain decisions, authored campaign progression and optional level generation. The existing Work DAG history is retained and its product stages are versioned. Generation is a design proposal under issue38, not an implemented or release-required capability. Existing support studies predate current cohesion and do not establish current progression balance.
+
+Validation: DAG acyclicity/status/history and three byte-preserving read commands PASS; internal Markdown links and the actual two-map catalog reconcile. Fresh independent planning review found no remaining blocker after historical-evidence, optional-generation and authorized-platoon clarifications; reviewer inspected the final DAG. No gameplay/browser/physical-device tests were run or claimed for this four-file documentation/state scope. Existing production/runtime evidence remains historical as linked in the roadmap; no automatic merge or deployment is part of this planning change.
+
+Progress refresh after explicit user approval: PR35 merged as08e74ca; main now includes its paid fixture. Shared DAG dependencyB1 is done underT3/T4/T6. PR41 targets master and remains unmerged; issue42 is the next unfinished reinforcement-pressure story.
