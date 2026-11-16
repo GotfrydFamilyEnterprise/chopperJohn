@@ -1,6 +1,6 @@
 # Monte Carlo assault policy study — issue40 (PL-10)
 
-This is an opt-in research policy and a reproducible real-engine study, stacked on the separately unmerged paid-fixture PR35. Default production doctrines are unchanged. The user authorized investigating rules that improve assault success; this study does not automatically enable a candidate in the game.
+This is an opt-in research policy and a reproducible real-engine study, based on the paid fixture now merged in PR35. Default production doctrines are unchanged. The user authorized investigating rules that improve assault success; this study does not automatically enable a candidate in the game.
 
 ## Desired outcomes, declared before holdout evaluation
 
