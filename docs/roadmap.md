@@ -21,13 +21,13 @@ Keep the accepted flight feel, visible physical soldiers/projectiles, horizontal
 | Terrain physics, relative-height rocket reach and shared splash | Implemented in the lab and integrated into Campaign | TL-01–10, CP-02–03; PRs12–13 |
 | JSON mission schema, catalog, unlocks/retry/progress | Merged; exactly two authored missions: First assault and Ridgeline | CP-01–06; `campaign/README.md`, PR13 |
 | Platoons, paid replacements, cohesion,60/80 regroup | Merged in v2.2; universal tactical superiority is not demonstrated | PL-01–10; PR14, `quality/cohesion-tactics-study.md` |
-| Fully paid assault-preparation harness | Validated but **unmerged PR35**, issue34 | Four focused tests;162 module/129 browser CI at9eecaef; not present on main |
+| Fully paid assault-preparation harness | Merged in PR35; issue34 | Four focused tests;162 module/129 browser CI at9eecaef; not present on main |
 | Terrain-aware deliberate cover/crest tactics | Backlog; following terrain and terrain blocking fire already exist | Issue29; do not describe geometric cover as cover-seeking AI |
 | Longer, calibrated campaign progression | Backlog beyond the existing two maps | Issues26/29/30 |
 | Procedural level generation | **Not implemented; no agreed generator contract yet** | Current JSON maps are authored; their combat seed does not generate their terrain |
 | iPhone Safari/Home Screen acceptance | Still an explicit physical-device gap | Issue31; browser emulation is separate evidence |
 
-Main is `bfb3919` (workflow-skill PR36); the runtime release is v2.2 from user-merged PR14 (`d9026ff`). Its last verified Pages deployment is [42456759431](https://github.com/GotfrydFamilyEnterprise/chopperJohn/actions/runs/42456759431), with [post-merge CI42456760023](https://github.com/GotfrydFamilyEnterprise/chopperJohn/actions/runs/42456760023). [Play Campaign](https://gotfrydfamilyenterprise.github.io/chopperJohn/campaign.html?v=2.2.0). This planning pass did not run a new live-device check. The separate Sites preview was last verified atv2.1; it is not the production release reference.
+Main is `bfb3919` (workflow-skill PR36); the runtime release is v2.2 from user-merged PR14 (`d9026ff`); PR35 subsequently merged the paid research harness as`08e74ca`. Its last verified Pages deployment is [42456759431](https://github.com/GotfrydFamilyEnterprise/chopperJohn/actions/runs/42456759431), with [post-merge CI42456760023](https://github.com/GotfrydFamilyEnterprise/chopperJohn/actions/runs/42456760023). [Play Campaign](https://gotfrydfamilyenterprise.github.io/chopperJohn/campaign.html?v=2.2.0). This planning pass did not run a new live-device check. The separate Sites preview was last verified atv2.1; it is not the production release reference.
 
 ## Preserve the decisions we already made
 
@@ -46,7 +46,7 @@ Each row is an outcome, split into small issue/branch/PR stories. They are not i
 
 | Stage | Outcome and smallest useful next slice | Exit evidence | Existing tracking |
 |---|---|---|---|
-|1. Finish the current handoff|Review PR35 separately; resolve stale milestone claims without declaring physical acceptance done.|Accepted source, accurate issue states, known production URL. No merge is implied by this plan.|34/PR35;23/24/31/33 |
+|1. Finish the current handoff|PR35 merged; review PR41 separately and resolve stale milestone claims without declaring physical acceptance done.|Accepted source, accurate issue states, known production URL. No merge is implied by this plan.|34/PR35;23/24/31/33 |
 |2. Make defended-base assaults purposeful|Trace why capture rifles die; change one doctrine/order behavior, then compare matched paid forces before changing defense or damage values.|Real breach **and** surviving rifle capture routes with elapsed time, preparation and replacement cost. Retain cases where a strong defense wins.|25, then one small child issue per fix |
 |3. Prove combined-arms play|Compare no/limited/active helicopter support with current cohesive platoons, then one observable enemy doctrine decision at a time.|Actual controls, sorties/ammo, repair trips, troop survival, Supply and HQ outcomes. Neither "helicopter alone wins" nor "ground play never matters."|26/27/28 |
 |4. Make terrain tactically useful|Test crest defense, uneven approaches and safe reverse-slope regroup; only then try a bounded cover/position choice.|Matched terrain fixtures, physically valid movement and firing, meaningful rifle/rocket tradeoffs, no hidden range/damage bonuses.|29 |
@@ -94,3 +94,5 @@ The durable hierarchy is: requirements for behavior; this roadmap for product di
 The audit found these planning debts: issues16–19 still appear open despite their merged implementation;23/24 mix completed release work with remaining preview/device acceptance; issue15 contained stale pre-merge statements (reconciled in this pass); a GitHub Project was not created because write permission was denied; workflow/CLAUDE drafts are still local. Reconcile these narrowly, preserving physical acceptance and original evidence rather than closing everything from a merge alone. Historical issue1 also remains open and is not silently treated as current missing FOB functionality.
 
 Per story: issue → isolated branch → one behavior/config change → appropriate deterministic/real-browser checks → focused independent review → user acceptance → merge → verified deployment. Store large raw studies as artifacts when possible. Keep Flight School, classic skirmish, Campaign and labs distinguishable. Publish from a known source and give one canonical production link/version; no automatic merge.
+
+Dependency refresh2026-11-16: PR35 is merged into master. Its shared DAG node is complete underT3/T4/T6, and PR41 now targets master but remains unmerged. This removes the harness-review blocker; it does not complete the assault milestone or activate the experimental doctrine.

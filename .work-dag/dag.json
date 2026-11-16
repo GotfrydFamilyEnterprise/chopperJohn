@@ -1,7 +1,7 @@
 {
   "version": 1,
   "root": "R0",
-  "cursor": "T5",
+  "cursor": "T6",
   "history": [
     {
       "at": "2026-11-14T22:04",
@@ -392,6 +392,156 @@
       "event": "note",
       "node": "T5",
       "text": "Published planning PR39 and reconciled GitHub roadmap15; added generation-design proposal38 under campaign30. Four-file plan remains unmerged for review; no gameplay stage executed."
+    },
+    {
+      "at": "2026-11-15T06:31",
+      "event": "go",
+      "node": "T6",
+      "text": ""
+    },
+    {
+      "at": "2026-11-15T06:31",
+      "event": "add",
+      "node": "B4",
+      "text": "Monte Carlo assault policy study"
+    },
+    {
+      "at": "2026-11-15T06:31",
+      "event": "enter",
+      "node": "B4",
+      "text": ""
+    },
+    {
+      "at": "2026-11-15T06:31",
+      "event": "note",
+      "node": "T6",
+      "text": "Proposed design targets: equal-cost field60–70%, ordinary staffed-FOB20–40%, prepared FOB55–70%, supported prepared75–85%. First study tests only ground FOB positioning/capture policy with fresh holdout seeds; targets are not observed rates."
+    },
+    {
+      "at": "2026-11-15T06:45",
+      "event": "note",
+      "node": "B4",
+      "text": "PR41 on feature/40-monte-carlo-assaults stacks on unmerged PR35. Frozen reserve680 heldout240 battles: ordinary25%/25%, prepared100%/95%, supplied0%/0%; no global activation. Six tests+independent336 default orders/240 rows passed; standard CI running."
+    },
+    {
+      "at": "2026-11-15T06:45",
+      "event": "output",
+      "node": "B4",
+      "text": "docs/quality/monte-carlo-assaults.md"
+    },
+    {
+      "at": "2026-11-15T16:58",
+      "event": "done",
+      "node": "B4",
+      "text": "PR41 research complete for review:6files; final CI168 module/129 browser PASS;240 heldout rows audited. Candidate conditionally improves static assaults but fails reinforced bases; no normal-game activation or merge. Follow-up42 targets observable reinforcement pressure."
+    },
+    {
+      "at": "2026-11-15T16:58",
+      "event": "trunk",
+      "node": "T6",
+      "text": ""
+    },
+    {
+      "at": "2026-11-15T16:58",
+      "event": "note",
+      "node": "T6",
+      "text": "Monte Carlo research PR41 is reviewable, stacked on PR35. Assault-tactics stage remains unfinished: reinforcement response42, selectable/playable promotion and broader current-engine validation are separate work."
+    },
+    {
+      "at": "2026-11-16T18:53",
+      "event": "rename",
+      "node": "B1",
+      "text": "Paid assault harness PR35 -> Paid assault harness: PR35 review"
+    },
+    {
+      "at": "2026-11-16T18:53",
+      "event": "rename",
+      "node": "B2",
+      "text": "Next small FOB tactics story -> Next: reinforcement response (#42)"
+    },
+    {
+      "at": "2026-11-16T18:53",
+      "event": "rename",
+      "node": "B4",
+      "text": "Monte Carlo assault policy study -> Monte Carlo study: PR41 review"
+    },
+    {
+      "at": "2026-11-16T18:53",
+      "event": "note",
+      "node": "B1",
+      "text": "Status refresh2026-11-16: PR35 remains open/unmerged; implementation and prior162 module/129 browser checks complete. Awaiting review, not absent gameplay."
+    },
+    {
+      "at": "2026-11-16T18:53",
+      "event": "note",
+      "node": "B2",
+      "text": "Status refresh2026-11-16: issue42 remains open. Next scoped strategy study; not implemented or currently running."
+    },
+    {
+      "at": "2026-11-16T18:53",
+      "event": "note",
+      "node": "B4",
+      "text": "Status refresh2026-11-16: PR41 remains open/unmerged, stacked on PR35. Research completed;168 module/129 browser CI passed. Experimental tactic is not enabled in production."
+    },
+    {
+      "at": "2026-11-16T18:53",
+      "event": "note",
+      "node": "T5",
+      "text": "Status refresh2026-11-16: end-to-end planning is complete; PR39 remains open/unmerged. Preserve distinction between a reviewed plan and its production merge."
+    },
+    {
+      "at": "2026-11-16T18:53",
+      "event": "note",
+      "node": "T6",
+      "text": "Current cursor: assault strategy work. Monte Carlo findings are complete for review; next implementation is reinforcement response42. No new battles or implementation run in this status update."
+    },
+    {
+      "at": "2026-11-16T18:53",
+      "event": "go",
+      "node": "T6",
+      "text": ""
+    },
+    {
+      "at": "2026-11-16T22:44",
+      "event": "rename",
+      "node": "B1",
+      "text": "Paid assault harness: PR35 review -> Paid assault harness merged (PR35)"
+    },
+    {
+      "at": "2026-11-16T22:44",
+      "event": "done",
+      "node": "B1",
+      "text": "User-authorized PR35 merge VERIFIED as08e74ca7c45d9587c69fc4306df371c7529b1bab. Shared review dependency cleared forT3,T4,T6. Source unchanged from tested9eecaef; status-document conflict resolved preserving both histories."
+    },
+    {
+      "at": "2026-11-16T22:44",
+      "event": "note",
+      "node": "T3",
+      "text": "PR35 is merged; shared B1 dependency is done. Historical workflow exercise remains complete."
+    },
+    {
+      "at": "2026-11-16T22:44",
+      "event": "note",
+      "node": "T4",
+      "text": "PR35 is merged; shared B1 dependency is done. Initial persistence/handoff remains complete."
+    },
+    {
+      "at": "2026-11-16T22:44",
+      "event": "note",
+      "node": "T6",
+      "text": "PR35 is merged and no longer blocks assault work. PR41 remains unmerged for its own acceptance; issue42 is the next unfinished strategy story. This milestone remains active, not falsely marked complete."
+    },
+    {
+      "at": "2026-11-16T22:44",
+      "event": "go",
+      "node": "T6",
+      "text": ""
+    },
+    {
+      "at": "2026-11-16T23:00",
+      "event": "note",
+      "node": "T6",
+      "text": "PR41 has been retargeted to master after PR35 merge; remaining source branch refreshes preserve all tested gameplay/research code and resolve documentation integration only."
     }
   ],
   "nodes": {
@@ -444,7 +594,8 @@
       ],
       "notes": [
         "[2026-11-14] Seven live-state probes passed: four read-only commands, overwrite refusal, cycle refusal, and fresh-process resume. State/history bytes remained identical across all probes.",
-        "[2026-11-14] Exercised real project branches, parking, cursor return, an extra parent link and evidence-preserving resume; no gameplay completion inferred."
+        "[2026-11-14] Exercised real project branches, parking, cursor return, an extra parent link and evidence-preserving resume; no gameplay completion inferred.",
+        "[2026-11-16] PR35 is merged; shared B1 dependency is done. Historical workflow exercise remains complete."
       ],
       "outputs": []
     },
@@ -458,7 +609,8 @@
       "notes": [
         "[2026-11-14] State intentionally kept local at canonical project root for this first exercise. No additional source PR, game change or deployment required. The skill itself is merged and versioned in PR36.",
         "[2026-11-14] Saved local plan and concise exercise evidence; PR35 remains unmerged and both future gameplay branches remain parked.",
-        "[2026-11-15] Initial exercise.md is deliberately local-only historical evidence; this planning PR versions the living DAG and roadmap, not that old report."
+        "[2026-11-15] Initial exercise.md is deliberately local-only historical evidence; this planning PR versions the living DAG and roadmap, not that old report.",
+        "[2026-11-16] PR35 is merged; shared B1 dependency is done. Initial persistence/handoff remains complete."
       ],
       "outputs": [
         ".work-dag/dag.json",
@@ -466,9 +618,9 @@
       ]
     },
     "B1": {
-      "title": "Paid assault harness PR35",
+      "title": "Paid assault harness merged (PR35)",
       "trunk": false,
-      "status": "parked",
+      "status": "done",
       "parents": [
         "T3",
         "T4",
@@ -476,12 +628,14 @@
       ],
       "notes": [
         "[2026-11-14] GitHub confirms PR35 is open and unmerged at9eecaef. Existing CI162 unit assertions/129 browser regressions passed. User acceptance is pending; no merge authorized in this skill task.",
-        "[2026-11-14] Keep the six-file paid-assault story separate and await its own acceptance."
+        "[2026-11-14] Keep the six-file paid-assault story separate and await its own acceptance.",
+        "[2026-11-16] Status refresh2026-11-16: PR35 remains open/unmerged; implementation and prior162 module/129 browser checks complete. Awaiting review, not absent gameplay.",
+        "[2026-11-16] User-authorized PR35 merge VERIFIED as08e74ca7c45d9587c69fc4306df371c7529b1bab. Shared review dependency cleared forT3,T4,T6. Source unchanged from tested9eecaef; status-document conflict resolved preserving both histories."
       ],
       "outputs": []
     },
     "B2": {
-      "title": "Next small FOB tactics story",
+      "title": "Next: reinforcement response (#42)",
       "trunk": false,
       "status": "parked",
       "parents": [
@@ -490,7 +644,8 @@
       ],
       "notes": [
         "[2026-11-14] Parent issue25: investigate preserving capture riflemen. Prior16 paid probes had no capture at240s. Any future implementation needs its own issue, branch and focused tests.",
-        "[2026-11-14] Backlog only; this exercise changes no gameplay."
+        "[2026-11-14] Backlog only; this exercise changes no gameplay.",
+        "[2026-11-16] Status refresh2026-11-16: issue42 remains open. Next scoped strategy study; not implemented or currently running."
       ],
       "outputs": []
     },
@@ -507,7 +662,8 @@
         "[2026-11-15] Fresh planning review found no direction blocker; clarified historical support evidence, optional generation versus release and authorized platoon spending exception.",
         "[2026-11-15] Four-file planning/state scope independently reviewed: no remaining planning blocker after clarifying historical support evidence and optional generation. DAG/link/history checks and Markdown/catalog checks PASS; no gameplay tests rerun for this documentation-only change.",
         "[2026-11-15] Prepared the end-to-end roadmap and durable DAG for issue37 review. This completes planning only; future gameplay stages remain pending, optional generation parked, PR35 unmerged.",
-        "[2026-11-15] Published planning PR39 and reconciled GitHub roadmap15; added generation-design proposal38 under campaign30. Four-file plan remains unmerged for review; no gameplay stage executed."
+        "[2026-11-15] Published planning PR39 and reconciled GitHub roadmap15; added generation-design proposal38 under campaign30. Four-file plan remains unmerged for review; no gameplay stage executed.",
+        "[2026-11-16] Status refresh2026-11-16: end-to-end planning is complete; PR39 remains open/unmerged. Preserve distinction between a reviewed plan and its production merge."
       ],
       "outputs": [
         "docs/roadmap.md",
@@ -517,12 +673,17 @@
     "T6": {
       "title": "Resolve defended-base assault tactics",
       "trunk": true,
-      "status": "pending",
+      "status": "active",
       "parents": [
         "R0"
       ],
       "notes": [
-        "[2026-11-15] Issue25; review issue34/PR35 separately, then one paid capture-force survival fix per issue/branch. No universal platoon superiority claim."
+        "[2026-11-15] Issue25; review issue34/PR35 separately, then one paid capture-force survival fix per issue/branch. No universal platoon superiority claim.",
+        "[2026-11-15] Proposed design targets: equal-cost field60–70%, ordinary staffed-FOB20–40%, prepared FOB55–70%, supported prepared75–85%. First study tests only ground FOB positioning/capture policy with fresh holdout seeds; targets are not observed rates.",
+        "[2026-11-15] Monte Carlo research PR41 is reviewable, stacked on PR35. Assault-tactics stage remains unfinished: reinforcement response42, selectable/playable promotion and broader current-engine validation are separate work.",
+        "[2026-11-16] Current cursor: assault strategy work. Monte Carlo findings are complete for review; next implementation is reinforcement response42. No new battles or implementation run in this status update.",
+        "[2026-11-16] PR35 is merged and no longer blocks assault work. PR41 remains unmerged for its own acceptance; issue42 is the next unfinished strategy story. This milestone remains active, not falsely marked complete.",
+        "[2026-11-16] PR41 has been retargeted to master after PR35 merge; remaining source branch refreshes preserve all tested gameplay/research code and resolve documentation integration only."
       ],
       "outputs": []
     },
@@ -614,6 +775,23 @@
         "[2026-11-15] Mapped current, unmerged, missing and proposed work to requirement IDs and live issues; no fresh gameplay acceptance inferred."
       ],
       "outputs": []
+    },
+    "B4": {
+      "title": "Monte Carlo study: PR41 review",
+      "trunk": false,
+      "status": "done",
+      "parents": [
+        "T6"
+      ],
+      "notes": [
+        "[2026-11-15] Issue40: user authorizes defining success targets and tuning experimental positioning. New branch stacked on unmerged paid-harness PR35; no automatic prerequisite merge or production policy change.",
+        "[2026-11-15] PR41 on feature/40-monte-carlo-assaults stacks on unmerged PR35. Frozen reserve680 heldout240 battles: ordinary25%/25%, prepared100%/95%, supplied0%/0%; no global activation. Six tests+independent336 default orders/240 rows passed; standard CI running.",
+        "[2026-11-15] PR41 research complete for review:6files; final CI168 module/129 browser PASS;240 heldout rows audited. Candidate conditionally improves static assaults but fails reinforced bases; no normal-game activation or merge. Follow-up42 targets observable reinforcement pressure.",
+        "[2026-11-16] Status refresh2026-11-16: PR41 remains open/unmerged, stacked on PR35. Research completed;168 module/129 browser CI passed. Experimental tactic is not enabled in production."
+      ],
+      "outputs": [
+        "docs/quality/monte-carlo-assaults.md"
+      ]
     }
   }
 }
