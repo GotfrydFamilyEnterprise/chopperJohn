@@ -76,6 +76,11 @@ export function platoonOrder(w,u){
  const base=w.bases.find(b=>b.id===g.objectiveId&&b.team!==g.team);
  let goal=base?base.x-dir*(base.defensePoints>0||policy.holdCapture?policy.standoff:180):g.team===0?w.level.world.width-80:80;
  const enemy=w.units.filter(v=>v.hp>0&&v.team!==g.team&&(v.x-u.x)*dir>0).sort((a,b)=>(a.x-b.x)*dir)[0];if(enemy&&(enemy.x-u.x)*dir<1000)goal=dir*Math.min(goal*dir,(enemy.x-dir*policy.standoff)*dir);
+ // Issue42: research-only leader spacing responds to public hostile launcher positions.
+ if(policy.holdCapture&&policy.leaderRearGap&&w.units.some(v=>v.hp>0&&v.team!==g.team&&v.type==='rocket'&&(v.x-u.x)*dir>0&&(v.x-u.x)*dir<=1000)){
+  const xs=g.slots.filter(s=>s.joined&&s.type==='rocket').map(s=>live(w,s.unitId)).filter(v=>v&&v.guardBase===null).map(v=>v.x*dir).sort((a,b)=>a-b);
+  if(xs.length){const center=(xs[Math.floor((xs.length-1)/2)]+xs[Math.floor(xs.length/2)])/2;goal=dir*Math.min(goal*dir,center-policy.leaderRearGap);}
+ }
  goal=Math.max(low,Math.min(high,goal));
  return {goalX:bounded(w,goal),speed:33,sprint:false,...limits};
 }

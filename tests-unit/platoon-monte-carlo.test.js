@@ -1,6 +1,6 @@
 import test from'node:test';
 import assert from'node:assert/strict';
-import{wilson,createTrial,stepTrial,summarize,pairedDifference}from'../scripts/platoon-monte-carlo.mjs';
+import{wilson,createTrial,stepTrial,summarize,pairedDifference,POLICIES,comparisonBaseline}from'../scripts/platoon-monte-carlo.mjs';
 import{assaultStudyResult,createAssaultStudy,stepAssaultStudy}from'../docs/js/battlefield/platoons/assaultStudy.js';
 import{worldSnapshot}from'../docs/js/battlefield/campaign/world.js';
 import{platoonOrder}from'../docs/js/battlefield/ai/platoons.js';
@@ -37,4 +37,35 @@ test('PL-10 summaries count captures only; paired mirrors stay separate and pair
 });
 test('PL-10 unknown policy/case and invalid stepping fail before simulation',()=>{
  assert.throws(()=>createTrial({policy:'cheat'}));assert.throws(()=>createTrial({caseId:'bad'}));const s=createTrial();assert.throws(()=>stepTrial(s,-1));assert.throws(()=>stepTrial(s,.5));
+});
+test('PL-07/10 issue42 leader rear spacing reacts only to a live forward hostile launcher',()=>{
+ for(const mirrored of[false,true]){
+  const s=launch(createTrial({policy:'rear140',mirrored})),w=s.world,g=s.study.group,dir=mirrored?-1:1,at=x=>mirrored?w.level.world.width-x:x,leader=w.units.find(u=>u.id===g.leaderId);
+  w.systems.weapons=false;leader.x=at(1200);g.objectiveId=w.bases[0].id;let r=0,k=0;
+  for(const slot of g.slots){const u=w.units.find(u=>u.id===slot.unitId);u.x=at(slot.type==='rifle'?1000+r++*20:1220+k++*20);}
+  for(const u of w.units.filter(u=>u.team===s.enemy))u.hp=0;
+  const enemy=w.units.find(u=>u.team===s.enemy&&u.type==='rocket');enemy.hp=4;enemy.x=at(1900);
+  const before=worldSnapshot(w),order=platoonOrder(w,leader);assert.deepEqual(worldSnapshot(w),before);assert.ok((leader.x-order.goalX)*dir>0);assert.equal(order.allowCapture,false);
+  const without=()=>{const saved=g.assaultPolicy.leaderRearGap;g.assaultPolicy.leaderRearGap=0;const o=platoonOrder(w,leader);g.assaultPolicy.leaderRearGap=saved;return o;};
+  assert.ok((without().goalX-order.goalX)*dir>80);
+  for(const change of[()=>enemy.hp=0,()=>{enemy.hp=4;enemy.team=s.team;},()=>{enemy.team=s.enemy;enemy.x=at(900);},()=>enemy.x=at(2301)]){change();assert.deepEqual(platoonOrder(w,leader),without());}
+  enemy.x=at(1900);stepTrial(s,1);assert.ok(Math.abs(leader.x-at(1200))<=33/120+1e-6);assert.equal(leader.hp,3);
+ }
+});
+test('PL-08 issue42 rear spacing cannot override retreat/regroup or treat incoming rockets as a screen',()=>{
+ const s=launch(createTrial({policy:'rear140'})),w=s.world,g=s.study.group,leader=w.units.find(u=>u.id===g.leaderId);
+ const compare=()=>{const a=platoonOrder(w,leader),gap=g.assaultPolicy.leaderRearGap;g.assaultPolicy.leaderRearGap=0;const b=platoonOrder(w,leader);g.assaultPolicy.leaderRearGap=gap;assert.deepEqual(a,b);};
+ for(const slot of g.slots.filter(s=>s.type==='rocket'))slot.joined=false;compare();
+ for(const phase of['retreat','regroup']){g.phase=phase;g.retreatX=leader.x-50;compare();assert.equal(platoonOrder(w,leader).allowCapture,false);}
+});
+test('PL-07 issue42 every rear-spacing slot leaves forward slack and physically reaches bombardment distance',()=>{
+ for(const policy of['rear80','rear140'])for(const mirrored of[false,true]){
+  const p=POLICIES[policy];assert.ok(Math.min(...p.rockets)>p.leaderRearGap);assert.ok(Math.max(...p.rockets)<=220);
+  const s=launch(createTrial({policy,mirrored})),w=s.world,leader=w.units.find(u=>u.id===s.study.group.leaderId),x=leader.x;w.systems.weapons=false;stepTrial(s,12000);
+  assert.ok((leader.x-x)*(mirrored?-1:1)>500,'spacing must not stall the formed force before weapons range');assert.ok(Math.abs(w.bases[0].x-leader.x)<900);
+ }
+});
+
+test('PL-10 issue42 comparison baseline follows the selected policy set',()=>{
+ assert.equal(comparisonBaseline(['siege','reserve680']),'siege');assert.equal(comparisonBaseline(['reserve680','rear140']),'reserve680');assert.equal(comparisonBaseline(['reserve680','rear140'],'rear140'),'rear140');assert.throws(()=>comparisonBaseline(['rear140'],'siege'));
 });
