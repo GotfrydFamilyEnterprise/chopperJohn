@@ -542,6 +542,66 @@
       "event": "note",
       "node": "T6",
       "text": "PR41 has been retargeted to master after PR35 merge; remaining source branch refreshes preserve all tested gameplay/research code and resolve documentation integration only."
+    },
+    {
+      "at": "2026-11-21T13:34",
+      "event": "rename",
+      "node": "B4",
+      "text": "Monte Carlo study: PR41 review -> Monte Carlo research merged (PR41)"
+    },
+    {
+      "at": "2026-11-21T13:34",
+      "event": "note",
+      "node": "B4",
+      "text": "User merged PR41; verified master commitd05fa01. Research is integrated; experimental policy remains opt-in and is not normal-game AI."
+    },
+    {
+      "at": "2026-11-21T13:34",
+      "event": "rename",
+      "node": "B2",
+      "text": "Next: reinforcement response (#42) -> Reinforcement response (#42)"
+    },
+    {
+      "at": "2026-11-21T13:34",
+      "event": "go",
+      "node": "B2",
+      "text": ""
+    },
+    {
+      "at": "2026-11-21T13:34",
+      "event": "note",
+      "node": "B2",
+      "text": "User says merged, keep going. Issue42 started in its own feature/42-reinforcement-response branch from current master; diagnose a failure before selecting one observable-conditions tactic."
+    },
+    {
+      "at": "2026-11-21T13:34",
+      "event": "go",
+      "node": "T6",
+      "text": ""
+    },
+    {
+      "at": "2026-11-21T16:30",
+      "event": "note",
+      "node": "T6",
+      "text": "User clarifies that capture is the outcome of a combined force, not a requirement for each individual platoon. Next comparison: one8-person4R4K platoon, two4-person2R2K platoons, or one small platoon plus equivalent independent support, each340 total Supply and real paid preparation. Helicopter support remains a separate controlled extension."
+    },
+    {
+      "at": "2026-11-21T16:30",
+      "event": "done",
+      "node": "B2",
+      "text": "Leader-protection research is ready in PR43:240 fresh validation battles, independent audit, standard CI passed. Supplied leader survival improves to20/20 and19/20 but capture remains0/20 and spending increases. Research is not normal-game activation or completion of T6."
+    },
+    {
+      "at": "2026-11-21T16:30",
+      "event": "add",
+      "node": "B5",
+      "text": "Compare coordinated assault forces (#25)"
+    },
+    {
+      "at": "2026-11-21T16:30",
+      "event": "go",
+      "node": "T6",
+      "text": ""
     }
   ],
   "nodes": {
@@ -635,9 +695,9 @@
       "outputs": []
     },
     "B2": {
-      "title": "Next: reinforcement response (#42)",
+      "title": "Reinforcement response (#42)",
       "trunk": false,
-      "status": "parked",
+      "status": "done",
       "parents": [
         "T3",
         "T6"
@@ -645,7 +705,9 @@
       "notes": [
         "[2026-11-14] Parent issue25: investigate preserving capture riflemen. Prior16 paid probes had no capture at240s. Any future implementation needs its own issue, branch and focused tests.",
         "[2026-11-14] Backlog only; this exercise changes no gameplay.",
-        "[2026-11-16] Status refresh2026-11-16: issue42 remains open. Next scoped strategy study; not implemented or currently running."
+        "[2026-11-16] Status refresh2026-11-16: issue42 remains open. Next scoped strategy study; not implemented or currently running.",
+        "[2026-11-21] User says merged, keep going. Issue42 started in its own feature/42-reinforcement-response branch from current master; diagnose a failure before selecting one observable-conditions tactic.",
+        "[2026-11-21] Leader-protection research is ready in PR43:240 fresh validation battles, independent audit, standard CI passed. Supplied leader survival improves to20/20 and19/20 but capture remains0/20 and spending increases. Research is not normal-game activation or completion of T6."
       ],
       "outputs": []
     },
@@ -683,7 +745,8 @@
         "[2026-11-15] Monte Carlo research PR41 is reviewable, stacked on PR35. Assault-tactics stage remains unfinished: reinforcement response42, selectable/playable promotion and broader current-engine validation are separate work.",
         "[2026-11-16] Current cursor: assault strategy work. Monte Carlo findings are complete for review; next implementation is reinforcement response42. No new battles or implementation run in this status update.",
         "[2026-11-16] PR35 is merged and no longer blocks assault work. PR41 remains unmerged for its own acceptance; issue42 is the next unfinished strategy story. This milestone remains active, not falsely marked complete.",
-        "[2026-11-16] PR41 has been retargeted to master after PR35 merge; remaining source branch refreshes preserve all tested gameplay/research code and resolve documentation integration only."
+        "[2026-11-16] PR41 has been retargeted to master after PR35 merge; remaining source branch refreshes preserve all tested gameplay/research code and resolve documentation integration only.",
+        "[2026-11-21] User clarifies that capture is the outcome of a combined force, not a requirement for each individual platoon. Next comparison: one8-person4R4K platoon, two4-person2R2K platoons, or one small platoon plus equivalent independent support, each340 total Supply and real paid preparation. Helicopter support remains a separate controlled extension."
       ],
       "outputs": []
     },
@@ -777,7 +840,7 @@
       "outputs": []
     },
     "B4": {
-      "title": "Monte Carlo study: PR41 review",
+      "title": "Monte Carlo research merged (PR41)",
       "trunk": false,
       "status": "done",
       "parents": [
@@ -787,11 +850,24 @@
         "[2026-11-15] Issue40: user authorizes defining success targets and tuning experimental positioning. New branch stacked on unmerged paid-harness PR35; no automatic prerequisite merge or production policy change.",
         "[2026-11-15] PR41 on feature/40-monte-carlo-assaults stacks on unmerged PR35. Frozen reserve680 heldout240 battles: ordinary25%/25%, prepared100%/95%, supplied0%/0%; no global activation. Six tests+independent336 default orders/240 rows passed; standard CI running.",
         "[2026-11-15] PR41 research complete for review:6files; final CI168 module/129 browser PASS;240 heldout rows audited. Candidate conditionally improves static assaults but fails reinforced bases; no normal-game activation or merge. Follow-up42 targets observable reinforcement pressure.",
-        "[2026-11-16] Status refresh2026-11-16: PR41 remains open/unmerged, stacked on PR35. Research completed;168 module/129 browser CI passed. Experimental tactic is not enabled in production."
+        "[2026-11-16] Status refresh2026-11-16: PR41 remains open/unmerged, stacked on PR35. Research completed;168 module/129 browser CI passed. Experimental tactic is not enabled in production.",
+        "[2026-11-21] User merged PR41; verified master commitd05fa01. Research is integrated; experimental policy remains opt-in and is not normal-game AI."
       ],
       "outputs": [
         "docs/quality/monte-carlo-assaults.md"
       ]
+    },
+    "B5": {
+      "title": "Compare coordinated assault forces (#25)",
+      "trunk": false,
+      "status": "pending",
+      "parents": [
+        "T6"
+      ],
+      "notes": [
+        "[2026-11-21] User-directed next study; matched total troop composition/Supply, paid HQ preparation and combined-force capture. Do not demand a single platoon win alone."
+      ],
+      "outputs": []
     }
   }
 }
