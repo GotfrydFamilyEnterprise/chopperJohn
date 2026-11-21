@@ -284,12 +284,22 @@ User merged PR14 as `d9026ffa1429930e782ad21ca89beddc554a8c54`. Post-merge Brows
 
 ## Issue34 — isolated paid FOB-assault harness (QA-01 / PL-10)
 
+Follow-up issue40 is a separate stacked research story: opt-in reserve-and-clear positioning plus a Monte Carlo runner with declared targets, disjoint training/holdout seeds, paired mirrors and confidence intervals. Normal Campaign doctrines remain unchanged; no candidate is enabled by level/UI or red AI. Detailed protocol/results are in `quality/monte-carlo-assaults.md`. This is not a claim that staffed-FOB balance, terrain/air-support tactics or a production release is complete.
+
 Small separate branch from mergedv2.2; six changed files. Adds only a research fixture module, short CLI and four focused economic/lifecycle tests, wired into the existing unit command. No production UI/combat/tactics/map changes, no new raw matrix/screenshots in Git. All initial infantry use real HQ Supply purchases and physical rally/garrison travel. Sixteen exploratory paid runs show earlier breach with seven-person rocket-heavy Siege, but no captures at240s; preserve this as a diagnostic, not balance proof. See `quality/paid-fob-assault-study.md` for method, paid preparation timing and primary/mirror results. Focused validation and independent review precede its separate PR; no automatic merge.
 
 Issue34 focused validation: all four tests PASS; fresh independent review repeated them and independently passed post-launch pause/leader-loss, a90s live-combat exact replay and the16-row economic/table audit. No blockers found for this isolated harness; production balance and physical Safari are not acceptance claims for it. PR35 contains six files and about180 added lines, not a new gameplay release.
+
+## Issue40 Monte Carlo assault research — PL-10
+
+Six-file stacked research story on unmerged paid-harness PR35. Optional reserve-and-clear orders are used only by the Monte Carlo runner; normal production doctrines, weapon/economy stats and60/80 retreat rules are unchanged. Eight training seeds selected reserve680, frozen before20 disjoint holdout seeds with paired mirrors across three cases (240 battles). Ordinary capture25%/25% versus0/0; prepared100%/95% versus0/0; supplied0/0 versus0/5%. These are primary/mirror results, not pooled samples. Prepared strength overshoots the provisional55–70% target; reinforced-base attrition is worse. No universal improvement or calibrated campaign balance is claimed.
+
+Evidence:6 new focused checks plus13 existing platoon,6 encounter and4 paid-fixture checks PASS. Fresh independent reviewer repeated6, compared336 default orders/goals, replayed one exact candidate row and audited all240 rows/4,596 transactions; no blocking source/data discrepancy for opt-in research. See quality/monte-carlo-assaults.md for intervals, spending, failures, artifact hashes and the recommendation against global activation. No new UI/physical-device validation or deployment/merge is claimed; final standard CI is linked on the PR. Raw studies remain outside Git.
 
 ## Codex work-dag tracking integration
 
 Developer workflow only; no gameplay requirement IDs or public product scope changed. Added `.agents/skills/work-dag/` and an additive AGENTS.md instruction for substantial multi-step tasks. Python helper/tests/template match the uploaded skill; Codex guidance resumes configured state, keeps one writer, and preserves all existing acceptance gates. DAG statuses are not proof of gameplay acceptance or deployment.
 
 Evidence: 16 bundled Python tests PASS; a separate reviewer independently repeated the suite and checked byte-preserving reads/resume, overwrite and cycle refusal, configured state isolation, and paths with spaces. See `.agents/skills/work-dag/VALIDATION.md` for scope, inherited limitations, and the independent review. Game/browser/screenshot suites were not run for this workflow-only change; no gameplay, visual, CI, or deployment acceptance is claimed. Current-session adoption requires updating the checkout and explicitly reading the skill; repository discovery does not refresh running sessions automatically. PR and user acceptance remain required before merge.
+
+PR35 dependency merged into master as08e74ca with user authorization. PR41 now targets master directly; this research policy remains unmerged/disabled pending its own acceptance. Resolving the dependency changed documentation only; runtime/experiment source is unchanged from tested77c47d6.

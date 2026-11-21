@@ -30,8 +30,14 @@ export function createSergeant(w,team,{strategy='assault',composition}={},spawn,
   u.platoonId=group.id;u.order={role:'platoon',platoonId:group.id};w.platoons.groups.push(group);w.platoons.stats.leaders++;emit({type:'sergeantCreated',groupId:group.id,team,unitId:u.id});return u;
  });return {...result,group};
 }
-function tacticalPolicy(w,g){const p=PLATOON_TACTICS[g.strategy];return p.fortification&&w.bases.some(b=>b.id===g.objectiveId&&b.team!==g.team&&b.defensePoints>0)?{...p,...p.fortification}:p;}
-function formationOffset(w,g,slot){const p=tacticalPolicy(w,g),list=g.slots.filter(s=>s.type===slot.type),i=list.indexOf(slot),values=slot.type==='rifle'?p.rifles:p.rockets;if(list.length<=2)return values[i];return slot.type==='rifle'?80+140*i/(list.length-1):-220+160*i/(list.length-1);}
+function tacticalPolicy(w,g){
+ const p=PLATOON_TACTICS[g.strategy],base=w.bases.find(b=>b.id===g.objectiveId&&b.team!==g.team),fortified=base?.defensePoints>0;
+ // PL-10 / issue40: opt-in research orders only. Normal groups never set assaultPolicy.
+ const clearing=g.assaultPolicy&&base&&w.units.some(u=>u.hp>0&&u.team===base.team&&Math.abs(u.x-base.x)<=58);
+ if(g.assaultPolicy&&(fortified||clearing))return {...p,...g.assaultPolicy,holdCapture:true};
+ return p.fortification&&fortified?{...p,...p.fortification}:p;
+}
+function formationOffset(w,g,slot){const p=tacticalPolicy(w,g),list=g.slots.filter(s=>s.type===slot.type),i=list.indexOf(slot),values=slot.type==='rifle'?p.rifles:p.rockets;if(p.holdCapture)return values[0]+(values[1]-values[0])*i/Math.max(1,list.length-1);if(list.length<=2)return values[i];return slot.type==='rifle'?80+140*i/(list.length-1):-220+160*i/(list.length-1);}
 const bounded=(w,x)=>Math.max(80,Math.min(w.level.world.width-80,x));
 export function slotGoal(w,g,slot){const dir=g.team===0?1:-1,leader=live(w,g.leaderId);return bounded(w,['rally','retreat','regroup'].includes(g.phase)?(g.phase==='rally'?g.rallyX:g.retreatX)+dir*compactOffset(g,slot):(leader?.x??g.rallyX)+dir*formationOffset(w,g,slot));}
 export function updatePlatoons(w,spawn,emit=()=>{}, {purchases=w.systems.commanders}={}){
@@ -57,10 +63,10 @@ export function prunePlatoons(w){w.platoons.groups=w.platoons.groups.filter(g=>a
 export function groupFor(w,u){return u.platoonId?w.platoons.groups.find(g=>g.id===u.platoonId&&active(g)):null;}
 export function platoonOrder(w,u){
  const g=groupFor(w,u);if(!g)return null;const dir=g.team===0?1:-1,leader=live(w,g.leaderId),policy=tacticalPolicy(w,g),withdraw=['retreat','regroup'].includes(g.phase),radius=MANEUVER_RULES.radius;
- const limits={captureMin:leader.x-radius,captureMax:leader.x+radius,allowCapture:!withdraw&&g.phase!=='rally',withdraw};
+ const limits={captureMin:leader.x-radius,captureMax:leader.x+radius,allowCapture:!withdraw&&g.phase!=='rally'&&!policy.holdCapture,withdraw};
  if(u.id!==g.leaderId){
   const slot=g.slots.find(s=>s.unitId===u.id);if(!slot)return null;const desired=slotGoal(w,g,slot),joining=slot.replacement&&!slot.joined;
-  let goal=g.phase==='rally'||withdraw||joining?desired:(dir*Math.max(u.x*dir,desired*dir));
+  let goal=g.phase==='rally'||withdraw||joining||policy.holdCapture?desired:(dir*Math.max(u.x*dir,desired*dir));
   if(!joining&&!withdraw&&g.phase!=='rally')goal=Math.max(limits.captureMin,Math.min(limits.captureMax,goal));
   return {goalX:goal,speed:joining?Math.abs(u.velocity)*2:Math.abs(desired-u.x)>8&&slot.type==='rifle'?47:33,sprint:joining,joining:!slot.joined,...limits,allowCapture:limits.allowCapture&&!joining};
  }
@@ -68,7 +74,7 @@ export function platoonOrder(w,u){
  const center=maneuverCenter(w,g),low=center-MANEUVER_RULES.leaderRadius,high=center+MANEUVER_RULES.leaderRadius;
  if(withdraw)return {goalX:bounded(w,Math.max(low,Math.min(high,g.retreatX))),speed:33,sprint:false,...limits};
  const base=w.bases.find(b=>b.id===g.objectiveId&&b.team!==g.team);
- let goal=base?base.x-dir*(base.defensePoints>0?policy.standoff:180):g.team===0?w.level.world.width-80:80;
+ let goal=base?base.x-dir*(base.defensePoints>0||policy.holdCapture?policy.standoff:180):g.team===0?w.level.world.width-80:80;
  const enemy=w.units.filter(v=>v.hp>0&&v.team!==g.team&&(v.x-u.x)*dir>0).sort((a,b)=>(a.x-b.x)*dir)[0];if(enemy&&(enemy.x-u.x)*dir<1000)goal=dir*Math.min(goal*dir,(enemy.x-dir*policy.standoff)*dir);
  goal=Math.max(low,Math.min(high,goal));
  return {goalX:bounded(w,goal),speed:33,sprint:false,...limits};
