@@ -602,6 +602,72 @@
       "event": "go",
       "node": "T6",
       "text": ""
+    },
+    {
+      "at": "2026-11-21T20:49",
+      "event": "rename",
+      "node": "B2",
+      "text": "Reinforcement response (#42) -> Leader-protection research merged (PR43)"
+    },
+    {
+      "at": "2026-11-21T20:49",
+      "event": "note",
+      "node": "B2",
+      "text": "User merged PR43; mainfd4ec84 verified. Survival research is integrated and still opt-in; no normal-game doctrine activation."
+    },
+    {
+      "at": "2026-11-21T20:49",
+      "event": "rename",
+      "node": "B5",
+      "text": "Compare coordinated assault forces (#25) -> Coordinated assault forces (#44)"
+    },
+    {
+      "at": "2026-11-21T20:49",
+      "event": "go",
+      "node": "B5",
+      "text": ""
+    },
+    {
+      "at": "2026-11-21T20:49",
+      "event": "note",
+      "node": "B5",
+      "text": "Issue44 created and started on feature/44-combined-assaults from mainfd4ec84. All comparison arms use4R4K/340 Supply with paid HQ assembly. Whole-force capture is the endpoint, not individual-platoon victory."
+    },
+    {
+      "at": "2026-11-21T20:49",
+      "event": "go",
+      "node": "T6",
+      "text": ""
+    },
+    {
+      "at": "2026-11-21T23:52",
+      "event": "note",
+      "node": "B5",
+      "text": "Issue44 implemented on feature/44-combined-assaults from merged fd4ec84. Matched4R4K/340Supply one8 vs two4 vs4+independent4, synchronized/staggered and fixed/supplied. Five initial tests PASS; independent source/accounting review found no source blocker. Corrected a one-tick single-component release confound and rerunning the same7001–7010 seeds; prior matrix archived as protocol-bug-original. Browser/final CI pending; not complete or activated."
+    },
+    {
+      "at": "2026-11-25T01:06",
+      "event": "note",
+      "node": "B5",
+      "text": "Corrected comparison complete:240battles; synchronized two4 captures10/10 both mirrors vs one8 9/10 and10/10 fixed; all supplied cases0/10, all breached/unfinished.178 module tests and3 focused browser cases PASS; independent corrected source/data/docs/screens audit PASS,6259 paid transactions. Native PR creation underway; broad CI and user review remain. Not production activation, not playable new menu, T6 unresolved."
+    },
+    {
+      "at": "2026-11-25T01:06",
+      "event": "note",
+      "node": "B5",
+      "text": "PR45 open at337f92c,9files/260additions. Corrected study and independent review PASS; full GitHub CI45523196156 pending. This is automated sandbox research only; source is not activated in Campaign. Whole-force defended capture remains unresolved under continuous paid reinforcement; next bounded story should expose playable presets and then test capture-window tactics."
+    },
+    {
+      "at": "2026-11-25T01:07",
+      "event": "note",
+      "node": "B5",
+      "text": "PR45 commit337f92c published. GitHub PR CI45523196156 full unit step PASS, broad browser suite running. Independent corrected research acceptance PASS; final merge review still pending. Current study is closed scientifically with honest reinforced-defense failure, not campaign balance completion."
+    },
+    {
+      "at": "2026-11-25T01:13",
+      "event": "note",
+      "node": "B5",
+      "text": "PR45 ready for user review, not merged. Final GitHub CI45523196156 at337f92c SUCCESS:178 unit +132 Playwright tests, screenshot artifact14980862172. Corrected240battle study and independent source/data/docs/screens PASS. Scientific result: coordinated two4 effective against fixed garrison; sustained supplied FOB capture remains0/10 eachdirection. No playable new UI or production activation; T6 remains active and next practical checkpoint is a playable combined-arms capture-window mission."
     }
   ],
   "nodes": {
@@ -695,7 +761,7 @@
       "outputs": []
     },
     "B2": {
-      "title": "Reinforcement response (#42)",
+      "title": "Leader-protection research merged (PR43)",
       "trunk": false,
       "status": "done",
       "parents": [
@@ -707,7 +773,8 @@
         "[2026-11-14] Backlog only; this exercise changes no gameplay.",
         "[2026-11-16] Status refresh2026-11-16: issue42 remains open. Next scoped strategy study; not implemented or currently running.",
         "[2026-11-21] User says merged, keep going. Issue42 started in its own feature/42-reinforcement-response branch from current master; diagnose a failure before selecting one observable-conditions tactic.",
-        "[2026-11-21] Leader-protection research is ready in PR43:240 fresh validation battles, independent audit, standard CI passed. Supplied leader survival improves to20/20 and19/20 but capture remains0/20 and spending increases. Research is not normal-game activation or completion of T6."
+        "[2026-11-21] Leader-protection research is ready in PR43:240 fresh validation battles, independent audit, standard CI passed. Supplied leader survival improves to20/20 and19/20 but capture remains0/20 and spending increases. Research is not normal-game activation or completion of T6.",
+        "[2026-11-21] User merged PR43; mainfd4ec84 verified. Survival research is integrated and still opt-in; no normal-game doctrine activation."
       ],
       "outputs": []
     },
@@ -858,14 +925,20 @@
       ]
     },
     "B5": {
-      "title": "Compare coordinated assault forces (#25)",
+      "title": "Coordinated assault forces (#44)",
       "trunk": false,
-      "status": "pending",
+      "status": "active",
       "parents": [
         "T6"
       ],
       "notes": [
-        "[2026-11-21] User-directed next study; matched total troop composition/Supply, paid HQ preparation and combined-force capture. Do not demand a single platoon win alone."
+        "[2026-11-21] User-directed next study; matched total troop composition/Supply, paid HQ preparation and combined-force capture. Do not demand a single platoon win alone.",
+        "[2026-11-21] Issue44 created and started on feature/44-combined-assaults from mainfd4ec84. All comparison arms use4R4K/340 Supply with paid HQ assembly. Whole-force capture is the endpoint, not individual-platoon victory.",
+        "[2026-11-21] Issue44 implemented on feature/44-combined-assaults from merged fd4ec84. Matched4R4K/340Supply one8 vs two4 vs4+independent4, synchronized/staggered and fixed/supplied. Five initial tests PASS; independent source/accounting review found no source blocker. Corrected a one-tick single-component release confound and rerunning the same7001–7010 seeds; prior matrix archived as protocol-bug-original. Browser/final CI pending; not complete or activated.",
+        "[2026-11-25] Corrected comparison complete:240battles; synchronized two4 captures10/10 both mirrors vs one8 9/10 and10/10 fixed; all supplied cases0/10, all breached/unfinished.178 module tests and3 focused browser cases PASS; independent corrected source/data/docs/screens audit PASS,6259 paid transactions. Native PR creation underway; broad CI and user review remain. Not production activation, not playable new menu, T6 unresolved.",
+        "[2026-11-25] PR45 open at337f92c,9files/260additions. Corrected study and independent review PASS; full GitHub CI45523196156 pending. This is automated sandbox research only; source is not activated in Campaign. Whole-force defended capture remains unresolved under continuous paid reinforcement; next bounded story should expose playable presets and then test capture-window tactics.",
+        "[2026-11-25] PR45 commit337f92c published. GitHub PR CI45523196156 full unit step PASS, broad browser suite running. Independent corrected research acceptance PASS; final merge review still pending. Current study is closed scientifically with honest reinforced-defense failure, not campaign balance completion.",
+        "[2026-11-25] PR45 ready for user review, not merged. Final GitHub CI45523196156 at337f92c SUCCESS:178 unit +132 Playwright tests, screenshot artifact14980862172. Corrected240battle study and independent source/data/docs/screens PASS. Scientific result: coordinated two4 effective against fixed garrison; sustained supplied FOB capture remains0/10 eachdirection. No playable new UI or production activation; T6 remains active and next practical checkpoint is a playable combined-arms capture-window mission."
       ],
       "outputs": []
     }
