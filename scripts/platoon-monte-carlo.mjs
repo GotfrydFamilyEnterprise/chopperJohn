@@ -61,5 +61,5 @@ async function main(){
   w.on('message',row=>{if(row.error){w.terminate();reject(Error(row.error));return;}rows.push(row);if(rows.length%20===0)console.log(JSON.stringify({completed:rows.length,total:jobs.length,wallSeconds:(Date.now()-began)/1000}));save();send();});w.on('error',reject);w.on('exit',code=>{if(!finished&&code)reject(Error('Worker exited '+code));});send();})));
  save();console.log(JSON.stringify({completed:rows.length,wallSeconds:(Date.now()-began)/1000,output,summary:summarize(rows)}));
 }
-if(!isMainThread){parentPort.on('message',job=>{try{parentPort.postMessage(runTrial(job));}catch(e){parentPort.postMessage({error:e.stack});}});}
+if(!isMainThread&&process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){parentPort.on('message',job=>{try{parentPort.postMessage(runTrial(job));}catch(e){parentPort.postMessage({error:e.stack});}});}
 else if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){main().catch(e=>{console.error(e);process.exitCode=1;});}
