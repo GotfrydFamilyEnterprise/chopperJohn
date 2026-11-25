@@ -1,7 +1,7 @@
 {
   "version": 1,
   "root": "R0",
-  "cursor": "T6",
+  "cursor": "B6",
   "history": [
     {
       "at": "2026-11-14T22:04",
@@ -668,6 +668,66 @@
       "event": "note",
       "node": "B5",
       "text": "PR45 ready for user review, not merged. Final GitHub CI45523196156 at337f92c SUCCESS:178 unit +132 Playwright tests, screenshot artifact14980862172. Corrected240battle study and independent source/data/docs/screens PASS. Scientific result: coordinated two4 effective against fixed garrison; sustained supplied FOB capture remains0/10 eachdirection. No playable new UI or production activation; T6 remains active and next practical checkpoint is a playable combined-arms capture-window mission."
+    },
+    {
+      "at": "2026-11-25T01:28",
+      "event": "done",
+      "node": "B5",
+      "text": "PR45 accepted and merge completed b2b91c8;178unit/132browser checks and independent review PASS. Research-only; T6 remains active."
+    },
+    {
+      "at": "2026-11-25T01:28",
+      "event": "add",
+      "node": "B6",
+      "text": "Playable combined-force lab (#46)"
+    },
+    {
+      "at": "2026-11-25T01:29",
+      "event": "go",
+      "node": "B6",
+      "text": ""
+    },
+    {
+      "at": "2026-11-25T02:03",
+      "event": "note",
+      "node": "B6",
+      "text": "UI implemented in existing lab, shared paid engine and7 new real-browser tests plus5classic regressions. Initial12PASS; input gate tightened; latest pause-only failure was test timing, corrected to sample after click. Final CI/review/public preview pending. No new matrix or Campaign policy activation."
+    },
+    {
+      "at": "2026-11-25T03:53",
+      "event": "note",
+      "node": "B6",
+      "text": "Six-file UI implementation and independent source/negative/visual review PASS. Seven new Playwright tests exercise controls and exact fixture parity; first12/12focusedPASS, a later pause assertion race fixed by sampling after click. New PR creation and full current-tree CI underway; public preview verification pending. No Campaign activation."
+    },
+    {
+      "at": "2026-11-25T04:28",
+      "event": "note",
+      "node": "B6",
+      "text": "PR47 open at77a5a2e,6files/88additions. Independent source/VM negative/parity and six mobile screenshots PASS; push CI45543081475 SUCCESS. PR CI45544448039 pending. Public pinned preview browser probe in progress; no merge/production promotion authorized for this new PR."
+    },
+    {
+      "at": "2026-11-25T04:29",
+      "event": "note",
+      "node": "B6",
+      "text": "PR47 current-head CI45544448039 SUCCESS:178unit0fail +139Playwright, artifact14990168923; independent source/negative/screens PASS, final CI verification by reviewer pending. Preview hosted-browser check in progress. PR47 remains unmerged; Campaign tactics unchanged."
+    },
+    {
+      "at": "2026-11-25T04:46",
+      "event": "note",
+      "node": "B6",
+      "text": "Hosted pinned77a5a2e lab preview VERIFIED in normal Chromium: HTTP200, realRun/Pause/+5s6.2s, nohooks/no pageerrors, actualhost screenshot. Host first shows Open the page informationalbutton.178unit/139browser CI and independent source/CI/mobile screenshots PASS. PR47 ready for user acceptance; not merged, no Campaign activation. Final preview review closing."
+    },
+    {
+      "at": "2026-11-25T04:47",
+      "event": "rename",
+      "node": "B6",
+      "text": "Playable combined-force lab (#46) -> Playable combined-force lab ready (PR47)"
+    },
+    {
+      "at": "2026-11-25T04:47",
+      "event": "note",
+      "node": "B6",
+      "text": "Final independent review PASS: current source, scoped negative/parity probes,139browser/178unitCI and hosted preview screenshot/Run/Pause/step all verified. PR47 ready for user acceptance, remains unmerged. T6 remains active; next Campaign/heli cooperation is a separate small story."
     }
   ],
   "nodes": {
@@ -927,7 +987,7 @@
     "B5": {
       "title": "Coordinated assault forces (#44)",
       "trunk": false,
-      "status": "active",
+      "status": "done",
       "parents": [
         "T6"
       ],
@@ -938,7 +998,26 @@
         "[2026-11-25] Corrected comparison complete:240battles; synchronized two4 captures10/10 both mirrors vs one8 9/10 and10/10 fixed; all supplied cases0/10, all breached/unfinished.178 module tests and3 focused browser cases PASS; independent corrected source/data/docs/screens audit PASS,6259 paid transactions. Native PR creation underway; broad CI and user review remain. Not production activation, not playable new menu, T6 unresolved.",
         "[2026-11-25] PR45 open at337f92c,9files/260additions. Corrected study and independent review PASS; full GitHub CI45523196156 pending. This is automated sandbox research only; source is not activated in Campaign. Whole-force defended capture remains unresolved under continuous paid reinforcement; next bounded story should expose playable presets and then test capture-window tactics.",
         "[2026-11-25] PR45 commit337f92c published. GitHub PR CI45523196156 full unit step PASS, broad browser suite running. Independent corrected research acceptance PASS; final merge review still pending. Current study is closed scientifically with honest reinforced-defense failure, not campaign balance completion.",
-        "[2026-11-25] PR45 ready for user review, not merged. Final GitHub CI45523196156 at337f92c SUCCESS:178 unit +132 Playwright tests, screenshot artifact14980862172. Corrected240battle study and independent source/data/docs/screens PASS. Scientific result: coordinated two4 effective against fixed garrison; sustained supplied FOB capture remains0/10 eachdirection. No playable new UI or production activation; T6 remains active and next practical checkpoint is a playable combined-arms capture-window mission."
+        "[2026-11-25] PR45 ready for user review, not merged. Final GitHub CI45523196156 at337f92c SUCCESS:178 unit +132 Playwright tests, screenshot artifact14980862172. Corrected240battle study and independent source/data/docs/screens PASS. Scientific result: coordinated two4 effective against fixed garrison; sustained supplied FOB capture remains0/10 eachdirection. No playable new UI or production activation; T6 remains active and next practical checkpoint is a playable combined-arms capture-window mission.",
+        "[2026-11-25] PR45 accepted and merge completed b2b91c8;178unit/132browser checks and independent review PASS. Research-only; T6 remains active."
+      ],
+      "outputs": []
+    },
+    "B6": {
+      "title": "Playable combined-force lab ready (PR47)",
+      "trunk": false,
+      "status": "active",
+      "parents": [
+        "T6"
+      ],
+      "notes": [
+        "[2026-11-25] New small feature/46-playable-assaults from merged b2b91c8; shared paid engine, real controls, both mirrors, mobile screenshots, fresh review and CI; no Campaign activation.",
+        "[2026-11-25] UI implemented in existing lab, shared paid engine and7 new real-browser tests plus5classic regressions. Initial12PASS; input gate tightened; latest pause-only failure was test timing, corrected to sample after click. Final CI/review/public preview pending. No new matrix or Campaign policy activation.",
+        "[2026-11-25] Six-file UI implementation and independent source/negative/visual review PASS. Seven new Playwright tests exercise controls and exact fixture parity; first12/12focusedPASS, a later pause assertion race fixed by sampling after click. New PR creation and full current-tree CI underway; public preview verification pending. No Campaign activation.",
+        "[2026-11-25] PR47 open at77a5a2e,6files/88additions. Independent source/VM negative/parity and six mobile screenshots PASS; push CI45543081475 SUCCESS. PR CI45544448039 pending. Public pinned preview browser probe in progress; no merge/production promotion authorized for this new PR.",
+        "[2026-11-25] PR47 current-head CI45544448039 SUCCESS:178unit0fail +139Playwright, artifact14990168923; independent source/negative/screens PASS, final CI verification by reviewer pending. Preview hosted-browser check in progress. PR47 remains unmerged; Campaign tactics unchanged.",
+        "[2026-11-25] Hosted pinned77a5a2e lab preview VERIFIED in normal Chromium: HTTP200, realRun/Pause/+5s6.2s, nohooks/no pageerrors, actualhost screenshot. Host first shows Open the page informationalbutton.178unit/139browser CI and independent source/CI/mobile screenshots PASS. PR47 ready for user acceptance; not merged, no Campaign activation. Final preview review closing.",
+        "[2026-11-25] Final independent review PASS: current source, scoped negative/parity probes,139browser/178unitCI and hosted preview screenshot/Run/Pause/step all verified. PR47 ready for user acceptance, remains unmerged. T6 remains active; next Campaign/heli cooperation is a separate small story."
       ],
       "outputs": []
     }
